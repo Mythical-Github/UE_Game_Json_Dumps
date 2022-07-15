@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DeactivatedBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence DeactivatedBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "DeactivatedBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait DeactivatedBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DeactivatedBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_DeactivatedComplete",
+    "Name": "BTService_EventFirer_DeactivatedComplete_0",
+    "Outer": "DeactivatedBehaviorTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Deactivated Complete Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DeactivatedBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence DeactivatedBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "DeactivatedBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "54A20872-471BCFC0-5106F390-3A915234",
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_DeactivatedComplete DeactivatedBehaviorTree:BTService_EventFirer_DeactivatedComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.2"
+        }
+      ],
+      "NodeName": "Idle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DeactivatedBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence DeactivatedBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.1"
+      }
+    }
+  }
+]

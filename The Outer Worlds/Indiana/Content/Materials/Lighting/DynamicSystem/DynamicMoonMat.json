@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "Material",
+    "Name": "DynamicMoonMat",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Additive",
+      "ShadingModel": "MSM_Unlit",
+      "WorldPositionOffset": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_3",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSample DynamicMoonMat:MaterialExpressionTextureSample_0",
+          "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.3"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter DynamicMoonMat:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall DynamicMoonMat:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.1"
+        },
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "AB126D3E-46D0D8F7-A271B2BC-7BC932DA",
+          "Function": {
+            "ObjectName": "MaterialFunction SmoothStep",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SmoothStep.0"
+          }
+        },
+        {
+          "StateId": "2152D2EF-4D50F03C-112E9994-A59B46A0",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_HorizonFade",
+            "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HorizonFade.1"
+          }
+        }
+      ],
+      "StateId": "97EF38EE-41D5C401-30A108B4-1DEFE78E",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "DynamicMoonMat",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_HorizonFade",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HorizonFade.1"
+      },
+      "Material": {
+        "ObjectName": "Material DynamicMoonMat",
+        "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "DynamicMoonMat",
+    "Properties": {
+      "DefaultValue": 5000.0,
+      "ExpressionGUID": "3528AE9A-4DC9C5A8-A6DDC78B-1E17DCBA",
+      "Material": {
+        "ObjectName": "Material DynamicMoonMat",
+        "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "DynamicMoonMat",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D 08Roseway_Moon_B_02",
+        "ObjectPath": "Indiana/Content/Art/ENV/World/Skybox/08Roseway/08Roseway_Moon_B_02.0"
+      },
+      "Material": {
+        "ObjectName": "Material DynamicMoonMat",
+        "ObjectPath": "Indiana/Content/Materials/Lighting/DynamicSystem/DynamicMoonMat.0"
+      }
+    }
+  }
+]

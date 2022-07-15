@@ -1,0 +1,504 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "RangeBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_RegisterAreaRange",
+    "Name": "BT_Scr_General_RegisterAreaRange_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_DecisionTreeLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Occupy Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_RegisterAreaRange",
+    "Name": "BT_Scr_General_RegisterAreaRange_1",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_CurrentLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Occupy Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetArcing",
+    "Name": "BT_Scr_General_SetArcing_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "NodeName": "Set Arcing",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Settings_WalkingFireEnabled",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Walk (If walking fire is enabled)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo RangeBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.14"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_SetMovementState RangeBehaviorTree:BT_Scr_SetMovementState_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Scr_General_RegisterAreaRange RangeBehaviorTree:BT_Scr_General_RegisterAreaRange_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait RangeBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetArcing RangeBehaviorTree:BT_Scr_General_SetArcing_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.3"
+            },
+            {
+              "ObjectName": "BT_Scr_General_RegisterAreaRange RangeBehaviorTree:BT_Scr_General_RegisterAreaRange_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_TargetOutsideMaxAbsoluteRange RangeBehaviorTree:BTService_EventFirer_TargetOutsideMaxAbsoluteRange_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.9"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_BlockedLOS",
+    "Name": "BTService_EventFirer_BlockedLOS_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "RandomDeviation": 0.05,
+      "NodeName": "Blocked LoS Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_TargetLostRanged",
+    "Name": "BTService_EventFirer_TargetLostRanged_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "InitiallySeenTargetLostTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_TargetLostTimeInitiallySeenRanged",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "InitiallyUnseenTargetLostTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_TargetLostTimeInitiallyUnseenRanged",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TargetLostResponse": "ETargetLostResponse::AIEvent",
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Target Lost Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_TargetOutsideMaxAbsoluteRange",
+    "Name": "BTService_EventFirer_TargetOutsideMaxAbsoluteRange_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "NodeName": "Target Outside Max Absolute Range Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FiringPattern",
+    "Name": "BTService_General_FiringPattern_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "FiringPatternSelector": {
+        "AIFiringPattern": {
+          "ObjectName": "Class Settings_MovingFiringPattern",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Settings_MovingFireEnabled",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "ScopedEnabled": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldScope",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "PrePauseTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_MovingFirePrePauseTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "PauseTimeFuzzSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_WeaponPauseTimeFuzz",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "CompleteTypeSelector": {
+        "AIInt": {
+          "ObjectName": "Class FiringPatternComplete_Repeat",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Moving Firing Pattern",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FiringPattern",
+    "Name": "BTService_General_FiringPattern_1",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "FiringPatternSelector": {
+        "AIFiringPattern": {
+          "ObjectName": "Class Settings_StationaryFiringPattern",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "ScopedEnabled": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldScope",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SuppressionTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_SuppressingFireTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "PauseTimeFuzzSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_WeaponPauseTimeFuzz",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "CompleteTypeSelector": {
+        "AIInt": {
+          "ObjectName": "Class FiringPatternComplete_FinishBehavior",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bSaveProgress": true,
+      "NodeName": "Stationary Firing Pattern",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "bIsMoving": true,
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetMovingHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetMovingAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetMovingHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetMovingAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldFaceTargetWhileMoving",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Aim at Last Known Target Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_3",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Aim at Last Seen Target Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_DecisionTreeLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlap": false,
+      "SaveGameTaskGuid": "20101A20-47439889-3DE69E83-BE42A00E",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt RangeBehaviorTree:BTService_General_FocusAt_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.12"
+        },
+        {
+          "ObjectName": "BTService_General_FiringPattern RangeBehaviorTree:BTService_General_FiringPattern_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.10"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "RangeBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "2043D1C3-40451108-7D26BCAC-88ECA161",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt RangeBehaviorTree:BTService_General_FocusAt_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.13"
+        },
+        {
+          "ObjectName": "BTService_General_FiringPattern RangeBehaviorTree:BTService_General_FiringPattern_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.11"
+        },
+        {
+          "ObjectName": "BTService_EventFirer_TargetLostRanged RangeBehaviorTree:BTService_EventFirer_TargetLostRanged_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.8"
+        },
+        {
+          "ObjectName": "BTService_EventFirer_BlockedLOS RangeBehaviorTree:BTService_EventFirer_BlockedLOS_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.7"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RangeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RangeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.5"
+      }
+    }
+  }
+]

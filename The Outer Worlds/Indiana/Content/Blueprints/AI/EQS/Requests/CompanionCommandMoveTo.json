@@ -1,0 +1,48 @@
+[
+  {
+    "Type": "EQSRequest_IndianaBase",
+    "Name": "CompanionCommandMoveTo",
+    "Properties": {
+      "QueryTemplate": {
+        "ObjectName": "EnvQuery CompanionCommandMoveTo",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.3"
+      },
+      "QueryConfig": [
+        {
+          "ParamName": "OnCircle.CircleRadius",
+          "ParamType": "EAIParamType::Float",
+          "Value": 100.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionMoveTo_DefaultRadius",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "FollowerPos.IdealAngleProvider",
+          "ParamType": "EAIParamType::Float",
+          "Value": 150.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionMoveTo_DefaultIdealAngle",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "FollowerPos.MinAngleProvider",
+          "ParamType": "EAIParamType::Float",
+          "Value": 0.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionMoveTo_DefaultMinAngle",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        }
+      ],
+      "RunMode": "EEnvQueryRunMode::AllMatching"
+    }
+  }
+]

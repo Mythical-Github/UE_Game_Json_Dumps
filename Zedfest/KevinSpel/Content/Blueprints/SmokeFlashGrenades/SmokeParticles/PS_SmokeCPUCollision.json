@@ -1,0 +1,591 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionParticleMass",
+    "Outer": "ParticleModuleCollision_0",
+    "Properties": {
+      "Constant": 0.1
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_SmokeCPUCollision:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.7"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_SmokeCPUCollision:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_SmokeCPUCollision:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_SmokeCPUCollision:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.5"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation PS_SmokeCPUCollision:ParticleModuleRotation_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.8"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife PS_SmokeCPUCollision:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.10"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity PS_SmokeCPUCollision:ParticleModuleVelocity_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.12"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocityOverLifetime PS_SmokeCPUCollision:ParticleModuleVelocityOverLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.13"
+        },
+        {
+          "ObjectName": "ParticleModuleCollision PS_SmokeCPUCollision:ParticleModuleCollision_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_SmokeCPUCollision:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.11"
+      },
+      "PeakActiveParticles": 2007
+    }
+  },
+  {
+    "Type": "ParticleModuleCollision",
+    "Name": "ParticleModuleCollision_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "DampingFactor": {
+        "MaxValue": 0.9,
+        "MaxValueVec": {
+          "X": 0.9,
+          "Y": 0.9,
+          "Z": 0.9
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            0.9,
+            0.9,
+            0.9
+          ]
+        }
+      },
+      "DampingFactorRotation": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MaxCollisions": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            50.0
+          ]
+        }
+      },
+      "ParticleMass": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_SmokeCPUCollision:ParticleModuleCollision_0.DistributionParticleMass",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.0"
+        }
+      },
+      "DelayAmount": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "bDropDetail": false,
+      "bCollideOnlyIfVisible": false,
+      "MaxCollisionDistance": 10000.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.5020646,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 1,
+          "TimeScale": 14.59678,
+          "TimeBias": -0.00036822679,
+          "Values": [
+            0.0,
+            0.5845252,
+            1.0097436,
+            1.2923985,
+            1.450717,
+            1.5018556,
+            1.4636945,
+            1.3536713,
+            1.1894499,
+            0.9886188,
+            0.76875776,
+            0.5474739,
+            0.34239283,
+            0.1710095,
+            0.05112875,
+            1.4202669E-08
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            10.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_Smoke",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/MI_Smoke.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_SmokeCPUCollision:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "MaxDrawCount": 2000,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 50.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            50.0,
+            50.0,
+            50.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.29419607,
+        "MaxValue": 1.8371426,
+        "MinValueVec": {
+          "X": 0.29419607,
+          "Y": 0.29419607,
+          "Z": 0.29419607
+        },
+        "MaxValueVec": {
+          "X": 1.8371426,
+          "Y": 1.8371426,
+          "Z": 1.8371426
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 3,
+          "TimeScale": 15.037798,
+          "TimeBias": -0.012609869,
+          "Values": [
+            0.29419607,
+            0.29419607,
+            0.29419607,
+            0.43674064,
+            0.43674064,
+            0.43674064,
+            0.6600768,
+            0.6600768,
+            0.6600768,
+            0.93100023,
+            0.93100023,
+            0.93100023,
+            1.2157652,
+            1.2157652,
+            1.2157652,
+            1.4807959,
+            1.4807959,
+            1.4807959,
+            1.6925925,
+            1.6925925,
+            1.6925925,
+            1.8174579,
+            1.8174579,
+            1.8174579,
+            1.8221391,
+            1.8221391,
+            1.8221391,
+            1.7550509,
+            1.7550509,
+            1.7550509,
+            1.6780176,
+            1.6780176,
+            1.6780176,
+            1.5929316,
+            1.5929316,
+            1.5929316,
+            1.5016056,
+            1.5016056,
+            1.5016056,
+            1.40589,
+            1.40589,
+            1.40589,
+            1.3076019,
+            1.3076019,
+            1.3076019,
+            1.2085811,
+            1.2085811,
+            1.2085811
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "Rate": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            50.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 4.0,
+        "MaxValue": 4.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            4.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_SmokeCPUCollision:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_2",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -55.0,
+        "MaxValue": 110.0,
+        "MinValueVec": {
+          "X": -55.0,
+          "Y": -55.0,
+          "Z": 80.0
+        },
+        "MaxValueVec": {
+          "X": 55.0,
+          "Y": 55.0,
+          "Z": 110.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -55.0,
+            -55.0,
+            80.0,
+            55.0,
+            55.0,
+            110.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocityOverLifetime",
+    "Name": "ParticleModuleVelocityOverLifetime_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "VelOverLife": {
+        "MinValue": -0.3,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": -0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            -0.3,
+            0.3,
+            0.3
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "PS_SmokeCPUCollision",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_SmokeCPUCollision:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_SmokeCPUCollision",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_SmokeCPUCollision:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_SmokeCPUCollision.14"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -947.44714,
+          "Y": -946.3511,
+          "Z": -942.2958
+        },
+        "Max": {
+          "X": 1297.8585,
+          "Y": 1220.4204,
+          "Z": 1279.1622
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

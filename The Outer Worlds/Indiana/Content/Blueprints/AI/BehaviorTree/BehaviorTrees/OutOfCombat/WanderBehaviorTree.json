@@ -1,0 +1,322 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "WanderBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector WanderBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsInRange",
+    "Name": "BT_Con_General_IsInRange_0",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Wander_Origin",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MaxRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Wander_WanderRadius",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableHalfHeightDifference": 2.0,
+      "bInverseCondition": true,
+      "NodeName": "Far From Wander Origin?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo WanderBehaviorTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery WanderBehaviorTree:BTTask_IndianaRunEQSQuery_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo WanderBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait WanderBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector WanderBehaviorTree:BTComposite_Selector_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess WanderBehaviorTree:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.6"
+            },
+            {
+              "ObjectName": "BT_Con_General_IsInRange WanderBehaviorTree:BT_Con_General_IsInRange_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop WanderBehaviorTree:BTDecorator_Loop_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector WanderBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "D2E52A4B-48874E34-007E24AD-2C80EF14",
+      "NodeName": "Move To Wander Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Wander_Origin",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "FailResponse": "EMoveToResultResponse::ContinueTask",
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "7DB9D2D8-4737B00E-59BD989A-4C82F773",
+      "NodeName": "Move To Wander Origin",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector WanderBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_0",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase Wander",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/Wander.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "566A58DD-4FAAF249-8B56F693-ACE1C314",
+      "NodeName": "Get Next Wander Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "WanderBehaviorTree",
+    "Properties": {
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_WanderIdleTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "2A89AAB1-488CB2F8-473765B9-1ED9A6A8",
+      "NodeName": "Idle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree WanderBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence WanderBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.4"
+      }
+    }
+  }
+]

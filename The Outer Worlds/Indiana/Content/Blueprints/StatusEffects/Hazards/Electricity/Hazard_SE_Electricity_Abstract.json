@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Electricity_Abstract_C",
+    "Super": "CE_Stun_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass CE_Stun_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Stun/CE_Stun.1"
+    },
+    "ClassFlags": 10754065,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Electricity_Abstract_C Default__Hazard_SE_Electricity_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Electricity_Abstract_C",
+    "Name": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Template": "Default__CE_Stun_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Hazard_SE_Electricity_Abstract_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.2"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Electricity_Abstract_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.5"
+        },
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Hazard_SE_Electricity_Abstract_C:PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.7"
+        },
+        {
+          "ObjectName": "CE_Electric_Hazard_PP_C Default__Hazard_SE_Electricity_Abstract_C:CE_Electric_Hazard_PP_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bProhibitsConversations": true,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Electricity_Abstract_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.6"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Template": "AnimDisableStatusEffect_0",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "bIsHostile": false
+    }
+  },
+  {
+    "Type": "CE_Electric_Hazard_PP_C",
+    "Name": "CE_Electric_Hazard_PP_C_0",
+    "Outer": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Template": "Default__CE_Electric_Hazard_PP_C"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Properties": {
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Shock_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Shock_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 0.666
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Hazard_SE_Electricity_Abstract_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Properties": {
+      "PushSpeed": 500.0,
+      "PushSpeedZ": 20.0,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Knockback"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied"
+    }
+  }
+]

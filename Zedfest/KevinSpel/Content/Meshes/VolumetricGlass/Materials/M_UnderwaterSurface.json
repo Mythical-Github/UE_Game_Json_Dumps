@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_UnderwaterSurface",
+    "Properties": {
+      "Normal": {
+        "OutputIndex": 8,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_3",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_1",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_AlphaComposite",
+      "ShadingModel": "MSM_Unlit",
+      "Refraction": {
+        "OutputIndex": 9,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_3",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "NumCustomizedUVs": 3,
+      "TranslucencyLightingMode": "TLM_Surface",
+      "bTangentSpaceNormal": false,
+      "bUsedWithStaticLighting": true,
+      "bUsesDistortion": true,
+      "bUsePlanarForwardReflections": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_UnderwaterSurface:MaterialExpressionMaterialFunctionCall_3",
+          "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/M_UnderwaterSurface.1"
+        },
+        null,
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "F7CED176-4A182F31-C74A618A-BF673BCA",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_WaterUV",
+            "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_WaterUV.5"
+          }
+        },
+        {
+          "StateId": "1985A6A5-4C7AB5F2-FEF19BA0-79DF58B7",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_Sun",
+            "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_Sun.2"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction MakeFloat3",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction BreakOutFloat3Components",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "59340075-4302B5CA-3AAB3ABB-4E831101",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_NormalBlend",
+            "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_NormalBlend.6"
+          }
+        },
+        {
+          "StateId": "1FFD575E-4C6D1C6B-69D51793-AC2F420C",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_BoxProjectedCubemap",
+            "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_BoxProjectedCubemap.1"
+          }
+        },
+        {
+          "StateId": "1A91DA86-4D643D5E-DEEB7C9E-54DC07C2",
+          "Function": {
+            "ObjectName": "MaterialFunction MF_UnderwaterSurface",
+            "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_UnderwaterSurface.42"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "bUseTranslucencyVertexFog": false,
+      "RefractionMode": "RM_PixelNormalOffset",
+      "StateId": "DF5184FE-4233452F-2CF629A8-F7C60594",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_3",
+    "Outer": "M_UnderwaterSurface",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_UnderwaterSurface",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/Utils/MF_UnderwaterSurface.42"
+      },
+      "Material": {
+        "ObjectName": "Material M_UnderwaterSurface",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Materials/M_UnderwaterSurface.0"
+      }
+    }
+  }
+]

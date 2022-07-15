@@ -1,0 +1,553 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CE_Maim_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Maim_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function CE_Maim_C:ExecuteUbergraph_CE_Maim",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CE_Maim_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.0"
+      },
+      {
+        "ObjectName": "Function CE_Maim_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.19"
+      },
+      {
+        "ObjectName": "Function CE_Maim_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.17"
+      },
+      {
+        "ObjectName": "Function CE_Maim_C:ExecuteUbergraph_CE_Maim",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.9"
+      },
+      {
+        "ObjectName": "ArrayProperty CE_Maim_C:Sockets",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.7"
+      },
+      {
+        "ObjectName": "ArrayProperty CE_Maim_C:PSs",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.5"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CE_Maim": {
+        "ObjectName": "Function CE_Maim_C:ExecuteUbergraph_CE_Maim",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.9"
+      },
+      "ReceiveClearEffect": {
+        "ObjectName": "Function CE_Maim_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.17"
+      },
+      "ReceiveApplyEffect": {
+        "ObjectName": "Function CE_Maim_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.19"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Maim_C Default__CE_Maim_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.2"
+    }
+  },
+  {
+    "Type": "CE_Maim_C",
+    "Name": "Default__CE_Maim_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Sockets": [
+        "VFX_L_Upper_Arm",
+        "VFX_L_Lower_Arm",
+        "VFX_R_Upper_Arm",
+        "VFX_R_Lower_Arm"
+      ],
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Maim_Post_Process_C Default__CE_Maim_C:CE_Maim_Post_Process_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.21"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Maim_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.41"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Maim_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 30.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 29
+      },
+      "EffectDescription": {
+        "StringID": 1118
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Maim_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.24"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_MaimArm",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_MaimArm.0"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_Maim_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Maim"
+      },
+      "EffectName": {
+        "StringID": 136
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PSs",
+    "Outer": "PSs",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "PSs",
+    "Outer": "CE_Maim_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty CE_Maim_C:PSs.PSs",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.4"
+    }
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "Sockets",
+    "Outer": "Sockets"
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Sockets",
+    "Outer": "CE_Maim_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "NameProperty CE_Maim_C:Sockets.Sockets",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.6"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CE_Maim",
+    "Outer": "CE_Maim_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.8"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.Temp_int_Variable",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.34"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.30"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.27"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.13"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Array_Get_Item",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.36"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.Temp_int_Loop_Counter_Variable",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.33"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Add_IntInt_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.28"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.Temp_int_Array_Index_Variable",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.32"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.K2Node_Event_Target1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.40"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.K2Node_Event_Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.25"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.K2Node_Event_bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.15"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.K2Node_Event_Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.39"
+      },
+      {
+        "ObjectName": "ClassProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.23"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_GetSkeletalMeshComponent_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.37"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_ClassIsChildOf_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.10"
+      },
+      {
+        "ObjectName": "NameProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Array_Get_Item1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.35"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Array_Length_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.31"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_DoesSocketExist_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.11"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Less_IntInt_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.14"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_SpawnEmitterAttached_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.38"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.12"
+      },
+      {
+        "ObjectName": "IntProperty CE_Maim_C:ExecuteUbergraph_CE_Maim.CallFunc_Array_AddUnique_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.29"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSocketExist_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_Event_bRestoredFromSave",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveClearEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveClearEffect",
+    "Outer": "CE_Maim_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveClearEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ReceiveClearEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.16"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveApplyEffect",
+    "Outer": "CE_Maim_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveApplyEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Maim_C:ReceiveApplyEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.18"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Maim_C:ReceiveApplyEffect.Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.26"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Maim_C:ReceiveApplyEffect.bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.20"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bRestoredFromSave",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "CE_Maim_Post_Process_C",
+    "Name": "CE_Maim_Post_Process_C_0",
+    "Outer": "Default__CE_Maim_C",
+    "Template": "Default__CE_Maim_Post_Process_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateMaim"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Maim_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Maim_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim.22"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_Ratio",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Ratio",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_AddUnique_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Variable",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_Array_Get_Item1",
+    "Outer": "ExecuteUbergraph_CE_Maim"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetSkeletalMeshComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target1",
+    "Outer": "ExecuteUbergraph_CE_Maim",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Maim_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

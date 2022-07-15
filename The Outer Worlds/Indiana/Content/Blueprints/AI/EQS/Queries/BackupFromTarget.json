@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_OnCircle_0",
+    "Properties": {
+      "ParamName": "OnCircle.SpaceBetween"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryGenerator_OnCircle_0",
+    "Properties": {
+      "ParamName": "OnCircle.CircleRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_Distance_0",
+    "Properties": {
+      "ParamName": "Distance.FloatValueMin"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "BackupFromTarget",
+    "Properties": {
+      "QueryName": "RangedQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption BackupFromTarget:EnvQueryOption_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_0",
+    "Outer": "BackupFromTarget",
+    "Properties": {
+      "CircleRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams BackupFromTarget:EnvQueryGenerator_OnCircle_0.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "SpaceBetween": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams BackupFromTarget:EnvQueryGenerator_OnCircle_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "ArcDirection": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_PrimaryTargetFeetLocation",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_QuerierFeetLocation",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "Rotation": {
+          "ObjectName": "Class EQSContext_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "ArcAngle": {
+        "DefaultValue": 45.0
+      },
+      "AngleRadians": 0.7853982,
+      "CircleCenter": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "bDefineArc": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "ProjectDown": 200.0,
+        "ProjectUp": 200.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_2",
+    "Outer": "BackupFromTarget",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_OnCircle BackupFromTarget:EnvQueryGenerator_OnCircle_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.4"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance BackupFromTarget:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "BackupFromTarget",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams BackupFromTarget:EnvQueryTest_Distance_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTarget.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "HeroStat",
+    "Name": "HeroStat_DialogsManipulated",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener HeroStat_DialogsManipulated:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_DialogsManipulated.4"
+      },
+      "HeroStatID": 5,
+      "HeroStatName": "5"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Persuade",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Lie",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_2",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Intimidate",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "HeroStat_DialogsManipulated",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnSkillCheckSuccess HeroStat_DialogsManipulated:OrListener_0.OnSkillCheckSuccess_0",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_DialogsManipulated.1"
+        },
+        {
+          "ObjectName": "OnSkillCheckSuccess HeroStat_DialogsManipulated:OrListener_0.OnSkillCheckSuccess_1",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_DialogsManipulated.2"
+        },
+        {
+          "ObjectName": "OnSkillCheckSuccess HeroStat_DialogsManipulated:OrListener_0.OnSkillCheckSuccess_2",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_DialogsManipulated.3"
+        }
+      ]
+    }
+  }
+]

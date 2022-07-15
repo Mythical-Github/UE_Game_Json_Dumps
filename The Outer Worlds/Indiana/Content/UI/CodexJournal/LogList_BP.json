@@ -1,0 +1,649 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "LogList_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree LogList_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.25"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/CodexJournal/LogList_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class LogList",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LogList_BP_C Default__LogList_BP_C",
+      "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.1"
+    }
+  },
+  {
+    "Type": "LogList_BP_C",
+    "Name": "Default__LogList_BP_C",
+    "Properties": {
+      "ListTitle": {
+        "StringID": 2794
+      },
+      "ListEntryClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass GenericListEntry_BP_C",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/GenericListEntry_BP.1"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot LogList_BP_C:WidgetTree.Border_0.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.Border_0.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border LogList_BP_C:WidgetTree.Border_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.2"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox LogList_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.3"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "ExpandableAreaBase",
+    "Name": "ExpandableArea",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "HeaderWidgetStyle": {
+        "ObjectName": "SlateWidgetStyleAsset CollapsingButtonStyle_1",
+        "ObjectPath": "Indiana/Content/UI/Library/Styles/Button/CollapsingButtonStyle_1.1"
+      },
+      "Style": {
+        "CollapsedImage": {
+          "ImageSize": {
+            "X": 11.0,
+            "Y": 9.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Right",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Right.0"
+          }
+        },
+        "ExpandedImage": {
+          "ImageSize": {
+            "X": 9.0,
+            "Y": 11.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Down",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Down.0"
+          }
+        },
+        "RolloutAnimationSeconds": 0.15
+      },
+      "BorderBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "bCenterSweepHitTest": true,
+      "HeaderPadding": {
+        "Left": 25.0,
+        "Top": 13.0,
+        "Right": 25.0,
+        "Bottom": 13.0
+      },
+      "HeaderContent": {
+        "ObjectName": "Border LogList_BP_C:WidgetTree.Border_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.2"
+      },
+      "BodyContent": {
+        "ObjectName": "SizeBox LogList_BP_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "ExpandableAreaBase",
+    "Name": "ExpandableArea",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "HeaderWidgetStyle": {
+        "ObjectName": "SlateWidgetStyleAsset CollapsingButtonStyle_1",
+        "ObjectPath": "Indiana/Content/UI/Library/Styles/Button/CollapsingButtonStyle_1.1"
+      },
+      "Style": {
+        "CollapsedImage": {
+          "ImageSize": {
+            "X": 11.0,
+            "Y": 9.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Right",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Right.0"
+          }
+        },
+        "ExpandedImage": {
+          "ImageSize": {
+            "X": 9.0,
+            "Y": 11.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Down",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Down.0"
+          }
+        },
+        "RolloutAnimationSeconds": 0.15
+      },
+      "BorderBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "bCenterSweepHitTest": true,
+      "HeaderPadding": {
+        "Left": 25.0,
+        "Top": 13.0,
+        "Right": 25.0,
+        "Bottom": 13.0
+      },
+      "HeaderContent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.3"
+      },
+      "BodyContent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot LogList_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot LogList_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot LogList_BP_C:WidgetTree.Border_0.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.Border_0.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox LogList_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase LogList_BP_C:WidgetTree.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.21"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox LogList_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.8"
+      },
+      "Content": {
+        "ObjectName": "Image LogList_BP_C:WidgetTree.UnseenImage",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.9"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.UnseenImage",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.15"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "UnseenImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_NewItemGlow",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_NewItemGlow.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot LogList_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.11"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting",
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "UnseenImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_NewItemGlow",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_NewItemGlow.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.13"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting",
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "LogList_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__LogList_BP_C",
+    "Properties": {
+      "UnseenImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.UnseenImage",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.15"
+      },
+      "ExpandableArea": {
+        "ObjectName": "ExpandableAreaBase WidgetArchetype:WidgetTree_0.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.7"
+      },
+      "TitleTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.22"
+      },
+      "EntryContainer": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.24"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.26"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot LogList_BP_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.19"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 15.0,
+        "Top": -15.0,
+        "Right": 17.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox LogList_BP_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.17"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox LogList_BP_C:WidgetTree.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.23"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 15.0,
+        "Top": -15.0,
+        "Right": 17.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.18"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.24"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TitleTextBlock",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "TextReference": {
+        "StringID": 2794
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot LogList_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.10"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TitleTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 2794
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.12"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "EntryContainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot LogList_BP_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.19"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "EntryContainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.20"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "LogList_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ExpandableAreaBase LogList_BP_C:WidgetTree.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ExpandableAreaBase WidgetArchetype:WidgetTree_0.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/CodexJournal/LogList_BP.7"
+      }
+    }
+  }
+]

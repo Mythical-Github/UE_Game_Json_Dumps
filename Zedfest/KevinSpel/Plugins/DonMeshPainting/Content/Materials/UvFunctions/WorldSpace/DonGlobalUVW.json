@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_4",
+    "Outer": "DonGlobalUVW",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection MPC_GlobalMeshPainting",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/MPC_GlobalMeshPainting.0"
+      },
+      "ParameterName": "World Min",
+      "ParameterId": "133DB73F-443C02D0-86B7D7AF-F4762CAB",
+      "Function": {
+        "ObjectName": "MaterialFunction DonGlobalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/DonGlobalUVW.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_5",
+    "Outer": "DonGlobalUVW",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection MPC_GlobalMeshPainting",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/MPC_GlobalMeshPainting.0"
+      },
+      "ParameterName": "World Max",
+      "ParameterId": "463BF357-417C28CA-5CD08DB6-0DD2BF1D",
+      "Function": {
+        "ObjectName": "MaterialFunction DonGlobalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/DonGlobalUVW.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "DonGlobalUVW",
+    "Properties": {
+      "Description": "Simple math to convert a World Position into a UV friendly 0-1 range. It measures the amount by a which a given position exceeds the lower bounds (i.e. World Min)and expresses that value as a ratio of the bounds size (i.e. World Max - World Min). Values outside of the World bounds will end up being less than 0 or greater than 1. Such positions will be ignored by Don's Mesh Painting system beforehand.",
+      "FunctionExpressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter DonGlobalUVW:MaterialExpressionCollectionParameter_4",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/DonGlobalUVW.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter DonGlobalUVW:MaterialExpressionCollectionParameter_5",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/DonGlobalUVW.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "StateId": "EEB5CE5E-4AB85867-C733FABB-DDD49B81"
+    }
+  }
+]

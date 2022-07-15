@@ -1,0 +1,36 @@
+[
+  {
+    "Type": "EQSRequest_IndianaBase",
+    "Name": "CompanionCommandCalledShotRangeLimited",
+    "Properties": {
+      "QueryTemplate": {
+        "ObjectName": "EnvQuery CompanionCommandCalledShotMeleeQuery",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.2"
+      },
+      "QueryConfig": [
+        {
+          "ParamName": "MinPreferredRange",
+          "ParamType": "EAIParamType::Float",
+          "Value": 10.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionCalledShot_MinLimitedRange",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "MaxPreferredRange",
+          "ParamType": "EAIParamType::Float",
+          "Value": 80.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionCalledShot_MaxLimitedRange",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

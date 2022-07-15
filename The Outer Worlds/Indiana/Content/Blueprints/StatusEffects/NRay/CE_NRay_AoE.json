@@ -1,0 +1,499 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CE_NRay_AoE_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_NRay_AoE_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CE_NRay_AoE_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.0"
+      },
+      {
+        "ObjectName": "Function CE_NRay_AoE_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.26"
+      },
+      {
+        "ObjectName": "Function CE_NRay_AoE_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.15"
+      },
+      {
+        "ObjectName": "Function CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CE_NRay_AoE": {
+        "ObjectName": "Function CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.7"
+      },
+      "ReceiveApplyEffect": {
+        "ObjectName": "Function CE_NRay_AoE_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.15"
+      },
+      "ReceiveClearEffect": {
+        "ObjectName": "Function CE_NRay_AoE_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.26"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_NRay_AoE_C Default__CE_NRay_AoE_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.2"
+    }
+  },
+  {
+    "Type": "CE_NRay_AoE_C",
+    "Name": "Default__CE_NRay_AoE_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_NRay_PostProcess_C Default__CE_NRay_AoE_C:CE_NRay_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.17"
+        },
+        {
+          "ObjectName": "AoEStatusEffect Default__CE_NRay_AoE_C:AoEStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.5"
+        },
+        {
+          "ObjectName": "CE_NRay_Pulse_Visual_C Default__CE_NRay_AoE_C:CE_NRay_Pulse_Visual_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.18"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::StackSingleInstance",
+      "Duration": 10.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "bProhibitsConversations": true,
+      "bRemoveWithSpell": false,
+      "EffectName": {
+        "StringID": 2350
+      },
+      "EffectDescription": {
+        "StringID": 2351
+      },
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__CE_NRay_AoE_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.21"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_NRayDiated",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_NRayDiated.0"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "AkPlaySoundEventEffect_0",
+    "Properties": {
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "SoundLoop": {
+        "ObjectName": "AkAudioEvent se_nray_lp",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_nray_lp.0"
+      },
+      "LoopFadeTime": 1.0
+    }
+  },
+  {
+    "Type": "AoEStatusEffect",
+    "Name": "AoEStatusEffect_0",
+    "Outer": "Default__CE_NRay_AoE_C",
+    "Properties": {
+      "CollisionShape": {
+        "Shape": {
+          "ObjectName": "SphereShape Default__CE_NRay_AoE_C:AoEStatusEffect_0.SphereShape_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.32"
+        }
+      },
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_NRay_Pulse_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_Pulse.1"
+      },
+      "bOnlyHostileTargets": true,
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 2.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CE_NRay_AoE",
+    "Outer": "CE_NRay_AoE_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.6"
+      },
+      {
+        "ObjectName": "ArrayProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_MakeArray_Array",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.9"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_Event_Target1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.24"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_Event_Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.31"
+      },
+      {
+        "ObjectName": "FloatProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_Event_Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.22"
+      },
+      {
+        "ObjectName": "BoolProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_Event_bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.13"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_GetComponentByTag_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.28"
+      },
+      {
+        "ObjectName": "ClassProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.19"
+      },
+      {
+        "ObjectName": "BoolProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.11"
+      },
+      {
+        "ObjectName": "BoolProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_ClassIsChildOf_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.10"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_GetSkeletalMeshComponent_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.29"
+      },
+      {
+        "ObjectName": "StructProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_GetCenterOfMass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.34"
+      },
+      {
+        "ObjectName": "StructProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_FindClosestBone_K2_BoneLocation",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.33"
+      },
+      {
+        "ObjectName": "NameProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_FindClosestBone_K2_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.27"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_SpawnEmitterAttached_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.30"
+      },
+      {
+        "ObjectName": "BoolProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.12"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "K2Node_MakeArray_Array",
+    "Outer": "K2Node_MakeArray_Array"
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "K2Node_MakeArray_Array",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "NameProperty CE_NRay_AoE_C:ExecuteUbergraph_CE_NRay_AoE.K2Node_MakeArray_Array.K2Node_MakeArray_Array",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.8"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_Event_bRestoredFromSave",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveApplyEffect",
+    "Outer": "CE_NRay_AoE_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveApplyEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ReceiveApplyEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.14"
+      },
+      {
+        "ObjectName": "FloatProperty CE_NRay_AoE_C:ReceiveApplyEffect.Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.23"
+      },
+      {
+        "ObjectName": "BoolProperty CE_NRay_AoE_C:ReceiveApplyEffect.bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.16"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bRestoredFromSave",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "CE_NRay_PostProcess_C",
+    "Name": "CE_NRay_PostProcess_C_0",
+    "Outer": "Default__CE_NRay_AoE_C",
+    "Template": "Default__CE_NRay_PostProcess_C",
+    "Properties": {
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_NRay_Pulse_Visual_C",
+    "Name": "CE_NRay_Pulse_Visual_C_0",
+    "Outer": "Default__CE_NRay_AoE_C",
+    "Template": "Default__CE_NRay_Pulse_Visual_C",
+    "Properties": {
+      "Interval": 2.0,
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__CE_NRay_AoE_C:CE_NRay_Pulse_Visual_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.20"
+      }
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_NRay_Pulse_Visual_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_NRay_AoE_C:CE_NRay_Pulse_Visual_C_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_NRay_AoE_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_NRay_AoE_C:EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_Ratio",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Ratio",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target1",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveClearEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveClearEffect",
+    "Outer": "CE_NRay_AoE_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveClearEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_NRay_AoE_C:ReceiveClearEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.25"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_FindClosestBone_K2_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentByTag_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetSkeletalMeshComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "AoEStatusEffect_0",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 500.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindClosestBone_K2_BoneLocation",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetCenterOfMass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_NRay_AoE",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

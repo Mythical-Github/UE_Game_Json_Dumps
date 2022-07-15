@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_0",
+    "Outer": "0903_Bridge_01",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList 0903_Bridge_01_ScientistPath",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/09_Interstitial/0903_Bridge_01_ScientistPath.4"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "0903_Quest_Giver"
+            },
+            "Value": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_1",
+    "Outer": "0903_Bridge_01",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList 0903_Bridge_01_BoardPath",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/09_Interstitial/0903_Bridge_01_BoardPath.4"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "0903_Quest_Giver"
+            },
+            "Value": 2
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterList",
+    "Name": "0903_Bridge_01",
+    "Properties": {
+      "bPersist": true,
+      "EncounterCompositions": [
+        {
+          "ObjectName": "EncounterCompositionSubList 0903_Bridge_01:EncounterCompositionSubList_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/09_Interstitial/0903_Bridge_01.0"
+        },
+        {
+          "ObjectName": "EncounterCompositionSubList 0903_Bridge_01:EncounterCompositionSubList_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/09_Interstitial/0903_Bridge_01.1"
+        }
+      ],
+      "TotalWeight": 2
+    }
+  }
+]

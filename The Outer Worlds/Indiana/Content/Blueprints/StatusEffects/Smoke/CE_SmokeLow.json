@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_SmokeLow_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_SmokeLow_C Default__CE_SmokeLow_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Smoke/CE_SmokeLow.1"
+    }
+  },
+  {
+    "Type": "CE_SmokeLow_C",
+    "Name": "Default__CE_SmokeLow_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_SmokeLow_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Smoke/CE_SmokeLow.2"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_SmokeLow_C:StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Smoke/CE_SmokeLow.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 300.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat ReceivedHostileEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/ReceivedHostileEffectDuration_Stat.0"
+      },
+      "bDurationAlwaysAffected": true,
+      "EffectName": {
+        "StringID": 1102
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_SmokeLow",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_SmokeLow.0"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_SmokeLow_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.15,
+        "RpgStat": {
+          "ObjectName": "RpgStat RangedWeaponSpread_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/RangedWeaponSpread_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__CE_SmokeLow_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.15,
+        "RpgStat": {
+          "ObjectName": "RpgStat RangedWeaponSway_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/RangedWeaponSway_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

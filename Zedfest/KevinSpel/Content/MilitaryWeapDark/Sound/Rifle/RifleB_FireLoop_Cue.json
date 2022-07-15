@@ -1,0 +1,202 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator RifleB_FireLoop_Cue:SoundNodeModulator_40",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.2"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 4000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation WeaponHandling_att",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Attenuation/WeaponHandling_att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDistanceCrossFade",
+    "Name": "SoundNodeDistanceCrossFade_13",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 250.0,
+          "FadeOutDistanceEnd": 300.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 250.0,
+          "FadeInDistanceEnd": 300.0,
+          "FadeOutDistanceStart": 800.0,
+          "FadeOutDistanceEnd": 4000.0,
+          "Volume": 1.0
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom RifleB_FireLoop_Cue:SoundNodeRandom_45",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeRandom RifleB_FireLoop_Cue:SoundNodeRandom_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_40",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "PitchMin": 0.97,
+      "PitchMax": 1.02,
+      "VolumeMin": 0.97,
+      "VolumeMax": 1.02,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDistanceCrossFade RifleB_FireLoop_Cue:SoundNodeDistanceCrossFade_13",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_24",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_25",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_23",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_45",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_26",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_27",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer RifleB_FireLoop_Cue:SoundNodeWavePlayer_28",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Rifle/RifleB_FireLoop_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_23",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_FireLoop03.RifleB_FireLoop03",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_24",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_FireLoop01.RifleB_FireLoop01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_25",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_FireLoop02.RifleB_FireLoop02",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_26",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_Fire_Loop_ST01.RifleB_Fire_Loop_ST01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_27",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_Fire_Loop_ST02.RifleB_Fire_Loop_ST02",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_28",
+    "Outer": "RifleB_FireLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/Rifle/Wavs/RifleB_Fire_Loop_ST03.RifleB_Fire_Loop_ST03",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": null
+  }
+]

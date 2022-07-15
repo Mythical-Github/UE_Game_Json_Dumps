@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_BaseParticle",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_BaseParticle:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "KevinSpel/Content/UI/ProHUD/Materials/Particles/M_BaseParticle.1"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionVectorParameter M_BaseParticle:MaterialExpressionVectorParameter_2",
+          "ObjectPath": "KevinSpel/Content/UI/ProHUD/Materials/Particles/M_BaseParticle.2"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+          "Function": {
+            "ObjectName": "MaterialFunction ExponentialDensity",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+          }
+        },
+        {
+          "StateId": "235C8133-44D704CA-0297108A-59B9F710",
+          "Function": {
+            "ObjectName": "MaterialFunction RadialGradientExponential",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "6D54F6A9-4DBAFFDE-9AEE729B-03521D2B",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "M_BaseParticle",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction RadialGradientExponential",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+      },
+      "Material": {
+        "ObjectName": "Material M_BaseParticle",
+        "ObjectPath": "KevinSpel/Content/UI/ProHUD/Materials/Particles/M_BaseParticle.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_2",
+    "Outer": "M_BaseParticle",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.0,
+        "G": 1.0,
+        "B": 0.02804,
+        "A": 1.0,
+        "Hex": "FF00FF2E"
+      },
+      "ParameterName": "BaseColor",
+      "ExpressionGUID": "8F686FD3-461DAC90-9AD4CA98-1EDE9048",
+      "Material": {
+        "ObjectName": "Material M_BaseParticle",
+        "ObjectPath": "KevinSpel/Content/UI/ProHUD/Materials/Particles/M_BaseParticle.0"
+      }
+    }
+  }
+]

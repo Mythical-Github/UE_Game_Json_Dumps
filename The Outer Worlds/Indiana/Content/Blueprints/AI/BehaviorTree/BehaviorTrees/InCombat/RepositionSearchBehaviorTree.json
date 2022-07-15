@@ -1,0 +1,767 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.13"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_WithInDistance",
+    "Name": "BT_Con_General_WithInDistance_4",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "StartLocation": {
+        "AILocation": {
+          "ObjectName": "Class General_CurrentLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EndLocation": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Distance": 600.0,
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Not In hardcoded distance",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_RequestPrimaryTarget",
+    "Name": "BT_Scr_General_RequestPrimaryTarget_13",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "RequestType": "ETargetRequestType::Lost",
+      "ScriptExecutionType": "EAIScriptExecutionType::OnUpdate",
+      "NodeName": "Request New Target (LOST)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_RequestPrimaryTarget",
+    "Name": "BT_Scr_General_RequestPrimaryTarget_2",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "RequestType": "ETargetRequestType::Lost",
+      "ScriptExecutionType": "EAIScriptExecutionType::OnUpdate",
+      "NodeName": "Request New Target (LOST)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector RepositionSearchBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorNavigationSettings",
+    "Name": "BT_Scr_General_SetBehaviorNavigationSettings_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "bCanJump": true,
+      "bCanUseLadders": true,
+      "NodeName": "Allow Climbing and Jumping",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_18",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.11"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_19",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_19",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_RequestPrimaryTarget RepositionSearchBehaviorTree:BT_Scr_General_RequestPrimaryTarget_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_SearchComplete RepositionSearchBehaviorTree:BTService_EventFirer_SearchComplete_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.17"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery RepositionSearchBehaviorTree:BTTask_IndianaRunEQSQuery_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo RepositionSearchBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt RepositionSearchBehaviorTree:BTService_General_FocusAt_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.20"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_17",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery RepositionSearchBehaviorTree:BTTask_IndianaRunEQSQuery_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo RepositionSearchBehaviorTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt RepositionSearchBehaviorTree:BTService_General_FocusAt_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.18"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop RepositionSearchBehaviorTree:BTDecorator_Loop_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_18",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.11"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait RepositionSearchBehaviorTree:BTTask_IndianaWait_8",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait RepositionSearchBehaviorTree:BTTask_IndianaWait_9",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.28"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete RepositionSearchBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt RepositionSearchBehaviorTree:BTService_General_FocusAt_11",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.19"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_17",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait RepositionSearchBehaviorTree:BTTask_IndianaWait_11",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait RepositionSearchBehaviorTree:BTTask_IndianaWait_10",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete RepositionSearchBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.6"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector RepositionSearchBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector RepositionSearchBehaviorTree:BTComposite_Selector_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorNavigationSettings RepositionSearchBehaviorTree:BT_Scr_General_SetBehaviorNavigationSettings_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop RepositionSearchBehaviorTree:BTDecorator_Loop_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_17",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_WithInDistance RepositionSearchBehaviorTree:BT_Con_General_WithInDistance_4",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.1"
+            },
+            {
+              "ObjectName": "BT_Scr_General_RequestPrimaryTarget RepositionSearchBehaviorTree:BT_Scr_General_RequestPrimaryTarget_13",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector RepositionSearchBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "NumLoops": 6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_17",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_SearchComplete",
+    "Name": "BTService_EventFirer_SearchComplete_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Search Complete Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector RepositionSearchBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "bIsMoving": true,
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_11",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_18",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.11"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_2",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "bIsMoving": true,
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetSphereCheatLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "66136598-4C8A9CFF-764AC18F-7BE58803",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "66136598-4C8A9CFF-764AC18F-7BE58803",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_0",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase RepositionSearch",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/RepositionSearch.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "D6B1C6F0-48FEE40D-361CC898-A7017309",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_2",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase RepositionSearch",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/RepositionSearch.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "D6B1C6F0-48FEE40D-361CC898-A7017309",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_10",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "7B49CE55-401056FD-20CEC8BB-A09CD3A3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_19",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_11",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "WaitTime": 2.0,
+      "SaveGameTaskGuid": "7B49CE55-401056FD-20CEC8BB-A09CD3A3",
+      "NodeName": "Pre-Wait Time Before Direct Search",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_19",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_8",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "WaitTime": 2.0,
+      "SaveGameTaskGuid": "7B49CE55-401056FD-20CEC8BB-A09CD3A3",
+      "NodeName": "Pre-Wait Time Before Direct Search",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_18",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_9",
+    "Outer": "RepositionSearchBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "7B49CE55-401056FD-20CEC8BB-A09CD3A3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence RepositionSearchBehaviorTree:BTComposite_Sequence_18",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.11"
+      }
+    }
+  }
+]

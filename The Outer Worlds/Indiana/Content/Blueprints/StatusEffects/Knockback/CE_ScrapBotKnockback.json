@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_ScrapBotKnockback_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_ScrapBotKnockback_C Default__CE_ScrapBotKnockback_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_ScrapBotKnockback.1"
+    }
+  },
+  {
+    "Type": "CE_ScrapBotKnockback_C",
+    "Name": "Default__CE_ScrapBotKnockback_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__CE_ScrapBotKnockback_C:PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_ScrapBotKnockback.5"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__CE_ScrapBotKnockback_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_ScrapBotKnockback.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "Duration": 1.0,
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 26
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_ScrapBotKnockback_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_ScrapBotKnockback.4"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateKnockback"
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__CE_ScrapBotKnockback_C",
+    "Properties": {
+      "DamageValuePercent": 10.0,
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_ScrapBotKnockback_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_ScrapBotKnockback_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_ScrapBotKnockback.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "Default__CE_ScrapBotKnockback_C",
+    "Properties": {
+      "PushSpeed": 900.0,
+      "PushSpeedZ": 400.0,
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Knockback"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 1.0
+    }
+  }
+]

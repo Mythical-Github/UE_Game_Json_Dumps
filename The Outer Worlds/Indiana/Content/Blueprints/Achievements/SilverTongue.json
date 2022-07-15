@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "AchievementDataAsset",
+    "Name": "SilverTongue",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener SilverTongue:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Achievements/SilverTongue.4"
+      },
+      "Count": 30,
+      "AchievementID": 7,
+      "SteamName": "NEW_ACHIEVEMENT_1_6",
+      "PS4Name": "7",
+      "XboxName": "7"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Persuade",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Lie",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_2",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Intimidate",
+      "XPReason": "EXPGainReason::Conversation"
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "SilverTongue",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnSkillCheckSuccess SilverTongue:OrListener_0.OnSkillCheckSuccess_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/SilverTongue.1"
+        },
+        {
+          "ObjectName": "OnSkillCheckSuccess SilverTongue:OrListener_0.OnSkillCheckSuccess_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/SilverTongue.2"
+        },
+        {
+          "ObjectName": "OnSkillCheckSuccess SilverTongue:OrListener_0.OnSkillCheckSuccess_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/SilverTongue.3"
+        }
+      ]
+    }
+  }
+]

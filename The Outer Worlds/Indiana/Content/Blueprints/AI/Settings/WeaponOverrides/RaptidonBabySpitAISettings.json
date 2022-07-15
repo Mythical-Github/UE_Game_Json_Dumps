@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "RaptidonBabySpitAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.5,
+          "EndPauseTime": 3.5
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "MinMoveDistance": 600.0,
+        "MaxMoveDistance": 1000.0,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.4,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.6
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.6,
+            "BackwardWeight": 0.3,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.1
+          },
+          "PreferredRange": {
+            "StationaryWeight": 0.8,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.2
+          },
+          "TooFar": {
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.75,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DodgeBasicMeleeDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DodgeBasicMeleeDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 5.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1500.0,
+        "PreferredMaxRange": 2500.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

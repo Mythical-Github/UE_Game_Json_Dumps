@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_RingRefraction",
+    "Properties": {
+      "BlendMode": "BLEND_Translucent",
+      "Refraction": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "bUsedWithParticleSprites": true,
+      "bUsesDistortion": true,
+      "Expressions": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_RingRefraction:MaterialExpressionTextureSample_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_RingRefraction.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_RingRefraction:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_RingRefraction.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "67595709-4174C0DB-BC1CAFB4-CF798AFA",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "M_RingRefraction",
+    "Properties": {
+      "DefaultValue": 1.5,
+      "ParameterName": "RefractionAmount",
+      "ExpressionGUID": "C2F9558C-49D5510C-33814CB2-C8325DB4",
+      "Material": {
+        "ObjectName": "Material M_RingRefraction",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_RingRefraction.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "M_RingRefraction",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_BlurredRing_Alpha",
+        "ObjectPath": "KevinSpel/Content/FPSK/Textures/ParticleTextures/T_BlurredRing_Alpha.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material M_RingRefraction",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_RingRefraction.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "PS_Shock_Projectile",
+    "Outer": "Shock_Lob_Projectile_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "Shock_Lob_Projectile_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Shock_Lob_Projectile_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Shock_Lob_Projectile_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler Shock_Lob_Projectile_C:InheritableComponentHandler",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Projectile",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function Shock_Lob_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.1"
+      },
+      {
+        "ObjectName": "ObjectProperty Shock_Lob_Projectile_C:PS_Shock_Projectile",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.0"
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function Shock_Lob_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.1"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Shock_Lob_Projectile_C Default__Shock_Lob_Projectile_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.3"
+    }
+  },
+  {
+    "Type": "Shock_Lob_Projectile_C",
+    "Name": "Default__Shock_Lob_Projectile_C",
+    "Properties": {
+      "ProjectileMovement": {
+        "ObjectName": "IndianaProjMovementComponent Default__Shock_Lob_Projectile_C:ProjMovementComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.5"
+      },
+      "MainCollisionComponent": {
+        "ObjectName": "SphereComponent Default__Shock_Lob_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.14"
+      },
+      "DamageCollisionComponent": {
+        "ObjectName": "SphereComponent Default__Shock_Lob_Projectile_C:DamageSphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.13"
+      },
+      "VisualRoot": {
+        "ObjectName": "SceneComponent Default__Shock_Lob_Projectile_C:VisualRoot",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.8"
+      },
+      "Impulse": 2500.0,
+      "ImpactEffects": {
+        "ObjectName": "EventEffects Default__Shock_Lob_Projectile_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.4"
+      },
+      "ImpactDataSet": {
+        "ObjectName": "ImpactDataSet Radial_Shock_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Radial_Shock_ImpactData.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent Default__Shock_Lob_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Shock_Lob_Projectile_C"
+  },
+  {
+    "Type": "IndianaProjMovementComponent",
+    "Name": "ProjMovementComponent",
+    "Outer": "Default__Shock_Lob_Projectile_C",
+    "Properties": {
+      "InitialSpeed": 2500.0,
+      "MaxSpeed": 3500.0,
+      "ProjectileGravityScale": 1.3,
+      "OnProjectileBounce": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Shock_Lob_Projectile_C Default__Shock_Lob_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.3"
+            },
+            "FunctionName": "OnBounce"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Shock_Lob_Projectile_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PS_Shock_Projectile_GEN_VARIABLE",
+    "Outer": "Shock_Lob_Projectile_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem PS_Shock_Projectile",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Weapons/Projectiles/Electrical/PS_Shock_Projectile.110"
+      },
+      "RelativeRotation": {
+        "Pitch": 83.04547,
+        "Yaw": 109.43976,
+        "Roll": -84.42342
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "VisualRoot",
+    "Outer": "Default__Shock_Lob_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__Shock_Lob_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Shock_Lob_Projectile_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Shock_Lob_Projectile_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.9"
+      },
+      "VariableGuid": "85518C05-47F7F96D-380EF090-5DE91DD2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ParticleSystemComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent Shock_Lob_Projectile_C:PS_Shock_Projectile_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.7"
+      },
+      "CookedComponentInstancingData": {
+        "bIsValid": true,
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class ParticleSystemComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class ParticleSystemComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ]
+      },
+      "ParentComponentOrVariableName": "VisualRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A10BA041-4E8838AD-EE8835AE-6DBA1B19",
+      "InternalVariableName": "PS_Shock_Projectile"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Shock_Lob_Projectile_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node Shock_Lob_Projectile_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node Shock_Lob_Projectile_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Shock_Lob_Projectile_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.10"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "DamageSphereComp",
+    "Outer": "Default__Shock_Lob_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__Shock_Lob_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__Shock_Lob_Projectile_C",
+    "Properties": {
+      "SphereRadius": 10.0,
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Shock_Lob_Projectile_C Default__Shock_Lob_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Shock/Shock_Lob_Projectile.3"
+            },
+            "FunctionName": "OnHit"
+          }
+        ]
+      }
+    }
+  }
+]

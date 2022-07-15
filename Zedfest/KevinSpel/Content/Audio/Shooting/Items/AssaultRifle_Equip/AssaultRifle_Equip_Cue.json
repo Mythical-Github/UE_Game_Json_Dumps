@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeAttenuation AssaultRifle_Equip_Cue:SoundNodeAttenuation_8",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.1"
+      },
+      "VolumeMultiplier": 0.3,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 2000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 0.7748073,
+      "MaxDistance": 3300.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation WeaponHandling_att",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Attenuation/WeaponHandling_att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_8",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 600.0,
+        "LPFRadiusMax": 3000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "bOverrideAttenuation": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator AssaultRifle_Equip_Cue:SoundNodeModulator_7",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_7",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom AssaultRifle_Equip_Cue:SoundNodeRandom_1",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AssaultRifle_Equip_Cue:SoundNodeWavePlayer_3",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer AssaultRifle_Equip_Cue:SoundNodeWavePlayer_4",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer AssaultRifle_Equip_Cue:SoundNodeWavePlayer_5",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Equip/AssaultRifle_Equip_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/AssaultRifle_Equip/Weapon_AssaultRifle_Swap03.Weapon_AssaultRifle_Swap03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/AssaultRifle_Equip/Weapon_AssaultRifle_Swap01.Weapon_AssaultRifle_Swap01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AssaultRifle_Equip_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/AssaultRifle_Equip/Weapon_AssaultRifle_Swap02.Weapon_AssaultRifle_Swap02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

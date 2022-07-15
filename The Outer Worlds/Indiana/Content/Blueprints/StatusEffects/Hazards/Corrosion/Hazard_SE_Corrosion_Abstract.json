@@ -1,0 +1,142 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Corrosion_Abstract_C",
+    "Super": "CE_Acid_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass CE_Acid_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Acid/CE_Acid.1"
+    },
+    "ClassFlags": 10754065,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Corrosion_Abstract_C Default__Hazard_SE_Corrosion_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Corrosion_Abstract_C",
+    "Name": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "Default__CE_Acid_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Poison_PostProcess_C Default__Hazard_SE_Corrosion_Abstract_C:CE_Poison_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.4"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Corrosion_Abstract_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.6"
+        },
+        {
+          "ObjectName": "ArmorStatusEffect Default__Hazard_SE_Corrosion_Abstract_C:ArmorStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Corrosion_Abstract_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.7"
+      }
+    }
+  },
+  {
+    "Type": "ArmorStatusEffect",
+    "Name": "ArmorStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "ArmorStatusEffect_0",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "bIsHostile": false
+    }
+  },
+  {
+    "Type": "CE_Acid_PostProcess_C",
+    "Name": "CE_Acid_PostProcess_C_1",
+    "Outer": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "CE_Acid_PostProcess_C_1"
+  },
+  {
+    "Type": "CE_Poison_PostProcess_C",
+    "Name": "CE_Poison_PostProcess_C_0",
+    "Outer": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "Default__CE_Poison_PostProcess_C",
+    "Properties": {
+      "PostProcessData": {
+        "Params": {
+          "Tint": {
+            "EditorCurveData": {
+              "PreInfinityExtrap": "RCCE_Constant",
+              "PostInfinityExtrap": "RCCE_Constant",
+              "DefaultValue": 3.4028235E+38,
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 1.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                },
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 1.0,
+                  "Value": 0.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ]
+            },
+            "ExternalCurve": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "DamageStatusEffect_0",
+    "Properties": {
+      "DamageValue": 0.0,
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageScalars": 0,
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Interval": 0.666
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Hazard_SE_Corrosion_Abstract_C",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Hazard_SE_Corrosion_Abstract_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Corrosion/Hazard_SE_Corrosion_Abstract.5"
+        }
+      ]
+    }
+  }
+]

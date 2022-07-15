@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "Comp_NeedlerAISettings",
+    "Properties": {
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 1.0,
+          "BurstCount": 3,
+          "BurstPauseTime": 0.5,
+          "EndPauseTime": 1.0
+        }
+      },
+      "CoverFire": {
+        "bEnabled": true,
+        "FiringPattern": {
+          "StartPauseTime": 0.5,
+          "BurstCount": 6,
+          "BurstPauseTime": 0.5,
+          "EndPauseTime": 0.5
+        },
+        "CoverUseCount": 2,
+        "CoverTime": 3.0
+      },
+      "MovingFire": {
+        "bEnabled": true,
+        "PrePauseTime": 0.3,
+        "FiringPattern": {
+          "StartPauseTime": 0.5,
+          "BurstCount": 8,
+          "BurstPauseTime": 0.75,
+          "EndPauseTime": 1.0
+        },
+        "bFireWhileMovingToPreferredRange": true
+      },
+      "SuppressingFire": {
+        "Duration": "ESuppressingFireDuration::Medium"
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::Long",
+        "SearchMode": "ELostTargetSearchMode::RepositionSearch"
+      },
+      "RangeBehavior": {
+        "ToFar": {
+          "PreferredRangeWeight": 0.2,
+          "CoverWeight": 0.4,
+          "RangeWeight": 0.4
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction CompanionRangedDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/CompanionRangedDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 3.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1500.0,
+        "PreferredMaxRange": 2500.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

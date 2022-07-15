@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Disarm_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Disarm_C Default__CE_Disarm_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Disarm/CE_Disarm.1"
+    }
+  },
+  {
+    "Type": "CE_Disarm_C",
+    "Name": "Default__CE_Disarm_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Disarm_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Disarm/CE_Disarm.2"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_Disarm_C:ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Disarm/CE_Disarm.5"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "Duration": 30.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 34
+      },
+      "EffectDescription": {
+        "StringID": 1112
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Disarm_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Disarm/CE_Disarm.4"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Disarm",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Disarm.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1848
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_Disarm_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Disarm"
+      },
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::NPC_StateDisarmed"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Disarm_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Disarm_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Disarm/CE_Disarm.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "Default__CE_Disarm_C",
+    "Properties": {
+      "Action": "ETogglableAction::Disarmed",
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true,
+      "DescriptionFormat": {
+        "StringID": 1848
+      }
+    }
+  }
+]

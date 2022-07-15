@@ -1,0 +1,92 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindObstacle",
+    "Properties": {
+      "QueryName": "EQS_FindObstacle",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindObstacle:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindObstacle.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQS_FindObstacle",
+    "Properties": {
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 4096.0,
+        "ProjectUp": 4096.0,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_FindObstacle",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_FindObstacle:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindObstacle.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindObstacle:EnvQueryTest_Distance_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindObstacle.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_FindObstacle:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindObstacle.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindObstacle:EnvQueryTest_Distance_2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindObstacle.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_FindObstacle",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.25
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_2",
+    "Outer": "EQS_FindObstacle",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetDestinationContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetDestinationContext.2"
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQS_FindObstacle",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

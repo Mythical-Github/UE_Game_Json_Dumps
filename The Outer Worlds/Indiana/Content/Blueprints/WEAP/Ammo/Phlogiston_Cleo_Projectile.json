@@ -1,0 +1,256 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "PS_Projectile",
+    "Outer": "Phlogiston_Cleo_Projectile_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "Phlogiston_Cleo_Projectile_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Phlogiston_Cleo_Projectile_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Projectile",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function Phlogiston_Cleo_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.1"
+      },
+      {
+        "ObjectName": "ObjectProperty Phlogiston_Cleo_Projectile_C:PS_Projectile",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.0"
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function Phlogiston_Cleo_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.1"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Phlogiston_Cleo_Projectile_C Default__Phlogiston_Cleo_Projectile_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.3"
+    }
+  },
+  {
+    "Type": "Phlogiston_Cleo_Projectile_C",
+    "Name": "Default__Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "ProjectileMovement": {
+        "ObjectName": "IndianaProjMovementComponent Default__Phlogiston_Cleo_Projectile_C:ProjMovementComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.4"
+      },
+      "MainCollisionComponent": {
+        "ObjectName": "SphereComponent Default__Phlogiston_Cleo_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.12"
+      },
+      "DamageCollisionComponent": {
+        "ObjectName": "SphereComponent Default__Phlogiston_Cleo_Projectile_C:DamageSphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.11"
+      },
+      "VisualRoot": {
+        "ObjectName": "SceneComponent Default__Phlogiston_Cleo_Projectile_C:VisualRoot",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.6"
+      },
+      "ProjectileLifetime": 1.5,
+      "Impulse": 2500.0,
+      "ImpactDataSet": {
+        "ObjectName": "ImpactDataSet Radial_Corrosive_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Corrosive/Radial_Corrosive_ImpactData.0"
+      },
+      "BounceDataSet": {
+        "ObjectName": "ImpactDataSet Phlogiston_Cleo_Bounce_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Bounce_ImpactData.0"
+      },
+      "TracerSound": {
+        "ObjectName": "TracerSoundData WeaponSFX_Gun-Phlogiston_Tracer",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/Weapons/Tracers/WeaponSFX_Gun-Phlogiston_Tracer.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent Default__Phlogiston_Cleo_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.12"
+      }
+    }
+  },
+  {
+    "Type": "IndianaProjMovementComponent",
+    "Name": "ProjMovementComponent",
+    "Outer": "Default__Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "InitialSpeed": 7000.0,
+      "MaxSpeed": 7000.0,
+      "bShouldBounce": true,
+      "ProjectileGravityScale": 0.1,
+      "Bounciness": 1.0,
+      "Friction": 0.15,
+      "BounceVelocityStopSimulatingThreshold": 5000.0,
+      "OnProjectileBounce": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Phlogiston_Cleo_Projectile_C Default__Phlogiston_Cleo_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.3"
+            },
+            "FunctionName": "OnBounce"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PS_Projectile_GEN_VARIABLE",
+    "Outer": "Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem PS_Phlog_Cleo",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Weapons/Projectiles/Science/PS_Phlog_Cleo.29"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "VisualRoot",
+    "Outer": "Default__Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__Phlogiston_Cleo_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.12"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Phlogiston_Cleo_Projectile_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Phlogiston_Cleo_Projectile_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.7"
+      },
+      "VariableGuid": "56766AF4-48783F09-EA3EABB9-D6047FD1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ParticleSystemComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent Phlogiston_Cleo_Projectile_C:PS_Projectile_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.5"
+      },
+      "CookedComponentInstancingData": {
+        "bIsValid": true,
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class ParticleSystemComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ]
+      },
+      "ParentComponentOrVariableName": "VisualRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "60793197-44BADFAB-2C0B1298-9DDA178E",
+      "InternalVariableName": "PS_Projectile"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node Phlogiston_Cleo_Projectile_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node Phlogiston_Cleo_Projectile_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Phlogiston_Cleo_Projectile_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.8"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "DamageSphereComp",
+    "Outer": "Default__Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__Phlogiston_Cleo_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.12"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__Phlogiston_Cleo_Projectile_C",
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Phlogiston_Cleo_Projectile_C Default__Phlogiston_Cleo_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Phlogiston_Cleo_Projectile.3"
+            },
+            "FunctionName": "OnHit"
+          }
+        ]
+      }
+    }
+  }
+]

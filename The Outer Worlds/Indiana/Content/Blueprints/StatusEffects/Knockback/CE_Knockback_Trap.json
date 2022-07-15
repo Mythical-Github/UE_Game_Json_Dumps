@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Knockback_Trap_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Knockback_Trap_C Default__CE_Knockback_Trap_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_Knockback_Trap.1"
+    }
+  },
+  {
+    "Type": "CE_Knockback_Trap_C",
+    "Name": "Default__CE_Knockback_Trap_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__CE_Knockback_Trap_C:PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_Knockback_Trap.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 0.8,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 26
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Knockback_Trap_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_Knockback_Trap.3"
+      },
+      "DescriptionFormat": {
+        "StringID": 1929
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateKnockback"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Knockback_Trap_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Knockback_Trap_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_Knockback_Trap.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "Default__CE_Knockback_Trap_C",
+    "Properties": {
+      "PushSpeed": 700.0,
+      "PushSpeedZ": 100.0,
+      "bPushAwayFromOriginActor": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Knockback"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied"
+    }
+  }
+]

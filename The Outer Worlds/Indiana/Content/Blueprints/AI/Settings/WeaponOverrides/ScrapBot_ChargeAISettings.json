@@ -1,0 +1,111 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "ScrapBot_ChargeAISettings",
+    "Properties": {
+      "WeaponFireType": "EWeaponFireType::Melee",
+      "Melee": {
+        "bEnabled": true,
+        "MeleeActions": {
+          "MeleeSlotRequestData Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Special1.Melee_Special1": {
+            "Cooldown": 0.0,
+            "UseCase": "EMeleeActionUseCase::Default",
+            "UseRange": 0.0,
+            "Weight": 1.0,
+            "bOverrideNumMeleeSlotsRequired": false,
+            "NumMeleeSlotsRequired": 1,
+            "bIgnoreCollisionDuringApproach": false,
+            "bBumpDuringApproach": false,
+            "bSprintDuringApproach": false,
+            "RecoveryDelay": 0.0,
+            "bUseAdaptiveRootMotion": false,
+            "AdaptiveRootMotionStopDistance": 50.0,
+            "bOverrideBackupBehavior": false,
+            "BackupBehavior": {
+              "RecoveryType": "EMeleeRecoveryType::Move",
+              "BackupChance": 0.0,
+              "MaxBackupDistance": 200.0,
+              "MinBackupDistance": 50.0,
+              "DodgeChance": 0.0,
+              "DodgeDirection": "EDodgeDirection::Invalid",
+              "bDodgeRequiresClearPath": true,
+              "MaxValidTargetDistance": 200.0,
+              "bShouldLookAtTarget": true
+            },
+            "AttackingRotationThreshold": 0.9,
+            "PreferredAttackDistance": 3000.0
+          }
+        }
+      },
+      "StationaryFire": {
+        "bEnabled": false,
+        "FiringPattern": {
+          "EndPauseTime": 5.0
+        }
+      },
+      "CoverFire": {
+        "MaxCoverUses": 2,
+        "FiringPattern": {
+          "StartPauseTime": 0.5
+        },
+        "CoverUseCount": 1,
+        "CoverTime": 3.0
+      },
+      "MovingFire": {
+        "PrePauseTime": 0.3,
+        "FiringPattern": {
+          "EndPauseTime": 5.0
+        },
+        "bCanFireWhileRunning": true,
+        "bFireWhileMovingToPreferredRange": true,
+        "MovingToPreferredRangeNoFireTime": 1.0,
+        "MovingToPreferredRangeFireTime": 5.0
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "bLimitedRange": true,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 10000.0,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.1
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "PreferredRange": {
+            "StationaryWeight": 0.33,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.33,
+            "StrafeWeight": 0.33
+          },
+          "TooFar": {
+            "StationaryWeight": 0.0,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 1.0,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "Cooldown": 10.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 3000.0,
+        "PreferredMaxRange": 3000.0,
+        "AbsoluteRangeBuffer": 200.0
+      }
+    }
+  }
+]

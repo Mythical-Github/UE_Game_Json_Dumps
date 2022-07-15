@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "SwitchContextBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence SwitchContextBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_0",
+    "Outer": "SwitchContextBehaviorTree",
+    "Properties": {
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchContextBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchContextBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SwitchContext",
+    "Name": "BT_Scr_General_SwitchContext_0",
+    "Outer": "SwitchContextBehaviorTree",
+    "Properties": {
+      "ContextSelector": {
+        "AIInt": {
+          "ObjectName": "Class Context_CurrentRequest",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Switch Context",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchContextBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchContextBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "SwitchContextBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait SwitchContextBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.4"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SwitchContext SwitchContextBehaviorTree:BT_Scr_General_SwitchContext_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.2"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete SwitchContextBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchContextBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "SwitchContextBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "CF41D14E-4BAFC200-F8C184BC-04E7C9FB",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchContextBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchContextBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.3"
+      }
+    }
+  }
+]

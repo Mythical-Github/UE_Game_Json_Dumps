@@ -1,0 +1,1992 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_NPC_Fleshman_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 29,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19,
+                20,
+                22,
+                23,
+                24
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 30,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                26
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 27,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                28
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      },
+      "OrderedSavedPoseIndices": [
+        14
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "LowerLegsAnim?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:LowerLegsAnim?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByBool_FC53986F4EA08273127AB089175D33AF",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_NPC_Fleshman_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.20"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByEnum_280CD0BF42FD61933952DEA5158E7A91",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_723DEE8B41CD6B15AB0B0391CA6B5532",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.53"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_13A502F04F807DEB73FA77B35BA1BBF6",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.50"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsCrouching",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:IsCrouching",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByBool_14D7412948F04A55426E33BCBCB4F618",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_4963A1DE4832F2881EE9EB9EF05C2DB3",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.52"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_EF13AEAF478BD56C7C43C39D5C980504",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.54"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_2CABFD614DE102FCF0CA4EA3B7D42000",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_A493E0804C77495EB9128F90CCA1DE07",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.72"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_Fleshman_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.36"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.70"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_56AA429B4A354F8B589A34836F1B0E4E",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.71"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.36"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.28"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.27"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.26"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.25"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.24"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.23"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_Attack start",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_Root_B447D2124CB917E9FBE30ABFDC7D34DD",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_56AA429B4A354F8B589A34836F1B0E4E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.71"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.70"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_TransitionResult_A493E0804C77495EB9128F90CCA1DE07",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.72"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_SequencePlayer_DD7BE2824AF620C7C186978037C3FD0B",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.61"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_StateResult_66000A344B50138A3E42A78E756BD4A4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.68"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_SequencePlayer_8F75A55543D8F94C40EA4A8209681B03",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.60"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_StateResult_9B09F18244E91B821154928FA6C606CD",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.69"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_2CABFD614DE102FCF0CA4EA3B7D42000",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_EF13AEAF478BD56C7C43C39D5C980504",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_4963A1DE4832F2881EE9EB9EF05C2DB3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.52"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByBool_14D7412948F04A55426E33BCBCB4F618",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.47"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_13A502F04F807DEB73FA77B35BA1BBF6",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendSpacePlayer_723DEE8B41CD6B15AB0B0391CA6B5532",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByEnum_280CD0BF42FD61933952DEA5158E7A91",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_StateResult_0E3A3C084E42B0FF7A1C61AB909F6527",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.67"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_StateMachine_46908F904CDB33FD52D65FA2DB7C7BEF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.66"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_Slot_D5C7B1F0422504C753A6C5BA207EAA7B",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.65"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_SaveCachedPose_4D5B175C4861FFA7B8EC35B4012429D0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.59"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_Slot_A2ECAA424414D72A6DCD8D9DEB1ED7D7",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.63"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_C578DFE142B441CD6B9423AEFEFCE02F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.76"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_E2134D554A61BDD23369D78063BB5DD4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.77"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_LayeredBoneBlend_3A1A3BC24C670B7356D12A9F8B9C3264",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.57"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_7D79E9D94D5C7517B38BBAAB8CBFA8AF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.75"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_LayeredBoneBlend_0EA58148491B1A5D83362E8CA8AC53A8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_Slot_928D09D9481B033DB38B168A92D407B4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.62"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_Slot_C8BF24A8428FE5CD746C068F607B653C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.64"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_312C62B74F4CA58DCA536AAF451353FC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.73"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_E9E65AFA426D231A1B027982A606438F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.78"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_UseCachedPose_665A8A524F56D8B853F1599EF2D87467",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.74"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_LayeredBoneBlend_D5EF2BD24905C00048A0A99C0A084AF9",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_LayeredBoneBlend_192382EC443DB1A2B243B188608E1313",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.56"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:AnimGraphNode_BlendListByBool_FC53986F4EA08273127AB089175D33AF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.48"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.18"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Speed",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.35"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Fleshman_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.20"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:Direction",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.30"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.17"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:LowerLegsAnim?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.19"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.37"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_NPC_Fleshman": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.5"
+      },
+      "AnimNotify_Attack start": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_Attack start",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.22"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.23"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.24"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.25"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.26"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.27"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7": {
+        "ObjectName": "Function AnimBP_NPC_Fleshman_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.36"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_NPC_Fleshman_C Default__AnimBP_NPC_Fleshman_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.2"
+    }
+  },
+  {
+    "Type": "AnimBP_NPC_Fleshman_C",
+    "Name": "Default__AnimBP_NPC_Fleshman_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_B447D2124CB917E9FBE30ABFDC7D34DD": {
+        "Result": {
+          "LinkID": 32
+        }
+      },
+      "AnimGraphNode_TransitionResult_56AA429B4A354F8B589A34836F1B0E4E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_A493E0804C77495EB9128F90CCA1DE07": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_DD7BE2824AF620C7C186978037C3FD0B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Loop",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_66000A344B50138A3E42A78E756BD4A4": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_8F75A55543D8F94C40EA4A8209681B03": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_9B09F18244E91B821154928FA6C606CD": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_2CABFD614DE102FCF0CA4EA3B7D42000": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_ZedsFleshman",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_ZedsFleshman.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_EF13AEAF478BD56C7C43C39D5C980504": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_ZedsFleshman",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_ZedsFleshman.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_4963A1DE4832F2881EE9EB9EF05C2DB3": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_CrouchWalk",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_CrouchWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_14D7412948F04A55426E33BCBCB4F618": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_13A502F04F807DEB73FA77B35BA1BBF6": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_723DEE8B41CD6B15AB0B0391CA6B5532": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_280CD0BF42FD61933952DEA5158E7A91": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 13
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_0E3A3C084E42B0FF7A1C61AB909F6527": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_46908F904CDB33FD52D65FA2DB7C7BEF": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Slot_D5C7B1F0422504C753A6C5BA207EAA7B": {
+        "Source": {
+          "LinkID": 22
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_SaveCachedPose_4D5B175C4861FFA7B8EC35B4012429D0": {
+        "Pose": {
+          "LinkID": 16
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_Slot_A2ECAA424414D72A6DCD8D9DEB1ED7D7": {
+        "Source": {
+          "LinkID": 20
+        },
+        "SlotName": "UpperBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_C578DFE142B441CD6B9423AEFEFCE02F": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_E2134D554A61BDD23369D78063BB5DD4": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_3A1A3BC24C670B7356D12A9F8B9C3264": {
+        "BasePose": {
+          "LinkID": 21
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_UseCachedPose_7D79E9D94D5C7517B38BBAAB8CBFA8AF": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_0EA58148491B1A5D83362E8CA8AC53A8": {
+        "BasePose": {
+          "LinkID": 23
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "root",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_Slot_928D09D9481B033DB38B168A92D407B4": {
+        "Source": {
+          "LinkID": 30
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_C8BF24A8428FE5CD746C068F607B653C": {
+        "Source": {
+          "LinkID": 27
+        },
+        "SlotName": "UpperBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_312C62B74F4CA58DCA536AAF451353FC": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_E9E65AFA426D231A1B027982A606438F": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_665A8A524F56D8B853F1599EF2D87467": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_D5EF2BD24905C00048A0A99C0A084AF9": {
+        "BasePose": {
+          "LinkID": 28
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 26
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend_192382EC443DB1A2B243B188608E1313": {
+        "BasePose": {
+          "LinkID": 29
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 25
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendListByBool_FC53986F4EA08273127AB089175D33AF": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 24
+          },
+          {
+            "LinkID": 31
+          }
+        ],
+        "BlendTime": [
+          0.0,
+          0.0
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_B447D2124CB917E9FBE30ABFDC7D34DD",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.4"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.10"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.21"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.34"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.40"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.79"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.80"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.33"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.31"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.39"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.9"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.38"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.32"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.13"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.12"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.41"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.44"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.14"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.42"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.45"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.15"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.43"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.46"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.16"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_NPC_Fleshman_C:ExecuteUbergraph_AnimBP_NPC_Fleshman.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "LowerLegsAnim?",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_Attack start",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Fleshman_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Fleshman.29"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Fleshman_AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_14D7412948F04A55426E33BCBCB4F618",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_FC53986F4EA08273127AB089175D33AF",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_280CD0BF42FD61933952DEA5158E7A91",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_13A502F04F807DEB73FA77B35BA1BBF6",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_2CABFD614DE102FCF0CA4EA3B7D42000",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_4963A1DE4832F2881EE9EB9EF05C2DB3",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_723DEE8B41CD6B15AB0B0391CA6B5532",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EF13AEAF478BD56C7C43C39D5C980504",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_0EA58148491B1A5D83362E8CA8AC53A8",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_192382EC443DB1A2B243B188608E1313",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_3A1A3BC24C670B7356D12A9F8B9C3264",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_D5EF2BD24905C00048A0A99C0A084AF9",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_4D5B175C4861FFA7B8EC35B4012429D0",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8F75A55543D8F94C40EA4A8209681B03",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DD7BE2824AF620C7C186978037C3FD0B",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_928D09D9481B033DB38B168A92D407B4",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_A2ECAA424414D72A6DCD8D9DEB1ED7D7",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_C8BF24A8428FE5CD746C068F607B653C",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_D5C7B1F0422504C753A6C5BA207EAA7B",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_46908F904CDB33FD52D65FA2DB7C7BEF",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_0E3A3C084E42B0FF7A1C61AB909F6527",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_66000A344B50138A3E42A78E756BD4A4",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_9B09F18244E91B821154928FA6C606CD",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_484BA3114A6A9FD25DE0308E085414C7",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_56AA429B4A354F8B589A34836F1B0E4E",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A493E0804C77495EB9128F90CCA1DE07",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_312C62B74F4CA58DCA536AAF451353FC",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_665A8A524F56D8B853F1599EF2D87467",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_7D79E9D94D5C7517B38BBAAB8CBFA8AF",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_C578DFE142B441CD6B9423AEFEFCE02F",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_E2134D554A61BDD23369D78063BB5DD4",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_E9E65AFA426D231A1B027982A606438F",
+    "Outer": "AnimBP_NPC_Fleshman_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Fleshman",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_InvestigateArea_Fly",
+    "Properties": {
+      "QueryName": "EQS_InvestigateArea_Fly",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_InvestigateArea_Fly:EnvQueryOption_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_InvestigateArea_Fly.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQS_InvestigateArea_Fly",
+    "Properties": {
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_InvestigateArea_Fly:EnvQueryGenerator_SimpleGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_InvestigateArea_Fly.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::None"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_InvestigateArea_Fly",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_InvestigateArea_Fly:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_InvestigateArea_Fly.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_InvestigateArea_Fly:EnvQueryTest_Distance_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_InvestigateArea_Fly.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_InvestigateArea_Fly:EnvQueryTest_Distance_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_InvestigateArea_Fly.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_InvestigateArea_Fly",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQS_InvestigateArea_Fly",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  }
+]

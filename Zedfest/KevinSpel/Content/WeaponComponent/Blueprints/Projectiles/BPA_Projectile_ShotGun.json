@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPA_Projectile_ShotGun_C",
+    "Super": "BPA_ParentProjectile_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BPA_Projectile_ShotGun_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BPA_Projectile_ShotGun_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BPA_ParentProjectile_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_ParentProjectile.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPA_Projectile_ShotGun_C Default__BPA_Projectile_ShotGun_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.1"
+    }
+  },
+  {
+    "Type": "BPA_Projectile_ShotGun_C",
+    "Name": "Default__BPA_Projectile_ShotGun_C",
+    "Template": "Default__BPA_ParentProjectile_C",
+    "Properties": {
+      "Damage": 5.0,
+      "DamageMax": 10.0,
+      "Critchance": 0.3,
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPA_Projectile_ShotGun_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class ProjectileMovementComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ProjectileMovementComponent BPA_Projectile_ShotGun_C:ProjectileMovementComponent_40__A6522401",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BPA_ParentProjectile_C",
+              "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_ParentProjectile.1"
+            },
+            "SCSVariableName": "Projectile",
+            "AssociatedGuid": "E3DEE4E5-BBC546EE-DAB729A5-5F005C5B"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class SphereComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SphereComponent BPA_Projectile_ShotGun_C:SphereComponent_84__ABACB698",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BPA_ParentProjectile_C",
+              "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_ParentProjectile.1"
+            },
+            "SCSVariableName": "CollisionComponent",
+            "AssociatedGuid": "255D8DB7-8C8350DE-4112400E-3DBE5B41"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileMovementComponent_40__A6522401",
+    "Outer": "BPA_Projectile_ShotGun_C",
+    "Template": "ProjectileMovementComponent_40__A6522401",
+    "Properties": {
+      "Velocity": {
+        "X": 10000.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPA_Projectile_ShotGun_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BPA_Projectile_ShotGun_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.4"
+      },
+      "VariableGuid": "A3334179-44B16A0F-70EFEBAA-2E1272F9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPA_Projectile_ShotGun_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BPA_Projectile_ShotGun_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_Projectile_ShotGun.5"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComponent_84__ABACB698",
+    "Outer": "BPA_Projectile_ShotGun_C",
+    "Template": "SphereComponent_84__ABACB698",
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel1"
+      }
+    }
+  }
+]

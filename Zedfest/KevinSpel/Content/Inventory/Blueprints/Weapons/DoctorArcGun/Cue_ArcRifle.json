@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cue_ArcRifle",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeParamCrossFade Cue_ArcRifle:SoundNodeParamCrossFade_1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/Cue_ArcRifle.3"
+      },
+      "VolumeMultiplier": 0.3,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "Cue_ArcRifle",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Volume"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_ArcRifle:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/Cue_ArcRifle.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Outer": "Cue_ArcRifle",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Start",
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_ArcRifle:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/Cue_ArcRifle.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeParamCrossFade",
+    "Name": "SoundNodeParamCrossFade_1",
+    "Outer": "Cue_ArcRifle",
+    "Properties": {
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 0.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 0.0,
+          "Volume": 1.0
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_ArcRifle:SoundNodeModulatorContinuous_1",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/Cue_ArcRifle.2"
+        },
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_ArcRifle:SoundNodeModulatorContinuous_0",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/Cue_ArcRifle.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Cue_ArcRifle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Inventory/Blueprints/Weapons/DoctorArcGun/ArcRifleStart.ArcRifleStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave ArcRifleStart",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/ArcRifleStart.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Cue_ArcRifle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Inventory/Blueprints/Weapons/DoctorArcGun/ArcRifleRunning.ArcRifleRunning",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave ArcRifleRunning",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/DoctorArcGun/ArcRifleRunning.0"
+    }
+  }
+]

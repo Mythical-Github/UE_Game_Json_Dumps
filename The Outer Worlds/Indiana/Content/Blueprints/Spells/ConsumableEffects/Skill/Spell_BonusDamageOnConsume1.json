@@ -1,0 +1,139 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_BonusDamageOnConsume1_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_BonusDamageOnConsume1_C Default__Spell_BonusDamageOnConsume1_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Skill/Spell_BonusDamageOnConsume1.1"
+    }
+  },
+  {
+    "Type": "Spell_BonusDamageOnConsume1_C",
+    "Name": "Default__Spell_BonusDamageOnConsume1_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMedKitUsed Default__Spell_BonusDamageOnConsume1_C:OnMedKitUsed_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Skill/Spell_BonusDamageOnConsume1.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_MedicalForce_C Default__Spell_BonusDamageOnConsume1_C:CE_MedicalForce_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Skill/Spell_BonusDamageOnConsume1.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_MedicalForce_C",
+    "Name": "CE_MedicalForce_C_0",
+    "Outer": "Default__Spell_BonusDamageOnConsume1_C",
+    "Template": "Default__CE_MedicalForce_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_BonusDamageOnConsume1_C:CE_MedicalForce_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Skill/Spell_BonusDamageOnConsume1.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnMedKitUsed",
+    "Name": "OnMedKitUsed_0",
+    "Outer": "Default__Spell_BonusDamageOnConsume1_C",
+    "Properties": {
+      "Operator": "ComparisonOperator::Equals",
+      "ConsumablesRequired": 1
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_MedicalForce_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.2,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

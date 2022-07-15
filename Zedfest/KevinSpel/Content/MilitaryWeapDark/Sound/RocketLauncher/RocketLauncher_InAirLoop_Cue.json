@@ -1,0 +1,63 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RocketLauncher_InAirLoop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeDoppler RocketLauncher_InAirLoop_Cue:SoundNodeDoppler_0",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/RocketLauncher/RocketLauncher_InAirLoop_Cue.1"
+      },
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 1500.0,
+        "LPFRadiusMax": 3500.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 2200.0
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 2.791375,
+      "MaxDistance": 2800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation RocketLoop_att",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Attenuation/RocketLoop_att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDoppler",
+    "Name": "SoundNodeDoppler_0",
+    "Outer": "RocketLauncher_InAirLoop_Cue",
+    "Properties": {
+      "DopplerIntensity": 3.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer RocketLauncher_InAirLoop_Cue:SoundNodeWavePlayer_43",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/RocketLauncher/RocketLauncher_InAirLoop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_43",
+    "Outer": "RocketLauncher_InAirLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/MilitaryWeapDark/Sound/RocketLauncher/wavs/RocketLauncher_InAirLoop.RocketLauncher_InAirLoop",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave RocketLauncher_InAirLoop",
+      "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/RocketLauncher/wavs/RocketLauncher_InAirLoop.0"
+    }
+  }
+]

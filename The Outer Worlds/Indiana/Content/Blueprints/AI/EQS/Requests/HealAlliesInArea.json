@@ -1,0 +1,39 @@
+[
+  {
+    "Type": "EQSRequest_IndianaBase",
+    "Name": "HealAlliesInArea",
+    "Properties": {
+      "QueryTemplate": {
+        "ObjectName": "EnvQuery FindWeakAlliesInRange",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.3"
+      },
+      "QueryConfig": [
+        {
+          "ParamName": "ActorsOfClass.SearchRadius",
+          "ParamType": "EAIParamType::Float",
+          "Value": 4500.0,
+          "ValueSelector": {
+            "EQSParameter": null
+          }
+        },
+        {
+          "ParamName": "CharacterHealth.FloatValueMin",
+          "ParamType": "EAIParamType::Float",
+          "Value": 0.0001,
+          "ValueSelector": {
+            "EQSParameter": null
+          }
+        },
+        {
+          "ParamName": "CharacterHealth.FloatValueMax",
+          "ParamType": "EAIParamType::Float",
+          "Value": 0.9999,
+          "ValueSelector": {
+            "EQSParameter": null
+          }
+        }
+      ],
+      "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+    }
+  }
+]

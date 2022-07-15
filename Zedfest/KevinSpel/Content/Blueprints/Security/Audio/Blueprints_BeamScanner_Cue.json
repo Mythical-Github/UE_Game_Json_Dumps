@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Blueprints_BeamScanner_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer Blueprints_BeamScanner_Cue:SoundNodeMixer_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_BeamScanner_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "PitchMultiplier": 1.1,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 600.0,
+        "LPFRadiusMax": 2000.0,
+        "AttenuationShape": "EAttenuationShape::Cone",
+        "AttenuationShapeExtents": {
+          "X": 600.0,
+          "Y": 17.0,
+          "Z": 80.0
+        },
+        "FalloffDistance": 800.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "Duration": 10000.0,
+      "MaxDistance": 2900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation BodySplatter",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/BodySplatter.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Blueprints_BeamScanner_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.4
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Blueprints_BeamScanner_Cue:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_BeamScanner_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeModulator Blueprints_BeamScanner_Cue:SoundNodeModulator_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_BeamScanner_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Blueprints_BeamScanner_Cue",
+    "Properties": {
+      "PitchMax": 0.95,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Blueprints_BeamScanner_Cue:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_BeamScanner_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Blueprints_BeamScanner_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/Security/Audio/Blueprints_Scanner17.Blueprints_Scanner17",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Blueprints_Scanner17",
+      "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_Scanner17.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Blueprints_BeamScanner_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/Security/Audio/Blueprints_Scanner10.Blueprints_Scanner10",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Blueprints_Scanner10",
+      "ObjectPath": "KevinSpel/Content/Blueprints/Security/Audio/Blueprints_Scanner10.0"
+    }
+  }
+]

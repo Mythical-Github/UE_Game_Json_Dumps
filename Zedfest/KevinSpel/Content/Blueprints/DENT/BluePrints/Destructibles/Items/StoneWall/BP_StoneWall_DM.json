@@ -1,0 +1,182 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_StoneWall_DM_C",
+    "Super": "BP_DENT_MASTER_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_StoneWall_DM_C:SimpleConstructionScript_2",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_StoneWall_DM_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_DENT_MASTER_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Destructibles_Master/BP_DENT_MASTER.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_StoneWall_DM_C Default__BP_StoneWall_DM_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.1"
+    }
+  },
+  {
+    "Type": "BP_StoneWall_DM_C",
+    "Name": "Default__BP_StoneWall_DM_C",
+    "Template": "Default__BP_DENT_MASTER_C",
+    "Properties": {
+      "DM_Fracture_Particle_Radial": {
+        "ObjectName": "ParticleSystem Smoke_Impact_Omni_03",
+        "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Smoke/Smoke_Impact_Omni_03.28"
+      },
+      "DM_Fracture_Particle_Point": {
+        "ObjectName": "ParticleSystem P_StonePoint",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_StonePoint.15"
+      },
+      "DM_Fracture_Sound_Radial": {
+        "ObjectName": "SoundCue SC_RockFall_Radial",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_RockFall_Radial.0"
+      },
+      "DM_Fracture_Sound_Point": {
+        "ObjectName": "SoundCue SC_RockFall_Point",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_RockFall_Point.0"
+      },
+      "DestructibleMesh": {
+        "ObjectName": "DestructibleMesh AD_LargeWall",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Mesh/Destructible/StoneWall/AD_LargeWall.0"
+      },
+      "EnableHardSleeping": false,
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "DestructibleComponent",
+    "Name": "Destructible_GEN_VARIABLE",
+    "Outer": "BP_StoneWall_DM_C",
+    "Template": "Destructible_GEN_VARIABLE",
+    "Properties": {
+      "FractureEffects": [
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        },
+        {
+          "ParticleSystem": null,
+          "Sound": null
+        }
+      ],
+      "LargeChunkThreshold": 0.0,
+      "SkeletalMesh": {
+        "ObjectName": "DestructibleMesh AD_LargeWall",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Mesh/Destructible/StoneWall/AD_LargeWall.0"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_StoneWall_DM_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class DestructibleComponent",
+            "ObjectPath": "/Script/ApexDestruction"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DestructibleComponent BP_StoneWall_DM_C:Destructible_GEN_VARIABLE",
+            "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_DENT_MASTER_C",
+              "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Destructibles_Master/BP_DENT_MASTER.1"
+            },
+            "SCSVariableName": "Destructible",
+            "AssociatedGuid": "BB004E0E-40CD020A-C9B3F598-A209FD49"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_StoneWall_DM_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_StoneWall_DM_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.4"
+      },
+      "VariableGuid": "1A85EFB9-43CAC437-27C10CA3-533D4EE7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_2",
+    "Outer": "BP_StoneWall_DM_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_StoneWall_DM_C:SimpleConstructionScript_2.SCS_Node_10",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/BluePrints/Destructibles/Items/StoneWall/BP_StoneWall_DM.5"
+      }
+    }
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "MIDs",
+    "Outer": "MIDs",
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "MIDs",
+    "Outer": "CE_HackRobot_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty CE_HackRobot_C:MIDs.MIDs",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_HackRobot_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ArrayProperty CE_HackRobot_C:MIDs",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.1"
+      }
+    ],
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_HackRobot_C Default__CE_HackRobot_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.3"
+    }
+  },
+  {
+    "Type": "CE_HackRobot_C",
+    "Name": "Default__CE_HackRobot_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_HackRobot_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.4"
+        },
+        {
+          "ObjectName": "EmptyStatusEffect_C Default__CE_HackRobot_C:EmptyStatusEffect_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.9"
+        },
+        {
+          "ObjectName": "CE_HackRobot_Visuals_C Default__CE_HackRobot_C:CE_Effects_C_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.5"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 20.0,
+      "bIsHostile": true,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_HackRobot_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.11"
+      },
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__CE_HackRobot_C:EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.12"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_HackRobot_C",
+    "Properties": {
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Stun"
+      },
+      "bClearAwareness": true,
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 1131
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_HackRobot",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_HackRobot.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1132
+      }
+    }
+  },
+  {
+    "Type": "CE_HackRobot_Visuals_C",
+    "Name": "CE_Effects_C_1",
+    "Outer": "Default__CE_HackRobot_C",
+    "Template": "Default__CE_HackRobot_Visuals_C"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackWarning"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerDown"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerUp"
+    }
+  },
+  {
+    "Type": "EmptyStatusEffect_C",
+    "Name": "EmptyStatusEffect_C_0",
+    "Outer": "Default__CE_HackRobot_C",
+    "Template": "Default__EmptyStatusEffect_C",
+    "Properties": {
+      "Duration": 15.0,
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__CE_HackRobot_C:EmptyStatusEffect_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.10"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "EmptyStatusEffect_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_HackRobot_C:EmptyStatusEffect_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_HackRobot_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_HackRobot_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "Default__CE_HackRobot_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_HackRobot_C:EventEffects_1.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.8"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CE_Mantisaur_Bleed_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CE_Mantisaur_Bleed_C Default__Spell_CE_Mantisaur_Bleed_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.1"
+    }
+  },
+  {
+    "Type": "Spell_CE_Mantisaur_Bleed_C",
+    "Name": "Default__Spell_CE_Mantisaur_Bleed_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 27
+      },
+      "TargetConditionals": [
+        {
+          "ObjectName": "SpellConditional_RandomChance Default__Spell_CE_Mantisaur_Bleed_C:SpellConditional_RandomChance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.9"
+        }
+      ],
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMeleeHit Default__Spell_CE_Mantisaur_Bleed_C:OnMeleeHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.7"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Bleed_C Default__Spell_CE_Mantisaur_Bleed_C:CE_Bleed_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.2"
+              },
+              {
+                "ObjectName": "HitReactionStatusEffect Default__Spell_CE_Mantisaur_Bleed_C:HitReactionStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.6"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_CE_Mantisaur_Bleed_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.8"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_Bleed_C",
+    "Name": "CE_Bleed_C_0",
+    "Outer": "Default__Spell_CE_Mantisaur_Bleed_C",
+    "Template": "Default__CE_Bleed_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Bleed_PostProcess_C Default__Spell_CE_Mantisaur_Bleed_C:CE_Bleed_C_0.CE_Bleed_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.3"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Spell_CE_Mantisaur_Bleed_C:CE_Bleed_C_0.DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Mantisaur_Bleed_C:CE_Bleed_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.10"
+        }
+      ],
+      "Duration": 8.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CE_Mantisaur_Bleed_C:CE_Bleed_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Mantisaur_Bleed.5"
+      }
+    }
+  },
+  {
+    "Type": "CE_Bleed_PostProcess_C",
+    "Name": "CE_Bleed_PostProcess_C_0",
+    "Outer": "CE_Bleed_C_0",
+    "Template": "CE_Bleed_PostProcess_C_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "CE_Bleed_C_0",
+    "Template": "DamageStatusEffect_0",
+    "Properties": {
+      "DamageScalars": 0
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Bleed_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "HitReactionStatusEffect",
+    "Name": "HitReactionStatusEffect_0",
+    "Outer": "Default__Spell_CE_Mantisaur_Bleed_C",
+    "Properties": {
+      "HitReaction": "EHitReactType::Light",
+      "Duration": 0.1
+    }
+  },
+  {
+    "Type": "OnMeleeHit",
+    "Name": "OnMeleeHit_0",
+    "Outer": "Default__Spell_CE_Mantisaur_Bleed_C",
+    "Properties": {
+      "MeleeAction": "EMeleeAction::SpecialAttack1",
+      "bPassThroughDamage": true,
+      "PassThroughDamageScalar": 0.1
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_CE_Mantisaur_Bleed_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Robot"
+      ],
+      "bNegateCheck": true
+    }
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_0",
+    "Outer": "Default__Spell_CE_Mantisaur_Bleed_C"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Bleed_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  }
+]

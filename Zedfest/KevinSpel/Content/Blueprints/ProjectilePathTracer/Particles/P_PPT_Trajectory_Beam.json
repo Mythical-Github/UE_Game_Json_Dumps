@@ -1,0 +1,355 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionDistance",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 25.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperFactor",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperScale",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_0",
+    "Outer": "ParticleModuleSize_0",
+    "Properties": {
+      "ParameterName": "Size",
+      "MaxInput": {
+        "X": 10.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MaxOutput": {
+        "X": 10.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Constant": {
+        "X": 3.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_PPT_Trajectory_Beam:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSize P_PPT_Trajectory_Beam:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.9"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource P_PPT_Trajectory_Beam:ParticleModuleBeamSource_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.6"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget P_PPT_Trajectory_Beam:ParticleModuleBeamTarget_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.7"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 P_PPT_Trajectory_Beam:ParticleModuleTypeDataBeam2_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.11"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_PPT_Trajectory_Beam:ParticleModuleSpawn_1",
+        "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.10"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "SourceMethod": "PEB2STM_UserSet",
+      "SourceName": "Source",
+      "bSourceAbsolute": true,
+      "Source": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "SourceTangentMethod": "PEB2STTM_UserSet",
+      "SourceTangent": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "TargetName": "Target",
+      "Target": {
+        "MaxValue": 100.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            100.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "bTargetAbsolute": true,
+      "TargetTangentMethod": "PEB2STTM_UserSet",
+      "TargetTangent": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_PPT_Beam",
+        "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Materials/M_PPT_Beam.0"
+      },
+      "ScreenAlignment": "PSA_FacingCameraPosition",
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.0,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_PPT_Trajectory_Beam:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 2.0,
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter P_PPT_Trajectory_Beam:ParticleModuleSize_0.DistributionVectorParticleParameter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.4"
+        },
+        "Table": {
+          "Values": [
+            2.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "bProcessSpawnRate": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "MaxBeamCount": 1,
+      "Speed": 0.0,
+      "bAlwaysOn": true,
+      "Distance": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_PPT_Trajectory_Beam:ParticleModuleTypeDataBeam2_0.DistributionDistance",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.1"
+        }
+      },
+      "TaperFactor": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_PPT_Trajectory_Beam:ParticleModuleTypeDataBeam2_0.DistributionTaperFactor",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.2"
+        }
+      },
+      "TaperScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_PPT_Trajectory_Beam:ParticleModuleTypeDataBeam2_0.DistributionTaperScale",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "EmitterName": "Beam",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_PPT_Trajectory_Beam:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.5"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_PPT_Trajectory_Beam",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_PPT_Trajectory_Beam:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/ProjectilePathTracer/Particles/P_PPT_Trajectory_Beam.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

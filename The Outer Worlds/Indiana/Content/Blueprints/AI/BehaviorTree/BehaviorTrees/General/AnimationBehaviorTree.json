@@ -1,0 +1,212 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "AnimationBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Animation_ShouldFaceTargetBeforePlayback",
+    "Name": "BT_Con_Animation_ShouldFaceTargetBeforePlayback_0",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "NodeName": "Face Target?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_1",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "NodeName": "Complete Behavior",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait AnimationBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess AnimationBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Con_Animation_ShouldFaceTargetBeforePlayback AnimationBehaviorTree:BT_Con_Animation_ShouldFaceTargetBeforePlayback_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Indiana_PlayAnimation AnimationBehaviorTree:BTTask_Indiana_PlayAnimation_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait AnimationBehaviorTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete AnimationBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_2",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bSetShouldExitRegion": true,
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Aim at Primary Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Indiana_PlayAnimation",
+    "Name": "BTTask_Indiana_PlayAnimation_0",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "AnimationToPlay": {
+        "Object": {
+          "ObjectName": "Class AI_AnimationStateAnimation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "A9064BB6-4041A1F1-C2D8B39E-14F035F4",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldServiceExitTask",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "C1E3289B-45594053-1146388E-4287152B",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt AnimationBehaviorTree:BTService_General_FocusAt_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.5"
+        }
+      ],
+      "NodeName": "Rotate to Face Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "AnimationBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "C0961FC9-4319822D-0950A8BC-28DD1F33",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree AnimationBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence AnimationBehaviorTree:BTComposite_Sequence_7",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.3"
+      }
+    }
+  }
+]

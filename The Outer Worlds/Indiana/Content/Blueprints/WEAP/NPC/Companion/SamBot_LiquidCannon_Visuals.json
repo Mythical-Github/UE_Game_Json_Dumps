@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SamBot_LiquidCannon_Visuals_C",
+    "SuperStruct": {
+      "ObjectName": "Class PrimaryWeaponVisuals",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10749968,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SamBot_LiquidCannon_Visuals_C Default__SamBot_LiquidCannon_Visuals_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Companion/SamBot_LiquidCannon_Visuals.1"
+    }
+  },
+  {
+    "Type": "SamBot_LiquidCannon_Visuals_C",
+    "Name": "Default__SamBot_LiquidCannon_Visuals_C",
+    "Properties": {
+      "WeaponEvents": {
+        "EWeaponEvent::Fire": {
+          "ObjectName": "EventEffects Default__SamBot_LiquidCannon_Visuals_C:EventEffects_1",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Companion/SamBot_LiquidCannon_Visuals.3"
+        },
+        "EWeaponEvent::CustomFire": {
+          "ObjectName": "EventEffects Default__SamBot_LiquidCannon_Visuals_C:EventEffects_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Companion/SamBot_LiquidCannon_Visuals.2"
+        }
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__SamBot_LiquidCannon_Visuals_C"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "Default__SamBot_LiquidCannon_Visuals_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayFxEventEffect Default__SamBot_LiquidCannon_Visuals_C:EventEffects_1.PlayFxEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Companion/SamBot_LiquidCannon_Visuals.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Corrosion_Radial_Impact",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Weapons/ImpactEffects/Corrosion/PS_Corrosion_Radial_Impact.105"
+      },
+      "TargetMesh": "EMeshTarget::CurrentCharacterMesh",
+      "AttachSocketName": "MuzzleFlashSocket"
+    }
+  }
+]

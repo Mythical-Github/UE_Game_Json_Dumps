@@ -1,0 +1,362 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Falling_FallCripple_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Falling_FallCripple_C Default__Spell_Falling_FallCripple_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.1"
+    }
+  },
+  {
+    "Type": "Spell_Falling_FallCripple_C",
+    "Name": "Default__Spell_Falling_FallCripple_C",
+    "Properties": {
+      "TargetConditionals": [
+        {
+          "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Falling_FallCripple_C:SpellConditional_HasStatusEffect_4",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.13"
+        },
+        {
+          "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Falling_FallCripple_C:SpellConditional_HasStatusEffect_5",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.14"
+        },
+        {
+          "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Falling_FallCripple_C:SpellConditional_HasStatusEffect_6",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.15"
+        },
+        {
+          "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Falling_FallCripple_C:SpellConditional_HasStatusEffect_7",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.16"
+        }
+      ],
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_FallCripple_C Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.4"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_1",
+    "Outer": "CE_FallCripple_C_0",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Lame"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 136
+      }
+    }
+  },
+  {
+    "Type": "CE_FallCripple_C",
+    "Name": "CE_FallCripple_C_0",
+    "Outer": "Default__Spell_Falling_FallCripple_C",
+    "Template": "Default__CE_FallCripple_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_LegCripple_PostProcess_C Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.CE_LegCripple_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.5"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.17"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.19"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.ToggleActionStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.20"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.2"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.8"
+      }
+    }
+  },
+  {
+    "Type": "CE_LegCripple_PostProcess_C",
+    "Name": "CE_LegCripple_PostProcess_C_0",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "CE_LegCripple_PostProcess_C_0"
+  },
+  {
+    "Type": "CE_LegCripple_PostProcess_C",
+    "Name": "CE_LegCripple_PostProcess_C_1",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "Default__CE_LegCripple_PostProcess_C"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "StatModifierStatusEffect_0",
+    "Template": "EventEffects_1",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayAnimStateEventEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.StatModifierStatusEffect_0.EventEffects_1.PlayAnimStateEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "StatModifierStatusEffect_1",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayAnimStateEventEffect Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.StatModifierStatusEffect_1.EventEffects_1.PlayAnimStateEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayAnimStateEventEffect",
+    "Name": "PlayAnimStateEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Template": "PlayAnimStateEventEffect_0"
+  },
+  {
+    "Type": "PlayAnimStateEventEffect",
+    "Name": "PlayAnimStateEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "MovementModifierState": "EAnimMovementModifierState::Lamed"
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_4",
+    "Outer": "Default__Spell_Falling_FallCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_LegCripple_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple.1"
+      },
+      "NumStacks": 0,
+      "Operator": "ComparisonOperator::Equals"
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_5",
+    "Outer": "Default__Spell_Falling_FallCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_LegCripple_Flaw_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Flaw.0"
+      },
+      "NumStacks": 0,
+      "Operator": "ComparisonOperator::Equals"
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_6",
+    "Outer": "Default__Spell_Falling_FallCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_LegCripple_Supernova_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.0"
+      },
+      "NumStacks": 0,
+      "Operator": "ComparisonOperator::Equals"
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_7",
+    "Outer": "Default__Spell_Falling_FallCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Encumbrance_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Encumbrance/CE_Encumbrance.0"
+      },
+      "NumStacks": 0,
+      "Operator": "ComparisonOperator::Equals"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "StatModifierStatusEffect_0",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.StatModifierStatusEffect_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.9"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_FallCripple_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 138
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_Falling_FallCripple_C:CE_FallCripple_C_0.StatModifierStatusEffect_1.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/FallingDamage/Spell_Falling_FallCripple.10"
+      }
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "ToggleActionStatusEffect_0"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_1",
+    "Outer": "CE_FallCripple_C_0",
+    "Template": "ToggleActionStatusEffect_1"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_2",
+    "Outer": "CE_FallCripple_C_0",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_3",
+    "Outer": "CE_FallCripple_C_0",
+    "Properties": {
+      "Action": "ETogglableAction::Lunge",
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  }
+]

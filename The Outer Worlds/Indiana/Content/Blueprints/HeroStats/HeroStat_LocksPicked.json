@@ -1,0 +1,49 @@
+[
+  {
+    "Type": "HeroStat",
+    "Name": "HeroStat_LocksPicked",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener HeroStat_LocksPicked:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_LocksPicked.3"
+      },
+      "HeroStatID": 4,
+      "HeroStatName": "4"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Lockpick",
+      "XPReason": "EXPGainReason::LockPick"
+    }
+  },
+  {
+    "Type": "OnSkillCheckSuccess",
+    "Name": "OnSkillCheckSuccess_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skill": "ESkill::Hack",
+      "XPReason": "EXPGainReason::HackTerminal"
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "HeroStat_LocksPicked",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnSkillCheckSuccess HeroStat_LocksPicked:OrListener_0.OnSkillCheckSuccess_0",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_LocksPicked.1"
+        },
+        {
+          "ObjectName": "OnSkillCheckSuccess HeroStat_LocksPicked:OrListener_0.OnSkillCheckSuccess_1",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_LocksPicked.2"
+        }
+      ]
+    }
+  }
+]

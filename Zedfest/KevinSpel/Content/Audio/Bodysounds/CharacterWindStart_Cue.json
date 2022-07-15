@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "CharacterWindStart_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulatorContinuous CharacterWindStart_Cue:SoundNodeModulatorContinuous_6",
+        "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterWindStart_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 113.856,
+      "MaxDistance": 2170.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Distance",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/Distance.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_6",
+    "Outer": "CharacterWindStart_Cue",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "WindSpeed",
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer CharacterWindStart_Cue:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterWindStart_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "CharacterWindStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Bodysounds/CharacterWindStart.CharacterWindStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave CharacterWindStart",
+      "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterWindStart.0"
+    }
+  }
+]

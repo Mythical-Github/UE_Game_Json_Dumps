@@ -1,0 +1,101 @@
+[
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_0",
+    "Outer": "940_Armor_DissRevolutionary_Body",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::ArmorSet",
+        "ArmorSetItemDefinition": {
+          "ArmorSetClass": {
+            "ObjectName": "BlueprintGeneratedClass Armor_DissRevolutionary_Phy_T1_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Armor/Dissident/Variants/Armor_DissRevolutionary_Phy_T1.0"
+          }
+        }
+      },
+      "MinLevel": 16,
+      "MaxLevel": 30,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_1",
+    "Outer": "940_Armor_DissRevolutionary_Body",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::ArmorSet",
+        "ArmorSetItemDefinition": {
+          "ArmorSetClass": {
+            "ObjectName": "BlueprintGeneratedClass Armor_DissRevolutionary_Phy_T2_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Armor/Dissident/Variants/Armor_DissRevolutionary_Phy_T2.0"
+          }
+        }
+      },
+      "MinLevel": 31,
+      "bInvertConditional": false,
+      "Conditional": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::DLCInstalled",
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::Or",
+              "ConditionalType": "EConditionalType::DLCInstalled",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX2",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "LootTableData",
+    "Name": "940_Armor_DissRevolutionary_Body",
+    "Properties": {
+      "bUseAll": false,
+      "LootRows": [
+        {
+          "ObjectName": "LootRowItem 940_Armor_DissRevolutionary_Body:LootRowItem_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/940_Armor_DissRevolutionary_Body.0"
+        },
+        {
+          "ObjectName": "LootRowItem 940_Armor_DissRevolutionary_Body:LootRowItem_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/940_Armor_DissRevolutionary_Body.1"
+        }
+      ]
+    }
+  }
+]

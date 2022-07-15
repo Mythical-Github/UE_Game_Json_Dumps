@@ -1,0 +1,182 @@
+[
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_1",
+    "Outer": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection MPC_Global",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MPC_Global.0"
+      },
+      "ParameterName": "Wetness",
+      "ParameterId": "10FE5B07-4DFC6040-2E9AF4BD-EDAADDD2",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynamicWetSurfacev2",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.5"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_16",
+    "Outer": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction ValueStep",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ValueStep.1"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynamicWetSurfacev2",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.5"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_24",
+    "Outer": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction WorldCoords-XY",
+        "ObjectPath": "Indiana/Content/Art/ENV/Natural/Kite_Demo/Material/WorldCoords-XY.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynamicWetSurfacev2",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.5"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_8",
+    "Outer": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_UnpackNormal",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_UnpackNormal.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynamicWetSurfacev2",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.5"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_13",
+    "Outer": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_24"
+      },
+      "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+      "Texture": {
+        "ObjectName": "Texture2D T_DynamicWet_Droplets",
+        "ObjectPath": "Indiana/Content/Materials/DefaultTextures/T_DynamicWet_Droplets.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynamicWetSurfacev2",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.5"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_DynamicWetSurfacev2",
+    "Properties": {
+      "Description": "Dynamic wet effect",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample MF_DynamicWetSurfacev2:MaterialExpressionTextureSample_13",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.4"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_DynamicWetSurfacev2:MaterialExpressionMaterialFunctionCall_8",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.3"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_DynamicWetSurfacev2:MaterialExpressionMaterialFunctionCall_16",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.1"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_DynamicWetSurfacev2:MaterialExpressionMaterialFunctionCall_24",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter MF_DynamicWetSurfacev2:MaterialExpressionCollectionParameter_1",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynamicWetSurfacev2.0"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "StateId": "2F8072A8-4692D399-98A8689D-181C7FA3"
+    }
+  }
+]

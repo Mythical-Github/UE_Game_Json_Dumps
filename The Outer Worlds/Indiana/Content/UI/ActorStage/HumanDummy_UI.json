@@ -1,0 +1,178 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HumanDummy_UI_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript HumanDummy_UI_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class IndianaCharacterDummy",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HumanDummy_UI_C Default__HumanDummy_UI_C",
+      "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.1"
+    }
+  },
+  {
+    "Type": "HumanDummy_UI_C",
+    "Name": "Default__HumanDummy_UI_C",
+    "Properties": {
+      "bAllowUnderKillPlane": true,
+      "bMakeTickableWhenPaused": true,
+      "DefaultFidgets": [
+        {
+          "Sequence": {
+            "ObjectName": "AnimSequence AS_NC_TP_M_Idle",
+            "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/NC/Male/AS_NC_TP_M_Idle.0"
+          },
+          "ChanceToPlay": 1.0,
+          "MinLoopCount": 0,
+          "MaxLoopCount": 0,
+          "MinPlayRate": 1.0,
+          "MaxPlayRate": 1.0,
+          "BlendIn": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          },
+          "bMustPlayFromBeginning": true,
+          "bIgnoreForInitialAnimation": false,
+          "bIgnoreIfHelmetIsVisible": false,
+          "bIgnoreIfWithinTalkRange": false,
+          "bIgnoreIfOutsideOfTalkRange": false
+        }
+      ],
+      "GroundOffsetComponent": {
+        "ObjectName": "SceneComponent Default__HumanDummy_UI_C:GroundOffsetComponent",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.6"
+      },
+      "EquipmentComponent": {
+        "ObjectName": "EquipmentComponent Default__HumanDummy_UI_C:EquipmentComponent",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.5"
+      },
+      "AppearanceComponent": {
+        "ObjectName": "AppearanceComponent Default__HumanDummy_UI_C:AppearanceComponent",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.2"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__HumanDummy_UI_C:CharacterMesh0",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.10"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent Default__HumanDummy_UI_C:CharMoveComp",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.4"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__HumanDummy_UI_C:CollisionCylinder",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__HumanDummy_UI_C:CollisionCylinder",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.3"
+      }
+    }
+  },
+  {
+    "Type": "AppearanceComponent",
+    "Name": "AppearanceComponent",
+    "Outer": "Default__HumanDummy_UI_C"
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__HumanDummy_UI_C"
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__HumanDummy_UI_C"
+  },
+  {
+    "Type": "EquipmentComponent",
+    "Name": "EquipmentComponent",
+    "Outer": "Default__HumanDummy_UI_C",
+    "Properties": {
+      "WeaponEndEquipDelegate": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "HumanDummy_UI_C Default__HumanDummy_UI_C",
+              "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.1"
+            },
+            "FunctionName": "OnWeaponEndEquip"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "GroundOffsetComponent",
+    "Outer": "Default__HumanDummy_UI_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__HumanDummy_UI_C:CollisionCylinder",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "HumanDummy_UI_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent HumanDummy_UI_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.7"
+      },
+      "VariableGuid": "59110899-41F23741-34F16F83-B0C4687E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "HumanDummy_UI_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node HumanDummy_UI_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__HumanDummy_UI_C",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass HumanDummy_UI_Animation_C",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI_Animation.1"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__HumanDummy_UI_C:GroundOffsetComponent",
+        "ObjectPath": "Indiana/Content/UI/ActorStage/HumanDummy_UI.6"
+      }
+    }
+  }
+]

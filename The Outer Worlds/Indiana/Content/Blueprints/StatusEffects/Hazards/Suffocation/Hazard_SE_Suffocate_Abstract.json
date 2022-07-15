@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Suffocate_Abstract_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754065,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Suffocate_Abstract_C Default__Hazard_SE_Suffocate_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Abstract.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Suffocate_Abstract_C",
+    "Name": "Default__Hazard_SE_Suffocate_Abstract_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Suffocate_Hazard_PP_C Default__Hazard_SE_Suffocate_Abstract_C:CE_Suffocate_Hazard_PP_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Abstract.2"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Suffocate_Abstract_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Abstract.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Hazard_SE_Suffocate_Abstract_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Abstract.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "Duration": 1.0,
+      "bIsHostile": true,
+      "bProhibitsConversations": true,
+      "EffectName": {
+        "StringID": 3057
+      },
+      "EffectDescription": {
+        "StringID": 3058
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Suffocating",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Suffocating.0"
+      }
+    }
+  },
+  {
+    "Type": "CE_Suffocate_Hazard_PP_C",
+    "Name": "CE_Suffocate_Hazard_PP_C_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Abstract_C",
+    "Template": "Default__CE_Suffocate_Hazard_PP_C"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Abstract_C",
+    "Properties": {
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 15.0,
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 0.666
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Abstract_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": -2.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Personality_Attributes",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Attributes/Personality_Attributes.0"
+        },
+        "Group": "ERpgStatGroup::Character"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  }
+]

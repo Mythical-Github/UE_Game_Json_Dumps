@@ -1,0 +1,61 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DisabledBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence DisabledBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "DisabledBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Disable DisabledBehaviorTree:BTTask_Disable_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DisabledBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Disable",
+    "Name": "BTTask_Disable_0",
+    "Outer": "DisabledBehaviorTree",
+    "Properties": {
+      "DisableStatusEffectSelector": {
+        "Object": {
+          "ObjectName": "Class AI_DisableStatusEffect",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "F3DC475D-411E2684-173B3E98-AEB497D7",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DisabledBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence DisabledBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.1"
+      }
+    }
+  }
+]

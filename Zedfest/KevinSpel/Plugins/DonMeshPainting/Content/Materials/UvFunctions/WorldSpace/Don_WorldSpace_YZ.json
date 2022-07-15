@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_5",
+    "Outer": "Don_WorldSpace_YZ",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction DonGlobalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/DonGlobalUVW.2"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction Don_WorldSpace_YZ",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureObjectParameter",
+    "Name": "MaterialExpressionTextureObjectParameter_0",
+    "Outer": "Don_WorldSpace_YZ",
+    "Properties": {
+      "ParameterName": "DonPaintLayer_WorldSpaceYZ_0",
+      "ExpressionGUID": "0CA14569-4ED3A0DB-A71B0287-254C69CE",
+      "Group": "Don Mesh Painting",
+      "Texture": {
+        "ObjectName": "CanvasRenderTarget2D RT_Don_WorldSpaceYZ_Layer0",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Textures/RenderTargets/WorldSpace/RT_Don_WorldSpaceYZ_Layer0.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction Don_WorldSpace_YZ",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "Don_WorldSpace_YZ",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionComponentMask_2"
+      },
+      "TextureObject": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureObjectParameter_0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction Don_WorldSpace_YZ",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "Don_WorldSpace_YZ",
+    "Properties": {
+      "Description": "Paint texture along World YZ (Layer 0)",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureObjectParameter Don_WorldSpace_YZ:MaterialExpressionTextureObjectParameter_0",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample Don_WorldSpace_YZ:MaterialExpressionTextureSample_0",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall Don_WorldSpace_YZ:MaterialExpressionMaterialFunctionCall_5",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/WorldSpace/Don_WorldSpace_YZ.0"
+        }
+      ],
+      "StateId": "921A7D3E-45400E3C-4B4EE3B7-5B0A8597"
+    }
+  }
+]

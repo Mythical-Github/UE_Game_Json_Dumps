@@ -1,0 +1,162 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SC_BreakingWood_Point",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeRandom SC_BreakingWood_Point:SoundNodeRandom_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.6"
+      },
+      "VolumeMultiplier": 0.2,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFX",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SFX.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 1.9758277,
+      "MaxDistance": 2170.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Distance",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/Distance.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "DelayMin": 0.4,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator SC_BreakingWood_Point:SoundNodeModulator_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator SC_BreakingWood_Point:SoundNodeModulator_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay SC_BreakingWood_Point:SoundNodeDelay_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_BreakingWood_Point:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_BreakingWood_Point:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_BreakingWood_Point:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator SC_BreakingWood_Point:SoundNodeModulator_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.3"
+        },
+        {
+          "ObjectName": "SoundNodeMixer SC_BreakingWood_Point:SoundNodeMixer_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_BreakingWood_Point.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/DENT/Audio/S_WoodPoint3.S_WoodPoint3",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/DENT/Audio/S_Wood_Wood.S_Wood_Wood",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SC_BreakingWood_Point",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/DENT/Audio/S_Wood_Afterfall.S_Wood_Afterfall",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

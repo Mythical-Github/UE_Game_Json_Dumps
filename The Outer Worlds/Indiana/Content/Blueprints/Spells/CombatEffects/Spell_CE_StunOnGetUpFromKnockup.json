@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CE_StunOnGetUpFromKnockup_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CE_StunOnGetUpFromKnockup_C Default__Spell_CE_StunOnGetUpFromKnockup_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.1"
+    }
+  },
+  {
+    "Type": "Spell_CE_StunOnGetUpFromKnockup_C",
+    "Name": "Default__Spell_CE_StunOnGetUpFromKnockup_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnGetUp Default__Spell_CE_StunOnGetUpFromKnockup_C:OnGetUp_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Stun_C Default__Spell_CE_StunOnGetUpFromKnockup_C:CE_Stun_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.3"
+              },
+              {
+                "ObjectName": "StatusEffectRemove Default__Spell_CE_StunOnGetUpFromKnockup_C:StatusEffectRemove_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.6"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_CE_StunOnGetUpFromKnockup_C:SpellConditional_HasStatusEffect_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.5"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Stun_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_Stun_C",
+    "Name": "CE_Stun_C_0",
+    "Outer": "Default__Spell_CE_StunOnGetUpFromKnockup_C",
+    "Template": "Default__CE_Stun_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_CE_StunOnGetUpFromKnockup_C:CE_Stun_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CombatEffects/Spell_CE_StunOnGetUpFromKnockup.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnGetUp",
+    "Name": "OnGetUp_0",
+    "Outer": "Default__Spell_CE_StunOnGetUpFromKnockup_C",
+    "Properties": {
+      "bBegan": false
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_1",
+    "Outer": "Default__Spell_CE_StunOnGetUpFromKnockup_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_StunOnGetUpFromKnockdown_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Stun/CE_StunOnGetUpFromKnockdown.0"
+      }
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__Spell_CE_StunOnGetUpFromKnockup_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_StunOnGetUpFromKnockdown_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Stun/CE_StunOnGetUpFromKnockdown.0"
+      }
+    }
+  }
+]

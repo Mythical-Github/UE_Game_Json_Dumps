@@ -1,0 +1,4470 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "BackerImage",
+    "Outer": "SystemMap_BP_C",
+    "PropertyFlags": 562952101429260,
+    "PropertyClass": {
+      "ObjectName": "Class Image",
+      "ObjectPath": "/Script/UMG"
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "SystemMap_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree SystemMap_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.179"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/Map/SystemMap/SystemMap_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class SystemMapWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty SystemMap_BP_C:BackerImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.0"
+      },
+      {
+        "ObjectName": "ObjectProperty SystemMap_BP_C:FlavorTextWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.97"
+      }
+    ],
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SystemMap_BP_C Default__SystemMap_BP_C",
+      "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.2"
+    }
+  },
+  {
+    "Type": "SystemMap_BP_C",
+    "Name": "Default__SystemMap_BP_C",
+    "Properties": {
+      "SelectionWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass SystemMapSelection_BP_C",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMapSelection_BP.1"
+      },
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass SystemMapEntry_BP_C",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMapEntry/SystemMapEntry_BP.0"
+      },
+      "SystemMapData": {
+        "ObjectName": "SystemMapData SystemMapData",
+        "ObjectPath": "Indiana/Content/Maps/SystemMapData/SystemMapData.0"
+      },
+      "MinGamepadBounds": {
+        "X": 200.0,
+        "Y": 100.0
+      },
+      "MaxGamepadBounds": {
+        "X": 1650.0,
+        "Y": 650.0
+      },
+      "MaxZoomLevel": 2.0,
+      "MousePanSensitivity": {
+        "X": 9.0,
+        "Y": 9.0
+      },
+      "GamepadSelectorMagnetismDelay": 0.25,
+      "GamepadPanMinMovementMultiplier": 1.0,
+      "GamepadPanDeadzone": {
+        "X": 0.02,
+        "Y": 0.02
+      },
+      "PanDescription": {
+        "IconName": "Gamepad_LeftStick",
+        "TextReference": {
+          "StringID": 399
+        },
+        "bBoundToActionName": false
+      },
+      "ZoomDescription": {
+        "IconName": "Gamepad_RightStick",
+        "TextReference": {
+          "StringID": 398
+        },
+        "bBoundToActionName": false
+      },
+      "MapTexture": {
+        "AssetPathName": "/Game/UI/Art/FrontEnd/SystemMap/T_SystemMap_Bg.T_SystemMap_Bg",
+        "SubPathString": ""
+      },
+      "MapMaxBounds": {
+        "X": 100.0,
+        "Y": -100.0
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "LoadingImageBlocker",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot SystemMap_BP_C:WidgetTree.LoadingImageBlocker.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.110"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 13.0,
+        "Top": 0.0,
+        "Right": 13.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 851.0,
+          "Y": 135.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.1,
+          "Right": 0.25,
+          "Bottom": 0.1
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Frame_3",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Frame_3.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "BrushColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 23.526482,
+        "Hex": "FFFFFFFF"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_0.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_6.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.13"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": -1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Top",
+      "Padding": {
+        "Left": -5.0,
+        "Top": 0.0,
+        "Right": 8.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 198.0,
+          "Y": 30.0
+        },
+        "Margin": {
+          "Left": 0.1,
+          "Top": 0.5,
+          "Right": 0.1,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Frame_5",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Frame_5.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_1.BorderSlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.168"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_6",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": -12.0,
+        "Top": 0.0,
+        "Right": -12.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 306.0,
+          "Y": 58.0
+        },
+        "Margin": {
+          "Left": 0.2,
+          "Top": 0.4,
+          "Right": 0.25,
+          "Bottom": 0.4
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Frame_13backing",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Frame_13backing.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "BrushColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.8,
+        "Hex": "CCFFFFFF"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_6.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "LoadingImageBlocker",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.LoadingImageBlocker.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.119"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 306.0,
+          "Y": 58.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.5,
+          "Right": 0.25,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Frame_9",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Frame_9.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Border_0.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "MainBorder",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0,
+        "Right": 10.0,
+        "Bottom": 10.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 306.0,
+          "Y": 58.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.5,
+          "Right": 0.25,
+          "Bottom": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.6,
+            "Hex": "99FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Frame_9backing",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Frame_9backing.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.MainBorder.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Border_0.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.15"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "LoadingImageBlocker",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border SystemMap_BP_C:WidgetTree.LoadingImageBlocker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.3"
+      },
+      "Content": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.100"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 13.0,
+        "Top": 0.0,
+        "Right": 13.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.4"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.127"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_2",
+    "Outer": "Border_1",
+    "Properties": {
+      "Padding": {
+        "Left": -5.0,
+        "Top": 0.0,
+        "Right": 8.0,
+        "Bottom": 0.0
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.5"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.128"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_6",
+    "Properties": {
+      "Padding": {
+        "Left": -12.0,
+        "Top": 0.0,
+        "Right": -12.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.6"
+      },
+      "Content": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "LoadingImageBlocker",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.LoadingImageBlocker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.7"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.103"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.8"
+      },
+      "Content": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.MainBorder",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "MainBorder",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0,
+        "Right": 10.0,
+        "Bottom": 10.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.MainBorder",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.9"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.131"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.30"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ContentCanvas",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ContentCanvas.CanvasPanelSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.32"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ContentCanvas.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ImageCanvas.CanvasPanelSlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.35"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "GamepadSelectorCanvas",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.GamepadSelectorCanvas.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.111"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ImageCanvas",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ImageCanvas.CanvasPanelSlot_4",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ImageCanvas.CanvasPanelSlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.35"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot SystemMap_BP_C:WidgetTree.ImageScaleBox.ScaleBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.124"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "OuterCanvas",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.OuterCanvas.CanvasPanelSlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.36"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.OuterCanvas.CanvasPanelSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.109"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsAlways"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.38"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ContentCanvas",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ContentCanvas.CanvasPanelSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.40"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ContentCanvas.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ImageCanvas.CanvasPanelSlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.49"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.41"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "GamepadSelectorCanvas",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.GamepadSelectorCanvas.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.120"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "EntryCanvasPanel",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_6",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.45"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_7",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.46"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.44"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_8",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.47"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.43"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ImageCanvas",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ImageCanvas.CanvasPanelSlot_4",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.48"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ImageCanvas.CanvasPanelSlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.49"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WidgetArchetype:WidgetTree_0.ImageScaleBox.ScaleBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.125"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.50"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.51"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.135"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "OuterCanvas",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.OuterCanvas.CanvasPanelSlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.52"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.OuterCanvas.CanvasPanelSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.118"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsAlways"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.17"
+      },
+      "Content": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "ContentCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.18"
+      },
+      "Content": {
+        "ObjectName": "SystemMapPlayerShipWidget_BP_C SystemMap_BP_C:WidgetTree.PlayerShipWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.147"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "ContentCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 848.34045,
+          "Top": 412.3622,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.18"
+      },
+      "Content": {
+        "ObjectName": "SystemMapEntry_BP_C SystemMap_BP_C:WidgetTree.Hephaestus",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.140"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "GamepadSelectorCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 951.9832,
+          "Top": 544.4278,
+          "Right": 112.0,
+          "Bottom": 112.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.GamepadSelectorCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.19"
+      },
+      "Content": {
+        "ObjectName": "GamepadSelector_BP_C SystemMap_BP_C:WidgetTree.GamepadSelector",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.58"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "ImageCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.20"
+      },
+      "Content": {
+        "ObjectName": "Image SystemMap_BP_C:WidgetTree.MapImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.78"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Outer": "ImageCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.20"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "OuterCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.21"
+      },
+      "Content": {
+        "ObjectName": "Image SystemMap_BP_C:WidgetTree.BackerImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.77"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "OuterCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.21"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox SystemMap_BP_C:WidgetTree.ImageScaleBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.122"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.22"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "ContentCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.23"
+      },
+      "Content": {
+        "ObjectName": "SystemMapPlayerShipWidget_BP_C WidgetArchetype:WidgetTree_0.PlayerShipWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.148"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "ContentCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 848.34045,
+          "Top": 412.3622,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.23"
+      },
+      "Content": {
+        "ObjectName": "SystemMapEntry_BP_C WidgetArchetype:WidgetTree_0.Hephaestus",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.141"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.24"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.GamepadSelector",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.80"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "GamepadSelectorCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 951.9832,
+          "Top": 544.4278,
+          "Right": 112.0,
+          "Bottom": 112.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.GamepadSelectorCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.25"
+      },
+      "Content": {
+        "ObjectName": "GamepadSelector_BP_C WidgetArchetype:WidgetTree_0.GamepadSelector",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.59"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "EntryCanvasPanel",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.150"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "EntryCanvasPanel",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.InactiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.82"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Outer": "EntryCanvasPanel",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Content": {
+        "ObjectName": "SystemMapEntryButton_BP_C WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.Button",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.142"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Outer": "EntryCanvasPanel",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.ActiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.81"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Outer": "EntryCanvasPanel",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.PlayerIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.83"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "ImageCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.27"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MapImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.88"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Outer": "ImageCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.27"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.28"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.63"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 20.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.28"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.159"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "OuterCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.29"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.BackerImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.79"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "OuterCanvas",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.29"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox WidgetArchetype:WidgetTree_0.ImageScaleBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.123"
+      }
+    }
+  },
+  {
+    "Type": "CircularThrobber",
+    "Name": "LoadingThrobber",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Period": 1.0,
+      "Radius": 25.0,
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_2.OverlaySlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.112"
+      }
+    }
+  },
+  {
+    "Type": "CircularThrobber",
+    "Name": "LoadingThrobber",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Period": 1.0,
+      "Radius": 25.0,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_2.OverlaySlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.121"
+      }
+    }
+  },
+  {
+    "Type": "FlavorTextWidget_BP_C",
+    "Name": "FlavorTextWidget_BP",
+    "Outer": "WidgetTree",
+    "Template": "Default__FlavorTextWidget_BP_C",
+    "Properties": {
+      "TextReference": {
+        "StringID": 2698
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.108"
+      }
+    }
+  },
+  {
+    "Type": "FlavorTextWidget_BP_C",
+    "Name": "FlavorTextWidget_BP",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__FlavorTextWidget_BP_C",
+    "Properties": {
+      "FlavorText": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.FlavorTextWidget_BP.WidgetTree_0.FlavorText",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.149"
+      },
+      "TextReference": {
+        "StringID": 2698
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.FlavorTextWidget_BP.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.181"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.117"
+      }
+    }
+  },
+  {
+    "Type": "GamepadSelector_BP_C",
+    "Name": "GamepadSelector",
+    "Outer": "WidgetTree",
+    "Template": "Default__GamepadSelector_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.GamepadSelectorCanvas.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.33"
+      }
+    }
+  },
+  {
+    "Type": "GamepadSelector_BP_C",
+    "Name": "GamepadSelector",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__GamepadSelector_BP_C",
+    "Properties": {
+      "GamepadSelector": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.GamepadSelector",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.80"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.182"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.GamepadSelectorCanvas.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.42"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.67"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.68"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.69"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.70"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "EntryContainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.170"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "FrameHorizontalBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox.HorizontalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.71"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox.HorizontalBoxSlot_4",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.72"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.50"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "SecondRowEntryContainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.171"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "ActiveQuestHeader",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.74"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.73"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.172"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "InactiveQuestHeader",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.76"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.75"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.174"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox",
+    "Properties": {
+      "Padding": {
+        "Left": -8.0,
+        "Top": -8.0,
+        "Right": -8.0,
+        "Bottom": -8.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.60"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.Image_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.84"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.60"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.TextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.153"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox",
+    "Properties": {
+      "Padding": {
+        "Left": -8.0,
+        "Top": -8.0,
+        "Right": -8.0,
+        "Bottom": -8.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.61"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.Image_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.85"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.61"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.TextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.154"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "FrameHorizontalBox",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.63"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.LeftFrame",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.86"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "FrameHorizontalBox",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.63"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.RightFrame",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.87"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "ActiveQuestHeader",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.65"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.TextBlockBase_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.155"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "ActiveQuestHeader",
+    "Properties": {
+      "Padding": {
+        "Left": -10.0,
+        "Top": -10.0,
+        "Right": -10.0,
+        "Bottom": -10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.65"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.89"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "InactiveQuestHeader",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.66"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.TextBlockBase_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.156"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "InactiveQuestHeader",
+    "Properties": {
+      "Padding": {
+        "Left": -10.0,
+        "Top": -10.0,
+        "Right": -10.0,
+        "Bottom": -10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.66"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Image_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.90"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BackerImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.OuterCanvas.CanvasPanelSlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.36"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_SystemMap_Bg",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/SystemMap/T_SystemMap_Bg.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ImageCanvas.CanvasPanelSlot_4",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.34"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BackerImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.OuterCanvas.CanvasPanelSlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.52"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "GamepadSelector",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 112.0,
+          "Y": 112.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Cursor",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Cursor.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.41"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting",
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ActiveQuestIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_Objective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_Objective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_7",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.46"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "InactiveQuestIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_InactiveObjective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_InactiveObjective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.44"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "PlayerIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_PlayerShip",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_PlayerShip.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_8",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.47"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 45.0,
+          "Y": 45.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_Objective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_Objective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.67"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 45.0,
+          "Y": 45.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_Objective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_Objective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.69"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "LeftFrame",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 52.0
+        },
+        "Margin": {
+          "Left": 0.1,
+          "Right": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_NavAnchor",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_NavAnchor.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox.HorizontalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.71"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "RightFrame",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 396.0,
+          "Y": 52.0
+        },
+        "Margin": {
+          "Left": 0.1,
+          "Right": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_NavAnchor",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_NavAnchor.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox.HorizontalBoxSlot_4",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.72"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_SystemMap_Bg",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/SystemMap/T_SystemMap_Bg.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ImageCanvas.CanvasPanelSlot_4",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.48"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ActiveQuestIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_Objective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_Objective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.74"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_InactiveObjective",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_InactiveObjective.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.76"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "PlayerShipImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 60.0,
+          "Y": 60.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Map_Icon_PlayerShip",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/Maps/T_Map_Icon_PlayerShip.0"
+        }
+      },
+      "RenderTransform": {
+        "Angle": 270.0
+      }
+    }
+  },
+  {
+    "Type": "InputLabelGroup_BP_C",
+    "Name": "InputLabelGroup",
+    "Outer": "WidgetTree",
+    "Template": "Default__InputLabelGroup_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.107"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "InputLabelGroup_BP_C",
+    "Name": "InputLabelGroup",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__InputLabelGroup_BP_C",
+    "Properties": {
+      "LeftFrame": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.LeftFrame",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.86"
+      },
+      "RightFrame": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.RightFrame",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.87"
+      },
+      "EntryContainer": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.62"
+      },
+      "SecondRowEntryContainer": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SecondRowEntryContainer",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.64"
+      },
+      "FrameHorizontalBox": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.FrameHorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.63"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.187"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_5",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.116"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "MultiQuestEntry_C",
+    "Name": "ActiveQuestEntry",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MultiQuestEntry_C",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "919386794838CFD97797A8A9FCE2A52A",
+        "SourceString": "Quest Name Goes Here"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox.VerticalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.173"
+      }
+    }
+  },
+  {
+    "Type": "MultiQuestMapTracker_BP_C",
+    "Name": "MultiQuestMapTracker",
+    "Outer": "WidgetTree",
+    "Template": "Default__MultiQuestMapTracker_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.104"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "MultiQuestMapTracker_BP_C",
+    "Name": "MultiQuestMapTracker",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MultiQuestMapTracker_BP_C",
+    "Properties": {
+      "ActiveQuestIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.89"
+      },
+      "Image_1": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Image_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.90"
+      },
+      "MainBorder": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.MainBorder",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.9"
+      },
+      "ActiveQuestVBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.160"
+      },
+      "ActiveQuestEntry": {
+        "ObjectName": "MultiQuestEntry_C WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestEntry",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.94"
+      },
+      "InactiveQuestVBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.162"
+      },
+      "InactiveQuestEntryVBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestEntryVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.161"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.188"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.113"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FlavorTextWidget_BP",
+    "Outer": "SystemMap_BP_C",
+    "PropertyFlags": 562952101429260,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass FlavorTextWidget_BP_C",
+      "ObjectPath": "Indiana/Content/UI/General/FlavorText/FlavorTextWidget_BP.0"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.105"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_4",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.106"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_6",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.108"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.107"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.104"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.30"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.109"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.110"
+        },
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_1.OverlaySlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.111"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot SystemMap_BP_C:WidgetTree.MapSizeBox.SizeBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.132"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_2",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_2.OverlaySlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.112"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot SystemMap_BP_C:WidgetTree.LoadingImageBlocker.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.10"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.114"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_4",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.115"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_6",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.117"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.116"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.113"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.38"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.118"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.119"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_1.OverlaySlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.120"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MapSizeBox.SizeBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.136"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_2",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_2.OverlaySlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.121"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.LoadingImageBlocker.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      },
+      "Content": {
+        "ObjectName": "MultiQuestMapTracker_BP_C SystemMap_BP_C:WidgetTree.MultiQuestMapTracker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.95"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      },
+      "Content": {
+        "ObjectName": "SizeBox SystemMap_BP_C:WidgetTree.MapSizeBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.126"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 190.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      },
+      "Content": {
+        "ObjectName": "SystemMapInfoWidget_BP_C SystemMap_BP_C:WidgetTree.InfoWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.143"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 36.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      },
+      "Content": {
+        "ObjectName": "InputLabelGroup_BP_C SystemMap_BP_C:WidgetTree.InputLabelGroup",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.92"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 130.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.98"
+      },
+      "Content": {
+        "ObjectName": "FlavorTextWidget_BP_C SystemMap_BP_C:WidgetTree.FlavorTextWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.56"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.99"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.99"
+      },
+      "Content": {
+        "ObjectName": "Border SystemMap_BP_C:WidgetTree.LoadingImageBlocker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.3"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.99"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.GamepadSelectorCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.19"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "Overlay_2",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.100"
+      },
+      "Content": {
+        "ObjectName": "CircularThrobber SystemMap_BP_C:WidgetTree.LoadingThrobber",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.54"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 10.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      },
+      "Content": {
+        "ObjectName": "MultiQuestMapTracker_BP_C WidgetArchetype:WidgetTree_0.MultiQuestMapTracker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.96"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MapSizeBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.130"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 190.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      },
+      "Content": {
+        "ObjectName": "SystemMapInfoWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.144"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 36.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      },
+      "Content": {
+        "ObjectName": "InputLabelGroup_BP_C WidgetArchetype:WidgetTree_0.InputLabelGroup",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.93"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 130.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.101"
+      },
+      "Content": {
+        "ObjectName": "FlavorTextWidget_BP_C WidgetArchetype:WidgetTree_0.FlavorTextWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.57"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.102"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.29"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.102"
+      },
+      "Content": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.LoadingImageBlocker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_1",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.102"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.GamepadSelectorCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "Overlay_2",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.103"
+      },
+      "Content": {
+        "ObjectName": "CircularThrobber WidgetArchetype:WidgetTree_0.LoadingThrobber",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.55"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ImageScaleBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot SystemMap_BP_C:WidgetTree.ImageScaleBox.ScaleBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.124"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.OuterCanvas.CanvasPanelSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.37"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ImageScaleBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WidgetArchetype:WidgetTree_0.ImageScaleBox.ScaleBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.125"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.OuterCanvas.CanvasPanelSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.53"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ImageScaleBox",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox SystemMap_BP_C:WidgetTree.ImageScaleBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.122"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.20"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ImageScaleBox",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox WidgetArchetype:WidgetTree_0.ImageScaleBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.123"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.27"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "MapSizeBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 1920.0,
+      "HeightOverride": 1080.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot SystemMap_BP_C:WidgetTree.MapSizeBox.SizeBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.132"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.105"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_MinDesiredHeight": true,
+      "WidthOverride": 900.0,
+      "MinDesiredHeight": 150.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.133"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_0.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.11"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": -1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_3",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_MinDesiredHeight": true,
+      "HeightOverride": 53.0,
+      "MinDesiredHeight": 53.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_3.SizeBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.134"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_1.BorderSlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_MinDesiredHeight": true,
+      "MinDesiredWidth": 400.0,
+      "MinDesiredHeight": 60.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.135"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "MapSizeBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 1920.0,
+      "HeightOverride": 1080.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MapSizeBox.SizeBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.136"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.114"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "WidthOverride": 462.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.137"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.MainBorder.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "MapSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox SystemMap_BP_C:WidgetTree.MapSizeBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.126"
+      },
+      "Content": {
+        "ObjectName": "Overlay SystemMap_BP_C:WidgetTree.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.99"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.127"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.158"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "SizeBox_3",
+    "Properties": {
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.128"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.152"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.129"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.28"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "MapSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MapSizeBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.130"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.102"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.131"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.163"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Size": {
+        "X": 0.0,
+        "Y": 15.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.169"
+      }
+    }
+  },
+  {
+    "Type": "SystemMap_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__SystemMap_BP_C",
+    "Properties": {
+      "BackerImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.BackerImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.79"
+      },
+      "FlavorTextWidget_BP": {
+        "ObjectName": "FlavorTextWidget_BP_C WidgetArchetype:WidgetTree_0.FlavorTextWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.57"
+      },
+      "PlayerShipWidget": {
+        "ObjectName": "SystemMapPlayerShipWidget_BP_C WidgetArchetype:WidgetTree_0.PlayerShipWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.148"
+      },
+      "InfoWidget": {
+        "ObjectName": "SystemMapInfoWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.144"
+      },
+      "MultiQuestMapTracker": {
+        "ObjectName": "MultiQuestMapTracker_BP_C WidgetArchetype:WidgetTree_0.MultiQuestMapTracker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.96"
+      },
+      "GamepadSelector": {
+        "ObjectName": "GamepadSelector_BP_C WidgetArchetype:WidgetTree_0.GamepadSelector",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.59"
+      },
+      "ImageScaleBox": {
+        "ObjectName": "ScaleBox WidgetArchetype:WidgetTree_0.ImageScaleBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.123"
+      },
+      "OuterCanvas": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.OuterCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.29"
+      },
+      "ContentCanvas": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ContentCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.23"
+      },
+      "ImageCanvas": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ImageCanvas",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.27"
+      },
+      "MapImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.MapImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.88"
+      },
+      "LoadingImageBlocker": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.LoadingImageBlocker",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.7"
+      },
+      "LoadingThrobber": {
+        "ObjectName": "CircularThrobber WidgetArchetype:WidgetTree_0.LoadingThrobber",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.55"
+      },
+      "MapSizeBox": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MapSizeBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.130"
+      },
+      "InputLabelGroup": {
+        "ObjectName": "InputLabelGroup_BP_C WidgetArchetype:WidgetTree_0.InputLabelGroup",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.93"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.180"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "SystemMapEntry_BP_C",
+    "Name": "Hephaestus",
+    "Outer": "WidgetTree",
+    "Template": "Default__SystemMapEntry_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ContentCanvas.CanvasPanelSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.32"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SystemMapEntry_BP_C",
+    "Name": "Hephaestus",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapEntry_BP_C",
+    "Properties": {
+      "EntryCanvasPanel": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      },
+      "Button": {
+        "ObjectName": "SystemMapEntryButton_BP_C WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.Button",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.142"
+      },
+      "NameTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.150"
+      },
+      "ActiveQuestIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.ActiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.81"
+      },
+      "InactiveQuestIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.InactiveQuestIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.82"
+      },
+      "PlayerIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.PlayerIcon",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.83"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.183"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ContentCanvas.CanvasPanelSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.40"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SystemMapEntryButton_BP_C",
+    "Name": "Button",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapEntryButton_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.45"
+      },
+      "Navigation": {
+        "ObjectName": "WidgetNavigation WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.Button.WidgetNavigation_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.178"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapInfoWidget_BP_C",
+    "Name": "InfoWidget",
+    "Outer": "WidgetTree",
+    "Template": "Default__SystemMapInfoWidget_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot SystemMap_BP_C:WidgetTree.Overlay_0.OverlaySlot_4",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.106"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapInfoWidget_BP_C",
+    "Name": "InfoWidget",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapInfoWidget_BP_C",
+    "Properties": {
+      "SystemMapObjectiveWidget_BP": {
+        "ObjectName": "SystemMapObjectiveWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.145"
+      },
+      "SystemMapObjectiveWidget_BP_0": {
+        "ObjectName": "SystemMapObjectiveWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.146"
+      },
+      "NameTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.152"
+      },
+      "DescriptionTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.DescriptionTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.151"
+      },
+      "ObjectiveVBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.157"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.184"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_4",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.115"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapObjectiveWidget_BP_C",
+    "Name": "SystemMapObjectiveWidget_BP",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapObjectiveWidget_BP_C",
+    "Properties": {
+      "Image_0": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.Image_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.84"
+      },
+      "HorizontalBox": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.60"
+      },
+      "TextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.TextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.153"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.185"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.164"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapObjectiveWidget_BP_C",
+    "Name": "SystemMapObjectiveWidget_BP_0",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapObjectiveWidget_BP_C",
+    "Properties": {
+      "Image_0": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.Image_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.85"
+      },
+      "HorizontalBox": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.61"
+      },
+      "TextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.TextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.154"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.186"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.165"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapPlayerShipWidget_BP_C",
+    "Name": "PlayerShipWidget",
+    "Outer": "WidgetTree",
+    "Template": "Default__SystemMapPlayerShipWidget_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot SystemMap_BP_C:WidgetTree.ContentCanvas.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.31"
+      }
+    }
+  },
+  {
+    "Type": "SystemMapPlayerShipWidget_BP_C",
+    "Name": "PlayerShipWidget",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__SystemMapPlayerShipWidget_BP_C",
+    "Properties": {
+      "PlayerShipImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.PlayerShipWidget.WidgetTree_0.PlayerShipImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.91"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.PlayerShipWidget.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.189"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ContentCanvas.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.39"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "FlavorText",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "5014865648B1F2BDBE3980BEB82AB8AF",
+        "SourceString": "Text\r\nText"
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaBrown",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.366253,
+            "G": 0.327778,
+            "B": 0.208637,
+            "A": 1.0,
+            "Hex": "FFA39B7E"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "bUseOutline": true,
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 1700.0,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "NameTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A83FE79D4FCBA89230FEBAAED9DE2CA8",
+        "SourceString": "_INVALID_"
+      },
+      "MaxFontScaling": 10,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset HeaderMedium",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/HeaderMedium.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font OBSTOW_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/OBSTOW_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 2
+          },
+          "TypefaceFontName": "Font",
+          "Size": 14
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "bUseOutline": true,
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.43"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "DescriptionTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 0
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaNotQuiteYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.366253,
+            "G": 0.327778,
+            "B": 0.208637,
+            "A": 1.0,
+            "Hex": "FFA39B7E"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "AutoWrapText": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.166"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "NameTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 0
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset HeaderMajor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/HeaderMajor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font OBSTOW_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/OBSTOW_Family.0"
+          },
+          "TypefaceFontName": "Font",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_3.SizeBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.134"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text"
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.68"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text"
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.70"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TextBlockBase_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 3994
+      },
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text"
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 5,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset GridHeader",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/GridHeader.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "Size": 19
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "WrapTextAt": 412.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.73"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TextBlockBase_2",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 3995
+      },
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text"
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 5,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset GridHeader",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/GridHeader.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "Size": 19
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "WrapTextAt": 412.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.75"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "ObjectiveVBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.164"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.165"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.167"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_5",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.168"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.166"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.167"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_6",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.169"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.133"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.170"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.171"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.51"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "ActiveQuestVBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.172"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox.VerticalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.173"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.176"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "InactiveQuestEntryVBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.175"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "InactiveQuestVBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.174"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.175"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.177"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_3",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.176"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.177"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.137"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "ObjectiveVBox",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.157"
+      },
+      "Content": {
+        "ObjectName": "SystemMapObjectiveWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.145"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "ObjectiveVBox",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.157"
+      },
+      "Content": {
+        "ObjectName": "SystemMapObjectiveWidget_BP_C WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.146"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 15.0,
+        "Top": 25.0,
+        "Right": 15.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.158"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.DescriptionTextBlock",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.151"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.158"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.ObjectiveVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.157"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Padding": {
+        "Top": 7.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.158"
+      },
+      "Content": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_1",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.158"
+      },
+      "Content": {
+        "ObjectName": "Spacer WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Spacer_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.138"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.159"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.62"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.159"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SecondRowEntryContainer",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.64"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "ActiveQuestVBox",
+    "Properties": {
+      "Padding": {
+        "Bottom": 5.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.160"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.65"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "ActiveQuestVBox",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.160"
+      },
+      "Content": {
+        "ObjectName": "MultiQuestEntry_C WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestEntry",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.94"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "InactiveQuestVBox",
+    "Properties": {
+      "Padding": {
+        "Bottom": 5.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.162"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestHeader",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.66"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "InactiveQuestVBox",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.162"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestEntryVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.161"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_3",
+    "Properties": {
+      "Padding": {
+        "Bottom": 10.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.163"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.ActiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.160"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.VerticalBox_3",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.163"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.InactiveQuestVBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.162"
+      }
+    }
+  },
+  {
+    "Type": "WidgetNavigation",
+    "Name": "WidgetNavigation_1",
+    "Outer": "Button",
+    "Properties": {
+      "Up": {
+        "Rule": "EUINavigationRule::Stop"
+      },
+      "Down": {
+        "Rule": "EUINavigationRule::Stop"
+      },
+      "Left": {
+        "Rule": "EUINavigationRule::Stop"
+      },
+      "Right": {
+        "Rule": "EUINavigationRule::Stop"
+      },
+      "Next": {
+        "Rule": "EUINavigationRule::Stop"
+      },
+      "Previous": {
+        "Rule": "EUINavigationRule::Stop"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "SystemMap_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel SystemMap_BP_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.22"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "FlavorTextWidget_BP",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.FlavorTextWidget_BP.WidgetTree_0.FlavorText",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.149"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "GamepadSelector",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.GamepadSelector.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.24"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "Hephaestus",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.Hephaestus.WidgetTree_0.EntryCanvasPanel",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.26"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "InfoWidget",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.Border_6",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "SystemMapObjectiveWidget_BP",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.60"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "SystemMapObjectiveWidget_BP_0",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.InfoWidget.WidgetTree_0.SystemMapObjectiveWidget_BP_0.WidgetTree_0.HorizontalBox",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.61"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "InputLabelGroup",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabelGroup.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.129"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "MultiQuestMapTracker",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.MultiQuestMapTracker.WidgetTree_0.Border_0",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "PlayerShipWidget",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.PlayerShipWidget.WidgetTree_0.PlayerShipImage",
+        "ObjectPath": "Indiana/Content/UI/Map/SystemMap/SystemMap_BP.91"
+      }
+    }
+  }
+]

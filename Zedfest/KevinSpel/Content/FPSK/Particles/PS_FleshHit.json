@@ -1,0 +1,423 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_1",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_FleshHit:ParticleModuleRequired_1",
+        "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_FleshHit:ParticleModuleLifetime_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_FleshHit:ParticleModuleSize_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.8"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife PS_FleshHit:ParticleModuleSizeMultiplyLife_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.9"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation PS_FleshHit:ParticleModuleRotation_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.6"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate PS_FleshHit:ParticleModuleRotationRate_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_FleshHit:ParticleModuleColorOverLife_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.2"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere PS_FleshHit:ParticleModuleLocationPrimitiveSphere_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_FleshHit:ParticleModuleSpawn_1",
+        "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.10"
+      },
+      "PeakActiveParticles": 7
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.5,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.5,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "Negative_Z": false,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            10.0
+          ]
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_BloodParticle",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_BloodParticle.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_FleshHit:ParticleModuleRequired_1.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            -0.5,
+            0.5
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 50.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            25.0,
+            25.0,
+            25.0,
+            50.0,
+            50.0,
+            50.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 5,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "PS_FleshHit",
+    "Properties": {
+      "EmitterName": "Blood",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_FleshHit:ParticleSpriteEmitter_1.ParticleLODLevel_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_FleshHit",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_FleshHit:ParticleSpriteEmitter_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_FleshHit.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "ThumbnailImageOutOfDate": false,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

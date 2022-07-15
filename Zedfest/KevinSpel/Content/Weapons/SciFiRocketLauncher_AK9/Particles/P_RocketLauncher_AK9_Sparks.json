@@ -1,0 +1,500 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionParticleMass",
+    "Outer": "ParticleModuleCollision_0",
+    "Properties": {
+      "Constant": 0.1
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_1",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_RocketLauncher_AK9_Sparks:ParticleModuleRequired_1",
+        "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_RocketLauncher_AK9_Sparks:ParticleModuleLifetime_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_RocketLauncher_AK9_Sparks:ParticleModuleSize_2",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.9"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_RocketLauncher_AK9_Sparks:ParticleModuleVelocity_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.11"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_RocketLauncher_AK9_Sparks:ParticleModuleColorOverLife_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.6"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant P_RocketLauncher_AK9_Sparks:ParticleModuleAccelerationConstant_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.3"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_RocketLauncher_AK9_Sparks:ParticleModuleColor_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.5"
+        },
+        {
+          "ObjectName": "ParticleModuleCollision P_RocketLauncher_AK9_Sparks:ParticleModuleCollision_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_RocketLauncher_AK9_Sparks:ParticleModuleSpawn_1",
+        "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.10"
+      },
+      "PeakActiveParticles": 41
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -980.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleCollision",
+    "Name": "ParticleModuleCollision_0",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "DampingFactor": {
+        "MinValue": 0.1,
+        "MaxValue": 0.1,
+        "MinValueVec": {
+          "X": 0.1,
+          "Y": 0.1,
+          "Z": 0.1
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 0.1,
+          "Z": 0.1
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.1,
+            0.1,
+            0.1
+          ]
+        }
+      },
+      "DampingFactorRotation": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "MaxCollisions": {
+        "MinValue": 2.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            2.0,
+            3.0
+          ]
+        }
+      },
+      "ParticleMass": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_RocketLauncher_AK9_Sparks:ParticleModuleCollision_0.DistributionParticleMass",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.0"
+        }
+      },
+      "DelayAmount": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "StartColor": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.868055,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.868055,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            0.868055,
+            0.0
+          ]
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.91148,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.91148,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            0.91148,
+            0.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 1.5,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.5
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_RocketLauncher_AK9_Sparks",
+        "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Materials/M_RocketLauncher_AK9_Sparks.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 1.5,
+      "EmitterDurationLow": 1.5,
+      "bEmitterDurationUseRange": true,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_RocketLauncher_AK9_Sparks:ParticleModuleRequired_1.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_2",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": 10.0,
+          "Y": 150.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 35.0,
+          "Y": 200.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            10.0,
+            150.0,
+            1.0,
+            35.0,
+            200.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 40,
+          "CountLow": 30,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -2000.0,
+        "MaxValue": 2500.0,
+        "MinValueVec": {
+          "X": 2000.0,
+          "Y": -2000.0,
+          "Z": -2000.0
+        },
+        "MaxValueVec": {
+          "X": 2500.0,
+          "Y": 2000.0,
+          "Z": 2000.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            2000.0,
+            -2000.0,
+            -2000.0,
+            2500.0,
+            2000.0,
+            2000.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "EmitterName": "Sparks",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_RocketLauncher_AK9_Sparks:ParticleSpriteEmitter_1.ParticleLODLevel_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_RocketLauncher_AK9_Sparks",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_RocketLauncher_AK9_Sparks:ParticleSpriteEmitter_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Particles/P_RocketLauncher_AK9_Sparks.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -10000.0,
+          "Y": -10000.0,
+          "Z": -10000.0
+        },
+        "Max": {
+          "X": 10000.0,
+          "Y": 10000.0,
+          "Z": 10000.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "OcclusionBoundsMethod": "EPSOBM_CustomBounds",
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

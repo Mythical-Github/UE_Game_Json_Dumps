@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_OnCircle_0",
+    "Properties": {
+      "ParamName": "OnCircle.CircleCenterZOffset"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "InAir",
+    "Properties": {
+      "QueryName": "StationaryQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption InAir:EnvQueryOption_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/InAir.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_0",
+    "Outer": "InAir",
+    "Properties": {
+      "CircleRadius": {
+        "DefaultValue": 1.0
+      },
+      "CircleCenterZOffset": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams InAir:EnvQueryGenerator_OnCircle_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/InAir.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Geometry"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_3",
+    "Outer": "InAir",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_OnCircle InAir:EnvQueryGenerator_OnCircle_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/InAir.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace InAir:EnvQueryTest_Trace_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/InAir.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "InAir",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 110.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceShape": "EEnvTraceShape::Capsule",
+        "bIgnoreQuerier": true
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

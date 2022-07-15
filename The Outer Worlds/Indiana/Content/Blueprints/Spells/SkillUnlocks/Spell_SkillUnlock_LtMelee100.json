@@ -1,0 +1,213 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_SkillUnlock_LtMelee100_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_SkillUnlock_LtMelee100_C Default__Spell_SkillUnlock_LtMelee100_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.1"
+    }
+  },
+  {
+    "Type": "Spell_SkillUnlock_LtMelee100_C",
+    "Name": "Default__Spell_SkillUnlock_LtMelee100_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OrListener Default__Spell_SkillUnlock_LtMelee100_C:OrListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.7"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatModifierStatusEffect Default__Spell_SkillUnlock_LtMelee100_C:StatModifierStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.9"
+              },
+              {
+                "ObjectName": "CE_Stun_C Default__Spell_SkillUnlock_LtMelee100_C:CE_Stun_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.3"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_RandomChance Default__Spell_SkillUnlock_LtMelee100_C:SpellConditional_RandomChance_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.8"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Stun_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_Stun_C",
+    "Name": "CE_Stun_C_0",
+    "Outer": "Default__Spell_SkillUnlock_LtMelee100_C",
+    "Template": "Default__CE_Stun_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_SkillUnlock_LtMelee100_C:CE_Stun_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.2"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_SkillUnlock_LtMelee100_C:CE_Stun_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.4"
+      },
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Stun_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::PowerAttack"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::SweepAttack"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "Default__Spell_SkillUnlock_LtMelee100_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_SkillUnlock_LtMelee100_C:OrListener_0.OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.5"
+        },
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_SkillUnlock_LtMelee100_C:OrListener_0.OnCausedDamage_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_LtMelee100.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_0",
+    "Outer": "Default__Spell_SkillUnlock_LtMelee100_C",
+    "Properties": {
+      "Chance": 0.25
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Spell_SkillUnlock_LtMelee100_C",
+    "Properties": {
+      "StatModifier": {
+        "RpgStat": {
+          "ObjectName": "RpgStat FormatDescription_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/FormatDescription_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "EffectDescription": {
+        "StringID": 1530
+      },
+      "DescriptionFormat": {
+        "StringID": 2701
+      }
+    }
+  }
+]

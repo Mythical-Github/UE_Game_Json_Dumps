@@ -1,0 +1,136 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "XFH_Spell_ModEffect_AutoATPInjector_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "XFH_Spell_ModEffect_AutoATPInjector_C Default__XFH_Spell_ModEffect_AutoATPInjector_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_AutoATPInjector.1"
+    }
+  },
+  {
+    "Type": "XFH_Spell_ModEffect_AutoATPInjector_C",
+    "Name": "Default__XFH_Spell_ModEffect_AutoATPInjector_C",
+    "Properties": {
+      "EventCooldown": 30.0,
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnHealthPercentage Default__XFH_Spell_ModEffect_AutoATPInjector_C:OnHealthPercentage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_AutoATPInjector.2"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatModifierStatusEffect Default__XFH_Spell_ModEffect_AutoATPInjector_C:StatModifierStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_AutoATPInjector.3"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "OnHealthPercentage",
+    "Name": "OnHealthPercentage_0",
+    "Outer": "Default__XFH_Spell_ModEffect_AutoATPInjector_C",
+    "Properties": {
+      "HealthPercentage": 0.25,
+      "Operator": "ComparisonOperator::LessThanOrEquals"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__XFH_Spell_ModEffect_AutoATPInjector_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat SprintSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/SprintSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "Duration": 5.0,
+      "EffectName": {
+        "StringID": 3351
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_MoveSpeedBuff",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_MoveSpeedBuff.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1752
+      }
+    }
+  }
+]

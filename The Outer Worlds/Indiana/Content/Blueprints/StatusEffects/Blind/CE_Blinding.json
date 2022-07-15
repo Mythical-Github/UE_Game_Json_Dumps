@@ -1,0 +1,554 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CE_Blinding_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Blinding_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function CE_Blinding_C:ExecuteUbergraph_CE_Blinding",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CE_Blinding_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.0"
+      },
+      {
+        "ObjectName": "Function CE_Blinding_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.17"
+      },
+      {
+        "ObjectName": "Function CE_Blinding_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.15"
+      },
+      {
+        "ObjectName": "Function CE_Blinding_C:ExecuteUbergraph_CE_Blinding",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.8"
+      },
+      {
+        "ObjectName": "ArrayProperty CE_Blinding_C:PSs",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.6"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CE_Blinding": {
+        "ObjectName": "Function CE_Blinding_C:ExecuteUbergraph_CE_Blinding",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.8"
+      },
+      "ReceiveClearEffect": {
+        "ObjectName": "Function CE_Blinding_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.15"
+      },
+      "ReceiveApplyEffect": {
+        "ObjectName": "Function CE_Blinding_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.17"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Blinding_C Default__CE_Blinding_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.2"
+    }
+  },
+  {
+    "Type": "CE_Blinding_C",
+    "Name": "Default__CE_Blinding_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Blinding_PostProcess_C Default__CE_Blinding_C:CE_Blinding_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.19"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Blinding_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.37"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Blinding_C:StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.38"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Blinding_C:AnimDisableStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.4"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_Blinding_C:ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.39"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 30.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 33
+      },
+      "EffectDescription": {
+        "StringID": 1109
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Blinding_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.22"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Blind",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Blind.0"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_blind",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_blind.0"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_1",
+    "Outer": "Default__CE_Blinding_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Blind"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PSs",
+    "Outer": "PSs",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "PSs",
+    "Outer": "CE_Blinding_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty CE_Blinding_C:PSs.PSs",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.5"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CE_Blinding",
+    "Outer": "CE_Blinding_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.7"
+      },
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.Temp_int_Variable",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.29"
+      },
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.28"
+      },
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.25"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.12"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Array_Get_Item",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.30"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.K2Node_Event_Target1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.35"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.K2Node_Event_Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.23"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.K2Node_Event_bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.13"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.K2Node_Event_Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.34"
+      },
+      {
+        "ObjectName": "ClassProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.21"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_GetSkeletalMeshComponent_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.31"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_ClassIsChildOf_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.9"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_SpawnEmitterAttached_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.32"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_DoesSocketExist_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.10"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_SpawnEmitterAttached_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.33"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.11"
+      },
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Array_AddUnique_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.26"
+      },
+      {
+        "ObjectName": "IntProperty CE_Blinding_C:ExecuteUbergraph_CE_Blinding.CallFunc_Array_AddUnique_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.27"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSocketExist_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_Event_bRestoredFromSave",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveClearEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveClearEffect",
+    "Outer": "CE_Blinding_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveClearEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ReceiveClearEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.14"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveApplyEffect",
+    "Outer": "CE_Blinding_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveApplyEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Blinding_C:ReceiveApplyEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.16"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Blinding_C:ReceiveApplyEffect.Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.24"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Blinding_C:ReceiveApplyEffect.bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.18"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bRestoredFromSave",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "CE_Blinding_PostProcess_C",
+    "Name": "CE_Blinding_PostProcess_C_0",
+    "Outer": "Default__CE_Blinding_C",
+    "Template": "Default__CE_Blinding_PostProcess_C"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateBlind"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Blinding_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PostProcessEventEffect Default__CE_Blinding_C:EventEffects_0.PostProcessEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.36"
+        },
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_Blinding_C:EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.3"
+        },
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Blinding_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Blind/CE_Blinding.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_Ratio",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Ratio",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_AddUnique_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_AddUnique_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Variable",
+    "Outer": "ExecuteUbergraph_CE_Blinding"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetSkeletalMeshComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target1",
+    "Outer": "ExecuteUbergraph_CE_Blinding",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "PostProcessEventEffect",
+    "Name": "PostProcessEventEffect_0",
+    "Outer": "EventEffects_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Blinding_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 2.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat MinRangedWeaponSpread_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/MinRangedWeaponSpread_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 30.0,
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__CE_Blinding_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat AI_SightRadius_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/AI_SightRadius_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 30.0,
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "Default__CE_Blinding_C",
+    "Properties": {
+      "Action": "ETogglableAction::Blind",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 30.0
+    }
+  }
+]

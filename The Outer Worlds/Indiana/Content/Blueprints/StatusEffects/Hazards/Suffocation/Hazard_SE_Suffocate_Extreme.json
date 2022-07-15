@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Suffocate_Extreme_C",
+    "Super": "Hazard_SE_Suffocate_Abstract_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Hazard_SE_Suffocate_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Abstract.0"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Suffocate_Extreme_C Default__Hazard_SE_Suffocate_Extreme_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Suffocate_Extreme_C",
+    "Name": "Default__Hazard_SE_Suffocate_Extreme_C",
+    "Template": "Default__Hazard_SE_Suffocate_Abstract_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Suffocate_Hazard_PP_C Default__Hazard_SE_Suffocate_Extreme_C:CE_Suffocate_Hazard_PP_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.3"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Suffocate_Extreme_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Hazard_SE_Suffocate_Extreme_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_suffocate",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_suffocate.0"
+      },
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "CE_Suffocate_Hazard_PP_C",
+    "Name": "CE_Suffocate_Hazard_PP_C_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Extreme_C",
+    "Template": "CE_Suffocate_Hazard_PP_C_0",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Suffocate_Extreme_C:CE_Suffocate_Hazard_PP_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.5"
+      }
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Extreme_C",
+    "Template": "DamageStatusEffect_0",
+    "Properties": {
+      "DamageValuePercent": 16.65
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Suffocate_Hazard_PP_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Hazard_SE_Suffocate_Extreme_C:CE_Suffocate_Hazard_PP_C_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Suffocation/Hazard_SE_Suffocate_Extreme.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Suffocate_Extreme_C",
+    "Template": "StatModifierStatusEffect_0"
+  }
+]

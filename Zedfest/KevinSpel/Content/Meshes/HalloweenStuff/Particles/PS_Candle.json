@@ -1,0 +1,507 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_Candle:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.7"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_Candle:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_Candle:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.8"
+        },
+        {
+          "ObjectName": "ParticleModuleColor PS_Candle:ParticleModuleColor_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.3"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_Candle:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife PS_Candle:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.9"
+        },
+        {
+          "ObjectName": "ParticleModuleLight PS_Candle:ParticleModuleLight_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.6"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_Candle:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.10"
+      },
+      "PeakActiveParticles": 15
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.8,
+        "MaxValue": 1.2,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.8,
+            1.2
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLight",
+    "Name": "ParticleModuleLight_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "bAffectsTranslucency": true,
+      "ColorScaleOverLife": {
+        "MinValue": 3.0,
+        "MaxValue": 3.0,
+        "MinValueVec": {
+          "X": 3.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            3.0,
+            3.0,
+            3.0
+          ]
+        }
+      },
+      "BrightnessOverLife": {
+        "MinValue": 1000.0,
+        "MaxValue": 1000.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1000.0
+          ]
+        }
+      },
+      "RadiusScale": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            50.0
+          ]
+        }
+      },
+      "LightExponent": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "VolumetricScatteringIntensity": 3.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Candle_Particle",
+        "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Materials/M_Candle_Particle.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_Candle:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 5.0,
+          "Z": 5.0
+        },
+        "MaxValueVec": {
+          "X": 5.0,
+          "Y": 5.0,
+          "Z": 5.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            5.0,
+            5.0,
+            5.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 3,
+          "TimeScale": 31.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9247313,
+            0.9247313,
+            0.9247313,
+            0.81720436,
+            0.81720436,
+            0.81720436,
+            0.7096775,
+            0.7096775,
+            0.7096775,
+            0.60215056,
+            0.60215056,
+            0.60215056,
+            0.49462384,
+            0.49462384,
+            0.49462384,
+            0.38709685,
+            0.38709685,
+            0.38709685,
+            0.27957,
+            0.27957,
+            0.27957,
+            0.17204326,
+            0.17204326,
+            0.17204326,
+            0.06451611,
+            0.06451611,
+            0.06451611,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "Rate": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            10.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_Candle:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "PS_Candle",
+    "Properties": {
+      "SignificanceLevel": "EParticleSignificanceLevel::Medium",
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_Candle:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_Candle",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_Candle:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HalloweenStuff/Particles/PS_Candle.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

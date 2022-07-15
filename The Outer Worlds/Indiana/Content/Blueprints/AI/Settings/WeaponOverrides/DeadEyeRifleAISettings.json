@@ -1,0 +1,98 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "DeadEyeRifleAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "ScopeWhileShooting": true,
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 2.5,
+          "EndPauseTime": 4.0
+        }
+      },
+      "CoverFire": {
+        "bEnabled": true,
+        "FiringPattern": {
+          "StartPauseTime": 2.5,
+          "EndPauseTime": 0.25
+        },
+        "CoverUseCount": 4,
+        "CoverTime": 5.0,
+        "CoverTimeFuzz": 1.0
+      },
+      "MovingFire": {
+        "PrePauseTime": 0.25,
+        "FiringPattern": {
+          "StartPauseTime": 1.0,
+          "BurstCount": 2,
+          "BurstPauseTime": 2.0,
+          "EndPauseTime": 1.0
+        }
+      },
+      "SuppressingFire": {
+        "Duration": "ESuppressingFireDuration::Long"
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::Long",
+        "ReenterCoverCount": 4,
+        "SearchMode": "ELostTargetSearchMode::RepositionSearch"
+      },
+      "RangeBehavior": {
+        "OnEnterCombatBehavior": "EOnEnterCombatBehavior::StationaryFireIfOutsidePreferredRange",
+        "MinMoveDistance": 600.0,
+        "MaxMoveDistance": 1100.0,
+        "Near": {
+          "CoverWeight": 0.9,
+          "RangeWeight": 0.1
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.9,
+          "RangeWeight": 0.1
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.125,
+          "CoverWeight": 0.75,
+          "RangeWeight": 0.125
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.4,
+            "BackwardWeight": 0.6,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "PreferredRange": {
+            "StationaryWeight": 0.7,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.3
+          },
+          "TooFar": {
+            "StationaryWeight": 0.3,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.7,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultRangedDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultRangedDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 3.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 2500.0,
+        "PreferredMaxRange": 5000.0,
+        "AbsoluteRangeBuffer": 1000.0
+      }
+    }
+  }
+]

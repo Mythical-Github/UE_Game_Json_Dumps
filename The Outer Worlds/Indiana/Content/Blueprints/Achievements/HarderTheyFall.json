@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "AchievementDataAsset",
+    "Name": "HarderTheyFall",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener HarderTheyFall:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Achievements/HarderTheyFall.3"
+      },
+      "Count": 1,
+      "AchievementID": 5,
+      "SteamName": "NEW_ACHIEVEMENT_1_4",
+      "PS4Name": "5",
+      "XboxName": "5"
+    }
+  },
+  {
+    "Type": "OnCompanionKillListener",
+    "Name": "OnCompanionKillListener_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CreatureRoles": [
+        "CreatureRole.Mega"
+      ]
+    }
+  },
+  {
+    "Type": "OnKillListener",
+    "Name": "OnKillListener_2",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CreatureRoles": [
+        "CreatureRole.Mega"
+      ]
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "HarderTheyFall",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnKillListener HarderTheyFall:OrListener_0.OnKillListener_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/HarderTheyFall.2"
+        },
+        {
+          "ObjectName": "OnCompanionKillListener HarderTheyFall:OrListener_0.OnCompanionKillListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/HarderTheyFall.1"
+        }
+      ]
+    }
+  }
+]

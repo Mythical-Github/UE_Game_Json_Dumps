@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "Comp_DerpGunAISettings",
+    "Properties": {
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstTime": 5.0,
+          "EndPauseTime": 2.0
+        }
+      },
+      "CoverFire": {
+        "bEnabled": true,
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstTime": 5.0,
+          "EndPauseTime": 2.0
+        },
+        "CoverUseCount": 5,
+        "CoverTime": 0.5
+      },
+      "MovingFire": {
+        "bEnabled": true,
+        "PrePauseTime": 0.25,
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstTime": 5.0,
+          "BurstPauseTime": 1.0,
+          "EndPauseTime": 2.0
+        },
+        "bFireWhileMovingToPreferredRange": true,
+        "MovingToPreferredRangeNoFireTime": 0.5,
+        "MovingToPreferredRangeFireTime": 4.0
+      },
+      "SuppressingFire": {
+        "Duration": "ESuppressingFireDuration::Long"
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::Long",
+        "SearchMode": "ELostTargetSearchMode::RepositionSearch"
+      },
+      "RangeBehavior": {
+        "MinMoveDistance": 400.0,
+        "MaxMoveDistance": 1000.0,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.8,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.2
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction CompanionRangedDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/CompanionRangedDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 3.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1500.0,
+        "PreferredMaxRange": 3000.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

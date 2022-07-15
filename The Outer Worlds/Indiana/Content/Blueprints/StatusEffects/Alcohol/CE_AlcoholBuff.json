@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_AlcoholBuff_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_AlcoholBuff_C Default__CE_AlcoholBuff_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Alcohol/CE_AlcoholBuff.1"
+    }
+  },
+  {
+    "Type": "CE_AlcoholBuff_C",
+    "Name": "Default__CE_AlcoholBuff_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_AlcoholBuff_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Alcohol/CE_AlcoholBuff.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::AddDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::PassThroughValue",
+      "Duration": 30.0,
+      "MaxDuration": 600.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat DrinkEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/DrinkEffectDuration_Stat.0"
+      },
+      "EffectName": {
+        "StringID": 2389
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_AlcoholBuff",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_AlcoholBuff.0"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_AlcoholBuff_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Personality_Attributes",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Attributes/Personality_Attributes.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

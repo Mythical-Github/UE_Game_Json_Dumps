@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "MantiPillarSpitAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.5,
+          "BurstPauseTime": 2.0,
+          "EndPauseTime": 1.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "MovingFire": {
+        "FiringPattern": {
+          "StartPauseTime": 2.0,
+          "BurstPauseTime": 2.0
+        }
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "OnEnterCombatBehavior": "EOnEnterCombatBehavior::StationaryFire",
+        "bArcingWeapon": true,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.5,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.5
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.7,
+            "BackwardWeight": 0.1,
+            "ForwardWeight": 0.1,
+            "StrafeWeight": 0.1
+          },
+          "PreferredRange": {
+            "StationaryWeight": 0.7,
+            "BackwardWeight": 0.1,
+            "ForwardWeight": 0.1,
+            "StrafeWeight": 0.1
+          },
+          "TooFar": {
+            "StationaryWeight": 0.7,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.333,
+            "StrafeWeight": 0.333
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultDodgeMantiPillarDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultDodgeMantiPillarDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 3.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 2000.0,
+        "PreferredMaxRange": 3000.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

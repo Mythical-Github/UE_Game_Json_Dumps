@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "GorillianBoulderAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "StationaryFire": {
+        "FiringPattern": {
+          "EndPauseTime": 6.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "bArcingWeapon": true,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.5,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.5
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 1.0,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "PreferredRange": {
+            "StationaryWeight": 1.0,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "TooFar": {
+            "StationaryWeight": 0.0,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 1.0,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultBlockCreatureMeleeDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultBlockCreatureMeleeDefensiveActions.0"
+      },
+      "Block": {
+        "bEnabled": true,
+        "Cooldown": 5.0,
+        "Duration": 2.0
+      },
+      "Dodge": {
+        "Cooldown": 10.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1000.0,
+        "PreferredMaxRange": 2500.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

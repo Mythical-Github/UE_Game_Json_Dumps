@@ -1,0 +1,371 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_SodaSprayer:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_SodaSprayer:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_SodaSprayer:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.7"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity PS_SodaSprayer:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.10"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_SodaSprayer:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.3"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotation PS_SodaSprayer:ParticleModuleMeshRotation_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh PS_SodaSprayer:ParticleModuleTypeDataMesh_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.9"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_SodaSprayer:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.8"
+      },
+      "PeakActiveParticles": 13
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotation",
+    "Name": "ParticleModuleMeshRotation_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_KatSoda",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/VendingMachine/M_KatSoda.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_SodaSprayer:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "Rate": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            10.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_SodaSprayer:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh S_Soda",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/VendingMachine/S_Soda.2"
+      },
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -50.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -50.0,
+          "Y": -50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -50.0,
+            -50.0,
+            50.0,
+            50.0,
+            50.0,
+            100.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "PS_SodaSprayer",
+    "Properties": {
+      "EmitterName": "Soda Cans",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_SodaSprayer:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_SodaSprayer",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_SodaSprayer:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/TutorialContent/PS_SodaSprayer.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

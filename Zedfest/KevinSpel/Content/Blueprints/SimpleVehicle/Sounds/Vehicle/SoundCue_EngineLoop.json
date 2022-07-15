@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SoundCue_EngineLoop",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeParamCrossFade SoundCue_EngineLoop:SoundNodeParamCrossFade_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.4"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 4500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation SoundAttenuation_Engine",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundAttenuation_Engine.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "RPM",
+        "MinInput": 20.0,
+        "MaxInput": 3000.0,
+        "MinOutput": 0.75,
+        "MaxOutput": 1.35,
+        "ParamMode": "MPM_Abs"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SoundCue_EngineLoop:SoundNodeWavePlayer_5",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_3",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "RPM",
+        "MaxInput": 200.0,
+        "MinOutput": 0.65,
+        "MaxOutput": 1.1,
+        "ParamMode": "MPM_Abs"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SoundCue_EngineLoop:SoundNodeWavePlayer_17",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_5",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "RPM",
+        "MinInput": 700.0,
+        "MaxInput": 2800.0,
+        "MinOutput": 0.85,
+        "MaxOutput": 1.4,
+        "ParamMode": "MPM_Abs"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SoundCue_EngineLoop:SoundNodeWavePlayer_21",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeParamCrossFade",
+    "Name": "SoundNodeParamCrossFade_0",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "ParamName": "RPM",
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 150.0,
+          "FadeOutDistanceEnd": 250.0,
+          "Volume": 0.4
+        },
+        {
+          "FadeInDistanceStart": 0.5,
+          "FadeInDistanceEnd": 200.0,
+          "FadeOutDistanceStart": 2500.0,
+          "FadeOutDistanceEnd": 3000.0,
+          "Volume": 0.5
+        },
+        {
+          "FadeInDistanceStart": 750.0,
+          "FadeInDistanceEnd": 2000.0,
+          "FadeOutDistanceStart": 2500.0,
+          "FadeOutDistanceEnd": 3000.0,
+          "Volume": 0.65
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous SoundCue_EngineLoop:SoundNodeModulatorContinuous_3",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.2"
+        },
+        {
+          "ObjectName": "SoundNodeModulatorContinuous SoundCue_EngineLoop:SoundNodeModulatorContinuous_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.1"
+        },
+        {
+          "ObjectName": "SoundNodeModulatorContinuous SoundCue_EngineLoop:SoundNodeModulatorContinuous_5",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_1.Sound_EngineSpeedLoop_1",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Sound_EngineSpeedLoop_1",
+      "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_1.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_21",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_5.Sound_EngineSpeedLoop_5",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Sound_EngineSpeedLoop_5",
+      "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_5.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "SoundCue_EngineLoop",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_3.Sound_EngineSpeedLoop_3",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Sound_EngineSpeedLoop_3",
+      "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/Sound_EngineSpeedLoop_3.0"
+    }
+  }
+]

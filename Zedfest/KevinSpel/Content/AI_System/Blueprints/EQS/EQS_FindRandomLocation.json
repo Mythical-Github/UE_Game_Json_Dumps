@@ -1,0 +1,75 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_PathingGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindRandomLocation",
+    "Properties": {
+      "QueryName": "EQS_FindRandomLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindRandomLocation:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQS_FindRandomLocation",
+    "Properties": {
+      "NavigationFilter": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_FindRandomLocation:EnvQueryGenerator_PathingGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetStartLocationContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetStartLocationContext.2"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_FindRandomLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_FindRandomLocation:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_FindRandomLocation:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQS_FindRandomLocation",
+    "Properties": {
+      "VerNum": 1
+    }
+  }
+]

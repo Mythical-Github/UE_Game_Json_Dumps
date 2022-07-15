@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_PlannedIntervention_C_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_PlannedIntervention_C_C Default__Spell_PerkEffect_PlannedIntervention_C_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/CompSpecific/Spell_PerkEffect_PlannedIntervention_C.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_PlannedIntervention_C_C",
+    "Name": "Default__Spell_PerkEffect_PlannedIntervention_C_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "ThreatStatusEffect Default__Spell_PerkEffect_PlannedIntervention_C_C:ThreatStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/CompSpecific/Spell_PerkEffect_PlannedIntervention_C.4"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_IsInCombatWithPlayer Default__Spell_PerkEffect_PlannedIntervention_C_C:SpellConditional_IsInCombatWithPlayer_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/CompSpecific/Spell_PerkEffect_PlannedIntervention_C.2"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_PerkEffect_PlannedIntervention_C_C:SphereShape_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/CompSpecific/Spell_PerkEffect_PlannedIntervention_C.3"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Player",
+            "bIgnoreSources": true,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_IsInCombatWithPlayer",
+    "Name": "SpellConditional_IsInCombatWithPlayer_0",
+    "Outer": "Default__Spell_PerkEffect_PlannedIntervention_C_C"
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_PerkEffect_PlannedIntervention_C_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 2000.0
+      }
+    }
+  },
+  {
+    "Type": "ThreatStatusEffect",
+    "Name": "ThreatStatusEffect_1",
+    "Outer": "Default__Spell_PerkEffect_PlannedIntervention_C_C",
+    "Properties": {
+      "ThreatScalar": 1.0,
+      "bClearSwitchTargetCooldown": true,
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  }
+]

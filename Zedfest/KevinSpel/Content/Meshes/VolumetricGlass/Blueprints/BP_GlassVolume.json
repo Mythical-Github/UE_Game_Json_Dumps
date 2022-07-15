@@ -1,0 +1,508 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "BP_GlassVolume_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_GlassVolume_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_GlassVolume_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.22"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty BP_GlassVolume_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_GlassVolume_C:ExecuteUbergraph_BP_GlassVolume",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.0"
+      },
+      {
+        "ObjectName": "Function BP_GlassVolume_C:InitMaterial",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.10"
+      },
+      {
+        "ObjectName": "Function BP_GlassVolume_C:UserConstructionScript",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.8"
+      },
+      {
+        "ObjectName": "Function BP_GlassVolume_C:ReceiveBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.7"
+      },
+      {
+        "ObjectName": "Function BP_GlassVolume_C:ExecuteUbergraph_BP_GlassVolume",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.6"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_GlassVolume_C:Plane",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.4"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_GlassVolume_C:Box",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.17"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:VolumeExtend",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.31"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_GlassVolume": {
+        "ObjectName": "Function BP_GlassVolume_C:ExecuteUbergraph_BP_GlassVolume",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function BP_GlassVolume_C:ReceiveBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.7"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function BP_GlassVolume_C:UserConstructionScript",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.8"
+      },
+      "InitMaterial": {
+        "ObjectName": "Function BP_GlassVolume_C:InitMaterial",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.10"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_GlassVolume_C Default__BP_GlassVolume_C",
+      "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.2"
+    }
+  },
+  {
+    "Type": "BP_GlassVolume_C",
+    "Name": "Default__BP_GlassVolume_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "VolumeExtend": {
+        "X": 4000.0,
+        "Y": 4000.0,
+        "Z": 2000.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_GlassVolume_C",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Plane",
+    "Outer": "BP_GlassVolume_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class StaticMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_BP_GlassVolume",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_GlassVolume",
+    "Outer": "BP_GlassVolume_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty BP_GlassVolume_C:ExecuteUbergraph_BP_GlassVolume.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.5"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_GlassVolume_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:ReceiveBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BP_GlassVolume_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "InitMaterial",
+    "Outer": "BP_GlassVolume_C",
+    "Children": [
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_Multiply_VectorFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.9"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_K2_GetComponentLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.27"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_Subtract_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.30"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_X",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.11"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_Y",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.13"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_Z",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.15"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_Conv_VectorToLinearColor_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.25"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_Add_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.24"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_X1",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.12"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_Y1",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.14"
+      },
+      {
+        "ObjectName": "FloatProperty BP_GlassVolume_C:InitMaterial.CallFunc_BreakVector_Z1",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.16"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_Conv_VectorToLinearColor_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.26"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_MakeVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.29"
+      },
+      {
+        "ObjectName": "StructProperty BP_GlassVolume_C:InitMaterial.CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.28"
+      }
+    ],
+    "FunctionFlags": 209846272
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_X",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_X1",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Y",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Y1",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Z",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Z1",
+    "Outer": "InitMaterial"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BP_GlassVolume_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class BoxComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_GlassVolume_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_GlassVolume_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.18"
+      },
+      "VariableGuid": "212F4CA4-42372DFB-60BE50BD-9A7B8DF9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_GlassVolume_C:Plane_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.23"
+      },
+      "VariableGuid": "CA3C6CC0-41E78A4C-7F9BB8BC-F48B1E81",
+      "InternalVariableName": "Plane"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_GlassVolume_C:Box_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_GlassVolume_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.20"
+        }
+      ],
+      "VariableGuid": "CB561ECF-404AE757-E30760A8-42F30622",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_GlassVolume_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_GlassVolume_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.21"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_GlassVolume_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.21"
+        },
+        {
+          "ObjectName": "SCS_Node BP_GlassVolume_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.20"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_GlassVolume_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/VolumetricGlass/Blueprints/BP_GlassVolume.19"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Outer": "BP_GlassVolume_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh Plane",
+        "ObjectPath": "Engine/Content/BasicShapes/Plane.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material BasicShapeMaterial",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "bVisibleInReflectionCaptures": false,
+      "CastShadow": false,
+      "LightingChannels": {
+        "bChannel0": false
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Conv_VectorToLinearColor_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct LinearColor",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Conv_VectorToLinearColor_ReturnValue1",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct LinearColor",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+    "Outer": "InitMaterial",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeVector_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+    "Outer": "InitMaterial",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "VolumeExtend",
+    "Outer": "BP_GlassVolume_C",
+    "PropertyFlags": 5,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,555 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionDistance",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 25.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperFactor",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperScale",
+    "Outer": "ParticleModuleTypeDataBeam2_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstantCurve",
+    "Name": "DistributionNoiseScale",
+    "Outer": "ParticleModuleBeamNoise_0"
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionSourceTangent",
+    "Outer": "ParticleModuleBeamSource_0",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionTargetTangent",
+    "Outer": "ParticleModuleBeamTarget_0",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Electro:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.14"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Electro:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.13"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Electro:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_Electro:ParticleModuleColor_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.12"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource P_Electro:ParticleModuleBeamSource_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.10"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget P_Electro:ParticleModuleBeamTarget_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.11"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamNoise P_Electro:ParticleModuleBeamNoise_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 P_Electro:ParticleModuleTypeDataBeam2_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.17"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Electro:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.16"
+      },
+      "PeakActiveParticles": 7
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamNoise",
+    "Name": "ParticleModuleBeamNoise_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "bLowFreq_Enabled": true,
+      "Frequency": 10,
+      "NoiseRange": {
+        "MinValue": -40.0,
+        "MaxValue": 40.0,
+        "MinValueVec": {
+          "X": -40.0,
+          "Y": 0.0,
+          "Z": -40.0
+        },
+        "MaxValueVec": {
+          "X": 40.0,
+          "Y": 0.0,
+          "Z": 40.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -40.0,
+            0.0,
+            -40.0,
+            40.0,
+            0.0,
+            40.0
+          ]
+        }
+      },
+      "NoiseRangeScale": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.5
+          ]
+        }
+      },
+      "NoiseSpeed": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "NoiseLockRadius": 0.0,
+      "NoiseLockTime": 0.05,
+      "NoiseTangentStrength": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            50.0
+          ]
+        }
+      },
+      "NoiseTessellation": 3,
+      "NoiseScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstantCurve P_Electro:ParticleModuleBeamNoise_0.DistributionNoiseScale",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.5"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "SourceMethod": "PEB2STM_Emitter",
+      "Source": {
+        "MaxValue": 300.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 300.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 300.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            300.0,
+            0.0
+          ]
+        }
+      },
+      "SourceTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant P_Electro:ParticleModuleBeamSource_0.DistributionSourceTangent",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.6"
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "Target": {
+        "MinValue": -300.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": -300.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": -300.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            -300.0,
+            0.0
+          ]
+        }
+      },
+      "TargetTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant P_Electro:ParticleModuleBeamTarget_0.DistributionTargetTangent",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.7"
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 50.0,
+        "MaxValue": 250.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 100.0,
+          "Z": 250.0
+        },
+        "MaxValueVec": {
+          "X": 50.0,
+          "Y": 100.0,
+          "Z": 250.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            50.0,
+            100.0,
+            250.0
+          ]
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.01,
+        "MaxValue": 0.01,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.01
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_beam",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/Materials/M_beam.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Electro:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "StartSize": {
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 2.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            2.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "Rate": {
+        "MinValue": 3.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            3.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Electro:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "MaxBeamCount": 5,
+      "Speed": 0.0,
+      "Distance": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Electro:ParticleModuleTypeDataBeam2_0.DistributionDistance",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.2"
+        }
+      },
+      "TaperFactor": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Electro:ParticleModuleTypeDataBeam2_0.DistributionTaperFactor",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.3"
+        }
+      },
+      "TaperScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Electro:ParticleModuleTypeDataBeam2_0.DistributionTaperScale",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.4"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Electro",
+    "Properties": {
+      "EmitterName": "beam",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Electro:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.8"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Electro",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Electro:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Electro.18"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

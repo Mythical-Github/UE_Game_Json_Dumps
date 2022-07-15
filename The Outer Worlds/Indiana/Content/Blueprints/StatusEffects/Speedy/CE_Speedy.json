@@ -1,0 +1,88 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Speedy_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Speedy_C Default__CE_Speedy_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Speedy/CE_Speedy.1"
+    }
+  },
+  {
+    "Type": "CE_Speedy_C",
+    "Name": "Default__CE_Speedy_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Speedy_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Speedy/CE_Speedy.2"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Speedy_C:StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Speedy/CE_Speedy.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::AddDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::PassThroughValue",
+      "Duration": 10.0,
+      "MaxDuration": 600.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat DrugDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/DrugDuration_Stat.0"
+      },
+      "EffectName": {
+        "StringID": 2417
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_MoveSpeedBuff",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_MoveSpeedBuff.0"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Speedy_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.2,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 10.0
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__CE_Speedy_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.2,
+        "RpgStat": {
+          "ObjectName": "RpgStat MeleeSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/MeleeSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 10.0
+    }
+  }
+]

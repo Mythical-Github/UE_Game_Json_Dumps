@@ -1,0 +1,1774 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_NPC_Zeds2_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11,
+                12,
+                14,
+                15,
+                16
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                18
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 19,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                20
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      },
+      "OrderedSavedPoseIndices": [
+        24
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_NPC_Zeds2_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.20"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendListByEnum_ACF874CD4A1AE6CE1F5CC2839E52AFE6",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.50"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_91ED7A1D4E55A31CBE9DE9ABA71AD269",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.53"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_38230F1241AE50A3172B9BB64B5B4045",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.52"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsCrouching",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:IsCrouching",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendListByBool_32BB72F3407C0DFF01553D87974E752B",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_9513F3894B55843FDFF3EB9A7C4929BB",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.54"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_3777CADF4DE5567433DD1FBC77A6A066",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_9AB3585044D0DC3CD91858A518CCFE01",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.55"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_DF0D2B5F4E1212844F9727B36A5AC443",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.69"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_Zeds2_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.36"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.67"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_5952CC9748E983283943E0B86DEBCA5F",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.68"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.36"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.28"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.27"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.26"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.25"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.24"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.23"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_SaveCachedPose_78B3FFD54368CF048D5E3184187698DF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_5952CC9748E983283943E0B86DEBCA5F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.68"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.67"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_TransitionResult_DF0D2B5F4E1212844F9727B36A5AC443",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.69"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_SequencePlayer_49DFAA6C4B09C8A861F5F7A8FB7D797D",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.59"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_StateResult_0BE8570E4DD2FDBE9A0302BB7D8F5C3C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.64"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_SequencePlayer_D717743346125B44C839609DFE4B6B89",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.60"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_StateResult_F6C99C3046959BB01717AFA66FDDD9ED",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.65"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_9AB3585044D0DC3CD91858A518CCFE01",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_3777CADF4DE5567433DD1FBC77A6A066",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_9513F3894B55843FDFF3EB9A7C4929BB",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendListByBool_32BB72F3407C0DFF01553D87974E752B",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_38230F1241AE50A3172B9BB64B5B4045",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.52"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendSpacePlayer_91ED7A1D4E55A31CBE9DE9ABA71AD269",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_BlendListByEnum_ACF874CD4A1AE6CE1F5CC2839E52AFE6",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_StateResult_FBFA62EE46BC3E506608E185BF6D05CD",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.66"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_StateMachine_DE923D2243941355FEDD4CA5EB4C57DB",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.63"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_Root_BA9A46B344DA6790DB5697B00280F205",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_Slot_50E49B2F412A7271D8971D8FFC03EF14",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.61"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_Slot_5BB28E9E4DDE325AA0369AA1BD3EEC40",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.62"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_UseCachedPose_604CBFA9450FE31891C193A46668AC40",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.70"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_UseCachedPose_98E02C5A4F2A8A35AAB3C7AC36E0B17F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.71"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_UseCachedPose_C2439D0440ABA4CCA02F1F8CBB2782DE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.72"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_LayeredBoneBlend_B30422CE46C96241A9BE0D8F128F6D2A",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.57"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:AnimGraphNode_LayeredBoneBlend_1003CBED40CC901749B11D8663925309",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.56"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.19"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Speed",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.35"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Zeds2_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.20"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:Direction",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.30"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.18"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.37"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_NPC_Zeds2": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.5"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.22"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.23"
+      },
+      "AnimNotify_OnSpecialDamage2": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.24"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.25"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.26"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.27"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370": {
+        "ObjectName": "Function AnimBP_NPC_Zeds2_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.36"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_NPC_Zeds2_C Default__AnimBP_NPC_Zeds2_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.2"
+    }
+  },
+  {
+    "Type": "AnimBP_NPC_Zeds2_C",
+    "Name": "Default__AnimBP_NPC_Zeds2_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_SaveCachedPose_78B3FFD54368CF048D5E3184187698DF": {
+        "Pose": {
+          "LinkID": 16
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_TransitionResult_5952CC9748E983283943E0B86DEBCA5F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_DF0D2B5F4E1212844F9727B36A5AC443": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_49DFAA6C4B09C8A861F5F7A8FB7D797D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Loop",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_0BE8570E4DD2FDBE9A0302BB7D8F5C3C": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_D717743346125B44C839609DFE4B6B89": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F6C99C3046959BB01717AFA66FDDD9ED": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_9AB3585044D0DC3CD91858A518CCFE01": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Zeds2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_Zeds2.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_3777CADF4DE5567433DD1FBC77A6A066": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Zeds2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_Zeds2.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_9513F3894B55843FDFF3EB9A7C4929BB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_CrouchWalk",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_CrouchWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_32BB72F3407C0DFF01553D87974E752B": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_38230F1241AE50A3172B9BB64B5B4045": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_91ED7A1D4E55A31CBE9DE9ABA71AD269": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_ACF874CD4A1AE6CE1F5CC2839E52AFE6": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 13
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_FBFA62EE46BC3E506608E185BF6D05CD": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_DE923D2243941355FEDD4CA5EB4C57DB": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_BA9A46B344DA6790DB5697B00280F205": {
+        "Result": {
+          "LinkID": 24
+        }
+      },
+      "AnimGraphNode_Slot_50E49B2F412A7271D8971D8FFC03EF14": {
+        "Source": {
+          "LinkID": 23
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_5BB28E9E4DDE325AA0369AA1BD3EEC40": {
+        "Source": {
+          "LinkID": 20
+        },
+        "SlotName": "UpperBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_604CBFA9450FE31891C193A46668AC40": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_98E02C5A4F2A8A35AAB3C7AC36E0B17F": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_C2439D0440ABA4CCA02F1F8CBB2782DE": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_B30422CE46C96241A9BE0D8F128F6D2A": {
+        "BasePose": {
+          "LinkID": 21
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend_1003CBED40CC901749B11D8663925309": {
+        "BasePose": {
+          "LinkID": 22
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 18
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_78B3FFD54368CF048D5E3184187698DF",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.4"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.32"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.10"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.13"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.21"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.34"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.40"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.73"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.74"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.33"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.31"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.39"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.9"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.38"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.41"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.45"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.14"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.12"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.42"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.46"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.15"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.43"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.47"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.16"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_TryGetPawnOwner_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.44"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_AsBP_NPC_Base3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.48"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.K2Node_DynamicCast_bSuccess3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.17"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_NPC_Zeds2_C:ExecuteUbergraph_AnimBP_NPC_Zeds2.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage2",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Zeds2_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Zeds2.29"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Zeds2_AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue4",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_32BB72F3407C0DFF01553D87974E752B",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_ACF874CD4A1AE6CE1F5CC2839E52AFE6",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3777CADF4DE5567433DD1FBC77A6A066",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_38230F1241AE50A3172B9BB64B5B4045",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_91ED7A1D4E55A31CBE9DE9ABA71AD269",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_9513F3894B55843FDFF3EB9A7C4929BB",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_9AB3585044D0DC3CD91858A518CCFE01",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_1003CBED40CC901749B11D8663925309",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_B30422CE46C96241A9BE0D8F128F6D2A",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_BA9A46B344DA6790DB5697B00280F205",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_49DFAA6C4B09C8A861F5F7A8FB7D797D",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D717743346125B44C839609DFE4B6B89",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_50E49B2F412A7271D8971D8FFC03EF14",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_5BB28E9E4DDE325AA0369AA1BD3EEC40",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_DE923D2243941355FEDD4CA5EB4C57DB",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_0BE8570E4DD2FDBE9A0302BB7D8F5C3C",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F6C99C3046959BB01717AFA66FDDD9ED",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FBFA62EE46BC3E506608E185BF6D05CD",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_333EBCF4488E2C0EFD3E348791AC6370",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5952CC9748E983283943E0B86DEBCA5F",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DF0D2B5F4E1212844F9727B36A5AC443",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_604CBFA9450FE31891C193A46668AC40",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_98E02C5A4F2A8A35AAB3C7AC36E0B17F",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_C2439D0440ABA4CCA02F1F8CBB2782DE",
+    "Outer": "AnimBP_NPC_Zeds2_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Zeds2",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

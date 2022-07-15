@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "GorillianBoulderHurlerAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "StationaryFire": {
+        "FiringPattern": {
+          "BurstRounds": 3,
+          "BurstCount": 2,
+          "BurstPauseTime": 6.0,
+          "EndPauseTime": 2.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "OnEnterCombatBehavior": "EOnEnterCombatBehavior::StationaryFire",
+        "bArcingWeapon": true,
+        "MinMoveDistance": 400.0,
+        "MaxMoveDistance": 800.0,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.5,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.5
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.5,
+            "BackwardWeight": 0.5,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "PreferredRange": {
+            "StationaryWeight": 1.0,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "TooFar": {
+            "StationaryWeight": 0.5,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.5,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultBlockCreatureMeleeDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultBlockCreatureMeleeDefensiveActions.0"
+      },
+      "Block": {
+        "bEnabled": true,
+        "Cooldown": 5.0,
+        "Duration": 2.0
+      },
+      "Dodge": {
+        "Cooldown": 10.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1000.0,
+        "PreferredMaxRange": 2500.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

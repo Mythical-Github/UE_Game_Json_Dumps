@@ -1,0 +1,1774 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_NPC_Siren_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11,
+                12,
+                14,
+                15,
+                16
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                18
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 19,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                20
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      },
+      "OrderedSavedPoseIndices": [
+        24
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_NPC_Siren_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.20"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendListByEnum_C7F35386400E64C030B752B68D52DFE8",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.50"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_E3C8ABC0480D6A236DD4F0A83490CF4A",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.55"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_6977D3A04340C4ACE4896E9270151BDB",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsCrouching",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:IsCrouching",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendListByBool_EFCA1AA548C485138A67E69170F47EDC",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.30"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_B1D9D912429CD62C97814EAF8E63487C",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.53"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_6980060944965957E6F849A0AC88629E",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.52"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_CD15C79E40BB428079648DA52AAC2BEE",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.54"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_416D81744FABA6FE3B3394A731AEC236",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.69"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_Siren_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.36"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.68"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_09CD602943CA2D8B80B3FDB66E794FE3",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.67"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.36"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.28"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.27"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.26"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.25"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.24"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.23"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_SaveCachedPose_3FD03CD64CE267CE94A54CB88062B751",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_09CD602943CA2D8B80B3FDB66E794FE3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.67"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.68"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_TransitionResult_416D81744FABA6FE3B3394A731AEC236",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.69"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_SequencePlayer_748399EE4CB1634D0CAC2990B8C40026",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.60"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_StateResult_3A26C8F845A207E073AAC7A6C216C3F1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.65"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_SequencePlayer_20FC4D4840F375BA419CD7A95650C6DF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.59"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_StateResult_4A33B75F431F3D497E14EF9D631B6E43",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.66"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_CD15C79E40BB428079648DA52AAC2BEE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_6980060944965957E6F849A0AC88629E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.52"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_B1D9D912429CD62C97814EAF8E63487C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendListByBool_EFCA1AA548C485138A67E69170F47EDC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_6977D3A04340C4ACE4896E9270151BDB",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendSpacePlayer_E3C8ABC0480D6A236DD4F0A83490CF4A",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_BlendListByEnum_C7F35386400E64C030B752B68D52DFE8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_StateResult_06A04E3C41835A047607A1961AFD8CA1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.64"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_StateMachine_3A8CAAFE4FD64D31D24303BA3791E781",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.63"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_Root_C1F27C6E4E34C42CEB6E2786EE36870A",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_Slot_7B6B3A30428918430805B5971ED67FF9",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.62"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_Slot_104D3E4E434712293608E5BD7DC94CC8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.61"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_UseCachedPose_A47C79E4426061B0FC016DA0A1D3D8B1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.71"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_UseCachedPose_8154F79D4CF7E134E94D768B46DECCAD",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.70"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_UseCachedPose_BEE0415C4A4F1E7C3FEC9C8B76BA3E64",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.72"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_LayeredBoneBlend_3576756F43ABC1EFEE0FCBAC88AFEB6E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.56"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:AnimGraphNode_LayeredBoneBlend_E19EB2FD4CB598DB05FBC78DFB47ADB2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.57"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.19"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Speed",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.35"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Siren_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.20"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:Direction",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.30"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.18"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.37"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_NPC_Siren": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.5"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.22"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.23"
+      },
+      "AnimNotify_OnSpecialDamage2": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.24"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.25"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.26"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.27"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E": {
+        "ObjectName": "Function AnimBP_NPC_Siren_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.36"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_NPC_Siren_C Default__AnimBP_NPC_Siren_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.2"
+    }
+  },
+  {
+    "Type": "AnimBP_NPC_Siren_C",
+    "Name": "Default__AnimBP_NPC_Siren_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_SaveCachedPose_3FD03CD64CE267CE94A54CB88062B751": {
+        "Pose": {
+          "LinkID": 16
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_TransitionResult_09CD602943CA2D8B80B3FDB66E794FE3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_416D81744FABA6FE3B3394A731AEC236": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_748399EE4CB1634D0CAC2990B8C40026": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Loop",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3A26C8F845A207E073AAC7A6C216C3F1": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_20FC4D4840F375BA419CD7A95650C6DF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4A33B75F431F3D497E14EF9D631B6E43": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_CD15C79E40BB428079648DA52AAC2BEE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_ZedsSiren",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_ZedsSiren.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_6980060944965957E6F849A0AC88629E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_ZedsSiren",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_ZedsSiren.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_B1D9D912429CD62C97814EAF8E63487C": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_CrouchWalk",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_CrouchWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_EFCA1AA548C485138A67E69170F47EDC": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_6977D3A04340C4ACE4896E9270151BDB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_E3C8ABC0480D6A236DD4F0A83490CF4A": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_C7F35386400E64C030B752B68D52DFE8": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 13
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_06A04E3C41835A047607A1961AFD8CA1": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_3A8CAAFE4FD64D31D24303BA3791E781": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_C1F27C6E4E34C42CEB6E2786EE36870A": {
+        "Result": {
+          "LinkID": 24
+        }
+      },
+      "AnimGraphNode_Slot_7B6B3A30428918430805B5971ED67FF9": {
+        "Source": {
+          "LinkID": 23
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_104D3E4E434712293608E5BD7DC94CC8": {
+        "Source": {
+          "LinkID": 20
+        },
+        "SlotName": "UpperBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_A47C79E4426061B0FC016DA0A1D3D8B1": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_8154F79D4CF7E134E94D768B46DECCAD": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_BEE0415C4A4F1E7C3FEC9C8B76BA3E64": {
+        "LinkToCachingNode": {
+          "LinkID": 0
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_3576756F43ABC1EFEE0FCBAC88AFEB6E": {
+        "BasePose": {
+          "LinkID": 21
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend_E19EB2FD4CB598DB05FBC78DFB47ADB2": {
+        "BasePose": {
+          "LinkID": 22
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 18
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": true,
+        "CurveBlendOption": "ECurveBlendOption::NormalizeByWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_3FD03CD64CE267CE94A54CB88062B751",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.4"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.32"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.10"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.13"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.21"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.34"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.40"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.73"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.74"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.33"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.31"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.39"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.9"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.38"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.41"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.45"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.14"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.12"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.42"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.46"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.15"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.43"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.47"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.16"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_TryGetPawnOwner_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.44"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_AsBP_NPC_Base3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.48"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.K2Node_DynamicCast_bSuccess3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.17"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_NPC_Siren_C:ExecuteUbergraph_AnimBP_NPC_Siren.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage2",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Siren_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Siren.29"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Siren_AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue4",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base3",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_EFCA1AA548C485138A67E69170F47EDC",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_C7F35386400E64C030B752B68D52DFE8",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6977D3A04340C4ACE4896E9270151BDB",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6980060944965957E6F849A0AC88629E",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_B1D9D912429CD62C97814EAF8E63487C",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_CD15C79E40BB428079648DA52AAC2BEE",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E3C8ABC0480D6A236DD4F0A83490CF4A",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_3576756F43ABC1EFEE0FCBAC88AFEB6E",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_E19EB2FD4CB598DB05FBC78DFB47ADB2",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_C1F27C6E4E34C42CEB6E2786EE36870A",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_20FC4D4840F375BA419CD7A95650C6DF",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_748399EE4CB1634D0CAC2990B8C40026",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_104D3E4E434712293608E5BD7DC94CC8",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_7B6B3A30428918430805B5971ED67FF9",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_3A8CAAFE4FD64D31D24303BA3791E781",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_06A04E3C41835A047607A1961AFD8CA1",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3A26C8F845A207E073AAC7A6C216C3F1",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4A33B75F431F3D497E14EF9D631B6E43",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_09CD602943CA2D8B80B3FDB66E794FE3",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0B0B4DAF4D58F9EE8CAAEFB433FD287E",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_416D81744FABA6FE3B3394A731AEC236",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_8154F79D4CF7E134E94D768B46DECCAD",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_A47C79E4426061B0FC016DA0A1D3D8B1",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_BEE0415C4A4F1E7C3FEC9C8B76BA3E64",
+    "Outer": "AnimBP_NPC_Siren_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Siren",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

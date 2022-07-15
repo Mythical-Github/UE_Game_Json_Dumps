@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_AI_ElevatorMove_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_AI_ElevatorMove_C Default__Spell_AI_ElevatorMove_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ElevatorMove.1"
+    }
+  },
+  {
+    "Type": "Spell_AI_ElevatorMove_C",
+    "Name": "Default__Spell_AI_ElevatorMove_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnOccupiedElevatorMove Default__Spell_AI_ElevatorMove_C:OnOccupiedElevatorMove_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ElevatorMove.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "ElevatorDisableStatusEffect Default__Spell_AI_ElevatorMove_C:ElevatorDisableStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ElevatorMove.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ElevatorDisableStatusEffect",
+    "Name": "ElevatorDisableStatusEffect_0",
+    "Outer": "Default__Spell_AI_ElevatorMove_C"
+  },
+  {
+    "Type": "OnOccupiedElevatorMove",
+    "Name": "OnOccupiedElevatorMove_0",
+    "Outer": "Default__Spell_AI_ElevatorMove_C"
+  }
+]

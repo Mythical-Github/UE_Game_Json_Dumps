@@ -1,0 +1,846 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3"
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_0",
+    "Outer": "ParticleModuleSizeMultiplyLife_3",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 0.3,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": {
+              "X": 1.0,
+              "Y": 0.0,
+              "Z": 1.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Water_Impact_Directional_02:ParticleModuleRequired_3",
+        "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.7"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Water_Impact_Directional_02:ParticleModuleLifetime_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Water_Impact_Directional_02:ParticleModuleSize_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.8"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity Water_Impact_Directional_02:ParticleModuleVelocity_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.13"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Water_Impact_Directional_02:ParticleModuleColorOverLife_2",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeScaleBySpeed Water_Impact_Directional_02:ParticleModuleSizeScaleBySpeed_1",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.10"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant Water_Impact_Directional_02:ParticleModuleAccelerationConstant_1",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere Water_Impact_Directional_02:ParticleModuleLocationPrimitiveSphere_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife Water_Impact_Directional_02:ParticleModuleSizeMultiplyLife_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu Water_Impact_Directional_02:ParticleModuleTypeDataGpu_1",
+        "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.12"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Water_Impact_Directional_02:ParticleModuleSpawn_3",
+        "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.11"
+      },
+      "PeakActiveParticles": 44
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_1",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -600.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_2",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 0.6,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.5,
+            0.6
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 16.0,
+        "MaxValue": 16.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            16.0
+          ]
+        }
+      },
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 8.0,
+        "MaxValue": 12.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            8.0,
+            12.0
+          ]
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material Water_Drop",
+        "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Materials/Water_Drop.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Water_Impact_Directional_02:ParticleModuleRequired_3.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.0"
+        }
+      },
+      "EmitterDelay": 0.1,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 3.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 3.0,
+          "Y": 5.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 5.0,
+          "Y": 8.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            3.0,
+            5.0,
+            25.0,
+            5.0,
+            8.0,
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve Water_Impact_Directional_02:ParticleModuleSizeMultiplyLife_3.DistributionVectorConstantCurve_0",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeScaleBySpeed",
+    "Name": "ParticleModuleSizeScaleBySpeed_1",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "SpeedScale": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "MaxScale": {
+        "X": 1.0,
+        "Y": 1.3
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "Rate": {
+        "MinValue": 600.0,
+        "MaxValue": 600.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            600.0
+          ]
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 43,
+          "CountLow": 33,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_1",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired Water_Impact_Directional_02:ParticleModuleRequired_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.7"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn Water_Impact_Directional_02:ParticleModuleSpawn_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.11"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired Water_Impact_Directional_02:ParticleModuleRequired_3",
+            "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.7"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime Water_Impact_Directional_02:ParticleModuleLifetime_3",
+            "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.5"
+          },
+          {
+            "ObjectName": "ParticleModuleSize Water_Impact_Directional_02:ParticleModuleSize_3",
+            "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.8"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity Water_Impact_Directional_02:ParticleModuleVelocity_3",
+            "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.13"
+          },
+          {
+            "ObjectName": "ParticleModuleLocationPrimitiveSphere Water_Impact_Directional_02:ParticleModuleLocationPrimitiveSphere_3",
+            "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.6"
+          }
+        ],
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -600.0
+        },
+        "InvMaxSize": {
+          "X": 0.04,
+          "Y": 0.04
+        },
+        "InvRotationRateScale": 1.6666666,
+        "MaxLifetime": 0.6,
+        "MaxParticleCount": 44,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 51,
+            "Hex": "33000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 103,
+            "Hex": "67000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 155,
+            "Hex": "9B000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 207,
+            "Hex": "CF000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 254,
+            "Hex": "FE000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 247,
+            "Hex": "F7000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 237,
+            "Hex": "ED000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 227,
+            "Hex": "E3000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 217,
+            "Hex": "D9000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 207,
+            "Hex": "CF000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 198,
+            "Hex": "C6000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 188,
+            "Hex": "BC000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 178,
+            "Hex": "B2000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 168,
+            "Hex": "A8000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 158,
+            "Hex": "9E000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 148,
+            "Hex": "94000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 138,
+            "Hex": "8A000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 128,
+            "Hex": "80000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 118,
+            "Hex": "76000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 108,
+            "Hex": "6C000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 99,
+            "Hex": "63000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 89,
+            "Hex": "59000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 79,
+            "Hex": "4F000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 69,
+            "Hex": "45000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 59,
+            "Hex": "3B000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 49,
+            "Hex": "31000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 39,
+            "Hex": "27000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 29,
+            "Hex": "1D000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 19,
+            "Hex": "13000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 9,
+            "Hex": "09000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 255,
+            "R": 0,
+            "A": 0,
+            "Hex": "00FF00"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 255,
+            "A": 0,
+            "Hex": "FF0000"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 0.9887877
+        },
+        "ColorBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.3,
+          "W": 0.0
+        },
+        "MiscScale": {
+          "X": 17.5,
+          "Y": 25.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 7.5000005,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.3
+        },
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -600.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 0.6,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 300.0,
+        "MinValueVec": {
+          "X": 150.0,
+          "Y": -10.0,
+          "Z": -10.0
+        },
+        "MaxValueVec": {
+          "X": 300.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            150.0,
+            -10.0,
+            -10.0,
+            300.0,
+            10.0,
+            10.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "Water_Impact_Directional_02",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Water_Impact_Directional_02:ParticleSpriteEmitter_3.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Water_Impact_Directional_02",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Water_Impact_Directional_02:ParticleSpriteEmitter_3",
+          "ObjectPath": "KevinSpel/Content/Materials/Weapon_Impacts/Systems/Water/Water_Impact_Directional_02.14"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -100.0,
+          "Y": -100.0,
+          "Z": -100.0
+        },
+        "Max": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "ThumbnailImageOutOfDate": false,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

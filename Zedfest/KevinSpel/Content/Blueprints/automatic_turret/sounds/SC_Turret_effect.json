@@ -1,0 +1,53 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SC_Turret_effect",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator SC_Turret_effect:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/sounds/SC_Turret_effect.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 1.0370748,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SC_Turret_effect",
+    "Properties": {
+      "PitchMin": 1.2,
+      "PitchMax": 1.4,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_Turret_effect:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/sounds/SC_Turret_effect.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SC_Turret_effect",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/automatic_turret/sounds/turret_sound.turret_sound",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave turret_sound",
+      "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/sounds/turret_sound.0"
+    }
+  }
+]

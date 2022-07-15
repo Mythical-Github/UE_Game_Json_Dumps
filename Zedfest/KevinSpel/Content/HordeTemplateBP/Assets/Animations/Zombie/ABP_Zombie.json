@@ -1,0 +1,951 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_Zombie_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_Zombie_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpEnd",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton UE4_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.2"
+      },
+      "OrderedSavedPoseIndices": [
+        1
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty ABP_Zombie_C:Speed",
+                "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_BlendSpacePlayer_64597EE546501877E1CC479C71369C56",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_Zombie_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_BA740B684F659D04A2D094BA1502622F",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.35"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.33"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_Zombie_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_911B83484BBACE91B45737A2DD648B4C",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.34"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.20"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+            "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.36"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty ABP_Zombie_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.0"
+      },
+      {
+        "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.20"
+      },
+      {
+        "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.19"
+      },
+      {
+        "ObjectName": "Function ABP_Zombie_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.12"
+      },
+      {
+        "ObjectName": "Function ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.5"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_Root_397F83B54CD21A598225048129346FA4",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.3"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.36"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_911B83484BBACE91B45737A2DD648B4C",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.34"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.33"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_TransitionResult_BA740B684F659D04A2D094BA1502622F",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.35"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_SequencePlayer_12EF0E614218BBCC60E27CB463F2AD62",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.25"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_StateResult_8B01E4784A915FAA16CD30B250D8E815",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.31"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_SequencePlayer_B55E9A1748B47265CBACE3B4BEBC503E",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.26"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_StateResult_ACE495A94A00096C9BB0A583E72AB22B",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.32"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_SequencePlayer_BAAFD1C840DD0D28B84EC08F403A6DF9",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.27"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_StateResult_1A0444B74DBAD680776FFDB197883B17",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.30"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_BlendSpacePlayer_64597EE546501877E1CC479C71369C56",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.23"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_StateResult_14F070514462D1259AB5A49D9496D7B5",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.29"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_StateMachine_459E1DE342A8DA90806229931EA36385",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.28"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_SaveCachedPose_034CD1564C18A2C35911D081C8D4E00D",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.24"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:AnimGraphNode_UseCachedPose_5F8876CA4647B2C9EBD3B3914F268C28",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.37"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_Zombie_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.10"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:Speed",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.18"
+      },
+      {
+        "ObjectName": "ByteProperty ABP_Zombie_C:AnimMode",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.11"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_Zombie": {
+        "ObjectName": "Function ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.5"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function ABP_Zombie_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.12"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706": {
+        "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC": {
+        "ObjectName": "Function ABP_Zombie_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.20"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_Zombie_C Default__ABP_Zombie_C",
+      "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.2"
+    }
+  },
+  {
+    "Type": "ABP_Zombie_C",
+    "Name": "Default__ABP_Zombie_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_397F83B54CD21A598225048129346FA4": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_911B83484BBACE91B45737A2DD648B4C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_BA740B684F659D04A2D094BA1502622F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_12EF0E614218BBCC60E27CB463F2AD62": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_ThirdPerson_Jump",
+          "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Mannequin/Animations/A_ThirdPerson_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8B01E4784A915FAA16CD30B250D8E815": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequencePlayer_B55E9A1748B47265CBACE3B4BEBC503E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_ThirdPersonJump_Loop",
+          "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Mannequin/Animations/A_ThirdPersonJump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.75,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_ACE495A94A00096C9BB0A583E72AB22B": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_BAAFD1C840DD0D28B84EC08F403A6DF9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_ThirdPersonJump_Start",
+          "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Mannequin/Animations/A_ThirdPersonJump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1A0444B74DBAD680776FFDB197883B17": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_64597EE546501877E1CC479C71369C56": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_ZombieWalk",
+          "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/BS_ZombieWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_14F070514462D1259AB5A49D9496D7B5": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_459E1DE342A8DA90806229931EA36385": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SaveCachedPose_034CD1564C18A2C35911D081C8D4E00D": {
+        "Pose": {
+          "LinkID": 13
+        },
+        "CachePoseName": "NormalLoco"
+      },
+      "AnimGraphNode_UseCachedPose_5F8876CA4647B2C9EBD3B3914F268C28": {
+        "LinkToCachingNode": {
+          "LinkID": 14
+        },
+        "CachePoseName": "NormalLoco"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_397F83B54CD21A598225048129346FA4",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_Zombie",
+    "Outer": "ABP_Zombie_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.4"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.14"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.15"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.8"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_Less_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.9"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.17"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.22"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.7"
+      },
+      {
+        "ObjectName": "StructProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.38"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.16"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.21"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_Zombie_C:ExecuteUbergraph_ABP_Zombie.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.6"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "ABP_Zombie_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "AnimMode",
+    "Outer": "ABP_Zombie_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum E_Item_Mode",
+      "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Blueprint/Enums/E_Item_Mode.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "ABP_Zombie_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty ABP_Zombie_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Assets/Animations/Zombie/ABP_Zombie.13"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_Zombie"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_ABP_Zombie"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "ABP_Zombie_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+    "Outer": "ABP_Zombie_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Zombie_AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+    "Outer": "ABP_Zombie_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_64597EE546501877E1CC479C71369C56",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_034CD1564C18A2C35911D081C8D4E00D",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_12EF0E614218BBCC60E27CB463F2AD62",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B55E9A1748B47265CBACE3B4BEBC503E",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_BAAFD1C840DD0D28B84EC08F403A6DF9",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_459E1DE342A8DA90806229931EA36385",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_14F070514462D1259AB5A49D9496D7B5",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1A0444B74DBAD680776FFDB197883B17",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8B01E4784A915FAA16CD30B250D8E815",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_ACE495A94A00096C9BB0A583E72AB22B",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_2655C90A4EFCBA5F49CD7A8A6154B706",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_911B83484BBACE91B45737A2DD648B4C",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BA740B684F659D04A2D094BA1502622F",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_CD6B92F7463D4ACDCE878C88784F2CFC",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_5F8876CA4647B2C9EBD3B3914F268C28",
+    "Outer": "ABP_Zombie_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Zombie",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

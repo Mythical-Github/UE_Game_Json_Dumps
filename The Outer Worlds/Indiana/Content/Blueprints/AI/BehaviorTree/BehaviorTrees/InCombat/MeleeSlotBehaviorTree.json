@@ -1,0 +1,1682 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.40"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Composite",
+    "Name": "BT_Con_Composite_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Conditionals": [
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsInRange MeleeSlotBehaviorTree:BT_Con_Composite_0.BT_Con_General_IsInRange_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.12"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        },
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsAimingPossible MeleeSlotBehaviorTree:BT_Con_Composite_0.BT_Con_General_IsAimingPossible_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.6"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        }
+      ],
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "In Melee Range and Aiming Possible?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Composite",
+    "Name": "BT_Con_Composite_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Conditionals": [
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsFacingTarget MeleeSlotBehaviorTree:BT_Con_Composite_1.BT_Con_General_IsFacingTarget_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.10"
+          },
+          "LogicalOperator": "LogicalOperator::Or"
+        },
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsTimeSinceBehaviorState MeleeSlotBehaviorTree:BT_Con_Composite_1.BT_Con_General_IsTimeSinceBehaviorState_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.16"
+          },
+          "LogicalOperator": "LogicalOperator::Or"
+        }
+      ],
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Not Facing Target or Delay?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Composite",
+    "Name": "BT_Con_Composite_2",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Conditionals": [
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsInRange MeleeSlotBehaviorTree:BT_Con_Composite_2.BT_Con_General_IsInRange_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.13"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        },
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsAimingPossible MeleeSlotBehaviorTree:BT_Con_Composite_2.BT_Con_General_IsAimingPossible_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.7"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        }
+      ],
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Not In Melee Range or Aiming Not Possible?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.34"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Composite",
+    "Name": "BT_Con_Composite_5",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Conditionals": [
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsInRange MeleeSlotBehaviorTree:BT_Con_Composite_5.BT_Con_General_IsInRange_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.14"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        },
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsAimingPossible MeleeSlotBehaviorTree:BT_Con_Composite_5.BT_Con_General_IsAimingPossible_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.8"
+          },
+          "LogicalOperator": "LogicalOperator::And"
+        }
+      ],
+      "NodeName": "In Melee Range and Aiming Possible?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Composite",
+    "Name": "BT_Con_Composite_6",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Conditionals": [
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsFacingTarget MeleeSlotBehaviorTree:BT_Con_Composite_6.BT_Con_General_IsFacingTarget_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.11"
+          },
+          "LogicalOperator": "LogicalOperator::Or"
+        },
+        {
+          "Conditional": {
+            "ObjectName": "BT_Con_General_IsTimeSinceBehaviorState MeleeSlotBehaviorTree:BT_Con_Composite_6.BT_Con_General_IsTimeSinceBehaviorState_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.17"
+          },
+          "LogicalOperator": "LogicalOperator::Or"
+        }
+      ],
+      "bInverseCondition": true,
+      "NodeName": "Facing Target and No Delay?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAimingPossible",
+    "Name": "BT_Con_General_IsAimingPossible_0",
+    "Outer": "BT_Con_Composite_0",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Aiming Possible?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAimingPossible",
+    "Name": "BT_Con_General_IsAimingPossible_0",
+    "Outer": "BT_Con_Composite_2",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Aiming Possible?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAimingPossible",
+    "Name": "BT_Con_General_IsAimingPossible_0",
+    "Outer": "BT_Con_Composite_5",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Aiming Possible?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsBehaviorStateComplete",
+    "Name": "BT_Con_General_IsBehaviorStateComplete_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "NodeName": "Wait If Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsFacingTarget",
+    "Name": "BT_Con_General_IsFacingTarget_0",
+    "Outer": "BT_Con_Composite_1",
+    "Properties": {
+      "MaxAngle": 10.0,
+      "bClampMaxAngleToInitiationThreshold": true,
+      "bInverseCondition": true,
+      "NodeName": "Not Facing Target?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsFacingTarget",
+    "Name": "BT_Con_General_IsFacingTarget_0",
+    "Outer": "BT_Con_Composite_6",
+    "Properties": {
+      "MaxAngle": 10.0,
+      "bClampMaxAngleToInitiationThreshold": true,
+      "bInverseCondition": true,
+      "NodeName": "Not Facing Target?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsInRange",
+    "Name": "BT_Con_General_IsInRange_0",
+    "Outer": "BT_Con_Composite_0",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MinRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MinMeleeRange",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MaxRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MaxMeleeRangeWithPadding",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableHalfHeightDifference": 1.0,
+      "NodeName": "In Melee Range?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsInRange",
+    "Name": "BT_Con_General_IsInRange_0",
+    "Outer": "BT_Con_Composite_2",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MinRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MinMeleeRange",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MaxRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MaxMeleeRange",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableHalfHeightDifference": 1.0,
+      "NodeName": "In Melee Range?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsInRange",
+    "Name": "BT_Con_General_IsInRange_0",
+    "Outer": "BT_Con_Composite_5",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MinRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MinMeleeRange",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MaxRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MaxMeleeRangeWithPadding",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableHalfHeightDifference": 1.0,
+      "NodeName": "In Melee Range?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsInRange",
+    "Name": "BT_Con_General_IsInRange_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MaxRangeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MeleeRecoveryMaxTargetDistance",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Within Recovery Range",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsTimeSinceBehaviorState",
+    "Name": "BT_Con_General_IsTimeSinceBehaviorState_0",
+    "Outer": "BT_Con_Composite_1",
+    "Properties": {
+      "BehaviorState": "EBehaviorState::MeleeSlot",
+      "Operator": "ComparisonOperator::LessThan",
+      "TimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_MinMeleeActionDelay",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Delay?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsTimeSinceBehaviorState",
+    "Name": "BT_Con_General_IsTimeSinceBehaviorState_0",
+    "Outer": "BT_Con_Composite_6",
+    "Properties": {
+      "BehaviorState": "EBehaviorState::MeleeSlot",
+      "Operator": "ComparisonOperator::LessThan",
+      "TimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_MinMeleeActionDelay",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Delay?"
+    }
+  },
+  {
+    "Type": "BT_Con_General_Random",
+    "Name": "BT_Con_General_Random_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "RandomValueSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MeleeRecoveryMoveRandomChance",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Random Chance",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_Random",
+    "Name": "BT_Con_General_Random_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "RandomValueSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MeleeRecoveryDodgeRandomChance",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Random Chance",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsDodgeRecoveryPossible",
+    "Name": "BT_Con_Melee_IsDodgeRecoveryPossible_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "NodeName": "Is Dodge Possible?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsRecoveryType",
+    "Name": "BT_Con_Melee_IsRecoveryType_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "RecoveryType": "EMeleeRecoveryType::Move",
+      "NodeName": "Move Recovery?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsRecoveryType",
+    "Name": "BT_Con_Melee_IsRecoveryType_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "RecoveryType": "EMeleeRecoveryType::Dodge",
+      "NodeName": "Dodge Recovery?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsSlottingState",
+    "Name": "BT_Con_Melee_IsSlottingState_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "State": "EAttackerSlottingState::Unslotted_NoMove",
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Unslotted No Move",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsSlottingState",
+    "Name": "BT_Con_Melee_IsSlottingState_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "State": "EAttackerSlottingState::Waiting",
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Waiting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsSlottingState",
+    "Name": "BT_Con_Melee_IsSlottingState_2",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Unslotted",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Melee_IsSlottingState",
+    "Name": "BT_Con_Melee_IsSlottingState_4",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "State": "EAttackerSlottingState::Slotted",
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Slotted",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Melee_IsPatternComplete",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Complete If Pattern Finished",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetCanBump",
+    "Name": "BT_Scr_General_SetCanBump_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Melee_ShouldBumpDuringApproach",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Allow Bumping (if allowed by attack)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetTogglableAction",
+    "Name": "BT_Scr_General_SetTogglableAction_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Melee_ShouldIgnoreCollisionDuringApproach",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TogglableAction": "ETogglableAction::IgnorePawnCollision",
+      "NodeName": "Ignore Collision (if allowed by attack)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Melee_IncrementPattern",
+    "Name": "BT_Scr_Melee_IncrementPattern_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "NodeName": "Increment Pattern",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Melee_SetIsAttacking",
+    "Name": "BT_Scr_Melee_SetIsAttacking_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "NodeName": "Set Is Attacking",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Melee_ShouldSprintDuringApproach",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MovementState": "EAIMovementState::Sprint",
+      "NodeName": "Sprint (if allowed by attack)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_8",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.42"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsRecoveryType MeleeSlotBehaviorTree:BT_Con_Melee_IsRecoveryType_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.21"
+            },
+            {
+              "ObjectName": "BT_Con_General_Random MeleeSlotBehaviorTree:BT_Con_General_Random_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Dodge MeleeSlotBehaviorTree:BTTask_Dodge_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.50"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsRecoveryType MeleeSlotBehaviorTree:BT_Con_Melee_IsRecoveryType_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.22"
+            },
+            {
+              "ObjectName": "BT_Con_General_Random MeleeSlotBehaviorTree:BT_Con_General_Random_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.19"
+            },
+            {
+              "ObjectName": "BT_Con_Melee_IsDodgeRecoveryPossible MeleeSlotBehaviorTree:BT_Con_Melee_IsDodgeRecoveryPossible_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.20"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Composite MeleeSlotBehaviorTree:BT_Con_Composite_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt MeleeSlotBehaviorTree:BTService_General_FocusAt_15",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.49"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.40"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.37"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsSlottingState MeleeSlotBehaviorTree:BT_Con_Melee_IsSlottingState_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.39"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsSlottingState MeleeSlotBehaviorTree:BT_Con_Melee_IsSlottingState_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsSlottingState MeleeSlotBehaviorTree:BT_Con_Melee_IsSlottingState_4",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.38"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Melee_IsSlottingState MeleeSlotBehaviorTree:BT_Con_Melee_IsSlottingState_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.24"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_InvalidMelee MeleeSlotBehaviorTree:BTService_EventFirer_InvalidMelee_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.47"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.34"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_7",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.60"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Composite MeleeSlotBehaviorTree:BT_Con_Composite_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.1"
+            },
+            {
+              "ObjectName": "BT_Con_Composite MeleeSlotBehaviorTree:BT_Con_Composite_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Composite MeleeSlotBehaviorTree:BT_Con_Composite_5",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Con_Composite MeleeSlotBehaviorTree:BT_Con_Composite_6",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.34"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_8",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo MeleeSlotBehaviorTree:BTTask_IndianaMoveTo_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_MeleeWait MeleeSlotBehaviorTree:BTService_EventFirer_MeleeWait_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.48"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo MeleeSlotBehaviorTree:BTTask_IndianaMoveTo_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.54"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_9",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.34"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop MeleeSlotBehaviorTree:BTDecorator_Loop_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.45"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo MeleeSlotBehaviorTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.52"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_SetMovementState MeleeSlotBehaviorTree:BT_Scr_SetMovementState_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.32"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetCanBump MeleeSlotBehaviorTree:BT_Scr_General_SetCanBump_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.28"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetTogglableAction MeleeSlotBehaviorTree:BT_Scr_General_SetTogglableAction_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery MeleeSlotBehaviorTree:BTTask_IndianaRunEQSQuery_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo MeleeSlotBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MeleeAttack MeleeSlotBehaviorTree:BTTask_MeleeAttack_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.63"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_Melee_SetIsAttacking MeleeSlotBehaviorTree:BT_Scr_Melee_SetIsAttacking_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.31"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess MeleeSlotBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.44"
+            },
+            {
+              "ObjectName": "BT_Con_General_IsInRange MeleeSlotBehaviorTree:BT_Con_General_IsInRange_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_11",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Script MeleeSlotBehaviorTree:BTTask_Script_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.64"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_Melee_IncrementPattern MeleeSlotBehaviorTree:BT_Scr_Melee_IncrementPattern_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.30"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete MeleeSlotBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait MeleeSlotBehaviorTree:BTTask_IndianaWait_10",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.58"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsBehaviorStateComplete MeleeSlotBehaviorTree:BT_Con_General_IsBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.40"
+      }
+    }
+  },
+  {
+    "Type": "BTService_Chatter",
+    "Name": "BTService_Chatter_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "ChatterEventType": "EChatterEventType::NPC_MeleeWaiting",
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Melee Waiting Chatter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.38"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_InvalidMelee",
+    "Name": "BTService_EventFirer_InvalidMelee_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Interval": 0.3,
+      "RandomDeviation": 0.0,
+      "NodeName": "Invalid Melee Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.35"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_MeleeWait",
+    "Name": "BTService_EventFirer_MeleeWait_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "Interval": 0.3,
+      "RandomDeviation": 0.0,
+      "NodeName": "Melee Wait Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.38"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_15",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "bAutoComputeMoving": true,
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class Melee_BodyAttackingTargetLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Aim at Primary Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Dodge",
+    "Name": "BTTask_Dodge_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "DodgeDirection": {
+        "AIInt": {
+          "ObjectName": "Class MeleeAction_RecoveryDodgeDirection",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "6C0F5EF7-44F562C9-54B80F86-22822B17",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "SaveGameTaskGuid": "9347DD12-42701B60-B3D69E97-9B863522",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_8",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableRadius": 0.0,
+      "SaveGameTaskGuid": "FF4FBEEC-4CC82F38-A7F37F97-45966BAD",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_2",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableRadius": 0.0,
+      "AcceptableRadiusSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_MeleeWaitDistance",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "CA509EF1-403C9B5B-42FC3AAC-FEEB8B93",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_4",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableRadius": 0.0,
+      "SaveGameTaskGuid": "7AC9CC56-432A23DD-03B023B6-B39C23CB",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase MeleeRecoveryMoveRequest",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/MeleeRecoveryMoveRequest.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "9EFA5DF0-48A5E825-3D50C1BC-69D29DDC",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_8",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": 0.1,
+      "SaveGameTaskGuid": "C81281B2-4690473F-AC351CB6-32A344CB",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": 1.0,
+      "SaveGameTaskGuid": "ED9C7AA7-4C1B6F53-DAC586AF-5CCBDD4B",
+      "Services": [
+        {
+          "ObjectName": "BTService_Chatter MeleeSlotBehaviorTree:BTService_Chatter_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.46"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_10",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "6105487A-49038A62-A41ACBAD-85225D3C",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_11",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_MeleeRecoveryDelay",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "6105487A-49038A62-A41ACBAD-85225D3C",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_7",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "0E0F8F0E-4665190D-7780F1B0-42FEF613",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector MeleeSlotBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.36"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_8",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "834E87E9-402288C5-7A3C8BA6-3DDAB52C",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_9",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "WaitTime": 1.0,
+      "SaveGameTaskGuid": "6AB539C9-4382306A-1482B3BE-83CB975F",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MeleeAttack",
+    "Name": "BTTask_MeleeAttack_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "MeleeActionSelector": {
+        "AIInt": {
+          "ObjectName": "Class MeleeAction_CurrentRequest",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "UseAdaptiveRootMotionSelector": {
+        "AIBool": {
+          "ObjectName": "Class Melee_UseAdaptiveRootMotion",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AdapativeRootMotionMinDistanceSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Weapon_MeleeAdapativeRootmotionStopDistance",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "7A749917-4CCFF863-8E6CCCBD-566763E0",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Script",
+    "Name": "BTTask_Script_0",
+    "Outer": "MeleeSlotBehaviorTree",
+    "Properties": {
+      "SaveGameTaskGuid": "3401CD56-49E13DF0-41F2D7B4-B578530D",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence MeleeSlotBehaviorTree:BTComposite_Sequence_9",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.43"
+      }
+    }
+  }
+]

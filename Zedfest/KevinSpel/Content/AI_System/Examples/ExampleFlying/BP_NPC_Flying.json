@@ -1,0 +1,285 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "BP_NPC_Flying_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_Flying_C",
+    "Super": "BP_NPC_Base_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_NPC_Flying_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_NPC_Flying_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.9"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty BP_NPC_Flying_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_NPC_Flying_C:ExecuteUbergraph_BP_NPC_Flying",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty BP_NPC_Flying_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.0"
+      },
+      {
+        "ObjectName": "Function BP_NPC_Flying_C:ReceiveBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.8"
+      },
+      {
+        "ObjectName": "Function BP_NPC_Flying_C:ExecuteUbergraph_BP_NPC_Flying",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_Flying": {
+        "ObjectName": "Function BP_NPC_Flying_C:ExecuteUbergraph_BP_NPC_Flying",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.7"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function BP_NPC_Flying_C:ReceiveBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.8"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_Flying_C Default__BP_NPC_Flying_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.2"
+    }
+  },
+  {
+    "Type": "BP_NPC_Flying_C",
+    "Name": "Default__BP_NPC_Flying_C",
+    "Template": "Default__BP_NPC_Base_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__BP_NPC_Flying_C:CharacterMesh0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.13"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent Default__BP_NPC_Flying_C:CharMoveComp",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.5"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Flying_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.4"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Flying_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.4"
+      }
+    }
+  },
+  {
+    "Type": "BP_BehaviorComponent_C",
+    "Name": "BehaviorComponent_GEN_VARIABLE",
+    "Outer": "BP_NPC_Flying_C",
+    "Template": "BehaviorComponent_GEN_VARIABLE",
+    "Properties": {
+      "PatrolBehaviorConfig": {
+        "MovementSpeed_34_B716D9754BC12E288BC6EF99E151DD9F": 450.0
+      },
+      "RandLocationDelay": 5.0,
+      "FollowDistance": 200.0,
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree BT_FlyingAI",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BT_FlyingAI.0"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_NPC_Flying_C",
+    "Template": "CollisionCylinder",
+    "Properties": {
+      "CapsuleHalfHeight": 42.0
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_NPC_Flying_C",
+    "Template": "CharMoveComp",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "NavAgentProps": {
+        "bCanFly": true
+      }
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_BP_NPC_Flying",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_Flying",
+    "Outer": "BP_NPC_Flying_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty BP_NPC_Flying_C:ExecuteUbergraph_BP_NPC_Flying.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.6"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_NPC_Flying_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "Function BP_NPC_Base_C:ReceiveBeginPlay",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.34"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_NPC_Flying_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+            "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_BehaviorComponent_C BP_NPC_Flying_C:BehaviorComponent_GEN_VARIABLE",
+            "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+              "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+            },
+            "SCSVariableName": "BehaviorComponent",
+            "AssociatedGuid": "4684E49B-4F1D7848-B7022CBD-FDF2B9DE"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_NPC_Flying_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_NPC_Flying_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.10"
+      },
+      "VariableGuid": "EBE55D75-4DB7E2B1-7A6F7D8F-8DE2BFDB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_NPC_Flying_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_NPC_Flying_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_NPC_Flying_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AnimClass": null,
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh SK_UFO",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Meshes/Character/SK_UFO.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material M_UE4Man_Body_Green",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Materials/M_UE4Man_Body_Green.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Flying_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleFlying/BP_NPC_Flying.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.00085602084,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  }
+]

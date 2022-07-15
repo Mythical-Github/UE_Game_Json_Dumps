@@ -1,0 +1,90 @@
+[
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_0",
+    "Outer": "BreakDown_ArmorMods_Rare",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData BreakDown_ArmorMods_Rare_T1",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/BreakDown/BreakDown_ArmorMods_Rare_T1.17"
+      },
+      "MaxLevel": 30,
+      "Chance": 5
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_1",
+    "Outer": "BreakDown_ArmorMods_Rare",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData BreakDown_ArmorMods_Rare_T2",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/BreakDown/BreakDown_ArmorMods_Rare_T2.17"
+      },
+      "MinLevel": 25,
+      "bInvertConditional": false,
+      "Conditional": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::DLCInstalled",
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::Or",
+              "ConditionalType": "EConditionalType::DLCInstalled",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX2",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "LootTableData",
+    "Name": "BreakDown_ArmorMods_Rare",
+    "Properties": {
+      "bUseAll": false,
+      "LootRows": [
+        {
+          "ObjectName": "LootRowTable BreakDown_ArmorMods_Rare:LootRowTable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/BreakDown/BreakDown_ArmorMods_Rare.0"
+        },
+        {
+          "ObjectName": "LootRowTable BreakDown_ArmorMods_Rare:LootRowTable_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/BreakDown/BreakDown_ArmorMods_Rare.1"
+        }
+      ]
+    }
+  }
+]

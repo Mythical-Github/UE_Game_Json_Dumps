@@ -1,0 +1,1586 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CraftingStation_C",
+    "Properties": {
+      "NumReplicatedProperties": 8,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript CraftingStation_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.92"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty CraftingStation_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function CraftingStation_C:ExecuteUbergraph_CraftingStation",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CraftingStation_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.0"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:Check if CS supports this Weapon",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.16"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:Stop Timer to use Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.14"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:StartUpgradeWeapon",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.13"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:Start Timer to use Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.11"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:Send Weapon to Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.9"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:ReceiveTick",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.7"
+      },
+      {
+        "ObjectName": "Function CraftingStation_C:ExecuteUbergraph_CraftingStation",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.5"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Slot 2 Drop",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.3"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Slot 3 Drop",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.77"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Slot 1 Drop",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.76"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Slot 0 Drop",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.75"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Crafting Station Mesh",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.72"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:CS Inventory Slots",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.98"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:Crafting Station Data",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.96"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Weapon Index",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.71"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Inventory Data",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.73"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Weapon to Upgrade",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.84"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:CS Handle",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.97"
+      },
+      {
+        "ObjectName": "FloatProperty CraftingStation_C:Timer Elapsed to use Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.54"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Timer to use Crafting Station is Active?",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.45"
+      },
+      {
+        "ObjectName": "ArrayProperty CraftingStation_C:Weapons To Upgrade",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.22"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Index Found",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.68"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CraftingStation": {
+        "ObjectName": "Function CraftingStation_C:ExecuteUbergraph_CraftingStation",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.5"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function CraftingStation_C:ReceiveTick",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.7"
+      },
+      "Send Weapon to Crafting Station": {
+        "ObjectName": "Function CraftingStation_C:Send Weapon to Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.9"
+      },
+      "Start Timer to use Crafting Station": {
+        "ObjectName": "Function CraftingStation_C:Start Timer to use Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.11"
+      },
+      "StartUpgradeWeapon": {
+        "ObjectName": "Function CraftingStation_C:StartUpgradeWeapon",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.13"
+      },
+      "Stop Timer to use Crafting Station": {
+        "ObjectName": "Function CraftingStation_C:Stop Timer to use Crafting Station",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.14"
+      },
+      "Check if CS supports this Weapon": {
+        "ObjectName": "Function CraftingStation_C:Check if CS supports this Weapon",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.16"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CraftingStation_C Default__CraftingStation_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.2"
+    }
+  },
+  {
+    "Type": "CraftingStation_C",
+    "Name": "Default__CraftingStation_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CS Inventory Slots": {
+        "Slots_10_1141994B47ADB546EB8A0BB05CA65535": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Crafting Station Data": {
+        "TimertouseCraftingStation_12_E75516974E0D4BC435C5DEB036E019F9": 0.5,
+        "TimertoUpgradetoUncommon_3_F17DF5AB4B193F51352139A3CCE9E27C": 30.0,
+        "TimertoUpgradetoRare_5_592808AF43E31906CC09FBACB52F5A43": 40.0,
+        "TimertoUpgradetoEpic_7_27C23DD444C91811D5F035809227432E": 50.0,
+        "TimertoUpgradetoLegendary_9_BE2C0B6A4F12876D1F9B95B7E3B55D7C": 60.0
+      },
+      "CS Handle": {
+        "Handle": 0
+      },
+      "Weapons To Upgrade": [
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl_1_Pistol_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SecondaryWeapons/NormalPistol/Lvl_1_Pistol.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl_2_Pistol_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SecondaryWeapons/NormalPistol/Lvl_2_Pistol.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl_3_Pistol_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SecondaryWeapons/NormalPistol/Lvl_3_Pistol.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl_4_Pistol_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SecondaryWeapons/NormalPistol/Lvl_4_Pistol.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl_5_Pistol_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SecondaryWeapons/NormalPistol/Lvl_5_Pistol.0"
+          }
+        },
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl1Bulldogzer_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/Bulldogzer/Lvl1Bulldogzer.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl2Bulldogzer_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/Bulldogzer/Lvl2Bulldogzer.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl3Bulldogzer_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/Bulldogzer/Lvl3Bulldogzer.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl4Bulldogzer_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/Bulldogzer/Lvl4Bulldogzer.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl5Bulldogzer_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/Bulldogzer/Lvl5Bulldogzer.0"
+          }
+        },
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl1M4Carbine_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/AssaultRifle/Lvl1M4Carbine.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl2M4Carbine_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/AssaultRifle/Lvl2M4Carbine.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl3M4Carbine_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/AssaultRifle/Lvl3M4Carbine.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl4M4Carbine_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/AssaultRifle/Lvl4M4Carbine.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl5M4Carbine_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/AssaultRifle/Lvl5M4Carbine.0"
+          }
+        },
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl1_SniperRifle_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SniperRifle/Lvl1_SniperRifle.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl2_SniperRifle_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SniperRifle/Lvl2_SniperRifle.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl3_SniperRifle_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SniperRifle/Lvl3_SniperRifle.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl4_SniperRifle_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SniperRifle/Lvl4_SniperRifle.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl5_SniperRifle_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/SniperRifle/Lvl5_SniperRifle.0"
+          }
+        },
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl1_RocketLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/RocketLauncher/Lvl1_RocketLauncher.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl2_RocketLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/RocketLauncher/Lvl2_RocketLauncher.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl3_RocketLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/RocketLauncher/Lvl3_RocketLauncher.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl4_RocketLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/RocketLauncher/Lvl4_RocketLauncher.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl5_RocketLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/RocketLauncher/Lvl5_RocketLauncher.0"
+          }
+        },
+        {
+          "CommonWeapon_2_7179426E4DCAF29B56BE04B713127D7D": {
+            "ObjectName": "BlueprintGeneratedClass Lvl1_GrenadeLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/GrenadeLauncher/Lvl1_GrenadeLauncher.0"
+          },
+          "UncommonWeapon_7_0E133B664261BD6D7593069BCF11C2FB": {
+            "ObjectName": "BlueprintGeneratedClass Lvl2_GrenadeLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/GrenadeLauncher/Lvl2_GrenadeLauncher.0"
+          },
+          "RareWeapon_8_3C0C37FB48473747D51D7D8320B51367": {
+            "ObjectName": "BlueprintGeneratedClass Lvl3_GrenadeLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/GrenadeLauncher/Lvl3_GrenadeLauncher.0"
+          },
+          "EpicWeapon_9_7FD723EF4C146D2F7C58AD809532625A": {
+            "ObjectName": "BlueprintGeneratedClass Lvl4_GrenadeLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/GrenadeLauncher/Lvl4_GrenadeLauncher.0"
+          },
+          "LegendaryWeapon_10_5F4B69594A843590EAFDE09A214C2953": {
+            "ObjectName": "BlueprintGeneratedClass Lvl5_GrenadeLauncher_C",
+            "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/GrenadeLauncher/Lvl5_GrenadeLauncher.0"
+          }
+        }
+      ],
+      "PrimaryActorTick": {
+        "bCanEverTick": true,
+        "bStartWithTickEnabled": false
+      },
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Slot 2 Drop",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class BoxComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CraftingStation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CraftingStation",
+    "Outer": "CraftingStation_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CraftingStation_C:ExecuteUbergraph_CraftingStation.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.4"
+      },
+      {
+        "ObjectName": "FloatProperty CraftingStation_C:ExecuteUbergraph_CraftingStation.K2Node_Event_DeltaSeconds",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.53"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaSeconds",
+    "Outer": "ReceiveTick",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "CraftingStation_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:ReceiveTick",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty CraftingStation_C:ReceiveTick.DeltaSeconds",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.6"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Weapon Index",
+    "Outer": "Send Weapon to Crafting Station",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "Send Weapon to Crafting Station",
+    "Outer": "CraftingStation_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Send Weapon to Crafting Station.Weapon Index",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.8"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Send Weapon to Crafting Station.Inventory Data",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.74"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Weapon Index",
+    "Outer": "Start Timer to use Crafting Station",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "Start Timer to use Crafting Station",
+    "Outer": "CraftingStation_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Start Timer to use Crafting Station.Weapon Index",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.10"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Start Timer to use Crafting Station.Inventory Data",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.79"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_K2_SetTimer_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.99"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_NotEqual_ByteByte_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.44"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Start Timer to use Crafting Station.Temp_object_Variable",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.80"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_Array_Contains_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.40"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_Not_PreBool_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.43"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_Check_if_CS_supports_this_Weapon_Supported_",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.41"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_Get_Weapon_Got_It_",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.42"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Start Timer to use Crafting Station.CallFunc_Get_Weapon_Weapon",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.78"
+      }
+    ],
+    "FunctionFlags": 209846272
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Local CS Slot Created",
+    "Outer": "StartUpgradeWeapon",
+    "PropertyFlags": 2053,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CSSlot_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSSlot.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "StartUpgradeWeapon",
+    "Outer": "CraftingStation_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:StartUpgradeWeapon.Local CS Slot Created",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.12"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:StartUpgradeWeapon.Local Slot Index",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.70"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:StartUpgradeWeapon.Temp_object_Variable",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.83"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:StartUpgradeWeapon.CallFunc_GetTransform_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.100"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:StartUpgradeWeapon.CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.81"
+      },
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:StartUpgradeWeapon.CallFunc_FinishSpawningActor_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.82"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:StartUpgradeWeapon.CallFunc_Array_Find_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.69"
+      }
+    ],
+    "FunctionFlags": 209846272
+  },
+  {
+    "Type": "Function",
+    "Name": "Stop Timer to use Crafting Station",
+    "Outer": "CraftingStation_C",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Weapon to Check",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 150,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Check if CS supports this Weapon",
+    "Outer": "CraftingStation_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CraftingStation_C:Check if CS supports this Weapon.Weapon to Check",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.15"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Supported?",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.36"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Local Supported?",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.34"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Local Index found",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.61"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Local Weapon found?",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.35"
+      },
+      {
+        "ObjectName": "ClassProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.52"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Temp_bool_True_if_break_was_hit_Variable",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.37"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Array_Index_Variable",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.62"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Not_PreBool_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.31"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Temp_bool_True_if_break_was_hit_Variable1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.38"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Not_PreBool_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.32"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Loop_Counter_Variable",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.65"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.55"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.Temp_bool_True_if_break_was_hit_Variable2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.39"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Array_Index_Variable1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.63"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Not_PreBool_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.33"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Loop_Counter_Variable1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.66"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Add_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.56"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Array_Index_Variable2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.64"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.94"
+      },
+      {
+        "ObjectName": "ArrayProperty CraftingStation_C:Check if CS supports this Weapon.K2Node_MakeArray_Array",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.18"
+      },
+      {
+        "ObjectName": "ClassProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Get_Item1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.50"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.58"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_IsValidClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.27"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.Temp_int_Loop_Counter_Variable2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.67"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.28"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Add_IntInt_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.57"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_BooleanAND_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.23"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Length_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.59"
+      },
+      {
+        "ObjectName": "StructProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Get_Item2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.95"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Less_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.29"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_BooleanAND_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.24"
+      },
+      {
+        "ObjectName": "ArrayProperty CraftingStation_C:Check if CS supports this Weapon.K2Node_MakeArray_Array1",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.20"
+      },
+      {
+        "ObjectName": "ClassProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Get_Item3",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.51"
+      },
+      {
+        "ObjectName": "IntProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Array_Length_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.60"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_EqualEqual_ClassClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.26"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_Less_IntInt_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.30"
+      },
+      {
+        "ObjectName": "BoolProperty CraftingStation_C:Check if CS supports this Weapon.CallFunc_BooleanAND_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.25"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "K2Node_MakeArray_Array",
+    "Outer": "K2Node_MakeArray_Array",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "K2Node_MakeArray_Array",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ClassProperty CraftingStation_C:Check if CS supports this Weapon.K2Node_MakeArray_Array.K2Node_MakeArray_Array",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.17"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "K2Node_MakeArray_Array1",
+    "Outer": "K2Node_MakeArray_Array1",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "K2Node_MakeArray_Array1",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ClassProperty CraftingStation_C:Check if CS supports this Weapon.K2Node_MakeArray_Array1.K2Node_MakeArray_Array1",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.19"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Weapons To Upgrade",
+    "Outer": "Weapons To Upgrade",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct WeaponsToUp",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSTypes/WeaponsToUp.0"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Weapons To Upgrade",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "StructProperty CraftingStation_C:Weapons To Upgrade.Weapons To Upgrade",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.21"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue1",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue2",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValidClass_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue1",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue2",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue1",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue2",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Local Supported?",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 5,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Local Weapon found?",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 5,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Supported?",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_True_if_break_was_hit_Variable",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_True_if_break_was_hit_Variable1",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_True_if_break_was_hit_Variable2",
+    "Outer": "Check if CS supports this Weapon",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Array_Contains_ReturnValue",
+    "Outer": "Start Timer to use Crafting Station",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Check_if_CS_supports_this_Weapon_Supported_",
+    "Outer": "Start Timer to use Crafting Station",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Get_Weapon_Got_It_",
+    "Outer": "Start Timer to use Crafting Station",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue",
+    "Outer": "Start Timer to use Crafting Station",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "Start Timer to use Crafting Station",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Timer to use Crafting Station is Active?",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Slot 0 Drop_GEN_VARIABLE",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 92.34225,
+        "Y": 47.0,
+        "Z": 79.99999
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Slot 1 Drop_GEN_VARIABLE",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 102.34225,
+        "Y": 17.0,
+        "Z": 79.99999
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Slot 2 Drop_GEN_VARIABLE",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 102.34225,
+        "Y": -17.0,
+        "Z": 79.99999
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Slot 3 Drop_GEN_VARIABLE",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 92.34225,
+        "Y": -47.0,
+        "Z": 79.99999
+      }
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_Array_Get_Item1",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_Array_Get_Item3",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaSeconds",
+    "Outer": "ExecuteUbergraph_CraftingStation"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Timer Elapsed to use Crafting Station",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue1",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue2",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue1",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue2",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Local Index found",
+    "Outer": "Check if CS supports this Weapon",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable1",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable2",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable1",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable2",
+    "Outer": "Check if CS supports this Weapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Index Found",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Find_ReturnValue",
+    "Outer": "StartUpgradeWeapon"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Local Slot Index",
+    "Outer": "StartUpgradeWeapon",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Weapon Index",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Crafting Station Mesh",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class StaticMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Inventory Data",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 67621,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass InventoryData_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Inventory/InventoryData.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Inventory Data",
+    "Outer": "Send Weapon to Crafting Station",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass InventoryData_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Inventory/InventoryData.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Slot 0 Drop",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class BoxComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Slot 1 Drop",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class BoxComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Slot 3 Drop",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class BoxComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Get_Weapon_Weapon",
+    "Outer": "Start Timer to use Crafting Station",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Inventory Data",
+    "Outer": "Start Timer to use Crafting Station",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass InventoryData_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Inventory/InventoryData.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "Start Timer to use Crafting Station",
+    "PropertyFlags": 2,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CSSlot_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSSlot.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+    "Outer": "StartUpgradeWeapon",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+    "Outer": "StartUpgradeWeapon",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CSSlot_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSSlot.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "StartUpgradeWeapon",
+    "PropertyFlags": 2,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CSSlot_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSSlot.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Weapon to Upgrade",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 67621,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "CraftingStation_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent CraftingStation_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.85"
+      },
+      "VariableGuid": "1E578F2F-4BD16D90-1F2E35B5-A225DCD5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent CraftingStation_C:Crafting Station Mesh_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.93"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.88"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.89"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.91"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.90"
+        }
+      ],
+      "VariableGuid": "03B8329E-470B9365-4EACD995-45A105CC",
+      "InternalVariableName": "Crafting Station Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent CraftingStation_C:Slot 0 Drop_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.46"
+      },
+      "VariableGuid": "265DC96A-41604B43-24890F8C-38C2CE48",
+      "InternalVariableName": "Slot 0 Drop"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent CraftingStation_C:Slot 1 Drop_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.47"
+      },
+      "VariableGuid": "781AEAAA-4269FE8E-7D20E3A0-C1867A97",
+      "InternalVariableName": "Slot 1 Drop"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent CraftingStation_C:Slot 2 Drop_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.48"
+      },
+      "VariableGuid": "A5EB3742-472865BB-53376F96-DCB6BEC2",
+      "InternalVariableName": "Slot 2 Drop"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent CraftingStation_C:Slot 3 Drop_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.49"
+      },
+      "VariableGuid": "7B6DA161-46DBA660-0C33E5A2-980AA7D2",
+      "InternalVariableName": "Slot 3 Drop"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.87"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.87"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.88"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.89"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.91"
+        },
+        {
+          "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.90"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node CraftingStation_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CraftingStation.86"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Crafting Station Mesh_GEN_VARIABLE",
+    "Outer": "CraftingStation_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh CraftingStation",
+        "ObjectPath": "KevinSpel/Content/Inventory/Meshes/World/CraftingStation.2"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "TRACE",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "Check if CS supports this Weapon",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct WeaponsToUp",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSTypes/WeaponsToUp.0"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Array_Get_Item2",
+    "Outer": "Check if CS supports this Weapon",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct WeaponsToUp",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSTypes/WeaponsToUp.0"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Crafting Station Data",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "UserDefinedStruct CraftingStationData",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSTypes/CraftingStationData.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CS Handle",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573,
+    "Struct": {
+      "ObjectName": "ScriptStruct TimerHandle",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CS Inventory Slots",
+    "Outer": "CraftingStation_C",
+    "PropertyFlags": 65573,
+    "Struct": {
+      "ObjectName": "UserDefinedStruct SlotData",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/CraftingStation/CSTypes/SlotData.0"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_SetTimer_ReturnValue",
+    "Outer": "Start Timer to use Crafting Station",
+    "Struct": {
+      "ObjectName": "ScriptStruct TimerHandle",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetTransform_ReturnValue",
+    "Outer": "StartUpgradeWeapon",
+    "Struct": {
+      "ObjectName": "ScriptStruct Transform",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_AI_GorillianPunch_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_AI_GorillianPunch_C Default__Spell_AI_GorillianPunch_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.1"
+    }
+  },
+  {
+    "Type": "Spell_AI_GorillianPunch_C",
+    "Name": "Default__Spell_AI_GorillianPunch_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMeleeHit Default__Spell_AI_GorillianPunch_C:OnMeleeHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.5"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_GorillianKnockback_C Default__Spell_AI_GorillianPunch_C:CE_GorillianKnockback_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.2"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_RandomChance Default__Spell_AI_GorillianPunch_C:SpellConditional_RandomChance_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.8"
+              },
+              {
+                "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_AI_GorillianPunch_C:SpellConditional_IsHostileToCaster_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.7"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": true,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_GorillianKnockback_C",
+    "Name": "CE_GorillianKnockback_C_0",
+    "Outer": "Default__Spell_AI_GorillianPunch_C",
+    "Template": "Default__CE_GorillianKnockback_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Spell_AI_GorillianPunch_C:CE_GorillianKnockback_C_0.PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.6"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_AI_GorillianPunch_C:CE_GorillianKnockback_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.4"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_GorillianKnockback_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_AI_GorillianPunch_C:CE_GorillianKnockback_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianPunch.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnMeleeHit",
+    "Name": "OnMeleeHit_0",
+    "Outer": "Default__Spell_AI_GorillianPunch_C",
+    "Properties": {
+      "MeleeAction": "EMeleeAction::SpecialAttack3"
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "CE_GorillianKnockback_C_0",
+    "Template": "PushDisableStatusEffect_0",
+    "Properties": {
+      "PushSpeed": 700.0,
+      "PushSpeedZ": 250.0
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__Spell_AI_GorillianPunch_C"
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_0",
+    "Outer": "Default__Spell_AI_GorillianPunch_C",
+    "Properties": {
+      "bCheckCaster": true
+    }
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Plasma_High_C",
+    "Super": "Hazard_SE_Plasma_Abstract_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Hazard_SE_Plasma_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_Abstract.0"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Plasma_High_C Default__Hazard_SE_Plasma_High_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_High.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Plasma_High_C",
+    "Name": "Default__Hazard_SE_Plasma_High_C",
+    "Template": "Default__Hazard_SE_Plasma_Abstract_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Plasma_High_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_High.4"
+        },
+        {
+          "ObjectName": "CE_Plasma_Hazard_PP_C Default__Hazard_SE_Plasma_High_C:CE_Plasma_Hazard_PP_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_High.3"
+        }
+      ],
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Plasma_High_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_High.5"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_acid_pulse",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_acid_pulse.0"
+      },
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "CE_Plasma_Hazard_PP_C",
+    "Name": "CE_Plasma_Hazard_PP_C_0",
+    "Outer": "Default__Hazard_SE_Plasma_High_C",
+    "Template": "Default__CE_Plasma_Hazard_PP_C"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Plasma_High_C",
+    "Template": "DamageStatusEffect_0",
+    "Properties": {
+      "DamageValuePercent": 9.99
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Hazard_SE_Plasma_High_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Hazard_SE_Plasma_High_C:EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_High.2"
+        }
+      ]
+    }
+  }
+]

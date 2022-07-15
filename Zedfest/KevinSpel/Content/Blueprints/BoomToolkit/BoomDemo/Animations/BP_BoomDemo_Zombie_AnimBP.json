@@ -1,0 +1,603 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "State",
+          "InitialState": 1,
+          "States": [
+            {
+              "StateName": "ThirdPersonWalk",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "A_BoomDemo_TPIdle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_BoomDemo_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Meshes/SK_BoomDemo_Mannequin_Skeleton.2"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Stationary",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty BP_BoomDemo_Zombie_AnimBP_C:Stationary",
+                "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.7"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_TransitionResult_E85DE83B4AED0A6E6FCAA7A19B2DAE37",
+            "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Stationary",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty BP_BoomDemo_Zombie_AnimBP_C:Stationary",
+                "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.7"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_TransitionResult_67B048E840D9D66F493C279F16E0E2E8",
+            "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.19"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.0"
+      },
+      {
+        "ObjectName": "Function BP_BoomDemo_Zombie_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.8"
+      },
+      {
+        "ObjectName": "Function BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.5"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_Root_5D0742154BDADE2C0AC345AC82DC7780",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.3"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_TransitionResult_67B048E840D9D66F493C279F16E0E2E8",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.19"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_TransitionResult_E85DE83B4AED0A6E6FCAA7A19B2DAE37",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.20"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_SequencePlayer_664C41BF4008D3911D691584AA740FF8",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.13"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_StateResult_173D240D427BB2ABC527138D1019D224",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.17"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_SequencePlayer_88D16A8F4C0D3593BB0650AC4D89C83F",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.14"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_StateResult_5B1BDFBB460209A91F57F8A62E599F09",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.18"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_StateMachine_7EA155C64292794D90DA99BE950BF5B4",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.16"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_SequencePlayer_E5DCD804482C65AE2F670D9131155A4D",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.15"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:AnimGraphNode_LayeredBoneBlend_01F19F4249460772B6FC25B84A46CC1D",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.12"
+      },
+      {
+        "ObjectName": "BoolProperty BP_BoomDemo_Zombie_AnimBP_C:Stationary",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP": {
+        "ObjectName": "Function BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.5"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function BP_BoomDemo_Zombie_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.8"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_BoomDemo_Zombie_AnimBP_C Default__BP_BoomDemo_Zombie_AnimBP_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.2"
+    }
+  },
+  {
+    "Type": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Name": "Default__BP_BoomDemo_Zombie_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_5D0742154BDADE2C0AC345AC82DC7780": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_TransitionResult_67B048E840D9D66F493C279F16E0E2E8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E85DE83B4AED0A6E6FCAA7A19B2DAE37": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_664C41BF4008D3911D691584AA740FF8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_BoomDemo_TPIdle",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/A_BoomDemo_TPIdle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_173D240D427BB2ABC527138D1019D224": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_SequencePlayer_88D16A8F4C0D3593BB0650AC4D89C83F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_BoomDemo_TPWalk",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/A_BoomDemo_TPWalk.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5B1BDFBB460209A91F57F8A62E599F09": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_StateMachine_7EA155C64292794D90DA99BE950BF5B4": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_E5DCD804482C65AE2F670D9131155A4D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_BoomDemo_TPArmPose",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/A_BoomDemo_TPArmPose.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_01F19F4249460772B6FC25B84A46CC1D": {
+        "BasePose": {
+          "LinkID": 7
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 8
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Spine_02",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_5D0742154BDADE2C0AC345AC82DC7780",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.4"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.11"
+      },
+      {
+        "ObjectName": "StructProperty BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.21"
+      },
+      {
+        "ObjectName": "FloatProperty BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.10"
+      },
+      {
+        "ObjectName": "BoolProperty BP_BoomDemo_Zombie_AnimBP_C:ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP.CallFunc_EqualEqual_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.6"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_VectorVector_ReturnValue",
+    "Outer": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Stationary",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BP_BoomDemo_Zombie_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/BoomDemo/Animations/BP_BoomDemo_Zombie_AnimBP.9"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_01F19F4249460772B6FC25B84A46CC1D",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_664C41BF4008D3911D691584AA740FF8",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_88D16A8F4C0D3593BB0650AC4D89C83F",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E5DCD804482C65AE2F670D9131155A4D",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_7EA155C64292794D90DA99BE950BF5B4",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_173D240D427BB2ABC527138D1019D224",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5B1BDFBB460209A91F57F8A62E599F09",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_67B048E840D9D66F493C279F16E0E2E8",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E85DE83B4AED0A6E6FCAA7A19B2DAE37",
+    "Outer": "BP_BoomDemo_Zombie_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_BP_BoomDemo_Zombie_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

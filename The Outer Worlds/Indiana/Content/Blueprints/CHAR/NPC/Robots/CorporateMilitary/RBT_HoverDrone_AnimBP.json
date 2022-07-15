@@ -1,0 +1,3934 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "RBT_HoverDrone_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "NC Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "NC Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": 0,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "NC walk",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 24,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 13,
+              "StartNotify": 1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                16,
+                18
+              ],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "TurnInPlace0",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 25,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": 2,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                21
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "NCwalkStateMachine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "NCWalkStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 19,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 15,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                16
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "NCwalk",
+              "Transitions": [],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                18
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "NC Idle",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 37,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 38,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 39,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 40,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 29,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Furniture 1 Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 41,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 42,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 33,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Furniture 0 Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 43,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 44,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 35,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Combat Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "C Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 58,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 59,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 52,
+              "StartNotify": 0,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                53
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "c walk",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 60,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 54,
+              "StartNotify": 1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                55
+              ],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "TurnInPlace0",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 61,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 62,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 56,
+              "StartNotify": 3,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                57
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_RBT_DartDrone_001_Skeleton",
+        "ObjectPath": "Indiana/Content/Art/RBT/DartDrone/SK_RBT_DartDrone_001_Skeleton.32"
+      },
+      "AnimNotifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCIdleEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCWalkEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCTurnEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "CTurnEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        }
+      ],
+      "OrderedSavedPoseIndices": [
+        6
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class HoverbotAnimInstance",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.0"
+      },
+      {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.14"
+      },
+      {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:OnNewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.13"
+      },
+      {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.11"
+      },
+      {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:AnimNotify_TurnOffRandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.10"
+      },
+      {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.5"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_BlendListByBool_C723637C4AED8BB26A3CD8BD97247AF8",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.3"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_LocalRefPose_2F15CCC74D7AD21AD739D6B2DC54A0DA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.31"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_03146FF94C9690AE955EF39BCEA36757",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.50"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_4DE18C5A408F632D65631FB9270E6700",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.53"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_30C3A9844680E90E7910809515E19136",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.51"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_BlendListByBool_930811CE439A3344015893BFA9A86AFB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.27"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_0034F9134EB5073EE533A7877843E53B",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.73"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_5CDE0A3540F75D1DB62D03B891ECC57D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.79"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_2FD7021D4549380689E60CBA30DB1437",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.76"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_9B0D68BE4AA864B77125229583AE755A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.81"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_548C0D26464E8C1C253EF0A49D25A6CA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.78"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_LocomotionPlay_4E0ECDB346FDC37094BCD4A5EDFC15C1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.33"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_A8535D0248473E661C40CE8CBBDE6BB1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.68"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SequencePlayer_ACA3AFD94E2AA5D5E2F89CA9C56256FE",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.47"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_AB1B46234AAD1EBFE3F17AA290BEC47C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.69"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SequencePlayer_F929C8784EECF31CAAAAD2A56AD14FF8",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.49"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_837C31864A05AA00F15417A32A34BFF6",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.66"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateMachine_BFF6B5BC4BC49B59D84A1A983B68919C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.60"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_319155AC4C56C9E0C1F9DC9FE081E2E6",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.52"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_BlendListByBool_615AD50C44B44499F051859766F5CFCF",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.26"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_PoseSnapshot_441CE1E34EA97B134A0EFA89A6303B2F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.37"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_7DB0E0C84BA34C74D9FCD9AD50509C73",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.56"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_5E06508D43FAB779C9C7C4870197D993",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.54"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_BlendListByBool_E1A5E3AB426FEE3F5580628A9AD6FC8D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.29"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_F82FB4194D8D8E2BC04F86B4B1BCB566",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.90"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_6B470FF44565D09B8D5929A813EA10FD",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.80"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_BC4F7E404F426D722B55D9AB36949525",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.86"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_38509DF24417B580DBFD329C4616FDF4",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.77"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_F747D8D440F4B4AB193D29A52747BF22",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.89"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_B8A95F6C4768296333510E91AE02E153",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.84"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_A73EDB0749A97CE94368AEAAF83DCB07",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.82"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_B8F0B41D479335CB8E65D0AE387B6473",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.85"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_RandomSequenceNamed_D2E244574F1ED2BC13CEE6BF9F5D1C37",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.41"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_87DD43C84CECBACC8C188CBAF7088725",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.67"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_RandomSequenceNamed_6A3EF32F46876C52D3822E8C53D47DEB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.40"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_0B8744F64C7DC4F8FE3846B1D4D517F1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.62"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_RandomPlayer_196C5337447746F7F70C2B87B08D7E03",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.38"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_BlendListByBool_ABB9F1C244D1C19E76C8BFA8ED1DAAA5",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.28"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_RandomPlayer_CB304ABF41C11983487FD998171F37CF",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.39"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_48B3223543304FAAA8A93A8DFD342048",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.64"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateMachine_FE4AEA3D41AA3D09616F9CB6399DACE8",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.61"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_ModifyBone_664498064862A65EBB9599ABFB2C989A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.36"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_ComponentToLocalSpace_A3BA5DD6460153FDF38709965236283B",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.30"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_F0FDC73641C1D383895FAF93FCF48E01",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.88"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_11A4AD864A41492DEAAC839B6A26C4FB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.75"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_040D3E1E498868435C80D6BCE26BA576",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.74"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_C6ECF3574343AE94E780E2BF34E912DB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.87"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_LocomotionPlay_B1A004B4447E69BC111F50A27CC2C30D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.34"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_C0E16EEA4C42F4EA3217148472A5C23D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.70"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TransitionResult_A75AA1394C618ABE0A61A4885E9DD95E",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.83"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SequencePlayer_DD3C012D4152CACBA6864EB4D8E39FD1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.48"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_2CE6B47746689F2C9067C384FE199D1C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.63"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SequencePlayer_1846518D4BB58B87D8E543BEF27B352F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.46"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_5275CB724903C4BE5B48C5857724BE64",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.65"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateMachine_30654D554EA55EEF4CB6AA83BC767606",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.58"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_FF0E6EC445C49DB43BF468B873869036",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.72"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SequencePlayer_11BAE1F14AFCC8019B6D5EAB496A9C44",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.45"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateResult_D05CDBCA4539B0C50893FBA589C321B3",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.71"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_StateMachine_49AAF0414441E2C2F1233892328D0046",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.59"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Root_71204447498D5EB3AA270490D9C0FE9A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.42"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_RotationOffsetBlendSpace_40DAD6EE44C8FA848485A7AB7004DA94",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.43"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_ModifyBone_32FAF84447793AC13B0EE486BFAEF9FB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.35"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_SaveCachedPose_38FC719846FD62EFA3362BAD9FDA3B5B",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.44"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_TwoWayBlend_E612365D4BC75EF028D94DAAFAF4A4B7",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.91"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_UseCachedPose_A51B6F4740AEBC12B87E33AE3D833F03",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.93"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_LocalToComponentSpace_AB9F31F64AA880FF49DCBD912C274970",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.32"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_UseCachedPose_50F4637543586AAA506016B9C2F8EC2C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.92"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_748D5A9544B262265F95FBA3D4A27754",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.55"
+      },
+      {
+        "ObjectName": "StructProperty RBT_HoverDrone_AnimBP_C:AnimGraphNode_Slot_8D2BF87246C6CD74C2981B8CD06DFFAE",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.57"
+      },
+      {
+        "ObjectName": "ObjectProperty RBT_HoverDrone_AnimBP_C:WeaponAnimationsBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.25"
+      },
+      {
+        "ObjectName": "ByteProperty RBT_HoverDrone_AnimBP_C:CombatEnum",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.9"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:HitReactionDirection",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.20"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:HitReactionRate",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.21"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:HitReactionType",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.22"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:HitReactionActive",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.19"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:HitFlinchActive",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.18"
+      },
+      {
+        "ObjectName": "BoolProperty RBT_HoverDrone_AnimBP_C:RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.8"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_RBT_HoverDrone_AnimBP": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.5"
+      },
+      "AnimNotify_TurnOffRandomIdle": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:AnimNotify_TurnOffRandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.10"
+      },
+      "AnimNotify_RandomIdle": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.11"
+      },
+      "OnNewWeaponAnimations": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:OnNewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.13"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function RBT_HoverDrone_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.14"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RBT_HoverDrone_AnimBP_C Default__RBT_HoverDrone_AnimBP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.2"
+    }
+  },
+  {
+    "Type": "RBT_HoverDrone_AnimBP_C",
+    "Name": "Default__RBT_HoverDrone_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_BlendListByBool_C723637C4AED8BB26A3CD8BD97247AF8": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 1
+          },
+          {
+            "LinkID": 42
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsRagdolling",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsRagdolling",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocalRefPose_2F15CCC74D7AD21AD739D6B2DC54A0DA": {
+        "RefPoseType": "EIT_LocalSpace",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_03146FF94C9690AE955EF39BCEA36757": {
+        "Source": {
+          "LinkID": 22
+        },
+        "SlotName": "FullBody",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_4DE18C5A408F632D65631FB9270E6700": {
+        "Source": {
+          "LinkID": 4
+        },
+        "SlotName": "HitReaction",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_30C3A9844680E90E7910809515E19136": {
+        "Source": {
+          "LinkID": 60
+        },
+        "SlotName": "Weapon",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_930811CE439A3344015893BFA9A86AFB": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 17
+          },
+          {
+            "LinkID": 23
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bCombatEnumIsCombat",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bCombatEnumIsCombat",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_0034F9134EB5073EE533A7877843E53B": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_5CDE0A3540F75D1DB62D03B891ECC57D": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_2FD7021D4549380689E60CBA30DB1437": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_9B0D68BE4AA864B77125229583AE755A": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_548C0D26464E8C1C253EF0A49D25A6CA": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "EnterNode0",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "BoolProperty LocomotionNode:EnterNode0",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocomotionPlay_4E0ECDB346FDC37094BCD4A5EDFC15C1": {
+        "CurrentSlot": -1,
+        "Sequence": null,
+        "bLoopAnimation": false,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "Node0Sequence",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "ObjectProperty AnimNode_SequencePlayer:Sequence",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 8,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::ObjectProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "ObjectProperty LocomotionNode:Node0Sequence",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_A8535D0248473E661C40CE8CBBDE6BB1": {
+        "Result": {
+          "LinkID": 11
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_ACA3AFD94E2AA5D5E2F89CA9C56256FE": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Run_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Run_01.1"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_AB1B46234AAD1EBFE3F17AA290BEC47C": {
+        "Result": {
+          "LinkID": 13
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_F929C8784EECF31CAAAAD2A56AD14FF8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AS_RBT_Biped_Combat_Idle_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/AS_RBT_Biped_Combat_Idle_01.1"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_837C31864A05AA00F15417A32A34BFF6": {
+        "Result": {
+          "LinkID": 15
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_BFF6B5BC4BC49B59D84A1A983B68919C": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_319155AC4C56C9E0C1F9DC9FE081E2E6": {
+        "Source": {
+          "LinkID": 2
+        },
+        "SlotName": "Death",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_615AD50C44B44499F051859766F5CFCF": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 20
+          },
+          {
+            "LinkID": 21
+          }
+        ],
+        "BlendTime": [
+          0.0,
+          0.25
+        ],
+        "BlendType": "EAlphaBlendOption::Cubic",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bRagdollSnapshotActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bRagdollSnapshotActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_PoseSnapshot_441CE1E34EA97B134A0EFA89A6303B2F": {
+        "Mode": "ESnapshotSourceMode::SnapshotPin",
+        "SnapshotName": "RagdollSnapshot",
+        "Snapshot": {
+          "LocalTransforms": [],
+          "BoneNames": [],
+          "SkeletalMeshName": "None",
+          "SnapshotName": "None",
+          "bIsValid": false
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RagdollSnapshot",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_PoseSnapshot:Snapshot",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 64,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::StructProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:RagdollSnapshot",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_7DB0E0C84BA34C74D9FCD9AD50509C73": {
+        "Source": {
+          "LinkID": 0
+        },
+        "SlotName": "RagdollGetup",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_5E06508D43FAB779C9C7C4870197D993": {
+        "Source": {
+          "LinkID": 3
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_E1A5E3AB426FEE3F5580628A9AD6FC8D": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 58
+          },
+          {
+            "LinkID": 40
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsLocomotionActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsLocomotionActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_F82FB4194D8D8E2BC04F86B4B1BCB566": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_6B470FF44565D09B8D5929A813EA10FD": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotionActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotionActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_BC4F7E404F426D722B55D9AB36949525": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_38509DF24417B580DBFD329C4616FDF4": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotionActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotionActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_F747D8D440F4B4AB193D29A52747BF22": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_B8A95F6C4768296333510E91AE02E153": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A73EDB0749A97CE94368AEAAF83DCB07": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1ActiveCut",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1ActiveCut",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_B8F0B41D479335CB8E65D0AE387B6473": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0ActiveCut",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0ActiveCut",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomSequenceNamed_D2E244574F1ED2BC13CEE6BF9F5D1C37": {
+        "bShuffleMode": false,
+        "bRandomTimeOnInitialize": false,
+        "RandomTimePercentage": 1.0,
+        "RandomTimeStart": 0.0,
+        "ListName": "Emotion0BaseIdle",
+        "SetUpdateName": "EmotionLayerInvalidate0",
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_87DD43C84CECBACC8C188CBAF7088725": {
+        "Result": {
+          "LinkID": 32
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomSequenceNamed_6A3EF32F46876C52D3822E8C53D47DEB": {
+        "bShuffleMode": false,
+        "bRandomTimeOnInitialize": false,
+        "RandomTimePercentage": 1.0,
+        "RandomTimeStart": 0.0,
+        "ListName": "Emotion1BaseIdle",
+        "SetUpdateName": "EmotionLayerInvalidate1",
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_0B8744F64C7DC4F8FE3846B1D4D517F1": {
+        "Result": {
+          "LinkID": 34
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_196C5337447746F7F70C2B87B08D7E03": {
+        "bShuffleMode": false,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_RBT_HoverBot_Convo_Idle_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/AS_RBT_HoverBot_Convo_Idle_01.4"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_RBT_HoverBot_Convo_Idle_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/AS_RBT_HoverBot_Convo_Idle_01.4"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 1,
+            "MaxLoopCount": 2,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_RBT_HoverBot_Convo_Fidget_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/AS_RBT_HoverBot_Convo_Fidget_01.0"
+            },
+            "ChanceToPlay": 0.4,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_ABB9F1C244D1C19E76C8BFA8ED1DAAA5": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 36
+          },
+          {
+            "LinkID": 38
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bInConversation",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bInConversation",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_CB304ABF41C11983487FD998171F37CF": {
+        "bShuffleMode": true,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence SK_RBT_HoverBot_NC_Idle_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_NC_Idle_01.6"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence SK_RBT_HoverBot_NC_Fidget_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_NC_Fidget_01.5"
+            },
+            "ChanceToPlay": 0.5,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence SK_RBT_HoverBot_NC_Fidget_02",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_NC_Fidget_02.6"
+            },
+            "ChanceToPlay": 0.5,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence SK_RBT_HoverBot_NC_Fidget_03",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_NC_Fidget_03.3"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_48B3223543304FAAA8A93A8DFD342048": {
+        "Result": {
+          "LinkID": 37
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_FE4AEA3D41AA3D09616F9CB6399DACE8": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_ModifyBone_664498064862A65EBB9599ABFB2C989A": {
+        "BoneToModify": {
+          "BoneName": "main_JNT"
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Rotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "TranslationMode": "BMM_Additive",
+        "RotationMode": "BMM_Additive",
+        "ScaleMode": "BMM_Ignore",
+        "TranslationSpace": "BCS_ComponentSpace",
+        "RotationSpace": "BCS_ComponentSpace",
+        "ScaleSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 65
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HeightSmooth",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_ModifyBone:Translation",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 12,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::StructProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty HoverbotAnimInstance:HeightSmooth",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace_A3BA5DD6460153FDF38709965236283B": {
+        "ComponentPose": {
+          "LinkID": 61
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_F0FDC73641C1D383895FAF93FCF48E01": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_11A4AD864A41492DEAAC839B6A26C4FB": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_040D3E1E498868435C80D6BCE26BA576": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_C6ECF3574343AE94E780E2BF34E912DB": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "EnterNode0",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "BoolProperty LocomotionNode:EnterNode0",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocomotionPlay_B1A004B4447E69BC111F50A27CC2C30D": {
+        "CurrentSlot": -1,
+        "Sequence": null,
+        "bLoopAnimation": false,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "Node0Sequence",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "ObjectProperty AnimNode_SequencePlayer:Sequence",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 8,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::ObjectProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "ObjectProperty LocomotionNode:Node0Sequence",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_C0E16EEA4C42F4EA3217148472A5C23D": {
+        "Result": {
+          "LinkID": 47
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A75AA1394C618ABE0A61A4885E9DD95E": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_DD3C012D4152CACBA6864EB4D8E39FD1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Walk_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Walk_01.0"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_2CE6B47746689F2C9067C384FE199D1C": {
+        "Result": {
+          "LinkID": 50
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1846518D4BB58B87D8E543BEF27B352F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Walk_Start_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Walk_Start_01.0"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_5275CB724903C4BE5B48C5857724BE64": {
+        "Result": {
+          "LinkID": 52
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_30654D554EA55EEF4CB6AA83BC767606": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_FF0E6EC445C49DB43BF468B873869036": {
+        "Result": {
+          "LinkID": 54
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_11BAE1F14AFCC8019B6D5EAB496A9C44": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_NC_Idle_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_NC_Idle_01.6"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_D05CDBCA4539B0C50893FBA589C321B3": {
+        "Result": {
+          "LinkID": 56
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_49AAF0414441E2C2F1233892328D0046": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Root_71204447498D5EB3AA270490D9C0FE9A": {
+        "Result": {
+          "LinkID": 19
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_40DAD6EE44C8FA848485A7AB7004DA94": {
+        "BasePose": {
+          "LinkID": 5
+        },
+        "LODThreshold": -1,
+        "bIsLODEnabled": false,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "ActualAlpha": 0.0,
+        "bAlphaBoolEnabled": false,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D AimOffsetBlendSpace_HoverBot_C_Aim_0",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/AimOffsetBlendSpace_HoverBot_C_Aim_0.0"
+        },
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "bForceResetPlayTime": false,
+        "BlendFilter": {},
+        "BlendSampleDataCache": [],
+        "PreviousBlendSpace": null,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AimPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::MemCopy",
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty TPVAnimInstance:AimPitch",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_ModifyBone_32FAF84447793AC13B0EE486BFAEF9FB": {
+        "BoneToModify": {
+          "BoneName": "convoCamera_NSK"
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Rotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "TranslationMode": "BMM_Additive",
+        "RotationMode": "BMM_Ignore",
+        "ScaleMode": "BMM_Ignore",
+        "TranslationSpace": "BCS_ComponentSpace",
+        "RotationSpace": "BCS_ComponentSpace",
+        "ScaleSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 41
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HeightSmooth",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_ModifyBone:Translation",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 12,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::StructProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty HoverbotAnimInstance:HeightSmooth",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SaveCachedPose_38FC719846FD62EFA3362BAD9FDA3B5B": {
+        "Pose": {
+          "LinkID": 18
+        },
+        "CachePoseName": "PreFlinch",
+        "GlobalWeight": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TwoWayBlend_E612365D4BC75EF028D94DAAFAF4A4B7": {
+        "A": {
+          "LinkID": 64
+        },
+        "B": {
+          "LinkID": 67
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 0.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "InternalBlendAlpha": 0.0,
+        "bAIsRelevant": false,
+        "bBIsRelevant": false,
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HitFlinchAlpha",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_TwoWayBlend:Alpha",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::MemCopy",
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty TPVAnimInstance:HitFlinchAlpha",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_UseCachedPose_A51B6F4740AEBC12B87E33AE3D833F03": {
+        "LinkToCachingNode": {
+          "LinkID": 62
+        },
+        "CachePoseName": "PreFlinch",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocalToComponentSpace_AB9F31F64AA880FF49DCBD912C274970": {
+        "LocalPose": {
+          "LinkID": 63
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_UseCachedPose_50F4637543586AAA506016B9C2F8EC2C": {
+        "LinkToCachingNode": {
+          "LinkID": 62
+        },
+        "CachePoseName": "PreFlinch",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_748D5A9544B262265F95FBA3D4A27754": {
+        "Source": {
+          "LinkID": 68
+        },
+        "SlotName": "HitFlinch",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_8D2BF87246C6CD74C2981B8CD06DFFAE": {
+        "Source": {
+          "LinkID": 66
+        },
+        "SlotName": "HitFlinch02",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "LocomotionTurnInPlace": [
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_160_Left_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_160_Left_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_160_Right_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_160_Right_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_90_Left_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_90_Left_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_90_Right_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_90_Right_01.0"
+        }
+      ],
+      "CombatTurnInPlace": [
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_160_Left_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_160_Left_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_160_Right_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_160_Right_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_90_Left_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_90_Left_01.0"
+        },
+        {
+          "ObjectName": "AnimSequence SK_RBT_HoverBot_Turn_90_Right_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_Turn_90_Right_01.0"
+        }
+      ],
+      "SlowingSpeed": 800.0,
+      "StationaryRotationType": "EStationaryRotationType::OutOfCombatOnly",
+      "UpdateRateThresholds": [
+        0.05,
+        0.005
+      ],
+      "GetUpAxis": "EAxis::Y",
+      "ChestBone": "main_JNT",
+      "HipBone": "back_Md_back01_JNT",
+      "bFlipFaceUpForwardVector": false,
+      "GetUpFromFaceDownPose": [
+        {
+          "ObjectName": "AnimMontage SK_RBT_HoverBot_HR_GetUP_FU_01_Montage",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_HR_GetUP_FU_01_Montage.0"
+        }
+      ],
+      "GetUpFromFaceUpPose": [
+        {
+          "ObjectName": "AnimMontage SK_RBT_HoverBot_HR_GetUP_FD_01_Montage",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Robot/HoverBot/SK_RBT_HoverBot_HR_GetUP_FD_01_Montage.0"
+        }
+      ],
+      "DefaultWeaponAnimationsTemplate": {
+        "ObjectName": "BlueprintGeneratedClass RBT_HoverDrone_WeaponAnimations_C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_WeaponAnimations.0"
+      },
+      "bFootIKEnabled": true
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_C723637C4AED8BB26A3CD8BD97247AF8",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.4"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.17"
+      },
+      {
+        "ObjectName": "ObjectProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.K2Node_Event_NewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.24"
+      },
+      {
+        "ObjectName": "BoolProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.CallFunc_IsMontagePlayingOnSlot_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.6"
+      },
+      {
+        "ObjectName": "ObjectProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.K2Node_DynamicCast_AsRBT_Hover_Drone_Weapon_Animations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.23"
+      },
+      {
+        "ObjectName": "BoolProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.7"
+      },
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:ExecuteUbergraph_RBT_HoverDrone_AnimBP.CallFunc_Conv_BoolToFloat_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.16"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsMontagePlayingOnSlot_ReturnValue",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "RandomIdle",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CombatEnum",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum CombatEnum",
+      "ObjectPath": "Indiana/Content/Blueprints/AI/Animation/CombatEnum.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_TurnOffRandomIdle",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_RandomIdle",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "NewWeaponAnimations",
+    "Outer": "OnNewWeaponAnimations",
+    "PropertyFlags": 524436,
+    "PropertyClass": {
+      "ObjectName": "Class WeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNewWeaponAnimations",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function CharacterAnimInstance:OnNewWeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty RBT_HoverDrone_AnimBP_C:OnNewWeaponAnimations.NewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.12"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty RBT_HoverDrone_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_AnimBP.15"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitFlinchActive",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionActive",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionDirection",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionRate",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionType",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsRBT_Hover_Drone_Weapon_Animations",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass RBT_HoverDrone_WeaponAnimations_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_WeaponAnimations.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_NewWeaponAnimations",
+    "Outer": "ExecuteUbergraph_RBT_HoverDrone_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class WeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WeaponAnimationsBP",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass RBT_HoverDrone_WeaponAnimations_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Robots/CorporateMilitary/RBT_HoverDrone_WeaponAnimations.0"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_615AD50C44B44499F051859766F5CFCF",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_930811CE439A3344015893BFA9A86AFB",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_ABB9F1C244D1C19E76C8BFA8ED1DAAA5",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_E1A5E3AB426FEE3F5580628A9AD6FC8D",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ComponentToLocalSpace_A3BA5DD6460153FDF38709965236283B",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertComponentToLocalSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalRefPose_2F15CCC74D7AD21AD739D6B2DC54A0DA",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RefPose",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalToComponentSpace_AB9F31F64AA880FF49DCBD912C274970",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertLocalToComponentSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocomotionPlay_4E0ECDB346FDC37094BCD4A5EDFC15C1",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LocomotionPlay",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocomotionPlay_B1A004B4447E69BC111F50A27CC2C30D",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LocomotionPlay",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ModifyBone_32FAF84447793AC13B0EE486BFAEF9FB",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ModifyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ModifyBone_664498064862A65EBB9599ABFB2C989A",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ModifyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_PoseSnapshot_441CE1E34EA97B134A0EFA89A6303B2F",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_PoseSnapshot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_196C5337447746F7F70C2B87B08D7E03",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_CB304ABF41C11983487FD998171F37CF",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomSequenceNamed_6A3EF32F46876C52D3822E8C53D47DEB",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomSequenceNamed",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomSequenceNamed_D2E244574F1ED2BC13CEE6BF9F5D1C37",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomSequenceNamed",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_71204447498D5EB3AA270490D9C0FE9A",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_40DAD6EE44C8FA848485A7AB7004DA94",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RotationOffsetBlendSpace",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_38FC719846FD62EFA3362BAD9FDA3B5B",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_11BAE1F14AFCC8019B6D5EAB496A9C44",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1846518D4BB58B87D8E543BEF27B352F",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_ACA3AFD94E2AA5D5E2F89CA9C56256FE",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DD3C012D4152CACBA6864EB4D8E39FD1",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_F929C8784EECF31CAAAAD2A56AD14FF8",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_03146FF94C9690AE955EF39BCEA36757",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_30C3A9844680E90E7910809515E19136",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_319155AC4C56C9E0C1F9DC9FE081E2E6",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_4DE18C5A408F632D65631FB9270E6700",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_5E06508D43FAB779C9C7C4870197D993",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_748D5A9544B262265F95FBA3D4A27754",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_7DB0E0C84BA34C74D9FCD9AD50509C73",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_8D2BF87246C6CD74C2981B8CD06DFFAE",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_30654D554EA55EEF4CB6AA83BC767606",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_49AAF0414441E2C2F1233892328D0046",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_BFF6B5BC4BC49B59D84A1A983B68919C",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_FE4AEA3D41AA3D09616F9CB6399DACE8",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_0B8744F64C7DC4F8FE3846B1D4D517F1",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_2CE6B47746689F2C9067C384FE199D1C",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_48B3223543304FAAA8A93A8DFD342048",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5275CB724903C4BE5B48C5857724BE64",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_837C31864A05AA00F15417A32A34BFF6",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_87DD43C84CECBACC8C188CBAF7088725",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_A8535D0248473E661C40CE8CBBDE6BB1",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_AB1B46234AAD1EBFE3F17AA290BEC47C",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C0E16EEA4C42F4EA3217148472A5C23D",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D05CDBCA4539B0C50893FBA589C321B3",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FF0E6EC445C49DB43BF468B873869036",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0034F9134EB5073EE533A7877843E53B",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_040D3E1E498868435C80D6BCE26BA576",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_11A4AD864A41492DEAAC839B6A26C4FB",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_2FD7021D4549380689E60CBA30DB1437",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_38509DF24417B580DBFD329C4616FDF4",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_548C0D26464E8C1C253EF0A49D25A6CA",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5CDE0A3540F75D1DB62D03B891ECC57D",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6B470FF44565D09B8D5929A813EA10FD",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9B0D68BE4AA864B77125229583AE755A",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A73EDB0749A97CE94368AEAAF83DCB07",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A75AA1394C618ABE0A61A4885E9DD95E",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B8A95F6C4768296333510E91AE02E153",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B8F0B41D479335CB8E65D0AE387B6473",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BC4F7E404F426D722B55D9AB36949525",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C6ECF3574343AE94E780E2BF34E912DB",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F0FDC73641C1D383895FAF93FCF48E01",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F747D8D440F4B4AB193D29A52747BF22",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F82FB4194D8D8E2BC04F86B4B1BCB566",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TwoWayBlend_E612365D4BC75EF028D94DAAFAF4A4B7",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TwoWayBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_50F4637543586AAA506016B9C2F8EC2C",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_A51B6F4740AEBC12B87E33AE3D833F03",
+    "Outer": "RBT_HoverDrone_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

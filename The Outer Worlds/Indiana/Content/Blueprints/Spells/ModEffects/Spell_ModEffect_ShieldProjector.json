@@ -1,0 +1,167 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_ModEffect_ShieldProjector_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_ModEffect_ShieldProjector_C Default__Spell_ModEffect_ShieldProjector_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/Spell_ModEffect_ShieldProjector.1"
+    }
+  },
+  {
+    "Type": "Spell_ModEffect_ShieldProjector_C",
+    "Name": "Default__Spell_ModEffect_ShieldProjector_C",
+    "Properties": {
+      "EventCooldown": 30.0,
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnHealthPercentage Default__Spell_ModEffect_ShieldProjector_C:OnHealthPercentage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/Spell_ModEffect_ShieldProjector.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatModifierStatusEffect Default__Spell_ModEffect_ShieldProjector_C:StatModifierStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/Spell_ModEffect_ShieldProjector.4"
+              },
+              {
+                "ObjectName": "HealStatusEffect Default__Spell_ModEffect_ShieldProjector_C:HealStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/Spell_ModEffect_ShieldProjector.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "HealStatusEffect",
+    "Name": "HealStatusEffect_0",
+    "Outer": "Default__Spell_ModEffect_ShieldProjector_C",
+    "Properties": {
+      "HealValuePercent": 0.25,
+      "HealValueType": "EHealValueType::Percent",
+      "Duration": 10.0,
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 0.25,
+      "EffectName": {
+        "StringID": 2436
+      },
+      "EffectDescription": {
+        "StringID": 2442
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_KinematicHeal",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_KinematicHeal.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1837
+      }
+    }
+  },
+  {
+    "Type": "OnHealthPercentage",
+    "Name": "OnHealthPercentage_0",
+    "Outer": "Default__Spell_ModEffect_ShieldProjector_C",
+    "Properties": {
+      "HealthPercentage": 0.2,
+      "Operator": "ComparisonOperator::LessThanOrEquals"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Spell_ModEffect_ShieldProjector_C",
+    "Properties": {
+      "StatModifier": {
+        "RpgStat": {
+          "ObjectName": "RpgStat PostArmorDamageMultiplierReceived_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/PostArmorDamageMultiplierReceived_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "Duration": 3.0,
+      "EffectName": {
+        "StringID": 1152
+      },
+      "EffectDescription": {
+        "StringID": 2441
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_KinematicShield",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_KinematicShield.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1931
+      }
+    }
+  }
+]

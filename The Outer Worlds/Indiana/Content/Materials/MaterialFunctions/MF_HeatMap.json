@@ -1,0 +1,243 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_11",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_RemapValueRange",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_RemapValueRange.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_12",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_RemapValueRange",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_RemapValueRange.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_13",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BreakOutFloat3Components",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_15",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BlendAngleCorrectedNormals",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_16",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BreakOutFloat3Components",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAppendVector_6"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D default_heatmap_M",
+        "ObjectPath": "Indiana/Content/Materials/DefaultTextures/default_heatmap_M.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_2",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_20"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D micro_snow_1_R",
+        "ObjectPath": "Indiana/Content/Materials/_MaterialTesting/Weathering/Textures/micro_snow_1_R.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_20",
+    "Outer": "MF_HeatMap",
+    "Properties": {
+      "ParameterName": "DetailNormal",
+      "ExpressionGUID": "D87182B8-4F59420A-E901DAA0-8ACB8B7F",
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_20"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D TDCL_Water_Drops_001_NM",
+        "ObjectPath": "Indiana/Content/Art/ENV/Decals/Water/TDCL_Water_Drops_001_NM.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_HeatMap",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.8"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_HeatMap",
+    "Properties": {
+      "Description": "Takes in some base maps, even emissive(if your material doesn't have emissive, just put in a constant vector3 at (0,0,0), a heatmap(which is just a scalar, so make the texture a greyscale map in it's settings, and plug in the R channel), and takes 2 scalar parameters for heat strength(0 is none, on up), and emissive power(1 is low  on up)",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_HeatMap:MaterialExpressionMaterialFunctionCall_15",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.3"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D MF_HeatMap:MaterialExpressionTextureSampleParameter2D_20",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.7"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_HeatMap:MaterialExpressionMaterialFunctionCall_13",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.2"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_HeatMap:MaterialExpressionMaterialFunctionCall_12",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_HeatMap:MaterialExpressionMaterialFunctionCall_11",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.0"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_HeatMap:MaterialExpressionMaterialFunctionCall_16",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.4"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample MF_HeatMap:MaterialExpressionTextureSample_1",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.5"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample MF_HeatMap:MaterialExpressionTextureSample_2",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_HeatMap.6"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "StateId": "E40F5594-423324E3-905DEC8C-380370E1"
+    }
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_SoloSneaker_1_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_SoloSneaker_1_C Default__Spell_PerkEffect_SoloSneaker_1_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_SoloSneaker_1.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_SoloSneaker_1_C",
+    "Name": "Default__Spell_PerkEffect_SoloSneaker_1_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnPartyChange Default__Spell_PerkEffect_SoloSneaker_1_C:OnPartyChange_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_SoloSneaker_1.2"
+        },
+        "RemoveEvent": {
+          "ObjectName": "OnPartyChange Default__Spell_PerkEffect_SoloSneaker_1_C:OnPartyChange_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_SoloSneaker_1.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "PerceptionRangeScalarStatusEffect Default__Spell_PerkEffect_SoloSneaker_1_C:PerceptionRangeScalarStatusEffect_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_SoloSneaker_1.4"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "OnPartyChange",
+    "Name": "OnPartyChange_0",
+    "Outer": "Default__Spell_PerkEffect_SoloSneaker_1_C"
+  },
+  {
+    "Type": "OnPartyChange",
+    "Name": "OnPartyChange_1",
+    "Outer": "Default__Spell_PerkEffect_SoloSneaker_1_C",
+    "Properties": {
+      "Operator": "ComparisonOperator::GreaterThan"
+    }
+  },
+  {
+    "Type": "PerceptionRangeScalarStatusEffect",
+    "Name": "PerceptionRangeScalarStatusEffect_1",
+    "Outer": "Default__Spell_PerkEffect_SoloSneaker_1_C",
+    "Properties": {
+      "CreatureType": [
+        "CreatureType.Creature",
+        "CreatureType.Critter",
+        "CreatureType.Humanoid",
+        "CreatureType.Robot",
+        "CreatureType.SmplCrea"
+      ],
+      "PerceptionRangeScalar": 0.67,
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "DescriptionFormat": {
+        "StringID": 2277
+      }
+    }
+  }
+]

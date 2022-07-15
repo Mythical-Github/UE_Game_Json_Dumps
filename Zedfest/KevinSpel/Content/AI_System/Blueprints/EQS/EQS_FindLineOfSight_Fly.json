@@ -1,0 +1,104 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindLineOfSight_Fly",
+    "Properties": {
+      "QueryName": "EQS_FindLineOfSight_Fly",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindLineOfSight_Fly:EnvQueryOption_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight_Fly.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQS_FindLineOfSight_Fly",
+    "Properties": {
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_FindLineOfSight_Fly:EnvQueryGenerator_SimpleGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight_Fly.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::None"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_FindLineOfSight_Fly",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_FindLineOfSight_Fly:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight_Fly.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQS_FindLineOfSight_Fly:EnvQueryTest_Trace_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight_Fly.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindLineOfSight_Fly:EnvQueryTest_Distance_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight_Fly.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_FindLineOfSight_Fly",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_1",
+    "Outer": "EQS_FindLineOfSight_Fly",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 50.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceShape": "EEnvTraceShape::Sphere"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 200.0
+      },
+      "Context": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

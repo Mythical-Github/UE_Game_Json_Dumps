@@ -1,0 +1,1251 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_CuteRobot_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4,
+                5,
+                6,
+                7
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton Cute_Robot_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Meshes/Cute_Robot_Skeleton.0"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_CuteRobot_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendListByEnum_7A23CF104DA918ECC18A9C9351A060F4",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.46"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_FE4E34FF4005988FEECB1396E405CD04",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.50"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_F1F8B8EC46BE43FBC17D108F0194071D",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_E98E33154D9D47DB142514A481F0AB78",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_ECF52A7E4025746F81A8ECB5960AC31B",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_CuteRobot_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_TransitionResult_235E1D4545E04FCF389D948D8F266423",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.56"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_CuteRobot_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_TransitionResult_DB71ABF1458D376DC74566A85558B02E",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.57"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.27"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.26"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.25"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.24"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.23"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.21"
+      },
+      {
+        "ObjectName": "Function AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_Root_A4D3C57D4BF7BBC777C99B9FFB2A5896",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_TransitionResult_DB71ABF1458D376DC74566A85558B02E",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.57"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_TransitionResult_235E1D4545E04FCF389D948D8F266423",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.56"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_SequencePlayer_D91715C3440DE34D6FF928A2741C2B12",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_StateResult_87EFFDE346B91C1D70DE1ABE0EA38329",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_ECF52A7E4025746F81A8ECB5960AC31B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.48"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_E98E33154D9D47DB142514A481F0AB78",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.47"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_F1F8B8EC46BE43FBC17D108F0194071D",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendSpacePlayer_FE4E34FF4005988FEECB1396E405CD04",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_BlendListByEnum_7A23CF104DA918ECC18A9C9351A060F4",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.46"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_StateResult_FCDB39394B8C1DA3E25BBA864B4DC082",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_StateMachine_C06BA6C64636FD880E74D2ABC24CB470",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:AnimGraphNode_Slot_DEF212D243F6E9E72DDBB491A0C6445C",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.52"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.18"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.33"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_CuteRobot_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.19"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:Direction",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.29"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.17"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.34"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_CuteRobot": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.5"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.21"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.22"
+      },
+      "AnimNotify_OnSpecialDamage2": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnSpecialDamage2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.23"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.24"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.25"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.26"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_CuteRobot_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.27"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_CuteRobot_C Default__AnimBP_CuteRobot_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.2"
+    }
+  },
+  {
+    "Type": "AnimBP_CuteRobot_C",
+    "Name": "Default__AnimBP_CuteRobot_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_A4D3C57D4BF7BBC777C99B9FFB2A5896": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_TransitionResult_DB71ABF1458D376DC74566A85558B02E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_235E1D4545E04FCF389D948D8F266423": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_D91715C3440DE34D6FF928A2741C2B12": {
+        "Sequence": {
+          "ObjectName": "AnimSequence Anim_Jump",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/Anim_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_87EFFDE346B91C1D70DE1ABE0EA38329": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_ECF52A7E4025746F81A8ECB5960AC31B": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_CuteRobot",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/BS_CuteRobot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_E98E33154D9D47DB142514A481F0AB78": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_CuteRobot",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/BS_CuteRobot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F1F8B8EC46BE43FBC17D108F0194071D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_CuteRobot",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/BS_CuteRobot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_FE4E34FF4005988FEECB1396E405CD04": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_CuteRobot",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/BS_CuteRobot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_7A23CF104DA918ECC18A9C9351A060F4": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 7
+          },
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": 5
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_FCDB39394B8C1DA3E25BBA864B4DC082": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_StateMachine_C06BA6C64636FD880E74D2ABC24CB470": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Slot_DEF212D243F6E9E72DDBB491A0C6445C": {
+        "Source": {
+          "LinkID": 11
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_A4D3C57D4BF7BBC777C99B9FFB2A5896",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.4"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.10"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.20"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.37"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.59"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.31"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.30"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.36"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.9"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.35"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.38"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.42"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.13"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.12"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.39"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.43"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.14"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.40"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.44"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.15"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_TryGetPawnOwner_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.41"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_AsBP_NPC_Base3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.45"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_DynamicCast_bSuccess3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.16"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.32"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_CuteRobot_C:ExecuteUbergraph_AnimBP_CuteRobot.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess3",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "AnimBP_CuteRobot_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AnimBP_CuteRobot_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage2",
+    "Outer": "AnimBP_CuteRobot_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "AnimBP_CuteRobot_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_CuteRobot_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_CuteRobot_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_CuteRobot_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_CuteRobot_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/Cute_Robot/Animations/AnimBP_CuteRobot.28"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "AnimBP_CuteRobot_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue4",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base3",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_7A23CF104DA918ECC18A9C9351A060F4",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E98E33154D9D47DB142514A481F0AB78",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_ECF52A7E4025746F81A8ECB5960AC31B",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F1F8B8EC46BE43FBC17D108F0194071D",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_FE4E34FF4005988FEECB1396E405CD04",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D91715C3440DE34D6FF928A2741C2B12",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_DEF212D243F6E9E72DDBB491A0C6445C",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_C06BA6C64636FD880E74D2ABC24CB470",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_87EFFDE346B91C1D70DE1ABE0EA38329",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FCDB39394B8C1DA3E25BBA864B4DC082",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_235E1D4545E04FCF389D948D8F266423",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DB71ABF1458D376DC74566A85558B02E",
+    "Outer": "AnimBP_CuteRobot_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_CuteRobot",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

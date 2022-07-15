@@ -1,0 +1,220 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_Glass",
+    "Properties": {
+      "Metallic": {
+        "OutputIndex": 3,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_0",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "Normal": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_2",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_1",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "DitherOpacityMask": true,
+      "TranslucencyLightingMode": "TLM_Surface",
+      "bUsedWithStaticLighting": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_Glass:MaterialExpressionTextureSample_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.5"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_Glass:MaterialExpressionTextureSample_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_Glass:MaterialExpressionTextureSample_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.6"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_Glass:MaterialExpressionScalarParameter_3",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.3"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_Glass:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_Glass:MaterialExpressionScalarParameter_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionVectorParameter M_Glass:MaterialExpressionVectorParameter_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.7"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "72C547B3-457AA083-E55C2994-C3F1418D",
+          "Function": {
+            "ObjectName": "MaterialFunction Fresnel_Function",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Fresnel_Function.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "617F0391-4CFF24BB-D4106C83-0CDB9ABF",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "M_Glass",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction Fresnel_Function",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Fresnel_Function.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_2",
+    "Outer": "M_Glass",
+    "Properties": {
+      "DefaultValue": 3.0,
+      "ParameterName": "fresnel power",
+      "ExpressionGUID": "37843A38-484BBD87-A16F3F9B-D5C65A72",
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_3",
+    "Outer": "M_Glass",
+    "Properties": {
+      "DefaultValue": 10.0,
+      "ParameterName": "emissive intensity",
+      "ExpressionGUID": "CF4B2CF0-4E3449AF-9582FAAC-E1833C68",
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "M_Glass",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_Glass_ORM",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Textures/T_Glass_ORM.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "M_Glass",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_Glass_BC",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Textures/T_Glass_BC.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_2",
+    "Outer": "M_Glass",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_Glass_N",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Textures/T_Glass_N.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_2",
+    "Outer": "M_Glass",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.447917,
+        "G": 0.535457,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FFB3C2FF"
+      },
+      "ParameterName": "emissive color",
+      "ExpressionGUID": "682BB58E-46B79C99-CCAAFE93-2676142A",
+      "Material": {
+        "ObjectName": "Material M_Glass",
+        "ObjectPath": "KevinSpel/Content/Meshes/SciFiTramStation/Materials/M_Glass.0"
+      }
+    }
+  }
+]

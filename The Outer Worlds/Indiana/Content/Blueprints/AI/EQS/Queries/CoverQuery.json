@@ -1,0 +1,255 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_Cover_0",
+    "Properties": {
+      "ParamName": "CoverTypes"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_Cover_0",
+    "Properties": {
+      "ParamName": "SearchRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_Distance_1",
+    "Properties": {
+      "ParamName": "MinPrimaryTargetDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_OccupiedEnvironmentNodes_0",
+    "Properties": {
+      "ParamName": "IgnoreNodesOccupiedByQueryOwner"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_Pathfinding_1",
+    "Properties": {
+      "ParamName": "Pathfinding.MinPathDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_ValidCoverFire_1",
+    "Properties": {
+      "ParamName": "ValidCoverFire.BoolValue"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "CoverQuery",
+    "Properties": {
+      "QueryName": "StimulusLocationSearch_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption CoverQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Cover",
+    "Name": "EnvQueryGenerator_Cover_0",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "SearchRadius": {
+        "DefaultValue": 900.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryGenerator_Cover_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "CoverTypesProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryGenerator_Cover_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.0"
+        },
+        "DataField": "IntValue"
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Cover CoverQuery:EnvQueryGenerator_Cover_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.7"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_OccupiedEnvironmentNodes CoverQuery:EnvQueryTest_OccupiedEnvironmentNodes_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.11"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance CoverQuery:EnvQueryTest_Distance_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.9"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot CoverQuery:EnvQueryTest_Dot_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.10"
+        },
+        {
+          "ObjectName": "EnvQueryTest_ValidCover CoverQuery:EnvQueryTest_ValidCover_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.13"
+        },
+        {
+          "ObjectName": "EnvQueryTest_ValidCoverFire CoverQuery:EnvQueryTest_ValidCoverFire_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.14"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding CoverQuery:EnvQueryTest_Pathfinding_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "Class EQSContext_PrimaryTargetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 1000.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryTest_Distance_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_1",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_PrimaryTargetLocation",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "LineTo": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_PrimaryTargetLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": -0.26
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_OccupiedEnvironmentNodes",
+    "Name": "EnvQueryTest_OccupiedEnvironmentNodes_0",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "IgnoreNodesOccupiedByQueryOwner": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryTest_OccupiedEnvironmentNodes_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.3"
+        },
+        "DataField": "BoolValue"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_1",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "TestOrder": 5,
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryTest_Pathfinding_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.4"
+        },
+        "DataField": "FloatValue"
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_ValidCover",
+    "Name": "EnvQueryTest_ValidCover_1",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "EnemyContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_ValidCoverFire",
+    "Name": "EnvQueryTest_ValidCoverFire_1",
+    "Outer": "CoverQuery",
+    "Properties": {
+      "ShouldRunTest": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CoverQuery:EnvQueryTest_ValidCoverFire_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CoverQuery.5"
+        },
+        "DataField": "BoolValue"
+      },
+      "EnemyContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DataField": "BoolValue"
+      },
+      "VerNum": 1
+    }
+  }
+]

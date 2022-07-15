@@ -1,0 +1,263 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Gun",
+    "Outer": "FirstPersonCharacter_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FirstPersonCharacter_C",
+    "Properties": {
+      "ComponentTemplates": [
+        {
+          "ObjectName": "StaticMeshComponent FirstPersonCharacter_C:NODE_AddStaticMeshComponent-0",
+          "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.10"
+        },
+        {
+          "ObjectName": "StaticMeshComponent FirstPersonCharacter_C:NODE_AddStaticMeshComponent-1",
+          "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.11"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript FirstPersonCharacter_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Character",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty FirstPersonCharacter_C:Gun",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.0"
+      }
+    ],
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FirstPersonCharacter_C Default__FirstPersonCharacter_C",
+      "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.2"
+    }
+  },
+  {
+    "Type": "FirstPersonCharacter_C",
+    "Name": "Default__FirstPersonCharacter_C",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__FirstPersonCharacter_C:CharacterMesh0",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.8"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent Default__FirstPersonCharacter_C:CharMoveComp",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.4"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__FirstPersonCharacter_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.3"
+      },
+      "AIControllerClass": {
+        "ObjectName": "Class PlayerController",
+        "ObjectPath": "/Script/Engine"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__FirstPersonCharacter_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__FirstPersonCharacter_C",
+    "Properties": {
+      "CapsuleHalfHeight": 100.0,
+      "CapsuleRadius": 56.0,
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "MassInKgOverride": 238.15028
+      }
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__FirstPersonCharacter_C",
+    "Properties": {
+      "GravityScale": 1.5,
+      "JumpZVelocity": 500.0,
+      "MaxFlySpeed": 300.0,
+      "MaxAcceleration": 5000.0,
+      "BrakingDecelerationFlying": 2000.0,
+      "AirControl": 0.3,
+      "CrouchedHalfHeight": 75.0,
+      "bCanWalkOffLedgesWhenCrouching": true,
+      "NavAgentProps": {
+        "AgentRadius": 48.0,
+        "AgentHeight": 192.0,
+        "bCanCrouch": true
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": null,
+      "VariableGuid": "56BC9799-C494E6E6-321D4295-7D5EB316",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SkeletalMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent FirstPersonCharacter_C:Gun_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.9"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B5778BA0-46412BBE-4C070295-F3FB7AEA",
+      "InternalVariableName": "Gun"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "FirstPersonCharacter_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node FirstPersonCharacter_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node FirstPersonCharacter_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node FirstPersonCharacter_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.5"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__FirstPersonCharacter_C",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class ClothingSimulationFactoryNv",
+        "ObjectPath": "/Script/ClothingSystemRuntime"
+      },
+      "bVisibleInReflectionCaptures": false,
+      "bOwnerNoSee": true,
+      "CastShadow": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 0.0
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__FirstPersonCharacter_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/FPSK/FirstPersonAssets/FirstPersonBP/Blueprints/FirstPersonCharacter.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.57886
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0011,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Gun_GEN_VARIABLE",
+    "Outer": "FirstPersonCharacter_C",
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence A_TSR9_Idle",
+          "ObjectPath": "KevinSpel/Content/FPSK/Guns/TSR9/GunAnimations/A_TSR9_Idle.0"
+        }
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class ClothingSimulationFactoryNv",
+        "ObjectPath": "/Script/ClothingSystemRuntime"
+      },
+      "bSelfShadowOnly": true,
+      "BoundsScale": 7.0,
+      "RelativeLocation": {
+        "X": -4.191391,
+        "Y": 9.152933,
+        "Z": -167.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "NODE_AddStaticMeshComponent-0",
+    "Outer": "FirstPersonCharacter_C",
+    "Properties": {
+      "bSelfShadowOnly": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "NODE_AddStaticMeshComponent-1",
+    "Outer": "FirstPersonCharacter_C",
+    "Properties": {
+      "bSelfShadowOnly": true
+    }
+  }
+]

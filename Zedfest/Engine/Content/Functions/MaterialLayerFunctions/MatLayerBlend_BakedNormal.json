@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_93",
+    "Outer": "MatLayerBlend_BakedNormal",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BlendAngleCorrectedNormals",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MatLayerBlend_BakedNormal",
+        "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_BakedNormal.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionQualitySwitch",
+    "Name": "MaterialExpressionQualitySwitch_26",
+    "Outer": "MatLayerBlend_BakedNormal",
+    "Properties": {
+      "Default": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionNormalize_1"
+      },
+      "Inputs": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MatLayerBlend_BakedNormal",
+        "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_BakedNormal.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MatLayerBlend_BakedNormal",
+    "Properties": {
+      "Description": "Blends a Processed Normal Map with layered normals",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MatLayerBlend_BakedNormal:MaterialExpressionMaterialFunctionCall_93",
+          "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_BakedNormal.0"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionQualitySwitch MatLayerBlend_BakedNormal:MaterialExpressionQualitySwitch_26",
+          "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_BakedNormal.1"
+        },
+        null,
+        null,
+        null
+      ],
+      "StateId": "63CF6400-405C4A0A-D2F218A7-AAC5C7BF"
+    }
+  }
+]

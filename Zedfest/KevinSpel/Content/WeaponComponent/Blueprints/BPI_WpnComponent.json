@@ -1,0 +1,947 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "HUD_Reference",
+    "Outer": "PC_SetHUD",
+    "PropertyFlags": 524436,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass W_WpnCompHUD_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/UMG/W_WpnCompHUD.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "PC_SetHUD",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:PC_SetHUD.HUD_Reference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.0"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PCReference",
+    "Outer": "PC_CharInitialization",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_Base_HordeController_C",
+      "ObjectPath": "KevinSpel/Content/HordeTemplateBP/Blueprint/BP_Base_HordeController.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "PC_CharInitialization",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:PC_CharInitialization.PCReference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.2"
+      },
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:PC_CharInitialization.WPNHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.68"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "CWC_RefreshWeaponInHUD",
+    "Outer": "BPI_WpnComponent_C",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Pitch",
+    "Outer": "WPN_Recoil",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "WPN_Recoil",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:WPN_Recoil.Pitch",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.5"
+      },
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:WPN_Recoil.Yaw",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.65"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SkMesh",
+    "Outer": "GetChar_Mesh",
+    "PropertyFlags": 524672,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_Mesh",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:GetChar_Mesh.SkMesh",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.7"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CurrentWeaponReference",
+    "Outer": "GetChar_CurrentWeapon",
+    "PropertyFlags": 384,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass WeaponFirearmBase_C",
+      "ObjectPath": "KevinSpel/Content/Inventory/Blueprints/Weapons/WeaponBase/WeaponFirearmBase.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_CurrentWeapon",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:GetChar_CurrentWeapon.CurrentWeaponReference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.9"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "GetChar_SpeedAndDirection",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_SpeedAndDirection",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_SpeedAndDirection.Speed",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.11"
+      },
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_SpeedAndDirection.Direction",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.63"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsDead",
+    "Outer": "GetChar_IsDead",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsDead",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsDead.IsDead",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.13"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "GetChar_IsCrouching",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsCrouching",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsCrouching.IsCrouching",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.15"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsJumping",
+    "Outer": "GetChar_IsJumping",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsJumping",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsJumping.IsJumping",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.17"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsPlayAnim",
+    "Outer": "GetChar_IsPlayAnim",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsPlayAnim",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsPlayAnim.IsPlayAnim",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.19"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Pitch",
+    "Outer": "GetChar_PitchAndYaw",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_PitchAndYaw",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_PitchAndYaw.Pitch",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.21"
+      },
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_PitchAndYaw.Yaw",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.62"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "NumberOfDeathAnim",
+    "Outer": "GetChar_DeathAnimNumber",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_DeathAnimNumber",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty BPI_WpnComponent_C:GetChar_DeathAnimNumber.NumberOfDeathAnim",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.23"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsSprinting",
+    "Outer": "GetChar_IsSprinting",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsSprinting",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsSprinting.IsSprinting",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.25"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Result",
+    "Outer": "GetChar_HasCharWeaponsComponent",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_HasCharWeaponsComponent",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_HasCharWeaponsComponent.Result",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.27"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Montage",
+    "Outer": "AnimBP_AnimationRequest",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class AnimMontage",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimBP_AnimationRequest",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:AnimBP_AnimationRequest.Montage",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.29"
+      },
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:AnimBP_AnimationRequest.PlayRate",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.61"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CWC_Reference",
+    "Outer": "GetChar_CharacterWeaponsComponent",
+    "PropertyFlags": 524672,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass AC_CharacterWeapons_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/AC_CharacterWeapons.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_CharacterWeaponsComponent",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:GetChar_CharacterWeaponsComponent.CWC_Reference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.31"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "HUD_Reference",
+    "Outer": "CWC_GetHUD",
+    "PropertyFlags": 524672,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass W_WpnCompHUD_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/UMG/W_WpnCompHUD.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CWC_GetHUD",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:CWC_GetHUD.HUD_Reference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.33"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CurrentCamera",
+    "Outer": "GetChar_CurrentCamera",
+    "PropertyFlags": 524672,
+    "PropertyClass": {
+      "ObjectName": "Class CameraComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_CurrentCamera",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:GetChar_CurrentCamera.CurrentCamera",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.35"
+      },
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_CurrentCamera.WeaponCamActive",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.57"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Cloak",
+    "Outer": "GetChar_IsCloaked",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsCloaked",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsCloaked.Cloak",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.37"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "Mode",
+    "Outer": "AmmoPickup",
+    "PropertyFlags": 148,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum E_AddAmmoTypes",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/E_AddAmmoTypes.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AmmoPickup",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ByteProperty BPI_WpnComponent_C:AmmoPickup.Mode",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.39"
+      },
+      {
+        "ObjectName": "NameProperty BPI_WpnComponent_C:AmmoPickup.WeaponID",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.67"
+      },
+      {
+        "ObjectName": "IntProperty BPI_WpnComponent_C:AmmoPickup.AmountAmmo",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.66"
+      },
+      {
+        "ObjectName": "ByteProperty BPI_WpnComponent_C:AmmoPickup.WeaponType",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.59"
+      },
+      {
+        "ObjectName": "ClassProperty BPI_WpnComponent_C:AmmoPickup.ProjectileType",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.60"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CurrentHP",
+    "Outer": "GetChar_CurrentHealth",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_CurrentHealth",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_CurrentHealth.CurrentHP",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.41"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WeaponReference",
+    "Outer": "WPN_SetWeaponToInteract",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BPA_ParentWeapon_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPA_ParentWeapon.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "WPN_SetWeaponToInteract",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:WPN_SetWeaponToInteract.WeaponReference",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.43"
+      },
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:WPN_SetWeaponToInteract.AutoPickUp",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.58"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "CWC_SwitchCamera",
+    "Outer": "BPI_WpnComponent_C",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "WPN_CantShoot",
+    "Outer": "BPI_WpnComponent_C",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Zoom",
+    "Outer": "GetChar_IsZooming",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_IsZooming",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:GetChar_IsZooming.Zoom",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.47"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PickupRef",
+    "Outer": "ArmorPickupInterface",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_RubberArmor_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/ATM/BP_RubberArmor.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ArmorPickupInterface",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BPI_WpnComponent_C:ArmorPickupInterface.PickupRef",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.49"
+      },
+      {
+        "ObjectName": "BoolProperty BPI_WpnComponent_C:ArmorPickupInterface.Autopickup?",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.56"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "GetChar_SpeedAndDirectionClient",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "Function",
+    "Name": "GetChar_SpeedAndDirectionClient",
+    "Outer": "BPI_WpnComponent_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_SpeedAndDirectionClient.Speed",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.51"
+      },
+      {
+        "ObjectName": "FloatProperty BPI_WpnComponent_C:GetChar_SpeedAndDirectionClient.Direction",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.64"
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "Function",
+    "Name": "StopMeleeTrace",
+    "Outer": "BPI_WpnComponent_C",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPI_WpnComponent_C",
+    "SuperStruct": {
+      "ObjectName": "Class Interface",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:StopMeleeTrace",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.53"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_SpeedAndDirectionClient",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.52"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:ArmorPickupInterface",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.50"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsZooming",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.48"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_CantShoot",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.46"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_SwitchCamera",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.45"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_SetWeaponToInteract",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.44"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentHealth",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.42"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:AmmoPickup",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.40"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsCloaked",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.38"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentCamera",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.36"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_GetHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.34"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CharacterWeaponsComponent",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.32"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:AnimBP_AnimationRequest",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.30"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_HasCharWeaponsComponent",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.28"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsSprinting",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.26"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_DeathAnimNumber",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.24"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_PitchAndYaw",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.22"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsPlayAnim",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.20"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsJumping",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.18"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsCrouching",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.16"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsDead",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.14"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_SpeedAndDirection",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.12"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentWeapon",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.10"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_Mesh",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.8"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_Recoil",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.6"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_RefreshWeaponInHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.4"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:PC_CharInitialization",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.3"
+      },
+      {
+        "ObjectName": "Function BPI_WpnComponent_C:PC_SetHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.1"
+      }
+    ],
+    "FuncMap": {
+      "PC_SetHUD": {
+        "ObjectName": "Function BPI_WpnComponent_C:PC_SetHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.1"
+      },
+      "PC_CharInitialization": {
+        "ObjectName": "Function BPI_WpnComponent_C:PC_CharInitialization",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.3"
+      },
+      "CWC_RefreshWeaponInHUD": {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_RefreshWeaponInHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.4"
+      },
+      "WPN_Recoil": {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_Recoil",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.6"
+      },
+      "GetChar_Mesh": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_Mesh",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.8"
+      },
+      "GetChar_CurrentWeapon": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentWeapon",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.10"
+      },
+      "GetChar_SpeedAndDirection": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_SpeedAndDirection",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.12"
+      },
+      "GetChar_IsDead": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsDead",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.14"
+      },
+      "GetChar_IsCrouching": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsCrouching",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.16"
+      },
+      "GetChar_IsJumping": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsJumping",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.18"
+      },
+      "GetChar_IsPlayAnim": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsPlayAnim",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.20"
+      },
+      "GetChar_PitchAndYaw": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_PitchAndYaw",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.22"
+      },
+      "GetChar_DeathAnimNumber": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_DeathAnimNumber",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.24"
+      },
+      "GetChar_IsSprinting": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsSprinting",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.26"
+      },
+      "GetChar_HasCharWeaponsComponent": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_HasCharWeaponsComponent",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.28"
+      },
+      "AnimBP_AnimationRequest": {
+        "ObjectName": "Function BPI_WpnComponent_C:AnimBP_AnimationRequest",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.30"
+      },
+      "GetChar_CharacterWeaponsComponent": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CharacterWeaponsComponent",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.32"
+      },
+      "CWC_GetHUD": {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_GetHUD",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.34"
+      },
+      "GetChar_CurrentCamera": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentCamera",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.36"
+      },
+      "GetChar_IsCloaked": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsCloaked",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.38"
+      },
+      "AmmoPickup": {
+        "ObjectName": "Function BPI_WpnComponent_C:AmmoPickup",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.40"
+      },
+      "GetChar_CurrentHealth": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_CurrentHealth",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.42"
+      },
+      "WPN_SetWeaponToInteract": {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_SetWeaponToInteract",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.44"
+      },
+      "CWC_SwitchCamera": {
+        "ObjectName": "Function BPI_WpnComponent_C:CWC_SwitchCamera",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.45"
+      },
+      "WPN_CantShoot": {
+        "ObjectName": "Function BPI_WpnComponent_C:WPN_CantShoot",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.46"
+      },
+      "GetChar_IsZooming": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_IsZooming",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.48"
+      },
+      "ArmorPickupInterface": {
+        "ObjectName": "Function BPI_WpnComponent_C:ArmorPickupInterface",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.50"
+      },
+      "GetChar_SpeedAndDirectionClient": {
+        "ObjectName": "Function BPI_WpnComponent_C:GetChar_SpeedAndDirectionClient",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.52"
+      },
+      "StopMeleeTrace": {
+        "ObjectName": "Function BPI_WpnComponent_C:StopMeleeTrace",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.53"
+      }
+    },
+    "ClassFlags": 278544,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPI_WpnComponent_C Default__BPI_WpnComponent_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/BPI_WpnComponent.55"
+    }
+  },
+  {
+    "Type": "BPI_WpnComponent_C",
+    "Name": "Default__BPI_WpnComponent_C"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Autopickup?",
+    "Outer": "ArmorPickupInterface",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "WeaponCamActive",
+    "Outer": "GetChar_CurrentCamera",
+    "PropertyFlags": 384,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "AutoPickUp",
+    "Outer": "WPN_SetWeaponToInteract",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "WeaponType",
+    "Outer": "AmmoPickup",
+    "PropertyFlags": 148,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum E_WeaponTypes",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/E_WeaponTypes.0"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "ProjectileType",
+    "Outer": "AmmoPickup",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "BlueprintGeneratedClass BPA_ParentProjectile_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/Blueprints/Projectiles/BPA_ParentProjectile.1"
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "PlayRate",
+    "Outer": "AnimBP_AnimationRequest",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Yaw",
+    "Outer": "GetChar_PitchAndYaw",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "GetChar_SpeedAndDirection",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "GetChar_SpeedAndDirectionClient",
+    "PropertyFlags": 384
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Yaw",
+    "Outer": "WPN_Recoil",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "AmountAmmo",
+    "Outer": "AmmoPickup",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "WeaponID",
+    "Outer": "AmmoPickup",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WPNHUD",
+    "Outer": "PC_CharInitialization",
+    "PropertyFlags": 524436,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass W_WpnCompHUD_C",
+      "ObjectPath": "KevinSpel/Content/WeaponComponent/UMG/W_WpnCompHUD.1"
+    }
+  }
+]

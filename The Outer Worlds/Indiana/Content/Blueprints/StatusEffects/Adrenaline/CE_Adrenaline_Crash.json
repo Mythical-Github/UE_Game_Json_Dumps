@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Adrenaline_Crash_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Adrenaline_Crash_C Default__CE_Adrenaline_Crash_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline_Crash.1"
+    }
+  },
+  {
+    "Type": "CE_Adrenaline_Crash_C",
+    "Name": "Default__CE_Adrenaline_Crash_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Adrenaline_Crash_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline_Crash.2"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Adrenaline_Crash_C:StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline_Crash.3"
+        }
+      ],
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "EffectName": {
+        "StringID": 1619
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_AdrenaTime_Crash",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_AdrenaTime_Crash.0"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Adrenaline_Crash_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": -1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat All_Attributes",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Attributes/All_Attributes.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__CE_Adrenaline_Crash_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.9,
+        "RpgStat": {
+          "ObjectName": "RpgStat WalkSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/WalkSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "DescriptionFormat": {
+        "StringID": 1173
+      }
+    }
+  }
+]

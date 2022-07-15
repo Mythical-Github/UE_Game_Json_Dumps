@@ -1,0 +1,324 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CompAbil_Max_Alt_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CompAbil_Max_Alt_C Default__Spell_CompAbil_Max_Alt_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.1"
+    }
+  },
+  {
+    "Type": "Spell_CompAbil_Max_Alt_C",
+    "Name": "Default__Spell_CompAbil_Max_Alt_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 898
+      },
+      "DisplayDescription": {
+        "StringID": 2312
+      },
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Target",
+          "StatusEffects": [
+            {
+              "ObjectName": "ThreatStatusEffect Default__Spell_CompAbil_Max_Alt_C:ThreatStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.19"
+            },
+            {
+              "ObjectName": "CE_Weaken_C Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.5"
+            },
+            {
+              "ObjectName": "CE_LegCripple_C Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.3"
+            },
+            {
+              "ObjectName": "DirectionalAnimDisableStatusEffect Default__Spell_CompAbil_Max_Alt_C:DirectionalAnimDisableStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.8"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": true,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_LegCripple_C",
+    "Name": "CE_LegCripple_C_0",
+    "Outer": "Default__Spell_CompAbil_Max_Alt_C",
+    "Template": "Default__CE_LegCripple_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_LegCripple_PostProcess_C Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.CE_LegCripple_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.13"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.20"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.ToggleActionStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.21"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.2"
+        }
+      ],
+      "Duration": 20.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.9"
+      }
+    }
+  },
+  {
+    "Type": "CE_LegCripple_PostProcess_C",
+    "Name": "CE_LegCripple_PostProcess_C_0",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "CE_LegCripple_PostProcess_C_0"
+  },
+  {
+    "Type": "CE_Weaken_C",
+    "Name": "CE_Weaken_C_0",
+    "Outer": "Default__Spell_CompAbil_Max_Alt_C",
+    "Template": "Default__CE_Weaken_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Weaken_PostProcess_C Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.CE_Weaken_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.6"
+        },
+        {
+          "ObjectName": "HitReactionStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.HitReactionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.11"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.StatModifierStatusEffect_20",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.15"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.14"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.StatModifierStatusEffect_4",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.16"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.StatModifierStatusEffect_6",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.18"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Max_Alt_C:CE_Weaken_C_0.StatModifierStatusEffect_5",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_Weaken_PostProcess_C",
+    "Name": "CE_Weaken_PostProcess_C_0",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "CE_Weaken_PostProcess_C_0"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DirectionalAnimDisableStatusEffect",
+    "Name": "DirectionalAnimDisableStatusEffect_1",
+    "Outer": "Default__Spell_CompAbil_Max_Alt_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Groin"
+      },
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "StatModifierStatusEffect_0",
+    "Template": "EventEffects_1",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayAnimStateEventEffect Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.StatModifierStatusEffect_0.EventEffects_1.PlayAnimStateEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HitReactionStatusEffect",
+    "Name": "HitReactionStatusEffect_0",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "HitReactionStatusEffect_0"
+  },
+  {
+    "Type": "PlayAnimStateEventEffect",
+    "Name": "PlayAnimStateEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Template": "PlayAnimStateEventEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "StatModifierStatusEffect_0",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Max_Alt_C:CE_LegCripple_C_0.StatModifierStatusEffect_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Max_Alt.10"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_2"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_20",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_20"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_4",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_4"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_5",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_5"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_6",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_6"
+  },
+  {
+    "Type": "ThreatStatusEffect",
+    "Name": "ThreatStatusEffect_0",
+    "Outer": "Default__Spell_CompAbil_Max_Alt_C",
+    "Properties": {
+      "ThreatScalar": 0.2,
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bIsHostile": true,
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "ToggleActionStatusEffect_0"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_1",
+    "Outer": "CE_LegCripple_C_0",
+    "Template": "ToggleActionStatusEffect_1"
+  }
+]

@@ -1,0 +1,430 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CompAbil_Parvati_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CompAbil_Parvati_C Default__Spell_CompAbil_Parvati_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.1"
+    }
+  },
+  {
+    "Type": "Spell_CompAbil_Parvati_C",
+    "Name": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 1463
+      },
+      "DisplayDescription": {
+        "StringID": 2308
+      },
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Target",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_Knockout_C Default__Spell_CompAbil_Parvati_C:CE_Knockout_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.4"
+            },
+            {
+              "ObjectName": "ThreatStatusEffect Default__Spell_CompAbil_Parvati_C:ThreatStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.17"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": true,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        },
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_Stun_C Default__Spell_CompAbil_Parvati_C:CE_Stun_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.5"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_CreatureType Default__Spell_CompAbil_Parvati_C:SpellConditional_CreatureType_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.11"
+            },
+            {
+              "ObjectName": "SpellConditional_IsHostileToPlayer Default__Spell_CompAbil_Parvati_C:SpellConditional_IsHostileToPlayer_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.12"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_CompAbil_Parvati_C:SphereShape_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.15"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Target",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "Chest",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        },
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "DamageStatusEffect Default__Spell_CompAbil_Parvati_C:DamageStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.7"
+            },
+            {
+              "ObjectName": "CE_HeavyHitReact_C Default__Spell_CompAbil_Parvati_C:CE_HeavyHitReact_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.3"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_IsHostileToPlayer Default__Spell_CompAbil_Parvati_C:SpellConditional_IsHostileToPlayer_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.13"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": true,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_CompAbil_Parvati_C:SphereShape_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.16"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Target",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "Chest",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Stun_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_HeavyHitReact_C",
+    "Name": "CE_HeavyHitReact_C_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Template": "Default__CE_HeavyHitReact_C",
+    "Properties": {
+      "bRotateToFace": true,
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "CE_Knockout_C",
+    "Name": "CE_Knockout_C_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Template": "Default__CE_Knockout_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "RagdollDisable Default__Spell_CompAbil_Parvati_C:CE_Knockout_C_0.RagdollDisable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.10"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Parvati_C:CE_Knockout_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.8"
+      }
+    }
+  },
+  {
+    "Type": "CE_Stun_C",
+    "Name": "CE_Stun_C_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Template": "Default__CE_Stun_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_CompAbil_Parvati_C:CE_Stun_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.2"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Parvati_C:CE_Stun_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.9"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "DamageValue": 30.0,
+      "DamageScalars": 2,
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Shock_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Shock_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "AOECollisionShape": {
+        "Shape": {
+          "ObjectName": "SphereShape Default__Spell_CompAbil_Parvati_C:DamageStatusEffect_0.SphereShape_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.14"
+        }
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Knockout_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_CompAbil_Parvati_C:CE_Knockout_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Parvati.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Stun_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "RagdollDisable",
+    "Name": "RagdollDisable_0",
+    "Outer": "CE_Knockout_C_0",
+    "Template": "RagdollDisable_0"
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Robot"
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToPlayer",
+    "Name": "SpellConditional_IsHostileToPlayer_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C"
+  },
+  {
+    "Type": "SpellConditional_IsHostileToPlayer",
+    "Name": "SpellConditional_IsHostileToPlayer_1",
+    "Outer": "Default__Spell_CompAbil_Parvati_C"
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "DamageStatusEffect_0",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 700.0
+      }
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 700.0
+      }
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_1",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 700.0
+      }
+    }
+  },
+  {
+    "Type": "ThreatStatusEffect",
+    "Name": "ThreatStatusEffect_1",
+    "Outer": "Default__Spell_CompAbil_Parvati_C",
+    "Properties": {
+      "ThreatScalar": 0.2,
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bIsHostile": true,
+      "bDontDisplayDescription": true
+    }
+  }
+]

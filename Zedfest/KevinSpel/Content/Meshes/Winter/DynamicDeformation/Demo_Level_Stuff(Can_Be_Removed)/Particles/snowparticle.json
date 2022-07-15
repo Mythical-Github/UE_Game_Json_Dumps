@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "Material",
+    "Name": "snowparticle",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSample snowparticle:MaterialExpressionTextureSample_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticle.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall snowparticle:MaterialExpressionMaterialFunctionCall_9",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticle.1"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+          "Function": {
+            "ObjectName": "MaterialFunction ExponentialDensity",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+          }
+        },
+        {
+          "StateId": "235C8133-44D704CA-0297108A-59B9F710",
+          "Function": {
+            "ObjectName": "MaterialFunction RadialGradientExponential",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+          }
+        }
+      ],
+      "StateId": "7BAEB30E-4E505992-03345895-A9308410",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_9",
+    "Outer": "snowparticle",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction RadialGradientExponential",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+      },
+      "Material": {
+        "ObjectName": "Material snowparticle",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticle.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "snowparticle",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D snowfallpng",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowfallpng.0"
+      },
+      "Material": {
+        "ObjectName": "Material snowparticle",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticle.0"
+      }
+    }
+  }
+]

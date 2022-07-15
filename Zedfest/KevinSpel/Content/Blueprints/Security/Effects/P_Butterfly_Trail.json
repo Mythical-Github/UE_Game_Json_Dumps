@@ -1,0 +1,699 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_0",
+    "Outer": "ParticleModuleSizeMultiplyLife_0",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 0.7,
+            "OutVal": {
+              "X": 0.25,
+              "Y": 0.25,
+              "Z": 0.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Butterfly_Trail:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Butterfly_Trail:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Butterfly_Trail:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Butterfly_Trail:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.5"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_Butterfly_Trail:ParticleModuleLocation_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.7"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant P_Butterfly_Trail:ParticleModuleAccelerationConstant_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Butterfly_Trail:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.10"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Butterfly_Trail:ParticleModuleVelocity_3",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.14"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocityInheritParent P_Butterfly_Trail:ParticleModuleVelocityInheritParent_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.15"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeScaleBySpeed P_Butterfly_Trail:ParticleModuleSizeScaleBySpeed_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.11"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu P_Butterfly_Trail:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Butterfly_Trail:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.12"
+      },
+      "PeakActiveParticles": 204
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_1",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -10.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -6.0,
+        "MinValueVec": {
+          "X": -6.0,
+          "Y": 0.0,
+          "Z": -1.1
+        },
+        "MaxValueVec": {
+          "X": -6.0,
+          "Y": 0.0,
+          "Z": -1.1
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            -6.0,
+            0.0,
+            -1.1
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Particle_Glow",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Security/Materials/M_Particle_Glow.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Butterfly_Trail:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve P_Butterfly_Trail:ParticleModuleSizeMultiplyLife_0.DistributionVectorConstantCurve_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.2"
+        }
+      },
+      "MultiplyZ": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeScaleBySpeed",
+    "Name": "ParticleModuleSizeScaleBySpeed_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "SpeedScale": {
+        "X": 2.0,
+        "Y": 1.0
+      },
+      "MaxScale": {
+        "X": 1.0,
+        "Y": 7.0
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "Rate": {
+        "MinValue": 100.0,
+        "MaxValue": 100.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            100.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Butterfly_Trail:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired P_Butterfly_Trail:ParticleModuleRequired_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.8"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn P_Butterfly_Trail:ParticleModuleSpawn_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.12"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired P_Butterfly_Trail:ParticleModuleRequired_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.8"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime P_Butterfly_Trail:ParticleModuleLifetime_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.6"
+          },
+          {
+            "ObjectName": "ParticleModuleSize P_Butterfly_Trail:ParticleModuleSize_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.9"
+          },
+          {
+            "ObjectName": "ParticleModuleLocation P_Butterfly_Trail:ParticleModuleLocation_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.7"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity P_Butterfly_Trail:ParticleModuleVelocity_3",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.14"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocityInheritParent P_Butterfly_Trail:ParticleModuleVelocityInheritParent_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.15"
+          }
+        ],
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -10.0
+        },
+        "InvMaxSize": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "InvRotationRateScale": 0.5,
+        "MaxLifetime": 2.0,
+        "MaxParticleCount": 204,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 254,
+            "G": 254,
+            "R": 255,
+            "A": 255,
+            "Hex": "FFFFFEFE"
+          },
+          {
+            "B": 133,
+            "G": 133,
+            "R": 133,
+            "A": 240,
+            "Hex": "F0858585"
+          },
+          {
+            "B": 12,
+            "G": 12,
+            "R": 12,
+            "A": 203,
+            "Hex": "CB0C0C0C"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 153,
+            "Hex": "99000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 99,
+            "Hex": "63000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 50,
+            "Hex": "32000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 14,
+            "Hex": "0E000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFF00"
+          },
+          {
+            "B": 0,
+            "G": 133,
+            "R": 133,
+            "A": 0,
+            "Hex": "858500"
+          },
+          {
+            "B": 0,
+            "G": 12,
+            "R": 12,
+            "A": 0,
+            "Hex": "0C0C00"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.95,
+          "Y": 0.7,
+          "Z": 0.3,
+          "W": 1.5
+        },
+        "ColorBias": {
+          "X": 0.05,
+          "Y": 0.3,
+          "Z": 0.7,
+          "W": 0.0
+        },
+        "MiscScale": {
+          "X": 0.75,
+          "Y": 0.75,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 0.25,
+          "Y": 0.25,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 2.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 7.0
+        },
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -10.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 2.0,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "bClearExistingParticlesOnInit": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_3",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -1.0,
+          "Z": -1.0
+        },
+        "MaxValueVec": {
+          "X": -5.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -10.0,
+            -1.0,
+            -1.0,
+            -5.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocityInheritParent",
+    "Name": "ParticleModuleVelocityInheritParent_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "Scale": {
+        "MinValue": 0.2,
+        "MaxValue": 0.3,
+        "MinValueVec": {
+          "X": 0.3,
+          "Y": 0.2,
+          "Z": 0.2
+        },
+        "MaxValueVec": {
+          "X": 0.3,
+          "Y": 0.2,
+          "Z": 0.2
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.3,
+            0.2,
+            0.2
+          ]
+        }
+      },
+      "bInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Butterfly_Trail",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Butterfly_Trail:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Butterfly_Trail",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Butterfly_Trail:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/Security/Effects/P_Butterfly_Trail.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -100.0,
+          "Y": -100.0,
+          "Z": -100.0
+        },
+        "Max": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "ThumbnailImageOutOfDate": false,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,5726 @@
+[
+  {
+    "Type": "BoolProperty",
+    "Name": "RandomIdle",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Snake_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 76,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 10,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 77,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 9,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 78,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 79,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 44,
+              "StartNotify": 0,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 80,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 81,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 68,
+              "StartNotify": 1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                69
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "walk",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 82,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 83,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 70,
+              "StartNotify": 2,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                71
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "TurnInPlace",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 84,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 72,
+              "StartNotify": 3,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                73
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "CombatTurnInPlace",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 85,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 8,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 86,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 74,
+              "StartNotify": 4,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                75
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Cubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Cubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "NonCombatIdle",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 52,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 53,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 54,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 55,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 46,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Furniture 1 Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 56,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 57,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 48,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Furniture 0 Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 58,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 59,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 50,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "CombatIdle",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 66,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 62,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Fidgets",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 67,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 64,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_CREA_Snake_001_Skeleton",
+        "ObjectPath": "Indiana/Content/Art/CREA/LeatherBoa/SK_CREA_Snake_001_Skeleton.16"
+      },
+      "AnimNotifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCIdleEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCRunEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCWalkEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "NCTurnEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "CTurnEntered",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        }
+      ],
+      "OrderedSavedPoseIndices": [
+        0
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class WormAnimInstance",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.1"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.18"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:CombatTransition",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.17"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:NeutralTransition",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.16"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:OnNewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.15"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.13"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:AnimNotify_TurnOffRandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.12"
+      },
+      {
+        "ObjectName": "Function Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.6"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Root_654769A244974CF7BD51E9849298CF65",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.4"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_87DE3C854217F008415D04A12786FF4A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.101"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_A83B731044F9BC75272788850A144E19",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.104"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_D88FA2E749D27B91FDEA818D80F2FC39",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.108"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_C51B441844ED7CDC8B49508942ADF773",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.107"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_703203E94E66CBC87976DBAEADCF07F1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.99"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_B4F5E6474C0007FA2941F0966052D7C2",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.105"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_14073BAA4448240CD77CDE9263426CF0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.91"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_F1727AA541DEA4CC84CB178A561F638C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.111"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_3C4D1F22472E0D252E6D9F8802E85096",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.94"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_370CDB40422F232B4524198A26A3CB62",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.92"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_DC93B3E541CE6FF57A2525913C28FA99",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.110"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_SequencePlayer_8039C54C4669B1819BEF60B3BA5EB7FA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.71"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_B3C944EB4ED1008F16E006BFD2E6FAAD",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.86"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_LocomotionPlay_E4571620486518A30487CC829B6FD341",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.60"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_663E19034EC22DF1B37B5B85921FBC6C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.84"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_SequencePlayer_351427DD4E3BCE12F922BBB927646961",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.69"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_C0E1F8924F0D337FBEE924A7E3F97E1E",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.87"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_SequencePlayer_6A388C5345E8D4F54B0F37B7EF18252A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.70"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_9CF7566C4267027527D6C5AC0E35F3CC",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.85"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_A767AF5348113C1B11873DB1719C62C0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.103"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_41620D71477069526349CAA215D2D5BF",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.95"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_RandomPlayer_27FBA26648FF06ED6940B6AD20ACDE5F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.64"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_5FCCEAD349B2030C7C480CB309A3D8FD",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.83"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_RandomPlayer_0B81ECD441FF43894D05CDB964FFB964",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.63"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_28F99F0842BDA70D09646E8140866F53",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.81"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateMachine_B3BC257E4304021F8D0740A1858EA58F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.80"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_BlendListByBool_464F691A4B5A82928D82498CB34422B2",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.28"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_4FAF6F2E4AD80E524AE89C87BCF92EDB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.96"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_D920143A43BC21D795822D9344A37A3A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.109"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_3C20F12144D84D9520AC99BCC0B0C5D7",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.93"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_79AA84964954CE1015466989E5E3FF42",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.100"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_B59A0E45471A268B1AD051953BB4DF41",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.106"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_62CAFB4348E1B99996F550B2474B6B6A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.97"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_A2144CE3485CC514315E1F97887895AA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.102"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TransitionResult_6BEA8FC04FD9492F8E55BD99B176D659",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.98"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_RandomSequenceNamed_1E93BEEB4207AD6F79516B92F19B25AC",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.66"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_5AC3BE8D40EB77675F56C4B6FF5FBF26",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.82"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_RandomSequenceNamed_93310E5C49778A2889EB9891D442C806",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.67"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_E005EBF84A013CDECAF44C84706758C0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.89"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_RandomPlayer_7882640943EA3AB20B2835B2DE4249A6",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.65"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_EA91DFFE4124DEBC268C11872839C5E8",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.90"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateMachine_41FAFCB64FCF494FE783DC988890BAF4",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.79"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateResult_DF647F10450ACA38EBC4868DC9C73749",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.88"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_StateMachine_360230194F794E35985054AAFC6332A2",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.78"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_856538A145D656B2FE043A9DE030E704",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.75"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_6086E2404F94C06AD48075BECA4546A7",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.73"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_4200C03C45AFFF98697655ABEDAD6264",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.72"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_6B802B054E0035A0DC30229CEA514FA6",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.74"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_BlendListByBool_AC44062247AF70054299158D59D449EE",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.29"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_LocalRefPose_A72E838E45930F003521A1B601F70FC7",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.58"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_BlendListByBool_E544F9A343BAB020DD4012B23F198189",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.30"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_PoseSnapshot_959FBD954A9CD02EDE048E9232E51835",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.62"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_9AC3E28B422CC4701263B580DCD831CD",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.76"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_Slot_ACBBDC274E54E4B58D4C4FA74D651827",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.77"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_CBEC10BE42BC8E5216F4239839D97A9A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.57"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_LocalToComponentSpace_886AADEE45DFFED1BE8FF9ADBF67C495",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.59"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_6309841B45B9FFB06379EB82382240C0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.47"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_870B7DC349A338ADF014A788B7B314FA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.51"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_7E87D3A0422A080A8D68B0846557A3EB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.50"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_9DDD99564ACC6E82A0038188D9E890C4",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.52"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_2AB6E59B4C7EE7A2642D848F60C4F719",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.45"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_ComponentToLocalSpace_466E32714504FBED001232A026DA3C0C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.31"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_57B34D274ACA78851B999CA6439C8602",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.46"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_A8AAEE6F40406875841B339D5A55EE07",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.54"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_54767ABA4E5B8F1B63AB25B95C0BA949",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.36"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_B798D52943493AC9D913ADB6E5213FB9",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.42"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_31DE14AD44D998423FB318A2EC989658",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.34"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_3826756C4041AE49A62028AD1A38D575",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.35"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_9787BA134A735D1D77EE77A7D3B48419",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.40"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_88AA44ED4A56150FD9A6ACB2D18E3F81",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.39"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_6AB8B7CF4F8D70264C9D57ABB8AB49EA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.38"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_23E55EBE4DCED84449FAFA80A3F53826",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.33"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_ModifyBone_856A32134CC143EA2B9399BFE312EB59",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.61"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_78AADEF04C081C05410621AE49F89D39",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.49"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_B97E30734C46C3B08CCB91A23F7A3F42",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.55"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_A300559948A756C5E5ACA8BB2553C15C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.53"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_BB68B491456A6863AF53F9B5F7CF4ED3",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.56"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_10376C554197ECB9F44E9089403EEB1F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.32"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_A3567B6D4DF77A52A55093B76CF98234",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.41"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_C1C944704EC1777787D5B4BB8392AE8A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.43"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_5AF04DA143DBFE771DC70B88DEBDAE3D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.37"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_JointDriver_73BBBC2B4BD69114D03FB2B36A043990",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.48"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_CopyBone_C92A242C4AB6CD18D29467A1D6E68D48",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.44"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_TwoWayBlend_6072CD754AAB510F754B73903B0EDB97",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.112"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_UseCachedPose_54A3429242143775474A04B67EDC8B8F",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.113"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_UseCachedPose_C7C4A4F74CCA03A52448B8927199E985",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.114"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:AnimGraphNode_SaveCachedPose_96A4B3C5490B283A3D1E02BDEC86ACCA",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.68"
+      },
+      {
+        "ObjectName": "ObjectProperty Snake_AnimBP_C:WeaponAnimationsBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.27"
+      },
+      {
+        "ObjectName": "ByteProperty Snake_AnimBP_C:CombatEnum",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.9"
+      },
+      {
+        "ObjectName": "BoolProperty Snake_AnimBP_C:RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.0"
+      },
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:HitFlinchActive",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.22"
+      },
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:HitReactionDirection",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.23"
+      },
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:HitReactionRate",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.24"
+      },
+      {
+        "ObjectName": "EnumProperty Snake_AnimBP_C:HitReactionType",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.11"
+      },
+      {
+        "ObjectName": "StructProperty Snake_AnimBP_C:HipSmooth",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.115"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Snake_AnimBP": {
+        "ObjectName": "Function Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.6"
+      },
+      "AnimNotify_TurnOffRandomIdle": {
+        "ObjectName": "Function Snake_AnimBP_C:AnimNotify_TurnOffRandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.12"
+      },
+      "AnimNotify_RandomIdle": {
+        "ObjectName": "Function Snake_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.13"
+      },
+      "OnNewWeaponAnimations": {
+        "ObjectName": "Function Snake_AnimBP_C:OnNewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.15"
+      },
+      "NeutralTransition": {
+        "ObjectName": "Function Snake_AnimBP_C:NeutralTransition",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.16"
+      },
+      "CombatTransition": {
+        "ObjectName": "Function Snake_AnimBP_C:CombatTransition",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.17"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function Snake_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.18"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Snake_AnimBP_C Default__Snake_AnimBP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.3"
+    }
+  },
+  {
+    "Type": "Snake_AnimBP_C",
+    "Name": "Default__Snake_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_654769A244974CF7BD51E9849298CF65": {
+        "Result": {
+          "LinkID": 51
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_87DE3C854217F008415D04A12786FF4A": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A83B731044F9BC75272788850A144E19": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_D88FA2E749D27B91FDEA818D80F2FC39": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_C51B441844ED7CDC8B49508942ADF773": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_703203E94E66CBC87976DBAEADCF07F1": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsRun",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty IndianaAnimInstance:bSpeedIsRun",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_B4F5E6474C0007FA2941F0966052D7C2": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsIdle",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_14073BAA4448240CD77CDE9263426CF0": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsWalk",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsWalk",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_F1727AA541DEA4CC84CB178A561F638C": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsWalk",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bSpeedIsWalk",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_3C4D1F22472E0D252E6D9F8802E85096": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bSpeedIsRun",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty IndianaAnimInstance:bSpeedIsRun",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_370CDB40422F232B4524198A26A3CB62": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CTurnInPlace",
+              "SourceSubPropertyName": "EnterNode0",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:CTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "BoolProperty LocomotionNode:EnterNode0",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_DC93B3E541CE6FF57A2525913C28FA99": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "EnterNode0",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "BoolProperty LocomotionNode:EnterNode0",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_8039C54C4669B1819BEF60B3BA5EB7FA": {
+        "Sequence": null,
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CTurnInPlace",
+              "SourceSubPropertyName": "Node0Sequence",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "ObjectProperty AnimNode_SequencePlayer:Sequence",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 8,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::ObjectProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:CTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "ObjectProperty LocomotionNode:Node0Sequence",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_B3C944EB4ED1008F16E006BFD2E6FAAD": {
+        "Result": {
+          "LinkID": 12
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocomotionPlay_E4571620486518A30487CC829B6FD341": {
+        "CurrentSlot": -1,
+        "Sequence": null,
+        "bLoopAnimation": false,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "NCTurnInPlace",
+              "SourceSubPropertyName": "Node0Sequence",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "ObjectProperty AnimNode_SequencePlayer:Sequence",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 8,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::ObjectProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:NCTurnInPlace",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": {
+                "ObjectName": "ObjectProperty LocomotionNode:Node0Sequence",
+                "ObjectPath": "/Script/Indiana"
+              }
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_663E19034EC22DF1B37B5B85921FBC6C": {
+        "Result": {
+          "LinkID": 14
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_351427DD4E3BCE12F922BBB927646961": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AS_CREA_Snake_Run",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Snake_Run.3"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "WalkPlayRate",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_SequencePlayer:PlayRate",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::MemCopy",
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty TPVAnimInstance:WalkPlayRate",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_C0E1F8924F0D337FBEE924A7E3F97E1E": {
+        "Result": {
+          "LinkID": 16
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_6A388C5345E8D4F54B0F37B7EF18252A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AS_CREA_Snake_Run",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Snake_Run.3"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RunPlayRate",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_SequencePlayer:PlayRate",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::MemCopy",
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty TPVAnimInstance:RunPlayRate",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_9CF7566C4267027527D6C5AC0E35F3CC": {
+        "Result": {
+          "LinkID": 18
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A767AF5348113C1B11873DB1719C62C0": {
+        "bCanEnterTransition": true,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_41620D71477069526349CAA215D2D5BF": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RandomIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty Snake_AnimBP_C:RandomIdle",
+                "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.0"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_27FBA26648FF06ED6940B6AD20ACDE5F": {
+        "bShuffleMode": true,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_Snake_Idle",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Snake_Idle.2"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_5FCCEAD349B2030C7C480CB309A3D8FD": {
+        "Result": {
+          "LinkID": 22
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_0B81ECD441FF43894D05CDB964FFB964": {
+        "bShuffleMode": true,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_Snake_Idle",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Snake_Idle.2"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_28F99F0842BDA70D09646E8140866F53": {
+        "Result": {
+          "LinkID": 24
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_B3BC257E4304021F8D0740A1858EA58F": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_464F691A4B5A82928D82498CB34422B2": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 26
+          },
+          {
+            "LinkID": 42
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bCombatEnumIsCombat",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bCombatEnumIsCombat",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_4FAF6F2E4AD80E524AE89C87BCF92EDB": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_D920143A43BC21D795822D9344A37A3A": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotionActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotionActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_3C20F12144D84D9520AC99BCC0B0C5D7": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_79AA84964954CE1015466989E5E3FF42": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotionActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotionActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_B59A0E45471A268B1AD051953BB4DF41": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_62CAFB4348E1B99996F550B2474B6B6A": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1Active",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1Active",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A2144CE3485CC514315E1F97887895AA": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion1ActiveCut",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion1ActiveCut",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_6BEA8FC04FD9492F8E55BD99B176D659": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsEmotion0ActiveCut",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsEmotion0ActiveCut",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomSequenceNamed_1E93BEEB4207AD6F79516B92F19B25AC": {
+        "bShuffleMode": false,
+        "bRandomTimeOnInitialize": false,
+        "RandomTimePercentage": 1.0,
+        "RandomTimeStart": 0.0,
+        "ListName": "Emotion0BaseIdle",
+        "SetUpdateName": "EmotionLayerInvalidate0",
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_5AC3BE8D40EB77675F56C4B6FF5FBF26": {
+        "Result": {
+          "LinkID": 36
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomSequenceNamed_93310E5C49778A2889EB9891D442C806": {
+        "bShuffleMode": false,
+        "bRandomTimeOnInitialize": false,
+        "RandomTimePercentage": 1.0,
+        "RandomTimeStart": 0.0,
+        "ListName": "Emotion1BaseIdle",
+        "SetUpdateName": "EmotionLayerInvalidate1",
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_E005EBF84A013CDECAF44C84706758C0": {
+        "Result": {
+          "LinkID": 38
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_7882640943EA3AB20B2835B2DE4249A6": {
+        "bShuffleMode": true,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_Snake_Idle",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Snake_Idle.2"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.8,
+            "MaxPlayRate": 1.2,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_EA91DFFE4124DEBC268C11872839C5E8": {
+        "Result": {
+          "LinkID": 40
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_41FAFCB64FCF494FE783DC988890BAF4": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_DF647F10450ACA38EBC4868DC9C73749": {
+        "Result": {
+          "LinkID": 27
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_360230194F794E35985054AAFC6332A2": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_856538A145D656B2FE043A9DE030E704": {
+        "Source": {
+          "LinkID": 44
+        },
+        "SlotName": "Attack",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_6086E2404F94C06AD48075BECA4546A7": {
+        "Source": {
+          "LinkID": 86
+        },
+        "SlotName": "HitFlinch",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_4200C03C45AFFF98697655ABEDAD6264": {
+        "Source": {
+          "LinkID": 45
+        },
+        "SlotName": "hitReaction",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_6B802B054E0035A0DC30229CEA514FA6": {
+        "Source": {
+          "LinkID": 54
+        },
+        "SlotName": "Death",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_AC44062247AF70054299158D59D449EE": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 50
+          },
+          {
+            "LinkID": 62
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsRagdolling",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bIsRagdolling",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocalRefPose_A72E838E45930F003521A1B601F70FC7": {
+        "RefPoseType": "EIT_LocalSpace",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_BlendListByBool_E544F9A343BAB020DD4012B23F198189": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 52
+          },
+          {
+            "LinkID": 53
+          }
+        ],
+        "BlendTime": [
+          0.0,
+          0.25
+        ],
+        "BlendType": "EAlphaBlendOption::Cubic",
+        "CustomBlendCurve": null,
+        "BlendProfile": null,
+        "Blends": [],
+        "BlendWeights": [],
+        "RemainingBlendTimes": [],
+        "LastActiveChildIndex": 0,
+        "PerBoneSampleData": [],
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bRagdollSnapshotActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty TPVAnimInstance:bRagdollSnapshotActive",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_PoseSnapshot_959FBD954A9CD02EDE048E9232E51835": {
+        "Mode": "ESnapshotSourceMode::SnapshotPin",
+        "SnapshotName": "RagdollSnapshot",
+        "Snapshot": {
+          "LocalTransforms": [],
+          "BoneNames": [],
+          "SkeletalMeshName": "None",
+          "SnapshotName": "None",
+          "bIsValid": false
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RagdollSnapshot",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_PoseSnapshot:Snapshot",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 64,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::StructProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty TPVAnimInstance:RagdollSnapshot",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_9AC3E28B422CC4701263B580DCD831CD": {
+        "Source": {
+          "LinkID": 49
+        },
+        "SlotName": "RagdollGetup",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_Slot_ACBBDC274E54E4B58D4C4FA74D651827": {
+        "Source": {
+          "LinkID": 47
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_CBEC10BE42BC8E5216F4239839D97A9A": {
+        "IKChainName": "Segment12",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin12_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin12_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 57
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_LocalToComponentSpace_886AADEE45DFFED1BE8FF9ADBF67C495": {
+        "LocalPose": {
+          "LinkID": 84
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_6309841B45B9FFB06379EB82382240C0": {
+        "IKChainName": "Segment11",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin11_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin11_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 58
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_870B7DC349A338ADF014A788B7B314FA": {
+        "IKChainName": "Segment10",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin10_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin10_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 59
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_7E87D3A0422A080A8D68B0846557A3EB": {
+        "IKChainName": "Segment9",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin09_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin09_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 60
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_9DDD99564ACC6E82A0038188D9E890C4": {
+        "IKChainName": "Segment8",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin08_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin08_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 61
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_2AB6E59B4C7EE7A2642D848F60C4F719": {
+        "IKChainName": "Segment7",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin07_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin07_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 63
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace_466E32714504FBED001232A026DA3C0C": {
+        "ComponentPose": {
+          "LinkID": 65
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_57B34D274ACA78851B999CA6439C8602": {
+        "IKChainName": "Segment6",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin06_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin06_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 64
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_A8AAEE6F40406875841B339D5A55EE07": {
+        "IKChainName": "Segment5",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin05_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin05_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 74
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_54767ABA4E5B8F1B63AB25B95C0BA949": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin12_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin12_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 66
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_B798D52943493AC9D913ADB6E5213FB9": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin11_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin11_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 67
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_31DE14AD44D998423FB318A2EC989658": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin10_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin10_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 68
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_3826756C4041AE49A62028AD1A38D575": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin09_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin09_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 69
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_9787BA134A735D1D77EE77A7D3B48419": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin08_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin08_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 70
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_88AA44ED4A56150FD9A6ACB2D18E3F81": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin07_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin07_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 71
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_6AB8B7CF4F8D70264C9D57ABB8AB49EA": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin06_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin06_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 72
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_23E55EBE4DCED84449FAFA80A3F53826": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin05_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin05_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 78
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_ModifyBone_856A32134CC143EA2B9399BFE312EB59": {
+        "BoneToModify": {
+          "BoneName": "head_JNT"
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Rotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "TranslationMode": "BMM_Additive",
+        "RotationMode": "BMM_Ignore",
+        "ScaleMode": "BMM_Ignore",
+        "TranslationSpace": "BCS_ComponentSpace",
+        "RotationSpace": "BCS_ComponentSpace",
+        "ScaleSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 56
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HipOffset",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_ModifyBone:Translation",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 12,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::StructProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty WormAnimInstance:HipOffset",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_78AADEF04C081C05410621AE49F89D39": {
+        "IKChainName": "Segment4",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin04_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin04_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 75
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_B97E30734C46C3B08CCB91A23F7A3F42": {
+        "IKChainName": "Segment3",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin03_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin03_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 76
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_A300559948A756C5E5ACA8BB2553C15C": {
+        "IKChainName": "Segment2",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin02_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin02_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 77
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_BB68B491456A6863AF53F9B5F7CF4ED3": {
+        "IKChainName": "Segment1",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "skin01_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_skin01_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 82
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_10376C554197ECB9F44E9089403EEB1F": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin04_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin04_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 79
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_A3567B6D4DF77A52A55093B76CF98234": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin03_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin03_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 80
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_C1C944704EC1777787D5B4BB8392AE8A": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin02_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin02_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 81
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_5AF04DA143DBFE771DC70B88DEBDAE3D": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_skin01_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "skin01_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 83
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_JointDriver_73BBBC2B4BD69114D03FB2B36A043990": {
+        "IKChainName": "Segment0",
+        "FootID": "EFootID::None",
+        "FootDownDistance": -1.0,
+        "FootUpDistance": -1.0,
+        "BoneThatWillBeIKed": {
+          "BoneName": "neck_JNT"
+        },
+        "BoneToModify": {
+          "BoneName": "VB Root_NSK_neck_JNT"
+        },
+        "UpperLegJoint": {
+          "BoneName": "None"
+        },
+        "HipBoneToUseForHeightCalculation": {
+          "BoneName": "None"
+        },
+        "PlantRollAmount": 1.0,
+        "MaxPitchClamp": 20.0,
+        "MinPitchClamp": -80.0,
+        "MaxHeightCompensation": 40.0,
+        "SetTransformOnMiss": true,
+        "bDoHeightCompensation": false,
+        "bPerformVelocityCompensation": false,
+        "ComponentPose": {
+          "LinkID": 73
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_CopyBone_C92A242C4AB6CD18D29467A1D6E68D48": {
+        "SourceBone": {
+          "BoneName": "VB Root_NSK_neck_JNT"
+        },
+        "TargetBone": {
+          "BoneName": "neck_JNT"
+        },
+        "bCopyTranslation": true,
+        "bCopyRotation": true,
+        "bCopyScale": true,
+        "ControlSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 55
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TwoWayBlend_6072CD754AAB510F754B73903B0EDB97": {
+        "A": {
+          "LinkID": 85
+        },
+        "B": {
+          "LinkID": 46
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 0.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "BlendOption": "EAlphaBlendOption::Linear",
+            "CustomCurve": null,
+            "BlendTime": 0.2
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "InternalBlendAlpha": 0.0,
+        "bAIsRelevant": false,
+        "bBIsRelevant": false,
+        "bResetChildOnActivation": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HitFlinchAlpha",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_TwoWayBlend:Alpha",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::MemCopy",
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty TPVAnimInstance:HitFlinchAlpha",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_UseCachedPose_54A3429242143775474A04B67EDC8B8F": {
+        "LinkToCachingNode": {
+          "LinkID": 87
+        },
+        "CachePoseName": "PreFlinch",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_UseCachedPose_C7C4A4F74CCA03A52448B8927199E985": {
+        "LinkToCachingNode": {
+          "LinkID": 87
+        },
+        "CachePoseName": "PreFlinch",
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SaveCachedPose_96A4B3C5490B283A3D1E02BDEC86ACCA": {
+        "Pose": {
+          "LinkID": 48
+        },
+        "CachePoseName": "PreFlinch",
+        "GlobalWeight": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "HipSmooth": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "LocomotionTurnInPlace": [
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_30_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_30_Left.0"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_30_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_30_Right.0"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_90_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_90_Left.2"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_90_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_90_Right.2"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_160_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_160_Left.3"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_160_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_160_Right.3"
+        }
+      ],
+      "CombatTurnInPlace": [
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_30_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_30_Left.0"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_30_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_30_Right.0"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_90_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_90_Left.2"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_90_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_90_Right.2"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_160_Left",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_160_Left.3"
+        },
+        {
+          "ObjectName": "AnimSequence AS_CREA_Boa_Loco_Turn_160_Right",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Snake/AS_CREA_Boa_Loco_Turn_160_Right.3"
+        }
+      ],
+      "WalkSpeed": 860.0,
+      "CombatWalkSpeedAuthored": 860.0,
+      "bHasLocomotionLogicComponent": true,
+      "UpdateRateThresholds": [
+        2E-06,
+        1E-06
+      ],
+      "HipBone": "skin07_JNT",
+      "bFlipFaceUpForwardVector": false,
+      "bUseGetUpAnimation": false,
+      "DefaultWeaponAnimationsTemplate": {
+        "ObjectName": "BlueprintGeneratedClass CREA_Snake_WeaponAnimations_BP_C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/CREA_Snake_WeaponAnimations_BP.0"
+      },
+      "bFootIKEnabled": true,
+      "FootRayDown": -100.0
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_654769A244974CF7BD51E9849298CF65",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Snake_AnimBP",
+    "Outer": "Snake_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.5"
+      },
+      {
+        "ObjectName": "BoolProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.CallFunc_IsMontagePlayingOnSlot_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.7"
+      },
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.CallFunc_Conv_BoolToFloat_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.20"
+      },
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.21"
+      },
+      {
+        "ObjectName": "ObjectProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.K2Node_Event_NewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.26"
+      },
+      {
+        "ObjectName": "ObjectProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.K2Node_DynamicCast_AsCREA_Snake_Weapon_Animations_BP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.25"
+      },
+      {
+        "ObjectName": "BoolProperty Snake_AnimBP_C:ExecuteUbergraph_Snake_AnimBP.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.8"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsMontagePlayingOnSlot_ReturnValue",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CombatEnum",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum CombatEnum",
+      "ObjectPath": "Indiana/Content/Blueprints/AI/Animation/CombatEnum.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "UnderlyingType",
+    "Outer": "HitReactionType",
+    "Enum": null
+  },
+  {
+    "Type": "EnumProperty",
+    "Name": "HitReactionType",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "Enum EHitReactType",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "UnderlyingProp": {
+      "ObjectName": "ByteProperty Snake_AnimBP_C:HitReactionType.UnderlyingType",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.10"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_TurnOffRandomIdle",
+    "Outer": "Snake_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_RandomIdle",
+    "Outer": "Snake_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "NewWeaponAnimations",
+    "Outer": "OnNewWeaponAnimations",
+    "PropertyFlags": 524436,
+    "PropertyClass": {
+      "ObjectName": "Class WeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNewWeaponAnimations",
+    "Outer": "Snake_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function CharacterAnimInstance:OnNewWeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty Snake_AnimBP_C:OnNewWeaponAnimations.NewWeaponAnimations",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.14"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "NeutralTransition",
+    "Outer": "Snake_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "CombatTransition",
+    "Outer": "Snake_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "Snake_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty Snake_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/Snake_AnimBP.19"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitFlinchActive",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionDirection",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "HitReactionRate",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsCREA_Snake_Weapon_Animations_BP",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CREA_Snake_WeaponAnimations_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/CREA_Snake_WeaponAnimations_BP.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_NewWeaponAnimations",
+    "Outer": "ExecuteUbergraph_Snake_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class WeaponAnimations",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WeaponAnimationsBP",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass CREA_Snake_WeaponAnimations_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/CREA_Snake_WeaponAnimations_BP.0"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_464F691A4B5A82928D82498CB34422B2",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_AC44062247AF70054299158D59D449EE",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_E544F9A343BAB020DD4012B23F198189",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ComponentToLocalSpace_466E32714504FBED001232A026DA3C0C",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertComponentToLocalSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_10376C554197ECB9F44E9089403EEB1F",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_23E55EBE4DCED84449FAFA80A3F53826",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_31DE14AD44D998423FB318A2EC989658",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_3826756C4041AE49A62028AD1A38D575",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_54767ABA4E5B8F1B63AB25B95C0BA949",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_5AF04DA143DBFE771DC70B88DEBDAE3D",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_6AB8B7CF4F8D70264C9D57ABB8AB49EA",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_88AA44ED4A56150FD9A6ACB2D18E3F81",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_9787BA134A735D1D77EE77A7D3B48419",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_A3567B6D4DF77A52A55093B76CF98234",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_B798D52943493AC9D913ADB6E5213FB9",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_C1C944704EC1777787D5B4BB8392AE8A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_CopyBone_C92A242C4AB6CD18D29467A1D6E68D48",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_CopyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_2AB6E59B4C7EE7A2642D848F60C4F719",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_57B34D274ACA78851B999CA6439C8602",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_6309841B45B9FFB06379EB82382240C0",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_73BBBC2B4BD69114D03FB2B36A043990",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_78AADEF04C081C05410621AE49F89D39",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_7E87D3A0422A080A8D68B0846557A3EB",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_870B7DC349A338ADF014A788B7B314FA",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_9DDD99564ACC6E82A0038188D9E890C4",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_A300559948A756C5E5ACA8BB2553C15C",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_A8AAEE6F40406875841B339D5A55EE07",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_B97E30734C46C3B08CCB91A23F7A3F42",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_BB68B491456A6863AF53F9B5F7CF4ED3",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_JointDriver_CBEC10BE42BC8E5216F4239839D97A9A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_JointDriver",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalRefPose_A72E838E45930F003521A1B601F70FC7",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RefPose",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalToComponentSpace_886AADEE45DFFED1BE8FF9ADBF67C495",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertLocalToComponentSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocomotionPlay_E4571620486518A30487CC829B6FD341",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LocomotionPlay",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ModifyBone_856A32134CC143EA2B9399BFE312EB59",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ModifyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_PoseSnapshot_959FBD954A9CD02EDE048E9232E51835",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_PoseSnapshot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_0B81ECD441FF43894D05CDB964FFB964",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_27FBA26648FF06ED6940B6AD20ACDE5F",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_7882640943EA3AB20B2835B2DE4249A6",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomSequenceNamed_1E93BEEB4207AD6F79516B92F19B25AC",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomSequenceNamed",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomSequenceNamed_93310E5C49778A2889EB9891D442C806",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomSequenceNamed",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_96A4B3C5490B283A3D1E02BDEC86ACCA",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_351427DD4E3BCE12F922BBB927646961",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6A388C5345E8D4F54B0F37B7EF18252A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8039C54C4669B1819BEF60B3BA5EB7FA",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_4200C03C45AFFF98697655ABEDAD6264",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_6086E2404F94C06AD48075BECA4546A7",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_6B802B054E0035A0DC30229CEA514FA6",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_856538A145D656B2FE043A9DE030E704",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_9AC3E28B422CC4701263B580DCD831CD",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_ACBBDC274E54E4B58D4C4FA74D651827",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_360230194F794E35985054AAFC6332A2",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_41FAFCB64FCF494FE783DC988890BAF4",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_B3BC257E4304021F8D0740A1858EA58F",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_28F99F0842BDA70D09646E8140866F53",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5AC3BE8D40EB77675F56C4B6FF5FBF26",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5FCCEAD349B2030C7C480CB309A3D8FD",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_663E19034EC22DF1B37B5B85921FBC6C",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_9CF7566C4267027527D6C5AC0E35F3CC",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B3C944EB4ED1008F16E006BFD2E6FAAD",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C0E1F8924F0D337FBEE924A7E3F97E1E",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_DF647F10450ACA38EBC4868DC9C73749",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E005EBF84A013CDECAF44C84706758C0",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_EA91DFFE4124DEBC268C11872839C5E8",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_14073BAA4448240CD77CDE9263426CF0",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_370CDB40422F232B4524198A26A3CB62",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3C20F12144D84D9520AC99BCC0B0C5D7",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3C4D1F22472E0D252E6D9F8802E85096",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_41620D71477069526349CAA215D2D5BF",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4FAF6F2E4AD80E524AE89C87BCF92EDB",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_62CAFB4348E1B99996F550B2474B6B6A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6BEA8FC04FD9492F8E55BD99B176D659",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_703203E94E66CBC87976DBAEADCF07F1",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_79AA84964954CE1015466989E5E3FF42",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_87DE3C854217F008415D04A12786FF4A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A2144CE3485CC514315E1F97887895AA",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A767AF5348113C1B11873DB1719C62C0",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A83B731044F9BC75272788850A144E19",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B4F5E6474C0007FA2941F0966052D7C2",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B59A0E45471A268B1AD051953BB4DF41",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C51B441844ED7CDC8B49508942ADF773",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D88FA2E749D27B91FDEA818D80F2FC39",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D920143A43BC21D795822D9344A37A3A",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DC93B3E541CE6FF57A2525913C28FA99",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F1727AA541DEA4CC84CB178A561F638C",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TwoWayBlend_6072CD754AAB510F754B73903B0EDB97",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TwoWayBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_54A3429242143775474A04B67EDC8B8F",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_C7C4A4F74CCA03A52448B8927199E985",
+    "Outer": "Snake_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "HipSmooth",
+    "Outer": "Snake_AnimBP_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "Donut.NumberOfRings"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_3",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "Donut.PointsPerRing"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "MeleeSlotQuery",
+    "Properties": {
+      "QueryName": "MeleeSlotQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption MeleeSlotQuery:EnvQueryOption_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeSlotQuery.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "MeleeSlotQuery",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 200.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 300.0
+      },
+      "NumberOfRings": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams MeleeSlotQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeSlotQuery.0"
+        },
+        "DataField": "IntValue"
+      },
+      "PointsPerRing": {
+        "DefaultValue": 7,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams MeleeSlotQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeSlotQuery.1"
+        },
+        "DataField": "IntValue"
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_NPC_Pathing_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_NPC_Pathing.0"
+        },
+        "ProjectDown": 300.0,
+        "ProjectUp": 300.0,
+        "ExtentX": 99.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "MeleeSlotQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut MeleeSlotQuery:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeSlotQuery.3"
+      }
+    }
+  }
+]

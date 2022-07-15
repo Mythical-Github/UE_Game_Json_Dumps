@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_Distance_2",
+    "Properties": {
+      "ParamName": "Range"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindLineOfSight",
+    "Properties": {
+      "QueryName": "EQS_FindLineOfSight",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindLineOfSight:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "NavigationFilter": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_FindLineOfSight:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQS_FindLineOfSight:EnvQueryTest_Trace_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindLineOfSight:EnvQueryTest_Distance_2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindLineOfSight:EnvQueryTest_Distance_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_FindLineOfSight:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_2",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_FindLineOfSight:EnvQueryTest_Distance_2.AIDataProvider_QueryParams_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindLineOfSight.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "TestOrder": 3,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "EQS_FindLineOfSight",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 50.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceShape": "EEnvTraceShape::Sphere"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 200.0
+      },
+      "Context": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

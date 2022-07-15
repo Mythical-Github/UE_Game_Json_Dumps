@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_Civilian_C",
+    "Super": "BP_NPC_Base_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_NPC_Civilian_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_NPC_Civilian_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_Civilian_C Default__BP_NPC_Civilian_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.1"
+    }
+  },
+  {
+    "Type": "BP_NPC_Civilian_C",
+    "Name": "Default__BP_NPC_Civilian_C",
+    "Template": "Default__BP_NPC_Base_C",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__BP_NPC_Civilian_C:CharacterMesh0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.9"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent Default__BP_NPC_Civilian_C:CharMoveComp",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.4"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Civilian_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Civilian_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.3"
+      }
+    }
+  },
+  {
+    "Type": "BP_BehaviorComponent_C",
+    "Name": "BehaviorComponent_GEN_VARIABLE",
+    "Outer": "BP_NPC_Civilian_C",
+    "Template": "BehaviorComponent_GEN_VARIABLE",
+    "Properties": {
+      "CurrentBehaviorConfig": {
+        "MovementSpeed_34_B716D9754BC12E288BC6EF99E151DD9F": 120.0,
+        "MessageTriggers_55_4BA7591A4081E99E8729D79955A65776": [
+          {
+            "MessageTag_10_A0D2C79541759213041F4D98AD235F21": "Enum_MessageTag::NewEnumerator3",
+            "BehaviorTo_5_2C5AC3CF4016F66DAB9D21814A8B8F0C": "Enum_BehaviorType::NewEnumerator0"
+          }
+        ]
+      },
+      "IdleBehaviorConfig": {
+        "MovementSpeed_34_B716D9754BC12E288BC6EF99E151DD9F": 120.0,
+        "MessageTriggers_55_4BA7591A4081E99E8729D79955A65776": [
+          {
+            "MessageTag_10_A0D2C79541759213041F4D98AD235F21": "Enum_MessageTag::NewEnumerator0",
+            "BehaviorTo_5_2C5AC3CF4016F66DAB9D21814A8B8F0C": "Enum_BehaviorType::NewEnumerator2"
+          }
+        ]
+      },
+      "FollowDistance": 200.0,
+      "SeekAcceptanceRadius": 0.0
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_NPC_Civilian_C",
+    "Template": "CollisionCylinder"
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_NPC_Civilian_C",
+    "Template": "CharMoveComp"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_NPC_Civilian_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+            "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_BehaviorComponent_C BP_NPC_Civilian_C:BehaviorComponent_GEN_VARIABLE",
+            "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+              "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+            },
+            "SCSVariableName": "BehaviorComponent",
+            "AssociatedGuid": "4684E49B-4F1D7848-B7022CBD-FDF2B9DE"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_NPC_Civilian_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_NPC_Civilian_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.6"
+      },
+      "VariableGuid": "E79B0BF6-406E3EFD-984A8993-8917F4D2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_NPC_Civilian_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_NPC_Civilian_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_NPC_Civilian_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material M_UE4Man_Body_Green",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Materials/M_UE4Man_Body_Green.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_NPC_Civilian_C:CollisionCylinder",
+        "ObjectPath": "KevinSpel/Content/AI_System/Examples/ExampleRPG/BP_NPC_Civilian.3"
+      }
+    }
+  }
+]

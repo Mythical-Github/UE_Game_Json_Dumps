@@ -1,0 +1,1363 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "DroidBiped_AnimBlueprint_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_DroidBipedSentinel_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Meshes/SK_DroidBipedSentinel_Skeleton.1"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty DroidBiped_AnimBlueprint_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.19"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendListByEnum_23A9AC6E42083312AAB7D2B28A754A91",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.45"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_46158991428616B9A02AB99BE70429A8",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.46"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_7D0F3FF4450D8D39ECA487B6BFE7ACF6",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_A254DF1A4BE2C900CDE28EB13C0C39DD",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.33"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_7DE429644C3EE10898646AADD96898EC",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_8FA66F924B7B5D6D930F0EB381FA8A78",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.59"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function DroidBiped_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.34"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.58"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_7CFE89E34B50AB5371F969A317678CDA",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.3"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.0"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.34"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.26"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.25"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.24"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.23"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.22"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.21"
+      },
+      {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.5"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_7CFE89E34B50AB5371F969A317678CDA",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.3"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.58"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_TransitionResult_8FA66F924B7B5D6D930F0EB381FA8A78",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.59"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_SequencePlayer_EF485CA0466E02BD3439B083FA0A1D28",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.52"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_StateResult_611EDCB94221E2DC4540D2BA3AF9A24F",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.57"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_SequencePlayer_609B0D584923004D1CC193A27A4D0EF1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.51"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_StateResult_474757144A17BA9FA66C988502348F3D",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.55"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_7DE429644C3EE10898646AADD96898EC",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.48"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_A254DF1A4BE2C900CDE28EB13C0C39DD",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.49"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_7D0F3FF4450D8D39ECA487B6BFE7ACF6",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.47"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_46158991428616B9A02AB99BE70429A8",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.46"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_BlendListByEnum_23A9AC6E42083312AAB7D2B28A754A91",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.45"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_StateResult_5381FDAC473EAAF142E12893D604FE66",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.56"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_StateMachine_053051524F1653492544409734756A72",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.54"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_Root_6B96535546F051F443F8E6B2B51E5721",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.50"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:AnimGraphNode_Slot_E172DB8E42AF7CE4B89C579F21A93721",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.53"
+      },
+      {
+        "ObjectName": "ByteProperty DroidBiped_AnimBlueprint_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.19"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.18"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.17"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.33"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:Direction",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.28"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.35"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_DroidBiped_AnimBlueprint": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.5"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.21"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.22"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.23"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.24"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.25"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.26"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7": {
+        "ObjectName": "Function DroidBiped_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.34"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DroidBiped_AnimBlueprint_C Default__DroidBiped_AnimBlueprint_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.2"
+    }
+  },
+  {
+    "Type": "DroidBiped_AnimBlueprint_C",
+    "Name": "Default__DroidBiped_AnimBlueprint_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_TransitionResult_7CFE89E34B50AB5371F969A317678CDA": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8FA66F924B7B5D6D930F0EB381FA8A78": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_EF485CA0466E02BD3439B083FA0A1D28": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ANIM_DroidBipedSentinel_InAirFalling",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/ANIM_DroidBipedSentinel_InAirFalling.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_611EDCB94221E2DC4540D2BA3AF9A24F": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_SequencePlayer_609B0D584923004D1CC193A27A4D0EF1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ANIM_DroidBipedSentinel_Jump",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/ANIM_DroidBipedSentinel_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_474757144A17BA9FA66C988502348F3D": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_7DE429644C3EE10898646AADD96898EC": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroidBipedWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/BS_DroidBipedWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_A254DF1A4BE2C900CDE28EB13C0C39DD": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroidBipedWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/BS_DroidBipedWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_7D0F3FF4450D8D39ECA487B6BFE7ACF6": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroidBipedWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/BS_DroidBipedWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_46158991428616B9A02AB99BE70429A8": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroidBipedWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/BS_DroidBipedWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_23A9AC6E42083312AAB7D2B28A754A91": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 7
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_5381FDAC473EAAF142E12893D604FE66": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_053051524F1653492544409734756A72": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_6B96535546F051F443F8E6B2B51E5721": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_Slot_E172DB8E42AF7CE4B89C579F21A93721": {
+        "Source": {
+          "LinkID": 13
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7CFE89E34B50AB5371F969A317678CDA",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.4"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.30"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.10"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.13"
+      },
+      {
+        "ObjectName": "ByteProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.20"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.32"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.38"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.60"
+      },
+      {
+        "ObjectName": "StructProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.61"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.31"
+      },
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.29"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.37"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.11"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.8"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.9"
+      },
+      {
+        "ObjectName": "ArrayProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.7"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.36"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.39"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.42"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.14"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.12"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.40"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.43"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.15"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.41"
+      },
+      {
+        "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.44"
+      },
+      {
+        "ObjectName": "BoolProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.16"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty DroidBiped_AnimBlueprint_C:ExecuteUbergraph_DroidBiped_AnimBlueprint.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty DroidBiped_AnimBlueprint_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/DroidBipedSentinel/Animations/DroidBiped_AnimBlueprint.27"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_DroidBiped_AnimBlueprint_AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_23A9AC6E42083312AAB7D2B28A754A91",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_46158991428616B9A02AB99BE70429A8",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_7D0F3FF4450D8D39ECA487B6BFE7ACF6",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_7DE429644C3EE10898646AADD96898EC",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_A254DF1A4BE2C900CDE28EB13C0C39DD",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_6B96535546F051F443F8E6B2B51E5721",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_609B0D584923004D1CC193A27A4D0EF1",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_EF485CA0466E02BD3439B083FA0A1D28",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_E172DB8E42AF7CE4B89C579F21A93721",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_053051524F1653492544409734756A72",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_474757144A17BA9FA66C988502348F3D",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5381FDAC473EAAF142E12893D604FE66",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_611EDCB94221E2DC4540D2BA3AF9A24F",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_458E18304501A9D236627CB43DAD34B7",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8FA66F924B7B5D6D930F0EB381FA8A78",
+    "Outer": "DroidBiped_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_DroidBiped_AnimBlueprint",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

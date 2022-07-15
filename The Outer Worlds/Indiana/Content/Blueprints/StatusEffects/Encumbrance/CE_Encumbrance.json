@@ -1,0 +1,91 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Encumbrance_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Encumbrance_C Default__CE_Encumbrance_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Encumbrance/CE_Encumbrance.1"
+    }
+  },
+  {
+    "Type": "CE_Encumbrance_C",
+    "Name": "Default__CE_Encumbrance_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_Encumbrance_C:ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Encumbrance/CE_Encumbrance.3"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_Encumbrance_C:ToggleActionStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Encumbrance/CE_Encumbrance.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Encumbrance_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Encumbrance/CE_Encumbrance.2"
+        }
+      ],
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "EffectName": {
+        "StringID": 1651
+      },
+      "EffectDescription": {
+        "StringID": 1652
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Encumbered",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Encumbered.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1653
+      },
+      "bDontDisplayNameInDescription": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Encumbrance_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.65,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite"
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "Default__CE_Encumbrance_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Infinite"
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_1",
+    "Outer": "Default__CE_Encumbrance_C",
+    "Properties": {
+      "Action": "ETogglableAction::Sprint",
+      "DurationType": "EStatusEffectDurationType::Infinite"
+    }
+  }
+]

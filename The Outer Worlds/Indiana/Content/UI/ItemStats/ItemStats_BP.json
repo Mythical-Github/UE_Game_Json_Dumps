@@ -1,0 +1,592 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ItemStats_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree ItemStats_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.27"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/ItemStats/ItemStats_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class ItemStatsWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ItemStats_BP_C Default__ItemStats_BP_C",
+      "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.1"
+    }
+  },
+  {
+    "Type": "ItemStats_BP_C",
+    "Name": "Default__ItemStats_BP_C",
+    "Properties": {
+      "ArmorStatWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass ToolTipArmorStat_BP_C",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ToolTipArmorStat_BP.0"
+      },
+      "StatWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass ItemStat_BP_C",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStat_BP.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.2"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.3"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "ItemStatCategory_BP_C",
+    "Name": "ArmorThresholdCategory",
+    "Outer": "WidgetTree",
+    "Template": "Default__ItemStatCategory_BP_C",
+    "Properties": {
+      "DisplayText": {
+        "StringID": 3383
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot ItemStats_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.20"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ItemStatCategory_BP_C",
+    "Name": "StatsCategory",
+    "Outer": "WidgetTree",
+    "Template": "Default__ItemStatCategory_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot ItemStats_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.19"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ItemStatCategory_BP_C",
+    "Name": "ArmorThresholdCategory",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__ItemStatCategory_BP_C",
+    "Properties": {
+      "DisplayText": {
+        "StringID": 3383
+      },
+      "NameTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.11"
+      },
+      "StatsVerticalBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.StatsVerticalBox",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.14"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.29"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.26"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ItemStatCategory_BP_C",
+    "Name": "StatsCategory",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__ItemStatCategory_BP_C",
+    "Properties": {
+      "NameTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.12"
+      },
+      "StatsVerticalBox": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.StatsVerticalBox",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.16"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.30"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.25"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ItemStats_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__ItemStats_BP_C",
+    "Properties": {
+      "StatsCategory": {
+        "ObjectName": "ItemStatCategory_BP_C WidgetArchetype:WidgetTree_0.StatsCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.9"
+      },
+      "ArmorThresholdCategory": {
+        "ObjectName": "ItemStatCategory_BP_C WidgetArchetype:WidgetTree_0.ArmorThresholdCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.8"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.28"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "NameTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "MaxFontScaling": 5,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "WrapTextAt": 375.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.21"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "NameTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "MaxFontScaling": 5,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "WrapTextAt": 375.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.23"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot ItemStats_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot ItemStats_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "StatsVerticalBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.22"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.21"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "StatsVerticalBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.24"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.23"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.25"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.26"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox ItemStats_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.13"
+      },
+      "Content": {
+        "ObjectName": "ItemStatCategory_BP_C ItemStats_BP_C:WidgetTree.StatsCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox ItemStats_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.13"
+      },
+      "Content": {
+        "ObjectName": "ItemStatCategory_BP_C ItemStats_BP_C:WidgetTree.ArmorThresholdCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.15"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.15"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.StatsVerticalBox",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.17"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.NameTextBlock",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.17"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.StatsVerticalBox",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.18"
+      },
+      "Content": {
+        "ObjectName": "ItemStatCategory_BP_C WidgetArchetype:WidgetTree_0.StatsCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.18"
+      },
+      "Content": {
+        "ObjectName": "ItemStatCategory_BP_C WidgetArchetype:WidgetTree_0.ArmorThresholdCategory",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "ItemStats_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox ItemStats_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.18"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "ArmorThresholdCategory",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.ArmorThresholdCategory.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "StatsCategory",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.StatsCategory.WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/ItemStats/ItemStats_BP.3"
+      }
+    }
+  }
+]

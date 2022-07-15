@@ -1,0 +1,271 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Trail_P:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Trail_P:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Trail_P:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.6"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Trail_P:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.3"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataAnimTrail Trail_P:ParticleModuleTypeDataAnimTrail_0",
+        "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.8"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Trail_P:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.7"
+      },
+      "PeakActiveParticles": 16
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.053811
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.130812,
+          "Z": 0.226042
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0,
+            0.053811,
+            0.0,
+            0.130812,
+            0.226042
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.5,
+        "MaxValue": 0.8,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.5,
+            0.8
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material Air_Trail_Dissolve_Edge_M",
+        "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Air_Trail_Dissolve_Edge_M.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Trail_P:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            25.0,
+            25.0,
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "Rate": {
+        "MinValue": 17.0,
+        "MaxValue": 17.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            17.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Trail_P:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataAnimTrail",
+    "Name": "ParticleModuleTypeDataAnimTrail_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Trail_P",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Trail_P:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Trail_P",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Trail_P:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Animations/2HandedHammer/2H_Particle/Trail_P.9"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,826 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "CompanionFollowTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.16"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_CompanionFollow_IsFollowLocationValid",
+    "Name": "BT_Con_CompanionFollow_IsFollowLocationValid_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Valid Follow Location?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_CompanionFollow_IsFollowLocationValid",
+    "Name": "BT_Con_CompanionFollow_IsFollowLocationValid_3",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "bInverseCondition": true,
+      "NodeName": "Invalid Follow Location?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_CompanionFollow_ShouldWait",
+    "Name": "BT_Con_CompanionFollow_ShouldWait_10",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "TargetDistanceThreshold": 100.0,
+      "PlayerDistanceThreshold": 500.0,
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Should Wait?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_CompanionFollow_ShouldWait",
+    "Name": "BT_Con_CompanionFollow_ShouldWait_13",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "PlayerDistanceThreshold": 350.0,
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Shouldn't Wait?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsFollowTargetValid",
+    "Name": "BT_Con_General_IsFollowTargetValid_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Invalid Follow Target?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsFollowTargetValid",
+    "Name": "BT_Con_General_IsFollowTargetValid_3",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Valid Follow Target?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Follow_ClearTeleportFlag",
+    "Name": "BT_Scr_Follow_ClearTeleportFlag_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "NodeName": "Clear Teleport Flag",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_CancelCompanionCommandAttack",
+    "Name": "BT_Scr_General_CancelCompanionCommandAttack_8",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_Retreating",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Cancel Attack Command (RETREAT ONLY)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_ClearTargetDetection",
+    "Name": "BT_Scr_General_ClearTargetDetection_11",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_ClearTargetDetection",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Clear Target Detection",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_ClearTargetDetection",
+    "Name": "BT_Scr_General_ClearTargetDetection_2",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_ClearTargetDetection",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bClearDetectionOfCompanionAndPlayer": true,
+      "NodeName": "Clear Target Detection",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_IsCompanionCommandOrClearTargetDetection",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_9",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_IsCompanionCommandOrClearTargetDetection",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_Teleport",
+    "Name": "BT_Scr_General_Teleport_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "TeleportLocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Follow_TeleportLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TeleportRotationSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Follow_TeleportRotation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Teleport",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_CompanionFollow_IsFollowLocationValid CompanionFollowTree:BT_Con_CompanionFollow_IsFollowLocationValid_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_CompanionFollow_IsFollowLocationValid CompanionFollowTree:BT_Con_CompanionFollow_IsFollowLocationValid_3",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsFollowTargetValid CompanionFollowTree:BT_Con_General_IsFollowTargetValid_3",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CompanionFollowTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.27"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsFollowTargetValid CompanionFollowTree:BT_Con_General_IsFollowTargetValid_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_CompanionFollowComplete CompanionFollowTree:BTService_EventFirer_CompanionFollowComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.22"
+        },
+        {
+          "ObjectName": "BTService_RequestPrimaryTarget CompanionFollowTree:BTService_RequestPrimaryTarget_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.25"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop CompanionFollowTree:BTDecorator_Loop_3",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Script CompanionFollowTree:BTTask_Script_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_Teleport CompanionFollowTree:BT_Scr_General_Teleport_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Script CompanionFollowTree:BTTask_Script_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.30"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_ClearTargetDetection CompanionFollowTree:BT_Scr_General_ClearTargetDetection_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.10"
+            },
+            {
+              "ObjectName": "BT_Scr_Follow_ClearTeleportFlag CompanionFollowTree:BT_Scr_Follow_ClearTeleportFlag_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.7"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete CompanionFollowTree:BT_Scr_General_SetBehaviorStateComplete_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CompanionFollowTree:BTTask_IndianaWait_7",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CompanionFollowTree:BTTask_IndianaWait_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt CompanionFollowTree:BTService_General_FocusAt_6",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.23"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo CompanionFollowTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.26"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CompanionFollowTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.20"
+            },
+            {
+              "ObjectName": "BT_Con_CompanionFollow_ShouldWait CompanionFollowTree:BT_Con_CompanionFollow_ShouldWait_13",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_10",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_CompanionFollow_ShouldWait CompanionFollowTree:BT_Con_CompanionFollow_ShouldWait_10",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.3"
+            },
+            {
+              "ObjectName": "BT_Scr_General_ClearTargetDetection CompanionFollowTree:BT_Scr_General_ClearTargetDetection_11",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.9"
+            },
+            {
+              "ObjectName": "BT_Scr_General_CancelCompanionCommandAttack CompanionFollowTree:BT_Scr_General_CancelCompanionCommandAttack_8",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.8"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete CompanionFollowTree:BT_Scr_General_SetBehaviorStateComplete_9",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.12"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_3",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_CompanionFollowComplete",
+    "Name": "BTService_EventFirer_CompanionFollowComplete_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Follow Complete Event (RETREAT ONLY)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_6",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "HeadTargetActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_10",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_7",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "BodyTargetActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Target",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bSetShouldExitRegion": true,
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_10",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTService_RequestPrimaryTarget",
+    "Name": "BTService_RequestPrimaryTarget_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Follow_Retreating",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "RequestType": "ETargetRequestType::Unreachable",
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Request New Target (UNREACHABLE) (RETREAT ONLY)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class CompanionFollow_Position",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "FailResponse": "EMoveToResultResponse::ContinueTask",
+      "AcceptableRadius": 20.0,
+      "SaveGameTaskGuid": "E5E9EBB3-4254CAD0-4714E694-DA6066CB",
+      "NodeName": "Move To Follow Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "1CD70E3B-4AC1B20E-E24AB6BF-7330FBC8",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CompanionFollowTree:BTComposite_Selector_5",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_6",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "050B92EB-480B4A51-2C5E5897-4F7E4820",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_10",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_7",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldServiceExitTask",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "B0197CC2-421327E4-AF104AA0-0B581F50",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt CompanionFollowTree:BTService_General_FocusAt_7",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.24"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_10",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Script",
+    "Name": "BTTask_Script_0",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "SaveGameTaskGuid": "AD313AFB-48E7365E-0246C5B8-165277FE",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Script",
+    "Name": "BTTask_Script_2",
+    "Outer": "CompanionFollowTree",
+    "Properties": {
+      "SaveGameTaskGuid": "7A6F4515-4EB90060-DA248DB7-A016BF50",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionFollowTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionFollowTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.17"
+      }
+    }
+  }
+]

@@ -1,0 +1,1161 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "InvestigateBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.16"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan",
+    "Name": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TimeRemainingThresholdSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_EndWaitTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Don't Do End Wait?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan",
+    "Name": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TimeRemainingThresholdSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_EndWaitTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Do End Wait?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan",
+    "Name": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_3",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TimeRemainingThresholdSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_ExitChatterTriggerTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Don't Trigger Exit Chatter?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan",
+    "Name": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_4",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TimeRemainingThresholdSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_ExitChatterTriggerTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bInverseCondition": true,
+      "NodeName": "Trigger Exit Chatter?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsLocationValid",
+    "Name": "BT_Con_General_IsLocationValid_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AbortDistanceThreshold": 100.0,
+      "AbortMode": "EFlowAbortMode::Self",
+      "AbortCondition": "EFlowAbortCondition::Custom",
+      "NodeName": "Restart If Stimulus Location Changes Significantly",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsPrimaryTargetStimulusType",
+    "Name": "BT_Con_General_IsPrimaryTargetStimulusType_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "StimulusType": "EStimulusType::DeadBodyKiller",
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Dead Body?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetAnimationParameter",
+    "Name": "BT_Scr_General_SetAnimationParameter_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Parameter": "EAIAnimationParameter::InvestigatingDeadBody",
+      "NodeName": "Set Animation State (Investigating Dead Body)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_TriggerChatterEvent",
+    "Name": "BT_Scr_General_TriggerChatterEvent_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Event": "EChatterEventType::NPC_InvestigateGiveUp",
+      "NodeName": "(ENTER) Trigger Exit Chatter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_TriggerChatterEvent",
+    "Name": "BT_Scr_General_TriggerChatterEvent_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Event": "EChatterEventType::NPC_AlertCorpse",
+      "NodeName": "(ENTER) Alert Corpse Chatter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Investigate_EndWaitExit",
+    "Name": "BT_Scr_Investigate_EndWaitExit_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "ScriptExecutionType": "EAIScriptExecutionType::OnExit",
+      "NodeName": "(EXIT) End Wait Exit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Investigate_NotifyPreMoveWaitCompleted",
+    "Name": "BT_Scr_Investigate_NotifyPreMoveWaitCompleted_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "ScriptExecutionType": "EAIScriptExecutionType::OnExit",
+      "NodeName": "(EXIT) Notify Pre Move Wait Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan InvestigateBehaviorTree:BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan InvestigateBehaviorTree:BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.2"
+            },
+            {
+              "ObjectName": "BT_Scr_Investigate_EndWaitExit InvestigateBehaviorTree:BT_Scr_Investigate_EndWaitExit_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.10"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_InvestigateComplete InvestigateBehaviorTree:BTService_EventFirer_InvestigateComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.26"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.40"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan InvestigateBehaviorTree:BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_3",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_7",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.41"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan InvestigateBehaviorTree:BT_Con_General_IsAlertStateTimeRemainingEstimateGreaterThan_4",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Scr_General_TriggerChatterEvent InvestigateBehaviorTree:BT_Scr_General_TriggerChatterEvent_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsPrimaryTargetStimulusType InvestigateBehaviorTree:BT_Con_General_IsPrimaryTargetStimulusType_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.6"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetAnimationParameter InvestigateBehaviorTree:BT_Scr_General_SetAnimationParameter_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_General_IsLocationValid InvestigateBehaviorTree:BT_Con_General_IsLocationValid_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop InvestigateBehaviorTree:BTDecorator_Loop_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.25"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_5",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery InvestigateBehaviorTree:BTTask_IndianaRunEQSQuery_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess InvestigateBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.21"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo InvestigateBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.36"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_TriggerChatterEvent InvestigateBehaviorTree:BT_Scr_General_TriggerChatterEvent_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop InvestigateBehaviorTree:BTDecorator_Loop_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.23"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.38"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_Investigate_NotifyPreMoveWaitCompleted InvestigateBehaviorTree:BT_Scr_Investigate_NotifyPreMoveWaitCompleted_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop InvestigateBehaviorTree:BTDecorator_Loop_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.24"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery InvestigateBehaviorTree:BTTask_IndianaRunEQSQuery_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.34"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess InvestigateBehaviorTree:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo InvestigateBehaviorTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo InvestigateBehaviorTree:BTTask_IndianaMoveTo_8",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait InvestigateBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "NumLoops": 0,
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_InvestigateComplete",
+    "Name": "BTService_EventFirer_InvestigateComplete_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Investigate Complete Service",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusSourceActorLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusSourceActorLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusSourceActorLocaiton",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Look at Dead Body",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_3",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Look at Stimulus Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "AcceptableRadius": 0.0,
+      "AcceptableRadiusSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_ArrivalRadius",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "CB46BA37-4A584A9C-C02F1C94-1D161214",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "D7828DD5-4FE3AF55-39EBB094-6DBD1DA3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_8",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetProjectedStimulusLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "AcceptableRadius": 0.0,
+      "AcceptableRadiusSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_ArrivalRadius",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "IsMoveToSuccessful": {
+        "AIBool": {
+          "ObjectName": "Class General_IsMoveToSuccessful",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bAllowPartialPath": false,
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "07B02F0D-4AA987C9-FDCEF582-667A0119",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase PrimaryTargetStimulusSourceActorLocation",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/PrimaryTargetStimulusSourceActorLocation.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "D4D3C268-4B004C1A-C7253B85-1AE05DCE",
+      "NodeName": "EQS - Dead Body",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase InvestigateDeadBody",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/InvestigateDeadBody.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "88DA0ABF-49551F87-97336EBF-22130AB6",
+      "NodeName": "EQS - Investigation Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "EDEDCACC-4128260F-B2362E85-E40E79D4",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_DeadBodyWanderIdleTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "3AD4C626-45CB850A-BE54E995-C4F0C868",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt InvestigateBehaviorTree:BTService_General_FocusAt_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.27"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_2",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_DeadBodyWanderIdleTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "A118A04B-4EACD7EA-C25AA691-EC9B422E",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_3",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_PreMoveWaitTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "7819BD2C-4A308826-8373F490-CC6FDF62",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt InvestigateBehaviorTree:BTService_General_FocusAt_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.29"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_5",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Investigate_PreMoveWaitTime",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bNotifyRestore": true,
+      "SaveGameTaskGuid": "7819BD2C-4A308826-8373F490-CC6FDF62",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt InvestigateBehaviorTree:BTService_General_FocusAt_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.28"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence InvestigateBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_6",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "2A2F9180-4A2CC8C2-DF53BE86-0570EBCE",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_7",
+    "Outer": "InvestigateBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "6840E081-4B7FD82C-838378B5-E9507181",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector InvestigateBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.13"
+      }
+    }
+  }
+]

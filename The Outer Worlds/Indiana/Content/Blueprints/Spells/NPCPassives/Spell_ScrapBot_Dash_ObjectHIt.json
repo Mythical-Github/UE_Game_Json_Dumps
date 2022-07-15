@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_ScrapBot_Dash_ObjectHIt_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_ScrapBot_Dash_ObjectHIt_C Default__Spell_ScrapBot_Dash_ObjectHIt_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_ScrapBot_Dash_ObjectHIt.1"
+    }
+  },
+  {
+    "Type": "Spell_ScrapBot_Dash_ObjectHIt_C",
+    "Name": "Default__Spell_ScrapBot_Dash_ObjectHIt_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnObjectBumped Default__Spell_ScrapBot_Dash_ObjectHIt_C:OnObjectBumped_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_ScrapBot_Dash_ObjectHIt.5"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_LiberationBot_Stun_C Default__Spell_ScrapBot_Dash_ObjectHIt_C:CE_LiberationBot_Stun_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_ScrapBot_Dash_ObjectHIt.3"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterForward",
+            "RotationAngle": 45.0,
+            "bRandomlyNegateRotationAngle": true,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_LiberationBot_Stun_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_LiberationBot_Stun_C",
+    "Name": "CE_LiberationBot_Stun_C_0",
+    "Outer": "Default__Spell_ScrapBot_Dash_ObjectHIt_C",
+    "Template": "Default__CE_LiberationBot_Stun_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_ScrapBot_Dash_ObjectHIt_C:CE_LiberationBot_Stun_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_ScrapBot_Dash_ObjectHIt.2"
+        }
+      ],
+      "Duration": 4.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_ScrapBot_Dash_ObjectHIt_C:CE_LiberationBot_Stun_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_ScrapBot_Dash_ObjectHIt.4"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_LiberationBot_Stun_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "OnObjectBumped",
+    "Name": "OnObjectBumped_0",
+    "Outer": "Default__Spell_ScrapBot_Dash_ObjectHIt_C",
+    "Properties": {
+      "DotCheck": 0.75
+    }
+  }
+]

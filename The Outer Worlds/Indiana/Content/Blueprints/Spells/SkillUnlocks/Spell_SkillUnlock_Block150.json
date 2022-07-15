@@ -1,0 +1,190 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_SkillUnlock_Block150_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_SkillUnlock_Block150_C Default__Spell_SkillUnlock_Block150_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Block150.1"
+    }
+  },
+  {
+    "Type": "Spell_SkillUnlock_Block150_C",
+    "Name": "Default__Spell_SkillUnlock_Block150_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "UnlockAbilityStatusEffect Default__Spell_SkillUnlock_Block150_C:UnlockAbilityStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Block150.4"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ],
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnPerfectBlock Default__Spell_SkillUnlock_Block150_C:OnPerfectBlock_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Block150.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "DamageStatusEffect Default__Spell_SkillUnlock_Block150_C:DamageStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Block150.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Spell_SkillUnlock_Block150_C",
+    "Properties": {
+      "DescriptionFormat": {
+        "StringID": 4234
+      }
+    }
+  },
+  {
+    "Type": "OnPerfectBlock",
+    "Name": "OnPerfectBlock_0",
+    "Outer": "Default__Spell_SkillUnlock_Block150_C"
+  },
+  {
+    "Type": "UnlockAbilityStatusEffect",
+    "Name": "UnlockAbilityStatusEffect_0",
+    "Outer": "Default__Spell_SkillUnlock_Block150_C",
+    "Properties": {
+      "UnlockedAbility": "EUnlockAbility::NoDamageOnPerfectBlock",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bDontDisplayDescription": true
+    }
+  }
+]

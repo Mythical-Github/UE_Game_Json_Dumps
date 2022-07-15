@@ -1,0 +1,285 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup SK_Android-Leg_R_1_PhysicsAsset:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_Android-Leg_R_1_PhysicsAsset:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_Android-Leg_R_1_PhysicsAsset:SkeletalBodySetup_2",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_Android-Leg_R_1_PhysicsAsset:SkeletalBodySetup_3",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_Android-Leg_R_1_PhysicsAsset:PhysicsConstraintTemplate_2",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_Android-Leg_R_1_PhysicsAsset:PhysicsConstraintTemplate_3",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_Android-Leg_R_1_PhysicsAsset:PhysicsConstraintTemplate_4",
+          "ObjectPath": "KevinSpel/Content/Characters/AndroidRobot/Meshes/SK_Android-Leg_R_1_PhysicsAsset.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "calf_r",
+        "ConstraintBone1": "calf_r",
+        "ConstraintBone2": "thigh_r",
+        "Pos2": {
+          "X": 42.57225,
+          "Y": 1.6648753E-06,
+          "Z": -1.7223272E-06
+        },
+        "PriAxis2": {
+          "X": 0.990702,
+          "Y": 0.13242692,
+          "Z": -0.03118879
+        },
+        "SecAxis2": {
+          "X": -0.12873831,
+          "Y": 0.9866343,
+          "Z": 0.099895924
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing2LimitDegrees": 0.0,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.0,
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "foot_r",
+        "ConstraintBone1": "foot_r",
+        "ConstraintBone2": "calf_r",
+        "Pos2": {
+          "X": 40.196823,
+          "Y": -2.1828694E-06,
+          "Z": -1.09524535E-05
+        },
+        "PriAxis2": {
+          "X": 0.9880536,
+          "Y": -0.13990971,
+          "Z": -0.064618215
+        },
+        "SecAxis2": {
+          "X": 0.14066283,
+          "Y": 0.9900312,
+          "Z": 0.007234255
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing2LimitDegrees": 10.0,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 10.0,
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ball_r",
+        "ConstraintBone1": "ball_r",
+        "ConstraintBone2": "foot_r",
+        "Pos2": {
+          "X": 10.453815,
+          "Y": -16.577795,
+          "Z": -0.080166526
+        },
+        "PriAxis2": {
+          "X": -0.032868862,
+          "Y": 0.9994597,
+          "Z": -0.00015593324
+        },
+        "SecAxis2": {
+          "X": -0.9994597,
+          "Y": -0.032868862,
+          "Z": -6.880984E-05
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.0,
+            "Swing2LimitDegrees": 0.0,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.0,
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 18.493645,
+              "Y": -1.4079237,
+              "Z": 0.016086578
+            },
+            "Rotation": {
+              "Pitch": -6.830189E-06,
+              "Yaw": 90.0,
+              "Roll": -90.0
+            },
+            "Radius": 10.932885,
+            "Length": 26.671658,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "thigh_r",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "729588AA4759C821A2BD1BAEFE4BFBA4"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 23.16563,
+              "Y": 0.023438454,
+              "Z": 0.20092964
+            },
+            "Rotation": {
+              "Pitch": 6.830189E-06,
+              "Yaw": 89.999985,
+              "Roll": -90.00001
+            },
+            "Radius": 8.237353,
+            "Length": 21.243084,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "calf_r",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "8A79ED9E40DD86213A1D6590AD06334E"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 9.489129,
+              "Y": -8.034729,
+              "Z": -0.31915283
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 32.235203,
+              "Roll": -90.23436
+            },
+            "Radius": 9.176194,
+            "Length": 11.776815,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "foot_r",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "A184468545FE95FF6648DEA8E5FA0BE0"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_Android-Leg_R_1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -8.733741,
+              "Y": -0.18148708,
+              "Z": -0.58477426
+            },
+            "Rotation": {
+              "Pitch": 0.12230136,
+              "Yaw": -90.00001,
+              "Roll": 30.410463
+            },
+            "Radius": 4.9343,
+            "Length": 6.3196344,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "ball_r",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DAE3CC644CEC655ADA9F2DA52B65B3B7"
+  }
+]

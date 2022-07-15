@@ -1,0 +1,168 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_BarkWood",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial PM_Wood",
+        "ObjectPath": "KevinSpel/Content/FPSK/Physics/PM_Wood.0"
+      },
+      "Normal": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "None",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "bUsedWithSkeletalMesh": true,
+      "bUsedWithStaticLighting": true,
+      "bUsedWithInstancedStaticMeshes": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionStaticSwitchParameter M_BarkWood:MaterialExpressionStaticSwitchParameter_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.2"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_BarkWood:MaterialExpressionMaterialFunctionCall_2",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureObject M_BarkWood:MaterialExpressionTextureObject_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.3"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_BarkWood:MaterialExpressionTextureSample_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.4"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction LinearGradient",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "3FA44BF2-462D624C-FA222987-6FE1F968",
+          "Function": {
+            "ObjectName": "MaterialFunction CheapContrast",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.1"
+          }
+        },
+        {
+          "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
+          "Function": {
+            "ObjectName": "MaterialFunction CustomRotator",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
+          }
+        },
+        {
+          "StateId": "18F2F1FA-4D12E01C-0A3CF0A4-2DD5A60B",
+          "Function": {
+            "ObjectName": "MaterialFunction WorldAlignedTexture",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/WorldAlignedTexture.8"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "A08F42C5-478FCB06-9FE2EDB7-914F5AEA",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_2",
+    "Outer": "M_BarkWood",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction WorldAlignedTexture",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/WorldAlignedTexture.8"
+      },
+      "Material": {
+        "ObjectName": "Material M_BarkWood",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticSwitchParameter",
+    "Name": "MaterialExpressionStaticSwitchParameter_0",
+    "Outer": "M_BarkWood",
+    "Properties": {
+      "A": {
+        "OutputIndex": 2,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_2"
+      },
+      "B": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_0"
+      },
+      "DefaultValue": true,
+      "ParameterName": "WorldAligned",
+      "ExpressionGUID": "C08F2B10-46880482-F1677587-2EE5BE51",
+      "Material": {
+        "ObjectName": "Material M_BarkWood",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureObject",
+    "Name": "MaterialExpressionTextureObject_0",
+    "Outer": "M_BarkWood",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_BarkWood_BaseColor",
+        "ObjectPath": "KevinSpel/Content/FPSK/Textures/BarkWood/T_BarkWood_BaseColor.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_BarkWood",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "M_BarkWood",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_BarkWood_BaseColor",
+        "ObjectPath": "KevinSpel/Content/FPSK/Textures/BarkWood/T_BarkWood_BaseColor.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_BarkWood",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/BarkWood/M_BarkWood.0"
+      }
+    }
+  }
+]

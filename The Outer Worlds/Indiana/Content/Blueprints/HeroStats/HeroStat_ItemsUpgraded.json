@@ -1,0 +1,41 @@
+[
+  {
+    "Type": "HeroStat",
+    "Name": "HeroStat_ItemsUpgraded",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener HeroStat_ItemsUpgraded:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_ItemsUpgraded.3"
+      },
+      "HeroStatID": 10,
+      "HeroStatName": "10"
+    }
+  },
+  {
+    "Type": "OnItemTinkered",
+    "Name": "OnItemTinkered_0",
+    "Outer": "OrListener_0"
+  },
+  {
+    "Type": "OnModInstalledListener",
+    "Name": "OnModInstalledListener_0",
+    "Outer": "OrListener_0"
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "HeroStat_ItemsUpgraded",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnItemTinkered HeroStat_ItemsUpgraded:OrListener_0.OnItemTinkered_0",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_ItemsUpgraded.1"
+        },
+        {
+          "ObjectName": "OnModInstalledListener HeroStat_ItemsUpgraded:OrListener_0.OnModInstalledListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/HeroStats/HeroStat_ItemsUpgraded.2"
+        }
+      ]
+    }
+  }
+]

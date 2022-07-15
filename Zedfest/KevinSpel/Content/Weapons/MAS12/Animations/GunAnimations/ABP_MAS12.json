@@ -1,0 +1,2817 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_MAS12_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Trigger",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "TriggerDefault",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "TriggerPull",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/ADS",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 28,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 29,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 30,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 16,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                17
+              ],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "Walking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 32,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 33,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 8,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 34,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 18,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Sprinting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 35,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 9,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 36,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                21
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 37,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 22,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                23
+              ],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "Midair",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 38,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 11,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 39,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 13,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 40,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 10,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 24,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                25
+              ],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "Land",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 41,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 14,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 42,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 12,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 26,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                27
+              ],
+              "bAlwaysResetOnEntry": true
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 5,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 5,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 5,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_MAS12_Demo",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/SK_MAS12_Demo.6"
+      },
+      "OrderedSavedPoseIndices": [
+        11
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "ShootHeld",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:ShootHeld",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.23"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_95F5591D4F4CF8A23734359482985E50",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.85"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "ShootHeld",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:ShootHeld",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.23"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_9711025946B7A5C1973EDC98B8021FF5",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.86"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "SwayRotation",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "StructProperty AnimNode_ModifyBone:Rotation",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 12,
+              "CachedSourceProperty": {
+                "ObjectName": "StructProperty ABP_MAS12_C:SwayRotation",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.102"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "IKAlpha",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_SkeletalControlBase:Alpha",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty ABP_MAS12_C:IKAlpha",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.41"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_ModifyBone_7121B8464935228708D19D8D64FBF200",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.58"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.45"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.62"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "WalkInput",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_SequencePlayer:PlayRate",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty ABP_MAS12_C:WalkInput",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.44"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_30F09FD14E016D0C90FBD0B74C9E35F0",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.60"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Shooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Shooting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.24"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_E39327BE4DC292DF0837ED9437EABBAC",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.91"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.46"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.80"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.27"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.93"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Sprinting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Sprinting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.25"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_F1BEDB4749BFE4ED603D0BB93B3701D1",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.95"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Shooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Shooting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.24"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_801965B7469443BB612FA1948BF03733",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.84"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Falling",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Falling",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.22"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_253F25144571B48385D170ACA2AF5083",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.81"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.47"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.87"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Falling",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Falling",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.22"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_FF408A5F4EC17270E13AE59E5B676F6C",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.96"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Sprinting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Sprinting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.25"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_EF4544C4441FE3449A86A6A792E5B1A6",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.94"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Shooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Shooting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.24"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_B318DEE5476D889D202DCBB36388C725",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.89"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Falling",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Falling",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.22"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_31A89DF949A910A81A1607812F8BD654",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.82"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Aiming",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Aiming",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.3"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_A9A5DCA4478F6EBA4D1B508D8BCDBCBA",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.88"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Shooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Shooting",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.24"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_E7D3E7934F5A330D76D6D795AB32A835",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.92"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Aiming",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ABP_MAS12_C:Aiming",
+                "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.3"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_57D5CFF84111D43BA6B4EB99BDF2D65A",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.83"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.48"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+            "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.90"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty ABP_MAS12_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.0"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.45"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.47"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.48"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.46"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.28"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.27"
+      },
+      {
+        "ObjectName": "Function ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.6"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_Root_744314AF45D051B8B33878BBB697225A",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.4"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_Slot_562DF5F642F02A7054FE9C81A64007B3",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.68"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.90"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_57D5CFF84111D43BA6B4EB99BDF2D65A",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.83"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_E7D3E7934F5A330D76D6D795AB32A835",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.92"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_A9A5DCA4478F6EBA4D1B508D8BCDBCBA",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.88"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_31A89DF949A910A81A1607812F8BD654",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.82"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_B318DEE5476D889D202DCBB36388C725",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.89"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_EF4544C4441FE3449A86A6A792E5B1A6",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.94"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_FF408A5F4EC17270E13AE59E5B676F6C",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.96"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.87"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_253F25144571B48385D170ACA2AF5083",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.81"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_801965B7469443BB612FA1948BF03733",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.84"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_F1BEDB4749BFE4ED603D0BB93B3701D1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.95"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.93"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.80"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_E39327BE4DC292DF0837ED9437EABBAC",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.91"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_78F1B9094C51566899792C8402160629",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.64"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_DD97D2014FC706CE9987BCB28C67C635",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.78"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_6DF4C13E4B15E72415A184AD0421CB70",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.63"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_B24F1916456ADC0416213E9002E4AF66",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.76"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_9E7044DA4F1C3279CB03E682FEEBD721",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.66"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_11224114439E096BEB4747B058C6BAE8",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.72"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_DBA2E25A454D84F336B9129172377B38",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.67"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_B9B799AA45AE7617D77AECA902085ECF",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.77"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_30F09FD14E016D0C90FBD0B74C9E35F0",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.60"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_6EDCC5D449C1C75773590FB972020A5F",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.75"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.62"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_E584A1C94E939165EAE57088CBA4BAEA",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.79"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateMachine_BBD9BD9D4E6DE8A7EBE4FEA50C57E08A",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.70"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_ModifyBone_7121B8464935228708D19D8D64FBF200",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.58"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_LocalToComponentSpace_62B98D6C40E61FB97EE4E09C747600B0",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.57"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_ComponentToLocalSpace_E7D3D17240C00F3191BB5AA344A68460",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.55"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SaveCachedPose_3F9261524C06DBFD21DECCA3833F5FCB",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.59"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_9711025946B7A5C1973EDC98B8021FF5",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.86"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_TransitionResult_95F5591D4F4CF8A23734359482985E50",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.85"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_5E2D7A494C04213EA789A190485BA4C7",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.61"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_4D8FB5774E07809BD01D679176A11304",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.74"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_SequencePlayer_8815316D413B06D897986E887667A8D2",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.65"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateResult_12210F6D4439C60CAD08F699D9DCCBD9",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.73"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_StateMachine_EBE0EDE04E0C6C3D209521B8D37BC000",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.71"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_LayeredBoneBlend_8B8767A048660486193CE188E023AE2B",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.56"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_UseCachedPose_B5644CB24AA586F5101BD6935071C983",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.98"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_UseCachedPose_21D749664DD31F3EB2D8F4BCD37E8AA3",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.97"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:AnimGraphNode_Slot_F41566E04DBDD332F7161C823A85F5C6",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.69"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:FirstPersonDemoCharacter",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.54"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:LeftRightSway",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.42"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:UpDownSway",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.43"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:WalkInput",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.44"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:IKAlpha",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.41"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:SwayRotation",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.102"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:Walking",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.26"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:Aiming",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.3"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:Shooting",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.24"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ShootHeld",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.23"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:Sprinting",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.25"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:Falling",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.22"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_MAS12": {
+        "ObjectName": "Function ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.6"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75": {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.27"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function ABP_MAS12_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B": {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.46"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D": {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.48"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059": {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.47"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979": {
+        "ObjectName": "Function ABP_MAS12_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.45"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_MAS12_C Default__ABP_MAS12_C",
+      "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.2"
+    }
+  },
+  {
+    "Type": "ABP_MAS12_C",
+    "Name": "Default__ABP_MAS12_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_744314AF45D051B8B33878BBB697225A": {
+        "Result": {
+          "LinkID": 32
+        }
+      },
+      "AnimGraphNode_Slot_562DF5F642F02A7054FE9C81A64007B3": {
+        "Source": {
+          "LinkID": 41
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_57D5CFF84111D43BA6B4EB99BDF2D65A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E7D3E7934F5A330D76D6D795AB32A835": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_A9A5DCA4478F6EBA4D1B508D8BCDBCBA": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_31A89DF949A910A81A1607812F8BD654": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_B318DEE5476D889D202DCBB36388C725": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_EF4544C4441FE3449A86A6A792E5B1A6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_FF408A5F4EC17270E13AE59E5B676F6C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_253F25144571B48385D170ACA2AF5083": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_801965B7469443BB612FA1948BF03733": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_F1BEDB4749BFE4ED603D0BB93B3701D1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E39327BE4DC292DF0837ED9437EABBAC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_78F1B9094C51566899792C8402160629": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Land",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Land.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_DD97D2014FC706CE9987BCB28C67C635": {
+        "Result": {
+          "LinkID": 17
+        }
+      },
+      "AnimGraphNode_SequencePlayer_6DF4C13E4B15E72415A184AD0421CB70": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Midair",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Midair.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_B24F1916456ADC0416213E9002E4AF66": {
+        "Result": {
+          "LinkID": 19
+        }
+      },
+      "AnimGraphNode_SequencePlayer_9E7044DA4F1C3279CB03E682FEEBD721": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Shoot",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_11224114439E096BEB4747B058C6BAE8": {
+        "Result": {
+          "LinkID": 21
+        }
+      },
+      "AnimGraphNode_SequencePlayer_DBA2E25A454D84F336B9129172377B38": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Sprint",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Sprint.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_B9B799AA45AE7617D77AECA902085ECF": {
+        "Result": {
+          "LinkID": 23
+        }
+      },
+      "AnimGraphNode_SequencePlayer_30F09FD14E016D0C90FBD0B74C9E35F0": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Walk",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Walk.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6EDCC5D449C1C75773590FB972020A5F": {
+        "Result": {
+          "LinkID": 25
+        }
+      },
+      "AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979": {
+        "Sequence": null,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E584A1C94E939165EAE57088CBA4BAEA": {
+        "Result": {
+          "LinkID": 27
+        }
+      },
+      "AnimGraphNode_StateMachine_BBD9BD9D4E6DE8A7EBE4FEA50C57E08A": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_ModifyBone_7121B8464935228708D19D8D64FBF200": {
+        "BoneToModify": {
+          "BoneName": "Gun_Body"
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Rotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "TranslationMode": "BMM_Ignore",
+        "RotationMode": "BMM_Replace",
+        "ScaleMode": "BMM_Ignore",
+        "TranslationSpace": "BCS_ComponentSpace",
+        "RotationSpace": "BCS_BoneSpace",
+        "ScaleSpace": "BCS_ComponentSpace",
+        "ComponentPose": {
+          "LinkID": 31
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_LocalToComponentSpace_62B98D6C40E61FB97EE4E09C747600B0": {
+        "LocalPose": {
+          "LinkID": 1
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace_E7D3D17240C00F3191BB5AA344A68460": {
+        "ComponentPose": {
+          "LinkID": 30
+        }
+      },
+      "AnimGraphNode_SaveCachedPose_3F9261524C06DBFD21DECCA3833F5FCB": {
+        "Pose": {
+          "LinkID": 29
+        },
+        "CachePoseName": "MainState"
+      },
+      "AnimGraphNode_TransitionResult_9711025946B7A5C1973EDC98B8021FF5": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_95F5591D4F4CF8A23734359482985E50": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_5E2D7A494C04213EA789A190485BA4C7": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_Shoot",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_Shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4D8FB5774E07809BD01D679176A11304": {
+        "Result": {
+          "LinkID": 36
+        }
+      },
+      "AnimGraphNode_SequencePlayer_8815316D413B06D897986E887667A8D2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence A_MAS12_ADS",
+          "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/A_MAS12_ADS.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_12210F6D4439C60CAD08F699D9DCCBD9": {
+        "Result": {
+          "LinkID": 38
+        }
+      },
+      "AnimGraphNode_StateMachine_EBE0EDE04E0C6C3D209521B8D37BC000": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_8B8767A048660486193CE188E023AE2B": {
+        "BasePose": {
+          "LinkID": 42
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 44
+          },
+          {
+            "LinkID": 40
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_EjectionPort",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Gun_Handle",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Trigger",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_UseCachedPose_B5644CB24AA586F5101BD6935071C983": {
+        "LinkToCachingNode": {
+          "LinkID": 33
+        },
+        "CachePoseName": "MainState"
+      },
+      "AnimGraphNode_UseCachedPose_21D749664DD31F3EB2D8F4BCD37E8AA3": {
+        "LinkToCachingNode": {
+          "LinkID": 33
+        },
+        "CachePoseName": "MainState"
+      },
+      "AnimGraphNode_Slot_F41566E04DBDD332F7161C823A85F5C6": {
+        "Source": {
+          "LinkID": 43
+        },
+        "SlotName": "ShootSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "SwayRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Aiming",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_744314AF45D051B8B33878BBB697225A",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_MAS12",
+    "Outer": "ABP_MAS12_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.5"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.Temp_object_Variable",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.52"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Not_PreBool_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.16"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.Temp_object_Variable1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.53"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Not_PreBool_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.17"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_BooleanAND_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.7"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.31"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.15"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_BooleanOR_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.10"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.Temp_bool_Variable",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.21"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.K2Node_Select_Default",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.51"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.40"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.49"
+      },
+      {
+        "ObjectName": "ObjectProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.K2Node_DynamicCast_AsFirst_Person_Demo_Character",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.50"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.20"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_IsPlayingSlotAnimation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.14"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Not_PreBool_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.18"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Not_PreBool_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.19"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_BooleanAND_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.8"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.99"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.38"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.12"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_SelectFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.37"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Divide_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.30"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_GetVelocity_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.100"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_VSize_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.39"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Greater_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.11"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.13"
+      },
+      {
+        "ObjectName": "BoolProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_BooleanAND_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.9"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Multiply_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.34"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Lerp_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.32"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Multiply_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.35"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Lerp_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.33"
+      },
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_Multiply_FloatFloat_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.36"
+      },
+      {
+        "ObjectName": "StructProperty ABP_MAS12_C:ExecuteUbergraph_ABP_MAS12.CallFunc_MakeRotator_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.101"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue2",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanOR_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsPlayingSlotAnimation_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue2",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue3",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_Variable",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Falling",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "ShootHeld",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Shooting",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Sprinting",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Walking",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+    "Outer": "ABP_MAS12_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "ABP_MAS12_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty ABP_MAS12_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Animations/GunAnimations/ABP_MAS12.29"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Lerp_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Lerp_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue2",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_ABP_MAS12"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "IKAlpha",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "LeftRightSway",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "UpDownSway",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "WalkInput",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+    "Outer": "ABP_MAS12_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+    "Outer": "ABP_MAS12_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+    "Outer": "ABP_MAS12_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MAS12_AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+    "Outer": "ABP_MAS12_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsFirst_Person_Demo_Character",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass FirstPersonDemoCharacter_C",
+      "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Character/FirstPersonDemoCharacter.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Select_Default",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyClass": {
+      "ObjectName": "Class AnimSequenceBase",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyClass": {
+      "ObjectName": "Class AnimSequenceBase",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "PropertyClass": {
+      "ObjectName": "Class AnimSequenceBase",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FirstPersonDemoCharacter",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 67589,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass FirstPersonDemoCharacter_C",
+      "ObjectPath": "KevinSpel/Content/Weapons/MAS12/Character/FirstPersonDemoCharacter.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ComponentToLocalSpace_E7D3D17240C00F3191BB5AA344A68460",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertComponentToLocalSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_8B8767A048660486193CE188E023AE2B",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalToComponentSpace_62B98D6C40E61FB97EE4E09C747600B0",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertLocalToComponentSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ModifyBone_7121B8464935228708D19D8D64FBF200",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ModifyBone",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_3F9261524C06DBFD21DECCA3833F5FCB",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_30F09FD14E016D0C90FBD0B74C9E35F0",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_5E2D7A494C04213EA789A190485BA4C7",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6212CFC145D62EE8562C359EA5D7E979",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6DF4C13E4B15E72415A184AD0421CB70",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_78F1B9094C51566899792C8402160629",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8815316D413B06D897986E887667A8D2",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_9E7044DA4F1C3279CB03E682FEEBD721",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DBA2E25A454D84F336B9129172377B38",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_562DF5F642F02A7054FE9C81A64007B3",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_F41566E04DBDD332F7161C823A85F5C6",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_BBD9BD9D4E6DE8A7EBE4FEA50C57E08A",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_EBE0EDE04E0C6C3D209521B8D37BC000",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_11224114439E096BEB4747B058C6BAE8",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_12210F6D4439C60CAD08F699D9DCCBD9",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4D8FB5774E07809BD01D679176A11304",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_6EDCC5D449C1C75773590FB972020A5F",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B24F1916456ADC0416213E9002E4AF66",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B9B799AA45AE7617D77AECA902085ECF",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_DD97D2014FC706CE9987BCB28C67C635",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E584A1C94E939165EAE57088CBA4BAEA",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0A7AD5E747DE035075AFCB92E6FA803B",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_253F25144571B48385D170ACA2AF5083",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_31A89DF949A910A81A1607812F8BD654",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_57D5CFF84111D43BA6B4EB99BDF2D65A",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_801965B7469443BB612FA1948BF03733",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_95F5591D4F4CF8A23734359482985E50",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9711025946B7A5C1973EDC98B8021FF5",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A886D48C4D96C7F0A6AD819DCFE20059",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A9A5DCA4478F6EBA4D1B508D8BCDBCBA",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B318DEE5476D889D202DCBB36388C725",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_CD76769C480F3962214298A3D8861B4D",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E39327BE4DC292DF0837ED9437EABBAC",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E7D3E7934F5A330D76D6D795AB32A835",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_ED8FAE5445DF1F3E7AD5F289D1EA4C75",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EF4544C4441FE3449A86A6A792E5B1A6",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F1BEDB4749BFE4ED603D0BB93B3701D1",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_FF408A5F4EC17270E13AE59E5B676F6C",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_21D749664DD31F3EB2D8F4BCD37E8AA3",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_B5644CB24AA586F5101BD6935071C983",
+    "Outer": "ABP_MAS12_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeRotator_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MAS12",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "SwayRotation",
+    "Outer": "ABP_MAS12_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

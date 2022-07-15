@@ -1,0 +1,232 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_OnCircle_1",
+    "Properties": {
+      "ParamName": "OnCircle.CircleRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_OnCircle_2",
+    "Properties": {
+      "ParamName": "OnCircle.InnerCircleRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_4",
+    "Outer": "EnvQueryGenerator_OnCircle_2",
+    "Properties": {
+      "ParamName": "OnCircle.InnerNumberOfPoints"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_FollowerPos_2",
+    "Properties": {
+      "ParamName": "FollowerPos.IdealAngleProvider"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryTest_FollowerPos_2",
+    "Properties": {
+      "ParamName": "FollowerPos.MinAngleProvider"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "CompanionFollowQuery",
+    "Properties": {
+      "QueryName": "NewEnvQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption CompanionFollowQuery:EnvQueryOption_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Composite",
+    "Name": "EnvQueryGenerator_Composite_0",
+    "Outer": "CompanionFollowQuery",
+    "Properties": {
+      "Generators": [
+        {
+          "ObjectName": "EnvQueryGenerator_OnCircle CompanionFollowQuery:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.7"
+        },
+        {
+          "ObjectName": "EnvQueryGenerator_OnCircle CompanionFollowQuery:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.8"
+        }
+      ],
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_1",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "CircleRadius": {
+        "DefaultValue": 300.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionFollowQuery:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfPoints": {
+        "DefaultValue": 16,
+        "DataField": "IntValue"
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "ArcDirection": {
+        "DirMode": "EEnvDirection::Rotation"
+      },
+      "CircleCenter": {
+        "ObjectName": "Class EQSContext_CompanionFollowOriginProjected",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_Pathing_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_Pathing.0"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "bDefineArc": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_EQS_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_EQS.0"
+        },
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_2",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "CircleRadius": {
+        "DefaultValue": 50.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionFollowQuery:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_2.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfPoints": {
+        "DefaultValue": 0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionFollowQuery:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_2.AIDataProvider_QueryParams_4",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.2"
+        },
+        "DataField": "IntValue"
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "ArcDirection": {
+        "DirMode": "EEnvDirection::Rotation"
+      },
+      "CircleCenter": {
+        "ObjectName": "Class EQSContext_CompanionFollowOriginProjected",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "bDefineArc": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_EQS_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_EQS.0"
+        },
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_2",
+    "Outer": "CompanionFollowQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Composite CompanionFollowQuery:EnvQueryGenerator_Composite_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.6"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_FollowerPos CompanionFollowQuery:EnvQueryTest_FollowerPos_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.10"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding CompanionFollowQuery:EnvQueryTest_Pathfinding_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_FollowerPos",
+    "Name": "EnvQueryTest_FollowerPos_2",
+    "Outer": "CompanionFollowQuery",
+    "Properties": {
+      "OriginContext": {
+        "ObjectName": "Class EQSContext_CompanionFollowOriginProjected",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ForwardContext": {
+        "ObjectName": "Class EQSContext_CompanionFollowForward",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "IdealAngleProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionFollowQuery:EnvQueryTest_FollowerPos_2.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "MinAngleProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionFollowQuery:EnvQueryTest_FollowerPos_2.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.4"
+        },
+        "DataField": "FloatValue"
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_1",
+    "Outer": "CompanionFollowQuery",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_Pathing_C",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_Pathing.0"
+      },
+      "TestOrder": 1,
+      "VerNum": 1
+    }
+  }
+]

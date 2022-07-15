@@ -1,0 +1,411 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "ApproachBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.10"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Approach_IsInInterrogationRange",
+    "Name": "BT_Con_Approach_IsInInterrogationRange_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Not In Interrogation Range?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Approach_IsTargetInConversation",
+    "Name": "BT_Con_Approach_IsTargetInConversation_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "Player NOT In Conversation?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Approach_IsTargetInConversation",
+    "Name": "BT_Con_Approach_IsTargetInConversation_1",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Player In Conversation?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Approach_Interrogate",
+    "Name": "BT_Scr_Approach_Interrogate_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "NodeName": "Interrogate",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Approach_SetApproaching",
+    "Name": "BT_Scr_Approach_SetApproaching_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "NodeName": "Flag As Approaching",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorNavigationSettings",
+    "Name": "BT_Scr_General_SetBehaviorNavigationSettings_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "bCanJump": true,
+      "bCanUseLadders": true,
+      "NodeName": "Allow Climbing and Jumping",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_1",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "MovementState": "EAIMovementState::Run",
+      "NodeName": "Set Movement Mode to Run",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Approach_IsTargetInConversation ApproachBehaviorTree:BT_Con_Approach_IsTargetInConversation_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait ApproachBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Approach_IsTargetInConversation ApproachBehaviorTree:BT_Con_Approach_IsTargetInConversation_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_ApproachComplete ApproachBehaviorTree:BTService_EventFirer_ApproachComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.13"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo ApproachBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.14"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess ApproachBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.11"
+            },
+            {
+              "ObjectName": "BT_Con_Approach_IsInInterrogationRange ApproachBehaviorTree:BT_Con_Approach_IsInInterrogationRange_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.1"
+            },
+            {
+              "ObjectName": "BT_Scr_Approach_SetApproaching ApproachBehaviorTree:BT_Scr_Approach_SetApproaching_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Script ApproachBehaviorTree:BTTask_Script_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.17"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_Approach_Interrogate ApproachBehaviorTree:BT_Scr_Approach_Interrogate_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait ApproachBehaviorTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop ApproachBehaviorTree:BTDecorator_Loop_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.12"
+            },
+            {
+              "ObjectName": "BT_Scr_SetMovementState ApproachBehaviorTree:BT_Scr_SetMovementState_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.7"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorNavigationSettings ApproachBehaviorTree:BT_Scr_General_SetBehaviorNavigationSettings_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.6"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_ApproachComplete",
+    "Name": "BTService_EventFirer_ApproachComplete_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Approach Complete Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_Player",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "FailResponse": "EMoveToResultResponse::ContinueTask",
+      "PartialPathResponse": "EMoveToResultResponse::ContinueTask",
+      "AcceptableRadius": 20.0,
+      "SaveGameTaskGuid": "6329F4ED-421EAD46-14DC618E-66F3BA18",
+      "NodeName": "Approach Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "53E1DC1B-4716D4B8-56A38586-AC24016E",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ApproachBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "WaitTime": 1.0,
+      "SaveGameTaskGuid": "BFC3A839-47A65ED1-1CB82083-1CCE5B9C",
+      "NodeName": "Wait 1 Second",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Script",
+    "Name": "BTTask_Script_0",
+    "Outer": "ApproachBehaviorTree",
+    "Properties": {
+      "SaveGameTaskGuid": "7B7A1C49-43213373-D4E9BAAD-00A85AC9",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ApproachBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ApproachBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.9"
+      }
+    }
+  }
+]

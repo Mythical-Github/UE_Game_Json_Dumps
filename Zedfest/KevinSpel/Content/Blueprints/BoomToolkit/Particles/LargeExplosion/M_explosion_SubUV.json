@@ -1,0 +1,79 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_explosion_SubUV",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_2",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Additive",
+      "ShadingModel": "MSM_Unlit",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionParticleSubUV M_explosion_SubUV:MaterialExpressionParticleSubUV_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Particles/LargeExplosion/M_explosion_SubUV.1"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_explosion_SubUV:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Particles/LargeExplosion/M_explosion_SubUV.2"
+        },
+        null
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "78C719B8-4CDA4E90-1381C782-E158BC41",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionParticleSubUV",
+    "Name": "MaterialExpressionParticleSubUV_0",
+    "Outer": "M_explosion_SubUV",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D T_explo_SubUV",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Particles/LargeExplosion/T_explo_SubUV.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_explosion_SubUV",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Particles/LargeExplosion/M_explosion_SubUV.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "M_explosion_SubUV",
+    "Properties": {
+      "DefaultValue": 25.0,
+      "ParameterName": "DepthFadeDistance",
+      "ExpressionGUID": "090F2D0E-4C26EF54-03A35C98-BBBBE9A5",
+      "Material": {
+        "ObjectName": "Material M_explosion_SubUV",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Particles/LargeExplosion/M_explosion_SubUV.0"
+      }
+    }
+  }
+]

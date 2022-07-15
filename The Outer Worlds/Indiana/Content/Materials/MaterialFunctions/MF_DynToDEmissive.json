@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_0",
+    "Outer": "MF_DynToDEmissive",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection MPC_Global",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MPC_Global.0"
+      },
+      "ParameterName": "NormalizedBell",
+      "ParameterId": "30A10E72-4C4A6176-71558BB0-F72C5179",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynToDEmissive",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.4"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "MF_DynToDEmissive",
+    "Properties": {
+      "DefaultValue": 0.1,
+      "ParameterName": "MF_Exposure_Night",
+      "ExpressionGUID": "FD26DE2B-496CBCAD-B7E1B1BB-FE175BE0",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynToDEmissive",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.4"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_1",
+    "Outer": "MF_DynToDEmissive",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "MF_Exposure_Day",
+      "ExpressionGUID": "4DCA534C-470080A9-447741B0-2E8E1BF7",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynToDEmissive",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.4"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_2",
+    "Outer": "MF_DynToDEmissive",
+    "Properties": {
+      "DefaultValue": 0.5,
+      "ParameterName": "MF_ExposureThreshold",
+      "ExpressionGUID": "3EF1ED6B-4627BF5A-A63361B5-44E36B5F",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DynToDEmissive",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.4"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_DynToDEmissive",
+    "Properties": {
+      "Description": "Uses the NormalizedBell value from MPC_Global to lerp between a value for high and low exposure",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter MF_DynToDEmissive:MaterialExpressionCollectionParameter_0",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.0"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter MF_DynToDEmissive:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter MF_DynToDEmissive:MaterialExpressionScalarParameter_1",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.2"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter MF_DynToDEmissive:MaterialExpressionScalarParameter_2",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DynToDEmissive.3"
+        }
+      ],
+      "StateId": "85B92268-46FAC1EF-5F9FF5B3-E9DD81C9"
+    }
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_NRay_TargetEffect_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_NRay_TargetEffect_C Default__Spell_NRay_TargetEffect_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.1"
+    }
+  },
+  {
+    "Type": "Spell_NRay_TargetEffect_C",
+    "Name": "Default__Spell_NRay_TargetEffect_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnCausedDamage Default__Spell_NRay_TargetEffect_C:OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.10"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_NRay_AoE_C Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.5"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_NRay_TargetEffect_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.11"
+              },
+              {
+                "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_NRay_TargetEffect_C:SpellConditional_HasStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.12"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "AkPlaySoundEventEffect_0",
+    "Properties": {
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "AkPlaySoundEventEffect_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_nray_lp",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_nray_lp.0"
+      },
+      "SoundLoop": null
+    }
+  },
+  {
+    "Type": "AoEStatusEffect",
+    "Name": "AoEStatusEffect_2",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Properties": {
+      "CollisionShape": {
+        "Shape": {
+          "ObjectName": "SphereShape Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.AoEStatusEffect_2.SphereShape_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.13"
+        }
+      },
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_NRay_Pulse_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_Pulse.1"
+      },
+      "bOnlyHostileTargets": true,
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 2.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_NRay_AoE_C",
+    "Name": "CE_NRay_AoE_C_1",
+    "Outer": "Default__Spell_NRay_TargetEffect_C",
+    "Template": "Default__CE_NRay_AoE_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_NRay_PostProcess_C Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.CE_NRay_PostProcess_C_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.6"
+        },
+        {
+          "ObjectName": "AoEStatusEffect Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.AoEStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.4"
+        },
+        {
+          "ObjectName": "CE_NRay_Pulse_Visual_C Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.CE_NRay_Pulse_Visual_C_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.7"
+        }
+      ],
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.9"
+      }
+    }
+  },
+  {
+    "Type": "CE_NRay_PostProcess_C",
+    "Name": "CE_NRay_PostProcess_C_2",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "Default__CE_NRay_PostProcess_C",
+    "Properties": {
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_NRay_Pulse_Visual_C",
+    "Name": "CE_NRay_Pulse_Visual_C_2",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "Default__CE_NRay_Pulse_Visual_C",
+    "Properties": {
+      "Interval": 2.0,
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.CE_NRay_Pulse_Visual_C_2.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.8"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_NRay_Pulse_Visual_C_2",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.CE_NRay_Pulse_Visual_C_2.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Spell_NRay_TargetEffect_C:CE_NRay_AoE_C_1.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_TargetEffect.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "Default__Spell_NRay_TargetEffect_C",
+    "Properties": {
+      "bTriggerOnZeroDamage": true,
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass NRay_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/NRay_DamageType.0"
+      }
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_NRay_TargetEffect_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Robot"
+      ],
+      "bNegateCheck": true
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_0",
+    "Outer": "Default__Spell_NRay_TargetEffect_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_NRay_AoE_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.1"
+      },
+      "NumStacks": 3,
+      "Operator": "ComparisonOperator::LessThan"
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "AoEStatusEffect_2",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 500.0
+      }
+    }
+  }
+]

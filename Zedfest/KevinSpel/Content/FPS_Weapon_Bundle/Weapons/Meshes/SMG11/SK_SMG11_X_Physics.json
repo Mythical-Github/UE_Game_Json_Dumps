@@ -1,0 +1,136 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_SMG11_X_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup SK_SMG11_X_Physics:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/Weapons/Meshes/SMG11/SK_SMG11_X_Physics.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_SMG11_X_Physics:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/Weapons/Meshes/SMG11/SK_SMG11_X_Physics.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_SMG11_X_Physics:PhysicsConstraintTemplate_55",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/Weapons/Meshes/SMG11/SK_SMG11_X_Physics.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_55",
+    "Outer": "SK_SMG11_X_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "b_gun_mag",
+        "ConstraintBone1": "b_gun_mag",
+        "ConstraintBone2": "b_gun_Root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 5.614217,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Locked",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_SMG11_X_Physics",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -0.04189201,
+              "Y": -8.031494,
+              "Z": 3.2125478
+            },
+            "Rotation": {
+              "Pitch": 0.13522407,
+              "Yaw": -89.98697,
+              "Roll": 0.09283029
+            },
+            "X": 9.71813,
+            "Y": 4.931938,
+            "Z": 31.515419,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 3.6579401,
+            "Y": 10.798831,
+            "Z": 7.5,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "b_gun_Root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BCEDDF5F427D4B99DC9509AA7861C61E"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_SMG11_X_Physics",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.4564047,
+              "Z": 0.1445986
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -89.99999
+            },
+            "X": 3.1920066,
+            "Y": 3.508827,
+            "Z": 25.768684,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "b_gun_mag",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9ABA4BB34AF087DB7B56138D6591219D"
+  }
+]

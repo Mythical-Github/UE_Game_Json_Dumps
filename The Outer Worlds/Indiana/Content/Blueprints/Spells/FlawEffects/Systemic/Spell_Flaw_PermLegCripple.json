@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Flaw_PermLegCripple_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Flaw_PermLegCripple_C Default__Spell_Flaw_PermLegCripple_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.1"
+    }
+  },
+  {
+    "Type": "Spell_Flaw_PermLegCripple_C",
+    "Name": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Flaw_PermLegCripple_C:StatusEffectRemove_2",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.4"
+            },
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Flaw_PermLegCripple_C:StatusEffectRemove_3",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.5"
+            },
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Flaw_PermLegCripple_C:StatusEffectRemove_4",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.6"
+            },
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Flaw_PermLegCripple_C:StatusEffectRemove_5",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.7"
+            },
+            {
+              "ObjectName": "CastSpellStatusEffect Default__Spell_Flaw_PermLegCripple_C:CastSpellStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.2"
+            },
+            {
+              "ObjectName": "CE_LegCripple_Flaw_C Default__Spell_Flaw_PermLegCripple_C:CE_LegCripple_Flaw_C_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.3"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CastSpellStatusEffect",
+    "Name": "CastSpellStatusEffect_0",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "Spell": {
+        "ObjectName": "BlueprintGeneratedClass XFH_Spell_Flaw_PermLegCripple_LowG_C",
+        "ObjectPath": "Indiana/Content/XFH_Content/XFH_Blueprints/Spells/FlawEffects/XFH_Spell_Flaw_PermLegCripple_LowG.0"
+      },
+      "bAddTarget": true,
+      "bForcePlayerCast": true,
+      "DurationType": "EStatusEffectDurationType::Infinite"
+    }
+  },
+  {
+    "Type": "CE_LegCripple_Flaw_C",
+    "Name": "CE_LegCripple_Flaw_C_1",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Template": "Default__CE_LegCripple_Flaw_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Spell_Flaw_PermLegCripple_C:CE_LegCripple_Flaw_C_1.ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermLegCripple.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_2",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_LegCripple_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple.1"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_3",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_LegCripple_Supernova_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_4",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Canid_LegCripple_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_Canid_LegCripple.1"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_5",
+    "Outer": "Default__Spell_Flaw_PermLegCripple_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_GorillianLegCripple_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_GorillianLegCripple.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "CE_LegCripple_Flaw_C_1",
+    "Template": "ToggleActionStatusEffect_0"
+  }
+]

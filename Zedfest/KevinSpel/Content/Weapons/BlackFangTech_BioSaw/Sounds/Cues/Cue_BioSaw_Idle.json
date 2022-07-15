@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cue_BioSaw_Idle",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulatorContinuous Cue_BioSaw_Idle:SoundNodeModulatorContinuous_1",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_Idle.1"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Outer": "Cue_BioSaw_Idle",
+    "Properties": {
+      "PitchModulationParams": {
+        "MinOutput": 1.0
+      },
+      "VolumeModulationParams": {
+        "MinOutput": 2.6,
+        "MaxOutput": 3.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_BioSaw_Idle:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_Idle.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Cue_BioSaw_Idle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Idle.Wav_BioSaw_Idle",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Wav_BioSaw_Idle",
+      "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Idle.0"
+    }
+  }
+]

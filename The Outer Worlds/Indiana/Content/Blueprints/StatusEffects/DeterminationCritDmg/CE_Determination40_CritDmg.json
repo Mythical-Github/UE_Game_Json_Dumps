@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Determination40_CritDmg_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Determination40_CritDmg_C Default__CE_Determination40_CritDmg_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/DeterminationCritDmg/CE_Determination40_CritDmg.1"
+    }
+  },
+  {
+    "Type": "CE_Determination40_CritDmg_C",
+    "Name": "Default__CE_Determination40_CritDmg_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Determination40_CritDmg_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/DeterminationCritDmg/CE_Determination40_CritDmg.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Determination40_CritDmg_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.2,
+        "RpgStat": {
+          "ObjectName": "RpgStat CauseCritDamage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/CauseCritDamage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "EffectDescription": {
+        "StringID": 1495
+      },
+      "DescriptionFormat": {
+        "StringID": 1524
+      }
+    }
+  }
+]

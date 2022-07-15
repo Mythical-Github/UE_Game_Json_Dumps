@@ -1,0 +1,193 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ExhaustionSpell_T5_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ExhaustionSpell_T5_C Default__ExhaustionSpell_T5_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.1"
+    }
+  },
+  {
+    "Type": "ExhaustionSpell_T5_C",
+    "Name": "Default__ExhaustionSpell_T5_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "MultiStatusEffect Default__ExhaustionSpell_T5_C:MultiStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.3"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_1",
+    "Outer": "MultiStatusEffect_0",
+    "Properties": {
+      "DamageValuePercent": 1.6,
+      "DamageValueType": "EDamageValueType::Percent",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 9999.0,
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 1.0
+    }
+  },
+  {
+    "Type": "MultiStatusEffect",
+    "Name": "MultiStatusEffect_0",
+    "Outer": "Default__ExhaustionSpell_T5_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__ExhaustionSpell_T5_C:MultiStatusEffect_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__ExhaustionSpell_T5_C:MultiStatusEffect_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.5"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__ExhaustionSpell_T5_C:MultiStatusEffect_0.StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.6"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__ExhaustionSpell_T5_C:MultiStatusEffect_0.DamageStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Survival/ExhaustionSpell_T5.2"
+        }
+      ],
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "EffectName": {
+        "StringID": 2119
+      },
+      "EffectDescription": {
+        "StringID": 2120
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Exhaustion",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Exhaustion.0"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "MultiStatusEffect_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -3.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Temperament_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Temperament_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "MultiStatusEffect_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -3.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Intelligence_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Intelligence_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "MultiStatusEffect_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -3.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Strength_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Strength_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

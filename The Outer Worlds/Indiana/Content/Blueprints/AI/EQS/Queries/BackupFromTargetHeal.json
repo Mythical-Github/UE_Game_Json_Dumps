@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "BackupFromTargetHeal",
+    "Properties": {
+      "QueryName": "BackupFromTarget_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption BackupFromTargetHeal:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTargetHeal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "BackupFromTargetHeal",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 250.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 400.0
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "PointsPerRing": {
+        "DefaultValue": 10
+      },
+      "ArcDirection": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_GeneralEQSActor",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EQSContext_GeneralEQSActor",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "bDefineArc": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "BackupFromTargetHeal",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut BackupFromTargetHeal:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTargetHeal.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Dot BackupFromTargetHeal:EnvQueryTest_Dot_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTargetHeal.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_NavmeshRaycast BackupFromTargetHeal:EnvQueryTest_NavmeshRaycast_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/BackupFromTargetHeal.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "BackupFromTargetHeal",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_GeneralEQSActor",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_NavmeshRaycast",
+    "Name": "EnvQueryTest_NavmeshRaycast_0",
+    "Outer": "BackupFromTargetHeal",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EQSContext_GeneralEQSActor",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

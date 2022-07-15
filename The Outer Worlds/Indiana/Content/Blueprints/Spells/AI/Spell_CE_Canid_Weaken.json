@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CE_Canid_Weaken_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CE_Canid_Weaken_C Default__Spell_CE_Canid_Weaken_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.1"
+    }
+  },
+  {
+    "Type": "Spell_CE_Canid_Weaken_C",
+    "Name": "Default__Spell_CE_Canid_Weaken_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 341
+      },
+      "TargetConditionals": [
+        {
+          "ObjectName": "SpellConditional_RandomChance Default__Spell_CE_Canid_Weaken_C:SpellConditional_RandomChance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.9"
+        },
+        {
+          "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_CE_Canid_Weaken_C:SpellConditional_IsHostileToCaster_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.8"
+        }
+      ],
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMeleeHit Default__Spell_CE_Canid_Weaken_C:OnMeleeHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.6"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Weaken_C Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.2"
+              },
+              {
+                "ObjectName": "HitReactionStatusEffect Default__Spell_CE_Canid_Weaken_C:HitReactionStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.5"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_CE_Canid_Weaken_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.7"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_Weaken_C",
+    "Name": "CE_Weaken_C_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C",
+    "Template": "Default__CE_Weaken_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Weaken_PostProcess_C Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.CE_Weaken_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.3"
+        },
+        {
+          "ObjectName": "HitReactionStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.HitReactionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.StatModifierStatusEffect_20",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.11"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.10"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.StatModifierStatusEffect_4",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.12"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.StatModifierStatusEffect_6",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.14"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CE_Canid_Weaken_C:CE_Weaken_C_0.StatModifierStatusEffect_5",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_CE_Canid_Weaken.13"
+        }
+      ],
+      "Duration": 8.0
+    }
+  },
+  {
+    "Type": "CE_Weaken_PostProcess_C",
+    "Name": "CE_Weaken_PostProcess_C_0",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "CE_Weaken_PostProcess_C_0"
+  },
+  {
+    "Type": "HitReactionStatusEffect",
+    "Name": "HitReactionStatusEffect_0",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "HitReactionStatusEffect_0"
+  },
+  {
+    "Type": "HitReactionStatusEffect",
+    "Name": "HitReactionStatusEffect_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C",
+    "Properties": {
+      "HitReaction": "EHitReactType::Light",
+      "Duration": 0.1
+    }
+  },
+  {
+    "Type": "OnMeleeHit",
+    "Name": "OnMeleeHit_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C",
+    "Properties": {
+      "MeleeAction": "EMeleeAction::SpecialAttack1"
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Robot"
+      ],
+      "bNegateCheck": true
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C"
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_0",
+    "Outer": "Default__Spell_CE_Canid_Weaken_C"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_2"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_20",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_20"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_4",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_4"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_5",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_5"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_6",
+    "Outer": "CE_Weaken_C_0",
+    "Template": "StatModifierStatusEffect_6"
+  }
+]

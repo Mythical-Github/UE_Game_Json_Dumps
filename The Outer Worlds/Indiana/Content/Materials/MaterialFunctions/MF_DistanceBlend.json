@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_2",
+    "Outer": "MF_DistanceBlend",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction VectorLength",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DistanceBlend",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureObject",
+    "Name": "MaterialExpressionTextureObject_16",
+    "Outer": "MF_DistanceBlend",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D default_hair_noise_M",
+        "ObjectPath": "Indiana/Content/Materials/DefaultTextures/default_hair_noise_M.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DistanceBlend",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_12",
+    "Outer": "MF_DistanceBlend",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_6"
+      },
+      "TextureObject": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureObject_16"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearGrayscale",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_DistanceBlend",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_DistanceBlend",
+    "Properties": {
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample MF_DistanceBlend:MaterialExpressionTextureSample_12",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureObject MF_DistanceBlend:MaterialExpressionTextureObject_16",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_DistanceBlend:MaterialExpressionMaterialFunctionCall_2",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_DistanceBlend.0"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "StateId": "B69389A9-4B00B2CF-7E4F5B97-D7E837C4"
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "MeleeWaitQuery",
+    "Properties": {
+      "QueryName": "MeleeWaitQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption MeleeWaitQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeWaitQuery.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "MeleeWaitQuery",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 500.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 600.0
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "PointsPerRing": {
+        "DefaultValue": 7
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_NPC_Pathing_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_NPC_Pathing.0"
+        },
+        "ProjectDown": 450.0,
+        "ProjectUp": 450.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "MeleeWaitQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut MeleeWaitQuery:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeWaitQuery.1"
+      }
+    }
+  }
+]

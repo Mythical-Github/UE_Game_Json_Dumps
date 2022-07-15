@@ -1,0 +1,226 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Blueprint_Sedan_C",
+    "Super": "Blueprint_Vehicle_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Blueprint_Sedan_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler Blueprint_Sedan_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Blueprint_Vehicle_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Blueprint_Vehicle.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Blueprint_Sedan_C Default__Blueprint_Sedan_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.1"
+    }
+  },
+  {
+    "Type": "Blueprint_Sedan_C",
+    "Name": "Default__Blueprint_Sedan_C",
+    "Template": "Default__Blueprint_Vehicle_C",
+    "Properties": {
+      "AllSitSockets": [
+        "DriverSocket",
+        "PassengerSocket"
+      ],
+      "AllExitSockets": [
+        "ExitRightFront",
+        "ExitLeftFront"
+      ],
+      "SetCharacterDistance": 2.0,
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__Blueprint_Sedan_C:VehicleMesh",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.7"
+      },
+      "VehicleMovement": {
+        "ObjectName": "WheeledVehicleMovementComponent4W Default__Blueprint_Sedan_C:MovementComp",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.8"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent Default__Blueprint_Sedan_C:VehicleMesh",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.7"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent_0",
+    "Outer": "Blueprint_Sedan_C",
+    "Template": "AudioComponent_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue SoundCue_EngineLoop",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Sounds/Vehicle/SoundCue_EngineLoop.0"
+      },
+      "AttenuationOverrides": {
+        "FalloffDistance": 1000.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Blueprint_Sedan_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class AudioComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "AudioComponent Blueprint_Sedan_C:AudioComponent_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Blueprint_Vehicle_C",
+              "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Blueprint_Vehicle.1"
+            },
+            "SCSVariableName": "EngineSound",
+            "AssociatedGuid": "EBC2A00E-BBCD6EC8-18D7290C-86C7AAB2"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Blueprint_Sedan_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Blueprint_Sedan_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.4"
+      },
+      "VariableGuid": "AB26DE04-4FC72281-FA1F1B9B-A33A633E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Blueprint_Sedan_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Blueprint_Sedan_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/Vehicles/Blueprint_Sedan.5"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "VehicleMesh",
+    "Outer": "Default__Blueprint_Sedan_C",
+    "Template": "VehicleMesh",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass AnimationBlueprint_Vehicle_C",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Animations/Vehicle/AnimationBlueprint_Vehicle.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh SkeletalMesh_Vehicle",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Meshes/Vehicle/SkeletalMesh_Vehicle.0"
+      }
+    }
+  },
+  {
+    "Type": "WheeledVehicleMovementComponent4W",
+    "Name": "MovementComp",
+    "Outer": "Default__Blueprint_Sedan_C",
+    "Template": "MovementComp",
+    "Properties": {
+      "EngineSetup": {
+        "TorqueCurve": {
+          "EditorCurveData": {}
+        }
+      },
+      "SteeringCurve": {
+        "EditorCurveData": {}
+      },
+      "Mass": 1000.0,
+      "WheelSetups": [
+        {
+          "WheelClass": {
+            "ObjectName": "BlueprintGeneratedClass Blueprint_WheelFront_C",
+            "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/WheelsData/Blueprint_WheelFront.0"
+          },
+          "BoneName": "Wheel_FR",
+          "AdditionalOffset": {
+            "X": 0.0,
+            "Y": 9.0,
+            "Z": 0.0
+          },
+          "bDisableSteering": false
+        },
+        {
+          "WheelClass": {
+            "ObjectName": "BlueprintGeneratedClass Blueprint_WheelFront_C",
+            "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/WheelsData/Blueprint_WheelFront.0"
+          },
+          "BoneName": "Wheel_FL",
+          "AdditionalOffset": {
+            "X": 0.0,
+            "Y": -9.0,
+            "Z": 0.0
+          },
+          "bDisableSteering": false
+        },
+        {
+          "WheelClass": {
+            "ObjectName": "BlueprintGeneratedClass Blueprint_WheelBack_C",
+            "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/WheelsData/Blueprint_WheelBack.0"
+          },
+          "BoneName": "Wheel_BR",
+          "AdditionalOffset": {
+            "X": 0.0,
+            "Y": 9.0,
+            "Z": 0.0
+          },
+          "bDisableSteering": false
+        },
+        {
+          "WheelClass": {
+            "ObjectName": "BlueprintGeneratedClass Blueprint_WheelBack_C",
+            "ObjectPath": "KevinSpel/Content/Blueprints/SimpleVehicle/Blueprints/Vehicle/WheelsData/Blueprint_WheelBack.0"
+          },
+          "BoneName": "Wheel_BL",
+          "AdditionalOffset": {
+            "X": 0.0,
+            "Y": -9.0,
+            "Z": 0.0
+          },
+          "bDisableSteering": false
+        }
+      ]
+    }
+  }
+]

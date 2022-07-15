@@ -1,0 +1,526 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_Flashbang:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_Flashbang:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_Flashbang:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_Flashbang:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.3"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation PS_Flashbang:ParticleModuleRotation_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife PS_Flashbang:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.8"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity PS_Flashbang:ParticleModuleVelocity_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.10"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocityOverLifetime PS_Flashbang:ParticleModuleVelocityOverLifetime_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.11"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_Flashbang:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.9"
+      },
+      "PeakActiveParticles": 301
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": -0.1142524,
+        "MaxValue": 0.20133045,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 1,
+          "TimeScale": 6.811831,
+          "TimeBias": -0.013995968,
+          "Values": [
+            0.0,
+            0.17361857,
+            0.19500472,
+            0.120774314,
+            0.0075428495,
+            -0.08807372,
+            -0.109459996,
+            -7.916242E-08
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material MI_SmokeFlashbang",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/MI_SmokeFlashbang.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_Flashbang:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "MaxDrawCount": 2000,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 20.0,
+        "MaxValue": 70.0,
+        "MinValueVec": {
+          "X": 20.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        "MaxValueVec": {
+          "X": 70.0,
+          "Y": 70.0,
+          "Z": 70.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            20.0,
+            20.0,
+            20.0,
+            70.0,
+            70.0,
+            70.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.5883922,
+        "MaxValue": 3.051477,
+        "MinValueVec": {
+          "X": 0.5883922,
+          "Y": 0.5883922,
+          "Z": 0.5883922
+        },
+        "MaxValueVec": {
+          "X": 3.051477,
+          "Y": 3.051477,
+          "Z": 3.051477
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 3,
+          "TimeScale": 30.830318,
+          "TimeBias": -0.02623761,
+          "Values": [
+            0.5883922,
+            0.5883922,
+            0.5883922,
+            0.66281235,
+            0.66281235,
+            0.66281235,
+            0.7909234,
+            0.7909234,
+            0.7909234,
+            0.9632368,
+            0.9632368,
+            0.9632368,
+            1.170264,
+            1.170264,
+            1.170264,
+            1.4025164,
+            1.4025164,
+            1.4025164,
+            1.6505052,
+            1.6505052,
+            1.6505052,
+            1.9047422,
+            1.9047422,
+            1.9047422,
+            2.155738,
+            2.155738,
+            2.155738,
+            2.3940055,
+            2.3940055,
+            2.3940055,
+            2.6100543,
+            2.6100543,
+            2.6100543,
+            2.7942395,
+            2.7942395,
+            2.7942395,
+            2.9370606,
+            2.9370606,
+            2.9370606,
+            3.0251942,
+            3.0251942,
+            3.0251942,
+            3.0510383,
+            3.0510383,
+            3.0510383,
+            3.022506,
+            3.022506,
+            3.022506,
+            2.9479356,
+            2.9479356,
+            2.9479356,
+            2.8356676,
+            2.8356676,
+            2.8356676,
+            2.6940396,
+            2.6940396,
+            2.6940396,
+            2.5313916,
+            2.5313916,
+            2.5313916,
+            2.3560622,
+            2.3560622,
+            2.3560622,
+            2.1763973,
+            2.1763973,
+            2.1763973,
+            2.000808,
+            2.000808,
+            2.000808,
+            1.8376486,
+            1.8376486,
+            1.8376486,
+            1.6952584,
+            1.6952584,
+            1.6952584,
+            1.5819753,
+            1.5819753,
+            1.5819753,
+            1.5061393,
+            1.5061393,
+            1.5061393,
+            1.4760892,
+            1.4760892,
+            1.4760892,
+            1.5001645,
+            1.5001645,
+            1.5001645,
+            1.5867037,
+            1.5867037,
+            1.5867037,
+            1.7440455,
+            1.7440455,
+            1.7440455,
+            1.9805287,
+            1.9805287,
+            1.9805287
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "Rate": {
+        "MinValue": 150.0,
+        "MaxValue": 150.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            150.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            20.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_Flashbang:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_2",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -400.0,
+        "MaxValue": 400.0,
+        "MinValueVec": {
+          "X": -400.0,
+          "Y": -400.0,
+          "Z": -400.0
+        },
+        "MaxValueVec": {
+          "X": 400.0,
+          "Y": 400.0,
+          "Z": 400.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -400.0,
+            -400.0,
+            -400.0,
+            400.0,
+            400.0,
+            400.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocityOverLifetime",
+    "Name": "ParticleModuleVelocityOverLifetime_1",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "VelOverLife": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "PS_Flashbang",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_Flashbang:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_Flashbang",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_Flashbang:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/SmokeParticles/PS_Flashbang.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -947.44714,
+          "Y": -946.3511,
+          "Z": -942.2958
+        },
+        "Max": {
+          "X": 1297.8585,
+          "Y": 1220.4204,
+          "Z": 1279.1622
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

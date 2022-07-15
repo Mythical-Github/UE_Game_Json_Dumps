@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SentryBot_MachineGun_Visuals_C",
+    "SuperStruct": {
+      "ObjectName": "Class PrimaryWeaponVisuals",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10749968,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SentryBot_MachineGun_Visuals_C Default__SentryBot_MachineGun_Visuals_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Robot_MachineGun/SentryBot_MachineGun_Visuals.1"
+    }
+  },
+  {
+    "Type": "SentryBot_MachineGun_Visuals_C",
+    "Name": "Default__SentryBot_MachineGun_Visuals_C",
+    "Properties": {
+      "WeaponEvents": {
+        "EWeaponEvent::Fire": {
+          "ObjectName": "EventEffects Default__SentryBot_MachineGun_Visuals_C:EventEffects_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Robot_MachineGun/SentryBot_MachineGun_Visuals.2"
+        }
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__SentryBot_MachineGun_Visuals_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayFxEventEffect Default__SentryBot_MachineGun_Visuals_C:EventEffects_0.PlayFxEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Robot_MachineGun/SentryBot_MachineGun_Visuals.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Muzzle_Flash",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Weapons/Heavy_Revolver/PS_Muzzle_Flash.48"
+      },
+      "Scale": 1.5,
+      "TargetMesh": "EMeshTarget::CurrentCharacterMesh",
+      "AttachSocketName": "MuzzleFlashSocket"
+    }
+  }
+]

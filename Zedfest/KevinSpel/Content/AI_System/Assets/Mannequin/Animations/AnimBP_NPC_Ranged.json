@@ -1,0 +1,1708 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_NPC_Ranged_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12,
+                13,
+                15,
+                16,
+                10
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                18
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 19,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                20
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      },
+      "OrderedSavedPoseIndices": [
+        6
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_720D7E90477105E74DB775B834257F7E",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.46"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_NPC_Ranged_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendListByEnum_7F53EE304734775982B2E3845173012F",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.42"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_01EBF39F40ACED8BED744481930333EE",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.43"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_2D6D8B704C2FEDD56A1196AAE888C8A4",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.44"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsCrouching",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:IsCrouching",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.16"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendListByBool_54BA081B436EBFA2C6DEFD825AA54881",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.41"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_EB8BBC83407D1203E64EBE9B306BF582",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_425B0198498CDC8AF3B2A491B573F0D3",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.45"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_8294DEFB4ECD0EB85F05219CA7150CFF",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.59"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_Ranged_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.32"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.60"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_DEE852FF40717F3CAA4F99B3BCB90EF0",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.61"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.32"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.24"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.23"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.21"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.20"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_Root_992BEEF1434449005957218940DC4E81",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_DEE852FF40717F3CAA4F99B3BCB90EF0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.61"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.60"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_TransitionResult_8294DEFB4ECD0EB85F05219CA7150CFF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.59"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_SequencePlayer_2A8CAC4D416FC64EAD53C9BF21830CEF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_StateResult_FBAACB3A40B23B005CA2468BDFCE6DEA",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_SequencePlayer_4273F25F41B6823BC128F9BEE66778C3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.52"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_StateResult_6D35BD8147B2BBA7C331CDA416D7F804",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.57"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_425B0198498CDC8AF3B2A491B573F0D3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.45"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_EB8BBC83407D1203E64EBE9B306BF582",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.47"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendListByBool_54BA081B436EBFA2C6DEFD825AA54881",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.41"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_2D6D8B704C2FEDD56A1196AAE888C8A4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.44"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_01EBF39F40ACED8BED744481930333EE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.43"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendListByEnum_7F53EE304734775982B2E3845173012F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.42"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_BlendSpacePlayer_720D7E90477105E74DB775B834257F7E",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.46"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_StateResult_23A2FDB54401AF66CC937AB3AA0BC4CF",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.56"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_StateMachine_A009EF4E4D07EC329FFF84B0A1E22F5F",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_Slot_7318EB554B48B1C3245A5C87DF4571A5",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_SaveCachedPose_E718B76D443610D396B82CBD6EBCFD6D",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_Slot_6E418D4447DD53DF2B6A60AED9E6E6A2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_UseCachedPose_09C31C83438B3E412919F0A25718A322",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.62"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_UseCachedPose_19482AD34A34B4A625D420A9EFF31BEC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.63"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_LayeredBoneBlend_FD8F9C354EC3D6A927A6598064E27B9A",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_UseCachedPose_39E61E224D6680E1DED4E2859553D638",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.64"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:AnimGraphNode_LayeredBoneBlend_4D4F5AD8411F4A8D1FC07D901B6496F5",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.48"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.17"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Speed",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.31"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Ranged_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.18"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:Direction",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.26"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.16"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.33"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_NPC_Ranged": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.5"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.20"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.21"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.22"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.23"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.24"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3": {
+        "ObjectName": "Function AnimBP_NPC_Ranged_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.32"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_NPC_Ranged_C Default__AnimBP_NPC_Ranged_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.2"
+    }
+  },
+  {
+    "Type": "AnimBP_NPC_Ranged_C",
+    "Name": "Default__AnimBP_NPC_Ranged_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_992BEEF1434449005957218940DC4E81": {
+        "Result": {
+          "LinkID": 24
+        }
+      },
+      "AnimGraphNode_TransitionResult_DEE852FF40717F3CAA4F99B3BCB90EF0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8294DEFB4ECD0EB85F05219CA7150CFF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2A8CAC4D416FC64EAD53C9BF21830CEF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Loop",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_FBAACB3A40B23B005CA2468BDFCE6DEA": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_4273F25F41B6823BC128F9BEE66778C3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AI_Anim_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AI_Anim_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6D35BD8147B2BBA7C331CDA416D7F804": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_425B0198498CDC8AF3B2A491B573F0D3": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_EB8BBC83407D1203E64EBE9B306BF582": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_CrouchWalk",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_CrouchWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_54BA081B436EBFA2C6DEFD825AA54881": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 13
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_2D6D8B704C2FEDD56A1196AAE888C8A4": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_01EBF39F40ACED8BED744481930333EE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_7F53EE304734775982B2E3845173012F": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 14
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 12
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_720D7E90477105E74DB775B834257F7E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_23A2FDB54401AF66CC937AB3AA0BC4CF": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_StateMachine_A009EF4E4D07EC329FFF84B0A1E22F5F": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Slot_7318EB554B48B1C3245A5C87DF4571A5": {
+        "Source": {
+          "LinkID": 22
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_SaveCachedPose_E718B76D443610D396B82CBD6EBCFD6D": {
+        "Pose": {
+          "LinkID": 16
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_Slot_6E418D4447DD53DF2B6A60AED9E6E6A2": {
+        "Source": {
+          "LinkID": 20
+        },
+        "SlotName": "UpperBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_09C31C83438B3E412919F0A25718A322": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_UseCachedPose_19482AD34A34B4A625D420A9EFF31BEC": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_FD8F9C354EC3D6A927A6598064E27B9A": {
+        "BasePose": {
+          "LinkID": 21
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "spine_01",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_UseCachedPose_39E61E224D6680E1DED4E2859553D638": {
+        "LinkToCachingNode": {
+          "LinkID": 18
+        },
+        "CachePoseName": "SavedPose1"
+      },
+      "AnimGraphNode_LayeredBoneBlend_4D4F5AD8411F4A8D1FC07D901B6496F5": {
+        "BasePose": {
+          "LinkID": 23
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "root",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [],
+        "SkeletonGuid": "00000000-00000000-00000000-00000000",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_992BEEF1434449005957218940DC4E81",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.4"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.28"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.10"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.13"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.19"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.30"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.36"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.65"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.66"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.29"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.27"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.35"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.9"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.34"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.37"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.39"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.14"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.12"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.38"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.40"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.15"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_NPC_Ranged_C:ExecuteUbergraph_AnimBP_NPC_Ranged.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_Ranged_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC_Ranged.25"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_Ranged_AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_54BA081B436EBFA2C6DEFD825AA54881",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_7F53EE304734775982B2E3845173012F",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_01EBF39F40ACED8BED744481930333EE",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_2D6D8B704C2FEDD56A1196AAE888C8A4",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_425B0198498CDC8AF3B2A491B573F0D3",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_720D7E90477105E74DB775B834257F7E",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EB8BBC83407D1203E64EBE9B306BF582",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_4D4F5AD8411F4A8D1FC07D901B6496F5",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_FD8F9C354EC3D6A927A6598064E27B9A",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_E718B76D443610D396B82CBD6EBCFD6D",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_2A8CAC4D416FC64EAD53C9BF21830CEF",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4273F25F41B6823BC128F9BEE66778C3",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_6E418D4447DD53DF2B6A60AED9E6E6A2",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_7318EB554B48B1C3245A5C87DF4571A5",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A009EF4E4D07EC329FFF84B0A1E22F5F",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_23A2FDB54401AF66CC937AB3AA0BC4CF",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_6D35BD8147B2BBA7C331CDA416D7F804",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FBAACB3A40B23B005CA2468BDFCE6DEA",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8294DEFB4ECD0EB85F05219CA7150CFF",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AE52B4CA456680607DF7728E077920C3",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DEE852FF40717F3CAA4F99B3BCB90EF0",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_09C31C83438B3E412919F0A25718A322",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_19482AD34A34B4A625D420A9EFF31BEC",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_39E61E224D6680E1DED4E2859553D638",
+    "Outer": "AnimBP_NPC_Ranged_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC_Ranged",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

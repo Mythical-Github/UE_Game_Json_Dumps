@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "SwitchTargetBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence SwitchTargetBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_PromoteQueuedToPrimaryTarget",
+    "Name": "BT_Scr_General_PromoteQueuedToPrimaryTarget_0",
+    "Outer": "SwitchTargetBehaviorTree",
+    "Properties": {
+      "NodeName": "Switch Targets",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchTargetBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchTargetBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_0",
+    "Outer": "SwitchTargetBehaviorTree",
+    "Properties": {
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchTargetBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchTargetBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "SwitchTargetBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait SwitchTargetBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.4"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_PromoteQueuedToPrimaryTarget SwitchTargetBehaviorTree:BT_Scr_General_PromoteQueuedToPrimaryTarget_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.1"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete SwitchTargetBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchTargetBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "SwitchTargetBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "6AB6A873-47B00547-207DAC93-4AB3E07B",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree SwitchTargetBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence SwitchTargetBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.3"
+      }
+    }
+  }
+]

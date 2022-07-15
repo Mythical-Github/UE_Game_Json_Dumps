@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_PathingGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindHidingSpot",
+    "Properties": {
+      "QueryName": "EQS_FindHidingSpot",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindHidingSpot:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQS_FindHidingSpot",
+    "Properties": {
+      "NavigationFilter": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_FindHidingSpot:EnvQueryGenerator_PathingGrid_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class RecastFilter_UseDefaultArea",
+          "ObjectPath": "/Script/NavigationSystem"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_FindHidingSpot",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_FindHidingSpot:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindHidingSpot:EnvQueryTest_Distance_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindHidingSpot:EnvQueryTest_Distance_2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_FindHidingSpot:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindHidingSpot.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQS_FindHidingSpot",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_2",
+    "Outer": "EQS_FindHidingSpot",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQS_FindHidingSpot",
+    "Properties": {
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,551 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_3",
+    "Outer": "ParticleModuleSizeMultiplyLife_4",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 0.1,
+              "Y": 0.1,
+              "Z": 0.1
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": {
+              "X": 2.0,
+              "Y": 2.0,
+              "Z": 2.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Flamethrower:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Flamethrower:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Flamethrower:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.8"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Flamethrower:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.12"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Flamethrower:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.4"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate P_Flamethrower:ParticleModuleRotationRate_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Flamethrower:ParticleModuleSizeMultiplyLife_4",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu P_Flamethrower:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.11"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Flamethrower:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.10"
+      },
+      "PeakActiveParticles": 51
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.7,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.7,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Flamethrower",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/Materials/M_Flamethrower.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Flamethrower:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.0"
+        }
+      },
+      "InterpolationMethod": "PSUVIM_Linear_Blend",
+      "SubImages_Horizontal": 8,
+      "SubImages_Vertical": 8,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "StartRotationRate": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "StartSize": {
+        "MaxValue": 160.0,
+        "MinValueVec": {
+          "X": 120.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 160.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            120.0,
+            0.0,
+            0.0,
+            160.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_4",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve P_Flamethrower:ParticleModuleSizeMultiplyLife_4.DistributionVectorConstantCurve_3",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "Rate": {
+        "MinValue": 500.0,
+        "MaxValue": 500.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            500.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Flamethrower:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired P_Flamethrower:ParticleModuleRequired_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.6"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn P_Flamethrower:ParticleModuleSpawn_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.10"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired P_Flamethrower:ParticleModuleRequired_0",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.6"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime P_Flamethrower:ParticleModuleLifetime_0",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.5"
+          },
+          {
+            "ObjectName": "ParticleModuleSize P_Flamethrower:ParticleModuleSize_0",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.8"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity P_Flamethrower:ParticleModuleVelocity_0",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.12"
+          },
+          {
+            "ObjectName": "ParticleModuleRotationRate P_Flamethrower:ParticleModuleRotationRate_0",
+            "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.7"
+          }
+        ],
+        "InvMaxSize": {
+          "X": 0.00625,
+          "Y": 0.00625
+        },
+        "InvRotationRateScale": 1.0,
+        "MaxLifetime": 1.0,
+        "MaxParticleCount": 51,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 255,
+            "G": 255,
+            "R": 255,
+            "A": 255,
+            "Hex": "FFFFFFFF"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFF00"
+          }
+        ],
+        "ColorScale": {
+          "X": 7000.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "MiscScale": {
+          "X": 304.0,
+          "Y": 304.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 16.0,
+          "Y": 16.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 8.0,
+          "Y": 8.0,
+          "Z": 0.125,
+          "W": 0.125
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 1.0,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -20.0,
+        "MaxValue": 1200.0,
+        "MinValueVec": {
+          "X": 1000.0,
+          "Y": -10.0,
+          "Z": -20.0
+        },
+        "MaxValueVec": {
+          "X": 1200.0,
+          "Y": 10.0,
+          "Z": 20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            1000.0,
+            -10.0,
+            -20.0,
+            1200.0,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Flamethrower",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Flamethrower:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Flamethrower",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Flamethrower:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_Flamethrower.13"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -247.84503,
+          "Y": -206.94025,
+          "Z": -236.5774
+        },
+        "Max": {
+          "X": 1686.1047,
+          "Y": 206.33865,
+          "Z": 236.73651
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

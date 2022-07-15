@@ -1,0 +1,56 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Plasma_Abstract_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754065,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Plasma_Abstract_C Default__Hazard_SE_Plasma_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_Abstract.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Plasma_Abstract_C",
+    "Name": "Default__Hazard_SE_Plasma_Abstract_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Plasma_Abstract_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Plasma/Hazard_SE_Plasma_Abstract.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bIsHostile": true,
+      "bProhibitsConversations": true
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Plasma_Abstract_C",
+    "Properties": {
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Energy_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Energy_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 0.666
+    }
+  }
+]

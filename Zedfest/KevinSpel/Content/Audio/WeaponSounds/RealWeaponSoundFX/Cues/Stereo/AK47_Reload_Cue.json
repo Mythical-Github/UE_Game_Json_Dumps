@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AK47_Reload_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeConcatenator AK47_Reload_Cue:SoundNodeConcatenator_1",
+        "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Cues/Stereo/AK47_Reload_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "bHasConcatenatorNode": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 3.2320182,
+      "MaxDistance": 2420.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation WeaponHandling_att",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Attenuation/WeaponHandling_att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeConcatenator",
+    "Name": "SoundNodeConcatenator_1",
+    "Outer": "AK47_Reload_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay AK47_Reload_Cue:SoundNodeDelay_4",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Cues/Stereo/AK47_Reload_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeDelay AK47_Reload_Cue:SoundNodeDelay_3",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Cues/Stereo/AK47_Reload_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_3",
+    "Outer": "AK47_Reload_Cue",
+    "Properties": {
+      "DelayMin": 1.6,
+      "DelayMax": 1.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AK47_Reload_Cue:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Cues/Stereo/AK47_Reload_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_4",
+    "Outer": "AK47_Reload_Cue",
+    "Properties": {
+      "DelayMin": 0.3,
+      "DelayMax": 0.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AK47_Reload_Cue:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Cues/Stereo/AK47_Reload_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AK47_Reload_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/WeaponSounds/RealWeaponSoundFX/Wavs/Stereo/M4_Silenced_Magazine_Insert.M4_Silenced_Magazine_Insert",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave M4_Silenced_Magazine_Insert",
+      "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Wavs/Stereo/M4_Silenced_Magazine_Insert.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AK47_Reload_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/WeaponSounds/RealWeaponSoundFX/Wavs/Stereo/M4_Silenced_Reload.M4_Silenced_Reload",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave M4_Silenced_Reload",
+      "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/RealWeaponSoundFX/Wavs/Stereo/M4_Silenced_Reload.0"
+    }
+  }
+]

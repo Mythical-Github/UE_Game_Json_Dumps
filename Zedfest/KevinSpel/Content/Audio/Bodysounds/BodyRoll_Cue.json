@@ -1,0 +1,53 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BodyRoll_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator BodyRoll_Cue:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/BodyRoll_Cue.1"
+      },
+      "VolumeMultiplier": 1.2,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 0.75,
+      "MaxDistance": 2170.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Distance",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/Distance.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "BodyRoll_Cue",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer BodyRoll_Cue:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/BodyRoll_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "BodyRoll_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Bodysounds/BodyRoll.BodyRoll",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave BodyRoll",
+      "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/BodyRoll.0"
+    }
+  }
+]

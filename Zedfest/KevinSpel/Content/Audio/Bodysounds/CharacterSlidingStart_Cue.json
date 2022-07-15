@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "CharacterSlidingStart_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulatorContinuous CharacterSlidingStart_Cue:SoundNodeModulatorContinuous_6",
+        "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterSlidingStart_Cue.1"
+      },
+      "VolumeMultiplier": 1.2,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 11.515601,
+      "MaxDistance": 2170.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Distance",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/Distance.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_6",
+    "Outer": "CharacterSlidingStart_Cue",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "SlidingSpeed",
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer CharacterSlidingStart_Cue:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterSlidingStart_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "CharacterSlidingStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Bodysounds/CharacterSlidingStart.CharacterSlidingStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave CharacterSlidingStart",
+      "ObjectPath": "KevinSpel/Content/Audio/Bodysounds/CharacterSlidingStart.0"
+    }
+  }
+]

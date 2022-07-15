@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_TrailTextureVisualization",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "ShadingModel": "MSM_Unlit",
+      "bUsedWithStaticLighting": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_TrailTextureVisualization:MaterialExpressionTextureSample_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Materials/M_TrailTextureVisualization.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_TrailTextureVisualization:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Materials/M_TrailTextureVisualization.1"
+        },
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "CEB825F7-49B3784E-3010779E-623B62DB",
+          "Function": {
+            "ObjectName": "MaterialFunction ObjectLocalBounds",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction BreakOutFloat3Components",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "62DA9865-4653E449-3385F69C-97674F2E",
+          "Function": {
+            "ObjectName": "MaterialFunction BoundingBoxBased_0-1_UVW",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.2"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "C0054C89-43327FF9-AE9C328F-38237E4E",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "M_TrailTextureVisualization",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BoundingBoxBased_0-1_UVW",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.2"
+      },
+      "Material": {
+        "ObjectName": "Material M_TrailTextureVisualization",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Materials/M_TrailTextureVisualization.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "M_TrailTextureVisualization",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAppendVector_0"
+      },
+      "Texture": {
+        "ObjectName": "TextureRenderTarget2D RT_Trails",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Blueprints/RT_Trails.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_TrailTextureVisualization",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Materials/M_TrailTextureVisualization.0"
+      }
+    }
+  }
+]

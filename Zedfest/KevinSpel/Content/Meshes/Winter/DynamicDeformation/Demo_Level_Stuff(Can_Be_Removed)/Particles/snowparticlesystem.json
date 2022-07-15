@@ -1,0 +1,590 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionOffsetAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Properties": {
+      "Max": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "Min": {
+        "X": -50.0,
+        "Y": -50.0,
+        "Z": -50.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionRotationAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Properties": {
+      "Max": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionRotationRateAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Properties": {
+      "Max": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired snowparticlesystem:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSize snowparticlesystem:ParticleModuleSize_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.11"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation snowparticlesystem:ParticleModuleLocation_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.8"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime snowparticlesystem:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.7"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity snowparticlesystem:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife snowparticlesystem:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.6"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit snowparticlesystem:ParticleModuleOrbit_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu snowparticlesystem:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn snowparticlesystem:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.12"
+      },
+      "PeakActiveParticles": 16064
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 4.0,
+        "MaxValue": 8.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -2000.0,
+        "MaxValue": 2000.0,
+        "MinValueVec": {
+          "X": -2000.0,
+          "Y": -2000.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 2000.0,
+          "Y": 2000.0,
+          "Z": 500.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -2000.0,
+            -2000.0,
+            0.0,
+            2000.0,
+            2000.0,
+            500.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "OffsetAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform snowparticlesystem:ParticleModuleOrbit_0.DistributionOffsetAmount",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.2"
+        }
+      },
+      "RotationAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform snowparticlesystem:ParticleModuleOrbit_0.DistributionRotationAmount",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.3"
+        }
+      },
+      "RotationRateAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform snowparticlesystem:ParticleModuleOrbit_0.DistributionRotationRateAmount",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.4"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material snowparticle",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticle.0"
+      },
+      "EmitterOrigin": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "ScreenAlignment": "PSA_FacingCameraPosition",
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant snowparticlesystem:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 2.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            2.0,
+            2.0,
+            2.0,
+            10.0,
+            10.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "Rate": {
+        "MinValue": 2000.0,
+        "MaxValue": 2000.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            2000.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant snowparticlesystem:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired snowparticlesystem:ParticleModuleRequired_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.10"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn snowparticlesystem:ParticleModuleSpawn_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.12"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired snowparticlesystem:ParticleModuleRequired_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.10"
+          },
+          {
+            "ObjectName": "ParticleModuleSize snowparticlesystem:ParticleModuleSize_1",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.11"
+          },
+          {
+            "ObjectName": "ParticleModuleLocation snowparticlesystem:ParticleModuleLocation_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.8"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime snowparticlesystem:ParticleModuleLifetime_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.7"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity snowparticlesystem:ParticleModuleVelocity_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.14"
+          }
+        ],
+        "OrbitOffsetBase": {
+          "X": -100.0,
+          "Y": -49.999996,
+          "Z": 4.371139E-06
+        },
+        "OrbitOffsetRange": {
+          "X": 200.0,
+          "Y": 100.0,
+          "Z": -4.371139E-06
+        },
+        "InvMaxSize": {
+          "X": 0.1,
+          "Y": 0.1
+        },
+        "InvRotationRateScale": 0.125,
+        "MaxLifetime": 8.0,
+        "MaxParticleCount": 16064
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 255,
+            "Hex": "FF000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ColorBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "OrbitOffsetBase": {
+          "X": -25.0,
+          "Y": -25.0,
+          "Z": -25.0
+        },
+        "OrbitOffsetRange": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 25.0
+        },
+        "OrbitFrequencyRange": {
+          "X": 6.2831855,
+          "Y": 6.2831855,
+          "Z": -6.2831855
+        },
+        "OrbitPhaseBase": {
+          "X": 1.5707964,
+          "Y": 0.0,
+          "Z": 1.5707964
+        },
+        "OrbitPhaseRange": {
+          "X": 6.2831855,
+          "Y": 6.2831855,
+          "Z": -6.2831855
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 8.0
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -400.0,
+        "MaxValue": 150.0,
+        "MinValueVec": {
+          "X": -150.0,
+          "Y": -150.0,
+          "Z": -400.0
+        },
+        "MaxValueVec": {
+          "X": 150.0,
+          "Y": 150.0,
+          "Z": -50.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -150.0,
+            -150.0,
+            -400.0,
+            150.0,
+            150.0,
+            -50.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "snowparticlesystem",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel snowparticlesystem:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.5"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "snowparticlesystem",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter snowparticlesystem:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/DynamicDeformation/Demo_Level_Stuff(Can_Be_Removed)/Particles/snowparticlesystem.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -900.0,
+          "Y": -900.0,
+          "Z": -900.0
+        },
+        "Max": {
+          "X": 900.0,
+          "Y": 900.0,
+          "Z": 900.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

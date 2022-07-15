@@ -1,0 +1,232 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "MinPreferredRange"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_3",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "MaxPreferredRange"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "QueryName": "CompanionCommandCalledShotMeleeQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption CompanionCommandCalledShotMeleeQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 10.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionCommandCalledShotMeleeQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DefaultValue": 80.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionCommandCalledShotMeleeQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "Center": {
+        "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "ProjectDown": 250.0,
+        "ProjectUp": 250.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut CompanionCommandCalledShotMeleeQuery:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.3"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap CompanionCommandCalledShotMeleeQuery:EnvQueryTest_Overlap_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_NavmeshRaycast CompanionCommandCalledShotMeleeQuery:EnvQueryTest_NavmeshRaycast_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Trace CompanionCommandCalledShotMeleeQuery:EnvQueryTest_Trace_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.9"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance CompanionCommandCalledShotMeleeQuery:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot CompanionCommandCalledShotMeleeQuery:EnvQueryTest_Dot_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotMeleeQuery.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "LineTo": {
+          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineFrom": {
+          "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "LineTo": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_NavmeshRaycast",
+    "Name": "EnvQueryTest_NavmeshRaycast_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": -1000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 30.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 100.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere",
+        "bIgnoreQuerier": true
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "CompanionCommandCalledShotMeleeQuery",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 20.0,
+        "ExtentZ": 100.0,
+        "TraceChannel": "TraceTypeQuery8",
+        "SerializedChannel": "ECC_GameTraceChannel9",
+        "TraceShape": "EEnvTraceShape::Sphere",
+        "bIgnoreQuerier": true
+      },
+      "TraceFromContext": {
+        "DataField": "BoolValue"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 100.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 100.0
+      },
+      "Context": {
+        "ObjectName": "Class EQSContext_CalledShotSpellTargetFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "IgnoreActorsContext": {
+        "ObjectName": "Class EQSContext_CalledShotSpellTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": -1000.0
+      },
+      "VerNum": 1
+    }
+  }
+]

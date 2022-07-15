@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "Material",
+    "Name": "blackbody_exp_Mat",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_15",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall blackbody_exp_Mat:MaterialExpressionMaterialFunctionCall_3",
+          "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.2"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionDynamicParameter blackbody_exp_Mat:MaterialExpressionDynamicParameter_3",
+          "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameterSubUV blackbody_exp_Mat:MaterialExpressionTextureSampleParameterSubUV_3",
+          "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.5"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter blackbody_exp_Mat:MaterialExpressionScalarParameter_3",
+          "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter blackbody_exp_Mat:MaterialExpressionScalarParameter_4",
+          "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.4"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "AB126D3E-46D0D8F7-A271B2BC-7BC932DA",
+          "Function": {
+            "ObjectName": "MaterialFunction SmoothStep",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SmoothStep.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "FA8C37A4-4F07FE83-63D67D83-673AF74F",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionDynamicParameter",
+    "Name": "MaterialExpressionDynamicParameter_3",
+    "Outer": "blackbody_exp_Mat",
+    "Properties": {
+      "ParamNames": [
+        "smoke_SStep_Min",
+        "smoke_Bright",
+        "Temperature",
+        "Temp_Intensity"
+      ],
+      "DefaultValue": {
+        "R": -0.5,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "FF00FFFF"
+      },
+      "Material": {
+        "ObjectName": "Material blackbody_exp_Mat",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_3",
+    "Outer": "blackbody_exp_Mat",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction SmoothStep",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SmoothStep.0"
+      },
+      "Material": {
+        "ObjectName": "Material blackbody_exp_Mat",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_3",
+    "Outer": "blackbody_exp_Mat",
+    "Properties": {
+      "DefaultValue": 300.0,
+      "ParameterName": "FadeDistance",
+      "ExpressionGUID": "F98CF0F6-440505F4-040100BC-B68FA934",
+      "Material": {
+        "ObjectName": "Material blackbody_exp_Mat",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_4",
+    "Outer": "blackbody_exp_Mat",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "smoke_SStep_Max",
+      "ExpressionGUID": "59B89D4B-4748B995-0FA44D98-AD41DD17",
+      "Material": {
+        "ObjectName": "Material blackbody_exp_Mat",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameterSubUV",
+    "Name": "MaterialExpressionTextureSampleParameterSubUV_3",
+    "Outer": "blackbody_exp_Mat",
+    "Properties": {
+      "ParameterName": "Smoke_Texture_1",
+      "ExpressionGUID": "3D10F815-45856143-83118FBD-5FF5B6E3",
+      "Texture": {
+        "ObjectName": "Texture2D 0_6_smoke_re_vg",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Textures/smoke/0_6_smoke_re_vg.0"
+      },
+      "Material": {
+        "ObjectName": "Material blackbody_exp_Mat",
+        "ObjectPath": "KevinSpel/Content/VFX/M5VFXVOL2/Materials/Master/blackbody_exp_Mat.0"
+      }
+    }
+  }
+]

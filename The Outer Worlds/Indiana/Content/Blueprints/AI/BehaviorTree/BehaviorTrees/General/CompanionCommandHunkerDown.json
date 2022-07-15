@@ -1,0 +1,276 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "CompanionCommandHunkerDown",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_Crouch",
+    "Name": "BT_Scr_General_Crouch_0",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "NodeName": "Crouch",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_StartBehaviorStateCountdown",
+    "Name": "BT_Scr_General_StartBehaviorStateCountdown_0",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "CountDownTimeSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_CompanionCommandHunkerDownDuration",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Start Countdown",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CompanionCommandHunkerDown:BTTask_IndianaWait_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CompanionCommandHunkerDown:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_Crouch CompanionCommandHunkerDown:BT_Scr_General_Crouch_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.1"
+            },
+            {
+              "ObjectName": "BT_Scr_General_StartBehaviorStateCountdown CompanionCommandHunkerDown:BT_Scr_General_StartBehaviorStateCountdown_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FiringPattern",
+    "Name": "BTService_General_FiringPattern_1",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "FiringPatternSelector": {
+        "AIFiringPattern": {
+          "ObjectName": "Class Settings_StationaryFiringPattern",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "PauseTimeFuzzSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Settings_WeaponPauseTimeFuzz",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "CompleteTypeSelector": {
+        "AIInt": {
+          "ObjectName": "Class FiringPatternComplete_Repeat",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Stationary Firing Pattern",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_0",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bSetShouldExitRegion": true,
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_1",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "HeadTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EyesTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatHeadLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "WeaponAimTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_PrimaryTargetCheatAimLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "756F5E9E-4116734C-67EBA395-6E2DCF4D",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt CompanionCommandHunkerDown:BTService_General_FocusAt_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.7"
+        },
+        {
+          "ObjectName": "BTService_General_FiringPattern CompanionCommandHunkerDown:BTService_General_FiringPattern_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.5"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_2",
+    "Outer": "CompanionCommandHunkerDown",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldServiceExitTask",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "756F5E9E-4116734C-67EBA395-6E2DCF4D",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt CompanionCommandHunkerDown:BTService_General_FocusAt_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.6"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CompanionCommandHunkerDown:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.3"
+      }
+    }
+  }
+]

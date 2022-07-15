@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "PrimaryTargetStimulusSourceActorLocationQuery",
+    "Properties": {
+      "QueryName": "PrimaryTargetStimulusActorLocationQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption PrimaryTargetStimulusSourceActorLocationQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/PrimaryTargetStimulusSourceActorLocationQuery.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_1",
+    "Outer": "PrimaryTargetStimulusSourceActorLocationQuery",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 1000.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 150.0
+      },
+      "GenerateAround": {
+        "ObjectName": "Class EQSContext_PrimaryTargetStimulusSourceActorLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "PrimaryTargetStimulusSourceActorLocationQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid PrimaryTargetStimulusSourceActorLocationQuery:EnvQueryGenerator_SimpleGrid_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/PrimaryTargetStimulusSourceActorLocationQuery.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding PrimaryTargetStimulusSourceActorLocationQuery:EnvQueryTest_Pathfinding_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/PrimaryTargetStimulusSourceActorLocationQuery.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_2",
+    "Outer": "PrimaryTargetStimulusSourceActorLocationQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathCost",
+      "Context": {
+        "ObjectName": "Class EQSContext_PrimaryTargetStimulusSourceActorLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "FilterType": "EEnvTestFilterType::Range",
+      "FloatValueMin": {
+        "DefaultValue": 0.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 3000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  }
+]

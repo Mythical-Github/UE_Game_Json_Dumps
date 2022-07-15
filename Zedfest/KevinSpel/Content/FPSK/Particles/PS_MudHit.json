@@ -1,0 +1,386 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_1",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_MudHit:ParticleModuleRequired_1",
+        "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere PS_MudHit:ParticleModuleLocationPrimitiveSphere_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.4"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime PS_MudHit:ParticleModuleLifetime_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_MudHit:ParticleModuleSize_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_MudHit:ParticleModuleColorOverLife_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.2"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation PS_MudHit:ParticleModuleRotation_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocityOverLifetime PS_MudHit:ParticleModuleVelocityOverLifetime_0",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.9"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_MudHit:ParticleModuleSpawn_1",
+        "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.8"
+      },
+      "PeakActiveParticles": 7
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 0.05,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.05
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.2,
+            0.5
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_0",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            50.0
+          ]
+        }
+      },
+      "Negative_Z": false,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Splash",
+        "ObjectPath": "KevinSpel/Content/FPSK/Materials/ParticleMaterials/M_Splash.0"
+      },
+      "ScreenAlignment": "PSA_FacingCameraPosition",
+      "bUseLegacyEmitterTime": false,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_MudHit:ParticleModuleRequired_1.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            10.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 150.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 150.0,
+          "Y": 150.0,
+          "Z": 150.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            150.0,
+            150.0,
+            150.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 5,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocityOverLifetime",
+    "Name": "ParticleModuleVelocityOverLifetime_0",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "VelOverLife": {
+        "MinValue": -10.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 0.2,
+          "Y": 0.2,
+          "Z": -10.0
+        },
+        "MaxValueVec": {
+          "X": 0.2,
+          "Y": 0.2,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.4285715,
+          "Values": [
+            0.2,
+            0.2,
+            10.0,
+            0.2,
+            0.2,
+            -10.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "PS_MudHit",
+    "Properties": {
+      "EmitterName": "Splash",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_MudHit:ParticleSpriteEmitter_1.ParticleLODLevel_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_MudHit",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_MudHit:ParticleSpriteEmitter_1",
+          "ObjectPath": "KevinSpel/Content/FPSK/Particles/PS_MudHit.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "ThumbnailImageOutOfDate": false,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

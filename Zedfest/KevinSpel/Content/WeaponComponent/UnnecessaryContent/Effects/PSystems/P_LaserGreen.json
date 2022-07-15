@@ -1,0 +1,566 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_15"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionFloatConstant_0",
+    "Outer": "ParticleModuleTypeDataBeam2_4",
+    "Properties": {
+      "Constant": 25.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperFactor",
+    "Outer": "ParticleModuleTypeDataBeam2_4",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperScale",
+    "Outer": "ParticleModuleTypeDataBeam2_4",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionSourceTangent",
+    "Outer": "ParticleModuleBeamSource_2",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionTargetTangent",
+    "Outer": "ParticleModuleBeamTarget_2",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_13",
+    "Outer": "ParticleSpriteEmitter_15",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_LaserGreen:ParticleModuleRequired_15",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.12"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_LaserGreen:ParticleModuleLifetime_15",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.11"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_LaserGreen:ParticleModuleSize_17",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.13"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_LaserGreen:ParticleModuleColor_5",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife P_LaserGreen:ParticleModuleColorScaleOverLife_7",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.10"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_LaserGreen:ParticleModuleSizeMultiplyLife_14",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.14"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource P_LaserGreen:ParticleModuleBeamSource_2",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.7"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget P_LaserGreen:ParticleModuleBeamTarget_2",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.8"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 P_LaserGreen:ParticleModuleTypeDataBeam2_4",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.16"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_LaserGreen:ParticleModuleSpawn_15",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.15"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_2",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "SourceMethod": "PEB2STM_Emitter",
+      "Source": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            50.0,
+            50.0,
+            50.0
+          ]
+        }
+      },
+      "SourceTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant P_LaserGreen:ParticleModuleBeamSource_2.DistributionSourceTangent",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.4"
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_2",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "Target": {
+        "MaxValue": 500.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 500.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 500.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            500.0,
+            0.0
+          ]
+        }
+      },
+      "TargetTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant P_LaserGreen:ParticleModuleBeamTarget_2.DistributionTargetTangent",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.5"
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_5",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "StartColor": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.194618
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.194618
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            1.0,
+            0.194618
+          ]
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_7",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.18105404,
+        "MaxValue": 2.0751197,
+        "MinValueVec": {
+          "X": 1.5734411,
+          "Y": 0.34495553,
+          "Z": 0.18105404
+        },
+        "MaxValueVec": {
+          "X": 2.0751197,
+          "Y": 1.5,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 10.0,
+          "Values": [
+            1.5734411,
+            1.5,
+            1.0,
+            2.0751197,
+            0.34495553,
+            0.18105404
+          ]
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.4686102,
+        "MaxValue": 1.4686102,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.4686102
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_15",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.1
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_15",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant M_EBeam",
+        "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/Materials/M_EBeam.0"
+      },
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_LaserGreen:ParticleModuleRequired_15.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_17",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "StartSize": {
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 5.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            5.0,
+            100.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_14",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.0,
+        "MaxValue": 3.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 10.0,
+          "Values": [
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_15",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "Rate": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_4",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "Sheets": 10,
+      "MaxBeamCount": 1,
+      "Speed": 10000.0,
+      "Distance": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_LaserGreen:ParticleModuleTypeDataBeam2_4.DistributionFloatConstant_0",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.1"
+        }
+      },
+      "TaperFactor": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_LaserGreen:ParticleModuleTypeDataBeam2_4.DistributionTaperFactor",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.2"
+        }
+      },
+      "TaperScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_LaserGreen:ParticleModuleTypeDataBeam2_4.DistributionTaperScale",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_15",
+    "Outer": "P_LaserGreen",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_LaserGreen:ParticleSpriteEmitter_15.ParticleLODLevel_13",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.6"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_LaserGreen",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_LaserGreen:ParticleSpriteEmitter_15",
+          "ObjectPath": "KevinSpel/Content/WeaponComponent/UnnecessaryContent/Effects/PSystems/P_LaserGreen.17"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODMethod": "PARTICLESYSTEMLODMETHOD_DirectSet",
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -456.7321,
+          "Y": -426.099,
+          "Z": -426.099
+        },
+        "Max": {
+          "X": 1069.3937,
+          "Y": 426.099,
+          "Z": 426.099
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

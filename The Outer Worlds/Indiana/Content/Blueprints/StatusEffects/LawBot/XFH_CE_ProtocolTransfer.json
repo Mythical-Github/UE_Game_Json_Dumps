@@ -1,0 +1,161 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "XFH_CE_ProtocolTransfer_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "XFH_CE_ProtocolTransfer_C Default__XFH_CE_ProtocolTransfer_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.1"
+    }
+  },
+  {
+    "Type": "XFH_CE_ProtocolTransfer_C",
+    "Name": "Default__XFH_CE_ProtocolTransfer_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__XFH_CE_ProtocolTransfer_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.2"
+        },
+        {
+          "ObjectName": "EmptyStatusEffect_C Default__XFH_CE_ProtocolTransfer_C:EmptyStatusEffect_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.7"
+        },
+        {
+          "ObjectName": "CE_HackRobot_Visuals_C Default__XFH_CE_ProtocolTransfer_C:CE_Effects_C_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.3"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 10.0,
+      "bIsHostile": true,
+      "bRemoveWithSpell": false,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__XFH_CE_ProtocolTransfer_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.9"
+      },
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__XFH_CE_ProtocolTransfer_C:EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.10"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_HackRobot",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_HackRobot.0"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__XFH_CE_ProtocolTransfer_C",
+    "Properties": {
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Stun"
+      },
+      "bClearAwareness": true,
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_HackRobot_Visuals_C",
+    "Name": "CE_Effects_C_1",
+    "Outer": "Default__XFH_CE_ProtocolTransfer_C",
+    "Template": "Default__CE_HackRobot_Visuals_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackWarning"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerDown"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerUp"
+    }
+  },
+  {
+    "Type": "EmptyStatusEffect_C",
+    "Name": "EmptyStatusEffect_C_0",
+    "Outer": "Default__XFH_CE_ProtocolTransfer_C",
+    "Template": "Default__EmptyStatusEffect_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "MaxDuration": 7.0,
+      "bRemoveWithSpell": false,
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__XFH_CE_ProtocolTransfer_C:EmptyStatusEffect_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.8"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "EmptyStatusEffect_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__XFH_CE_ProtocolTransfer_C:EmptyStatusEffect_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__XFH_CE_ProtocolTransfer_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__XFH_CE_ProtocolTransfer_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "Default__XFH_CE_ProtocolTransfer_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__XFH_CE_ProtocolTransfer_C:EventEffects_1.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LawBot/XFH_CE_ProtocolTransfer.6"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,356 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "PatrolBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_12",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.8"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Patrol_IsPatrolNodeValid",
+    "Name": "BT_Con_Patrol_IsPatrolNodeValid_1",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "NodeName": "Has Patrol Node?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Patrol_IsPatrolNodeValid",
+    "Name": "BT_Con_Patrol_IsPatrolNodeValid_2",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "AbortMode": "EFlowAbortMode::Self",
+      "bInverseCondition": true,
+      "NodeName": "No Patrol Node?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_ToggleMovementOptimizations",
+    "Name": "BT_Scr_General_ToggleMovementOptimizations_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "NodeName": "Movement Optimization",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Patrol_SetBehaviorStateComplete",
+    "Name": "BT_Scr_Patrol_SetBehaviorStateComplete_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Patrol_PatrolRunMovementStateEnabled",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "MovementState": "EAIMovementState::Run",
+      "bUseDisabledMovementState": true,
+      "NodeName": "Set Movement State",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Patrol_IsPatrolNodeValid PatrolBehaviorTree:BT_Con_Patrol_IsPatrolNodeValid_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait PatrolBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.12"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Con_Patrol_IsPatrolNodeValid PatrolBehaviorTree:BT_Con_Patrol_IsPatrolNodeValid_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.2"
+            },
+            {
+              "ObjectName": "BT_Scr_Patrol_SetBehaviorStateComplete PatrolBehaviorTree:BT_Scr_Patrol_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Scr_General_ToggleMovementOptimizations PatrolBehaviorTree:BT_Scr_General_ToggleMovementOptimizations_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_12",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo PatrolBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.11"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_SetMovementState PatrolBehaviorTree:BT_Scr_SetMovementState_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunActions PatrolBehaviorTree:BTTask_RunActions_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop PatrolBehaviorTree:BTDecorator_Loop_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "NumLoops": 0,
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_12",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.8"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "bForceBodyRotation": true,
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class Patrol_PatrolNodeOrientationLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EnabledSelector": {
+        "AIBool": {
+          "ObjectName": "Class Patrol_PatrolNodeOrientOnArrival",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class Patrol_PatrolNode",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "FailResponse": "EMoveToResultResponse::ContinueTask",
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlap": false,
+      "bThrowPartialPathError": true,
+      "SaveGameTaskGuid": "A829C87C-454DAB3B-37EB2980-A04348C3",
+      "NodeName": "Move To Patrol Node",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "518CFCA4-4020BF3B-DEE55383-8FF639AF",
+      "NodeName": "Idle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector PatrolBehaviorTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunActions",
+    "Name": "BTTask_RunActions_1",
+    "Outer": "PatrolBehaviorTree",
+    "Properties": {
+      "ActionSelector": {
+        "AIAction": {
+          "ObjectName": "Class Patrol_PatrolNodeAction",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "InfiniteDurationSelector": {
+        "AIBool": {
+          "ObjectName": "Class Patrol_PatrolNodeActionInfiniteDuration",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bInstant": true,
+      "SaveGameTaskGuid": "9EDE328A-483D516C-6AC54D80-A98C19BE",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt PatrolBehaviorTree:BTService_General_FocusAt_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.10"
+        }
+      ],
+      "NodeName": "Run Patrol Node Action",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree PatrolBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence PatrolBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.7"
+      }
+    }
+  }
+]

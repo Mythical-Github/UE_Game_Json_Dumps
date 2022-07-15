@@ -1,0 +1,218 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_ConcentratedFire_FakeBuff_C Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "Name": "Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OrListener Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.6"
+        },
+        "RemoveEvent": {
+          "ObjectName": "OrListener Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.7"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatModifierStatusEffect Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:StatModifierStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.8"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Melee",
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Range",
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "OrListener_1",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Melee"
+      ],
+      "CheckNotDamageFlags": [
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_1",
+    "Outer": "OrListener_1",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Range"
+      ],
+      "CheckNotDamageFlags": [
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_0.OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.2"
+        },
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_0.OnCausedDamage_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_1",
+    "Outer": "Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_1.OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.4"
+        },
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C:OrListener_1.OnCausedDamage_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_FakeBuff.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Spell_PerkEffect_ConcentratedFire_FakeBuff_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.1,
+        "RpgStat": {
+          "ObjectName": "RpgStat FakeConcentratedFire_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/FakeConcentratedFire_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::StackSingleInstance",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "EffectName": {
+        "StringID": 4115
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_DamageDealt",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_DamageDealt.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 4194
+      },
+      "bDontDisplayNameInDescription": true
+    }
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "FleeBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_0",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "MovementState": "EAIMovementState::Run",
+      "NodeName": "Run",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo FleeBehaviorTree:BTTask_IndianaMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Disable FleeBehaviorTree:BTTask_Disable_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_SetMovementState FleeBehaviorTree:BT_Scr_SetMovementState_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_SEComplete",
+    "Name": "BTService_EventFirer_SEComplete_0",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "DisableStatusEffectSelector": {
+        "Object": {
+          "ObjectName": "Class AI_FleeStatusEffect",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Flee SE Complete Event Firer",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Disable",
+    "Name": "BTTask_Disable_0",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "DisableStatusEffectSelector": {
+        "Object": {
+          "ObjectName": "Class AI_FleeStatusEffect",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "7493DF3B-4B207A0C-F447C9A3-D34D01DC",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_1",
+    "Outer": "FleeBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_DecisionTreeLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "SaveGameTaskGuid": "A6A4867B-4D04D202-63DE2DB4-592989FA",
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_SEComplete FleeBehaviorTree:BTService_EventFirer_SEComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.4"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree FleeBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence FleeBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.2"
+      }
+    }
+  }
+]

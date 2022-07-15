@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_GorillianKnockback_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_GorillianKnockback_C Default__CE_GorillianKnockback_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_GorillianKnockback.1"
+    }
+  },
+  {
+    "Type": "CE_GorillianKnockback_C",
+    "Name": "Default__CE_GorillianKnockback_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__CE_GorillianKnockback_C:PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_GorillianKnockback.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 1.0,
+      "bIsHostile": true,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_GorillianKnockback_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_GorillianKnockback.3"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateKnockback"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_GorillianKnockback_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_GorillianKnockback_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_GorillianKnockback.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "Default__CE_GorillianKnockback_C",
+    "Properties": {
+      "PushSpeed": 1350.0,
+      "PushSpeedZ": 400.0,
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Knockback"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 1.0
+    }
+  }
+]

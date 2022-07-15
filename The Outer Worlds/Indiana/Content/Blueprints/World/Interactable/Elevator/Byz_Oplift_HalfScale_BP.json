@@ -1,0 +1,656 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Byz_Oplift_HalfScale_BP_C",
+    "Super": "Elevator_No_Door_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Byz_Oplift_HalfScale_BP_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.16"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler Byz_Oplift_HalfScale_BP_C:InheritableComponentHandler",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Elevator_No_Door_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_No_Door.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Byz_Oplift_HalfScale_BP_C Default__Byz_Oplift_HalfScale_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.1"
+    }
+  },
+  {
+    "Type": "Byz_Oplift_HalfScale_BP_C",
+    "Name": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Default__Elevator_No_Door_C",
+    "Properties": {
+      "ElevatorAudioComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass Elevator_Sound_Oplift_Halfscale_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/OCL/Elevator_Sound_Oplift_Halfscale.1"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      },
+      "CarriageComponent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.10"
+      },
+      "FrameMeshComponent": {
+        "ObjectName": "StaticMeshComponent Default__Byz_Oplift_HalfScale_BP_C:Frame",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.18"
+      },
+      "SplineComponent": {
+        "ObjectName": "SplineComponent Default__Byz_Oplift_HalfScale_BP_C:Spline",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.17"
+      },
+      "IDComponent": {
+        "ObjectName": "ObsidianIDComponent Default__Byz_Oplift_HalfScale_BP_C:ObsidianIDComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.6"
+      },
+      "AkComponent": {
+        "ObjectName": "AkComponent Default__Byz_Oplift_HalfScale_BP_C:Ak",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.2"
+      },
+      "GhostNavMesh_StartFloor": {
+        "ObjectName": "ChildActorComponent Default__Byz_Oplift_HalfScale_BP_C:Nav Modifier (Start Floor)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.4"
+      },
+      "GhostNavMesh_EndFloor": {
+        "ObjectName": "ChildActorComponent Default__Byz_Oplift_HalfScale_BP_C:Nav Modifier (End Floor)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.3"
+      },
+      "WaitLocationLeft": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Wait Location (Left)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.12"
+      },
+      "WaitLocationMiddle": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Wait Location (Middle)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.13"
+      },
+      "WaitLocationRight": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Wait Location (Right)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.14"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "AkComponent",
+    "Name": "Ak",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Ak",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Nav Modifier (End Floor)",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Nav Modifier (End Floor)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Nav Modifier (Start Floor)",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Nav Modifier (Start Floor)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Byz_Oplift_HalfScale_BP_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class PointLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PointLightComponent Byz_Oplift_HalfScale_BP_C:ElevBounce_2_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_No_Door_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_No_Door.1"
+            },
+            "SCSVariableName": "ElevBounce_2",
+            "AssociatedGuid": "0A62252C-4C7EB7A8-B4BFA988-E28749B6"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "SourceRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "SourceLength",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IntensityUnits",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "AttenuationRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Temperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "LightGuid",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "A",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "B",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "C",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Intensity",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAffectsWorld",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Pitch",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class PointLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PointLightComponent Byz_Oplift_HalfScale_BP_C:ElevBounce_1_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_No_Door_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_No_Door.1"
+            },
+            "SCSVariableName": "ElevBounce_1",
+            "AssociatedGuid": "BB9613B0-43CB7ABD-61BC46AE-19B36AC2"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "SourceRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "SourceLength",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IntensityUnits",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "AttenuationRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Temperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "LightGuid",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "A",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "B",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "C",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Intensity",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAffectsWorld",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Pitch",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ObsidianIDComponent",
+    "Name": "ObsidianIDComponent",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "ObsidianIDComponent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ElevBounce_1_GEN_VARIABLE",
+    "Outer": "Byz_Oplift_HalfScale_BP_C",
+    "Template": "ElevBounce_1_GEN_VARIABLE",
+    "Properties": {
+      "bUseTemperature": false,
+      "Intensity": 0.0,
+      "bAffectsWorld": false,
+      "CastShadows": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ElevBounce_2_GEN_VARIABLE",
+    "Outer": "Byz_Oplift_HalfScale_BP_C",
+    "Template": "ElevBounce_2_GEN_VARIABLE",
+    "Properties": {
+      "bUseTemperature": false,
+      "Intensity": 0.0,
+      "bAffectsWorld": false,
+      "CastShadows": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Byz_Oplift_HalfScale_BP_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Carriage",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Carriage",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      },
+      "RelativeLocation": {
+        "X": -39.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "SceneComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Left)",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Wait Location (Left)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.10"
+      },
+      "RelativeLocation": {
+        "X": 60.0,
+        "Y": 134.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Middle)",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Wait Location (Middle)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.10"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Right)",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Wait Location (Right)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.10"
+      },
+      "RelativeLocation": {
+        "X": 114.0,
+        "Y": -138.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Byz_Oplift_HalfScale_BP_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.9"
+      },
+      "VariableGuid": "9993621A-426FF660-A8F44FAD-9125895F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Byz_Oplift_HalfScale_BP_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Byz_Oplift_HalfScale_BP_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.15"
+      }
+    }
+  },
+  {
+    "Type": "SplineComponent",
+    "Name": "Spline",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Spline",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.11"
+      },
+      "RelativeLocation": {
+        "X": -39.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Frame",
+    "Outer": "Default__Byz_Oplift_HalfScale_BP_C",
+    "Template": "Frame",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh ENV_IND_GRB_OpLiftHalf",
+        "ObjectPath": "Indiana/Content/Art/ENV/Props/IND/ENV_IND_GRB_OpLift/ENV_IND_GRB_OpLiftHalf.2"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Byz_Oplift_HalfScale_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Byz_Oplift_HalfScale_BP.10"
+      }
+    }
+  }
+]

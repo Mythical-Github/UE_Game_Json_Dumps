@@ -1,0 +1,1244 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Elevator_Standalone_A_BP_C",
+    "Super": "Elevator_Standalone_BP_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Elevator_Standalone_A_BP_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.20"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler Elevator_Standalone_A_BP_C:InheritableComponentHandler",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Elevator_Standalone_A_BP_C Default__Elevator_Standalone_A_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.1"
+    }
+  },
+  {
+    "Type": "Elevator_Standalone_A_BP_C",
+    "Name": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Default__Elevator_Standalone_BP_C",
+    "Properties": {
+      "ElevatorAudioComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass Elevator_Sound_Standalone_A_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/OCL/Elevator_Sound_Standalone_A.1"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      },
+      "CarriageComponent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.12"
+      },
+      "FrameMeshComponent": {
+        "ObjectName": "StaticMeshComponent Default__Elevator_Standalone_A_BP_C:Frame",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.24"
+      },
+      "SplineComponent": {
+        "ObjectName": "SplineComponent Default__Elevator_Standalone_A_BP_C:Spline",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.21"
+      },
+      "IDComponent": {
+        "ObjectName": "ObsidianIDComponent Default__Elevator_Standalone_A_BP_C:ObsidianIDComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.10"
+      },
+      "AkComponent": {
+        "ObjectName": "AkComponent Default__Elevator_Standalone_A_BP_C:Ak",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.2"
+      },
+      "GhostNavMesh_StartFloor": {
+        "ObjectName": "ChildActorComponent Default__Elevator_Standalone_A_BP_C:Nav Modifier (Start Floor)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.5"
+      },
+      "GhostNavMesh_EndFloor": {
+        "ObjectName": "ChildActorComponent Default__Elevator_Standalone_A_BP_C:Nav Modifier (End Floor)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.4"
+      },
+      "WaitLocationLeft": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Wait Location (Left)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.14"
+      },
+      "WaitLocationMiddle": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Wait Location (Middle)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.15"
+      },
+      "WaitLocationRight": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Wait Location (Right)",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.16"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "AkComponent",
+    "Name": "Ak",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Ak",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "AkComponent",
+    "Name": "Ak",
+    "Outer": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Template": "Ak",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Nav Modifier (End Floor)",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Nav Modifier (End Floor)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Nav Modifier (Start Floor)",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Nav Modifier (Start Floor)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "CAC_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "CAC_GEN_VARIABLE",
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "ElevatorSwitch_A_BP_C Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.7"
+      },
+      "RelativeLocation": {
+        "X": 171.67644,
+        "Y": -58.976875,
+        "Z": -46.0
+      }
+    }
+  },
+  {
+    "Type": "ElevatorSwitch_A_BP_C",
+    "Name": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Outer": "CAC_GEN_VARIABLE",
+    "Template": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Properties": {
+      "SceneComponent": {
+        "ObjectName": "SceneComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.17"
+      },
+      "InteractableComponent": {
+        "ObjectName": "InteractableComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.Interactable",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.9"
+      },
+      "IDComponent": {
+        "ObjectName": "ObsidianIDComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.ObsidianIDComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.11"
+      },
+      "AkComponent": {
+        "ObjectName": "AkComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.Ak",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.3"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class ChildActorComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.6"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "CAC",
+            "AssociatedGuid": "DCD27D3D-4A94D877-48CBE5A9-77A8922A"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "ChildActorClass",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ChildActorComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ChildActorComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ChildActorComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class SpotLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SpotLightComponent Elevator_Standalone_A_BP_C:SpotLight2_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.23"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "SpotLight2",
+            "AssociatedGuid": "554ABC06-42DAF7EB-D38853B5-F3613E93"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "OuterConeAngle",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "SourceLength",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IntensityUnits",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "AttenuationRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Temperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDrawDistance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDistanceFadeRange",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bUseTemperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "LightFunctionFadeDistance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "LightGuid",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "A",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "B",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "C",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Intensity",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastStaticShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAffectTranslucentLighting",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Pitch",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Roll",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class SpotLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SpotLightComponent Elevator_Standalone_A_BP_C:SpotLight1_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.22"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "SpotLight1",
+            "AssociatedGuid": "6FF1C79E-4FB4185E-CB765395-A749E5EC"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "OuterConeAngle",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "SourceLength",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IntensityUnits",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "AttenuationRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Temperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDrawDistance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDistanceFadeRange",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bUseTemperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "LightGuid",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "A",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "B",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "C",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Guid",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Intensity",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastStaticShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAffectTranslucentLighting",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class SpotLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Pitch",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Roll",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent Elevator_Standalone_A_BP_C:RightDoor2_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.27"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "RightDoor2",
+            "AssociatedGuid": "C84B0DEA-46F64317-11703E9F-9221C565"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IndirectLightingCacheQuality",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent Elevator_Standalone_A_BP_C:LeftDoor_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.26"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "LeftDoor",
+            "AssociatedGuid": "7876F91D-45A3CF47-6CB0ABA9-7EA052B0"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IndirectLightingCacheQuality",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Roll",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent Elevator_Standalone_A_BP_C:LeftDoor2_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.25"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "LeftDoor2",
+            "AssociatedGuid": "C1FAC8D4-4E678089-E4651A84-415F4560"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IndirectLightingCacheQuality",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent Elevator_Standalone_A_BP_C:RightDoor_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.28"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass Elevator_Standalone_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Abstract/Elevator_Standalone_BP.1"
+            },
+            "SCSVariableName": "RightDoor",
+            "AssociatedGuid": "53126FBF-438AB950-877D2CA5-D392C66B"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IndirectLightingCacheQuality",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Rotator",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InteractableComponent",
+    "Name": "Interactable",
+    "Outer": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Template": "Interactable",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Elevator_Standalone_A_BP_C:CAC_GEN_VARIABLE.CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT.SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "ObsidianIDComponent",
+    "Name": "ObsidianIDComponent",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "ObsidianIDComponent"
+  },
+  {
+    "Type": "ObsidianIDComponent",
+    "Name": "ObsidianIDComponent",
+    "Outer": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Template": "ObsidianIDComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Carriage",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Carriage",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "SceneComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Left)",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Wait Location (Left)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.12"
+      },
+      "RelativeLocation": {
+        "X": 32.0,
+        "Y": 46.0,
+        "Z": -40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Middle)",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Wait Location (Middle)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.12"
+      },
+      "RelativeLocation": {
+        "X": -20.0,
+        "Y": 0.0,
+        "Z": -40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Wait Location (Right)",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Wait Location (Right)",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.12"
+      },
+      "RelativeLocation": {
+        "X": 37.0,
+        "Y": -54.0,
+        "Z": -40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "CAC_GEN_VARIABLE_ElevatorSwitch_A_BP_C_CAT",
+    "Template": "SceneComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Elevator_Standalone_A_BP_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.18"
+      },
+      "VariableGuid": "986D8D0B-48E0FE34-064EB48A-A4250A9E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Elevator_Standalone_A_BP_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.19"
+      }
+    }
+  },
+  {
+    "Type": "SplineComponent",
+    "Name": "Spline",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Spline",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight1_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "SpotLight1_GEN_VARIABLE",
+    "Properties": {
+      "Intensity": 3.8278291
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight2_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "SpotLight2_GEN_VARIABLE",
+    "Properties": {
+      "Intensity": 2.6500356
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Frame",
+    "Outer": "Default__Elevator_Standalone_A_BP_C",
+    "Template": "Frame",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Elevator_Standalone_A_BP_C:Carriage",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Interactable/Elevator/Elevator_Standalone_A_BP.12"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LeftDoor2_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "LeftDoor2_GEN_VARIABLE",
+    "Properties": {
+      "LightmapType": "ELightmapType::Default"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LeftDoor_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "LeftDoor_GEN_VARIABLE",
+    "Properties": {
+      "LightmapType": "ELightmapType::Default"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RightDoor2_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "RightDoor2_GEN_VARIABLE",
+    "Properties": {
+      "LightmapType": "ELightmapType::Default"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RightDoor_GEN_VARIABLE",
+    "Outer": "Elevator_Standalone_A_BP_C",
+    "Template": "RightDoor_GEN_VARIABLE",
+    "Properties": {
+      "LightmapType": "ELightmapType::Default"
+    }
+  }
+]

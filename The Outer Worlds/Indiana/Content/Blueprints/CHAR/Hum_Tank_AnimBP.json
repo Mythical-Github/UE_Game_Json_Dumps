@@ -1,0 +1,618 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_BB185DB948B9028B96BA4E9E3E299179",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_Hum_Tank_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Hum_Tank_AnimBP",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty Hum_Tank_AnimBP_C:ExecuteUbergraph_Hum_Tank_AnimBP.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.1"
+      },
+      {
+        "ObjectName": "BoolProperty Hum_Tank_AnimBP_C:ExecuteUbergraph_Hum_Tank_AnimBP.CallFunc_EqualEqual_BoolBool_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.9"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SetDead",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bDead",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "PropertyFlags": 5,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Hum_Tank_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Idle",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Alive",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Dying",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": true
+            },
+            {
+              "StateName": "Dead",
+              "Transitions": [],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_BAS_TP_001_M_Skeleton",
+        "ObjectPath": "Indiana/Content/Art/CHAR/Base_Human/Base_Male/SK_BAS_TP_001_M_Skeleton.83"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:ExecuteUbergraph_Hum_Tank_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.6"
+      },
+      {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.4"
+      },
+      {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:AnimNotify_SetDead",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.3"
+      },
+      {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:ExecuteUbergraph_Hum_Tank_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.2"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_Root_BB185DB948B9028B96BA4E9E3E299179",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.0"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_TransitionResult_A4CD009C4C4D4BA96CC5ADAFF1E71AE2",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.19"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.18"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_SequencePlayer_E237103C4DD6808C2B239EB30D352697",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.13"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_StateResult_322937F44E0C10E0C408DEB551ED5B19",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.15"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_RandomPlayer_EA4E966C440FD01ED7B71DADA35C0803",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.12"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_StateResult_43767D414FB906693EAB96A22887C74A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.16"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_RandomPlayer_DB6F66CA4FA656E9B9BE2487BE727A97",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.11"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_StateResult_505B858B460D0894F78FC0AB37B542D3",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.17"
+      },
+      {
+        "ObjectName": "StructProperty Hum_Tank_AnimBP_C:AnimGraphNode_StateMachine_DAB9382443C5D44228C78082A2FEDA63",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.14"
+      },
+      {
+        "ObjectName": "BoolProperty Hum_Tank_AnimBP_C:bDead",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.5"
+      },
+      {
+        "ObjectName": "BoolProperty Hum_Tank_AnimBP_C:IsDying",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.10"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Hum_Tank_AnimBP": {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:ExecuteUbergraph_Hum_Tank_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.2"
+      },
+      "AnimNotify_SetDead": {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:AnimNotify_SetDead",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.3"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0": {
+        "ObjectName": "Function Hum_Tank_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.4"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hum_Tank_AnimBP_C Default__Hum_Tank_AnimBP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.8"
+    }
+  },
+  {
+    "Type": "Hum_Tank_AnimBP_C",
+    "Name": "Default__Hum_Tank_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_BB185DB948B9028B96BA4E9E3E299179": {
+        "Result": {
+          "LinkID": 9
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_A4CD009C4C4D4BA96CC5ADAFF1E71AE2": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bDead",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty Hum_Tank_AnimBP_C:bDead",
+                "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.5"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function Hum_Tank_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Hum_Tank_AnimBP_AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+            "ObjectPath": "Indiana/Content/Blueprints/CHAR/Hum_Tank_AnimBP.4"
+          }
+        }
+      },
+      "AnimGraphNode_SequencePlayer_E237103C4DD6808C2B239EB30D352697": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AS_Uni_TP_Tank_End_01",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_End_01.0"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_322937F44E0C10E0C408DEB551ED5B19": {
+        "Result": {
+          "LinkID": 3
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_EA4E966C440FD01ED7B71DADA35C0803": {
+        "bShuffleMode": false,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Loop_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Loop_01.1"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 1,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Loop_02",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Loop_02.1"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 1,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Loop_03",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Loop_03.1"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_43767D414FB906693EAB96A22887C74A": {
+        "Result": {
+          "LinkID": 5
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_DB6F66CA4FA656E9B9BE2487BE727A97": {
+        "bShuffleMode": true,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Start_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Start_01.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.9,
+            "MaxPlayRate": 1.1,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Start_02",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Start_02.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.9,
+            "MaxPlayRate": 1.1,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_Uni_TP_Tank_Start_01",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Character/ThirdPerson/Cinematics/AS_Uni_TP_Tank_Start_01.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.7,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_505B858B460D0894F78FC0AB37B542D3": {
+        "Result": {
+          "LinkID": 7
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_DAB9382443C5D44228C78082A2FEDA63": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_BoolBool_ReturnValue",
+    "Outer": "ExecuteUbergraph_Hum_Tank_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsDying",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "PropertyFlags": 5,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_DB6F66CA4FA656E9B9BE2487BE727A97",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_EA4E966C440FD01ED7B71DADA35C0803",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E237103C4DD6808C2B239EB30D352697",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_DAB9382443C5D44228C78082A2FEDA63",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_322937F44E0C10E0C408DEB551ED5B19",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_43767D414FB906693EAB96A22887C74A",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_505B858B460D0894F78FC0AB37B542D3",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9C08AC704591132F37E6E7A00C7670F0",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A4CD009C4C4D4BA96CC5ADAFF1E71AE2",
+    "Outer": "Hum_Tank_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

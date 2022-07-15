@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_RaptidonStickySpit_C",
+    "Super": "CE_Acid_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass CE_Acid_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Acid/CE_Acid.1"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_RaptidonStickySpit_C Default__Hazard_SE_RaptidonStickySpit_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_RaptidonStickySpit_C",
+    "Name": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Template": "Default__CE_Acid_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Acid_PostProcess_C Default__Hazard_SE_RaptidonStickySpit_C:CE_Acid_PostProcess_C_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Hazard_SE_RaptidonStickySpit_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.9"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__Hazard_SE_RaptidonStickySpit_C:ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.10"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "EffectName": {
+        "StringID": 1478
+      },
+      "EffectDescription": {
+        "StringID": 2570
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_RaptidonStickySpit_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.8"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_LegCripple",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_LegCripple.0"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Template": "AkPlaySoundEventEffect_0"
+  },
+  {
+    "Type": "ArmorStatusEffect",
+    "Name": "ArmorStatusEffect_0",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Template": "ArmorStatusEffect_0"
+  },
+  {
+    "Type": "CE_Acid_PostProcess_C",
+    "Name": "CE_Acid_PostProcess_C_1",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Template": "CE_Acid_PostProcess_C_1",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "bIsHostile": true,
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_RaptidonStickySpit_C:CE_Acid_PostProcess_C_1.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.7"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Template": "DamageStatusEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "CE_Acid_PostProcess_C_1",
+    "Template": "EventEffects_1",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Hazard_SE_RaptidonStickySpit_C:CE_Acid_PostProcess_C_1.EventEffects_1.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Hazard_SE_RaptidonStickySpit_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Rapitdon/Hazard_SE_RaptidonStickySpit.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "Default__Hazard_SE_RaptidonStickySpit_C",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

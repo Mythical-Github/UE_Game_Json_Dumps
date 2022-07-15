@@ -1,0 +1,652 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "CrouchBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_Crouch_IsCrouchInPlace",
+    "Name": "BT_Con_Crouch_IsCrouchInPlace_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "bInverseCondition": true,
+      "NodeName": "Crouch Not In Place?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_WantsNonBehaviorCrouch",
+    "Name": "BT_Con_General_WantsNonBehaviorCrouch_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "bInverseCondition": true,
+      "NodeName": "Should stand?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_WantsNonBehaviorCrouch",
+    "Name": "BT_Con_General_WantsNonBehaviorCrouch_1",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "bInverseCondition": true,
+      "NodeName": "Standing?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Crouch_UpdatePrematureExit",
+    "Name": "BT_Scr_Crouch_UpdatePrematureExit_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "ScriptExecutionType": "EAIScriptExecutionType::OnUpdate",
+      "NodeName": "Update Premature Exit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_ChangeCapsuleRadius",
+    "Name": "BT_Scr_General_ChangeCapsuleRadius_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "RadiusScalar": 0.55,
+      "NodeName": "Reduce Capsule Radius",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_Crouch",
+    "Name": "BT_Scr_General_Crouch_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Crouch",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_EnableContinousMovement",
+    "Name": "BT_Scr_General_EnableContinousMovement_7",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Dont Reset Loco",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_LockAIState",
+    "Name": "BT_Scr_General_LockAIState_7",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Lock AI State",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetCanBump",
+    "Name": "BT_Scr_General_SetCanBump_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Bump Characters",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetCanBump",
+    "Name": "BT_Scr_General_SetCanBump_1",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "NodeName": "Bump Characters",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CrouchBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.23"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CrouchBehaviorTree:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.17"
+            },
+            {
+              "ObjectName": "BT_Con_General_WantsNonBehaviorCrouch CrouchBehaviorTree:BT_Con_General_WantsNonBehaviorCrouch_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_Crouch CrouchBehaviorTree:BT_Scr_General_Crouch_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CrouchBehaviorTree:BTTask_IndianaWait_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CrouchBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.16"
+            },
+            {
+              "ObjectName": "BT_Con_General_WantsNonBehaviorCrouch CrouchBehaviorTree:BT_Con_General_WantsNonBehaviorCrouch_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo CrouchBehaviorTree:BTTask_IndianaMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.22"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_EnableContinousMovement CrouchBehaviorTree:BT_Scr_General_EnableContinousMovement_7",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaDirectMoveTo CrouchBehaviorTree:BTTask_IndianaDirectMoveTo_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetCanBump CrouchBehaviorTree:BT_Scr_General_SetCanBump_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_2",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CrouchBehaviorTree:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.18"
+            },
+            {
+              "ObjectName": "BT_Con_Crouch_IsCrouchInPlace CrouchBehaviorTree:BT_Con_Crouch_IsCrouchInPlace_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetCanBump CrouchBehaviorTree:BT_Scr_General_SetCanBump_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.10"
+            },
+            {
+              "ObjectName": "BT_Scr_General_ChangeCapsuleRadius CrouchBehaviorTree:BT_Scr_General_ChangeCapsuleRadius_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CrouchBehaviorTree:BTTask_IndianaWait_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.26"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete CrouchBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CrouchBehaviorTree:BTTask_IndianaWait_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaDirectMoveTo CrouchBehaviorTree:BTTask_IndianaDirectMoveTo_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_LockAIState CrouchBehaviorTree:BT_Scr_General_LockAIState_7",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.8"
+            },
+            {
+              "ObjectName": "BT_Scr_Crouch_UpdatePrematureExit CrouchBehaviorTree:BT_Scr_Crouch_UpdatePrematureExit_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  },
+  {
+    "Type": "BTService_General_FocusAt",
+    "Name": "BTService_General_FocusAt_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "BodyTargetSelector": {
+        "AILocation": {
+          "ObjectName": "Class Crouch_EndLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bSetShouldExitRegion": true,
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaDirectMoveTo",
+    "Name": "BTTask_IndianaDirectMoveTo_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Crouch_StartLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "76AD2A6E-43734298-E32F699B-DD98387C",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaDirectMoveTo",
+    "Name": "BTTask_IndianaDirectMoveTo_1",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Crouch_EndLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "B45350BC-4C21B5CB-DC3C5C82-00EE7050",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Crouch_StartLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "FailResponse": "EMoveToResultResponse::ExitBehavior",
+      "AcceptableRadius": 150.0,
+      "bStopOnOverlap": false,
+      "bInstant": true,
+      "SaveGameTaskGuid": "FB2E3C93-497F60FC-51FB51A8-66DE627B",
+      "NodeName": "Move To (Instant)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_2",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_ShouldServiceExitTask",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "4AA585B9-4E968767-5E8802B6-C9BDC719",
+      "Services": [
+        {
+          "ObjectName": "BTService_General_FocusAt CrouchBehaviorTree:BTService_General_FocusAt_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.19"
+        }
+      ],
+      "NodeName": "Rotate to Crouch Facing",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_1",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "WaitTime": 2.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_IsFullyCrouched",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "AFF6C1A8-4263F05A-578F2582-FDA4457C",
+      "NodeName": "Wait until fully crouched",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_2",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "WaitTime": 2.0,
+      "WaitExitConditionSelector": {
+        "AIBool": {
+          "ObjectName": "Class General_IsFullyUncrouched",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "54418793-4644C3E8-F3DB489A-2C1092AB",
+      "NodeName": "Wait until fully uncrouched",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_4",
+    "Outer": "CrouchBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "99F04221-409EB3C9-44C3EF9F-A31613DA",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CrouchBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CrouchBehaviorTree:BTComposite_Sequence_3",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.14"
+      }
+    }
+  }
+]

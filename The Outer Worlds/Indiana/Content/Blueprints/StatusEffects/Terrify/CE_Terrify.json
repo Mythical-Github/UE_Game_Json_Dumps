@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Terrify_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Terrify_C Default__CE_Terrify_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.1"
+    }
+  },
+  {
+    "Type": "CE_Terrify_C",
+    "Name": "Default__CE_Terrify_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Terrify_C:AnimDisableStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.2"
+        },
+        {
+          "ObjectName": "CastSpellStatusEffect Default__CE_Terrify_C:CastSpellStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Terrify_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.8"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 10.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat CauseIntimidateDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/CauseIntimidateDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 2295
+      },
+      "EffectDescription": {
+        "StringID": 2296
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Terrify_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.5"
+      },
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Terrify_C:EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.6"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Terrify",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Terrify.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 2297
+      },
+      "bAppendDescriptionToPrevious": true
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_2",
+    "Outer": "Default__CE_Terrify_C",
+    "Properties": {
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Intimidate"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "CastSpellStatusEffect",
+    "Name": "CastSpellStatusEffect_0",
+    "Outer": "Default__CE_Terrify_C",
+    "Properties": {
+      "Spell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_SkillUnlock_Intimidate_PlayerCrit_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate_PlayerCrit.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::NPC_DialogIntimidated"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Terrify_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Terrify_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "Default__CE_Terrify_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayFxEventEffect Default__CE_Terrify_C:EventEffects_1.PlayFxEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Terrify/CE_Terrify.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Cower",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/StatusEffects/NPC/PS_Cower.24"
+      },
+      "AttachSocketName": "VFX_Head"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Terrify_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.7,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationStat": {
+        "ObjectName": "RpgStat IntimidateSpeedPenaltyDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/IntimidateSpeedPenaltyDuration_Stat.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AK47_Fire_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator AK47_Fire_Cue:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/KA47/Sounds/AK47_Fire_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 3.5,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AK47_Fire_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AK47_Fire_Cue:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/KA47/Sounds/AK47_Fire_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AK47_Fire_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/KA47/Sounds/ak47_fp.ak47_fp",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave ak47_fp",
+      "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/KA47/Sounds/ak47_fp.0"
+    }
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Consumable_Smoke_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Consumable_Smoke_C Default__Spell_Consumable_Smoke_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.1"
+    }
+  },
+  {
+    "Type": "Spell_Consumable_Smoke_C",
+    "Name": "Default__Spell_Consumable_Smoke_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Consumable_Smoke_C:StatusEffectRemove_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.6"
+            },
+            {
+              "ObjectName": "CE_SmokeHigh_C Default__Spell_Consumable_Smoke_C:CE_SmokeHigh_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.2"
+            },
+            {
+              "ObjectName": "CE_SmokeLow_Wait_C Default__Spell_Consumable_Smoke_C:CE_SmokeLow_Wait_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.3"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_SmokeHigh_C",
+    "Name": "CE_SmokeHigh_C_0",
+    "Outer": "Default__Spell_Consumable_Smoke_C",
+    "Template": "Default__CE_SmokeHigh_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Consumable_Smoke_C:CE_SmokeHigh_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Consumable_Smoke_C:CE_SmokeHigh_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Smoke/Spell_Consumable_Smoke.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_SmokeLow_Wait_C",
+    "Name": "CE_SmokeLow_Wait_C_0",
+    "Outer": "Default__Spell_Consumable_Smoke_C",
+    "Template": "Default__CE_SmokeLow_Wait_C",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::AddDurationIfAlreadyApplied",
+      "MaxDuration": 600.0
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_SmokeHigh_C_0",
+    "Template": "StatModifierStatusEffect_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_SmokeHigh_C_0",
+    "Template": "StatModifierStatusEffect_1",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5
+      }
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__Spell_Consumable_Smoke_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_SmokeLow_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Smoke/CE_SmokeLow.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  }
+]

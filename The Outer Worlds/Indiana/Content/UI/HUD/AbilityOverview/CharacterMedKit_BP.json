@@ -1,0 +1,1576 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "CharacterMedKit_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree CharacterMedKit_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.70"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/HUD/AbilityOverview/CharacterMedKit_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class CharacterMedKitWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CharacterMedKit_BP_C Default__CharacterMedKit_BP_C",
+      "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.1"
+    }
+  },
+  {
+    "Type": "CharacterMedKit_BP_C",
+    "Name": "Default__CharacterMedKit_BP_C",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CharacterMedKit_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__CharacterMedKit_BP_C",
+    "Properties": {
+      "MainInvalidationBox": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.30"
+      },
+      "MedKitProgressBar": {
+        "ObjectName": "ProgressBar WidgetArchetype:WidgetTree_0.MedKitProgressBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.52"
+      },
+      "DrugSlotOne": {
+        "ObjectName": "MedKitHUDAdrenoSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotOne",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.32"
+      },
+      "DrugSlotTwo": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotTwo",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.38"
+      },
+      "DrugSlotThree": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotThree",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.37"
+      },
+      "DrugSlotFour": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotFour",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.36"
+      },
+      "DrugSlotContainer": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      },
+      "InputLabel": {
+        "ObjectName": "InputWidget_BP_C WidgetArchetype:WidgetTree_0.InputLabel",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.28"
+      },
+      "MedKitUsageTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.MedKitUsageTextBlock",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.63"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.71"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "DrugSlotContainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_4",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_5",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_6",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_7",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot CharacterMedKit_BP_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.67"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot CharacterMedKit_BP_C:WidgetTree.MainInvalidationBox.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.49"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "DrugSlotContainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_4",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_5",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.15"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_6",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.16"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_7",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_2.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.69"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.19"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.MainInvalidationBox.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.50"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.3"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDAdrenoSlot_BP_C CharacterMedKit_BP_C:WidgetTree.DrugSlotOne",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.3"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C CharacterMedKit_BP_C:WidgetTree.DrugSlotTwo",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.35"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.3"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C CharacterMedKit_BP_C:WidgetTree.DrugSlotThree",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.34"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.3"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C CharacterMedKit_BP_C:WidgetTree.DrugSlotFour",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.33"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.4"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox CharacterMedKit_BP_C:WidgetTree.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.64"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.4"
+      },
+      "Content": {
+        "ObjectName": "InputWidget_BP_C CharacterMedKit_BP_C:WidgetTree.InputLabel",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.27"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": -15.0,
+        "Right": 15.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.4"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase CharacterMedKit_BP_C:WidgetTree.MedKitUsageTextBlock",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.61"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDAdrenoSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotOne",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.32"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotTwo",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.38"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotThree",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Outer": "DrugSlotContainer",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      },
+      "Content": {
+        "ObjectName": "MedKitHUDDrugSlot_BP_C WidgetArchetype:WidgetTree_0.DrugSlotFour",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.36"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.6"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.65"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.6"
+      },
+      "Content": {
+        "ObjectName": "InputWidget_BP_C WidgetArchetype:WidgetTree_0.InputLabel",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.28"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": -15.0,
+        "Right": 15.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.MedKitUsageTextBlock",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.63"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerPipFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerPipFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerAdrenoFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerAdrenoFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerPipFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerPipFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerPipFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerPipFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "GamepadIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 41.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Button_Xbox_View",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/Navigation/Xbox/T_Button_Xbox_View.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadMasterOverlay.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.45"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "KeyBackingIcon",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 33.0,
+          "Y": 33.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Button_PC_KeyArt",
+          "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/Navigation/PC/T_Button_PC_KeyArt.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.48"
+      }
+    }
+  },
+  {
+    "Type": "InputWidget_BP_C",
+    "Name": "InputLabel",
+    "Outer": "WidgetTree",
+    "Template": "Default__InputWidget_BP_C",
+    "Properties": {
+      "Action": "QuickSelect0",
+      "bDisplayKeyboardMouse": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.12"
+      }
+    }
+  },
+  {
+    "Type": "InputWidget_BP_C",
+    "Name": "InputLabel",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__InputWidget_BP_C",
+    "Properties": {
+      "KeyBackingIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyBackingIcon",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.26"
+      },
+      "Action": "QuickSelect0",
+      "bDisplayKeyboardMouse": true,
+      "KeyboardMasterOverlay": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.41"
+      },
+      "GamepadIcon": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadIcon",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.25"
+      },
+      "GamepadMasterOverlay": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.40"
+      },
+      "KeyInputHoldlessTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputHoldlessTextBlock",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.62"
+      },
+      "KeyInputSizeBox": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.54"
+      },
+      "ButtonOverlay": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.39"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.76"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.19"
+      }
+    }
+  },
+  {
+    "Type": "InvalidationBox",
+    "Name": "MainInvalidationBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot CharacterMedKit_BP_C:WidgetTree.MainInvalidationBox.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.49"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InvalidationBox",
+    "Name": "MainInvalidationBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.MainInvalidationBox.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.50"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "MedKitHUDAdrenoSlot_BP_C",
+    "Name": "DrugSlotOne",
+    "Outer": "WidgetTree",
+    "Template": "Default__MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_4",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.7"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDAdrenoSlot_BP_C",
+    "Name": "DrugSlotOne",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "DrugSlotImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotOne.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.22"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.DrugSlotOne.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.73"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_4",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.14"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotFour",
+    "Outer": "WidgetTree",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.10"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotThree",
+    "Outer": "WidgetTree",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotTwo",
+    "Outer": "WidgetTree",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer.HorizontalBoxSlot_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotFour",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "DrugSlotImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotFour.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.21"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.DrugSlotFour.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.72"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotThree",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "DrugSlotImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotThree.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.23"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.DrugSlotThree.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.74"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.16"
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDDrugSlot_BP_C",
+    "Name": "DrugSlotTwo",
+    "Outer": "WidgetTree_0",
+    "Template": "Default__MedKitHUDDrugSlot_BP_C",
+    "Properties": {
+      "DrugSlotImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotTwo.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.24"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0.DrugSlotTwo.WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.75"
+      },
+      "bCookedWidgetTree": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.DrugSlotContainer.HorizontalBoxSlot_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.15"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "ButtonOverlay",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.43"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay.OverlaySlot_3",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.59"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "GamepadMasterOverlay",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadMasterOverlay.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.45"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay.OverlaySlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.43"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "KeyboardMasterOverlay",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardMasterOverlay.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay.OverlaySlot_3",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.44"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "KeyboardOverlay",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay.OverlaySlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.48"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputSizeBox.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.58"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "ButtonOverlay",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.39"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.40"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "ButtonOverlay",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.39"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.41"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "GamepadMasterOverlay",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.40"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.GamepadIcon",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "KeyboardMasterOverlay",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardMasterOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.41"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.54"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "KeyboardOverlay",
+    "Properties": {
+      "Padding": {
+        "Left": 6.0,
+        "Right": 6.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.42"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputHoldlessTextBlock",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.62"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "KeyboardOverlay",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.42"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyBackingIcon",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.26"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "MainInvalidationBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "InvalidationBox CharacterMedKit_BP_C:WidgetTree.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.29"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "MainInvalidationBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.30"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "MedKitProgressBar",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_HUD_InhalerBacking",
+            "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerBacking.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_HUD_InhalerFill",
+            "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerFill.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        }
+      },
+      "Percent": 1.0,
+      "MinPercent": 0.19,
+      "MaxPercent": 0.8,
+      "BarFillType": "EProgressBarFillType::BottomToTop",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot CharacterMedKit_BP_C:WidgetTree.MedKitSizeBox.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.57"
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "MedKitProgressBar",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_HUD_InhalerBacking",
+            "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerBacking.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_HUD_InhalerFill",
+            "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerFill.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        }
+      },
+      "Percent": 1.0,
+      "MinPercent": 0.19,
+      "MaxPercent": 0.8,
+      "BarFillType": "EProgressBarFillType::BottomToTop",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MedKitSizeBox.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.60"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "MedKitSizeBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 48.0,
+      "HeightOverride": 48.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot CharacterMedKit_BP_C:WidgetTree.MedKitSizeBox.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot CharacterMedKit_BP_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.66"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "KeyInputSizeBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_HeightOverride": true,
+      "bOverride_MinDesiredWidth": true,
+      "WidthOverride": 33.0,
+      "HeightOverride": 33.0,
+      "MinDesiredWidth": 33.0,
+      "MaxDesiredWidth": 33.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputSizeBox.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.58"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardMasterOverlay.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.46"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_MinDesiredHeight": true,
+      "MinDesiredHeight": 47.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.59"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "MedKitSizeBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 48.0,
+      "HeightOverride": 48.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.MedKitSizeBox.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.60"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_2.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.68"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "MedKitSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox CharacterMedKit_BP_C:WidgetTree.MedKitSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.53"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar CharacterMedKit_BP_C:WidgetTree.MedKitProgressBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.51"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "KeyInputSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyInputSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.54"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.42"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.55"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.ButtonOverlay",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.39"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "MedKitSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MedKitSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.56"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar WidgetArchetype:WidgetTree_0.MedKitProgressBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.52"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "MedKitUsageTextBlock",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A191BDB645420756197665A8A508DD35",
+        "SourceString": "x99"
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.13"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "KeyInputHoldlessTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "CDD31E7340883A4449105594E63714ED",
+        "SourceString": "X"
+      },
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset HeaderMedium",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/HeaderMedium.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font OBSTOW_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/OBSTOW_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 2
+          },
+          "TypefaceFontName": "Font",
+          "Size": 14
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.KeyboardOverlay.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.47"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "MedKitUsageTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A191BDB645420756197665A8A508DD35",
+        "SourceString": "x99"
+      },
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.20"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_2",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot CharacterMedKit_BP_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.66"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot CharacterMedKit_BP_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.67"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot CharacterMedKit_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_2",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_2.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.68"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_2.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_2",
+    "Properties": {
+      "Padding": {
+        "Top": -5.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox CharacterMedKit_BP_C:WidgetTree.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.64"
+      },
+      "Content": {
+        "ObjectName": "SizeBox CharacterMedKit_BP_C:WidgetTree.MedKitSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.53"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_2",
+    "Properties": {
+      "Padding": {
+        "Top": -5.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox CharacterMedKit_BP_C:WidgetTree.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.64"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox CharacterMedKit_BP_C:WidgetTree.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_2",
+    "Properties": {
+      "Padding": {
+        "Top": -5.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.65"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.MedKitSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.56"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_2",
+    "Properties": {
+      "Padding": {
+        "Top": -5.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.65"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.DrugSlotContainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "CharacterMedKit_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "InvalidationBox CharacterMedKit_BP_C:WidgetTree.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.29"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.30"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "DrugSlotFour",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotFour.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.21"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "DrugSlotOne",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotOne.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.22"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "DrugSlotThree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotThree.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.23"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "DrugSlotTwo",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotTwo.WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.24"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "InputLabel",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.InputLabel.WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/CharacterMedKit_BP.55"
+      }
+    }
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Mantisaur_PerfectRangeBlock_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Mantisaur_PerfectRangeBlock_C Default__Spell_Mantisaur_PerfectRangeBlock_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.1"
+    }
+  },
+  {
+    "Type": "Spell_Mantisaur_PerfectRangeBlock_C",
+    "Name": "Default__Spell_Mantisaur_PerfectRangeBlock_C",
+    "Properties": {
+      "EventCooldown": 1.0,
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ],
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnBlockedHit Default__Spell_Mantisaur_PerfectRangeBlock_C:OnBlockedHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_MantiBlockingEffect_C Default__Spell_Mantisaur_PerfectRangeBlock_C:CE_MantiBlockingEffect_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_MantiBlockingEffect_C",
+    "Name": "CE_MantiBlockingEffect_C_0",
+    "Outer": "Default__Spell_Mantisaur_PerfectRangeBlock_C",
+    "Template": "Default__CE_MantiBlockingEffect_C",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_Mantisaur_PerfectRangeBlock_C:CE_MantiBlockingEffect_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.3"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_MantiBlockingEffect_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayFxEventEffect Default__Spell_Mantisaur_PerfectRangeBlock_C:CE_MantiBlockingEffect_C_0.EventEffects_0.PlayFxEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.5"
+        },
+        {
+          "ObjectName": "PlayFxEventEffect Default__Spell_Mantisaur_PerfectRangeBlock_C:CE_MantiBlockingEffect_C_0.EventEffects_0.PlayFxEventEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/AI_Spell_Effects/Spell_Mantisaur_PerfectRangeBlock.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnBlockedHit",
+    "Name": "OnBlockedHit_0",
+    "Outer": "Default__Spell_Mantisaur_PerfectRangeBlock_C"
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Manti_Block_Charge",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Creatures/Mantisaur/PS_Manti_Block_Charge.142"
+      },
+      "AttachSocketName": "VFX_Head"
+    }
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_1",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Manti_Block_Charge",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Creatures/Mantisaur/PS_Manti_Block_Charge.142"
+      },
+      "AttachSocketName": "VFX_Head02"
+    }
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TA_0202_RaptMaterials_C",
+    "SuperStruct": {
+      "ObjectName": "Class QuestItem",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 2365456,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TA_0202_RaptMaterials_C Default__TA_0202_RaptMaterials_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Item/QuestItem/TA_0202_RaptMaterials.1"
+    }
+  },
+  {
+    "Type": "TA_0202_RaptMaterials_C",
+    "Name": "Default__TA_0202_RaptMaterials_C",
+    "Properties": {
+      "ItemMesh": {
+        "AssetPathName": "/Game/Art/ENV/Props/Interact/JUNK/RaptidonHide/JUNK_RaptidonHide.JUNK_RaptidonHide",
+        "SubPathString": ""
+      },
+      "LootableCondition": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "TA0202_MakesSpaceSuitsWontTravel_State"
+            },
+            "Value": 20
+          },
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::And",
+              "ConditionalType": "EConditionalType::GlobalVar",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": "TA0202_RaptidonMaterials"
+                },
+                "Operator": "EGlobalVariableComparison::NotEqual",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 1,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX1",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      },
+      "bStackable": true,
+      "Name": {
+        "StringID": 2767
+      },
+      "Description": {
+        "StringID": 2768
+      },
+      "Lore": {
+        "StringID": 2769
+      },
+      "UIImage": {
+        "ObjectName": "Texture2D j_RaptidonHide120",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/InventoryItems/j_RaptidonHide120.0"
+      },
+      "BaseValue": 350
+    }
+  }
+]

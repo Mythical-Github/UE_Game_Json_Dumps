@@ -1,0 +1,166 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "MIDs",
+    "Outer": "MIDs",
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "MIDs",
+    "Outer": "CE_DoubleHackRobot_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty CE_DoubleHackRobot_C:MIDs.MIDs",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_DoubleHackRobot_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ArrayProperty CE_DoubleHackRobot_C:MIDs",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.1"
+      }
+    ],
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_DoubleHackRobot_C Default__CE_DoubleHackRobot_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.3"
+    }
+  },
+  {
+    "Type": "CE_DoubleHackRobot_C",
+    "Name": "Default__CE_DoubleHackRobot_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatusEffectRemove Default__CE_DoubleHackRobot_C:StatusEffectRemove_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.11"
+        },
+        {
+          "ObjectName": "CE_Scramble_C Default__CE_DoubleHackRobot_C:CE_Scramble_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 20.0,
+      "bIsHostile": true,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_DoubleHackRobot_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.7"
+      },
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__CE_DoubleHackRobot_C:EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.8"
+      }
+    }
+  },
+  {
+    "Type": "CE_Scramble_C",
+    "Name": "CE_Scramble_C_0",
+    "Outer": "Default__CE_DoubleHackRobot_C",
+    "Template": "Default__CE_Scramble_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_DoubleHackRobot_C:CE_Scramble_C_0.ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.12"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_DoubleHackRobot_C:CE_Scramble_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.9"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_DoubleHackRobot_C:CE_Scramble_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerDown"
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ROBO_HackPowerUp"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_DoubleHackRobot_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_DoubleHackRobot_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "Default__CE_DoubleHackRobot_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_DoubleHackRobot_C:EventEffects_1.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_DoubleHackRobot.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Scramble_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Scramble_C_0",
+    "Template": "StatModifierStatusEffect_1"
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__CE_DoubleHackRobot_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_HackRobot_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/HackRobot/CE_HackRobot.2"
+      }
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "CE_Scramble_C_0",
+    "Template": "ToggleActionStatusEffect_0"
+  }
+]

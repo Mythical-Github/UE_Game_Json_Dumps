@@ -1,0 +1,1454 @@
+[
+  {
+    "Type": "AISettings_FollowPlayer",
+    "Name": "AISettings_FollowPlayer_0",
+    "Outer": "GlobalAISettings"
+  },
+  {
+    "Type": "AISettings_Idle",
+    "Name": "AISettings_Idle_0",
+    "Outer": "GlobalAISettings"
+  },
+  {
+    "Type": "AISettings_Wander",
+    "Name": "AISettings_Wander_0",
+    "Outer": "GlobalAISettings",
+    "Properties": {
+      "MinMoveDistance": 500.0,
+      "MaxMoveDistance": 700.0,
+      "MinIdleTime": 5.0,
+      "MaxIdleTime": 6.0
+    }
+  },
+  {
+    "Type": "GlobalAIData",
+    "Name": "GlobalAISettings",
+    "Properties": {
+      "DefaultBlackboard": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      },
+      "BehaviorTreeMap": {
+        "EBehaviorState::Cover": {
+          "ObjectName": "BehaviorTree CoverBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/CoverBehaviorTree.0"
+        },
+        "EBehaviorState::Range": {
+          "ObjectName": "BehaviorTree RangeBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RangeBehaviorTree.0"
+        },
+        "EBehaviorState::MeleeSlot": {
+          "ObjectName": "BehaviorTree MeleeSlotBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/MeleeSlotBehaviorTree.0"
+        },
+        "EBehaviorState::Search": {
+          "ObjectName": "BehaviorTree SearchBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SearchBehaviorTree.0"
+        },
+        "EBehaviorState::RepositionSearch": {
+          "ObjectName": "BehaviorTree RepositionSearchBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/RepositionSearchBehaviorTree.0"
+        },
+        "EBehaviorState::MeleeBlock": {
+          "ObjectName": "BehaviorTree BlockBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/BlockBehaviorTree.0"
+        },
+        "EBehaviorState::Dodge": {
+          "ObjectName": "BehaviorTree DodgeBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/DodgeBehaviorTree.0"
+        },
+        "EBehaviorState::Idle": {
+          "ObjectName": "BehaviorTree IdleBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/IdleBehaviorTree.0"
+        },
+        "EBehaviorState::Tether": {
+          "ObjectName": "BehaviorTree TetherBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/TetherBehaviorTree.0"
+        },
+        "EBehaviorState::SwitchWeapon": {
+          "ObjectName": "BehaviorTree SwitchWeaponBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchWeaponBehaviorTree.0"
+        },
+        "EBehaviorState::SwitchTarget": {
+          "ObjectName": "BehaviorTree SwitchTargetBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SwitchTargetBehaviorTree.0"
+        },
+        "EBehaviorState::Dead": {
+          "ObjectName": "BehaviorTree DeathBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.0"
+        },
+        "EBehaviorState::Disabled": {
+          "ObjectName": "BehaviorTree DisabledBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DisabledBehaviorTree.0"
+        },
+        "EBehaviorState::SwitchContext": {
+          "ObjectName": "BehaviorTree SwitchContextBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SwitchContextBehaviorTree.0"
+        },
+        "EBehaviorState::Suspicious": {
+          "ObjectName": "BehaviorTree SuspiciousBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/SuspiciousBehaviorTree.0"
+        },
+        "EBehaviorState::Investigate": {
+          "ObjectName": "BehaviorTree InvestigateBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/Awareness/InvestigateBehaviorTree.0"
+        },
+        "EBehaviorState::Patrol": {
+          "ObjectName": "BehaviorTree PatrolBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/PatrolBehaviorTree.0"
+        },
+        "EBehaviorState::Wander": {
+          "ObjectName": "BehaviorTree WanderBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/WanderBehaviorTree.0"
+        },
+        "EBehaviorState::CompanionFollow": {
+          "ObjectName": "BehaviorTree CompanionFollowTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/CompanionFollowTree.0"
+        },
+        "EBehaviorState::Conversation": {
+          "ObjectName": "BehaviorTree ConversationTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+        },
+        "EBehaviorState::EBehaviorState_MAX": {
+          "ObjectName": "BehaviorTree ConversationTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+        },
+        "EBehaviorState::Flee": {
+          "ObjectName": "BehaviorTree FleeBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FleeBehaviorTree.0"
+        },
+        "EBehaviorState::Furniture": {
+          "ObjectName": "BehaviorTree FurnitureBehavior",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/FurnitureBehavior.0"
+        },
+        "EBehaviorState::Jump": {
+          "ObjectName": "BehaviorTree JumpBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/JumpBehaviorTree.0"
+        },
+        "EBehaviorState::CompanionCommandMoveTo": {
+          "ObjectName": "BehaviorTree CompanionCommandMoveTo",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandMoveTo.0"
+        },
+        "EBehaviorState::CompanionCommandSuppress": {
+          "ObjectName": "BehaviorTree CompanionCommandSuppress",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandSuppress.0"
+        },
+        "EBehaviorState::CompanionCommandHunkerDown": {
+          "ObjectName": "BehaviorTree CompanionCommandHunkerDown",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandHunkerDown.0"
+        },
+        "EBehaviorState::Deactivated": {
+          "ObjectName": "BehaviorTree DeactivatedBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/DeactivatedBehaviorTree.0"
+        },
+        "EBehaviorState::Activated": {
+          "ObjectName": "BehaviorTree ActivatedBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/ActivatedBehaviorTree.0"
+        },
+        "EBehaviorState::CompanionCommandFlank": {
+          "ObjectName": "BehaviorTree CompanionCommandFlank",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandFlank.0"
+        },
+        "EBehaviorState::Approach": {
+          "ObjectName": "BehaviorTree ApproachBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ApproachBehaviorTree.0"
+        },
+        "EBehaviorState::CalledShot": {
+          "ObjectName": "BehaviorTree CompanionCommandCalledShot",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CompanionCommandCalledShot.0"
+        },
+        "EBehaviorState::Persuade": {
+          "ObjectName": "BehaviorTree PersuadeTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/PersuadeTree.0"
+        },
+        "EBehaviorState::Teleport": {
+          "ObjectName": "BehaviorTree TeleportBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/TeleportBehaviorTree.0"
+        },
+        "EBehaviorState::SpawnActor": {
+          "ObjectName": "BehaviorTree SpawnActorBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/SpawnActorBehaviorTree.0"
+        },
+        "EBehaviorState::Cower": {
+          "ObjectName": "BehaviorTree CowerBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+        },
+        "EBehaviorState::Follow": {
+          "ObjectName": "BehaviorTree FollowBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/FollowBehaviorTree.0"
+        },
+        "EBehaviorState::SpellTarget": {
+          "ObjectName": "BehaviorTree SpellTargetBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/SpellTargetBehaviorTree.0"
+        },
+        "EBehaviorState::Retreat": {
+          "ObjectName": "BehaviorTree RetreatBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/RetreatBehaviorTree.0"
+        },
+        "EBehaviorState::Animation": {
+          "ObjectName": "BehaviorTree AnimationBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/AnimationBehaviorTree.0"
+        },
+        "EBehaviorState::MoveTo": {
+          "ObjectName": "BehaviorTree MoveToBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/MoveToBehaviorTree.0"
+        },
+        "EBehaviorState::Crouch": {
+          "ObjectName": "BehaviorTree CrouchBehaviorTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CrouchBehaviorTree.0"
+        },
+        "EBehaviorState::QuickCover": {
+          "ObjectName": "BehaviorTree QuickCoverTree",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/InCombat/QuickCoverTree.0"
+        },
+        "EBehaviorState::OnRails": {
+          "ObjectName": "BehaviorTree OnRailsCombatBehaviorTree",
+          "ObjectPath": "Indiana/Content/XFH_Content/XFH_Blueprints/AI/Settings/OnRails/OnRailsCombatBehaviorTree.0"
+        },
+        "EBehaviorState::Walk": {
+          "ObjectName": "BehaviorTree XFH_WalkBehaviorTree",
+          "ObjectPath": "Indiana/Content/XFH_Content/XFH_Blueprints/AI/BehaviorTrees/XFH_WalkBehaviorTree.0"
+        },
+        "EBehaviorState::HealGun": {
+          "ObjectName": "BehaviorTree XFH_HealGunBehaviorTree",
+          "ObjectPath": "Indiana/Content/XFH_Content/XFH_Blueprints/AI/BehaviorTrees/XFH_HealGunBehaviorTree.0"
+        }
+      },
+      "DefaultDecisionTreeData": {
+        "ObjectName": "DecisionTreeDesignerDataBundle DefaultDecisionTreeDataBundle",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/DecisionTree/DesignerData/DefaultDecisionTreeDataBundle.0"
+      },
+      "DefaultCompanionDecisionTreeData": {
+        "ObjectName": "DecisionTreeDesignerDataBundle CompanionDecisionTreeDataBundle",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/DecisionTree/DesignerData/CompanionDecisionTreeDataBundle.0"
+      },
+      "DefaultPacifistDecisionTreeData": {
+        "ObjectName": "DecisionTreeDesignerDataBundle PacifistDecisionTreeDataBundle",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/DecisionTree/DesignerData/PacifistDecisionTreeDataBundle.0"
+      },
+      "AIEventTypes": [
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Block.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionFollow.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Conversation.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cover.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cover.InvalidCover"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cover.LineOfFireBlocked"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cover.TargetLost"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cover.UnsafeCover"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Death.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Disable.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Dodge.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Flee.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Furniture.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Investigate.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Jump.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Invalid"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Kited"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Recovery"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.TargetLost"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Unreachable"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Melee.Wait"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Patrol.RunAction"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Range.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Range.LineOfFireBlocked"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Range.TargetLost"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Search.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Suspicious.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.SwitchContext.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.SwitchTarget.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.SwitchWeapon.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Tether.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnAlertStateChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnCombatStateChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnDeath"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnDefaultBehaviorChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnEnterConversation"
+          },
+          "EventType": "EAIEventType::ExternalContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnTraverse"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnMeleeAttacked"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnReactiveRangeAction"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnScriptedBehaviorCall"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnStatusEffectAdded"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnTether"
+          },
+          "EventType": "EAIEventType::ExternalContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.MoveTo"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.Return"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.ForceCompanionFollow"
+          },
+          "EventType": "EAIEventType::ExternalContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Interest.UseInterestObject"
+          },
+          "EventType": "EAIEventType::ExternalContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Targeting.NewTarget"
+          },
+          "EventType": "EAIEventType::ExternalContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.Attack"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.Suppress"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionCommandSuppress.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Deactivated.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnAlarmStateChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.Flank"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionCommandFlank.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Approach.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.CalledShot"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CalledShot.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnDisarm.Begin"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnDisarm.End"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Range.TargetOutsideRange"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Companion.Command.HunkerDown"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionCommandHunkerDown.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionCommandMoveTo.EnterCombatMode"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.CompanionCommandMoveTo.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Teleport.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cower.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Generic.1"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Generic.2"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Generic.3"
+          },
+          "EventType": "EAIEventType::BehaviorDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnPlayerProximity"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Patrol.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.SpellTarget.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnBehaviorPhaseChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnTetherCancel"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Cower.OnPlayerProximity"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Search.TargetLost"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Search.Unreachable"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.RepositionSearch.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Retreat.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Animation.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.MoveTo.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Crouch.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.SpawnActor.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.QuickCover.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.Character.OnWeaponPreferenceChange"
+          },
+          "EventType": "EAIEventType::ExternalDiscrete"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.OnRails.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.Walk.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        },
+        {
+          "Event": {
+            "TagName": "AIEvent.BehaviorTree.HealGun.Complete"
+          },
+          "EventType": "EAIEventType::BehaviorContinuous"
+        }
+      ],
+      "AIEventTypeMap": {
+        "AIEvent.BehaviorTree.Block.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.CompanionFollow.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Conversation.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Cover.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Cover.InvalidCover": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.BehaviorTree.Cover.LineOfFireBlocked": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Cover.TargetLost": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Cover.UnsafeCover": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Death.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Disable.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Dodge.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Flee.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Furniture.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Investigate.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Jump.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Invalid": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Kited": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Recovery": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.BehaviorTree.Melee.TargetLost": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Unreachable": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Melee.Wait": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Patrol.RunAction": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.BehaviorTree.Range.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Range.LineOfFireBlocked": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Range.TargetLost": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Search.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Suspicious.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.SwitchContext.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.SwitchTarget.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.SwitchWeapon.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Tether.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Character.OnAlertStateChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnCombatStateChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnDeath": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnDefaultBehaviorChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnEnterConversation": "EAIEventType::ExternalContinuous",
+        "AIEvent.Character.OnTraverse": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnMeleeAttacked": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnReactiveRangeAction": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnScriptedBehaviorCall": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnStatusEffectAdded": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnTether": "EAIEventType::ExternalContinuous",
+        "AIEvent.Companion.Command.MoveTo": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Companion.Command.Return": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Companion.ForceCompanionFollow": "EAIEventType::ExternalContinuous",
+        "AIEvent.Interest.UseInterestObject": "EAIEventType::ExternalContinuous",
+        "AIEvent.Targeting.NewTarget": "EAIEventType::ExternalContinuous",
+        "AIEvent.Companion.Command.Attack": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Companion.Command.Suppress": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.CompanionCommandSuppress.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Deactivated.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Character.OnAlarmStateChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Companion.Command.Flank": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.CompanionCommandFlank.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Approach.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Companion.Command.CalledShot": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.CalledShot.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Character.OnDisarm.Begin": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnDisarm.End": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.Range.TargetOutsideRange": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Companion.Command.HunkerDown": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.CompanionCommandHunkerDown.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.CompanionCommandMoveTo.EnterCombatMode": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.CompanionCommandMoveTo.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Teleport.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Cower.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Generic.1": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.Generic.2": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.Generic.3": "EAIEventType::BehaviorDiscrete",
+        "AIEvent.Character.OnPlayerProximity": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.Patrol.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.SpellTarget.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Character.OnBehaviorPhaseChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.Character.OnTetherCancel": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.Cower.OnPlayerProximity": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Search.TargetLost": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Search.Unreachable": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.RepositionSearch.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Retreat.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Animation.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.MoveTo.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Crouch.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.SpawnActor.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.QuickCover.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.Character.OnWeaponPreferenceChange": "EAIEventType::ExternalDiscrete",
+        "AIEvent.BehaviorTree.OnRails.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.Walk.Complete": "EAIEventType::BehaviorContinuous",
+        "AIEvent.BehaviorTree.HealGun.Complete": "EAIEventType::BehaviorContinuous"
+      },
+      "BackupWeaponAISettings": {
+        "ObjectName": "AISettings_Weapon BackupWeaponAISettings",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponDefault/BackupWeaponAISettings.0"
+      },
+      "DefaultWeaponAISettings": [
+        {
+          "WeaponType": {
+            "TagName": "WeaponCategory.Melee"
+          },
+          "WeaponSettings": {
+            "ObjectName": "AISettings_Weapon DefaultMeleeAISettings",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponDefault/DefaultMeleeAISettings.0"
+          }
+        },
+        {
+          "WeaponType": {
+            "TagName": "WeaponCategory.Ranged"
+          },
+          "WeaponSettings": {
+            "ObjectName": "AISettings_Weapon DefaultRangedAISettings",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponDefault/DefaultRangedAISettings.0"
+          }
+        }
+      ],
+      "DefaultWeaponAISettingsMap": {
+        "WeaponCategory.Melee": {
+          "ObjectName": "AISettings_Weapon DefaultMeleeAISettings",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponDefault/DefaultMeleeAISettings.0"
+        },
+        "WeaponCategory.Ranged": {
+          "ObjectName": "AISettings_Weapon DefaultRangedAISettings",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponDefault/DefaultRangedAISettings.0"
+        }
+      },
+      "ElongatedCharacterLostTimePadding": 0.5,
+      "LostTargetTimesMap": {
+        "ELostTargetWaitTime::VeryShort": {
+          "RangedInitiallyUnseenTime": 1.5,
+          "RangedInitiallySeenTime": 1.0,
+          "CoverInitiallyUnseenTime": 1.5,
+          "CoverInitiallySeenTime": 1.0
+        },
+        "ELostTargetWaitTime::Short": {
+          "RangedInitiallyUnseenTime": 1.5,
+          "RangedInitiallySeenTime": 3.0,
+          "CoverInitiallyUnseenTime": 1.5,
+          "CoverInitiallySeenTime": 3.0
+        },
+        "ELostTargetWaitTime::Medium": {
+          "RangedInitiallyUnseenTime": 2.5,
+          "RangedInitiallySeenTime": 5.0,
+          "CoverInitiallyUnseenTime": 2.5,
+          "CoverInitiallySeenTime": 5.0
+        },
+        "ELostTargetWaitTime::Long": {
+          "RangedInitiallyUnseenTime": 4.0,
+          "RangedInitiallySeenTime": 7.0,
+          "CoverInitiallyUnseenTime": 4.0,
+          "CoverInitiallySeenTime": 7.0
+        }
+      },
+      "SuppressingFireTimesMap": {
+        "ESuppressingFireDuration::Disabled": 0.0,
+        "ESuppressingFireDuration::Short": 2.0,
+        "ESuppressingFireDuration::Medium": 4.0,
+        "ESuppressingFireDuration::Long": 6.0
+      },
+      "PositioningProbabilities": {
+        "TooNear": {
+          "BackwardWeight": 0.5,
+          "ForwardWeight": 0.0
+        },
+        "PreferredRange": {
+          "StationaryWeight": 0.8,
+          "BackwardWeight": 0.05,
+          "ForwardWeight": 0.05,
+          "StrafeWeight": 0.1
+        },
+        "TooFar": {
+          "StationaryWeight": 0.3,
+          "BackwardWeight": 0.0,
+          "ForwardWeight": 0.5,
+          "StrafeWeight": 0.2
+        }
+      },
+      "WeaponSwitchCooldown": 6.0,
+      "MeleeKiteTime": 8.0,
+      "UnreachableTargetTime": 2.5,
+      "UnreachableTargetOptimizationTime": 0.5,
+      "FindMeleeSlotRequest": {
+        "ObjectName": "EQSRequest_IndianaBase FindMeleeSlot",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/FindMeleeSlot.0"
+      },
+      "FindMeleeWaitRequest": {
+        "ObjectName": "EQSRequest_IndianaBase FindMeleeWait",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/FindMeleeWait.0"
+      },
+      "DisablePriorities": [
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.HitReaction.Light"
+          },
+          "Priority": "EDisablePriority::LightHitReact"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.HitReaction.Heavy"
+          },
+          "Priority": "EDisablePriority::HeavyHitReact"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Blind"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Blur"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Intimidate"
+          },
+          "Priority": "EDisablePriority::DelayableCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Lame"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Knockback"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Stun"
+          },
+          "Priority": "EDisablePriority::DelayableCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Bleed"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Concussion"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Execute"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Maim"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Lie"
+          },
+          "Priority": "EDisablePriority::DelayableCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Persuade"
+          },
+          "Priority": "EDisablePriority::DelayableCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.DialogSkillSecondary"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Disarm"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.Groin"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.Optional.Cower"
+          },
+          "Priority": "EDisablePriority::DelayableCombatEffect"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.Optional.ShockFaceTarget"
+          },
+          "Priority": "EDisablePriority::ShockFace"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.Optional.ShockFaceAOE"
+          },
+          "Priority": "EDisablePriority::ShockFace"
+        },
+        {
+          "DisableType": {
+            "TagName": "Animation.Disable.CombatEffect.OnFire"
+          },
+          "Priority": "EDisablePriority::ImmediateCombatEffect"
+        }
+      ],
+      "CowerDisableType": {
+        "TagName": "Animation.Disable.Optional.Cower"
+      },
+      "ShockSpell_CompanionCalledShotAOE": {
+        "ObjectName": "BlueprintGeneratedClass Spell_Calledshot_ShockAOE_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Calledshot_ShockAOE.0"
+      },
+      "ShockSpell_CompanionCalledShotTarget": {
+        "ObjectName": "BlueprintGeneratedClass Spell_Calledshot_ShockTarget_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Calledshot_ShockTarget.0"
+      },
+      "ShockSpell_KillCamAOE": {
+        "ObjectName": "BlueprintGeneratedClass Spell_Calledshot_ShockAOE_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Calledshot_ShockAOE.0"
+      },
+      "DisablePriorityMap": {
+        "Animation.Disable.HitReaction.Light": "EDisablePriority::LightHitReact",
+        "Animation.Disable.HitReaction.Heavy": "EDisablePriority::HeavyHitReact",
+        "Animation.Disable.CombatEffect.Blind": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Blur": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Intimidate": "EDisablePriority::DelayableCombatEffect",
+        "Animation.Disable.CombatEffect.Lame": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Knockback": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Stun": "EDisablePriority::DelayableCombatEffect",
+        "Animation.Disable.CombatEffect.Bleed": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Concussion": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Execute": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Maim": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Lie": "EDisablePriority::DelayableCombatEffect",
+        "Animation.Disable.CombatEffect.Persuade": "EDisablePriority::DelayableCombatEffect",
+        "Animation.Disable.CombatEffect.DialogSkillSecondary": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Disarm": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.CombatEffect.Groin": "EDisablePriority::ImmediateCombatEffect",
+        "Animation.Disable.Optional.Cower": "EDisablePriority::DelayableCombatEffect",
+        "Animation.Disable.Optional.ShockFaceTarget": "EDisablePriority::ShockFace",
+        "Animation.Disable.Optional.ShockFaceAOE": "EDisablePriority::ShockFace",
+        "Animation.Disable.CombatEffect.OnFire": "EDisablePriority::ImmediateCombatEffect"
+      },
+      "CompanionResurrectDelay": 3.0,
+      "CompanionDefaultBehavior": {
+        "ObjectName": "AISettings_FollowPlayer GlobalAISettings:AISettings_FollowPlayer_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/GlobalAISettings.0"
+      },
+      "CanOpenDoorsStealthDelay": 3.0,
+      "EnterStealthMinDelay": 1.0,
+      "EnterStealthMaxDelay": 2.0,
+      "ExitStealthMinDelay": 2.0,
+      "ExitStealthMaxDelay": 3.0,
+      "CompanionCommandMoveToSettings": {
+        "WalkDistanceThreshold": 700.0
+      },
+      "CompanionCommandFlankSettings": {
+        "Duration": 8.0,
+        "LostTargetTime": 8.0
+      },
+      "CompanionCommandHunkerDownSettings": {
+        "Duration": 15.0,
+        "LostTargetTime": 15.0
+      },
+      "MaxWalkSpeed": 220.0,
+      "MaxRunSpeed": 1000.0,
+      "CatchUpTimeForCurrentMaxSpeed": 0.8,
+      "MaxRunSpeedTransitionDistance": 300.0,
+      "MaxWalkSpeedTransitionDistance": 1500.0,
+      "MinMovingShuffleDistance": 60.0,
+      "StuckTime": 0.5,
+      "HearingNavigationFilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Hearing_C",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Hearing.0"
+      },
+      "PlayerCompanionNavigationFilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_Pathing_C",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_Pathing.0"
+      },
+      "PlayerCompanionEQSNavigationFilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_EQS_C",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_EQS.0"
+      },
+      "BumpSettings": {
+        "BumperBlockedTime": 4.0
+      },
+      "MinDelayDodge": 0.2,
+      "MaxDelayDodge": 1.5,
+      "MinDelayMeleeBlock": 0.75,
+      "MaxDelayMeleeBlock": 1.0,
+      "NPCAccuracySpeed": 5.0,
+      "TargetSwitchThreatCooldown": 5.0,
+      "TargetSwitchThreatScalar": 1.1,
+      "PlayerThreatDecayTime": 7.0,
+      "ThreatDecayTime": 20.0,
+      "PlayerThreatScalar": 0.3,
+      "CloseQuarterThreatRange": 500.0,
+      "DefaultBehaviorType": {
+        "TagName": "Interest.DefaultBehavior"
+      },
+      "ExteriorTetherRadius": 9000.0,
+      "InteriorShoutRadius": 1400.0,
+      "InteriorProxyShoutRadius": 1000.0,
+      "ExteriorProxyShoutRadius": 1000.0,
+      "TrespassInterrogationPlayerRelationshipClearTime": 7.0,
+      "FriendlyFireDamagePercentHostilityThreshold": 0.35,
+      "FriendlyFireAttackCountHostilityThreshold": 5,
+      "BlindSpreadCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": -0.0015759245,
+              "Value": 0.9907427,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            },
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.9378131,
+              "Value": 1.012684,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            },
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 1.0043911,
+              "Value": 0.010696411,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            }
+          ]
+        }
+      },
+      "PassiveSpellSet": {
+        "SpellTypes": [
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_CalledShot_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_CalledShot.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_Tether_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_Tether.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_Jump_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_Jump.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_Resurrect_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_Resurrect.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_ElevatorMove_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ElevatorMove.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_Teleport_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_Teleport.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_PostCombatReload_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_PostCombatReload.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_GetUp_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GetUp.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_AI_ConversationInvulnerability_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ConversationInvulnerability.0"
+          }
+        ]
+      },
+      "CompanionPassiveSpellSet": {
+        "SpellTypes": [
+          {
+            "ObjectName": "BlueprintGeneratedClass Spell_Companion_PassiveReceivedHostileEffectDuration_C",
+            "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Companion_PassiveReceivedHostileEffectDuration.0"
+          }
+        ]
+      },
+      "PostCombatUnequipDelayTimeMin": 4.5,
+      "DefaultIdleSettings": {
+        "ObjectName": "AISettings_Idle GlobalAISettings:AISettings_Idle_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/GlobalAISettings.1"
+      },
+      "DefaultWanderSettings": {
+        "ObjectName": "AISettings_Wander GlobalAISettings:AISettings_Wander_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/GlobalAISettings.2"
+      },
+      "PatrolWaitForOrientAction": {
+        "ObjectName": "WaitAction GlobalAISettings:WaitAction_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/GlobalAISettings.4"
+      },
+      "MoraleContributionMap": {
+        "EMoraleContribution::High": 0.1,
+        "EMoraleContribution::Medium": 0.05,
+        "EMoraleContribution::Low": 0.01
+      },
+      "ThirdPersonSockets": {
+        "EThirdPersonSocket::Head": "Head",
+        "EThirdPersonSocket::Chest": "Chest",
+        "EThirdPersonSocket::RightArm": "Socket_CalledShot_RightArm",
+        "EThirdPersonSocket::LeftArm": "Socket_CalledShot_LeftArm",
+        "EThirdPersonSocket::RightLeg": "Socket_CalledShot_RightLeg",
+        "EThirdPersonSocket::LeftLeg": "Socket_CalledShot_LeftLeg",
+        "EThirdPersonSocket::Groin": "CalledShot_Groin"
+      },
+      "ThreatenedCowerTime": 30.0,
+      "MaxFleeDistance": 2000.0,
+      "MaxSquadMemberDistance": 2000.0,
+      "ChatterAllyDeathDistance": 2000.0,
+      "ChatterFallLandedDistance": 275.0,
+      "SquadChatterCreatureTypes": [
+        "CreatureType.Humanoid"
+      ],
+      "CompanionCommandToChatter": {
+        "ECompanionCommand::MoveTo": "EChatterEventType::COM_CommandMove",
+        "ECompanionCommand::Return": "EChatterEventType::COM_CommandReturn",
+        "ECompanionCommand::Attack": "EChatterEventType::COM_CommandAttack"
+      },
+      "ChatterDelayTimes": {
+        "EChatterEventType::COM_Idle": {
+          "Min": 15.0,
+          "Max": 30.0
+        },
+        "EChatterEventType::NPC_CombatSearchIdle": {
+          "Min": 5.0,
+          "Max": 10.0
+        },
+        "EChatterEventType::NPC_MeleeWaiting": {
+          "Min": 5.0,
+          "Max": 10.0
+        },
+        "EChatterEventType::COM_WantsToTalk": {
+          "Min": 5.0,
+          "Max": 10.0
+        }
+      },
+      "ChatterCompanionAttackWarningCreatureXPLevelDiffs": {
+        "ECreatureXPType::Fodder": 2,
+        "ECreatureXPType::Normal": 1,
+        "ECreatureXPType::Leader": -2,
+        "ECreatureXPType::Boss": -100
+      },
+      "ChatterCreatureDeathTypeRestrictions": null,
+      "ChatterEventCharacterGroupingRestrictions": {
+        "EChatterEventType::NPC_AlertAllyDeath": {
+          "Values": [
+            "ECharacterGrouping::TownieByzantium",
+            "ECharacterGrouping::TownieHoodlum",
+            "ECharacterGrouping::TownieLight",
+            "ECharacterGrouping::TownieNonByzantium"
+          ]
+        }
+      },
+      "ChatterMeleeActions": [
+        "EMeleeAction::AttackRightToLeft",
+        "EMeleeAction::AttackLeftToRight",
+        "EMeleeAction::PowerAttack",
+        "EMeleeAction::SweepAttack",
+        "EMeleeAction::CounterAttack",
+        "EMeleeAction::NoStaminaAttack",
+        "EMeleeAction::CalledShotAttack",
+        "EMeleeAction::SpecialAttack1",
+        "EMeleeAction::SpecialAttack2",
+        "EMeleeAction::SpecialAttack3",
+        "EMeleeAction::SpecialAttack4",
+        "EMeleeAction::CalledShot"
+      ],
+      "ChatterEventsAllowedAfterPlayerDeath": [
+        "EChatterEventType::ALL_Death",
+        "EChatterEventType::COM_PlayerDeath",
+        "EChatterEventType::NPC_CombatEndVictory"
+      ],
+      "ChatterPlayerDeathCreatureTypes": [
+        "CreatureType.Humanoid",
+        "CreatureType.Robot"
+      ],
+      "InvestigationSettings": {
+        "DeadBodyWanderSearchSettings": {
+          "Radius": 2000.0,
+          "MaxMoveDistance": 800.0,
+          "MinIdleTime": 2.0,
+          "MaxIdleTime": 3.0
+        }
+      },
+      "PseudoGodModeMinHealthPercentageMap": {
+        "EPseudoGodMode::NonPlayer_LowMinHealth": {
+          "MinimumHealthPercentage": 0.2
+        },
+        "EPseudoGodMode::NonPlayer_MediumMinHealth": {
+          "MinimumHealthPercentage": 0.5
+        },
+        "EPseudoGodMode::NonPlayer_HighMinHealth": {
+          "MinimumHealthPercentage": 0.8
+        }
+      },
+      "Disguises": [
+        {
+          "ObjectName": "DisguiseData DIS_Board",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Board.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_Cleo",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Cleo.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_CnPFactory",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_CnPFactory.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_Fairfield",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Fairfield.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_Hope",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Hope.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_LabyrinthStationWorker",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_LabyrinthStationWorker.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_Mardet",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Mardet.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_MSec",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_MSec.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_Sublight",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_Sublight.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_SyndicateBountyHunter",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_SyndicateBountyHunter.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_TartarusGuard",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_TartarusGuard.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_TartarusPrisoner",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_TartarusPrisoner.0"
+        },
+        {
+          "ObjectName": "DisguiseData DIS_TnLDefenseContractor",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/Consumable/Disguise/HumanDisguise/DIS_TnLDefenseContractor.0"
+        }
+      ],
+      "EmployeeBenefitsRezStatusEffectName": {
+        "StringID": 4448
+      }
+    }
+  },
+  {
+    "Type": "WaitAction",
+    "Name": "WaitAction_0",
+    "Outer": "GlobalAISettings",
+    "Properties": {
+      "WaitTime": 3.0
+    }
+  }
+]

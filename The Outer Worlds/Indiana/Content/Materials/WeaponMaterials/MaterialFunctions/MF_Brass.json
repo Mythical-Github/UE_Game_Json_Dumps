@@ -1,0 +1,167 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_3",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_NormalStrength",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_NormalStrength.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_4",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_UnpackNormal",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_UnpackNormal.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_5",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "DefaultValue": 0.5,
+      "ParameterName": "Brass_Aged_Nrm_Control",
+      "ExpressionGUID": "A9D0F16E-4C993342-53DCB3BF-221DB892",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_9",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "DefaultValue": 5.0,
+      "ParameterName": "Brass_Scale",
+      "ExpressionGUID": "D7FD962C-452C1EF3-EC689D8E-A37A05C2",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticSwitchParameter",
+    "Name": "MaterialExpressionStaticSwitchParameter_4",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "A": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_13"
+      },
+      "B": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_14"
+      },
+      "ParameterName": "2:1_Control",
+      "ExpressionGUID": "66853049-4C881892-17CDCC96-3BCF5E47",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_5",
+    "Outer": "MF_Brass",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionStaticSwitchParameter_4"
+      },
+      "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+      "Texture": {
+        "ObjectName": "Texture2D T_BaseMetal_N",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/Textures/T_BaseMetal_N.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_Brass",
+        "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.6"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_Brass",
+    "Properties": {
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter MF_Brass:MaterialExpressionScalarParameter_9",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.3"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter MF_Brass:MaterialExpressionScalarParameter_5",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample MF_Brass:MaterialExpressionTextureSample_5",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.5"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionStaticSwitchParameter MF_Brass:MaterialExpressionStaticSwitchParameter_4",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_Brass:MaterialExpressionMaterialFunctionCall_3",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_Brass:MaterialExpressionMaterialFunctionCall_4",
+          "ObjectPath": "Indiana/Content/Materials/WeaponMaterials/MaterialFunctions/MF_Brass.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "StateId": "DD25A43A-490F9928-30334481-C47D1E9A"
+    }
+  }
+]

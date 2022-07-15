@@ -1,0 +1,99 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "CompanionCommandCalledShotFromFurnitureQuery",
+    "Properties": {
+      "QueryName": "CompanionCommandCalledShotEndFurnitureQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption CompanionCommandCalledShotFromFurnitureQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotFromFurnitureQuery.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "CompanionCommandCalledShotFromFurnitureQuery",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 200.0
+      },
+      "GenerateAround": {
+        "ObjectName": "Class EQSContext_CalledShotEndFurnitureLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "ProjectDown": 100.0,
+        "ProjectUp": 100.0,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "CompanionCommandCalledShotFromFurnitureQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid CompanionCommandCalledShotFromFurnitureQuery:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotFromFurnitureQuery.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap CompanionCommandCalledShotFromFurnitureQuery:EnvQueryTest_Overlap_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotFromFurnitureQuery.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance CompanionCommandCalledShotFromFurnitureQuery:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandCalledShotFromFurnitureQuery.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "CompanionCommandCalledShotFromFurnitureQuery",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "Class EQSContext_CalledShotEndFurnitureLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "CompanionCommandCalledShotFromFurnitureQuery",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 30.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 100.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere",
+        "bIgnoreQuerier": true
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

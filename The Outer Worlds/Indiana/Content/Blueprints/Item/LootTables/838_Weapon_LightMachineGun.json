@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_0",
+    "Outer": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_LightMachineGun_Weapon_T2_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/Variants/SC_LightMachineGun_Weapon_T2.0"
+          }
+        }
+      },
+      "MinLevel": 18,
+      "MaxLevel": 25
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_1",
+    "Outer": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_LightMachineGun_Weapon_T1_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/Variants/SC_LightMachineGun_Weapon_T1.0"
+          }
+        }
+      },
+      "MinLevel": 3,
+      "MaxLevel": 10
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_2",
+    "Outer": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_LightMachineGun_Weapon_T3_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/Variants/SC_LightMachineGun_Weapon_T3.0"
+          }
+        }
+      },
+      "MinLevel": 31,
+      "bInvertConditional": false,
+      "Conditional": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::DLCInstalled",
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::Or",
+              "ConditionalType": "EConditionalType::DLCInstalled",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX2",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_0",
+    "Outer": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 11,
+      "MaxLevel": 17,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_1",
+    "Outer": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 26,
+      "MaxLevel": 30,
+      "Count": 2,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootTableData",
+    "Name": "838_Weapon_LightMachineGun",
+    "Properties": {
+      "bUseAll": false,
+      "LootRows": [
+        {
+          "ObjectName": "LootRowItem 838_Weapon_LightMachineGun:LootRowItem_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/838_Weapon_LightMachineGun.1"
+        },
+        {
+          "ObjectName": "LootRowTable 838_Weapon_LightMachineGun:LootRowTable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/838_Weapon_LightMachineGun.3"
+        },
+        {
+          "ObjectName": "LootRowItem 838_Weapon_LightMachineGun:LootRowItem_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/838_Weapon_LightMachineGun.0"
+        },
+        {
+          "ObjectName": "LootRowTable 838_Weapon_LightMachineGun:LootRowTable_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/838_Weapon_LightMachineGun.4"
+        },
+        {
+          "ObjectName": "LootRowItem 838_Weapon_LightMachineGun:LootRowItem_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/838_Weapon_LightMachineGun.2"
+        }
+      ]
+    }
+  }
+]

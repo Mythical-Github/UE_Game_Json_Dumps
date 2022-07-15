@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "Material",
+    "Name": "CompassTrack_Mat",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample_5",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "MaterialDomain": "MD_UI",
+      "BlendMode": "BLEND_Translucent",
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSample CompassTrack_Mat:MaterialExpressionTextureSample_5",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.4"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall CompassTrack_Mat:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.1"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter CompassTrack_Mat:MaterialExpressionScalarParameter_6",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.2"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureObjectParameter CompassTrack_Mat:MaterialExpressionTextureObjectParameter_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.3"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
+          "Function": {
+            "ObjectName": "MaterialFunction MakeFloat2",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "0124C4F1-491F64C8-EE92C6A0-C011C850",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "CompassTrack_Mat",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MakeFloat2",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+      },
+      "Material": {
+        "ObjectName": "Material CompassTrack_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_6",
+    "Outer": "CompassTrack_Mat",
+    "Properties": {
+      "DefaultValue": 0.11,
+      "ParameterName": "Panning",
+      "ExpressionGUID": "4BCB55E9-4D102C63-E8355993-794DB9AB",
+      "Material": {
+        "ObjectName": "Material CompassTrack_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureObjectParameter",
+    "Name": "MaterialExpressionTextureObjectParameter_2",
+    "Outer": "CompassTrack_Mat",
+    "Properties": {
+      "ParameterName": "Texture",
+      "ExpressionGUID": "7A0D8F45-4E7914E3-F01DEB93-7F213CCB",
+      "Texture": {
+        "ObjectName": "Texture2D T_Compass_NSEW",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_NSEW.0"
+      },
+      "Material": {
+        "ObjectName": "Material CompassTrack_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_5",
+    "Outer": "CompassTrack_Mat",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_0"
+      },
+      "TextureObject": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureObjectParameter_2"
+      },
+      "Material": {
+        "ObjectName": "Material CompassTrack_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+      }
+    }
+  }
+]

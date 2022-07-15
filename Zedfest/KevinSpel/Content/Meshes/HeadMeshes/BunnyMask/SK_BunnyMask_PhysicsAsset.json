@@ -1,0 +1,642 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_3",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.10"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_4",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.11"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_5",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.12"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BunnyMask_PhysicsAsset:SkeletalBodySetup_6",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.13"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_2",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_3",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_4",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BunnyMask_PhysicsAsset:PhysicsConstraintTemplate_5",
+          "ObjectPath": "KevinSpel/Content/Meshes/HeadMeshes/BunnyMask/SK_BunnyMask_PhysicsAsset.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "L_1",
+        "ConstraintBone1": "L_1",
+        "ConstraintBone2": "BunnyMask_Root",
+        "Pos2": {
+          "X": 4.3270516,
+          "Y": 7.2600727,
+          "Z": 10.588509
+        },
+        "PriAxis2": {
+          "X": 0.13511324,
+          "Y": 0.0,
+          "Z": 0.9908302
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.1,
+            "Swing2LimitDegrees": 0.1,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.1,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "L_2",
+        "ConstraintBone1": "L_2",
+        "ConstraintBone2": "L_1",
+        "Pos2": {
+          "X": 5.47869,
+          "Y": 0.0,
+          "Z": -4.7683716E-07
+        },
+        "PriAxis2": {
+          "X": 0.98972356,
+          "Y": 0.0,
+          "Z": -0.14299391
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.1,
+            "Swing2LimitDegrees": 0.1,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.1,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "L_3",
+        "ConstraintBone1": "L_3",
+        "ConstraintBone2": "L_2",
+        "Pos2": {
+          "X": 7.91412,
+          "Y": 0.0,
+          "Z": 9.536743E-07
+        },
+        "PriAxis2": {
+          "X": 0.27540743,
+          "Y": 0.0,
+          "Z": -0.9613276
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.2,
+            "Swing2LimitDegrees": 0.2,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.2,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "R_1",
+        "ConstraintBone1": "R_1",
+        "ConstraintBone2": "BunnyMask_Root",
+        "Pos2": {
+          "X": -4.32705,
+          "Y": 7.2600727,
+          "Z": 10.588501
+        },
+        "PriAxis2": {
+          "X": 0.13511324,
+          "Y": 6.617445E-24,
+          "Z": -0.9908302
+        },
+        "SecAxis2": {
+          "X": 1.213417E-16,
+          "Y": -1.0,
+          "Z": 1.6546597E-17
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.1,
+            "Swing2LimitDegrees": 0.1,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.1,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "R_2",
+        "ConstraintBone1": "R_2",
+        "ConstraintBone2": "R_1",
+        "Pos2": {
+          "X": -5.478737,
+          "Y": -2.646978E-23,
+          "Z": 0.0
+        },
+        "PriAxis2": {
+          "X": 0.98972356,
+          "Y": 1.3200844E-23,
+          "Z": -0.14299391
+        },
+        "SecAxis2": {
+          "X": -1.3200844E-23,
+          "Y": 1.0,
+          "Z": 9.486948E-25
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.1,
+            "Swing2LimitDegrees": 0.1,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.1,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_5",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "R_3",
+        "ConstraintBone1": "R_3",
+        "ConstraintBone2": "R_2",
+        "Pos2": {
+          "X": -7.91406,
+          "Y": -1.3858989E-16,
+          "Z": 9.536743E-06
+        },
+        "PriAxis2": {
+          "X": 0.27540743,
+          "Y": -1.3211126E-24,
+          "Z": -0.9613276
+        },
+        "SecAxis2": {
+          "X": 1.3211126E-24,
+          "Y": 1.0,
+          "Z": -9.957774E-25
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 0.2,
+            "Swing2LimitDegrees": 0.2,
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 0.2,
+            "TwistMotion": "ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 350.0,
+              "bEnablePositionDrive": true,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 350.0
+            },
+            "AngularDriveMode": "EAngularDriveMode::TwistAndSwing"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.010101482,
+              "Y": -1.1581206,
+              "Z": -4.047678
+            },
+            "Rotation": {
+              "Pitch": 0.043658566,
+              "Yaw": -90.00244,
+              "Roll": -0.02236572
+            },
+            "Radius": 3.213601,
+            "Length": 3.22398,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "BunnyMask_Root",
+      "PhysicsType": "PhysType_Kinematic",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "906E5FDE41C1F2A90677DA9EAA93FBE8"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 2.4824686,
+              "Y": 7.1525574E-07,
+              "Z": 5.535335E-08
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99994,
+              "Roll": 90.25586
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "L_1",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "870262314AA0BB663E8D0AB2C99FA9E6"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 4.231802,
+              "Y": 1.4305115E-06,
+              "Z": 3.0357216E-07
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99995,
+              "Roll": 88.34836
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "L_2",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "D3487331494C81869E1CA7AB7826B6C5"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.152706,
+              "Y": 8.940697E-07,
+              "Z": 3.983424
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.999916,
+              "Roll": 16.139206
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "L_3",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "3B7C761E43C4C2A40BA72FBFB8D50161"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -2.2703786,
+              "Y": -4.7683716E-07,
+              "Z": -1.6528897E-08
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99994,
+              "Roll": 88.24729
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "R_1",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "EAD0A5CE4AADE857098ED8AC44660190"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -3.808493,
+              "Y": -2.1755695E-06,
+              "Z": -0.0017962641
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99992,
+              "Roll": 89.829384
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "R_2",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "88685BD846FCBCFCF3674E8A7005DD2D"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "SK_BunnyMask_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -1.1367558,
+              "Y": -1.0728836E-06,
+              "Z": -4.0760875
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.999916,
+              "Roll": 15.582985
+            },
+            "Radius": 0.755,
+            "Length": 2.255,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "R_3",
+      "PhysicsType": "PhysType_Simulated",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "DefaultInstance": {
+        "bOverrideMass": true,
+        "LinearDamping": 4.0,
+        "AngularDamping": 8.0
+      }
+    },
+    "BodySetupGuid": "53996EF84EB8F02802C98BA7A0CAB79A"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_BioSaw1_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup SK_BioSaw1_PhysicsAsset:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Meshes/SK_BioSaw1_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_BioSaw1_PhysicsAsset:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Meshes/SK_BioSaw1_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_BioSaw1_PhysicsAsset:PhysicsConstraintTemplate_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Meshes/SK_BioSaw1_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_BioSaw1_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Blade",
+        "ConstraintBone1": "Blade",
+        "ConstraintBone2": "Grip",
+        "Pos2": {
+          "X": 34.982613,
+          "Y": 0.0,
+          "Z": -14.368206
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_BioSaw1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 59.462395,
+              "Y": 0.56006813,
+              "Z": -13.533928
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -90.020226,
+              "Roll": -83.432205
+            },
+            "Radius": 23.720232,
+            "Length": 68.35834,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "Grip",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C29032DE45798B532011D18347256C00"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_BioSaw1_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 41.501762,
+              "Y": 1.335144E-05,
+              "Z": -0.70096207
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99999,
+              "Roll": -89.9606
+            },
+            "Radius": 0.505,
+            "Length": 0.505,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "Blade",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "17396AC04D417E4E8E7641A03D85FB39"
+  }
+]

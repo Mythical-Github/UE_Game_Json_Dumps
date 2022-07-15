@@ -1,0 +1,561 @@
+[
+  {
+    "Type": "GlobalMeleeData",
+    "Name": "GlobalMeleeData",
+    "Properties": {
+      "HoldDuration": 0.65,
+      "MeleeBlockRadians": 3.0,
+      "BlockMaterials": {
+        "ObjectName": "PhysicalMaterial PM_Block",
+        "ObjectPath": "Indiana/Content/Materials/PhysicalMaterials/PM_Block.0"
+      },
+      "MeleeActions": {
+        "EMeleeAction::Idle": {
+          "Action": "EMeleeAction::Idle",
+          "WeaponEvent": "EWeaponEvent::Invalid",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": true,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": true,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 0.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::None",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": [
+            "EMeleeAction::WindUpRight"
+          ]
+        },
+        "EMeleeAction::WindUpRight": {
+          "Action": "EMeleeAction::WindUpRight",
+          "WeaponEvent": "EWeaponEvent::MeleeWindUpRight",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Idle",
+              "ButtonPress": "EButtonPress::OnPress"
+            },
+            {
+              "PreviousAction": "EMeleeAction::AttackLeftToRight",
+              "ButtonPress": "EButtonPress::OnHold"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 0.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::WindUp",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::AttackRightToLeft",
+          "ChainActions": [
+            "EMeleeAction::WindUpPower",
+            "EMeleeAction::AttackRightToLeft"
+          ]
+        },
+        "EMeleeAction::AttackRightToLeft": {
+          "Action": "EMeleeAction::AttackRightToLeft",
+          "WeaponEvent": "EWeaponEvent::MeleeAttackRight",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnTap"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": true,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 1.0,
+          "AttackType": "EMeleeAttackType::Light",
+          "InterruptAction": "EMeleeAction::WindUpRight",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": [
+            "EMeleeAction::AttackLeftToRight",
+            "EMeleeAction::WindUpLeft"
+          ]
+        },
+        "EMeleeAction::WindUpPower": {
+          "Action": "EMeleeAction::WindUpPower",
+          "WeaponEvent": "EWeaponEvent::PowerAttackWindUp",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnHold"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 0.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::WindUp",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::PowerAttack",
+          "ChainActions": [
+            "EMeleeAction::PowerAttack"
+          ]
+        },
+        "EMeleeAction::PowerAttack": {
+          "Action": "EMeleeAction::PowerAttack",
+          "WeaponEvent": "EWeaponEvent::PowerAttackSwing",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnRelease"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.5,
+          "CalledShotCharge": 2.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::WindUpSweep": {
+          "Action": "EMeleeAction::WindUpSweep",
+          "WeaponEvent": "EWeaponEvent::SweepAttackWindUp",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnHold"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 0.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::WindUp",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::SweepAttack",
+          "ChainActions": [
+            "EMeleeAction::SweepAttack"
+          ]
+        },
+        "EMeleeAction::SweepAttack": {
+          "Action": "EMeleeAction::SweepAttack",
+          "WeaponEvent": "EWeaponEvent::SweepAttackSwing",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnRelease"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": true,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.5,
+          "CalledShotCharge": 2.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::AttackLeftToRight": {
+          "Action": "EMeleeAction::AttackLeftToRight",
+          "WeaponEvent": "EWeaponEvent::MeleeAttackLeft",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::Invalid",
+              "ButtonPress": "EButtonPress::OnTap"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": true,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 1.0,
+          "AttackType": "EMeleeAttackType::Light",
+          "InterruptAction": "EMeleeAction::WindUpLeft",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": [
+            "EMeleeAction::WindUpRight",
+            "EMeleeAction::AttackRightToLeft"
+          ]
+        },
+        "EMeleeAction::Recoil": {
+          "Action": "EMeleeAction::Recoil",
+          "WeaponEvent": "EWeaponEvent::Recoil",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": true,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::None",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::CounterAttack": {
+          "Action": "EMeleeAction::CounterAttack",
+          "WeaponEvent": "EWeaponEvent::CounterAttack",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": true,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::NoStaminaAttack": {
+          "Action": "EMeleeAction::NoStaminaAttack",
+          "WeaponEvent": "EWeaponEvent::NoStaminaAttack",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitLight",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitLight.0"
+          },
+          "ForceFeedbackEffectOneHandBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "ForceFeedbackEffectTwoHands": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitHeavy",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitHeavy.0"
+          },
+          "ForceFeedbackEffectTwoHandsBlocked": {
+            "ObjectName": "ForceFeedbackEffect MeleeHitBlocked",
+            "ObjectPath": "Indiana/Content/Blueprints/Player/ForceFeedback/MeleeHitBlocked.0"
+          },
+          "bClearInput": true,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": true,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 1.0,
+          "AttackType": "EMeleeAttackType::Light",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::WindUpLeft": {
+          "Action": "EMeleeAction::WindUpLeft",
+          "WeaponEvent": "EWeaponEvent::MeleeWindUpLeft",
+          "Input": [
+            {
+              "PreviousAction": "EMeleeAction::AttackRightToLeft",
+              "ButtonPress": "EButtonPress::OnHold"
+            }
+          ],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": true,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 0.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::WindUp",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::AttackLeftToRight",
+          "ChainActions": [
+            "EMeleeAction::WindUpSweep",
+            "EMeleeAction::AttackLeftToRight"
+          ]
+        },
+        "EMeleeAction::WindUpNoStamina": {
+          "Action": "EMeleeAction::WindUpNoStamina",
+          "WeaponEvent": "EWeaponEvent::WindUpNoStamina",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": true,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::WindUp",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::NoStaminaAttack",
+          "ChainActions": []
+        },
+        "EMeleeAction::CalledShotAttack": {
+          "Action": "EMeleeAction::CalledShotAttack",
+          "WeaponEvent": "EWeaponEvent::CalledShot",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": true,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::None",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::SpecialAttack1": {
+          "Action": "EMeleeAction::SpecialAttack1",
+          "WeaponEvent": "EWeaponEvent::SpecialAttack1",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::SpecialAttack2": {
+          "Action": "EMeleeAction::SpecialAttack2",
+          "WeaponEvent": "EWeaponEvent::SpecialAttack2",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::SpecialAttack3": {
+          "Action": "EMeleeAction::SpecialAttack3",
+          "WeaponEvent": "EWeaponEvent::SpecialAttack3",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::SpecialAttack4": {
+          "Action": "EMeleeAction::SpecialAttack4",
+          "WeaponEvent": "EWeaponEvent::SpecialAttack4",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        },
+        "EMeleeAction::CalledShot": {
+          "Action": "EMeleeAction::CalledShot",
+          "WeaponEvent": "EWeaponEvent::CalledShot",
+          "Input": [],
+          "ForceFeedbackEffectOneHand": null,
+          "ForceFeedbackEffectOneHandBlocked": null,
+          "ForceFeedbackEffectTwoHands": null,
+          "ForceFeedbackEffectTwoHandsBlocked": null,
+          "bClearInput": false,
+          "bAllowInputAtStart": false,
+          "bCanStartQueuedActionAtStart": false,
+          "bStartWhenQueued": false,
+          "bRecoilIfBlocked": false,
+          "bPlayerForceFeedbackAtStart": false,
+          "DamageMultiplier": 1.0,
+          "CalledShotCharge": 0.0,
+          "AttackType": "EMeleeAttackType::Heavy",
+          "InterruptAction": "EMeleeAction::Invalid",
+          "AutoQueuedAction": "EMeleeAction::Invalid",
+          "ChainActions": []
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Execute_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Execute_C Default__CE_Execute_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Execute/CE_Execute.1"
+    }
+  },
+  {
+    "Type": "CE_Execute_C",
+    "Name": "Default__CE_Execute_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Execute_PostProcess_C Default__CE_Execute_C:CE_Execute_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Execute/CE_Execute.2"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__CE_Execute_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Execute/CE_Execute.3"
+        }
+      ],
+      "Duration": 0.1,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 24
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Execute",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Execute.0"
+      }
+    }
+  },
+  {
+    "Type": "CE_Execute_PostProcess_C",
+    "Name": "CE_Execute_PostProcess_C_0",
+    "Outer": "Default__CE_Execute_C",
+    "Template": "Default__CE_Execute_PostProcess_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__CE_Execute_C",
+    "Properties": {
+      "DamageValuePercent": 10.0,
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  }
+]

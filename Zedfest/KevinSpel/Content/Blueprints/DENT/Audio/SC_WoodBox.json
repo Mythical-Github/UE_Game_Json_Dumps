@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SC_WoodBox",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer SC_WoodBox:SoundNodeMixer_7",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.3"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFX",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SFX.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 3.5872562,
+      "MaxDistance": 2170.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Distance",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/Distance.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_14",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "DelayMin": 0.2,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_WoodBox:SoundNodeWavePlayer_15",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_15",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "DelayMin": 0.5,
+      "DelayMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_WoodBox:SoundNodeWavePlayer_14",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_7",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator SC_WoodBox:SoundNodeModulator_21",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.4"
+        },
+        {
+          "ObjectName": "SoundNodeModulator SC_WoodBox:SoundNodeModulator_22",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.5"
+        },
+        {
+          "ObjectName": "SoundNodeDelay SC_WoodBox:SoundNodeDelay_15",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_21",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "PitchMin": 0.5,
+      "PitchMax": 0.6,
+      "VolumeMin": 0.5,
+      "VolumeMax": 0.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_WoodBox:SoundNodeWavePlayer_14",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_22",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "PitchMin": 0.5,
+      "PitchMax": 0.6,
+      "VolumeMin": 0.5,
+      "VolumeMax": 0.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay SC_WoodBox:SoundNodeDelay_14",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/SC_WoodBox.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/DENT/Audio/S_Wood_Point_1.S_Wood_Point_1",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave S_Wood_Point_1",
+      "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/S_Wood_Point_1.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "SC_WoodBox",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/DENT/Audio/S_Wood_Point_2.S_Wood_Point_2",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave S_Wood_Point_2",
+      "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Audio/S_Wood_Point_2.0"
+    }
+  }
+]

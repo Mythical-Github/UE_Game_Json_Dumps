@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "WEPM_Handgun_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup WEPM_Handgun_PhysicsAsset:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/FuturisticWeapons/Futur_HandGun/WEPM_Handgun_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup WEPM_Handgun_PhysicsAsset:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/FuturisticWeapons/Futur_HandGun/WEPM_Handgun_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate WEPM_Handgun_PhysicsAsset:PhysicsConstraintTemplate_0",
+          "ObjectPath": "KevinSpel/Content/FPS_Weapon_Bundle/FuturisticWeapons/Futur_HandGun/WEPM_Handgun_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "WEPM_Handgun_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "FrontPart",
+        "ConstraintBone1": "FrontPart",
+        "ConstraintBone2": "BackPart",
+        "Pos2": {
+          "X": 9.931576E-08,
+          "Y": -3.9591684,
+          "Z": -2.6639977
+        },
+        "PriAxis2": {
+          "X": 1.0,
+          "Y": 5.164523E-08,
+          "Z": 3.8836298E-08
+        },
+        "SecAxis2": {
+          "X": -5.7888847E-08,
+          "Y": 0.4489588,
+          "Z": 0.8935525
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "WEPM_Handgun_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0010426734,
+              "Y": -2.870621,
+              "Z": -0.61432076
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.76143,
+              "Roll": -74.74397
+            },
+            "Radius": 1.81847,
+            "Length": 3.4036348,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "BackPart",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DD2487B54D24539ABE4CF4B785C2A3A3"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "WEPM_Handgun_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.0024546892,
+              "Y": -2.1212482,
+              "Z": 0.6644876
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.99892,
+              "Roll": -81.40571
+            },
+            "Radius": 1.3155993,
+            "Length": 3.101932,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "FrontPart",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "98A426E54D27376403B935B349EFDF6B"
+  }
+]

@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_OnCircle_0",
+    "Properties": {
+      "ParamName": "OnCircle.CircleRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_FollowerPos_2",
+    "Properties": {
+      "ParamName": "FollowerPos.MinAngleProvider"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_FollowerPos_2",
+    "Properties": {
+      "ParamName": "FollowerPos.IdealAngleProvider"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "CompanionCommandMoveTo",
+    "Properties": {
+      "QueryName": "NewEnvQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption CompanionCommandMoveTo:EnvQueryOption_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Composite",
+    "Name": "EnvQueryGenerator_Composite_0",
+    "Outer": "CompanionCommandMoveTo",
+    "Properties": {
+      "Generators": [
+        {
+          "ObjectName": "EnvQueryGenerator_CurrentLocation CompanionCommandMoveTo:EnvQueryGenerator_Composite_0.EnvQueryGenerator_CurrentLocation_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.5"
+        },
+        {
+          "ObjectName": "EnvQueryGenerator_OnCircle CompanionCommandMoveTo:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.6"
+        }
+      ],
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_CurrentLocation",
+    "Name": "EnvQueryGenerator_CurrentLocation_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "QueryContext": {
+        "ObjectName": "Class EQSContext_CompanionCommandLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "CircleRadius": {
+        "DefaultValue": 100.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionCommandMoveTo:EnvQueryGenerator_Composite_0.EnvQueryGenerator_OnCircle_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfPoints": {
+        "DefaultValue": 16
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "CircleCenter": {
+        "ObjectName": "Class EQSContext_CompanionCommandLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_Pathing_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_Pathing.0"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_EQS_C",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_EQS.0"
+        },
+        "ProjectDown": 200.0,
+        "ProjectUp": 200.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "CompanionCommandMoveTo",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Composite CompanionCommandMoveTo:EnvQueryGenerator_Composite_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.4"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_FollowerPos CompanionCommandMoveTo:EnvQueryTest_FollowerPos_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding CompanionCommandMoveTo:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_FollowerPos",
+    "Name": "EnvQueryTest_FollowerPos_2",
+    "Outer": "CompanionCommandMoveTo",
+    "Properties": {
+      "OriginContext": {
+        "ObjectName": "Class EQSContext_CompanionCommandLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ForwardContext": {
+        "ObjectName": "Class EQSContext_CompanionCommandForward",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "IdealAngleProvider": {
+        "DefaultValue": 150.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionCommandMoveTo:EnvQueryTest_FollowerPos_2.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "MinAngleProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams CompanionCommandMoveTo:EnvQueryTest_FollowerPos_2.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionCommandMoveTo.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "CompanionCommandMoveTo",
+    "Properties": {
+      "Context": {
+        "ObjectName": "Class EQSContext_Companions",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Companion_Pathing_C",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Navigation/NavFilters/NavFilter_Companion_Pathing.0"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "MultipleContextFilterOp": "EEnvTestFilterOperator::AnyPass",
+      "VerNum": 1
+    }
+  }
+]

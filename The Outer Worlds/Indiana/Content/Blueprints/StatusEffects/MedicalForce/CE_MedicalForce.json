@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_MedicalForce_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_MedicalForce_C Default__CE_MedicalForce_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/MedicalForce/CE_MedicalForce.1"
+    }
+  },
+  {
+    "Type": "CE_MedicalForce_C",
+    "Name": "Default__CE_MedicalForce_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_MedicalForce_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/MedicalForce/CE_MedicalForce.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 10.0,
+      "EffectName": {
+        "StringID": 4432
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_DamageDealt",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_DamageDealt.0"
+      },
+      "bDontDisplayNameInDescription": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_MedicalForce_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.2,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

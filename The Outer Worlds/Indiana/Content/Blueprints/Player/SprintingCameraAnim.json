@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "CameraAnim",
+    "Name": "SprintingCameraAnim",
+    "Properties": {
+      "CameraInterpGroup": {
+        "ObjectName": "InterpGroupCamera SprintingCameraAnim:InterpGroupCamera_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Player/SprintingCameraAnim.1"
+      },
+      "AnimLength": 0.23849595,
+      "BaseFOV": 75.0,
+      "BasePostProcessSettings": {
+        "SceneColorTint": {
+          "R": 1.0,
+          "G": 0.906859,
+          "B": 0.768712,
+          "A": 1.0,
+          "Hex": "FFFFF5E3"
+        }
+      },
+      "BasePostProcessBlendWeight": 1.0
+    }
+  },
+  {
+    "Type": "InterpGroupCamera",
+    "Name": "InterpGroupCamera_0",
+    "Outer": "SprintingCameraAnim",
+    "Properties": {
+      "InterpTracks": [
+        {
+          "ObjectName": "InterpTrackFloatProp SprintingCameraAnim:InterpGroupCamera_0.InterpTrackFloatProp_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Player/SprintingCameraAnim.2"
+        }
+      ],
+      "GroupName": "NewCameraAnimTest"
+    }
+  },
+  {
+    "Type": "InterpTrackFloatProp",
+    "Name": "InterpTrackFloatProp_1",
+    "Outer": "InterpGroupCamera_0",
+    "Properties": {
+      "PropertyName": "CameraComponent.FieldOfView",
+      "FloatTrack": {
+        "Points": [
+          {
+            "InVal": 0.0002846011,
+            "OutVal": 85.0,
+            "ArriveTangent": 0.0,
+            "LeaveTangent": 0.0,
+            "InterpMode": "CIM_CurveAutoClamped"
+          }
+        ]
+      },
+      "TrackTitle": "FieldOfView"
+    }
+  }
+]

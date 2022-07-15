@@ -1,0 +1,42 @@
+[
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_3",
+    "Outer": "DonLocalAxesMask",
+    "Properties": {
+      "DefaultValue": 0.1,
+      "ParameterName": "Don Local Space Axes MaskTolerance",
+      "ExpressionGUID": "28B1204C-4C0CA25F-C15A51AA-FA8782DC",
+      "Function": {
+        "ObjectName": "MaterialFunction DonLocalAxesMask",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalAxesMask.1"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "DonLocalAxesMask",
+    "Properties": {
+      "Description": "This function is used to mask out the third axis in any Local Space Painting workflow.The raw Alpha (if used directly) can cause artifacts along the third axis (eg: Z axis in an XY workflow).Therefore users are provided with an additional masked Alpha they can choose to use.Materials that create holes/Porta effectsl/etc may not need this as they are already \"masking out\" pixels on their own.",
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter DonLocalAxesMask:MaterialExpressionScalarParameter_3",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalAxesMask.0"
+        },
+        null,
+        null
+      ],
+      "StateId": "A0B6E596-406DA69F-C630E4A8-FDB31AAD"
+    }
+  }
+]

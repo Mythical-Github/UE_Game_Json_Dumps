@@ -1,0 +1,513 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CE_Burn_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Burn_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function CE_Burn_C:ExecuteUbergraph_CE_Burn",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CE_Burn_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.0"
+      },
+      {
+        "ObjectName": "Function CE_Burn_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.28"
+      },
+      {
+        "ObjectName": "Function CE_Burn_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.14"
+      },
+      {
+        "ObjectName": "Function CE_Burn_C:ExecuteUbergraph_CE_Burn",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CE_Burn": {
+        "ObjectName": "Function CE_Burn_C:ExecuteUbergraph_CE_Burn",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.7"
+      },
+      "ReceiveApplyEffect": {
+        "ObjectName": "Function CE_Burn_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.14"
+      },
+      "ReceiveClearEffect": {
+        "ObjectName": "Function CE_Burn_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.28"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Burn_C Default__CE_Burn_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.2"
+    }
+  },
+  {
+    "Type": "CE_Burn_C",
+    "Name": "Default__CE_Burn_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Burn_PostProcess_C Default__CE_Burn_C:CE_Burn_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.16"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__CE_Burn_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.19"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "Duration": 15.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "bProhibitsConversations": true,
+      "EffectName": {
+        "StringID": 220
+      },
+      "EffectDescription": {
+        "StringID": 1110
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Burn_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.23"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Burn",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Burn.0"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_1"
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_fire",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_fire.0"
+      },
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_fire",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_fire.0"
+      }
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CE_Burn",
+    "Outer": "CE_Burn_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.6"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_Event_Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.33"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_Event_Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.24"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_Event_bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.12"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_DynamicCast_AsIndiana_Ai_Character",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.32"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.11"
+      },
+      {
+        "ObjectName": "ClassProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.18"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_ClassIsChildOf_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.8"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_Greater_FloatFloat_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.9"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_GetSkeletalMeshComponent_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.30"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.K2Node_Event_Target1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.26"
+      },
+      {
+        "ObjectName": "StructProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_GetCenterOfMass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.35"
+      },
+      {
+        "ObjectName": "StructProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_FindClosestBone_K2_BoneLocation",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.34"
+      },
+      {
+        "ObjectName": "NameProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_FindClosestBone_K2_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.29"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_SpawnEmitterAttached_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.31"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ExecuteUbergraph_CE_Burn.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.10"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_Event_bRestoredFromSave",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveApplyEffect",
+    "Outer": "CE_Burn_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveApplyEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ReceiveApplyEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.13"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Burn_C:ReceiveApplyEffect.Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.25"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Burn_C:ReceiveApplyEffect.bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.15"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bRestoredFromSave",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "CE_Burn_PostProcess_C",
+    "Name": "CE_Burn_PostProcess_C_0",
+    "Outer": "Default__CE_Burn_C",
+    "Template": "Default__CE_Burn_PostProcess_C",
+    "Properties": {
+      "bIsHostile": true,
+      "bProhibitsConversations": true,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Burn_C:CE_Burn_PostProcess_C_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.21"
+      },
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Burn_C:CE_Burn_PostProcess_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.20"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateBurning"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__CE_Burn_C",
+    "Properties": {
+      "DamageValue": 15.0,
+      "DamageScalars": 2,
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Energy_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Energy_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 15.0,
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 1.0,
+      "EffectName": {
+        "StringID": 247
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Burn_C:DamageStatusEffect_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.22"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Burn_PostProcess_C_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "CE_Burn_PostProcess_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_Burn_C:CE_Burn_PostProcess_C_0.EventEffects_1.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "DamageStatusEffect_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_Burn_C:DamageStatusEffect_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Burn_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_Burn_C:EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.5"
+        },
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Burn_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_Ratio",
+    "Outer": "ExecuteUbergraph_CE_Burn"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Ratio",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target1",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveClearEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveClearEffect",
+    "Outer": "CE_Burn_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveClearEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Burn_C:ReceiveClearEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Burn/CE_Burn.27"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_FindClosestBone_K2_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetSkeletalMeshComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsIndiana_Ai_Character",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyClass": {
+      "ObjectName": "Class IndianaAiCharacter",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindClosestBone_K2_BoneLocation",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetCenterOfMass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Burn",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,1219 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_Crawler_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5,
+                6,
+                7,
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton ZombieRunner_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/SkeletalMesh/ZombieRunner_Skeleton.0"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_Crawler_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.16"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendListByEnum_0AED5D76457F87AFF049B9AE07EB4DB3",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.33"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_Crawler_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.26"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_76CAD6BC4831C297DB7329B0DC03A862",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.36"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_Crawler_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.26"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_A4905FEE41E82DCE2B46BC8475E4F53F",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.37"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_Crawler_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.26"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_48B7D430494133F67B6112AD29831403",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.35"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_Crawler_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.26"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_29D35AA549A8389E65949E8876672BEB",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_Crawler_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.15"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_631860014C27BBDE2593559E1C97BF17",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.46"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_Crawler_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.27"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_Crawler_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.15"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_A1D506A34499FC509AFC15A0D42415D4",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.47"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_Crawler_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.27"
+      },
+      {
+        "ObjectName": "Function AnimBP_Crawler_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.19"
+      },
+      {
+        "ObjectName": "Function AnimBP_Crawler_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.18"
+      },
+      {
+        "ObjectName": "Function AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_SaveCachedPose_05273ADF495BA76BEB05BB9C09D884AF",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_A1D506A34499FC509AFC15A0D42415D4",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.47"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.48"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_TransitionResult_631860014C27BBDE2593559E1C97BF17",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.46"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_SequencePlayer_171E94114A43945FC2C250BA492C363B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.39"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_StateResult_B03FCB0C4052EECB847EACACC01C5821",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.44"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_SequencePlayer_F79A2025461619F30102B0AB54939B0A",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.40"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_StateResult_CAD28B8741C3D8AB0BA90AB0A99CC540",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.45"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_29D35AA549A8389E65949E8876672BEB",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.34"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_48B7D430494133F67B6112AD29831403",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.35"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_A4905FEE41E82DCE2B46BC8475E4F53F",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.37"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendSpacePlayer_76CAD6BC4831C297DB7329B0DC03A862",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.36"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_BlendListByEnum_0AED5D76457F87AFF049B9AE07EB4DB3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.33"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_StateResult_3061E5C3439A8EFBBCC077841CE197AF",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.43"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_StateMachine_0621795143C0B2F8906926BF17E5B084",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.42"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_Root_60A7B1634413196FAACD95827ACC6104",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.38"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:AnimGraphNode_Slot_A61592BA4D236F692A068AB42780FC16",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.41"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.15"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.26"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_Crawler_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.16"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:Direction",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.21"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.14"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_Crawler": {
+        "ObjectName": "Function AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.5"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_Crawler_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.18"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_Crawler_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B": {
+        "ObjectName": "Function AnimBP_Crawler_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.27"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_Crawler_C Default__AnimBP_Crawler_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.2"
+    }
+  },
+  {
+    "Type": "AnimBP_Crawler_C",
+    "Name": "Default__AnimBP_Crawler_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_SaveCachedPose_05273ADF495BA76BEB05BB9C09D884AF": {
+        "Pose": {
+          "LinkID": -1
+        },
+        "CachePoseName": "None"
+      },
+      "AnimGraphNode_TransitionResult_A1D506A34499FC509AFC15A0D42415D4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_631860014C27BBDE2593559E1C97BF17": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_171E94114A43945FC2C250BA492C363B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ZombieRunner_Jump_Idle",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/ZombieRunner_Jump_Idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_B03FCB0C4052EECB847EACACC01C5821": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_F79A2025461619F30102B0AB54939B0A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ZombieRunner_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/ZombieRunner_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_CAD28B8741C3D8AB0BA90AB0A99CC540": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_29D35AA549A8389E65949E8876672BEB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Crawler",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/BS_Crawler.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_48B7D430494133F67B6112AD29831403": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Crawler",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/BS_Crawler.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_A4905FEE41E82DCE2B46BC8475E4F53F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Crawler",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/BS_Crawler.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_76CAD6BC4831C297DB7329B0DC03A862": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Crawler",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/BS_Crawler.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_0AED5D76457F87AFF049B9AE07EB4DB3": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 8
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_3061E5C3439A8EFBBCC077841CE197AF": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_StateMachine_0621795143C0B2F8906926BF17E5B084": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_60A7B1634413196FAACD95827ACC6104": {
+        "Result": {
+          "LinkID": 16
+        }
+      },
+      "AnimGraphNode_Slot_A61592BA4D236F692A068AB42780FC16": {
+        "Source": {
+          "LinkID": 14
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_05273ADF495BA76BEB05BB9C09D884AF",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_Crawler",
+    "Outer": "AnimBP_Crawler_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.4"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.30"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.31"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.32"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.13"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.49"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.24"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.50"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.22"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.29"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.9"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.10"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.28"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.23"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.11"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.12"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.17"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.25"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_Crawler_C:ExecuteUbergraph_AnimBP_Crawler.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_Crawler_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_Crawler_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_Crawler_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/ZombieRunner/Animations/AnimBP_Crawler.20"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_Crawler_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_Crawler_AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+    "Outer": "AnimBP_Crawler_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_0AED5D76457F87AFF049B9AE07EB4DB3",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_29D35AA549A8389E65949E8876672BEB",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_48B7D430494133F67B6112AD29831403",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_76CAD6BC4831C297DB7329B0DC03A862",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_A4905FEE41E82DCE2B46BC8475E4F53F",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_60A7B1634413196FAACD95827ACC6104",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_171E94114A43945FC2C250BA492C363B",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_F79A2025461619F30102B0AB54939B0A",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_A61592BA4D236F692A068AB42780FC16",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_0621795143C0B2F8906926BF17E5B084",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3061E5C3439A8EFBBCC077841CE197AF",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B03FCB0C4052EECB847EACACC01C5821",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CAD28B8741C3D8AB0BA90AB0A99CC540",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_631860014C27BBDE2593559E1C97BF17",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A1D506A34499FC509AFC15A0D42415D4",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D5E08E8C4361446E19263794B22D9A7B",
+    "Outer": "AnimBP_Crawler_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_Crawler",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

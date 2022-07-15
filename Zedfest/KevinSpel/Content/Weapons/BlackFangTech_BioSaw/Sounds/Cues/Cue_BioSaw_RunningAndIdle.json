@@ -1,0 +1,185 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeParamCrossFade Cue_BioSaw_RunningAndIdle:SoundNodeParamCrossFade_1",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.5"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Start",
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_BioSaw_RunningAndIdle:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_2",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "PitchModulationParams": {
+        "MinOutput": 1.0
+      },
+      "VolumeModulationParams": {
+        "MinOutput": 3.0,
+        "MaxOutput": 3.2
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_BioSaw_RunningAndIdle:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_5",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "VolRev",
+        "Default": 0.0,
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_BioSaw_RunningAndIdle:SoundNodeModulatorContinuous_2",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_6",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "VolIdle",
+        "ParamMode": "MPM_Direct"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_BioSaw_RunningAndIdle:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeParamCrossFade",
+    "Name": "SoundNodeParamCrossFade_1",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 0.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 0.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 0.0,
+          "Volume": 1.0
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_BioSaw_RunningAndIdle:SoundNodeModulatorContinuous_5",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.3"
+        },
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_BioSaw_RunningAndIdle:SoundNodeModulatorContinuous_6",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.4"
+        },
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_BioSaw_RunningAndIdle:SoundNodeModulatorContinuous_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Cues/Cue_BioSaw_RunningAndIdle.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Running.Wav_BioSaw_Running",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Wav_BioSaw_Running",
+      "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Running.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Start.Wav_BioSaw_Start",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Wav_BioSaw_Start",
+      "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Start.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Cue_BioSaw_RunningAndIdle",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Idle.Wav_BioSaw_Idle",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Wav_BioSaw_Idle",
+      "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Sounds/Wavs/Wav_BioSaw_Idle.0"
+    }
+  }
+]

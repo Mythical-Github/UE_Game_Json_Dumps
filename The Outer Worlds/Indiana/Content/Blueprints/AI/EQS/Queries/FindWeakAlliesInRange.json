@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_3",
+    "Outer": "EnvQueryGenerator_ActorsOfClass_0",
+    "Properties": {
+      "ParamName": "ActorsOfClass.SearchRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_CharacterHealth_0",
+    "Properties": {
+      "ParamName": "CharacterHealth.FloatValueMax"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_CharacterHealth_0",
+    "Properties": {
+      "ParamName": "CharacterHealth.FloatValueMin"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "FindWeakAlliesInRange",
+    "Properties": {
+      "QueryName": "WanderQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption FindWeakAlliesInRange:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActorsOfClass",
+    "Name": "EnvQueryGenerator_ActorsOfClass_0",
+    "Outer": "FindWeakAlliesInRange",
+    "Properties": {
+      "SearchedActorClass": {
+        "ObjectName": "Class IndianaCharacter",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "GenerateOnlyActorsInRadius": {
+        "DataField": "BoolValue"
+      },
+      "SearchRadius": {
+        "DefaultValue": 1000.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams FindWeakAlliesInRange:EnvQueryGenerator_ActorsOfClass_0.AIDataProvider_QueryParams_3",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "FindWeakAlliesInRange",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActorsOfClass FindWeakAlliesInRange:EnvQueryGenerator_ActorsOfClass_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.4"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_TeamRelationship FindWeakAlliesInRange:EnvQueryTest_TeamRelationship_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_CharacterHealth FindWeakAlliesInRange:EnvQueryTest_CharacterHealth_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance FindWeakAlliesInRange:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_CharacterHealth",
+    "Name": "EnvQueryTest_CharacterHealth_0",
+    "Outer": "FindWeakAlliesInRange",
+    "Properties": {
+      "TestOrder": 1,
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 0.01,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams FindWeakAlliesInRange:EnvQueryTest_CharacterHealth_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "FloatValueMax": {
+        "DefaultValue": 0.99,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams FindWeakAlliesInRange:EnvQueryTest_CharacterHealth_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FindWeakAlliesInRange.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "FindWeakAlliesInRange",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 100.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.0001
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_TeamRelationship",
+    "Name": "EnvQueryTest_TeamRelationship_0",
+    "Outer": "FindWeakAlliesInRange",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

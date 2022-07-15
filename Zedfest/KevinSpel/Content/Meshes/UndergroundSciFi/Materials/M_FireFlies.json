@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_FireFlies",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionParticleColor_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "ShadingModel": "MSM_Unlit",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_FireFlies:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/UndergroundSciFi/Materials/M_FireFlies.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample M_FireFlies:MaterialExpressionTextureSample_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/UndergroundSciFi/Materials/M_FireFlies.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+          "Function": {
+            "ObjectName": "MaterialFunction ExponentialDensity",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+          }
+        },
+        {
+          "StateId": "235C8133-44D704CA-0297108A-59B9F710",
+          "Function": {
+            "ObjectName": "MaterialFunction RadialGradientExponential",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "09F4FB09-4711FD95-D052BDBF-14F274D1",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "M_FireFlies",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction RadialGradientExponential",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.2"
+      },
+      "Material": {
+        "ObjectName": "Material M_FireFlies",
+        "ObjectPath": "KevinSpel/Content/Meshes/UndergroundSciFi/Materials/M_FireFlies.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "M_FireFlies",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionPanner_0"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D T_FirefliesNoise",
+        "ObjectPath": "KevinSpel/Content/Meshes/UndergroundSciFi/Textures/T_FirefliesNoise.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_FireFlies",
+        "ObjectPath": "KevinSpel/Content/Meshes/UndergroundSciFi/Materials/M_FireFlies.0"
+      }
+    }
+  }
+]

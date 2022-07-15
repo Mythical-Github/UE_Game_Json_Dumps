@@ -1,0 +1,2043 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "FootstepsCharacter_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpEnd",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.05,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton UE4_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/FootstepsCharacter/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.0"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.53"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.88"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_178136C741BD5A74C104898AE2D0858E",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.97"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.31"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.98"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_D9F025E842A0DA513B905085C5E33142",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.100"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.32"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+            "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.99"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.0"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.36"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_step",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.35"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_JUMP_END",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.34"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_jump_start",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.33"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.32"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.31"
+      },
+      {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.5"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.3"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.99"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_D9F025E842A0DA513B905085C5E33142",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.100"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.98"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_TransitionResult_178136C741BD5A74C104898AE2D0858E",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.97"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.91"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.95"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.90"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.94"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.89"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.93"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.88"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.96"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.92"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.30"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.53"
+      },
+      {
+        "ObjectName": "ArrayProperty FootstepsCharacter_AnimBP_C:Surface",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.13"
+      },
+      {
+        "ObjectName": "StrProperty FootstepsCharacter_AnimBP_C:srfc",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.87"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_FootstepsCharacter_AnimBP": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.31"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.32"
+      },
+      "AnimNotify_jump_start": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_jump_start",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.33"
+      },
+      "AnimNotify_JUMP_END": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_JUMP_END",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.34"
+      },
+      "AnimNotify_step": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:AnimNotify_step",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.35"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function FootstepsCharacter_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.36"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FootstepsCharacter_AnimBP_C Default__FootstepsCharacter_AnimBP_C",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.2"
+    }
+  },
+  {
+    "Type": "FootstepsCharacter_AnimBP_C",
+    "Name": "Default__FootstepsCharacter_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_D9F025E842A0DA513B905085C5E33142": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_178136C741BD5A74C104898AE2D0858E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPerson_Jump",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/FootstepsCharacter/Mannequin/Animations/ThirdPerson_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Loop",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/FootstepsCharacter/Mannequin/Animations/ThirdPersonJump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.75,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Start",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/FootstepsCharacter/Mannequin/Animations/ThirdPersonJump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D ThirdPerson_IdleRun_2D",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/FootstepsCharacter/Mannequin/Animations/ThirdPerson_IdleRun_2D.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "Surface": [
+        null,
+        {
+          "ObjectName": "PhysicalMaterial 01_Carpet_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/01_Carpet_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 02_Conrete_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/02_Conrete_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 03_Grass_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/03_Grass_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 04_Gravel_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/04_Gravel_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 05_Ground_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/05_Ground_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 06_Metal_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/06_Metal_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 07_Plastic_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/07_Plastic_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 08_Sand_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/08_Sand_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 09_Snow_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/09_Snow_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 10_Water_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/10_Water_Physic_Mat.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial 11_Wood_Physic_Mat",
+          "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/Materials/Physical_Materials/11_Wood_Physic_Mat.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.4"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.76"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.77"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.119"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.121"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.50"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Subtract_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.127"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_MapRangeClamped_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.46"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_MapRangeClamped_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.47"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.78"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.79"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_AsFootsteps_Character",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.84"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.27"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_K2_GetActorLocation_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.122"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Subtract_VectorVector_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.128"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Multiply_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.48"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Multiply_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.49"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.80"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_AsFootsteps_Character1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.85"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.28"
+      },
+      {
+        "ObjectName": "ArrayProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.7"
+      },
+      {
+        "ObjectName": "ArrayProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.9"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_OutHit",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.124"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.24"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_OutHit1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.125"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.25"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bBlockingHit",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.14"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bInitialOverlap",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.17"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Time",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.41"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Distance",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.38"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Location",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.107"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactPoint",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.104"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Normal",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.110"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactNormal",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.101"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_PhysMat",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.72"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitActor",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.66"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitComponent",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.69"
+      },
+      {
+        "ObjectName": "NameProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitBoneName",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.63"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitItem",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.60"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_FaceIndex",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.57"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceStart",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.116"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceEnd",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.113"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bBlockingHit1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.15"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bInitialOverlap1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.18"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Time1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.42"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Distance1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.39"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Location1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.108"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactPoint1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.105"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Normal1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.111"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactNormal1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.102"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_PhysMat1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.73"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitActor1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.67"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitComponent1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.70"
+      },
+      {
+        "ObjectName": "NameProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitBoneName1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.64"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitItem1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.61"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_FaceIndex1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.58"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceStart1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.117"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceEnd1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.114"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.44"
+      },
+      {
+        "ObjectName": "ArrayProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.11"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.22"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue5",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.81"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue6",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.82"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_AsFootsteps_Character2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.86"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.29"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_K2_GetActorLocation_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.123"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Subtract_VectorVector_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.129"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_OutHit2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.126"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_LineTraceSingle_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.26"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bBlockingHit2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.16"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_bInitialOverlap2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.19"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Time2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.43"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Distance2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.40"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Location2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.109"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactPoint2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.106"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_Normal2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.112"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_ImpactNormal2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.103"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_PhysMat2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.74"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitActor2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.68"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitComponent2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.71"
+      },
+      {
+        "ObjectName": "NameProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitBoneName2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.65"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_HitItem2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.62"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_FaceIndex2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.59"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceStart2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.118"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_BreakHitResult_TraceEnd2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.115"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Array_Find_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.54"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.45"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Less_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.23"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue7",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.83"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.52"
+      },
+      {
+        "ObjectName": "StructProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_GetVelocity_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.120"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.21"
+      },
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_VSize_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.51"
+      },
+      {
+        "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.75"
+      },
+      {
+        "ObjectName": "BoolProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.20"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Array_Find_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.55"
+      },
+      {
+        "ObjectName": "IntProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.CallFunc_Array_Find_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.56"
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "Temp_object_Variable",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable.Temp_object_Variable",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.6"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable1",
+    "Outer": "Temp_object_Variable1",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable1.Temp_object_Variable1",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.8"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable2",
+    "Outer": "Temp_object_Variable2",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:ExecuteUbergraph_FootstepsCharacter_AnimBP.Temp_object_Variable2.Temp_object_Variable2",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.10"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Surface",
+    "Outer": "Surface",
+    "PropertyClass": {
+      "ObjectName": "Class PhysicalMaterial",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Surface",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty FootstepsCharacter_AnimBP_C:Surface.Surface",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.12"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bBlockingHit",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bBlockingHit1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bBlockingHit2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bInitialOverlap1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BreakHitResult_bInitialOverlap2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FootstepsCharacter_AnimBP_AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_jump_start",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_JUMP_END",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_step",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty FootstepsCharacter_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter_AnimBP.37"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Distance",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Distance1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Distance2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Time",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Time1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakHitResult_Time2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_MapRangeClamped_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_MapRangeClamped_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Find_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Find_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Find_ReturnValue2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_FaceIndex",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_FaceIndex1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_FaceIndex2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_HitItem",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_HitItem1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_BreakHitResult_HitItem2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_BreakHitResult_HitBoneName",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_BreakHitResult_HitBoneName1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "NameProperty",
+    "Name": "CallFunc_BreakHitResult_HitBoneName2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitActor",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitActor1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitActor2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitComponent",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PrimitiveComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitComponent1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PrimitiveComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_HitComponent2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PrimitiveComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_PhysMat",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class PhysicalMaterial",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_PhysMat1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class PhysicalMaterial",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_BreakHitResult_PhysMat2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class PhysicalMaterial",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue4",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue5",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue6",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue7",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsFootsteps_Character",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass FootstepsCharacter_C",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsFootsteps_Character1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass FootstepsCharacter_C",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsFootsteps_Character2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass FootstepsCharacter_C",
+      "ObjectPath": "KevinSpel/Content/Audio/FootSteps/FootstepSound/BluePrints/FootstepsCharacter.1"
+    }
+  },
+  {
+    "Type": "StrProperty",
+    "Name": "srfc",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_178136C741BD5A74C104898AE2D0858E",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_42EB59A647594745DECAE4A5C98FC840",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_52E991574C5CBE6E3F940EAEA88A2707",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D9F025E842A0DA513B905085C5E33142",
+    "Outer": "FootstepsCharacter_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactNormal",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactNormal1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactNormal2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactPoint",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactPoint1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_ImpactPoint2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Location",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Location1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Location2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Normal",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Normal1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_Normal2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceEnd",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceEnd1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceEnd2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceStart",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceStart1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_BreakHitResult_TraceStart2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Subtract_VectorVector_ReturnValue1",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Subtract_VectorVector_ReturnValue2",
+    "Outer": "ExecuteUbergraph_FootstepsCharacter_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

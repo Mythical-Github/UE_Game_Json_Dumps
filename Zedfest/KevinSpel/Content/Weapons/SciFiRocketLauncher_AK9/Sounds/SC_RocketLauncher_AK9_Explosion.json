@@ -1,0 +1,90 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SC_RocketLauncher_AK9_Explosion",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator SC_RocketLauncher_AK9_Explosion:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/SC_RocketLauncher_AK9_Explosion.2"
+      },
+      "Duration": 3.6057596,
+      "MaxDistance": 30000.0
+    }
+  },
+  {
+    "Type": "SoundNodeDistanceCrossFade",
+    "Name": "SoundNodeDistanceCrossFade_0",
+    "Outer": "SC_RocketLauncher_AK9_Explosion",
+    "Properties": {
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 0.0,
+          "FadeOutDistanceStart": 0.0,
+          "FadeOutDistanceEnd": 4000.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 0.0,
+          "FadeInDistanceEnd": 4000.0,
+          "FadeOutDistanceStart": 10000.0,
+          "FadeOutDistanceEnd": 30000.0,
+          "Volume": 1.5
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_RocketLauncher_AK9_Explosion:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/SC_RocketLauncher_AK9_Explosion.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer SC_RocketLauncher_AK9_Explosion:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/SC_RocketLauncher_AK9_Explosion.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SC_RocketLauncher_AK9_Explosion",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDistanceCrossFade SC_RocketLauncher_AK9_Explosion:SoundNodeDistanceCrossFade_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/SC_RocketLauncher_AK9_Explosion.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SC_RocketLauncher_AK9_Explosion",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/SciFiRocketLauncher_AK9/Sounds/S_RocketLauncher_AK9_ExplosionNear.S_RocketLauncher_AK9_ExplosionNear",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave S_RocketLauncher_AK9_ExplosionNear",
+      "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/S_RocketLauncher_AK9_ExplosionNear.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SC_RocketLauncher_AK9_Explosion",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Weapons/SciFiRocketLauncher_AK9/Sounds/S_RocketLauncher_AK9_ExplosionFar.S_RocketLauncher_AK9_ExplosionFar",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave S_RocketLauncher_AK9_ExplosionFar",
+      "ObjectPath": "KevinSpel/Content/Weapons/SciFiRocketLauncher_AK9/Sounds/S_RocketLauncher_AK9_ExplosionFar.0"
+    }
+  }
+]

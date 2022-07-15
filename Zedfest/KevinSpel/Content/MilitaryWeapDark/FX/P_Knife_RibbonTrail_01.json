@@ -1,0 +1,418 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Knife_RibbonTrail_01:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSpawnPerUnit P_Knife_RibbonTrail_01:ParticleModuleSpawnPerUnit_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.10"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime P_Knife_RibbonTrail_01:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Knife_RibbonTrail_01:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Knife_RibbonTrail_01:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Knife_RibbonTrail_01:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.8"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic P_Knife_RibbonTrail_01:ParticleModuleParameterDynamic_2",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataRibbon P_Knife_RibbonTrail_01:ParticleModuleTypeDataRibbon_0",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.11"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Knife_RibbonTrail_01:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.9"
+      },
+      "PeakActiveParticles": 523
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.8,
+        "MaxValue": 1.2,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.8,
+            0.9,
+            1.2
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 0.051948693,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 1,
+          "TimeScale": 3.0,
+          "Values": [
+            0.0,
+            0.04998458,
+            0.037084594,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.08,
+        "MaxValue": 0.08,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.08
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_2",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "Refraction Amount",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.3,
+            "Distribution": null,
+            "Table": {
+              "Op": 1,
+              "EntryCount": 2,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "TimeScale": 1.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.3,
+                1.0
+              ],
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param3",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param4",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 15,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Knife_RibbonTrail_01:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "StartSize": {
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            10.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.6,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.6,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Knife_RibbonTrail_01:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.1"
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawnPerUnit",
+    "Name": "ParticleModuleSpawnPerUnit_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "UnitScalar": 1.0,
+      "SpawnPerUnit": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataRibbon",
+    "Name": "ParticleModuleTypeDataRibbon_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "RenderAxis": "Trails_SourceUp",
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "EmitterName": "Ribbon",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Knife_RibbonTrail_01:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Knife_RibbonTrail_01",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Knife_RibbonTrail_01:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Knife_RibbonTrail_01.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -150.0,
+          "Y": -150.0,
+          "Z": -150.0
+        },
+        "Max": {
+          "X": 150.0,
+          "Y": 150.0,
+          "Z": 150.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

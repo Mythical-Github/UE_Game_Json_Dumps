@@ -1,0 +1,157 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_ConcentratedFire_ClearBonus_C Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_ClearBonus.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+    "Name": "Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OrListener Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C:OrListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_ClearBonus.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatusEffectRemove Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C:StatusEffectRemove_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_ClearBonus.5"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Melee"
+      ],
+      "CheckNotDamageFlags": [
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Range"
+      ],
+      "CheckNotDamageFlags": [
+        "EDamageFlags::IsLastTarget"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C:OrListener_0.OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_ClearBonus.2"
+        },
+        {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C:OrListener_0.OnCausedDamage_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_ConcentratedFire_ClearBonus.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__Spell_PerkEffect_ConcentratedFire_ClearBonus_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_ConcentratedFire_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/ConcentratedFire/CE_ConcentratedFire.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  }
+]

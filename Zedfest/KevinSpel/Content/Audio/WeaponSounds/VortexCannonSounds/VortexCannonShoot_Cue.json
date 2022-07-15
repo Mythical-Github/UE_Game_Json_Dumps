@@ -1,0 +1,56 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "VortexCannonShoot_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator VortexCannonShoot_Cue:SoundNodeModulator_38",
+        "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/VortexCannonSounds/VortexCannonShoot_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 9.299979,
+      "MaxDistance": 10300.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation SirenWarningAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/SirenWarningAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_38",
+    "Outer": "VortexCannonShoot_Cue",
+    "Properties": {
+      "VolumeMin": 0.98,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer VortexCannonShoot_Cue:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/VortexCannonSounds/VortexCannonShoot_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "VortexCannonShoot_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/WeaponSounds/VortexCannonSounds/VortexCannonShoot.VortexCannonShoot",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave VortexCannonShoot",
+      "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/VortexCannonSounds/VortexCannonShoot.0"
+    }
+  }
+]

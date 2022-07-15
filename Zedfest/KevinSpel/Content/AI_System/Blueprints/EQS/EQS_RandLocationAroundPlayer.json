@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_PathingGrid_26",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_RandLocationAroundPlayer",
+    "Properties": {
+      "QueryName": "EQS_FindRandomLocationAroundPlayer",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_RandLocationAroundPlayer:EnvQueryOption_26",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundPlayer.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_26",
+    "Outer": "EQS_RandLocationAroundPlayer",
+    "Properties": {
+      "NavigationFilter": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_RandLocationAroundPlayer:EnvQueryGenerator_PathingGrid_26.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundPlayer.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetPlayerContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetPlayerContext.2"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_26",
+    "Outer": "EQS_RandLocationAroundPlayer",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_RandLocationAroundPlayer:EnvQueryGenerator_PathingGrid_26",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundPlayer.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_RandLocationAroundPlayer:EnvQueryTest_Pathfinding_29",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundPlayer.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQS_RandLocationAroundPlayer:EnvQueryTest_Overlap_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundPlayer.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQS_RandLocationAroundPlayer",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 20.0,
+        "ExtentY": 20.0,
+        "ExtentZ": 20.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 20.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_29",
+    "Outer": "EQS_RandLocationAroundPlayer",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "VerNum": 1
+    }
+  }
+]

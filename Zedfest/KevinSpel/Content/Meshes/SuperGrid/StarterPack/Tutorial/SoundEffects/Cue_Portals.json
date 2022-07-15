@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cue_Portals",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator Cue_Portals:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/Cue_Portals.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 5,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 2.44644,
+      "MaxDistance": 2250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation Attenuation_Portals",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/Attenuation_Portals.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Cue_Portals",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.75,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom Cue_Portals:SoundNodeRandom_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/Cue_Portals.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Cue_Portals",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_Portals:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/Cue_Portals.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_Portals:SoundNodeWavePlayer_4",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/Cue_Portals.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Cue_Portals",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/SubOceano_A.SubOceano_A",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Cue_Portals",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Meshes/SuperGrid/StarterPack/Tutorial/SoundEffects/SubOceano_B.SubOceano_B",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

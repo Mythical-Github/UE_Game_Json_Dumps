@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindRandomLocation_Fly",
+    "Properties": {
+      "QueryName": "EQS_FindRandomLocation_Fly",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindRandomLocation_Fly:EnvQueryOption_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation_Fly.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQS_FindRandomLocation_Fly",
+    "Properties": {
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_FindRandomLocation_Fly:EnvQueryGenerator_SimpleGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation_Fly.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetStartLocationContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetStartLocationContext.2"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::None"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_FindRandomLocation_Fly",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_FindRandomLocation_Fly:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindRandomLocation_Fly.2"
+      }
+    }
+  }
+]

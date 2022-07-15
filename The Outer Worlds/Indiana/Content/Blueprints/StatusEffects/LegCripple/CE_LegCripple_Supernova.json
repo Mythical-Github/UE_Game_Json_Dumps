@@ -1,0 +1,182 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_LegCripple_Supernova_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_LegCripple_Supernova_C Default__CE_LegCripple_Supernova_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.1"
+    }
+  },
+  {
+    "Type": "CE_LegCripple_Supernova_C",
+    "Name": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_LegCripple_PostProcess_C Default__CE_LegCripple_Supernova_C:CE_LegCripple_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_LegCripple_Supernova_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.8"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_LegCripple_Supernova_C:ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.9"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__CE_LegCripple_Supernova_C:ToggleActionStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.10"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_LegCripple_Supernova_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bIsHostile": true,
+      "bRemoveWithSpell": false,
+      "bSavePermanentStatusEffect": true,
+      "EffectName": {
+        "StringID": 28
+      },
+      "EffectDescription": {
+        "StringID": 1117
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_LegCripple_Supernova_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.5"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_LegCripple",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_LegCripple.0"
+      },
+      "bDontDisplayNameInDescription": true
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Lame"
+      },
+      "bRemoveWithSpell": false,
+      "EffectName": {
+        "StringID": 136
+      }
+    }
+  },
+  {
+    "Type": "CE_LegCripple_PostProcess_C",
+    "Name": "CE_LegCripple_PostProcess_C_0",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Template": "Default__CE_LegCripple_PostProcess_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::UseDurationTime",
+      "Duration": 3.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateCripple"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_LegCripple_Supernova_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "StatModifierStatusEffect_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayAnimStateEventEffect Default__CE_LegCripple_Supernova_C:StatModifierStatusEffect_0.EventEffects_0.PlayAnimStateEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayAnimStateEventEffect",
+    "Name": "PlayAnimStateEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "MovementModifierState": "EAnimMovementModifierState::Lamed"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false,
+      "EffectName": {
+        "StringID": 138
+      },
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__CE_LegCripple_Supernova_C:StatModifierStatusEffect_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/LegCripple/CE_LegCripple_Supernova.6"
+      }
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_1",
+    "Outer": "Default__CE_LegCripple_Supernova_C",
+    "Properties": {
+      "Action": "ETogglableAction::Lunge",
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false
+    }
+  }
+]

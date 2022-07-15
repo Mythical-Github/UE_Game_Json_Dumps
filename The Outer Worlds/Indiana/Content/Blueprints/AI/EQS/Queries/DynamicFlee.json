@@ -1,0 +1,108 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "DynamicFlee",
+    "Properties": {
+      "QueryName": "DynamicSearch_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption DynamicFlee:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicFlee.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Composite",
+    "Name": "EnvQueryGenerator_Composite_0",
+    "Outer": "DynamicFlee",
+    "Properties": {
+      "Generators": [
+        {
+          "ObjectName": "EnvQueryGenerator_CurrentLocation DynamicFlee:EnvQueryGenerator_Composite_0.EnvQueryGenerator_CurrentLocation_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicFlee.2"
+        },
+        {
+          "ObjectName": "EnvQueryGenerator_Donut DynamicFlee:EnvQueryGenerator_Composite_0.EnvQueryGenerator_Donut_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicFlee.3"
+        }
+      ],
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_CurrentLocation",
+    "Name": "EnvQueryGenerator_CurrentLocation_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "QueryContext": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 400.0
+      },
+      "NumberOfRings": {
+        "DefaultValue": 4
+      },
+      "PointsPerRing": {
+        "DefaultValue": 3
+      },
+      "ArcDirection": {
+        "LineTo": {
+          "ObjectName": "Class EQSContext_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "ArcAngle": {
+        "DefaultValue": 210.0
+      },
+      "bUseSpiralPattern": true,
+      "bDefineArc": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "PostProjectionVerticalOffset": 10.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "DynamicFlee",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Composite DynamicFlee:EnvQueryGenerator_Composite_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicFlee.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_DynamicFleeTest DynamicFlee:EnvQueryTest_DynamicFleeTest_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicFlee.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_DynamicFleeTest",
+    "Name": "EnvQueryTest_DynamicFleeTest_0",
+    "Outer": "DynamicFlee",
+    "Properties": {
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_AI_GorillianEmerge_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_AI_GorillianEmerge_C Default__Spell_AI_GorillianEmerge_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.1"
+    }
+  },
+  {
+    "Type": "Spell_AI_GorillianEmerge_C",
+    "Name": "Default__Spell_AI_GorillianEmerge_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_GorillianPull_C Default__Spell_AI_GorillianEmerge_C:CE_GorillianPull_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.2"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_CreatureType Default__Spell_AI_GorillianEmerge_C:SpellConditional_CreatureType_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.5"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": true,
+          "bForceTwoDimensionalDirection": true,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_AI_GorillianEmerge_C:SphereShape_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.7"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ],
+      "OnEventEffects": {
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::AOE",
+            "StatusEffects": [],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_AI_GorillianEmerge_C:SpellConditional_IsHostileToCaster_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.6"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": {
+                  "ObjectName": "SphereShape Default__Spell_AI_GorillianEmerge_C:SphereShape_1",
+                  "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.8"
+                },
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_GorillianPull_C",
+    "Name": "CE_GorillianPull_C_0",
+    "Outer": "Default__Spell_AI_GorillianEmerge_C",
+    "Template": "Default__CE_GorillianPull_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Spell_AI_GorillianEmerge_C:CE_GorillianPull_C_0.PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.4"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_AI_GorillianEmerge_C:CE_GorillianPull_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianEmerge.3"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_GorillianPull_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "CE_GorillianPull_C_0",
+    "Template": "PushDisableStatusEffect_0"
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_AI_GorillianEmerge_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Creature.Gorillian.Normal"
+      ],
+      "bNegateCheck": true,
+      "bCheckCaster": true
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__Spell_AI_GorillianEmerge_C"
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_AI_GorillianEmerge_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 800.0
+      }
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_1",
+    "Outer": "Default__Spell_AI_GorillianEmerge_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 600.0
+      }
+    }
+  }
+]

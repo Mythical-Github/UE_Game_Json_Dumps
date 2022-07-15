@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CanidFeral_Dash_KnockTarget_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CanidFeral_Dash_KnockTarget_C Default__Spell_CanidFeral_Dash_KnockTarget_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidFeral_Dash_KnockTarget.1"
+    }
+  },
+  {
+    "Type": "Spell_CanidFeral_Dash_KnockTarget_C",
+    "Name": "Default__Spell_CanidFeral_Dash_KnockTarget_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMeleeHit Default__Spell_CanidFeral_Dash_KnockTarget_C:OnMeleeHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidFeral_Dash_KnockTarget.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Knockback_C Default__Spell_CanidFeral_Dash_KnockTarget_C:CE_Knockback_C_2",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidFeral_Dash_KnockTarget.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterForward",
+            "RotationAngle": 45.0,
+            "bRandomlyNegateRotationAngle": true,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_Knockback_C",
+    "Name": "CE_Knockback_C_2",
+    "Outer": "Default__Spell_CanidFeral_Dash_KnockTarget_C",
+    "Template": "Default__CE_Knockback_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Spell_CanidFeral_Dash_KnockTarget_C:CE_Knockback_C_2.PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidFeral_Dash_KnockTarget.5"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CanidFeral_Dash_KnockTarget_C:CE_Knockback_C_2.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidFeral_Dash_KnockTarget.3"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Knockback_C_2",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "OnMeleeHit",
+    "Name": "OnMeleeHit_0",
+    "Outer": "Default__Spell_CanidFeral_Dash_KnockTarget_C",
+    "Properties": {
+      "MeleeAction": "EMeleeAction::SpecialAttack4"
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "CE_Knockback_C_2",
+    "Template": "PushDisableStatusEffect_0",
+    "Properties": {
+      "PushSpeed": 1250.0
+    }
+  }
+]

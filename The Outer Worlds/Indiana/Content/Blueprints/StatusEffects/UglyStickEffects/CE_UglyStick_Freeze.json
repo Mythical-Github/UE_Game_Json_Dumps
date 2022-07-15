@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_UglyStick_Freeze_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_UglyStick_Freeze_C Default__CE_UglyStick_Freeze_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/UglyStickEffects/CE_UglyStick_Freeze.1"
+    }
+  },
+  {
+    "Type": "CE_UglyStick_Freeze_C",
+    "Name": "Default__CE_UglyStick_Freeze_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "FreezeDisableStatusEffect Default__CE_UglyStick_Freeze_C:FreezeDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/UglyStickEffects/CE_UglyStick_Freeze.3"
+        },
+        {
+          "ObjectName": "CE_UglyStick_Freeze_Visuals_C Default__CE_UglyStick_Freeze_C:CE_UglyStick_Freeze_Visuals_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/UglyStickEffects/CE_UglyStick_Freeze.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 3.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat UglyStickFreezeDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/UglyStickFreezeDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 1517
+      },
+      "EffectDescription": {
+        "StringID": 1518
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Frozen",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Frozen.0"
+      }
+    }
+  },
+  {
+    "Type": "CE_UglyStick_Freeze_Visuals_C",
+    "Name": "CE_UglyStick_Freeze_Visuals_C_0",
+    "Outer": "Default__CE_UglyStick_Freeze_C",
+    "Template": "Default__CE_UglyStick_Freeze_Visuals_C"
+  },
+  {
+    "Type": "FreezeDisableStatusEffect",
+    "Name": "FreezeDisableStatusEffect_0",
+    "Outer": "Default__CE_UglyStick_Freeze_C",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

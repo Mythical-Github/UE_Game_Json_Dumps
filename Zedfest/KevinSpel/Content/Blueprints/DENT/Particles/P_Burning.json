@@ -1,0 +1,393 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Burning:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Burning:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Burning:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.7"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Burning:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Burning:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere P_Burning:ParticleModuleLocationPrimitiveSphere_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.5"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Burning:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.8"
+      },
+      "PeakActiveParticles": 41
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_1",
+    "Outer": "P_Burning",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            10.0
+          ]
+        }
+      },
+      "Positive_Y": false,
+      "SurfaceOnly": true,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 30.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            30.0,
+            50.0
+          ]
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Boom",
+        "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Materials/Weapons/M_Boom.0"
+      },
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 3.0,
+      "EmitterDurationLow": 0.1,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Burning:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 50.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            50.0,
+            50.0,
+            50.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "Rate": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            20.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "ParticleBurstMethod": "EPBM_Interpolated",
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Burning:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.1"
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "bProcessSpawnRate": false,
+      "bProcessBurstList": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -10.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -10.0,
+            -10.0,
+            50.0,
+            10.0,
+            10.0,
+            100.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Burning",
+    "Properties": {
+      "SignificanceLevel": "EParticleSignificanceLevel::Low",
+      "bUseLegacySpawningBehavior": true,
+      "bDisableWhenInsignficant": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Burning:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Burning",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Burning:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/DENT/Particles/P_Burning.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -50.0,
+          "Y": -50.0,
+          "Z": -50.0
+        },
+        "Max": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

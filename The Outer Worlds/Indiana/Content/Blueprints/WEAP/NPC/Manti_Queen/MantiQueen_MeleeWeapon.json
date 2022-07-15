@@ -1,0 +1,276 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MantiQueen_MeleeWeapon_C",
+    "Super": "Mantisaur_Melee_Weapon_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Mantisaur_Melee_Weapon_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Mantisaur/Mantisaur_Melee_Weapon.1"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MantiQueen_MeleeWeapon_C Default__MantiQueen_MeleeWeapon_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Manti_Queen/MantiQueen_MeleeWeapon.1"
+    }
+  },
+  {
+    "Type": "MantiQueen_MeleeWeapon_C",
+    "Name": "Default__MantiQueen_MeleeWeapon_C",
+    "Template": "Default__Mantisaur_Melee_Weapon_C",
+    "Properties": {
+      "PrimaryMode": {
+        "ObjectName": "MeleeMode Default__MantiQueen_MeleeWeapon_C:MeleeMode_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Manti_Queen/MantiQueen_MeleeWeapon.3"
+      },
+      "TPVVisualsClass": {
+        "AssetPathName": "None",
+        "SubPathString": ""
+      },
+      "CreatureTPAnimationsClass": {
+        "AssetPathName": "/Game/Blueprints/CHAR/NPC/Creatures/Manti-Queen/CREA_MantiQueen_WeaponAnimations_BP.CREA_MantiQueen_WeaponAnimations_BP_C",
+        "SubPathString": ""
+      },
+      "AISettings": {
+        "ObjectName": "AISettings_Weapon MantiQueenMeleeSettings",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponOverrides/MantiQueenMeleeSettings.0"
+      },
+      "AssetCollection": {
+        "ObjectName": "AssetCollection Default__MantiQueen_MeleeWeapon_C:AssetCollection",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Manti_Queen/MantiQueen_MeleeWeapon.2"
+      }
+    }
+  },
+  {
+    "Type": "AssetCollection",
+    "Name": "AssetCollection",
+    "Outer": "Default__MantiQueen_MeleeWeapon_C",
+    "Template": "AssetCollection"
+  },
+  {
+    "Type": "MeleeMode",
+    "Name": "MeleeMode_0",
+    "Outer": "Default__MantiQueen_MeleeWeapon_C",
+    "Template": "MeleeMode_0",
+    "Properties": {
+      "DefaultMeleeCollision": {
+        "CollisionShapeInfo": {
+          "ShapeTransform": {
+            "Translation": {
+              "X": 50.0,
+              "Y": 100.0,
+              "Z": -50.0
+            }
+          },
+          "Shape": {
+            "CapsuleData": {
+              "CapsuleHalfHeight": 200.0,
+              "CapsuleRadius": 100.0
+            }
+          }
+        }
+      },
+      "MeleeCollisionOverrides": {
+        "EMeleeAction::AttackLeftToRight": {
+          "bWeaponMesh": true,
+          "CollisionSocket": "LeftClaw",
+          "CollisionShapeInfo": {
+            "ShapeTransform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": -0.70710677,
+                "Z": 0.0,
+                "W": 0.7071067,
+                "IsNormalized": true,
+                "Size": 0.99999994,
+                "SizeSquared": 0.9999999
+              },
+              "Translation": {
+                "X": 50.0,
+                "Y": 0.0,
+                "Z": -50.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "Shape": {
+              "ShapeType": "EShapeType::Capsule",
+              "BoxData": {
+                "BoxExtent": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                }
+              },
+              "SphereData": {
+                "SphereRadius": 0.0
+              },
+              "CapsuleData": {
+                "CapsuleHalfHeight": 200.0,
+                "CapsuleRadius": 100.0
+              }
+            }
+          }
+        },
+        "EMeleeAction::AttackRightToLeft": {
+          "bWeaponMesh": true,
+          "CollisionSocket": "RightClaw",
+          "CollisionShapeInfo": {
+            "ShapeTransform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": -0.70710677,
+                "Z": 0.0,
+                "W": 0.7071067,
+                "IsNormalized": true,
+                "Size": 0.99999994,
+                "SizeSquared": 0.9999999
+              },
+              "Translation": {
+                "X": -50.0,
+                "Y": 0.0,
+                "Z": 50.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "Shape": {
+              "ShapeType": "EShapeType::Capsule",
+              "BoxData": {
+                "BoxExtent": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                }
+              },
+              "SphereData": {
+                "SphereRadius": 0.0
+              },
+              "CapsuleData": {
+                "CapsuleHalfHeight": 200.0,
+                "CapsuleRadius": 100.0
+              }
+            }
+          }
+        },
+        "EMeleeAction::SpecialAttack1": {
+          "bWeaponMesh": true,
+          "CollisionSocket": "LeftClaw",
+          "CollisionShapeInfo": {
+            "ShapeTransform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": -0.70710677,
+                "Z": 0.0,
+                "W": 0.7071067,
+                "IsNormalized": true,
+                "Size": 0.99999994,
+                "SizeSquared": 0.9999999
+              },
+              "Translation": {
+                "X": 150.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "Shape": {
+              "ShapeType": "EShapeType::Capsule",
+              "BoxData": {
+                "BoxExtent": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                }
+              },
+              "SphereData": {
+                "SphereRadius": 0.0
+              },
+              "CapsuleData": {
+                "CapsuleHalfHeight": 150.0,
+                "CapsuleRadius": 40.0
+              }
+            }
+          }
+        },
+        "EMeleeAction::SpecialAttack2": {
+          "bWeaponMesh": true,
+          "CollisionSocket": "Tail_End_Attack",
+          "CollisionShapeInfo": {
+            "ShapeTransform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": -0.70710677,
+                "Z": 0.0,
+                "W": 0.7071067,
+                "IsNormalized": true,
+                "Size": 0.99999994,
+                "SizeSquared": 0.9999999
+              },
+              "Translation": {
+                "X": 30.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "Shape": {
+              "ShapeType": "EShapeType::Capsule",
+              "BoxData": {
+                "BoxExtent": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                }
+              },
+              "SphereData": {
+                "SphereRadius": 0.0
+              },
+              "CapsuleData": {
+                "CapsuleHalfHeight": 150.0,
+                "CapsuleRadius": 40.0
+              }
+            }
+          }
+        }
+      },
+      "ImpactDataSet": {
+        "ObjectName": "ImpactDataSet MantiqueenMelee_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/MantiqueenMelee_ImpactData.0"
+      },
+      "NPCMeleeActionDamageMultipliers": {
+        "EMeleeAction::SpecialAttack1": 1.5,
+        "EMeleeAction::PowerAttack": 2.0,
+        "EMeleeAction::SpecialAttack2": 1.5
+      },
+      "DamageDescription": {
+        "BaseDamage": 62.0
+      }
+    }
+  },
+  {
+    "Type": "MeleeSequencer",
+    "Name": "MeleeSequencer",
+    "Outer": "MeleeMode_0",
+    "Template": "MeleeSequencer"
+  }
+]

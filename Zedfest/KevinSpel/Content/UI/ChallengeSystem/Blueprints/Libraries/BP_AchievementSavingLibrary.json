@@ -1,0 +1,1382 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "SaveAchievements",
+    "PropertyFlags": 134218132,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:SaveAchievements.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "SaveAchievements",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:SaveAchievements.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.1"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveAchievements.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.100"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:SaveAchievements.CallFunc_GetDataTableRowFromName_OutRow",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.115"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveAchievements.CallFunc_GetDataTableRowFromName_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.55"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveAchievements.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.101"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveAchievements.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.102"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveAchievements.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.57"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveAchievements.CallFunc_SaveGameToSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.56"
+      }
+    ],
+    "FunctionFlags": 214048768
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "LoadAchievements",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadAchievements",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.3"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadAchievements.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.21"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.23"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Initiate_Achievements_Achievement_List",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.25"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.69"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Array_Length_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.70"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.Temp_int_Loop_Counter_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.73"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.43"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.66"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.Temp_int_Array_Index_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.71"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.Temp_int_Loop_Counter_Variable1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.74"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.88"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Less_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.44"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Add_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.67"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.Temp_int_Array_Index_Variable1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.72"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_CreateSaveGameObject_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.89"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Array_Get_Item1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.109"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements.K2Node_MakeStruct_S_AchievementInformation",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.111"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Array_Add_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.68"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_GetDataTableRowFromName_OutRow",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.110"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_GetDataTableRowFromName_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.42"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_SaveGameToSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.45"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.90"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_DoesSaveGameExist_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.41"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.91"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.46"
+      }
+    ],
+    "FunctionFlags": 214048768
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetAchievementSaveObject",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.5"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.Achievements Save Object",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.84"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.Temp_int_Array_Index_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.64"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.Temp_int_Loop_Counter_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.65"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.61"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_CreateSaveGameObject_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.85"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_GetDataTableRowFromName_OutRow",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.107"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_GetDataTableRowFromName_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.37"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Initiate_Achievements_Achievement_List",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.19"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_SaveGameToSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.39"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.106"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.63"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.38"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.K2Node_MakeStruct_S_AchievementInformation",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.108"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Array_Add_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.62"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.86"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_DoesSaveGameExist_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.36"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.87"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.40"
+      }
+    ],
+    "FunctionFlags": 214048768
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "LoadAchievements1",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadAchievements1",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements1.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.7"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadAchievements1.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.27"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements1.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.92"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements1.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.93"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadAchievements1.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.47"
+      }
+    ],
+    "FunctionFlags": 205660160
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "LoadDailyChallenges",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadDailyChallenges",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.9"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.29"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Temp_int_Array_Index_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.80"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Initiate_DailyChallenges_Achievement_List",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.33"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.112"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.78"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.31"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.K2Node_MakeStruct_S_AchievementInformation",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.114"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Array_Length_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.79"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Temp_int_Loop_Counter_Variable",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.82"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.50"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.75"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Temp_int_Array_Index_Variable1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.81"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Temp_int_Loop_Counter_Variable1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.83"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Array_Get_Item1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.94"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Less_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.51"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Add_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.76"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_CreateSaveGameObject_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.95"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_GetDataTableRowFromName_OutRow",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.113"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_GetDataTableRowFromName_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.49"
+      },
+      {
+        "ObjectName": "IntProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Array_Add_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.77"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_DoesSaveGameExist_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.48"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_SaveGameToSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.52"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.96"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.97"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.53"
+      }
+    ],
+    "FunctionFlags": 214048768
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "LoadDailyChallenges1",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadDailyChallenges1",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.11"
+      },
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.35"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.98"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.99"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.54"
+      }
+    ],
+    "FunctionFlags": 205660160
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "SaveDailyChallenges",
+    "PropertyFlags": 134218132,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.13"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "SaveDailyChallenges",
+    "Outer": "BP_AchievementSavingLibrary_C",
+    "Children": [
+      {
+        "ObjectName": "ArrayProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.Achievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.14"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.__WorldContext",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.103"
+      },
+      {
+        "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.CallFunc_GetDataTableRowFromName_OutRow",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.116"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.CallFunc_GetDataTableRowFromName_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.58"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.CallFunc_LoadGameFromSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.104"
+      },
+      {
+        "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.K2Node_DynamicCast_AsBP_Achievements_Save",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.105"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.60"
+      },
+      {
+        "ObjectName": "BoolProperty BP_AchievementSavingLibrary_C:SaveDailyChallenges.CallFunc_SaveGameToSlot_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.59"
+      }
+    ],
+    "FunctionFlags": 214048768
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AchievementSavingLibrary_C",
+    "SuperStruct": {
+      "ObjectName": "Class BlueprintFunctionLibrary",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:SaveDailyChallenges",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.15"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadDailyChallenges1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.12"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadDailyChallenges",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.10"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadAchievements1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.8"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:GetAchievementSaveObject",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.6"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadAchievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.4"
+      },
+      {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:SaveAchievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.2"
+      }
+    ],
+    "FuncMap": {
+      "SaveAchievements": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:SaveAchievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.2"
+      },
+      "LoadAchievements": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadAchievements",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.4"
+      },
+      "GetAchievementSaveObject": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:GetAchievementSaveObject",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.6"
+      },
+      "LoadAchievements1": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadAchievements1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.8"
+      },
+      "LoadDailyChallenges": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadDailyChallenges",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.10"
+      },
+      "LoadDailyChallenges1": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:LoadDailyChallenges1",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.12"
+      },
+      "SaveDailyChallenges": {
+        "ObjectName": "Function BP_AchievementSavingLibrary_C:SaveDailyChallenges",
+        "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.15"
+      }
+    },
+    "ClassFlags": 262160,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AchievementSavingLibrary_C Default__BP_AchievementSavingLibrary_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.17"
+    }
+  },
+  {
+    "Type": "BP_AchievementSavingLibrary_C",
+    "Name": "Default__BP_AchievementSavingLibrary_C"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Outer": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:GetAchievementSaveObject.CallFunc_Initiate_Achievements_Achievement_List.CallFunc_Initiate_Achievements_Achievement_List",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.18"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "LoadAchievements",
+    "PropertyFlags": 384,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.20"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "Outer": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass WB_AchievementsListMenu_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/UI/AchievementListing/WB_AchievementsListMenu.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "Outer": "LoadAchievements",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_GetAllWidgetsOfClass_FoundWidgets.CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.22"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Outer": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_Initiate_Achievements_Achievement_List",
+    "Outer": "LoadAchievements",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements.CallFunc_Initiate_Achievements_Achievement_List.CallFunc_Initiate_Achievements_Achievement_List",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.24"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "LoadAchievements1",
+    "PropertyFlags": 384,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadAchievements1.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.26"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "LoadDailyChallenges",
+    "PropertyFlags": 384,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.28"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "Outer": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass WB_AchievementsListMenu_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/UI/AchievementListing/WB_AchievementsListMenu.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+    "Outer": "LoadDailyChallenges",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_GetAllWidgetsOfClass_FoundWidgets.CallFunc_GetAllWidgetsOfClass_FoundWidgets",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.30"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Initiate_DailyChallenges_Achievement_List",
+    "Outer": "CallFunc_Initiate_DailyChallenges_Achievement_List",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_Initiate_DailyChallenges_Achievement_List",
+    "Outer": "LoadDailyChallenges",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges.CallFunc_Initiate_DailyChallenges_Achievement_List.CallFunc_Initiate_DailyChallenges_Achievement_List",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.32"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Achievements",
+    "Outer": "Achievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Achievements",
+    "Outer": "LoadDailyChallenges1",
+    "PropertyFlags": 384,
+    "Inner": {
+      "ObjectName": "StructProperty BP_AchievementSavingLibrary_C:LoadDailyChallenges1.Achievements.Achievements",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Libraries/BP_AchievementSavingLibrary.34"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSaveGameExist_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_SaveGameToSlot_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "GetAchievementSaveObject",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSaveGameExist_ReturnValue",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue1",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_SaveGameToSlot_ReturnValue",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "LoadAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "LoadAchievements1",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSaveGameExist_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue1",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_SaveGameToSlot_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "LoadDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "LoadDailyChallenges1",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+    "Outer": "SaveAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_SaveGameToSlot_ReturnValue",
+    "Outer": "SaveAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "SaveAchievements",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+    "Outer": "SaveDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_SaveGameToSlot_ReturnValue",
+    "Outer": "SaveDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "SaveDailyChallenges",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "GetAchievementSaveObject"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Add_ReturnValue",
+    "Outer": "GetAchievementSaveObject"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "GetAchievementSaveObject"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable",
+    "Outer": "GetAchievementSaveObject"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable",
+    "Outer": "GetAchievementSaveObject"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue1",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Add_ReturnValue",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue1",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable1",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable1",
+    "Outer": "LoadAchievements"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue1",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Add_ReturnValue",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue1",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Array_Index_Variable1",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Loop_Counter_Variable1",
+    "Outer": "LoadDailyChallenges"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Achievements Save Object",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyFlags": 384,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_CreateSaveGameObject_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "GetAchievementSaveObject",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "LoadAchievements",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass WB_AchievementsListMenu_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/UI/AchievementListing/WB_AchievementsListMenu.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_CreateSaveGameObject_ReturnValue",
+    "Outer": "LoadAchievements",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "LoadAchievements",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "LoadAchievements",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "LoadAchievements1",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "LoadAchievements1",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item1",
+    "Outer": "LoadDailyChallenges",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass WB_AchievementsListMenu_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/UI/AchievementListing/WB_AchievementsListMenu.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_CreateSaveGameObject_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "LoadDailyChallenges",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "LoadDailyChallenges",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "LoadDailyChallenges1",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "LoadDailyChallenges1",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "SaveAchievements",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "SaveAchievements",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "SaveAchievements",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "__WorldContext",
+    "Outer": "SaveDailyChallenges",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_LoadGameFromSlot_ReturnValue",
+    "Outer": "SaveDailyChallenges",
+    "PropertyClass": {
+      "ObjectName": "Class SaveGame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_Achievements_Save",
+    "Outer": "SaveDailyChallenges",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AchievementsSave_C",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/SaveGame/BP_AchievementsSave.2"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "GetAchievementSaveObject",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+    "Outer": "GetAchievementSaveObject",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementSystemInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementSystemInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_MakeStruct_S_AchievementInformation",
+    "Outer": "GetAchievementSaveObject",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Array_Get_Item1",
+    "Outer": "LoadAchievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+    "Outer": "LoadAchievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementSystemInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementSystemInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_MakeStruct_S_AchievementInformation",
+    "Outer": "LoadAchievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "LoadDailyChallenges",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementCustomizationInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementCustomizationInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+    "Outer": "LoadDailyChallenges",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementSystemInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementSystemInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_MakeStruct_S_AchievementInformation",
+    "Outer": "LoadDailyChallenges",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+    "Outer": "SaveAchievements",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementSystemInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementSystemInformation.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+    "Outer": "SaveDailyChallenges",
+    "Struct": {
+      "ObjectName": "UserDefinedStruct S_AchievementSystemInformation",
+      "ObjectPath": "KevinSpel/Content/UI/ChallengeSystem/Blueprints/Structures/S_AchievementSystemInformation.1"
+    }
+  }
+]

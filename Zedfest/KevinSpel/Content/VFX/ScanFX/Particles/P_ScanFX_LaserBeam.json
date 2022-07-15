@@ -1,0 +1,494 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperFactor",
+    "Outer": "ParticleModuleTypeDataBeam2_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperScale",
+    "Outer": "ParticleModuleTypeDataBeam2_0"
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionSourceTangent",
+    "Outer": "ParticleModuleBeamSource_0",
+    "Properties": {
+      "Constant": {
+        "X": -1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_ScanFX_LaserBeam:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_ScanFX_LaserBeam:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.9"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_ScanFX_LaserBeam:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_ScanFX_LaserBeam:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_ScanFX_LaserBeam:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.8"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget P_ScanFX_LaserBeam:ParticleModuleBeamTarget_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.7"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource P_ScanFX_LaserBeam:ParticleModuleBeamSource_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.6"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 P_ScanFX_LaserBeam:ParticleModuleTypeDataBeam2_0",
+        "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_ScanFX_LaserBeam:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.12"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "Source": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "SourceTangentMethod": "PEB2STTM_Emitter",
+      "SourceTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant P_ScanFX_LaserBeam:ParticleModuleBeamSource_0.DistributionSourceTangent",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.4"
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "TargetName": "Target",
+      "Target": {
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": 200.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 200.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            200.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "TargetTangentMethod": "PEB2STTM_Emitter",
+      "TargetTangent": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_ScanFX_Laser_Beam_Master",
+        "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Materials/Master/M_ScanFX_Laser_Beam_Master.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_ScanFX_LaserBeam:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 0.3,
+        "MaxValue": 0.3,
+        "MinValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "MaxValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.3,
+            0.3,
+            0.3
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "Rate": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            20.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_ScanFX_LaserBeam:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.1"
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "MaxBeamCount": 1,
+      "Speed": 0.0,
+      "bAlwaysOn": true,
+      "Distance": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            25.0
+          ]
+        }
+      },
+      "TaperFactor": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_ScanFX_LaserBeam:ParticleModuleTypeDataBeam2_0.DistributionTaperFactor",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.2"
+        }
+      },
+      "TaperScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_ScanFX_LaserBeam:ParticleModuleTypeDataBeam2_0.DistributionTaperScale",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -10.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -10.0,
+            -10.0,
+            50.0,
+            10.0,
+            10.0,
+            100.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_ScanFX_LaserBeam:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.5"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_ScanFX_LaserBeam",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_ScanFX_LaserBeam:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/VFX/ScanFX/Particles/P_ScanFX_LaserBeam.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "ThumbnailImageOutOfDate": false,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

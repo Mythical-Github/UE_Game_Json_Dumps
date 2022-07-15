@@ -1,0 +1,214 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "InnerRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "OuterRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_Distance_0",
+    "Properties": {
+      "ParamName": "MinDistanceToTarget"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryTest_Pathfinding_1",
+    "Properties": {
+      "ParamName": "MaxPathDistance"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "RetreatQuery",
+    "Properties": {
+      "QueryName": "RetreatQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption RetreatQuery:EnvQueryOption_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "InnerRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RetreatQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RetreatQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "Center": {
+        "ObjectName": "Class EQSContext_TetherOrigin",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "ProjectDown": 2048.0,
+        "ProjectUp": 2048.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut RetreatQuery:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.5"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_ValidRangedFire RetreatQuery:EnvQueryTest_ValidRangedFire_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.10"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot RetreatQuery:EnvQueryTest_Dot_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance RetreatQuery:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding RetreatQuery:EnvQueryTest_Pathfinding_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 2,
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RetreatQuery:EnvQueryTest_Distance_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_1",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DefaultValue": 2000.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RetreatQuery:EnvQueryTest_Pathfinding_1.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RetreatQuery.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_ValidRangedFire",
+    "Name": "EnvQueryTest_ValidRangedFire_1",
+    "Outer": "RetreatQuery",
+    "Properties": {
+      "TargetContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "ScoringFactor": {
+        "DefaultValue": 10.0
+      },
+      "VerNum": 1
+    }
+  }
+]

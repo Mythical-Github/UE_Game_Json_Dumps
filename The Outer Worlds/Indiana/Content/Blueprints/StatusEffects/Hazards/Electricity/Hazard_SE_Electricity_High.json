@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hazard_SE_Electricity_High_C",
+    "Super": "Hazard_SE_Electricity_Abstract_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass Hazard_SE_Electricity_Abstract_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_Abstract.0"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hazard_SE_Electricity_High_C Default__Hazard_SE_Electricity_High_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.1"
+    }
+  },
+  {
+    "Type": "Hazard_SE_Electricity_High_C",
+    "Name": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "Default__Hazard_SE_Electricity_Abstract_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Hazard_SE_Electricity_High_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.3"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Hazard_SE_Electricity_High_C:DamageStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.6"
+        },
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Hazard_SE_Electricity_High_C:PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.9"
+        },
+        {
+          "ObjectName": "CE_Electric_Hazard_PP_C Default__Hazard_SE_Electricity_High_C:CE_Electric_Hazard_PP_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.4"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Electricity_High_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.8"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent haz_electricity_lp",
+        "ObjectPath": "Indiana/Content/Audio/Events/Hazard/haz_electricity_lp.0"
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "AnimDisableStatusEffect_0",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Hazard_SE_Electricity_High_C:AnimDisableStatusEffect_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.7"
+      }
+    }
+  },
+  {
+    "Type": "CE_Electric_Hazard_PP_C",
+    "Name": "CE_Electric_Hazard_PP_C_0",
+    "Outer": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "CE_Electric_Hazard_PP_C_0"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "DamageStatusEffect_0",
+    "Properties": {
+      "DamageValuePercent": 9.99
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "AnimDisableStatusEffect_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Hazard_SE_Electricity_High_C:AnimDisableStatusEffect_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Hazard_SE_Electricity_High_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Hazards/Electricity/Hazard_SE_Electricity_High.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "Default__Hazard_SE_Electricity_High_C",
+    "Template": "PushDisableStatusEffect_0"
+  }
+]

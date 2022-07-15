@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ExplosionCue",
+    "Properties": {
+      "bOverrideAttenuation": true,
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator ExplosionCue:SoundNodeModulator_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/GrenadesSounds/ExplosionCue.1"
+      },
+      "VolumeMultiplier": 0.9,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 1000.0,
+        "LPFRadiusMax": 2000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "FalloffDistance": 2400.0
+      },
+      "bOverrideConcurrency": true,
+      "Duration": 3.2468934,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ExplosionCue",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom ExplosionCue:SoundNodeRandom_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/GrenadesSounds/ExplosionCue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ExplosionCue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer ExplosionCue:SoundNodeWavePlayer_1",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/GrenadesSounds/ExplosionCue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer ExplosionCue:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/SmokeFlashGrenades/GrenadesSounds/ExplosionCue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ExplosionCue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/SmokeFlashGrenades/GrenadesSounds/Explosion01.Explosion01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ExplosionCue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/SmokeFlashGrenades/GrenadesSounds/Explosion02.Explosion02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

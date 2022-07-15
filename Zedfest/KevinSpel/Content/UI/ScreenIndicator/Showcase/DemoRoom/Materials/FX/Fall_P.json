@@ -1,0 +1,551 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionVelocityScale",
+    "Outer": "ParticleModuleLocationPrimitiveSphere_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Fall_P:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Fall_P:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Fall_P:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity Fall_P:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Fall_P:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.4"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere Fall_P:ParticleModuleLocationPrimitiveSphere_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.6"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotation Fall_P:ParticleModuleMeshRotation_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.7"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotationRate Fall_P:ParticleModuleMeshRotationRate_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.8"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit Fall_P:ParticleModuleOrbit_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh Fall_P:ParticleModuleTypeDataMesh_0",
+        "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Fall_P:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.12"
+      },
+      "PeakActiveParticles": 201
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 1000.0,
+        "MaxValueVec": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 2.0,
+          "Values": [
+            1000.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.0,
+            5.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            20.0
+          ]
+        }
+      },
+      "SurfaceOnly": true,
+      "VelocityScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Fall_P:ParticleModuleLocationPrimitiveSphere_0.DistributionVelocityScale",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.0"
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotation",
+    "Name": "ParticleModuleMeshRotation_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotationRate",
+    "Name": "ParticleModuleMeshRotationRate_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "StartRotationRate": {
+        "MaxValue": 0.5,
+        "MaxValueVec": {
+          "X": 0.5,
+          "Y": 0.5,
+          "Z": 0.5
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "OffsetAmount": {
+        "MinValue": 1.0,
+        "MaxValue": 20.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 20.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            20.0,
+            20.0,
+            20.0
+          ]
+        }
+      },
+      "RotationAmount": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "RotationRateAmount": {
+        "MaxValue": 0.3,
+        "MaxValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            0.3,
+            0.3,
+            0.3
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material P_MAT",
+        "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/P_MAT.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 2.0,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Fall_P:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 0.05,
+        "MaxValue": 0.1,
+        "MinValueVec": {
+          "X": 0.05,
+          "Y": 0.05,
+          "Z": 0.05
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 0.1,
+          "Z": 0.1
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            0.05,
+            0.05,
+            0.05,
+            0.1,
+            0.1,
+            0.1
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "Rate": {
+        "MinValue": 100.0,
+        "MaxValue": 100.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            100.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Fall_P:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh Plane",
+        "ObjectPath": "Engine/Content/BasicShapes/Plane.2"
+      },
+      "bOverrideMaterial": true,
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -50.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -10.0,
+          "Z": -50.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": -25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -10.0,
+            -10.0,
+            -50.0,
+            10.0,
+            10.0,
+            -25.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Fall_P",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Fall_P:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Fall_P",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Fall_P:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/UI/ScreenIndicator/Showcase/DemoRoom/Materials/FX/Fall_P.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

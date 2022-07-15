@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_HairBase",
+    "Properties": {
+      "Metallic": {
+        "OutputIndex": 3,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSampleParameter2D_5",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "Normal": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSampleParameter2D_4",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "BlendMode": "BLEND_Masked",
+      "ShadingModel": "MSM_Subsurface",
+      "TwoSided": true,
+      "bUsedWithSkeletalMesh": true,
+      "bUsedWithMorphTargets": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_HairBase:MaterialExpressionTextureSampleParameter2D_3",
+          "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_HairBase:MaterialExpressionTextureSampleParameter2D_5",
+          "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_HairBase:MaterialExpressionTextureSampleParameter2D_4",
+          "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_HairBase:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.1"
+        },
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction ScreenAlignedPixelToPixelUVs",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "8FB9DF1A-498E856A-C59A06A0-36D8DEE0",
+          "Function": {
+            "ObjectName": "MaterialFunction DitherTemporalAA",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.3"
+          }
+        }
+      ],
+      "StateId": "2A0B9092-4CF4B194-F0A41986-0479027A",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "M_HairBase",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction DitherTemporalAA",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.3"
+      },
+      "Material": {
+        "ObjectName": "Material M_HairBase",
+        "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_3",
+    "Outer": "M_HairBase",
+    "Properties": {
+      "ParameterName": "AlbedoOpacity",
+      "ExpressionGUID": "D008F340-4E011577-C6DA1CBA-572DBDB2",
+      "Texture": {
+        "ObjectName": "Texture2D DefaultWhiteGrid",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultWhiteGrid.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_HairBase",
+        "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_4",
+    "Outer": "M_HairBase",
+    "Properties": {
+      "ParameterName": "Normal",
+      "ExpressionGUID": "74905C9F-43C14596-52D3F48D-25F392EE",
+      "Texture": {
+        "ObjectName": "Texture2D DefaultNormal",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultNormal.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Material": {
+        "ObjectName": "Material M_HairBase",
+        "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_5",
+    "Outer": "M_HairBase",
+    "Properties": {
+      "ParameterName": "OcclusionRoughnessMetallic",
+      "ExpressionGUID": "1FA2888C-4E815B03-ECA9ECAE-7783FE21",
+      "Texture": {
+        "ObjectName": "Texture2D T_Default_Material_Grid_M_Low",
+        "ObjectPath": "Engine/Content/EngineMaterials/T_Default_Material_Grid_M_Low.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material M_HairBase",
+        "ObjectPath": "KevinSpel/Content/ZombiePackV1/ZombieAE/Materials/M_HairBase.0"
+      }
+    }
+  }
+]

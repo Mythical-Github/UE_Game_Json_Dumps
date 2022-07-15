@@ -1,0 +1,550 @@
+[
+  {
+    "Type": "BoolProperty",
+    "Name": "RandomIdle",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "FlyOffMachine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "FlyOff",
+              "Transitions": [],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Fly Dealy",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_CREA_Pteroray_001_Skeleton",
+        "ObjectPath": "Indiana/Content/Art/CREA/Pteroray/SK_CREA_Pteroray_001_Skeleton.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function CRITTER_Bird_FlyOff_AnimBP_C:ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class ReactiveEnvironmentAnimInstance",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.1"
+      },
+      {
+        "ObjectName": "Function CRITTER_Bird_FlyOff_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.7"
+      },
+      {
+        "ObjectName": "Function CRITTER_Bird_FlyOff_AnimBP_C:ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.6"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_Root_F8BBADEA4B8CBB9E284CB2A8103DEAF1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.4"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_TransitionResult_BAC9D2F44076C1ED7D54AFBA3A4B455C",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.15"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_TransitionResult_DF1778EE488F50C68105F39494353509",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.16"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_RandomPlayer_FA28F0D84BEBAFB378CA67BACA1B530D",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.9"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_StateResult_C64EE933472A6F3B42D171A9781CA947",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.13"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_RandomPlayer_783F87724164ABCD40784EBD1E0FA9D1",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.8"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_StateResult_6E6E6DEC4936F8B69E5D26A8667BAE3A",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.12"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_SequencePlayer_4DA9B1174F14D9185E6719918AAB9A05",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.10"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_StateResult_CF84BCB34D8DB47B94C9258EB05D0E06",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.14"
+      },
+      {
+        "ObjectName": "StructProperty CRITTER_Bird_FlyOff_AnimBP_C:AnimGraphNode_StateMachine_00324FF643270870FDF02B8EF21734EB",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.11"
+      },
+      {
+        "ObjectName": "BoolProperty CRITTER_Bird_FlyOff_AnimBP_C:RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.0"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP": {
+        "ObjectName": "Function CRITTER_Bird_FlyOff_AnimBP_C:ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.6"
+      },
+      "AnimNotify_RandomIdle": {
+        "ObjectName": "Function CRITTER_Bird_FlyOff_AnimBP_C:AnimNotify_RandomIdle",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.7"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CRITTER_Bird_FlyOff_AnimBP_C Default__CRITTER_Bird_FlyOff_AnimBP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.3"
+    }
+  },
+  {
+    "Type": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Name": "Default__CRITTER_Bird_FlyOff_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_F8BBADEA4B8CBB9E284CB2A8103DEAF1": {
+        "Result": {
+          "LinkID": 9
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_BAC9D2F44076C1ED7D54AFBA3A4B455C": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RandomIdle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty CRITTER_Bird_FlyOff_AnimBP_C:RandomIdle",
+                "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.0"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_TransitionResult_DF1778EE488F50C68105F39494353509": {
+        "bCanEnterTransition": false,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsInPlayerProximity",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "CopyType": "ECopyType::BoolProperty",
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ReactiveEnvironmentAnimInstance:bIsInPlayerProximity",
+                "ObjectPath": "/Script/Indiana"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_FA28F0D84BEBAFB378CA67BACA1B530D": {
+        "bShuffleMode": false,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_bird_ground_idle_FlyoffDelay",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Bird/FlyAwayBird/AS_CREA_bird_ground_idle_FlyoffDelay.2"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.7,
+            "MaxPlayRate": 2.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_bird_ground_idle_FlyoffDelay2",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Bird/FlyAwayBird/AS_CREA_bird_ground_idle_FlyoffDelay2.2"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.7,
+            "MaxPlayRate": 2.0,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_C64EE933472A6F3B42D171A9781CA947": {
+        "Result": {
+          "LinkID": 3
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_RandomPlayer_783F87724164ABCD40784EBD1E0FA9D1": {
+        "bShuffleMode": false,
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence AS_CREA_bird_flyoff",
+              "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Bird/FlyAwayBird/AS_CREA_bird_flyoff.18"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 0.8,
+            "MaxPlayRate": 1.3,
+            "BlendIn": {
+              "BlendOption": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendTime": 0.2
+            }
+          }
+        ],
+        "PlayRate": 1.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_6E6E6DEC4936F8B69E5D26A8667BAE3A": {
+        "Result": {
+          "LinkID": 5
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_SequencePlayer_4DA9B1174F14D9185E6719918AAB9A05": {
+        "Sequence": {
+          "ObjectName": "AnimSequence AS_CREA_bird_ground_idle",
+          "ObjectPath": "Indiana/Content/Art/ANIM/Creature/Bird/AS_CREA_bird_ground_idle.4"
+        },
+        "bLoopAnimation": true,
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "bInitialized": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0,
+          "InterpolatedResult": 0.0
+        },
+        "StartPosition": 0.0,
+        "bIgnoreForRelevancyTest": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateResult_CF84BCB34D8DB47B94C9258EB05D0E06": {
+        "Result": {
+          "LinkID": 7
+        },
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      },
+      "AnimGraphNode_StateMachine_00324FF643270870FDF02B8EF21734EB": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "CurrentState": -1,
+        "ElapsedTime": 0.0,
+        "EvaluateGraphExposedInputs": {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null
+        }
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_F8BBADEA4B8CBB9E284CB2A8103DEAF1",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CRITTER_Bird_FlyOff_AnimBP_C:ExecuteUbergraph_CRITTER_Bird_FlyOff_AnimBP.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/CHAR/NPC/Creatures/Critters/FlyOffBird/CRITTER_Bird_FlyOff_AnimBP.5"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_RandomIdle",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_783F87724164ABCD40784EBD1E0FA9D1",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RandomPlayer_FA28F0D84BEBAFB378CA67BACA1B530D",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RandomPlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4DA9B1174F14D9185E6719918AAB9A05",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_00324FF643270870FDF02B8EF21734EB",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_6E6E6DEC4936F8B69E5D26A8667BAE3A",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C64EE933472A6F3B42D171A9781CA947",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CF84BCB34D8DB47B94C9258EB05D0E06",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BAC9D2F44076C1ED7D54AFBA3A4B455C",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DF1778EE488F50C68105F39494353509",
+    "Outer": "CRITTER_Bird_FlyOff_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

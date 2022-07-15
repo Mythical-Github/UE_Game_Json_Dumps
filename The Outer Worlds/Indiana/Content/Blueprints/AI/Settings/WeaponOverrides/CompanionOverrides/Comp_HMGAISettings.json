@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "Comp_HMGAISettings",
+    "Properties": {
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstRounds": 20,
+          "BurstCount": 2,
+          "BurstPauseTime": 2.0,
+          "EndPauseTime": 3.0
+        }
+      },
+      "CoverFire": {
+        "bEnabled": true,
+        "CoverTypes": "EUsableCoverTypes::FullOnly",
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstRounds": 40,
+          "EndPauseTime": 2.0
+        },
+        "CoverUseCount": 2,
+        "CoverTime": 3.0,
+        "CoverTimeFuzz": 1.0
+      },
+      "MovingFire": {
+        "bEnabled": true,
+        "PrePauseTime": 0.3,
+        "FiringPattern": {
+          "StartPauseTime": 0.25,
+          "BurstRounds": 20,
+          "BurstCount": 2,
+          "BurstPauseTime": 2.0,
+          "EndPauseTime": 3.0
+        },
+        "bFireWhileMovingToPreferredRange": true,
+        "MovingToPreferredRangeNoFireTime": 0.5,
+        "MovingToPreferredRangeFireTime": 5.0
+      },
+      "SuppressingFire": {
+        "Duration": "ESuppressingFireDuration::Long"
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::Medium",
+        "SearchMode": "ELostTargetSearchMode::RepositionSearch"
+      },
+      "RangeBehavior": {
+        "Near": {
+          "CoverWeight": 0.4,
+          "RangeWeight": 0.6
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.4,
+          "RangeWeight": 0.6
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.6,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.4
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "BackwardWeight": 0.5,
+            "ForwardWeight": 0.0
+          },
+          "PreferredRange": {
+            "StationaryWeight": 0.6,
+            "BackwardWeight": 0.05,
+            "ForwardWeight": 0.05,
+            "StrafeWeight": 0.3
+          },
+          "TooFar": {
+            "StationaryWeight": 0.3,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.5,
+            "StrafeWeight": 0.2
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction CompanionRangedDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/CompanionRangedDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 5.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1000.0,
+        "PreferredMaxRange": 1500.0,
+        "AbsoluteRangeBuffer": 500.0
+      }
+    }
+  }
+]

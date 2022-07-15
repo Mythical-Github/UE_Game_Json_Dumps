@@ -1,0 +1,358 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DST_Mine_Concussive_BP_C",
+    "Super": "DST_Mine_Base_BP_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript DST_Mine_Concussive_BP_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler DST_Mine_Concussive_BP_C:InheritableComponentHandler",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass DST_Mine_Base_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Abstract/DST_Mine_Base_BP.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DST_Mine_Concussive_BP_C Default__DST_Mine_Concussive_BP_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.1"
+    }
+  },
+  {
+    "Type": "DST_Mine_Concussive_BP_C",
+    "Name": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "Default__DST_Mine_Base_BP_C",
+    "Properties": {
+      "LightColor": {
+        "B": 129,
+        "G": 244,
+        "R": 255,
+        "A": 0,
+        "Hex": "FFF481"
+      },
+      "TrapAudioComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass Trap_Sound_ThermalMine_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/OCL/Trap_Sound_ThermalMine.0"
+      },
+      "DestructibleAudioComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass dst_mine_thermal_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/Destructibles/dst_mine_thermal.0"
+      },
+      "ImpactDataSet": null,
+      "DamageDescription": {
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+          "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+        },
+        "GuaranteedStatusEffects": [
+          {
+            "ObjectName": "BlueprintGeneratedClass CE_Knockback_Trap_Box_C",
+            "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockback/CE_Knockback_Trap_Box.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass CE_Concuss_Destructible_C",
+            "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss_Destructible.0"
+          }
+        ],
+        "BaseDamage": 125.0,
+        "InnerRadius": 525.0,
+        "OuterRadius": 700.0
+      },
+      "DamageLevelScaler": {
+        "bScaleBaseDamage": true,
+        "BaseDamageCurve": {
+          "ExternalCurve": {
+            "ObjectName": "CurveFloat MineDamageCurve",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/MineDamageCurve.0"
+          }
+        }
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent Default__DST_Mine_Concussive_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.9"
+      },
+      "IDComponent": {
+        "ObjectName": "ObsidianIDComponent Default__DST_Mine_Concussive_BP_C:ObsidianIDComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.6"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent Default__DST_Mine_Concussive_BP_C:StaticMeshComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.13"
+      },
+      "HealthComponent": {
+        "ObjectName": "HealthComponent Default__DST_Mine_Concussive_BP_C:HealthComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.3"
+      },
+      "DetonationPoint": {
+        "ObjectName": "SceneComponent Default__DST_Mine_Concussive_BP_C:DetonationPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.8"
+      },
+      "TargetableComponent": {
+        "ObjectName": "TargetableComponent Default__DST_Mine_Concussive_BP_C:TargetableComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.14"
+      },
+      "ShoutComponent": {
+        "ObjectName": "DestructibleShoutComponent Default__DST_Mine_Concussive_BP_C:ShoutComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.2"
+      },
+      "NavModComponent": {
+        "ObjectName": "IndianaNavModifierComponent Default__DST_Mine_Concussive_BP_C:NavModifier",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.4"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__DST_Mine_Concussive_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "DestructibleShoutComponent",
+    "Name": "ShoutComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "ShoutComponent"
+  },
+  {
+    "Type": "HealthComponent",
+    "Name": "HealthComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "HealthComponent"
+  },
+  {
+    "Type": "IndianaNavModifierComponent",
+    "Name": "NavModifier",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "NavModifier"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "DST_Mine_Concussive_BP_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class PointLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PointLightComponent DST_Mine_Concussive_BP_C:PointLight_GEN_VARIABLE",
+            "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass DST_Mine_Base_BP_C",
+              "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Abstract/DST_Mine_Base_BP.1"
+            },
+            "SCSVariableName": "PointLight",
+            "AssociatedGuid": "1B550C8F-4F527785-C11E5EBE-45747D30"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": true,
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "SoftSourceRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "IntensityUnits",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "AttenuationRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDrawDistance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "MaxDistanceFadeRange",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bUseTemperature",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Intensity",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CastDynamicShadows",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class PointLightComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ObsidianIDComponent",
+    "Name": "ObsidianIDComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "ObsidianIDComponent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Outer": "DST_Mine_Concussive_BP_C",
+    "Template": "PointLight_GEN_VARIABLE",
+    "Properties": {
+      "Temperature": 6500.0,
+      "MaxDrawDistance": 6500.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 35.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DetonationPoint",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "DetonationPoint",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__DST_Mine_Concussive_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "SceneComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "DST_Mine_Concussive_BP_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent DST_Mine_Concussive_BP_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.10"
+      },
+      "VariableGuid": "D24DADCA-43F23C15-B92848BE-FC441F66",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "DST_Mine_Concussive_BP_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node DST_Mine_Concussive_BP_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "StaticMeshComponent",
+    "Properties": {
+      "OverrideMaterials": [
+        null,
+        {
+          "ObjectName": "Material Mine_Active",
+          "ObjectPath": "Indiana/Content/Blueprints/World/Hazards/PreviewMaterials/Mine_Active.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant TrapHazard_Mine_Ring_PHYS_Mat",
+          "ObjectPath": "Indiana/Content/Art/ENV/Props/Interact/TrapHazard/Proxy_Mine/TrapHazard_Mine_Ring_PHYS_Mat.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__DST_Mine_Concussive_BP_C:SceneComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/Destructibles/Mines/DST_Mine_Concussive_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "TargetableComponent",
+    "Name": "TargetableComponent",
+    "Outer": "Default__DST_Mine_Concussive_BP_C",
+    "Template": "TargetableComponent"
+  }
+]

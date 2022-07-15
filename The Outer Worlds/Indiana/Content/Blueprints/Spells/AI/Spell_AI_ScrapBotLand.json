@@ -1,0 +1,202 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_AI_ScrapBotLand_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_AI_ScrapBotLand_C Default__Spell_AI_ScrapBotLand_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.1"
+    }
+  },
+  {
+    "Type": "Spell_AI_ScrapBotLand_C",
+    "Name": "Default__Spell_AI_ScrapBotLand_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnLanded Default__Spell_AI_ScrapBotLand_C:OnLanded_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.6"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::AOE",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_ScrapBotKnockback_C Default__Spell_AI_ScrapBotLand_C:CE_ScrapBotKnockback_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.2"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_AI_ScrapBotLand_C:SpellConditional_IsHostileToCaster_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.8"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": {
+                  "ObjectName": "SphereShape Default__Spell_AI_ScrapBotLand_C:SphereShape_0",
+                  "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.9"
+                },
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": true,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "pelvis_JNT",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_ScrapBotKnockback_C",
+    "Name": "CE_ScrapBotKnockback_C_0",
+    "Outer": "Default__Spell_AI_ScrapBotLand_C",
+    "Template": "Default__CE_ScrapBotKnockback_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Spell_AI_ScrapBotLand_C:CE_ScrapBotKnockback_C_0.PushDisableStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.7"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Spell_AI_ScrapBotLand_C:CE_ScrapBotKnockback_C_0.DamageStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.4"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_AI_ScrapBotLand_C:CE_ScrapBotKnockback_C_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.5"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateKnockback"
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_1",
+    "Outer": "CE_ScrapBotKnockback_C_0",
+    "Properties": {
+      "DamageValuePercent": 10.0,
+      "DamageValueType": "EDamageValueType::Percent",
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "CE_ScrapBotKnockback_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_AI_ScrapBotLand_C:CE_ScrapBotKnockback_C_0.EventEffects_1.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_ScrapBotLand.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnLanded",
+    "Name": "OnLanded_1",
+    "Outer": "Default__Spell_AI_ScrapBotLand_C",
+    "Properties": {
+      "MinFallDistance": 100.0
+    }
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_1",
+    "Outer": "CE_ScrapBotKnockback_C_0",
+    "Properties": {
+      "PushSpeed": 900.0,
+      "PushSpeedZ": 400.0,
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Knockback"
+      },
+      "bRotateToFace": true,
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 1.0
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__Spell_AI_ScrapBotLand_C"
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_AI_ScrapBotLand_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 1000.0
+      }
+    }
+  }
+]

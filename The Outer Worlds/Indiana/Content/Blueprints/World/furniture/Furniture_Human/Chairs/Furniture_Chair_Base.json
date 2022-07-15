@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "Furniture_Chair_Base_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Initiator",
+    "Outer": "CanInteract",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class IndianaCharacter",
+      "ObjectPath": "/Script/Indiana"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanInteract",
+    "Outer": "Furniture_Chair_Base_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty Furniture_Chair_Base_C:CanInteract.Initiator",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.1"
+      },
+      {
+        "ObjectName": "StructProperty Furniture_Chair_Base_C:CanInteract.Payload",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.12"
+      },
+      {
+        "ObjectName": "BoolProperty Furniture_Chair_Base_C:CanInteract.ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.5"
+      }
+    ],
+    "FunctionFlags": 1547698176
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Furniture_Chair_Base_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Furniture_Chair_Base_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FurnitureActor",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function Furniture_Chair_Base_C:CanInteract",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.2"
+      },
+      {
+        "ObjectName": "Function Furniture_Chair_Base_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.0"
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function Furniture_Chair_Base_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.0"
+      },
+      "CanInteract": {
+        "ObjectName": "Function Furniture_Chair_Base_C:CanInteract",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.2"
+      }
+    },
+    "ClassFlags": 8652817,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Furniture_Chair_Base_C Default__Furniture_Chair_Base_C",
+      "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.4"
+    }
+  },
+  {
+    "Type": "Furniture_Chair_Base_C",
+    "Name": "Default__Furniture_Chair_Base_C",
+    "Properties": {
+      "IDComponent": {
+        "ObjectName": "ObsidianIDComponent Default__Furniture_Chair_Base_C:ObsidianIDComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.7"
+      },
+      "FurnitureComponent": {
+        "ObjectName": "FurnitureComponent Default__Furniture_Chair_Base_C:FurnitureComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.6"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__Furniture_Chair_Base_C:SceneComp",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "ReturnValue",
+    "Outer": "CanInteract",
+    "PropertyFlags": 1408,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FurnitureComponent",
+    "Name": "FurnitureComponent",
+    "Outer": "Default__Furniture_Chair_Base_C",
+    "Properties": {
+      "InterestType": {
+        "TagName": "Interest.Chair"
+      },
+      "AnimationData": [
+        {
+          "AssetPathName": "/Game/Blueprints/AI/Test/Furniture/Humans/SitChair.SitChair",
+          "SubPathString": ""
+        }
+      ],
+      "MinDuration": 45.0,
+      "MaxDuration": 180.0,
+      "MaxCoolDown": 15.0,
+      "PrecomputedSkeletonMap": {
+        "/Game/Art/CHAR/Base_Human/Base_Male/SK_BAS_TP_001_M_Skeleton.SK_BAS_TP_001_M_Skeleton": {
+          "AssetPathName": "/Game/Art/CHAR/Base_Human/Base_Male/SK_BAS_TP_001_M_Skeleton",
+          "SubPathString": "\u0000\u0000\u0000\u0000:\u0000\u0000\u0000\u0000\u0000\u0000"
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__Furniture_Chair_Base_C:SceneComp",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.8"
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ObsidianIDComponent",
+    "Name": "ObsidianIDComponent",
+    "Outer": "Default__Furniture_Chair_Base_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComp",
+    "Outer": "Default__Furniture_Chair_Base_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Furniture_Chair_Base_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Furniture_Chair_Base_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.9"
+      },
+      "VariableGuid": "102EF80B-44F4E287-1C8435A6-AAE54968",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Furniture_Chair_Base_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Furniture_Chair_Base_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/World/furniture/Furniture_Human/Chairs/Furniture_Chair_Base.10"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Payload",
+    "Outer": "CanInteract",
+    "PropertyFlags": 134218134,
+    "Struct": {
+      "ObjectName": "ScriptStruct InteractPayload",
+      "ObjectPath": "/Script/Indiana"
+    }
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "XFH_Spell_ModEffect_ReflexPhobiaAmp_C Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.1"
+    }
+  },
+  {
+    "Type": "XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+    "Name": "Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+    "Properties": {
+      "EventCooldown": 30.0,
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnReceiveDamage Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:OnReceiveDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.7"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Terrify_C Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.4"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsHostileToCaster Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:SpellConditional_IsHostileToCaster_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.8"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_2",
+    "Outer": "CE_Terrify_C_0",
+    "Template": "AnimDisableStatusEffect_2"
+  },
+  {
+    "Type": "CastSpellStatusEffect",
+    "Name": "CastSpellStatusEffect_0",
+    "Outer": "CE_Terrify_C_0",
+    "Template": "CastSpellStatusEffect_0"
+  },
+  {
+    "Type": "CE_Terrify_C",
+    "Name": "CE_Terrify_C_0",
+    "Outer": "Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+    "Template": "Default__CE_Terrify_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0.AnimDisableStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.2"
+        },
+        {
+          "ObjectName": "CastSpellStatusEffect Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0.CastSpellStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.9"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.6"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Terrify_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C:CE_Terrify_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ModEffects/XFH_Spell_ModEffect_ReflexPhobiaAmp.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnReceiveDamage",
+    "Name": "OnReceiveDamage_0",
+    "Outer": "Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C",
+    "Properties": {
+      "WeaponTypes": [
+        "WeaponCategory.Melee"
+      ],
+      "CreatureTypes": [
+        "CreatureType.Creature",
+        "CreatureType.Humanoid",
+        "CreatureType.SmplCrea"
+      ],
+      "bAllowInanimateObjects": false
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__XFH_Spell_ModEffect_ReflexPhobiaAmp_C"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Terrify_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  }
+]

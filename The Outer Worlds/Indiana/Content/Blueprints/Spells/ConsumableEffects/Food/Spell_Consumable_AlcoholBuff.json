@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Consumable_AlcoholBuff_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Consumable_AlcoholBuff_C Default__Spell_Consumable_AlcoholBuff_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.1"
+    }
+  },
+  {
+    "Type": "Spell_Consumable_AlcoholBuff_C",
+    "Name": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Self",
+          "StatusEffects": [
+            {
+              "ObjectName": "StatusEffectRemove Default__Spell_Consumable_AlcoholBuff_C:StatusEffectRemove_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.7"
+            },
+            {
+              "ObjectName": "CE_AlcoholBuff_C Default__Spell_Consumable_AlcoholBuff_C:CE_AlcoholBuff_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.2"
+            },
+            {
+              "ObjectName": "CE_Hangover_Wait_C Default__Spell_Consumable_AlcoholBuff_C:CE_Hangover_Wait_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.3"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Consumable_AlcoholBuff_C:SpellConditional_HasStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.4"
+            },
+            {
+              "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Consumable_AlcoholBuff_C:SpellConditional_HasStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.5"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_AlcoholBuff_C",
+    "Name": "CE_AlcoholBuff_C_0",
+    "Outer": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Template": "Default__CE_AlcoholBuff_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Consumable_AlcoholBuff_C:CE_AlcoholBuff_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/ConsumableEffects/Food/Spell_Consumable_AlcoholBuff.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_Hangover_Wait_C",
+    "Name": "CE_Hangover_Wait_C_0",
+    "Outer": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Template": "Default__CE_Hangover_Wait_C",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::AddDurationIfAlreadyApplied",
+      "MaxDuration": 600.0
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_0",
+    "Outer": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass INX2_CE_BrownVodkaBlues_C",
+        "ObjectPath": "Indiana/Content/INX2_Content/INX2_Blueprints/StatusEffects/INX2_CE_BrownVodkaBlues.0"
+      },
+      "Operator": "ComparisonOperator::LessThan"
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_1",
+    "Outer": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass INX2_CE_BrownVodkaWillies_C",
+        "ObjectPath": "Indiana/Content/INX2_Content/INX2_Blueprints/StatusEffects/INX2_CE_BrownVodkaWillies.0"
+      },
+      "Operator": "ComparisonOperator::LessThan"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_AlcoholBuff_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__Spell_Consumable_AlcoholBuff_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Hangover_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Alcohol/CE_Hangover.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bDontDisplayDescription": true
+    }
+  }
+]

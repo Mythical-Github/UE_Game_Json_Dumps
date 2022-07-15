@@ -1,0 +1,222 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CQ_Nyoka_Animal_Gland_C",
+    "SuperStruct": {
+      "ObjectName": "Class QuestItem",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 2365456,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CQ_Nyoka_Animal_Gland_C Default__CQ_Nyoka_Animal_Gland_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Item/QuestItem/CQ_Nyoka_Animal_Gland.1"
+    }
+  },
+  {
+    "Type": "CQ_Nyoka_Animal_Gland_C",
+    "Name": "Default__CQ_Nyoka_Animal_Gland_C",
+    "Properties": {
+      "ItemMesh": {
+        "AssetPathName": "/Game/Art/ENV/Props/Interact/Quest/Env_Quest_PheromoneGland/Env_Quest_PheromoneGland.Env_Quest_PheromoneGland",
+        "SubPathString": ""
+      },
+      "LootableCondition": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::QuestState",
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "CQ_Nyoka_Quest_Stage"
+            },
+            "Value": 20
+          },
+          "BaseQuestStateCondition": {
+            "QuestReference": {
+              "ID": "9243CD42-236C4A8F-918153CD-9DEE54CE"
+            },
+            "ComparisonState": "EQuestState::InProgress"
+          },
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::And",
+              "ConditionalType": "EConditionalType::GlobalVar",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": "CQ_Nyoka_GlandsCollectedCount"
+                },
+                "Operator": "EGlobalVariableComparison::LessThan",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 3,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "5A596F11-AE594411-86DBA465-74D91E66"
+                },
+                "Operator": "EEqualityComparison::NotEqual",
+                "ComparisonState": "EQuestState::Completed",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX1",
+                "bDefault": false
+              }
+            }
+          ]
+        },
+        "AdditionalExpressions": [
+          {
+            "Operator": "ELogicalOperator::And",
+            "Expression": {
+              "ConditionalType": "EConditionalType::GlobalVar",
+              "BaseCondition": {
+                "GlobalVariable": {
+                  "DisplayName": "CQ_Nyoka_SpokeToNyokaStage2"
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 1,
+                "bDefault": false
+              },
+              "BaseQuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "BaseCompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "BasePCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "BaseDLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX1",
+                "bDefault": false
+              },
+              "AdditionalConditions": []
+            }
+          },
+          {
+            "Operator": "ELogicalOperator::And",
+            "Expression": {
+              "ConditionalType": "EConditionalType::GlobalVar",
+              "BaseCondition": {
+                "GlobalVariable": {
+                  "DisplayName": "CQ_Nyoka_SpokeAfterGettingGlands"
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "BaseQuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "BaseCompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "BasePCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "BaseDLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX1",
+                "bDefault": false
+              },
+              "AdditionalConditions": [
+                {
+                  "Operator": "ELogicalOperator::And",
+                  "ConditionalType": "EConditionalType::GlobalVar",
+                  "Condition": {
+                    "GlobalVariable": {
+                      "DisplayName": "CQ_Nyoka_GlandsCollectedCount"
+                    },
+                    "Operator": "EGlobalVariableComparison::LessThan",
+                    "OtherGlobalVariable": {
+                      "DisplayName": ""
+                    },
+                    "Value": 3,
+                    "bDefault": false
+                  },
+                  "QuestStateCondition": {
+                    "QuestReference": {
+                      "ID": "00000000-00000000-00000000-00000000"
+                    },
+                    "Operator": "EEqualityComparison::Equal",
+                    "ComparisonState": "EQuestState::Invalid",
+                    "bDefault": false
+                  },
+                  "CompanionStateCondition": {
+                    "CompanionToCheck": "ESpecialObsidianID::None",
+                    "Operator": "EEqualityComparison::Equal",
+                    "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                    "bDefault": false
+                  },
+                  "PCGenderCondition": {
+                    "Operator": "EEqualityComparison::Equal",
+                    "ComparisonGender": "EGender::Male",
+                    "bDefault": false
+                  },
+                  "DLCInstalledCondition": {
+                    "DLCToCheck": "EDLCType::INX1",
+                    "bDefault": false
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Name": {
+        "StringID": 2974
+      },
+      "Description": {
+        "StringID": 2975
+      },
+      "UIImage": {
+        "ObjectName": "Texture2D q_PheremoneGland120",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/InventoryItems/q_PheremoneGland120.0"
+      },
+      "BaseValue": 100
+    }
+  }
+]

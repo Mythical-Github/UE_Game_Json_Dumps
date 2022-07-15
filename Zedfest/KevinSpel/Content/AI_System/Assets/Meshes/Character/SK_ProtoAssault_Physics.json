@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_ProtoAssault_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup SK_ProtoAssault_Physics:SkeletalBodySetup_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Meshes/Character/SK_ProtoAssault_Physics.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup SK_ProtoAssault_Physics:SkeletalBodySetup_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Meshes/Character/SK_ProtoAssault_Physics.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate SK_ProtoAssault_Physics:PhysicsConstraintTemplate_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Meshes/Character/SK_ProtoAssault_Physics.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_ProtoAssault_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Ranged_Weapon_Handle",
+        "ConstraintBone1": "Ranged_Weapon_Handle",
+        "ConstraintBone2": "b_AR_Root",
+        "Pos2": {
+          "X": 10.319321,
+          "Y": -2.024952,
+          "Z": -1.028984
+        },
+        "PriAxis2": {
+          "X": 1.7881393E-07,
+          "Y": -0.99999994,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": 0.99999994,
+          "Y": 1.7881393E-07,
+          "Z": -0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_ProtoAssault_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -4.499987,
+              "Y": -1.2325301,
+              "Z": 4.681546
+            },
+            "Rotation": {
+              "Pitch": -6.830189E-06,
+              "Yaw": 78.897934,
+              "Roll": -95.58851
+            },
+            "Radius": 9.692543,
+            "Length": 14.717676,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "b_AR_Root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DCB7183F4BF3EC0618E76B8E992221D0"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_ProtoAssault_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.1352827,
+              "Y": 25.401533,
+              "Z": 5.208128
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -179.96613,
+              "Roll": -84.994934
+            },
+            "Radius": 14.4982,
+            "Length": 25.537998,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "Ranged_Weapon_Handle",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "72285B2C495B21A6EA57EBA2A03D110F"
+  }
+]

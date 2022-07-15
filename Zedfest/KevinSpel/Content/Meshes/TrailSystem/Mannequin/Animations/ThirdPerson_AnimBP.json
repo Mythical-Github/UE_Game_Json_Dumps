@@ -1,0 +1,896 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ThirdPerson_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpEnd",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton UE4_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.0"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_EA982A1F4C5300ED41A13CAD26E05A19",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.32"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_EB26C4B44509776D1C9FA6991E047C32",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.33"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+            "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.31"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.0"
+      },
+      {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.18"
+      },
+      {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.19"
+      },
+      {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.11"
+      },
+      {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.5"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.3"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.31"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_EB26C4B44509776D1C9FA6991E047C32",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.33"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.34"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_TransitionResult_EA982A1F4C5300ED41A13CAD26E05A19",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.32"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.25"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.29"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.24"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.28"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.23"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.27"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.22"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.30"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.26"
+      },
+      {
+        "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.10"
+      },
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.17"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ThirdPerson_AnimBP": {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.5"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.11"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF": {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E": {
+        "ObjectName": "Function ThirdPerson_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.18"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ThirdPerson_AnimBP_C Default__ThirdPerson_AnimBP_C",
+      "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.2"
+    }
+  },
+  {
+    "Type": "ThirdPerson_AnimBP_C",
+    "Name": "Default__ThirdPerson_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_EB26C4B44509776D1C9FA6991E047C32": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_EA982A1F4C5300ED41A13CAD26E05A19": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPerson_Jump",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Loop",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPersonJump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.75,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Start",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPersonJump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D ThirdPerson_IdleRun_2D",
+          "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_IdleRun_2D.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_6245415D43FCCBD818C7DD8DCFD4FBC8",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.4"
+      },
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.13"
+      },
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.14"
+      },
+      {
+        "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.8"
+      },
+      {
+        "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_Less_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.9"
+      },
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.16"
+      },
+      {
+        "ObjectName": "ObjectProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.21"
+      },
+      {
+        "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.7"
+      },
+      {
+        "ObjectName": "StructProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.35"
+      },
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.15"
+      },
+      {
+        "ObjectName": "ObjectProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.20"
+      },
+      {
+        "ObjectName": "BoolProperty ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.6"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty ThirdPerson_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Meshes/TrailSystem/Mannequin/Animations/ThirdPerson_AnimBP.12"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ThirdPerson_AnimBP_AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_02DCCD344B15638E3A268A84A40F216E",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_42CC18D944758414A1674994127217DE",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7F3D9C864B693C7A42B6BE9C6E030836",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A0CF690444C363144EC28B95406387AA",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_4DC365404548467BD671AEB325E4717D",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_046F1C2548286DB7421A07BCB8B9830E",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1EBEFD1E44C9887ACE06AC8147E389E1",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_297D99FF44D47FD485B4F89D8011EE52",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7618737141064086BB77CBB9D5CD2D59",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_175FFF54400CA0EC412B7083B0989D7E",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EA982A1F4C5300ED41A13CAD26E05A19",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EB26C4B44509776D1C9FA6991E047C32",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F867B5374C7EFB9ED9010FA7431019DF",
+    "Outer": "ThirdPerson_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_ThirdPerson_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

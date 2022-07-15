@@ -1,0 +1,167 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_SkillUnlock_Determination80_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_SkillUnlock_Determination80_C Default__Spell_SkillUnlock_Determination80_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Determination80.1"
+    }
+  },
+  {
+    "Type": "Spell_SkillUnlock_Determination80_C",
+    "Name": "Default__Spell_SkillUnlock_Determination80_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnCompanionKilled Default__Spell_SkillUnlock_Determination80_C:OnCompanionKilled_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Determination80.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Party",
+            "StatusEffects": [
+              {
+                "ObjectName": "ArmorStatusEffect Default__Spell_SkillUnlock_Determination80_C:ArmorStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Determination80.2"
+              },
+              {
+                "ObjectName": "StatModifierStatusEffect Default__Spell_SkillUnlock_Determination80_C:StatModifierStatusEffect_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Determination80.4"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ArmorStatusEffect",
+    "Name": "ArmorStatusEffect_0",
+    "Outer": "Default__Spell_SkillUnlock_Determination80_C",
+    "Properties": {
+      "Modifiers": [
+        {
+          "EffectedBodyParts": [
+            "BodyPart.Head",
+            "BodyPart.LeftArm",
+            "BodyPart.LeftLeg",
+            "BodyPart.RightArm",
+            "BodyPart.RightLeg",
+            "BodyPart.Torso"
+          ],
+          "DamageTypes": [],
+          "DamageThreshold": 0,
+          "DamageThresholdPercent": 1.5,
+          "DamageResistance": 0,
+          "DamageResistancePercent": 1.0
+        }
+      ],
+      "Duration": 10.0,
+      "EffectName": {
+        "StringID": 1602
+      },
+      "EffectDescription": {
+        "StringID": 1603
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_DamageAndArmor",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_DamageAndArmor.0"
+      },
+      "DescriptionFormat": {
+        "StringID": 1604
+      }
+    }
+  },
+  {
+    "Type": "OnCompanionKilled",
+    "Name": "OnCompanionKilled_0",
+    "Outer": "Default__Spell_SkillUnlock_Determination80_C"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__Spell_SkillUnlock_Determination80_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "Duration": 10.0,
+      "DescriptionFormat": {
+        "StringID": 1664
+      },
+      "bAppendDescriptionToPrevious": true
+    }
+  }
+]

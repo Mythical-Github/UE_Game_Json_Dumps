@@ -1,0 +1,251 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "ConversationTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector ConversationTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_CheckBooleanSelector",
+    "Name": "BT_Con_General_CheckBooleanSelector_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "BooleanSelector": {
+        "AIBool": {
+          "ObjectName": "Class Conversation_ShouldTeleport",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Should Teleport?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_Follow_ClearTeleportFlag",
+    "Name": "BT_Scr_Follow_ClearTeleportFlag_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "ScriptExecutionType": "EAIScriptExecutionType::OnExit",
+      "NodeName": "Clear Teleport Flag",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_DisableNavWalking",
+    "Name": "BT_Scr_General_DisableNavWalking_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ConversationTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_Teleport",
+    "Name": "BT_Scr_General_Teleport_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "TeleportLocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class Conversation_TeleportLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "TeleportRotationSelector": {
+        "AIFValue": {
+          "ObjectName": "Class Conversation_TeleportRotation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "NodeName": "Teleport",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_DisableNavWalking ConversationTree:BT_Scr_General_DisableNavWalking_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Script ConversationTree:BTTask_Script_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess ConversationTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.7"
+            },
+            {
+              "ObjectName": "BT_Con_General_CheckBooleanSelector ConversationTree:BT_Con_General_CheckBooleanSelector_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.1"
+            },
+            {
+              "ObjectName": "BT_Scr_General_Teleport ConversationTree:BT_Scr_General_Teleport_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.4"
+            },
+            {
+              "ObjectName": "BT_Scr_Follow_ClearTeleportFlag ConversationTree:BT_Scr_Follow_ClearTeleportFlag_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait ConversationTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector ConversationTree:BTComposite_Selector_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_ConversationComplete",
+    "Name": "BTService_EventFirer_ConversationComplete_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Conversation Complete Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "BA48689A-42AEB705-E5260392-EDEBBFDD",
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_ConversationComplete ConversationTree:BTService_EventFirer_ConversationComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.8"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Script",
+    "Name": "BTTask_Script_0",
+    "Outer": "ConversationTree",
+    "Properties": {
+      "SaveGameTaskGuid": "0682042B-4D12DB16-E0AB0D97-F912B063",
+      "NodeName": "Teleport",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree ConversationTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence ConversationTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/OutOfCombat/ConversationTree.6"
+      }
+    }
+  }
+]

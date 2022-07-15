@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_1",
+    "Outer": "SM_HD_Marauder_Rapt_Conditional",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList Dreg_Small_Hard_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/Dreg/Size_Small/Dreg_Small_Hard_1.4"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "MSQ_0801_MonarchMistress"
+            },
+            "Operator": "EGlobalVariableComparison::LessThanEqual",
+            "Value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_2",
+    "Outer": "SM_HD_Marauder_Rapt_Conditional",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList Dreg_Small_Hard_3",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/Dreg/Size_Small/Dreg_Small_Hard_3.4"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "MSQ_0801_MonarchMistress"
+            },
+            "Operator": "EGlobalVariableComparison::LessThanEqual",
+            "Value": 3
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_3",
+    "Outer": "SM_HD_Marauder_Rapt_Conditional",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList Canid_3_Easy_MasterList",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/Canids/Canid_3_Easy_MasterList.5"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "MSQ_0801_MonarchMistress"
+            },
+            "Operator": "EGlobalVariableComparison::GreaterThan",
+            "Value": 3,
+            "bDefault": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterCompositionSubList",
+    "Name": "EncounterCompositionSubList_4",
+    "Outer": "SM_HD_Marauder_Rapt_Conditional",
+    "Properties": {
+      "SubEncounterList": {
+        "ObjectName": "EncounterList Canid_3_Easy_MasterList",
+        "ObjectPath": "Indiana/Content/Blueprints/Encounters/Canids/Canid_3_Easy_MasterList.5"
+      },
+      "ValidConditions": {
+        "BaseExpression": {
+          "BaseCondition": {
+            "GlobalVariable": {
+              "DisplayName": "MSQ_0801_MonarchMistress"
+            },
+            "Operator": "EGlobalVariableComparison::GreaterThan",
+            "Value": 3,
+            "bDefault": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "EncounterList",
+    "Name": "SM_HD_Marauder_Rapt_Conditional",
+    "Properties": {
+      "bPersist": true,
+      "EncounterCompositions": [
+        {
+          "ObjectName": "EncounterCompositionSubList SM_HD_Marauder_Rapt_Conditional:EncounterCompositionSubList_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/08_RW/Conditional/SM_HD_Marauder_Rapt_Conditional.0"
+        },
+        {
+          "ObjectName": "EncounterCompositionSubList SM_HD_Marauder_Rapt_Conditional:EncounterCompositionSubList_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/08_RW/Conditional/SM_HD_Marauder_Rapt_Conditional.1"
+        },
+        {
+          "ObjectName": "EncounterCompositionSubList SM_HD_Marauder_Rapt_Conditional:EncounterCompositionSubList_3",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/08_RW/Conditional/SM_HD_Marauder_Rapt_Conditional.2"
+        },
+        {
+          "ObjectName": "EncounterCompositionSubList SM_HD_Marauder_Rapt_Conditional:EncounterCompositionSubList_4",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/08_RW/Conditional/SM_HD_Marauder_Rapt_Conditional.3"
+        }
+      ],
+      "TotalWeight": 4
+    }
+  }
+]

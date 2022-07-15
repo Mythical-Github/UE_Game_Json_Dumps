@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_Knife_RibbonTrail_01",
+    "Properties": {
+      "Normal": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionNormalize_0",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionParticleColor_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Translucent",
+      "ShadingModel": "MSM_Unlit",
+      "Refraction": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionDynamicParameter_0",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "TwoSided": true,
+      "bUsedWithBeamTrails": true,
+      "bUsesDistortion": true,
+      "Expressions": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionDynamicParameter M_Knife_RibbonTrail_01:MaterialExpressionDynamicParameter_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.1"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Knife_RibbonTrail_01:MaterialExpressionTextureSampleParameter2D_1",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Knife_RibbonTrail_01:MaterialExpressionTextureSampleParameter2D_2",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Knife_RibbonTrail_01:MaterialExpressionTextureSampleParameter2D_3",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.4"
+        }
+      ],
+      "StateId": "D5054D42-46C2C0A1-A0849C86-E783F1F1",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionDynamicParameter",
+    "Name": "MaterialExpressionDynamicParameter_0",
+    "Outer": "M_Knife_RibbonTrail_01",
+    "Properties": {
+      "ParamNames": [
+        "Refraction Amount",
+        "Param2",
+        "Param3",
+        "Param4"
+      ],
+      "DefaultValue": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      },
+      "Material": {
+        "ObjectName": "Material M_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_1",
+    "Outer": "M_Knife_RibbonTrail_01",
+    "Properties": {
+      "ParameterName": "Emissive Map",
+      "ExpressionGUID": "F4626AAD-4ED9A932-93372C8B-EE12D899",
+      "Texture": {
+        "ObjectName": "Texture2D T_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Textures/T_Knife_RibbonTrail_01.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_2",
+    "Outer": "M_Knife_RibbonTrail_01",
+    "Properties": {
+      "ParameterName": "Normal Map Motion",
+      "ExpressionGUID": "0050E0A1-4323B608-04683AB1-A1C007C6",
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionPanner_0"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D T_NormalNoise_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Textures/T_NormalNoise_01.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Material": {
+        "ObjectName": "Material M_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_3",
+    "Outer": "M_Knife_RibbonTrail_01",
+    "Properties": {
+      "ParameterName": "Normal Map",
+      "ExpressionGUID": "106D7EFA-455F6760-2416D4A3-E01B7468",
+      "Texture": {
+        "ObjectName": "Texture2D T_Knife_RibbonTrail_Refraction_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Textures/T_Knife_RibbonTrail_Refraction_01.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Material": {
+        "ObjectName": "Material M_Knife_RibbonTrail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_Knife_RibbonTrail_01.0"
+      }
+    }
+  }
+]

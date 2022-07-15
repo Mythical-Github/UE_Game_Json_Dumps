@@ -1,0 +1,558 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "CowerBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.11"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_IsSeen",
+    "Name": "BT_Con_General_IsSeen_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "ActorSelector": {
+        "AIActor": {
+          "ObjectName": "Class General_PrimaryTarget",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bAllowGodVision": true,
+      "NodeName": "Is Target Seen?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Con_General_WithInDistance",
+    "Name": "BT_Con_General_WithInDistance_4",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "StartLocation": {
+        "AILocation": {
+          "ObjectName": "Class General_CurrentLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "EndLocation": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "Distance": 300.0,
+      "bInverseCondition": true,
+      "NodeName": "Not In hardcoded distance",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_EnableGodVision",
+    "Name": "BT_Scr_General_EnableGodVision_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "NodeName": "Enable God Vision",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_1",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "CompletionType": "EBehaviorStateCompletionType::Success",
+      "NodeName": "Behavior Success",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetBehaviorStateComplete",
+    "Name": "BT_Scr_General_SetBehaviorStateComplete_2",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "NodeName": "Behavior Complete",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_SetCowering",
+    "Name": "BT_Scr_General_SetCowering_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "NodeName": "Set Cowering",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_General_ToggleMovementOptimizations",
+    "Name": "BT_Scr_General_ToggleMovementOptimizations_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "NodeName": "Optimize",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BT_Scr_SetMovementState",
+    "Name": "BT_Scr_SetMovementState_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "MovementState": "EAIMovementState::Run",
+      "NodeName": "Run",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_4",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Indiana_PlayAnimation CowerBehaviorTree:BTTask_Indiana_PlayAnimation_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.19"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CowerBehaviorTree:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.14"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete CowerBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.4"
+            },
+            {
+              "ObjectName": "BT_Scr_General_SetCowering CowerBehaviorTree:BT_Scr_General_SetCowering_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.6"
+            },
+            {
+              "ObjectName": "BT_Scr_General_EnableGodVision CowerBehaviorTree:BT_Scr_General_EnableGodVision_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.3"
+            },
+            {
+              "ObjectName": "BT_Scr_General_ToggleMovementOptimizations CowerBehaviorTree:BT_Scr_General_ToggleMovementOptimizations_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaWait CowerBehaviorTree:BTTask_IndianaWait_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.22"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_General_SetBehaviorStateComplete CowerBehaviorTree:BT_Scr_General_SetBehaviorStateComplete_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector CowerBehaviorTree:BTComposite_Selector_1",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Scr_SetMovementState CowerBehaviorTree:BT_Scr_SetMovementState_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop CowerBehaviorTree:BTDecorator_Loop_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector CowerBehaviorTree:BTComposite_Selector_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaRunEQSQuery CowerBehaviorTree:BTTask_IndianaRunEQSQuery_3",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CowerBehaviorTree:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.16"
+            },
+            {
+              "ObjectName": "BT_Con_General_IsSeen CowerBehaviorTree:BT_Con_General_IsSeen_0",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_IndianaMoveTo CowerBehaviorTree:BTTask_IndianaMoveTo_6",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess CowerBehaviorTree:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.15"
+            },
+            {
+              "ObjectName": "BT_Con_General_WithInDistance CowerBehaviorTree:BT_Con_General_WithInDistance_4",
+              "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_4",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.12"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EventFirer_CowerComplete",
+    "Name": "BTService_EventFirer_CowerComplete_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "Interval": 0.001,
+      "RandomDeviation": 0.0,
+      "NodeName": "Cower Complete Event",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Indiana_PlayAnimation",
+    "Name": "BTTask_Indiana_PlayAnimation_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "AnimationToPlay": {
+        "Object": {
+          "ObjectName": "Class AI_CowerAnimation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bLoop": true,
+      "LoopCondition": {
+        "AIBool": {
+          "ObjectName": "Class Cower_ShouldCower",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "bAnimationOptional": true,
+      "MinPlayRate": 0.9,
+      "MaxPlayRate": 1.1,
+      "SaveGameTaskGuid": "982DF182-42C6EE38-2D11BE84-F8B30C62",
+      "NodeName": "Cower",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaMoveTo",
+    "Name": "BTTask_IndianaMoveTo_6",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "BlockedResponse": "EMoveToResultResponse::ExitTask",
+      "SaveGameTaskGuid": "A6A4867B-4D04D202-63DE2DB4-592989FA",
+      "Services": [
+        {
+          "ObjectName": "BTService_EventFirer_CowerComplete CowerBehaviorTree:BTService_EventFirer_CowerComplete_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.18"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaRunEQSQuery",
+    "Name": "BTTask_IndianaRunEQSQuery_3",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "EQSRequest": {
+        "ObjectName": "EQSRequest_IndianaBase DynamicFlee",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Requests/DynamicFlee.0"
+      },
+      "LocationSelector": {
+        "AILocation": {
+          "ObjectName": "Class General_MoveLocation",
+          "ObjectPath": "/Script/Indiana"
+        }
+      },
+      "SaveGameTaskGuid": "6E8AD224-4D6C0EE5-C1A1FFAC-FE314856",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_6",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_IndianaWait",
+    "Name": "BTTask_IndianaWait_0",
+    "Outer": "CowerBehaviorTree",
+    "Properties": {
+      "WaitTime": -1.0,
+      "SaveGameTaskGuid": "89347BA9-4FD57C61-D4F54BB9-2F1B3270",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree CowerBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence CowerBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/CowerBehaviorTree.10"
+      }
+    }
+  }
+]

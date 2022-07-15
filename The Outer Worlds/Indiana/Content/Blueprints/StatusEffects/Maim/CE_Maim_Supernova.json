@@ -1,0 +1,124 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Maim_Supernova_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Maim_Supernova_C Default__CE_Maim_Supernova_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.1"
+    }
+  },
+  {
+    "Type": "CE_Maim_Supernova_C",
+    "Name": "Default__CE_Maim_Supernova_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Maim_Post_Process_C Default__CE_Maim_Supernova_C:CE_Maim_Post_Process_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Maim_Supernova_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.6"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Maim_Supernova_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bIsHostile": true,
+      "bRemoveWithSpell": false,
+      "bSavePermanentStatusEffect": true,
+      "EffectName": {
+        "StringID": 29
+      },
+      "EffectDescription": {
+        "StringID": 1118
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Maim_Supernova_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.5"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_MaimArm",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_MaimArm.0"
+      },
+      "bDontDisplayNameInDescription": true
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_Maim_Supernova_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Maim"
+      },
+      "bRemoveWithSpell": false,
+      "EffectName": {
+        "StringID": 136
+      }
+    }
+  },
+  {
+    "Type": "CE_Maim_Post_Process_C",
+    "Name": "CE_Maim_Post_Process_C_0",
+    "Outer": "Default__CE_Maim_Supernova_C",
+    "Template": "Default__CE_Maim_Post_Process_C",
+    "Properties": {
+      "Duration": 3.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateMaim"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Maim_Supernova_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Maim_Supernova_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Maim/CE_Maim_Supernova.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Maim_Supernova_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false
+    }
+  }
+]

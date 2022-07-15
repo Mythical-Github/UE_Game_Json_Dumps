@@ -1,0 +1,63 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Raptidon_Spit_Visuals_C",
+    "SuperStruct": {
+      "ObjectName": "Class PrimaryWeaponVisuals",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10749968,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Raptidon_Spit_Visuals_C Default__Raptidon_Spit_Visuals_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Raptidon_Spit/Raptidon_Spit_Visuals.1"
+    }
+  },
+  {
+    "Type": "Raptidon_Spit_Visuals_C",
+    "Name": "Default__Raptidon_Spit_Visuals_C",
+    "Properties": {
+      "ReticleVisuals": {
+        "ObjectName": "ReticleVisualsDataAsset GenericRanged",
+        "ObjectPath": "Indiana/Content/UI/HUD/Reticle/GenericRanged.0"
+      },
+      "WeaponEvents": {
+        "EWeaponEvent::Fire": {
+          "ObjectName": "EventEffects Default__Raptidon_Spit_Visuals_C:EventEffects_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Raptidon_Spit/Raptidon_Spit_Visuals.2"
+        }
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__Raptidon_Spit_Visuals_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "PlayFxEventEffect Default__Raptidon_Spit_Visuals_C:EventEffects_0.PlayFxEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/NPC/Raptidon_Spit/Raptidon_Spit_Visuals.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayFxEventEffect",
+    "Name": "PlayFxEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Fx": {
+        "ObjectName": "ParticleSystem PS_Raptidon_Spit_Launch",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Creatures/Raptidon/PS_Raptidon_Spit_Launch.51"
+      },
+      "TargetMesh": "EMeshTarget::CurrentCharacterMesh",
+      "AttachSocketName": "VFX_Spit_Socket"
+    }
+  }
+]

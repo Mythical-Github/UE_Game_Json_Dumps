@@ -1,0 +1,551 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Properties": {
+      "Constant": 0.75
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceScaleOverLifeDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Falling_Snow:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.9"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Falling_Snow:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Falling_Snow:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.12"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity Falling_Snow:ParticleModuleVelocity_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Falling_Snow:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.6"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation Falling_Snow:ParticleModuleLocation_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.8"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation Falling_Snow:ParticleModuleRotation_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.10"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate Falling_Snow:ParticleModuleRotationRate_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.11"
+        },
+        {
+          "ObjectName": "ParticleModuleCollisionGPU Falling_Snow:ParticleModuleCollisionGPU_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu Falling_Snow:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.14"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Falling_Snow:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.13"
+      },
+      "PeakActiveParticles": 630184
+    }
+  },
+  {
+    "Type": "ParticleModuleCollisionGPU",
+    "Name": "ParticleModuleCollisionGPU_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "Resilience": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Falling_Snow:ParticleModuleCollisionGPU_0.ResilienceDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.0"
+        }
+      },
+      "ResilienceScaleOverLife": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Falling_Snow:ParticleModuleCollisionGPU_0.ResilienceScaleOverLifeDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.1"
+        }
+      },
+      "Response": "EParticleCollisionResponse::Kill",
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 13.0,
+        "MaxValue": 17.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            13.0,
+            17.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -15000.0,
+        "MaxValue": 25000.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -15000.0,
+            -15000.0,
+            -50.0,
+            25000.0,
+            13000.0,
+            50.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material SnowFlake_01",
+        "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/SnowFlake_01.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Falling_Snow:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.2"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 360.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            360.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "StartRotationRate": {
+        "MaxValue": 979.8394,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.0,
+            979.8394
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 3.0,
+        "MaxValue": 13.0,
+        "MinValueVec": {
+          "X": 3.0,
+          "Y": 3.0,
+          "Z": 3.0
+        },
+        "MaxValueVec": {
+          "X": 13.0,
+          "Y": 13.0,
+          "Z": 13.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            3.0,
+            3.0,
+            3.0,
+            13.0,
+            13.0,
+            13.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "Rate": {
+        "MinValue": 37000.0,
+        "MaxValue": 37000.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            37000.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Falling_Snow:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired Falling_Snow:ParticleModuleRequired_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.9"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn Falling_Snow:ParticleModuleSpawn_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.13"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired Falling_Snow:ParticleModuleRequired_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.9"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime Falling_Snow:ParticleModuleLifetime_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.7"
+          },
+          {
+            "ObjectName": "ParticleModuleSize Falling_Snow:ParticleModuleSize_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.12"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity Falling_Snow:ParticleModuleVelocity_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.15"
+          },
+          {
+            "ObjectName": "ParticleModuleLocation Falling_Snow:ParticleModuleLocation_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.8"
+          },
+          {
+            "ObjectName": "ParticleModuleRotation Falling_Snow:ParticleModuleRotation_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.10"
+          },
+          {
+            "ObjectName": "ParticleModuleRotationRate Falling_Snow:ParticleModuleRotationRate_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.11"
+          }
+        ],
+        "InvMaxSize": {
+          "X": 0.07692308,
+          "Y": 0.07692308
+        },
+        "InvRotationRateScale": 6.003385E-05,
+        "MaxLifetime": 17.0,
+        "MaxParticleCount": 630184,
+        "ScreenAlignment": "PSA_Square",
+        "bEnableCollision": true
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 255,
+            "Hex": "FF000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ColorBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 13.0,
+          "Y": 13.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionTimeBias": 1.1,
+        "CollisionRandomDistribution": 1.0,
+        "RotationRateScale": 16657.27,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -400.0,
+        "MaxValue": 100.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -50.0,
+            -50.0,
+            -400.0,
+            100.0,
+            100.0,
+            -550.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Falling_Snow",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Falling_Snow:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.4"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Falling_Snow",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Falling_Snow:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/Winter/LowPolySnowForest/Materials/Falling_Snow.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -11402.303,
+          "Y": -11395.235,
+          "Z": -3979.0242
+        },
+        "Max": {
+          "X": 11408.838,
+          "Y": 11427.831,
+          "Z": 263.08765
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

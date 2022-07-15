@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_0",
+    "Properties": {
+      "ParamName": "GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_RandLocationAroundTarget_Fly",
+    "Properties": {
+      "QueryName": "EQS_RandLocationAroundTarget_Fly",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_RandLocationAroundTarget_Fly:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundTarget_Fly.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQS_RandLocationAroundTarget_Fly",
+    "Properties": {
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_RandLocationAroundTarget_Fly:EnvQueryGenerator_SimpleGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundTarget_Fly.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "PostProjectionVerticalOffset": 128.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Geometry"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_RandLocationAroundTarget_Fly",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_RandLocationAroundTarget_Fly:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundTarget_Fly.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQS_RandLocationAroundTarget_Fly:EnvQueryTest_Overlap_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_RandLocationAroundTarget_Fly.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQS_RandLocationAroundTarget_Fly",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 20.0,
+        "ExtentY": 20.0,
+        "ExtentZ": 20.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 20.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Weapon_PrismaticHammer_PowerAtk_C Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.1"
+    }
+  },
+  {
+    "Type": "Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Name": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Cone",
+          "StatusEffects": [
+            {
+              "ObjectName": "DamageStatusEffect Default__Spell_Weapon_PrismaticHammer_PowerAtk_C:DamageStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.4"
+            },
+            {
+              "ObjectName": "Spell_Weapon_Prismatic_Hammer_Power_Visuals_C Default__Spell_Weapon_PrismaticHammer_PowerAtk_C:Spell_Weapon_Prismatic_Hammer_Power_Visuals_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.5"
+            },
+            {
+              "ObjectName": "CE_LightHitReactUseTimer_C Default__Spell_Weapon_PrismaticHammer_PowerAtk_C:CE_LightHitReactUseTimer_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.2"
+            },
+            {
+              "ObjectName": "CE_PrismaticHammer_GhostDebuff_C Default__Spell_Weapon_PrismaticHammer_PowerAtk_C:CE_PrismaticHammer_GhostDebuff_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.3"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_IsCompanion Default__Spell_Weapon_PrismaticHammer_PowerAtk_C:SpellConditional_IsCompanion_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_PrismaticHammer_PowerAtk.6"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 25.0,
+            "ConeAxis": "EConeAxis::Y",
+            "bInvertAxis": false,
+            "Radius": 1000.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "AimChest",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_LightHitReactUseTimer_C",
+    "Name": "CE_LightHitReactUseTimer_C_0",
+    "Outer": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Template": "Default__CE_LightHitReactUseTimer_C"
+  },
+  {
+    "Type": "CE_PrismaticHammer_GhostDebuff_C",
+    "Name": "CE_PrismaticHammer_GhostDebuff_C_0",
+    "Outer": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Template": "Default__CE_PrismaticHammer_GhostDebuff_C"
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_0",
+    "Outer": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Properties": {
+      "DamageValue": 75.0,
+      "DamageScalars": 57,
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "bAllDamageTypes": true,
+      "bMelee": true,
+      "DamageScalingStat": {
+        "ObjectName": "RpgStat PrismaticHammerDamage_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/PrismaticHammerDamage_Stat.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "Spell_Weapon_Prismatic_Hammer_Power_Visuals_C",
+    "Name": "Spell_Weapon_Prismatic_Hammer_Power_Visuals_C_0",
+    "Outer": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Template": "Default__Spell_Weapon_Prismatic_Hammer_Power_Visuals_C"
+  },
+  {
+    "Type": "SpellConditional_IsCompanion",
+    "Name": "SpellConditional_IsCompanion_0",
+    "Outer": "Default__Spell_Weapon_PrismaticHammer_PowerAtk_C",
+    "Properties": {
+      "bNot": true
+    }
+  }
+]

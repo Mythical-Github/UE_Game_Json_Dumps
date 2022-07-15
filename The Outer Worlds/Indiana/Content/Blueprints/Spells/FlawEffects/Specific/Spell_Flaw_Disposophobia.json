@@ -1,0 +1,207 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Flaw_Disposophobia_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Flaw_Disposophobia_C Default__Spell_Flaw_Disposophobia_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.1"
+    }
+  },
+  {
+    "Type": "Spell_Flaw_Disposophobia_C",
+    "Name": "Default__Spell_Flaw_Disposophobia_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnEncumberedChange Default__Spell_Flaw_Disposophobia_C:OnEncumberedChange_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.3"
+        },
+        "RemoveEvent": {
+          "ObjectName": "OnEncumberedChange Default__Spell_Flaw_Disposophobia_C:OnEncumberedChange_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Phobia_Disposophobia_C Default__Spell_Flaw_Disposophobia_C:CE_Phobia_Disposophobia_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.2"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_Phobia_Disposophobia_C",
+    "Name": "CE_Phobia_Disposophobia_C_0",
+    "Outer": "Default__Spell_Flaw_Disposophobia_C",
+    "Template": "Default__CE_Phobia_Disposophobia_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Flaw_Disposophobia_C:CE_Phobia_Disposophobia_C_0.StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.7"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Flaw_Disposophobia_C:CE_Phobia_Disposophobia_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.6"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_Flaw_Disposophobia_C:CE_Phobia_Disposophobia_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Specific/Spell_Flaw_Disposophobia.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnEncumberedChange",
+    "Name": "OnEncumberedChange_0",
+    "Outer": "Default__Spell_Flaw_Disposophobia_C",
+    "Properties": {
+      "bEncumbered": true
+    }
+  },
+  {
+    "Type": "OnEncumberedChange",
+    "Name": "OnEncumberedChange_1",
+    "Outer": "Default__Spell_Flaw_Disposophobia_C"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Template": "StatModifierStatusEffect_1"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Template": "StatModifierStatusEffect_2"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_3",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Dexterity_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Dexterity_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_4",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Perception_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Perception_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_5",
+    "Outer": "CE_Phobia_Disposophobia_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": -1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat Temperament_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Temperament_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  }
+]

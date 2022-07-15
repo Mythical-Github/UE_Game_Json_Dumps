@@ -1,0 +1,565 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "QuestList_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree QuestList_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.21"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/QuestJournal/QuestList/QuestList_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class QuestListWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "QuestList_BP_C Default__QuestList_BP_C",
+      "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.1"
+    }
+  },
+  {
+    "Type": "QuestList_BP_C",
+    "Name": "Default__QuestList_BP_C",
+    "Properties": {
+      "ListEntryClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass QuestListEntry_BP_C",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestListEntry/QuestListEntry_BP.1"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting"
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 0.0,
+        "Right": 5.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot QuestList_BP_C:WidgetTree.Border_1.BorderSlot_1",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 0.0,
+        "Right": 5.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.Border_1.BorderSlot_1",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "Border_1",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 0.0,
+        "Right": 5.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border QuestList_BP_C:WidgetTree.Border_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.2"
+      },
+      "Content": {
+        "ObjectName": "Overlay QuestList_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "Border_1",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 0.0,
+        "Right": 5.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.Border_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.3"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "ExpandableAreaBase",
+    "Name": "ExpandableArea",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "HeaderWidgetStyle": {
+        "ObjectName": "SlateWidgetStyleAsset CollapsingButtonStyle_1",
+        "ObjectPath": "Indiana/Content/UI/Library/Styles/Button/CollapsingButtonStyle_1.1"
+      },
+      "Style": {
+        "CollapsedImage": {
+          "ImageSize": {
+            "X": 11.0,
+            "Y": 9.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Right",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Right.0"
+          }
+        },
+        "ExpandedImage": {
+          "ImageSize": {
+            "X": 9.0,
+            "Y": 11.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Down",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Down.0"
+          }
+        },
+        "RolloutAnimationSeconds": 0.15
+      },
+      "BorderBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "bIsExpanded": true,
+      "HeaderPadding": {
+        "Left": 25.0,
+        "Top": 13.0,
+        "Right": 25.0,
+        "Bottom": 13.0
+      },
+      "AreaPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HeaderContent": {
+        "ObjectName": "Border QuestList_BP_C:WidgetTree.Border_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.2"
+      },
+      "BodyContent": {
+        "ObjectName": "SizeBox QuestList_BP_C:WidgetTree.SizeBox_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.13"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting"
+    }
+  },
+  {
+    "Type": "ExpandableAreaBase",
+    "Name": "ExpandableArea",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "HeaderWidgetStyle": {
+        "ObjectName": "SlateWidgetStyleAsset CollapsingButtonStyle_1",
+        "ObjectPath": "Indiana/Content/UI/Library/Styles/Button/CollapsingButtonStyle_1.1"
+      },
+      "Style": {
+        "CollapsedImage": {
+          "ImageSize": {
+            "X": 11.0,
+            "Y": 9.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Right",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Right.0"
+          }
+        },
+        "ExpandedImage": {
+          "ImageSize": {
+            "X": 9.0,
+            "Y": 11.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D T_Arrow_Down",
+            "ObjectPath": "Indiana/Content/UI/Art/FrontEnd/General/T_Arrow_Down.0"
+          }
+        },
+        "RolloutAnimationSeconds": 0.15
+      },
+      "BorderBrush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "bIsExpanded": true,
+      "HeaderPadding": {
+        "Left": 25.0,
+        "Top": 13.0,
+        "Right": 25.0,
+        "Bottom": 13.0
+      },
+      "AreaPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HeaderContent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.Border_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.3"
+      },
+      "BodyContent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.14"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsWithoutIntersecting"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot QuestList_BP_C:WidgetTree.Overlay_0.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot QuestList_BP_C:WidgetTree.Border_1.BorderSlot_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.Border_1.BorderSlot_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay QuestList_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase QuestList_BP_C:WidgetTree.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.18"
+      }
+    }
+  },
+  {
+    "Type": "QuestList_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__QuestList_BP_C",
+    "Properties": {
+      "ExpandableArea": {
+        "ObjectName": "ExpandableAreaBase WidgetArchetype:WidgetTree_0.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.7"
+      },
+      "TitleTextBlock": {
+        "ObjectName": "TextBlockBase WidgetArchetype:WidgetTree_0.TitleTextBlock",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.18"
+      },
+      "EntryContainer": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.20"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.22"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot QuestList_BP_C:WidgetTree.SizeBox_1.SizeBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_1.SizeBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "SizeBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox QuestList_BP_C:WidgetTree.SizeBox_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.13"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox QuestList_BP_C:WidgetTree.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.19"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "SizeBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.14"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.EntryContainer",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.20"
+      }
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TitleTextBlock",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "TextReference": {
+        "StringID": 0
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "Slot": {
+        "ObjectName": "OverlaySlot QuestList_BP_C:WidgetTree.Overlay_0.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.10"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlockBase",
+    "Name": "TitleTextBlock",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "TextReference": {
+        "StringID": 0
+      },
+      "bConvertToUpper": true,
+      "MaxFontScaling": 9,
+      "WidgetStyle": {
+        "ImportAsset": {
+          "ObjectName": "SlateWidgetStyleAsset BodyMinor",
+          "ObjectPath": "Indiana/Content/UI/Library/Styles/TextBlock/BodyMinor.1"
+        },
+        "ColorOverride": "EIndianaUIColorType::IndianaYellow",
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font TCM_Family",
+            "ObjectPath": "Indiana/Content/UI/Library/Font/TCM_Family.0"
+          },
+          "OutlineSettings": {
+            "OutlineSize": 1
+          },
+          "TypefaceFontName": "Default",
+          "Size": 15
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.887923,
+            "B": 0.571125,
+            "A": 1.0,
+            "Hex": "FFFFF2C7"
+          }
+        },
+        "bAllowManualColorChanging": false,
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bUseShadowOffset": false,
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.11"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "EntryContainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot QuestList_BP_C:WidgetTree.SizeBox_1.SizeBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.15"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "EntryContainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_1.SizeBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.16"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "QuestList_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ExpandableAreaBase QuestList_BP_C:WidgetTree.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ExpandableAreaBase WidgetArchetype:WidgetTree_0.ExpandableArea",
+        "ObjectPath": "Indiana/Content/UI/QuestJournal/QuestList/QuestList_BP.7"
+      }
+    }
+  }
+]

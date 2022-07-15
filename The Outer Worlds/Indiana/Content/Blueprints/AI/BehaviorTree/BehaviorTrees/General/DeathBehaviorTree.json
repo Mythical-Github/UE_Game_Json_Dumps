@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DeathBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence DeathBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BTBlackboardData",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BTBlackboardData.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "DeathBehaviorTree",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Death DeathBehaviorTree:BTTask_Death_0",
+            "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Root",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DeathBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Death",
+    "Name": "BTTask_Death_0",
+    "Outer": "DeathBehaviorTree",
+    "Properties": {
+      "SaveGameTaskGuid": "DA061F22-423E9196-72BE9080-CF13EBA2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree DeathBehaviorTree",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence DeathBehaviorTree:BTComposite_Sequence_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/BehaviorTree/BehaviorTrees/General/DeathBehaviorTree.1"
+      }
+    }
+  }
+]

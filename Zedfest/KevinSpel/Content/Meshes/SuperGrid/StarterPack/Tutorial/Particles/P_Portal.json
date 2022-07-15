@@ -1,0 +1,605 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Properties": {
+      "Constant": 0.75
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceScaleOverLifeDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_1",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_0",
+    "Outer": "ParticleModuleSizeMultiplyLife_0",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": {
+              "X": 1.0,
+              "Y": 0.1,
+              "Z": 0.1
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Portal:ParticleModuleRequired_1",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Portal:ParticleModuleLifetime_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.8"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Portal:ParticleModuleSize_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Portal:ParticleModuleVelocity_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Portal:ParticleModuleColorOverLife_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.7"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_Portal:ParticleModuleLocation_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.9"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Portal:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.12"
+        },
+        {
+          "ObjectName": "ParticleModuleCollisionGPU P_Portal:ParticleModuleCollisionGPU_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.6"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu P_Portal:ParticleModuleTypeDataGpu_1",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.14"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Portal:ParticleModuleSpawn_1",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.13"
+      },
+      "PeakActiveParticles": 47
+    }
+  },
+  {
+    "Type": "ParticleModuleCollisionGPU",
+    "Name": "ParticleModuleCollisionGPU_0",
+    "Outer": "P_Portal",
+    "Properties": {
+      "Resilience": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Portal:ParticleModuleCollisionGPU_0.ResilienceDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.0"
+        }
+      },
+      "ResilienceScaleOverLife": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Portal:ParticleModuleCollisionGPU_0.ResilienceScaleOverLifeDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.1"
+        }
+      },
+      "Response": "EParticleCollisionResponse::Kill",
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.287625,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.923416,
+            0.531385,
+            0.885,
+            0.393856,
+            0.287625
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            1.0,
+            3.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_Portal",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -30.0,
+        "MaxValue": 55.0,
+        "MinValueVec": {
+          "X": -30.0,
+          "Y": -30.0,
+          "Z": -11.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 55.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -30.0,
+            -30.0,
+            -11.0,
+            30.0,
+            30.0,
+            55.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_SquareParticleGlow",
+        "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Utility/Materials/M_SquareParticleGlow.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Portal:ParticleModuleRequired_1.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.2"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.5,
+        "MaxValue": 22.0,
+        "MinValueVec": {
+          "X": 1.5,
+          "Y": 5.0,
+          "Z": 9.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 15.0,
+          "Z": 22.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            1.5,
+            5.0,
+            9.0,
+            3.0,
+            15.0,
+            22.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "P_Portal",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve P_Portal:ParticleModuleSizeMultiplyLife_0.DistributionVectorConstantCurve_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.4"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "Rate": {
+        "MinValue": 15.0,
+        "MaxValue": 15.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            15.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Portal:ParticleModuleSpawn_1.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired P_Portal:ParticleModuleRequired_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.10"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn P_Portal:ParticleModuleSpawn_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.13"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired P_Portal:ParticleModuleRequired_1",
+            "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.10"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime P_Portal:ParticleModuleLifetime_1",
+            "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.8"
+          },
+          {
+            "ObjectName": "ParticleModuleSize P_Portal:ParticleModuleSize_1",
+            "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.11"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity P_Portal:ParticleModuleVelocity_1",
+            "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.15"
+          },
+          {
+            "ObjectName": "ParticleModuleLocation P_Portal:ParticleModuleLocation_0",
+            "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.9"
+          }
+        ],
+        "InvMaxSize": {
+          "X": 0.045454547,
+          "Y": 0.045454547
+        },
+        "InvRotationRateScale": 0.33333334,
+        "MaxLifetime": 3.0,
+        "MaxParticleCount": 47,
+        "ScreenAlignment": "PSA_Velocity",
+        "bEnableCollision": true
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 255,
+            "Hex": "FF000000"
+          },
+          {
+            "B": 255,
+            "G": 255,
+            "R": 0,
+            "A": 0,
+            "Hex": "00FFFF"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 255,
+            "R": 0,
+            "A": 0,
+            "Hex": "00FF00"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.0,
+          "Y": 2.0765839,
+          "Z": 1.468615,
+          "W": 1.0
+        },
+        "ColorBias": {
+          "X": 1.0,
+          "Y": 0.923416,
+          "Z": 0.531385,
+          "W": 0.0
+        },
+        "MiscScale": {
+          "X": 0.0,
+          "Y": 19.8,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 22.0,
+          "Y": 2.2,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionTimeBias": 1.1,
+        "CollisionRandomDistribution": 1.0,
+        "RotationRateScale": 3.0,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 500.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -10.0,
+          "Z": 200.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 500.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            -10.0,
+            -10.0,
+            200.0,
+            10.0,
+            10.0,
+            500.0
+          ]
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "P_Portal",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Portal:ParticleSpriteEmitter_1.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.5"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Portal",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Portal:ParticleSpriteEmitter_1",
+          "ObjectPath": "KevinSpel/Content/Meshes/SuperGrid/StarterPack/Tutorial/Particles/P_Portal.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -200.0,
+          "Y": -200.0,
+          "Z": -200.0
+        },
+        "Max": {
+          "X": 200.0,
+          "Y": 200.0,
+          "Z": 200.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

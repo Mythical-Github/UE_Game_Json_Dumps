@@ -1,0 +1,176 @@
+[
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_0",
+    "Outer": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_TelescopingStaff_Weapon_T2_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeHvy/SC_TelescopingStaff/Variants/SC_TelescopingStaff_Weapon_T2.0"
+          },
+          "EquippedMods": [
+            {
+              "ObjectName": "BlueprintGeneratedClass MeleeMod_Atk_PlasmaDamage_C",
+              "ObjectPath": "Indiana/Content/Blueprints/Item/Mods/Melee/MeleeMod_Atk_PlasmaDamage.0"
+            }
+          ]
+        }
+      },
+      "MinLevel": 16,
+      "MaxLevel": 23
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_1",
+    "Outer": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_TelescopingStaff_Weapon_T1_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeHvy/SC_TelescopingStaff/Variants/SC_TelescopingStaff_Weapon_T1.0"
+          },
+          "EquippedMods": [
+            {
+              "ObjectName": "BlueprintGeneratedClass MeleeMod_Atk_PlasmaDamage_C",
+              "ObjectPath": "Indiana/Content/Blueprints/Item/Mods/Melee/MeleeMod_Atk_PlasmaDamage.0"
+            }
+          ]
+        }
+      },
+      "MaxLevel": 8
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_2",
+    "Outer": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass SC_TelescopingStaff_Weapon_T3_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeHvy/SC_TelescopingStaff/Variants/SC_TelescopingStaff_Weapon_T3.0"
+          },
+          "EquippedMods": [
+            {
+              "ObjectName": "BlueprintGeneratedClass MeleeMod_Atk_PlasmaDamage_C",
+              "ObjectPath": "Indiana/Content/Blueprints/Item/Mods/Melee/MeleeMod_Atk_PlasmaDamage.0"
+            }
+          ]
+        }
+      },
+      "MinLevel": 31,
+      "bInvertConditional": false,
+      "Conditional": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::DLCInstalled",
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::Or",
+              "ConditionalType": "EConditionalType::DLCInstalled",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX2",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_0",
+    "Outer": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 9,
+      "MaxLevel": 15,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_1",
+    "Outer": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 24,
+      "MaxLevel": 30,
+      "Count": 3,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootTableData",
+    "Name": "852b_Weapon_TelescopingStaff_Plasma",
+    "Properties": {
+      "bUseAll": false,
+      "LootRows": [
+        {
+          "ObjectName": "LootRowItem 852b_Weapon_TelescopingStaff_Plasma:LootRowItem_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/852b_Weapon_TelescopingStaff_Plasma.1"
+        },
+        {
+          "ObjectName": "LootRowTable 852b_Weapon_TelescopingStaff_Plasma:LootRowTable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/852b_Weapon_TelescopingStaff_Plasma.3"
+        },
+        {
+          "ObjectName": "LootRowItem 852b_Weapon_TelescopingStaff_Plasma:LootRowItem_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/852b_Weapon_TelescopingStaff_Plasma.0"
+        },
+        {
+          "ObjectName": "LootRowTable 852b_Weapon_TelescopingStaff_Plasma:LootRowTable_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/852b_Weapon_TelescopingStaff_Plasma.4"
+        },
+        {
+          "ObjectName": "LootRowItem 852b_Weapon_TelescopingStaff_Plasma:LootRowItem_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/852b_Weapon_TelescopingStaff_Plasma.2"
+        }
+      ]
+    }
+  }
+]

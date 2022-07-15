@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "MaterialExpressionTextureObjectParameter",
+    "Name": "MaterialExpressionTextureObjectParameter_7",
+    "Outer": "Don_Mesh_Paint_UV0",
+    "Properties": {
+      "ParameterName": "DonPaintLayer_MeshGeneric_UV0_0",
+      "ExpressionGUID": "C286E35F-42F06C60-8C5732B9-C40F2F0B",
+      "Group": "Don Mesh Painting",
+      "Texture": {
+        "ObjectName": "CanvasRenderTarget2D RT_Don_DefaultTemplate",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Textures/RenderTargets/RT_Don_DefaultTemplate.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction Don_Mesh_Paint_UV0",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/MeshSpace/Don_Mesh_Paint_UV0.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_3",
+    "Outer": "Don_Mesh_Paint_UV0",
+    "Properties": {
+      "Coordinates": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureCoordinate_1"
+      },
+      "TextureObject": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureObjectParameter_7"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction Don_Mesh_Paint_UV0",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/MeshSpace/Don_Mesh_Paint_UV0.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "Don_Mesh_Paint_UV0",
+    "Properties": {
+      "Description": "Paint texture via the UV0 channel of this mesh (Layer 0)",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureObjectParameter Don_Mesh_Paint_UV0:MaterialExpressionTextureObjectParameter_7",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/MeshSpace/Don_Mesh_Paint_UV0.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample Don_Mesh_Paint_UV0:MaterialExpressionTextureSample_3",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/MeshSpace/Don_Mesh_Paint_UV0.1"
+        }
+      ],
+      "StateId": "3FF93077-4EA095A1-29195BA4-98572E16"
+    }
+  }
+]

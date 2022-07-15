@@ -1,0 +1,326 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_Donut_1",
+    "Properties": {
+      "ParamName": "MinMoveDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_Donut_1",
+    "Properties": {
+      "ParamName": "MaxMoveDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_Pathfinding_2",
+    "Properties": {
+      "ParamName": "MaxPathingDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_PreferredRanged_1",
+    "Properties": {
+      "ParamName": "RepositionType"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryTest_PreferredRanged_1",
+    "Properties": {
+      "ParamName": "MaxPreferredRange"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_12",
+    "Outer": "EnvQueryTest_PreferredRanged_1",
+    "Properties": {
+      "ParamName": "MinPreferredRange"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryTest_PreferredRanged_1",
+    "Properties": {
+      "ParamName": "MinDirectionBias"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "RangedQuery",
+    "Properties": {
+      "QueryName": "RepositionCombatQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption RangedQuery:EnvQueryOption_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Composite",
+    "Name": "EnvQueryGenerator_Composite_1",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "Generators": [
+        {
+          "ObjectName": "EnvQueryGenerator_Donut RangedQuery:EnvQueryGenerator_Composite_1.EnvQueryGenerator_Donut_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.10"
+        },
+        {
+          "ObjectName": "EnvQueryGenerator_CurrentLocation RangedQuery:EnvQueryGenerator_Composite_1.EnvQueryGenerator_CurrentLocation_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.9"
+        }
+      ],
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_CurrentLocation",
+    "Name": "EnvQueryGenerator_CurrentLocation_0",
+    "Outer": "EnvQueryGenerator_Composite_1",
+    "Properties": {
+      "QueryContext": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_1",
+    "Outer": "EnvQueryGenerator_Composite_1",
+    "Properties": {
+      "InnerRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryGenerator_Composite_1.EnvQueryGenerator_Donut_1.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryGenerator_Composite_1.EnvQueryGenerator_Donut_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfRings": {
+        "DefaultValue": 5
+      },
+      "PointsPerRing": {
+        "DefaultValue": 14
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "ProjectDown": 256.0,
+        "ProjectUp": 256.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_2",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Composite RangedQuery:EnvQueryGenerator_Composite_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.8"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_ValidRangedFire RangedQuery:EnvQueryTest_ValidRangedFire_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.17"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Projectile RangedQuery:EnvQueryTest_Projectile_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.16"
+        },
+        {
+          "ObjectName": "EnvQueryTest_OccupiedRaycast RangedQuery:EnvQueryTest_OccupiedRaycast_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.12"
+        },
+        {
+          "ObjectName": "EnvQueryTest_OccupiedRaycast RangedQuery:EnvQueryTest_OccupiedRaycast_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.13"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PreferredRanged RangedQuery:EnvQueryTest_PreferredRanged_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.15"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding RangedQuery:EnvQueryTest_Pathfinding_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_OccupiedRaycast",
+    "Name": "EnvQueryTest_OccupiedRaycast_1",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EnvQueryContext_Querier",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "AttitudeFlags": [
+        "ETeamAttitudeFlag::Friendly",
+        "ETeamAttitudeFlag::Neutral"
+      ],
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": -0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_OccupiedRaycast",
+    "Name": "EnvQueryTest_OccupiedRaycast_2",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "OccupationChannel": "EOccupationChannel::CharacterArea",
+      "AttitudeFlags": [
+        "ETeamAttitudeFlag::Friendly",
+        "ETeamAttitudeFlag::Neutral"
+      ],
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": -1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_2",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "bFinishOnFirstSuccess": true,
+      "TestOrder": 5,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryTest_Pathfinding_2.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PreferredRanged",
+    "Name": "EnvQueryTest_PreferredRanged_1",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "MinPreferredRangeProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryTest_PreferredRanged_1.AIDataProvider_QueryParams_12",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.5"
+        },
+        "DataField": "FloatValue"
+      },
+      "MaxPreferredRangeProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryTest_PreferredRanged_1.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.4"
+        },
+        "DataField": "FloatValue"
+      },
+      "RepositionTypeProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryTest_PreferredRanged_1.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "MinDirectionBiasProvider": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams RangedQuery:EnvQueryTest_PreferredRanged_1.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/RangedQuery.6"
+        },
+        "DataField": "FloatValue"
+      },
+      "TargetContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Projectile",
+    "Name": "EnvQueryTest_Projectile_0",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "ScoringFactor": {
+        "DefaultValue": -10.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_ValidRangedFire",
+    "Name": "EnvQueryTest_ValidRangedFire_1",
+    "Outer": "RangedQuery",
+    "Properties": {
+      "TargetContext": {
+        "ObjectName": "Class EQSContext_PrimaryTarget",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

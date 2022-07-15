@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "EncounterCompositionStandard",
+    "Name": "EncounterCompositionStandard_2",
+    "Outer": "Unique_Crit_Sprat",
+    "Properties": {
+      "EncounterEnemies": [
+        {
+          "ObjectName": "EncounterEnemyFixed Unique_Crit_Sprat:EncounterCompositionStandard_2.EncounterEnemyFixed_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/Unique/Unique_Crit_Sprat.1"
+        },
+        {
+          "ObjectName": "EncounterEnemyFixed Unique_Crit_Sprat:EncounterCompositionStandard_2.EncounterEnemyFixed_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/Unique/Unique_Crit_Sprat.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EncounterEnemyFixed",
+    "Name": "EncounterEnemyFixed_0",
+    "Outer": "EncounterCompositionStandard_2",
+    "Properties": {
+      "ActorClass": {
+        "AssetPathName": "/Game/Blueprints/CHAR/NPC/Creatures/SmplCrea/Sprat/Sprat_Variants/SmplCrea_Sprat_Unique.SmplCrea_Sprat_Unique_C",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "EncounterEnemyFixed",
+    "Name": "EncounterEnemyFixed_1",
+    "Outer": "EncounterCompositionStandard_2",
+    "Properties": {
+      "ActorClass": {
+        "AssetPathName": "/Game/Blueprints/CHAR/NPC/Creatures/SmplCrea/Sprat/Sprat_Variants/SmplCrea_SpratRabid_Terra2.SmplCrea_SpratRabid_Terra2_C",
+        "SubPathString": ""
+      },
+      "Count": 3
+    }
+  },
+  {
+    "Type": "EncounterList",
+    "Name": "Unique_Crit_Sprat",
+    "Properties": {
+      "bPersist": true,
+      "ValidConditions": {
+        "ValidConditions": {
+          "BaseExpression": {
+            "BaseCondition": {
+              "GlobalVariable": {
+                "DisplayName": "Unique_Crit_Sprat"
+              }
+            }
+          }
+        }
+      },
+      "EncounterCompositions": [
+        {
+          "ObjectName": "EncounterCompositionStandard Unique_Crit_Sprat:EncounterCompositionStandard_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Encounters/Unique/Unique_Crit_Sprat.0"
+        }
+      ],
+      "TotalWeight": 1
+    }
+  }
+]

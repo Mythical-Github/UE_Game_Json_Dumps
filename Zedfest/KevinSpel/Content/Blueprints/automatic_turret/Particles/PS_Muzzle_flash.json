@@ -1,0 +1,298 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired PS_Muzzle_flash:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.4"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime PS_Muzzle_flash:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize PS_Muzzle_flash:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.5"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife PS_Muzzle_flash:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.2"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh PS_Muzzle_flash:ParticleModuleTypeDataMesh_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.7"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn PS_Muzzle_flash:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.6"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 10.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 1.350015,
+          "Z": 0.499999
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3,
+          "TimeScale": 1.0,
+          "Values": [
+            100.0,
+            1.350015,
+            0.499999,
+            10.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.05,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            0.05,
+            0.1
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_muzzle_flash",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Materials/M_muzzle_flash.0"
+      },
+      "bUseLocalSpace": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.0001,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant PS_Muzzle_flash:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            25.0,
+            25.0,
+            25.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh SM_muzzle_support",
+        "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Meshes/SM_muzzle_support.2"
+      },
+      "MeshAlignment": "PSMA_MeshFaceCameraWithLockedAxis",
+      "bOverrideMaterial": true,
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "PS_Muzzle_flash",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel PS_Muzzle_flash:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "PS_Muzzle_flash",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter PS_Muzzle_flash:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/automatic_turret/Particles/PS_Muzzle_flash.8"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

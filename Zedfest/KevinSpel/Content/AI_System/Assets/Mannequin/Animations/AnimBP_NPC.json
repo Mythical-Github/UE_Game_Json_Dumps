@@ -1,0 +1,1613 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AnimBP_NPC_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 17,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4,
+                5,
+                6,
+                8,
+                10
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 18,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 19,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 13,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                14
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpEnd",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 20,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 15,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                16
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      },
+      "OrderedSavedPoseIndices": [
+        21
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_9D8F11AE44C737B01C52E2974EF1F212",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.44"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_BD158083428E0E5626ED2899BB9F74A1",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.45"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_5859DB3C486044C8A7F3D5AAEEC58E18",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.43"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty AnimBP_NPC_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.18"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendListByEnum_0D94B5424B9C5D894CE83FA645D54760",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.41"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.24"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_250287924264682E866C069618B25086",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.42"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsCrouching",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_BlendListByBool:bActiveValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_C:IsCrouching",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.16"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendListByBool_C925E8134C5654FB3E2B4C950C90C19B",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.40"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Direction",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Direction",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.24"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:Y",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_E53104504DAE38F506FED0BF61CEB1BE",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.46"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_181CD83B47B24F5A486B80BA888224A4",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.57"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.31"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.59"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty AnimBP_NPC_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_88862FFD423582B30F2C2A92B25408D4",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.58"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.32"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.60"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty AnimBP_NPC_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.0"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.32"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.31"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.22"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.21"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.20"
+      },
+      {
+        "ObjectName": "Function AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.5"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_Slot_0544B2984C85F37C006D0B85EAE9E881",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.3"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_SaveCachedPose_AEC2CACE4182AF121093A6869C81BF81",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.48"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.60"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_88862FFD423582B30F2C2A92B25408D4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.58"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.59"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_TransitionResult_181CD83B47B24F5A486B80BA888224A4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.57"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_SequencePlayer_623E96054EDA979CA3B54CBB474FD664",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.49"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_StateResult_F94AA54F46F781B99262B6A9FF6E7777",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.56"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_SequencePlayer_E69BAC4C43DC2AFFFB1B468320D35E39",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.50"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_StateResult_44E6D56E46454DD18FF4328A7FA51722",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.54"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_SequencePlayer_FBF536654FF1BBC3FB19A3AC5D4EDEE9",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.51"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_StateResult_0338B11F4821BFB3FD35BB9240AAA4E4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.53"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_E53104504DAE38F506FED0BF61CEB1BE",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.46"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendListByBool_C925E8134C5654FB3E2B4C950C90C19B",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.40"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_250287924264682E866C069618B25086",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.42"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendListByEnum_0D94B5424B9C5D894CE83FA645D54760",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.41"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_5859DB3C486044C8A7F3D5AAEEC58E18",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.43"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_BD158083428E0E5626ED2899BB9F74A1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.45"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_BlendSpacePlayer_9D8F11AE44C737B01C52E2974EF1F212",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.44"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_StateResult_E4A32EF64F5B365F06066082FAF57063",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.55"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_StateMachine_3682EBD942CC723841D764B597436C78",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.52"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_Root_CA3EACD94DC8BC3CA192C49F52C94174",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.47"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:AnimGraphNode_UseCachedPose_217162034F918AF878220B9B4C4484D3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.61"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.17"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:Speed",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.30"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.18"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:Direction",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.24"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.16"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AnimBP_NPC": {
+        "ObjectName": "Function AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.5"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function AnimBP_NPC_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.20"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function AnimBP_NPC_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.21"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function AnimBP_NPC_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.22"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8": {
+        "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.31"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8": {
+        "ObjectName": "Function AnimBP_NPC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.32"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AnimBP_NPC_C Default__AnimBP_NPC_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.2"
+    }
+  },
+  {
+    "Type": "AnimBP_NPC_C",
+    "Name": "Default__AnimBP_NPC_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Slot_0544B2984C85F37C006D0B85EAE9E881": {
+        "Source": {
+          "LinkID": 22
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_SaveCachedPose_AEC2CACE4182AF121093A6869C81BF81": {
+        "Pose": {
+          "LinkID": 20
+        },
+        "CachePoseName": "LocoCache"
+      },
+      "AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_88862FFD423582B30F2C2A92B25408D4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_181CD83B47B24F5A486B80BA888224A4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_623E96054EDA979CA3B54CBB474FD664": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPerson_Jump",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/ThirdPerson_Jump.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F94AA54F46F781B99262B6A9FF6E7777": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_SequencePlayer_E69BAC4C43DC2AFFFB1B468320D35E39": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Loop",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/ThirdPersonJump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.75,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_44E6D56E46454DD18FF4328A7FA51722": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_SequencePlayer_FBF536654FF1BBC3FB19A3AC5D4EDEE9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence ThirdPersonJump_Start",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/ThirdPersonJump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_0338B11F4821BFB3FD35BB9240AAA4E4": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_E53104504DAE38F506FED0BF61CEB1BE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_CrouchWalk",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_CrouchWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_C925E8134C5654FB3E2B4C950C90C19B": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 15
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_250287924264682E866C069618B25086": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace BS_RifleJog",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_RifleJog.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_0D94B5424B9C5D894CE83FA645D54760": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 18
+          },
+          {
+            "LinkID": 16
+          },
+          {
+            "LinkID": 17
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendSpacePlayer_5859DB3C486044C8A7F3D5AAEEC58E18": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Player",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_Player.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_BD158083428E0E5626ED2899BB9F74A1": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Defend",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_Defend.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_9D8F11AE44C737B01C52E2974EF1F212": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_Player",
+          "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/BS_Player.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E4A32EF64F5B365F06066082FAF57063": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_StateMachine_3682EBD942CC723841D764B597436C78": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_CA3EACD94DC8BC3CA192C49F52C94174": {
+        "Result": {
+          "LinkID": 0
+        }
+      },
+      "AnimGraphNode_UseCachedPose_217162034F918AF878220B9B4C4484D3": {
+        "LinkToCachingNode": {
+          "LinkID": 1
+        },
+        "CachePoseName": "LocoCache"
+      },
+      "RootMotionMode": "ERootMotionMode::RootMotionFromEverything"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_0544B2984C85F37C006D0B85EAE9E881",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AnimBP_NPC",
+    "Outer": "AnimBP_NPC_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.4"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.35"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.26"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.38"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.14"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.12"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.29"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.36"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.63"
+      },
+      {
+        "ObjectName": "StructProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.62"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.34"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.25"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.8"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.9"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.28"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.10"
+      },
+      {
+        "ObjectName": "ArrayProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.7"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.33"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.37"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.11"
+      },
+      {
+        "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.39"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.15"
+      },
+      {
+        "ObjectName": "ByteProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.19"
+      },
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.27"
+      },
+      {
+        "ObjectName": "BoolProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_Less_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.13"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty AnimBP_NPC_C:ExecuteUbergraph_AnimBP_NPC.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.6"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "AnimBP_NPC_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "AnimBP_NPC_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "AnimBP_NPC_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty AnimBP_NPC_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AnimBP_NPC.23"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "AnimBP_NPC_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+    "Outer": "AnimBP_NPC_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_AnimBP_NPC_AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+    "Outer": "AnimBP_NPC_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_C925E8134C5654FB3E2B4C950C90C19B",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_0D94B5424B9C5D894CE83FA645D54760",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_250287924264682E866C069618B25086",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_5859DB3C486044C8A7F3D5AAEEC58E18",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_9D8F11AE44C737B01C52E2974EF1F212",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_BD158083428E0E5626ED2899BB9F74A1",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E53104504DAE38F506FED0BF61CEB1BE",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_CA3EACD94DC8BC3CA192C49F52C94174",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SaveCachedPose_AEC2CACE4182AF121093A6869C81BF81",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_623E96054EDA979CA3B54CBB474FD664",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E69BAC4C43DC2AFFFB1B468320D35E39",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FBF536654FF1BBC3FB19A3AC5D4EDEE9",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_3682EBD942CC723841D764B597436C78",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_0338B11F4821BFB3FD35BB9240AAA4E4",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_44E6D56E46454DD18FF4328A7FA51722",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E4A32EF64F5B365F06066082FAF57063",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F94AA54F46F781B99262B6A9FF6E7777",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_181CD83B47B24F5A486B80BA888224A4",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_88862FFD423582B30F2C2A92B25408D4",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_CEF75CED409C2D7EBE01E9B296FA7FA8",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D11504CE434E6CC042ED4792044396E8",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_UseCachedPose_217162034F918AF878220B9B4C4484D3",
+    "Outer": "AnimBP_NPC_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_AnimBP_NPC",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_SelfGoverned_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_SelfGoverned_C Default__Spell_PerkEffect_SelfGoverned_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/QuestRewardEffects/Spell_PerkEffect_SelfGoverned.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_SelfGoverned_C",
+    "Name": "Default__Spell_PerkEffect_SelfGoverned_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Player",
+          "StatusEffects": [
+            {
+              "ObjectName": "CastSpellStatusEffect Default__Spell_PerkEffect_SelfGoverned_C:CastSpellStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/QuestRewardEffects/Spell_PerkEffect_SelfGoverned.2"
+            },
+            {
+              "ObjectName": "StatModifierStatusEffect Default__Spell_PerkEffect_SelfGoverned_C:StatModifierStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/QuestRewardEffects/Spell_PerkEffect_SelfGoverned.3"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CastSpellStatusEffect",
+    "Name": "CastSpellStatusEffect_0",
+    "Outer": "Default__Spell_PerkEffect_SelfGoverned_C",
+    "Properties": {
+      "Spell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_PerkEffect_SelfGoverned_Player_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Companion/QuestRewardEffects/Spell_PerkEffect_SelfGoverned_Player.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__Spell_PerkEffect_SelfGoverned_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat PostArmorDamageMultiplier_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/PostArmorDamageMultiplier_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  }
+]

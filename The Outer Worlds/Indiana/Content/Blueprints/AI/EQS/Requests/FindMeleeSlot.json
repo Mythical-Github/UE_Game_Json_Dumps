@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "EQSRequest_IndianaBase",
+    "Name": "FindMeleeSlot",
+    "Properties": {
+      "QueryTemplate": {
+        "ObjectName": "EnvQuery MeleeSlotQuery",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/MeleeSlotQuery.2"
+      },
+      "QueryConfig": [
+        {
+          "ParamName": "Donut.NumberOfRings",
+          "ParamType": "EAIParamType::Int",
+          "Value": 3E-45,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class MeleeSlot_NumRings",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "Donut.PointsPerRing",
+          "ParamType": "EAIParamType::Int",
+          "Value": 8E-45,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class MeleeSlot_PointsPerRing",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        }
+      ],
+      "RunMode": "EEnvQueryRunMode::AllMatching"
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Grenade_GrenLauncher_For_AI_C",
+    "Super": "BP_Grenade_Parent_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_Grenade_GrenLauncher_For_AI_C:SimpleConstructionScript_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_Grenade_GrenLauncher_For_AI_C:InheritableComponentHandler",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_Grenade_Parent_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/BP_Grenade_Parent.1"
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Grenade_GrenLauncher_For_AI_C Default__BP_Grenade_GrenLauncher_For_AI_C",
+      "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.1"
+    }
+  },
+  {
+    "Type": "BP_Grenade_GrenLauncher_For_AI_C",
+    "Name": "Default__BP_Grenade_GrenLauncher_For_AI_C",
+    "Template": "Default__BP_Grenade_Parent_C",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh SM_Boom_Grenade_Hand",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BoomToolkit/Meshes/SM_Boom_Grenade_Hand.2"
+      },
+      "Damage": 50.0,
+      "DamageRadius": 500.0,
+      "ExplosionParticle": {
+        "ObjectName": "ParticleSystem P_Grenade_Explosion_02Small",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Grenade_Explosion_02Small.149"
+      },
+      "ExplosionSound": {
+        "ObjectName": "SoundCue GrenadeLauncher_Explosion_Cue",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/GrenadeLauncher/GrenadeLauncher_Explosion_Cue.0"
+      },
+      "ExplodeOnImpact?": true,
+      "ExplosionDelay": 2.5,
+      "TrailParticle": {
+        "ObjectName": "ParticleSystem P_Grenade_Trail_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/P_Grenade_Trail_01.21"
+      },
+      "ImpulseForce": 1750.0,
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Grenade_GrenLauncher_For_AI_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class ProjectileMovementComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ProjectileMovementComponent BP_Grenade_GrenLauncher_For_AI_C:ProjectileMovement_GEN_VARIABLE",
+            "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Grenade_Parent_C",
+              "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/BP_Grenade_Parent.1"
+            },
+            "SCSVariableName": "ProjectileMovement",
+            "AssociatedGuid": "48627C0D-407E29EB-C8AACC8E-4C914E24"
+          },
+          "CookedComponentInstancingData": {
+            "bIsValid": false,
+            "ChangedPropertyList": []
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileMovement_GEN_VARIABLE",
+    "Outer": "BP_Grenade_GrenLauncher_For_AI_C",
+    "Template": "ProjectileMovement_GEN_VARIABLE",
+    "Properties": {
+      "Velocity": {
+        "X": 2500.0,
+        "Y": 0.0,
+        "Z": 500.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Grenade_GrenLauncher_For_AI_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Grenade_GrenLauncher_For_AI_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.4"
+      },
+      "VariableGuid": "C205D8E2-444CDEF1-A6255A90-62577729",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Grenade_GrenLauncher_For_AI_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_Grenade_GrenLauncher_For_AI_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/Grenade/AI_Grenades/BP_Grenade_GrenLauncher_For_AI.5"
+      }
+    }
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CanidAlphaHowlSpell_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CanidAlphaHowlSpell_C Default__Spell_CanidAlphaHowlSpell_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.1"
+    }
+  },
+  {
+    "Type": "Spell_CanidAlphaHowlSpell_C",
+    "Name": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnAnimationSpellTrigger Default__Spell_CanidAlphaHowlSpell_C:OnAnimationSpellTrigger_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.3"
+        },
+        "RemoveEvent": {
+          "ObjectName": "OnAnimationSpellTrigger Default__Spell_CanidAlphaHowlSpell_C:OnAnimationSpellTrigger_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.4"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::AOE",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_AlphaHowl_C Default__Spell_CanidAlphaHowlSpell_C:HowlEffect_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.2"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_CanidAlphaHowlSpell_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.5"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": {
+                  "ObjectName": "SphereShape Default__Spell_CanidAlphaHowlSpell_C:SphereShape_0",
+                  "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/Spell_CanidAlphaHowlSpell.6"
+                },
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": true,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_AlphaHowl_C",
+    "Name": "HowlEffect_C_0",
+    "Outer": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Template": "Default__CE_AlphaHowl_C"
+  },
+  {
+    "Type": "OnAnimationSpellTrigger",
+    "Name": "OnAnimationSpellTrigger_0",
+    "Outer": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Properties": {
+      "bTriggerOnNotifyBegin": true,
+      "AnimationTriggerTag": {
+        "TagName": "AnimationSpellTrigger.1"
+      }
+    }
+  },
+  {
+    "Type": "OnAnimationSpellTrigger",
+    "Name": "OnAnimationSpellTrigger_1",
+    "Outer": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Properties": {
+      "AnimationTriggerTag": {
+        "TagName": "AnimationSpellTrigger.1"
+      }
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Creature.Canid.Feral",
+        "CreatureType.Creature.Canid.Mongrel",
+        "CreatureType.Creature.Canid.Alpha"
+      ]
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_CanidAlphaHowlSpell_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 2000.0
+      }
+    }
+  }
+]

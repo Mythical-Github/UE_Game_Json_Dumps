@@ -1,0 +1,310 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "PS_NRay_Projectile",
+    "Outer": "NRay_Bounce_Projectile_C",
+    "PropertyFlags": 17180393476,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "NRay_Bounce_Projectile_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "NRay_Bounce_Projectile_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript NRay_Bounce_Projectile_C:SimpleConstructionScript_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler NRay_Bounce_Projectile_C:InheritableComponentHandler",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Projectile",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function NRay_Bounce_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.1"
+      },
+      {
+        "ObjectName": "ObjectProperty NRay_Bounce_Projectile_C:PS_NRay_Projectile",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.0"
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function NRay_Bounce_Projectile_C:UserConstructionScript",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.1"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "NRay_Bounce_Projectile_C Default__NRay_Bounce_Projectile_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.3"
+    }
+  },
+  {
+    "Type": "NRay_Bounce_Projectile_C",
+    "Name": "Default__NRay_Bounce_Projectile_C",
+    "Properties": {
+      "ProjectileMovement": {
+        "ObjectName": "IndianaProjMovementComponent Default__NRay_Bounce_Projectile_C:ProjMovementComponent",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.5"
+      },
+      "MainCollisionComponent": {
+        "ObjectName": "SphereComponent Default__NRay_Bounce_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.14"
+      },
+      "DamageCollisionComponent": {
+        "ObjectName": "SphereComponent Default__NRay_Bounce_Projectile_C:DamageSphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.13"
+      },
+      "VisualRoot": {
+        "ObjectName": "SceneComponent Default__NRay_Bounce_Projectile_C:VisualRoot",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.8"
+      },
+      "ProjectileLifetime": 1.5,
+      "Impulse": 2500.0,
+      "ImpactEffects": {
+        "ObjectName": "EventEffects Default__NRay_Bounce_Projectile_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.4"
+      },
+      "ImpactDataSet": {
+        "ObjectName": "ImpactDataSet Radial_NRay_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/Radial_NRay_ImpactData.0"
+      },
+      "BounceDataSet": {
+        "ObjectName": "ImpactDataSet Bounce_NRay_ImpactData",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/Bounce_NRay_ImpactData.0"
+      },
+      "TracerSound": {
+        "ObjectName": "TracerSoundData WeaponSFX_Gun-Phlogiston_Tracer",
+        "ObjectPath": "Indiana/Content/Blueprints/Audio/Weapons/Tracers/WeaponSFX_Gun-Phlogiston_Tracer.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent Default__NRay_Bounce_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__NRay_Bounce_Projectile_C"
+  },
+  {
+    "Type": "IndianaProjMovementComponent",
+    "Name": "ProjMovementComponent",
+    "Outer": "Default__NRay_Bounce_Projectile_C",
+    "Properties": {
+      "InitialSpeed": 2500.0,
+      "MaxSpeed": 3500.0,
+      "bShouldBounce": true,
+      "ProjectileGravityScale": 1.3,
+      "Bounciness": 0.95,
+      "Friction": 0.15,
+      "OnProjectileBounce": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "NRay_Bounce_Projectile_C Default__NRay_Bounce_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.3"
+            },
+            "FunctionName": "OnBounce"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "NRay_Bounce_Projectile_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PS_NRay_Projectile_GEN_VARIABLE",
+    "Outer": "NRay_Bounce_Projectile_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem PS_NRay_Projectile",
+        "ObjectPath": "Indiana/Content/Art/VFX/ParticleSystems/Weapons/Projectiles/NRay/PS_NRay_Projectile.113"
+      },
+      "RelativeRotation": {
+        "Pitch": 83.04547,
+        "Yaw": 109.43976,
+        "Roll": -84.42342
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "VisualRoot",
+    "Outer": "Default__NRay_Bounce_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__NRay_Bounce_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "NRay_Bounce_Projectile_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent NRay_Bounce_Projectile_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.9"
+      },
+      "VariableGuid": "85518C05-47F7F96D-380EF090-5DE91DD2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ParticleSystemComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent NRay_Bounce_Projectile_C:PS_NRay_Projectile_GEN_VARIABLE",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.7"
+      },
+      "CookedComponentInstancingData": {
+        "bIsValid": true,
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class ParticleSystemComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class ParticleSystemComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Rotator",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ]
+      },
+      "ParentComponentOrVariableName": "VisualRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A10BA041-4E8838AD-EE8835AE-6DBA1B19",
+      "InternalVariableName": "PS_NRay_Projectile"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "NRay_Bounce_Projectile_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node NRay_Bounce_Projectile_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node NRay_Bounce_Projectile_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node NRay_Bounce_Projectile_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.10"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "DamageSphereComp",
+    "Outer": "Default__NRay_Bounce_Projectile_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent Default__NRay_Bounce_Projectile_C:SphereComp",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.14"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__NRay_Bounce_Projectile_C",
+    "Properties": {
+      "OnComponentHit": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "NRay_Bounce_Projectile_C Default__NRay_Bounce_Projectile_C",
+              "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/NRay/NRay_Bounce_Projectile.3"
+            },
+            "FunctionName": "OnHit"
+          }
+        ]
+      }
+    }
+  }
+]

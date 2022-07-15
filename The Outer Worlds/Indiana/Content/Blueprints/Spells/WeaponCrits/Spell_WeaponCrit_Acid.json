@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_WeaponCrit_Acid_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_WeaponCrit_Acid_C Default__Spell_WeaponCrit_Acid_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.1"
+    }
+  },
+  {
+    "Type": "Spell_WeaponCrit_Acid_C",
+    "Name": "Default__Spell_WeaponCrit_Acid_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 272
+      },
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Target",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_Acid_C Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.4"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_acid_pulse",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_acid_pulse.0"
+      }
+    }
+  },
+  {
+    "Type": "ArmorStatusEffect",
+    "Name": "ArmorStatusEffect_1",
+    "Outer": "CE_Acid_C_1",
+    "Properties": {
+      "Modifiers": [
+        {
+          "EffectedBodyParts": [
+            "BodyPart"
+          ],
+          "DamageTypes": [
+            {
+              "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+              "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+            }
+          ],
+          "DamageThreshold": -15,
+          "DamageThresholdPercent": 1.0,
+          "DamageResistance": 0,
+          "DamageResistancePercent": 0.5
+        }
+      ],
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "CE_Acid_C",
+    "Name": "CE_Acid_C_1",
+    "Outer": "Default__Spell_WeaponCrit_Acid_C",
+    "Template": "Default__CE_Acid_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Acid_PostProcess_C Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.CE_Acid_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.5"
+        },
+        {
+          "ObjectName": "DamageStatusEffect Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.DamageStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.6"
+        },
+        {
+          "ObjectName": "ArmorStatusEffect Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.ArmorStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.3"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.8"
+      }
+    }
+  },
+  {
+    "Type": "CE_Acid_PostProcess_C",
+    "Name": "CE_Acid_PostProcess_C_0",
+    "Outer": "CE_Acid_C_1",
+    "Template": "Default__CE_Acid_PostProcess_C",
+    "Properties": {
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.CE_Acid_PostProcess_C_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.7"
+      }
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_1",
+    "Outer": "CE_Acid_C_1",
+    "Properties": {
+      "DamageValuePercent": 50.0,
+      "DamageValueType": "EDamageValueType::Percent",
+      "BaseDamageType": "EDamageBaseAmount::WeaponDPS",
+      "DamageScalars": 1,
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass Corrosion_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Corrosion_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 2.0,
+      "EffectName": {
+        "StringID": 272
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "CE_Acid_PostProcess_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Spell_WeaponCrit_Acid_C:CE_Acid_C_1.CE_Acid_PostProcess_C_0.EventEffects_1.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Acid.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Acid_C_1",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        null
+      ]
+    }
+  }
+]

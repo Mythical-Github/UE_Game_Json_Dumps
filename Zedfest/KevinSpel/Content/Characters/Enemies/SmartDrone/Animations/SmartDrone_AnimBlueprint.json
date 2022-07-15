@@ -1,0 +1,1957 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "SmartDrone_AnimBlueprint_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7,
+                6,
+                5,
+                4
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 10,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton SmartDrone_Skeleton",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Meshes/SmartDrone_Skeleton.18"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CurrentBehavior",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty AnimNode_BlendListByEnum:ActiveEnumValue",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "ByteProperty SmartDrone_AnimBlueprint_C:CurrentBehavior",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.51"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendListByEnum_4DA9E63947FBB5C02D06A2BD6346BAE7",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.94"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.78"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_D3FE07D84E5B369B0F33DD940BC8CE4F",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.98"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.78"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_6A6B7F744B68A7CCB2A0CDB9DCCA0259",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.96"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.78"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_A83DBCC943C8274D5A151DA947B8C33C",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.97"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.78"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_0EF3180142DCAF932B737AB5B9D0A2BA",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.95"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.43"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_AEC47FDF4377DD79A2BB1FB1945F8FF6",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.106"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function SmartDrone_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.108"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.43"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_B2B01BA840D5936965144789CBFAA65A",
+            "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.107"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.0"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.26"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:IsVelocityActive",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.24"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.22"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.20"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_AnimNotify_MissilesClosed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.18"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_AnimNotify_MissilesOpen",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.17"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.16"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.15"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.13"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.12"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.11"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.10"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.9"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.6"
+      },
+      {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AttackEnded__DelegateSignature",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.4"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_Root_383A0A6D4A6E80E873AA12B24CE2B66F",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.3"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_B2B01BA840D5936965144789CBFAA65A",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.107"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.108"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_TransitionResult_AEC47FDF4377DD79A2BB1FB1945F8FF6",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.106"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_SequencePlayer_B44C7A0D4842D57F06C785A351E6D944",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.100"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_StateResult_7168A708486DCD960D7DAE8F36A2C6C6",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.104"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_SequencePlayer_13B69113425FDF71ABB886B6AE962CDF",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.99"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_StateResult_488C22024E4BDD7B2496C192B6EDA74B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.103"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_0EF3180142DCAF932B737AB5B9D0A2BA",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.95"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_A83DBCC943C8274D5A151DA947B8C33C",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.97"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_6A6B7F744B68A7CCB2A0CDB9DCCA0259",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.96"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendSpacePlayer_D3FE07D84E5B369B0F33DD940BC8CE4F",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.98"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_BlendListByEnum_4DA9E63947FBB5C02D06A2BD6346BAE7",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.94"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_StateResult_BE374C5C4777FF23163647932FDC1C17",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.105"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_StateMachine_12C465B5482B33C6CCDC11A76289B83A",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.102"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:AnimGraphNode_Slot_55302E554F6610449227FFB94B4B1729",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.101"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Right_Velocity",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.74"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Forward_Velocity",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.66"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Run",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.48"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Scale",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.77"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.78"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Turning_BlendSpace",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.79"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:RotationRate",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.75"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.43"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Idle_Tapping",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.41"
+      },
+      {
+        "ObjectName": "MulticastDelegateProperty SmartDrone_AnimBlueprint_C:AttackEnded",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.80"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:Actor_Location",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.93"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:BP_SmartDrone",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.82"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:MoveForward",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.72"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:MoveRight",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.73"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:RunSpeed_Multiplier",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.76"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:VelocityActive",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.50"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:GunOpen",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.40"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Firing",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.38"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Fire_Powerful",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.37"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:MissilesOpen",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.47"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:GunRotation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.111"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:GameStarted",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.39"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Firing_Boolean_Interpolated",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.65"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsCrouching",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.42"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Direction",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.60"
+      },
+      {
+        "ObjectName": "ByteProperty SmartDrone_AnimBlueprint_C:CurrentBehavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.51"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:BP_Behavior",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.81"
+      }
+    ],
+    "FuncMap": {
+      "AttackEnded__DelegateSignature": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AttackEnded__DelegateSignature",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.4"
+      },
+      "ExecuteUbergraph_SmartDrone_AnimBlueprint": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.6"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintBeginPlay",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.9"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintInitializeAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.10"
+      },
+      "AnimNotify_SpawnProjectile": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_SpawnProjectile",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.11"
+      },
+      "AnimNotify_OnSpecialDamage": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_OnSpecialDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.12"
+      },
+      "AnimNotify_OnDamage": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_OnDamage",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.13"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.16"
+      },
+      "AnimNotify_AnimNotify_MissilesOpen": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_AnimNotify_MissilesOpen",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.17"
+      },
+      "AnimNotify_AnimNotify_MissilesClosed": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:AnimNotify_AnimNotify_MissilesClosed",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.18"
+      },
+      "Transfer_Blueprint_Variables_EachTick": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.20"
+      },
+      "Get_MovementDirectionValues_FromVelocity": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.22"
+      },
+      "IsVelocityActive": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:IsVelocityActive",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.24"
+      },
+      "Create_Turning_Blendspace_Weight": {
+        "ObjectName": "Function SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.26"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SmartDrone_AnimBlueprint_C Default__SmartDrone_AnimBlueprint_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.2"
+    }
+  },
+  {
+    "Type": "SmartDrone_AnimBlueprint_C",
+    "Name": "Default__SmartDrone_AnimBlueprint_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_383A0A6D4A6E80E873AA12B24CE2B66F": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_TransitionResult_B2B01BA840D5936965144789CBFAA65A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AEC47FDF4377DD79A2BB1FB1945F8FF6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_B44C7A0D4842D57F06C785A351E6D944": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SmartDrone_JumpLoop",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_JumpLoop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7168A708486DCD960D7DAE8F36A2C6C6": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_13B69113425FDF71ABB886B6AE962CDF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence SmartDrone_JumpStart",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_JumpStart.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_488C22024E4BDD7B2496C192B6EDA74B": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_0EF3180142DCAF932B737AB5B9D0A2BA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroneWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/BS_DroneWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_A83DBCC943C8274D5A151DA947B8C33C": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroneWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/BS_DroneWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_6A6B7F744B68A7CCB2A0CDB9DCCA0259": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroneWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/BS_DroneWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_D3FE07D84E5B369B0F33DD940BC8CE4F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D BS_DroneWalk",
+          "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/BS_DroneWalk.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByEnum_4DA9E63947FBB5C02D06A2BD6346BAE7": {
+        "EnumToPoseIndex": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 11
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_StateResult_BE374C5C4777FF23163647932FDC1C17": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_StateMachine_12C465B5482B33C6CCDC11A76289B83A": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Slot_55302E554F6610449227FFB94B4B1729": {
+        "Source": {
+          "LinkID": 14
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "Actor_Location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "GunRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_383A0A6D4A6E80E873AA12B24CE2B66F",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AttackEnded__DelegateSignature",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 202506240
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.5"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.85"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.109"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_K2_GetActorRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.110"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.63"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_CalculateDirection_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.61"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.84"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.30"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_IsCrouching_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.28"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.29"
+      },
+      {
+        "ObjectName": "ArrayProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetComponentsByClass_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.8"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_Array_Get_Item",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.83"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.64"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_IsValid_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.31"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.62"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.33"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.86"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.89"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.34"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.87"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.90"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_bSuccess1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.35"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_TryGetPawnOwner_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.88"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_AsBP_NPC_Base2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.91"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.K2Node_DynamicCast_bSuccess2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.36"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_IsValid_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.32"
+      },
+      {
+        "ObjectName": "ByteProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.52"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "CallFunc_GetComponentsByClass_ReturnValue",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "CallFunc_GetComponentsByClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyFlags": 134217728,
+    "Inner": {
+      "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:ExecuteUbergraph_SmartDrone_AnimBlueprint.CallFunc_GetComponentsByClass_ReturnValue.CallFunc_GetComponentsByClass_ReturnValue",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.7"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintInitializeAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_SpawnProjectile",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnSpecialDamage",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_OnDamage",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.14"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SmartDrone_AnimBlueprint_AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_AnimNotify_MissilesOpen",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_AnimNotify_MissilesClosed",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "NewParam",
+    "Outer": "Transfer_Blueprint_Variables_EachTick",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_SmartDrone_Pawn_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Blueprints/BP_SmartDrone_Pawn.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Transfer_Blueprint_Variables_EachTick",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick.NewParam",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.19"
+      },
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.92"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.49"
+      },
+      {
+        "ObjectName": "StructProperty SmartDrone_AnimBlueprint_C:Transfer_Blueprint_Variables_EachTick.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.112"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_SmartDrone",
+    "Outer": "Get_MovementDirectionValues_FromVelocity",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_SmartDrone_Pawn_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Blueprints/BP_SmartDrone_Pawn.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Get_MovementDirectionValues_FromVelocity",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity.BP_SmartDrone",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.21"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity.CallFunc_BreakVector_X",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.67"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity.CallFunc_BreakVector_Y",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.68"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Get_MovementDirectionValues_FromVelocity.CallFunc_BreakVector_Z",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.69"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Abs_ReturnValue",
+    "Outer": "IsVelocityActive"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsVelocityActive",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_Abs_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.23"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.46"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_Abs_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.70"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_Greater_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.44"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_SelectFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.71"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:IsVelocityActive.CallFunc_Greater_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.45"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Abs_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "Function",
+    "Name": "Create_Turning_Blendspace_Weight",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_Abs_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.25"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_Abs_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.53"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_FClamp_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.56"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_GetWorldDeltaSeconds_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.58"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_Abs_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.54"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_Add_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.55"
+      },
+      {
+        "ObjectName": "BoolProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_Greater_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.27"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_SelectFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.59"
+      },
+      {
+        "ObjectName": "FloatProperty SmartDrone_AnimBlueprint_C:Create_Turning_Blendspace_Weight.CallFunc_FInterpTo_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.57"
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsCrouching_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue1",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue2",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess1",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess2",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Fire_Powerful",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Firing",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "GameStarted",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "GunOpen",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Idle_Tapping",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsCrouching",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "IsVelocityActive",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue1",
+    "Outer": "IsVelocityActive",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "IsVelocityActive",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "MissilesOpen",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Run",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "Transfer_Blueprint_Variables_EachTick",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "VelocityActive",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CurrentBehavior",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "ByteProperty",
+    "Name": "CallFunc_GetCurrentBehaviorType_CurrentBehaviorType",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "Enum": {
+      "ObjectName": "UserDefinedEnum Enum_BehaviorType",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/Enums/Enum_BehaviorType.0"
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Abs_ReturnValue1",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Abs_ReturnValue2",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_FClamp_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_FInterpTo_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetWorldDeltaSeconds_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue",
+    "Outer": "Create_Turning_Blendspace_Weight"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Direction",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_CalculateDirection_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Firing_Boolean_Interpolated",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Forward_Velocity",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_X",
+    "Outer": "Get_MovementDirectionValues_FromVelocity"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Y",
+    "Outer": "Get_MovementDirectionValues_FromVelocity"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Z",
+    "Outer": "Get_MovementDirectionValues_FromVelocity"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Abs_ReturnValue1",
+    "Outer": "IsVelocityActive"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue",
+    "Outer": "IsVelocityActive"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "MoveForward",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "MoveRight",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Right_Velocity",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "RotationRate",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "RunSpeed_Multiplier",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Scale",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Turning_BlendSpace",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "MulticastDelegateProperty",
+    "Name": "AttackEnded",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 17592454545413,
+    "SignatureFunction": {
+      "ObjectName": "Function SmartDrone_AnimBlueprint_C:AttackEnded__DelegateSignature",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Animations/SmartDrone_AnimBlueprint.4"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_Behavior",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 589829,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BP_SmartDrone",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 67589,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_SmartDrone_Pawn_C",
+      "ObjectPath": "KevinSpel/Content/Characters/Enemies/SmartDrone/Blueprints/BP_SmartDrone_Pawn.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_BehaviorComponent_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_BehaviorComponent.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue1",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue2",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue3",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base1",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_NPC_Base2",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_NPC_Base_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_NPC_Base.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "Transfer_Blueprint_Variables_EachTick",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Actor_Location",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_4DA9E63947FBB5C02D06A2BD6346BAE7",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendListByEnum",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_0EF3180142DCAF932B737AB5B9D0A2BA",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6A6B7F744B68A7CCB2A0CDB9DCCA0259",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_A83DBCC943C8274D5A151DA947B8C33C",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_D3FE07D84E5B369B0F33DD940BC8CE4F",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_13B69113425FDF71ABB886B6AE962CDF",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B44C7A0D4842D57F06C785A351E6D944",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Slot_55302E554F6610449227FFB94B4B1729",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Slot",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_12C465B5482B33C6CCDC11A76289B83A",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_488C22024E4BDD7B2496C192B6EDA74B",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7168A708486DCD960D7DAE8F36A2C6C6",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BE374C5C4777FF23163647932FDC1C17",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AEC47FDF4377DD79A2BB1FB1945F8FF6",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B2B01BA840D5936965144789CBFAA65A",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D6609EA849BC2B4A66DC8EB36168611B",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_SmartDrone_AnimBlueprint",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "GunRotation",
+    "Outer": "SmartDrone_AnimBlueprint_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "Transfer_Blueprint_Variables_EachTick",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

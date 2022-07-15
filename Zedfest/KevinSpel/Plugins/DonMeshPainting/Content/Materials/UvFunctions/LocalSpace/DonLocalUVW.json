@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_4",
+    "Outer": "DonLocalUVW",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction BreakOutFloat3Components",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction DonLocalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_8",
+    "Outer": "DonLocalUVW",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      },
+      "ParameterName": "DonLocalBoundsMin",
+      "ExpressionGUID": "B50BCFAF-4E27D028-62D8769D-0F33ADFB",
+      "Function": {
+        "ObjectName": "MaterialFunction DonLocalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_9",
+    "Outer": "DonLocalUVW",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      },
+      "ParameterName": "DonLocalBoundsMax",
+      "ExpressionGUID": "EDB42D9A-4035EA45-8E7374B4-F854C7C1",
+      "Function": {
+        "ObjectName": "MaterialFunction DonLocalUVW",
+        "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "DonLocalUVW",
+    "Properties": {
+      "Description": "Similar to BoundingBased0-1UVW, but a parametrized form which allows the Mesh Painting Systemto apply a \"local bounds safety net\" which is crucial in preventing artifacts around bound extremeties. Also ensures consistency between the code and material expressions.",
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall DonLocalUVW:MaterialExpressionMaterialFunctionCall_4",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionVectorParameter DonLocalUVW:MaterialExpressionVectorParameter_8",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionVectorParameter DonLocalUVW:MaterialExpressionVectorParameter_9",
+          "ObjectPath": "KevinSpel/Plugins/DonMeshPainting/Content/Materials/UvFunctions/LocalSpace/DonLocalUVW.2"
+        },
+        null,
+        null,
+        null
+      ],
+      "StateId": "01201AF0-47F1B27E-3A07A78B-1314A308"
+    }
+  }
+]

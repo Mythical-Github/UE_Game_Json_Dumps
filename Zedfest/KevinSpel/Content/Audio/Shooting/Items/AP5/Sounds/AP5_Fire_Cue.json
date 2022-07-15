@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AP5_Fire_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator AP5_Fire_Cue:SoundNodeModulator_2",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AP5/Sounds/AP5_Fire_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 3.5,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "AP5_Fire_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AP5_Fire_Cue:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AP5/Sounds/AP5_Fire_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AP5_Fire_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/AP5/Sounds/mp5k_fp.mp5k_fp",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave mp5k_fp",
+      "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AP5/Sounds/mp5k_fp.0"
+    }
+  }
+]

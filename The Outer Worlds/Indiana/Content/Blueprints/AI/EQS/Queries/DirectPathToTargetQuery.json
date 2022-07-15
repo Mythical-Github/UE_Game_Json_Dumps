@@ -1,0 +1,110 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_1",
+    "Properties": {
+      "ParamName": "SimpleGrid.GridSize"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "DirectPathToTargetQuery",
+    "Properties": {
+      "QueryName": "SearchInitialQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption DirectPathToTargetQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DirectPathToTargetQuery.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_1",
+    "Outer": "DirectPathToTargetQuery",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 1000.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams DirectPathToTargetQuery:EnvQueryGenerator_SimpleGrid_1.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DirectPathToTargetQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "GenerateAround": {
+        "ObjectName": "Class EQSContext_PrimaryTargetStimulusLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "DirectPathToTargetQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid DirectPathToTargetQuery:EnvQueryGenerator_SimpleGrid_1",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DirectPathToTargetQuery.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding DirectPathToTargetQuery:EnvQueryTest_Pathfinding_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DirectPathToTargetQuery.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_NavmeshRaycast DirectPathToTargetQuery:EnvQueryTest_NavmeshRaycast_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DirectPathToTargetQuery.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_NavmeshRaycast",
+    "Name": "EnvQueryTest_NavmeshRaycast_0",
+    "Outer": "DirectPathToTargetQuery",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EQSContext_PrimaryTargetStimulusLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestOrder": 1,
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_2",
+    "Outer": "DirectPathToTargetQuery",
+    "Properties": {
+      "Context": {
+        "ObjectName": "Class EQSContext_PrimaryTargetStimulusLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "FloatValueMin": {
+        "DefaultValue": 0.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 3000.0
+      },
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Player_PassiveDTFromBlock_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Player_PassiveDTFromBlock_C Default__Spell_Player_PassiveDTFromBlock_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.1"
+    }
+  },
+  {
+    "Type": "Spell_Player_PassiveDTFromBlock_C",
+    "Name": "Default__Spell_Player_PassiveDTFromBlock_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OrListener Default__Spell_Player_PassiveDTFromBlock_C:OrListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.4"
+        },
+        "RemoveEvent": {
+          "ObjectName": "OrListener Default__Spell_Player_PassiveDTFromBlock_C:OrListener_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.5"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Self",
+            "StatusEffects": [
+              {
+                "ObjectName": "StatModifierStatusEffect Default__Spell_Player_PassiveDTFromBlock_C:StatModifierStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.6"
+              }
+            ],
+            "EffectTargetConditionals": [],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "OnWeaponEquipped",
+    "Name": "OnWeaponEquipped_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "Skills": [
+        "ESkill::LightMelee",
+        "ESkill::HeavyMelee"
+      ]
+    }
+  },
+  {
+    "Type": "OnWeaponEquipped",
+    "Name": "OnWeaponEquipped_0",
+    "Outer": "OrListener_1",
+    "Properties": {
+      "Skills": [
+        "ESkill::HandGuns",
+        "ESkill::LongGuns",
+        "ESkill::HeavyWeapons"
+      ]
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "Default__Spell_Player_PassiveDTFromBlock_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnWeaponEquipped Default__Spell_Player_PassiveDTFromBlock_C:OrListener_0.OnWeaponEquipped_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_1",
+    "Outer": "Default__Spell_Player_PassiveDTFromBlock_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnWeaponEquipped Default__Spell_Player_PassiveDTFromBlock_C:OrListener_1.OnWeaponEquipped_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_Player_PassiveDTFromBlock.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__Spell_Player_PassiveDTFromBlock_C",
+    "Properties": {
+      "StatModifier": {
+        "RpgStat": {
+          "ObjectName": "RpgStat WillpowerDT_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/WillpowerDT_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::PostAdd"
+      },
+      "bReapplyOnSkillChange": true,
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "Skill": "ESkill::Block",
+      "MaxSkillValue": 500.0
+    }
+  }
+]

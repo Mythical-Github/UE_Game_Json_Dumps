@@ -1,0 +1,116 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "Man.QueryDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "Min.QueryDistance"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "NavTraceLocationsAroundQuerier",
+    "Properties": {
+      "QueryName": "WanderQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption NavTraceLocationsAroundQuerier:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "NavTraceLocationsAroundQuerier",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 100.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams NavTraceLocationsAroundQuerier:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams NavTraceLocationsAroundQuerier:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfRings": {
+        "DefaultValue": 4
+      },
+      "bUseSpiralPattern": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "ProjectDown": 1000.0,
+        "ProjectUp": 200.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "NavTraceLocationsAroundQuerier",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut NavTraceLocationsAroundQuerier:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.3"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance NavTraceLocationsAroundQuerier:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_NavmeshRaycast NavTraceLocationsAroundQuerier:EnvQueryTest_NavmeshRaycast_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/NavTraceLocationsAroundQuerier.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "NavTraceLocationsAroundQuerier",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_NavmeshRaycast",
+    "Name": "EnvQueryTest_NavmeshRaycast_0",
+    "Outer": "NavTraceLocationsAroundQuerier",
+    "Properties": {
+      "DestinationContext": {
+        "ObjectName": "Class EnvQueryContext_Querier",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TestOrder": 1,
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

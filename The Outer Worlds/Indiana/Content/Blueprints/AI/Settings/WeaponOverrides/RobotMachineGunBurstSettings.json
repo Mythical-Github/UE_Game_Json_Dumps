@@ -1,0 +1,72 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "RobotMachineGunBurstSettings",
+    "Properties": {
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstCount": 3,
+          "BurstPauseTime": 0.25,
+          "EndPauseTime": 2.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstRounds": 20,
+          "BurstCount": 5,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "MovingFire": {
+        "bEnabled": true,
+        "PrePauseTime": 0.25,
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstCount": 3,
+          "BurstPauseTime": 0.25,
+          "EndPauseTime": 2.0
+        },
+        "bCanFireWhileRunning": true,
+        "bFireWhileMovingToPreferredRange": true,
+        "MovingToPreferredRangeNoFireTime": 1.0
+      },
+      "SuppressingFire": {
+        "Duration": "ESuppressingFireDuration::Long"
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "MinMoveDistance": 500.0,
+        "MaxMoveDistance": 1000.0,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.9,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.1
+        }
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "Cooldown": 10.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 800.0,
+        "PreferredMaxRange": 1600.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

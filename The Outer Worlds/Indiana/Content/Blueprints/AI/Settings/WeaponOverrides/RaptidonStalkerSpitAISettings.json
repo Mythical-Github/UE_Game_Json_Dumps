@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "RaptidonStalkerSpitAISettings",
+    "Properties": {
+      "StationaryFire": {
+        "FiringPattern": {
+          "StartPauseTime": 3.0,
+          "EndPauseTime": 4.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 0.2,
+          "BurstPauseTime": 0.3,
+          "EndPauseTime": 0.2
+        }
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::VeryShort"
+      },
+      "RangeBehavior": {
+        "OnEnterCombatBehavior": "EOnEnterCombatBehavior::StationaryFire",
+        "bShootAtFeet": true,
+        "bArcingWeapon": true,
+        "MinMoveDistance": 600.0,
+        "MaxMoveDistance": 1000.0,
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.5,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.5
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.6,
+            "BackwardWeight": 0.4,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.0
+          },
+          "PreferredRange": {
+            "StationaryWeight": 0.8,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.2
+          },
+          "TooFar": {
+            "StationaryWeight": 0.5,
+            "BackwardWeight": 0.0,
+            "ForwardWeight": 0.5,
+            "StrafeWeight": 0.0
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DodgePowerSweepMeleeDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DodgePowerSweepMeleeDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 2.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1500.0,
+        "PreferredMaxRange": 2500.0,
+        "AbsoluteRangeBuffer": 300.0
+      }
+    }
+  }
+]

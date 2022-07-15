@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AssaultRifle_Reload_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeAttenuation AssaultRifle_Reload_Cue:SoundNodeAttenuation_30",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Reload/AssaultRifle_Reload_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 1500.0,
+        "LPFRadiusMax": 3000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 2.7503126,
+      "MaxDistance": 3500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation WeaponHandling_att",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/Attenuation/WeaponHandling_att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_30",
+    "Outer": "AssaultRifle_Reload_Cue",
+    "Properties": {
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 1000.0,
+        "LPFRadiusMax": 3000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "bOverrideAttenuation": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator AssaultRifle_Reload_Cue:SoundNodeModulator_26",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Reload/AssaultRifle_Reload_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_26",
+    "Outer": "AssaultRifle_Reload_Cue",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer AssaultRifle_Reload_Cue:SoundNodeWavePlayer_0",
+          "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Reload/AssaultRifle_Reload_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AssaultRifle_Reload_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Shooting/Items/AssaultRifle_Reload/Weapon_AssaultRifle_Reload.Weapon_AssaultRifle_Reload",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave Weapon_AssaultRifle_Reload",
+      "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/AssaultRifle_Reload/Weapon_AssaultRifle_Reload.0"
+    }
+  }
+]

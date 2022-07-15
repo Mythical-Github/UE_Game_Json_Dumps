@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree MedKitHUDAdrenoSlot_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.5"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.WidgetArchetype",
+        "SubPathString": ""
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MedKitDrugSlotWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MedKitHUDAdrenoSlot_BP_C Default__MedKitHUDAdrenoSlot_BP_C",
+      "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.1"
+    }
+  },
+  {
+    "Type": "MedKitHUDAdrenoSlot_BP_C",
+    "Name": "Default__MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "SlotIsFilled": {
+        "ObjectName": "Texture2D T_HUD_InhalerAdrenoFull",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerAdrenoFull.0"
+      },
+      "SlotIsEmpty": {
+        "ObjectName": "Texture2D T_HUD_InhalerAdrenoPipEmpty",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerAdrenoPipEmpty.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerAdrenoFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerAdrenoFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DrugSlotImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_HUD_InhalerAdrenoFull",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/PlayerHealth/T_HUD_InhalerAdrenoFull.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "MedKitHUDAdrenoSlot_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "DrugSlotImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.3"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.6"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "MedKitHUDAdrenoSlot_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image MedKitHUDAdrenoSlot_BP_C:WidgetTree.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.DrugSlotImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/AbilityOverview/MedKitHUDAdrenoSlot_BP.3"
+      }
+    }
+  }
+]

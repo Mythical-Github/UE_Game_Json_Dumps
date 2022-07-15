@@ -1,0 +1,549 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_AI_GorillianMaim_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_AI_GorillianMaim_C Default__Spell_AI_GorillianMaim_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.1"
+    }
+  },
+  {
+    "Type": "Spell_AI_GorillianMaim_C",
+    "Name": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "TargetConditionals": [
+        {
+          "ObjectName": "SpellConditional_RandomChance Default__Spell_AI_GorillianMaim_C:SpellConditional_RandomChance_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.24"
+        },
+        {
+          "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_AI_GorillianMaim_C:SpellConditional_IsHostileToCaster_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.20"
+        },
+        {
+          "ObjectName": "SpellConditional_HasSpell Default__Spell_AI_GorillianMaim_C:SpellConditional_HasSpell_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.17"
+        }
+      ],
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnMeleeHit Default__Spell_AI_GorillianMaim_C:OnMeleeHit_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.15"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Maim_Supernova_C Default__Spell_AI_GorillianMaim_C:CE_Maim_Supernova_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.10"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsPlayer Default__Spell_AI_GorillianMaim_C:SpellConditional_IsPlayer_2",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.22"
+              },
+              {
+                "ObjectName": "SpellConditional_IsDifficulty Default__Spell_AI_GorillianMaim_C:SpellConditional_IsDifficulty_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.18"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": true,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          },
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Maim_C Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.6"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsPlayer Default__Spell_AI_GorillianMaim_C:SpellConditional_IsPlayer_3",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.23"
+              },
+              {
+                "ObjectName": "SpellConditional_IsDifficulty Default__Spell_AI_GorillianMaim_C:SpellConditional_IsDifficulty_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.19"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": true,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          },
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Maim_C Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.5"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_IsPlayer Default__Spell_AI_GorillianMaim_C:SpellConditional_IsPlayer_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.21"
+              },
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_AI_GorillianMaim_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.16"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": true,
+            "bForceTwoDimensionalDirection": true,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Maim_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Maim_C_1",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_1",
+    "Outer": "CE_Maim_Supernova_C_0",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Maim"
+      },
+      "bRemoveWithSpell": false,
+      "EffectName": {
+        "StringID": 136
+      }
+    }
+  },
+  {
+    "Type": "CE_Maim_C",
+    "Name": "CE_Maim_C_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Template": "Default__CE_Maim_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Maim_Post_Process_C Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0.CE_Maim_Post_Process_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.7"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.25"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.2"
+        }
+      ],
+      "Duration": 10.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.13"
+      }
+    }
+  },
+  {
+    "Type": "CE_Maim_C",
+    "Name": "CE_Maim_C_1",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Template": "Default__CE_Maim_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Maim_Post_Process_C Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1.CE_Maim_Post_Process_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.8"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.26"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.3"
+        }
+      ],
+      "Duration": 10.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.14"
+      }
+    }
+  },
+  {
+    "Type": "CE_Maim_Post_Process_C",
+    "Name": "CE_Maim_Post_Process_C_0",
+    "Outer": "CE_Maim_C_0",
+    "Template": "CE_Maim_Post_Process_C_0"
+  },
+  {
+    "Type": "CE_Maim_Post_Process_C",
+    "Name": "CE_Maim_Post_Process_C_0",
+    "Outer": "CE_Maim_C_1",
+    "Template": "CE_Maim_Post_Process_C_0"
+  },
+  {
+    "Type": "CE_Maim_Post_Process_C",
+    "Name": "CE_Maim_Post_Process_C_1",
+    "Outer": "CE_Maim_Supernova_C_0",
+    "Template": "Default__CE_Maim_Post_Process_C",
+    "Properties": {
+      "Duration": 3.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_Maim_Supernova_C",
+    "Name": "CE_Maim_Supernova_C_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Template": "Default__CE_Maim_Supernova_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Maim_Post_Process_C Default__Spell_AI_GorillianMaim_C:CE_Maim_Supernova_C_0.CE_Maim_Post_Process_C_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.9"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_Supernova_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.27"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_Supernova_C_0.AnimDisableStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Maim_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Maim_C_1",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_AI_GorillianMaim_C:CE_Maim_C_1.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/AI/Spell_AI_GorillianMaim.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnMeleeHit",
+    "Name": "OnMeleeHit_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "MeleeAction": "EMeleeAction::SpecialAttack2"
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Critter",
+        "CreatureType.Creature.Swarm",
+        "CreatureType.SmplCrea.Chicken",
+        "CreatureType.SmplCrea.Mealgrub",
+        "CreatureType.SmplCrea.Tangler"
+      ],
+      "bNegateCheck": true
+    }
+  },
+  {
+    "Type": "SpellConditional_HasSpell",
+    "Name": "SpellConditional_HasSpell_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "CastSpell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_Flaw_PermMaim_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermMaim.0"
+      },
+      "bNot": true
+    }
+  },
+  {
+    "Type": "SpellConditional_IsDifficulty",
+    "Name": "SpellConditional_IsDifficulty_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "AllowedDifficulties": [
+        "EGameDifficulty::SuperNova"
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_IsDifficulty",
+    "Name": "SpellConditional_IsDifficulty_1",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "AllowedDifficulties": [
+        "EGameDifficulty::SuperNova"
+      ],
+      "bNot": true
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_1",
+    "Outer": "Default__Spell_AI_GorillianMaim_C"
+  },
+  {
+    "Type": "SpellConditional_IsPlayer",
+    "Name": "SpellConditional_IsPlayer_0",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "bNot": true
+    }
+  },
+  {
+    "Type": "SpellConditional_IsPlayer",
+    "Name": "SpellConditional_IsPlayer_2",
+    "Outer": "Default__Spell_AI_GorillianMaim_C"
+  },
+  {
+    "Type": "SpellConditional_IsPlayer",
+    "Name": "SpellConditional_IsPlayer_3",
+    "Outer": "Default__Spell_AI_GorillianMaim_C"
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_1",
+    "Outer": "Default__Spell_AI_GorillianMaim_C",
+    "Properties": {
+      "bCheckCaster": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Maim_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Maim_C_1",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Maim_Supernova_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat Damage_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Damage_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bRemoveWithSpell": false
+    }
+  }
+]

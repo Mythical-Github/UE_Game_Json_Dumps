@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_Weapon_UglyStick_Freeze_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_Weapon_UglyStick_Freeze_C Default__Spell_Weapon_UglyStick_Freeze_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.1"
+    }
+  },
+  {
+    "Type": "Spell_Weapon_UglyStick_Freeze_C",
+    "Name": "Default__Spell_Weapon_UglyStick_Freeze_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnCausedDamage Default__Spell_Weapon_UglyStick_Freeze_C:OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.5"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_UglyStick_Freeze_C Default__Spell_Weapon_UglyStick_Freeze_C:CE_UglyStick_Freeze_C_2",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.2"
+              },
+              {
+                "ObjectName": "StatusEffectRemove Default__Spell_Weapon_UglyStick_Freeze_C:StatusEffectRemove_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.7"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_Weapon_UglyStick_Freeze_C:SpellConditional_HasStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.6"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_UglyStick_Freeze_C",
+    "Name": "CE_UglyStick_Freeze_C_2",
+    "Outer": "Default__Spell_Weapon_UglyStick_Freeze_C",
+    "Template": "Default__CE_UglyStick_Freeze_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "FreezeDisableStatusEffect Default__Spell_Weapon_UglyStick_Freeze_C:CE_UglyStick_Freeze_C_2.FreezeDisableStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.4"
+        },
+        {
+          "ObjectName": "CE_UglyStick_Freeze_Visuals_C Default__Spell_Weapon_UglyStick_Freeze_C:CE_UglyStick_Freeze_C_2.CE_UglyStick_Freeze_Visuals_C_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/Weapons/Spell_Weapon_UglyStick_Freeze.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CE_UglyStick_Freeze_Visuals_C",
+    "Name": "CE_UglyStick_Freeze_Visuals_C_1",
+    "Outer": "CE_UglyStick_Freeze_C_2",
+    "Template": "Default__CE_UglyStick_Freeze_Visuals_C"
+  },
+  {
+    "Type": "FreezeDisableStatusEffect",
+    "Name": "FreezeDisableStatusEffect_1",
+    "Outer": "CE_UglyStick_Freeze_C_2",
+    "Properties": {
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "Default__Spell_Weapon_UglyStick_Freeze_C",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Melee"
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_0",
+    "Outer": "Default__Spell_Weapon_UglyStick_Freeze_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_UglyStick_Slow_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/UglyStickEffects/CE_UglyStick_Slow.1"
+      },
+      "NumStacks": 2
+    }
+  },
+  {
+    "Type": "StatusEffectRemove",
+    "Name": "StatusEffectRemove_0",
+    "Outer": "Default__Spell_Weapon_UglyStick_Freeze_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_UglyStick_Slow_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/UglyStickEffects/CE_UglyStick_Slow.1"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  }
+]

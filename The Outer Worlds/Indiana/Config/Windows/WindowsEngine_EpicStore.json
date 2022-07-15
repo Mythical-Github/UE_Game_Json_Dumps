@@ -1,0 +1,37 @@
+[SystemSettings]
+r.Streaming.MaxTempMemoryAllowed=75
+
+[/Script/Engine.Engine]
+; DefaultBloomKernel is not used
+DefaultBloomKernelTextureName=/Engine/EngineResources/DefaultTexture.DefaultTexture
+
+[/Script/Engine.RendererSettings]
+r.Decal.FadeScreenSizeMult=0.5
+r.ForceDebugViewModes=1	;Because we have difficultly keeping the game lit consistently, this allows "viewmode unlit" to be used in packaged build
+
+[/Script/Engine.GameEngine]
++NetDriverDefinitions=(DefName="GameNetDriver",DriverClassName="OnlineSubsystemSteam.SteamNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
+
+[OnlineSubsystem]
+DefaultPlatformService=
+
+[EOSSDK]
+ProductId=prod-rosemallow
+SandboxId=rosemallow
+DeploymentId=79b191d65c734436ae46dcd942571868
+ProductName=The Outer Worlds
+
+; Application IDs - Taken from \\indiana\Indiana\Tools\Epic\Offer & Item ID Lists - The Outer Worlds.pdf
+; Values map to the ApplicationID column
+
+; Dev Catalog IDs
+CatalogItem_RosemallowDLC01Latest="1a2342e7308748d9bd1f08cbbdcade67"
+CatalogItem_RosemallowDLC01Stable="705055b20157473db7d16358cee89ae0"
+CatalogItem_RosemallowDLC01Staging="46fa5a53e3e24922802b48d5c4e2ecfa"
+CatalogItem_RosemallowDLC02Latest="fdc250466aa44bd49e202a7edcaac490"
+CatalogItem_RosemallowDLC02Stable="f9a7bac28b354ef789709552a5f39865"
+CatalogItem_RosemallowDLC02Staging="70c7f1e5f442498a8adbb42552a18f79"
+
+; Release Catalog IDs
+CatalogItem_RosemallowDLC01="e1defda212544de9aa1c177138d8ccfa"
+CatalogItem_RosemallowDLC02="8d58a634be64484c95adc331720f6537"

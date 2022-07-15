@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_0",
+    "Outer": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass AB_PlasmaCutter_Weapon_T2_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeLt/AB_PlasmaCutter/Variants/AB_PlasmaCutter_Weapon_T2.0"
+          }
+        }
+      },
+      "MinLevel": 22,
+      "MaxLevel": 29
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_1",
+    "Outer": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass AB_PlasmaCutter_Weapon_T1_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeLt/AB_PlasmaCutter/Variants/AB_PlasmaCutter_Weapon_T1.0"
+          }
+        }
+      },
+      "MinLevel": 7,
+      "MaxLevel": 14
+    }
+  },
+  {
+    "Type": "LootRowItem",
+    "Name": "LootRowItem_2",
+    "Outer": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "Item": {
+        "ItemType": "EItemType::Weapon",
+        "WeaponItemDefinition": {
+          "WeaponClass": {
+            "ObjectName": "BlueprintGeneratedClass AB_PlasmaCutter_Weapon_T3_C",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/MeleeLt/AB_PlasmaCutter/Variants/AB_PlasmaCutter_Weapon_T3.0"
+          }
+        }
+      },
+      "MinLevel": 32,
+      "bInvertConditional": false,
+      "Conditional": {
+        "BaseExpression": {
+          "ConditionalType": "EConditionalType::DLCInstalled",
+          "AdditionalConditions": [
+            {
+              "Operator": "ELogicalOperator::Or",
+              "ConditionalType": "EConditionalType::DLCInstalled",
+              "Condition": {
+                "GlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Operator": "EGlobalVariableComparison::Equal",
+                "OtherGlobalVariable": {
+                  "DisplayName": ""
+                },
+                "Value": 0,
+                "bDefault": false
+              },
+              "QuestStateCondition": {
+                "QuestReference": {
+                  "ID": "00000000-00000000-00000000-00000000"
+                },
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "EQuestState::Invalid",
+                "bDefault": false
+              },
+              "CompanionStateCondition": {
+                "CompanionToCheck": "ESpecialObsidianID::None",
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonState": "ECompanionState::CompanionNotRecruited",
+                "bDefault": false
+              },
+              "PCGenderCondition": {
+                "Operator": "EEqualityComparison::Equal",
+                "ComparisonGender": "EGender::Male",
+                "bDefault": false
+              },
+              "DLCInstalledCondition": {
+                "DLCToCheck": "EDLCType::INX2",
+                "bDefault": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_0",
+    "Outer": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 15,
+      "MaxLevel": 21,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootRowTable",
+    "Name": "LootRowTable_1",
+    "Outer": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "LootTable": {
+        "ObjectName": "LootTableData 823_Parts_Weapon",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/823_Parts_Weapon.3"
+      },
+      "MinLevel": 30,
+      "MaxLevel": 31,
+      "Count": 2,
+      "Chance": 1
+    }
+  },
+  {
+    "Type": "LootTableData",
+    "Name": "843_Weapon_PlasmaCutter",
+    "Properties": {
+      "bUseAll": false,
+      "LootRows": [
+        {
+          "ObjectName": "LootRowItem 843_Weapon_PlasmaCutter:LootRowItem_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/843_Weapon_PlasmaCutter.1"
+        },
+        {
+          "ObjectName": "LootRowTable 843_Weapon_PlasmaCutter:LootRowTable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/843_Weapon_PlasmaCutter.3"
+        },
+        {
+          "ObjectName": "LootRowItem 843_Weapon_PlasmaCutter:LootRowItem_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/843_Weapon_PlasmaCutter.0"
+        },
+        {
+          "ObjectName": "LootRowTable 843_Weapon_PlasmaCutter:LootRowTable_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/843_Weapon_PlasmaCutter.4"
+        },
+        {
+          "ObjectName": "LootRowItem 843_Weapon_PlasmaCutter:LootRowItem_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/LootTables/843_Weapon_PlasmaCutter.2"
+        }
+      ]
+    }
+  }
+]

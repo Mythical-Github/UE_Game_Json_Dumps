@@ -1,0 +1,2164 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "Compass_BP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "Compass_BP_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree Compass_BP_C:WidgetTree",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.108"
+      },
+      "bAllowTemplate": true,
+      "bValidTemplate": true,
+      "bClassRequiresNativeTick": true,
+      "TemplateAsset": {
+        "AssetPathName": "/Game/UI/HUD/Compass/Compass_BP.WidgetArchetype",
+        "SubPathString": ""
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function Compass_BP_C:ExecuteUbergraph_Compass_BP",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.16"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class CompassWidget",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty Compass_BP_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.0"
+      },
+      {
+        "ObjectName": "Function Compass_BP_C:Construct",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.21"
+      },
+      {
+        "ObjectName": "Function Compass_BP_C:Tick",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.19"
+      },
+      {
+        "ObjectName": "Function Compass_BP_C:ExecuteUbergraph_Compass_BP",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.16"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:CardinalDirectionsImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.14"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:CompassBody",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.57"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:CardinalDirection_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.56"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:CompassBody_Mat",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.58"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Compass_BP": {
+        "ObjectName": "Function Compass_BP_C:ExecuteUbergraph_Compass_BP",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.16"
+      },
+      "Tick": {
+        "ObjectName": "Function Compass_BP_C:Tick",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.19"
+      },
+      "Construct": {
+        "ObjectName": "Function Compass_BP_C:Construct",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.21"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Compass_BP_C Default__Compass_BP_C",
+      "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.2"
+    }
+  },
+  {
+    "Type": "Compass_BP_C",
+    "Name": "Default__Compass_BP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HostileInDistance": 3000.0,
+      "HostileOutDistance": 3100.0,
+      "HostilePacifistInDistance": 1500.0,
+      "HostilePacifistOutDistance": 1600.0,
+      "NonHostileInDistance": 1500.0,
+      "NonHostileOutDistance": 1600.0,
+      "POIOutDistance": 9000.0,
+      "NumPooledEntries": 25,
+      "BeaconWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass CompassEntry_BP_C",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassEntries/CompassEntry_BP.1"
+      },
+      "AreaBeaconFadeIn": {
+        "EaseType": "EEaseType::EaseInOut",
+        "EaseExponent": 1.0
+      },
+      "AreaBeaconFadeOut": {
+        "EaseType": "EEaseType::EaseInOut",
+        "EaseExponent": 1.0
+      },
+      "AreaBeaconFadeDuration": 0.5,
+      "AreaBeaconMovement": {
+        "EaseType": "EEaseType::EaseInOut",
+        "EaseExponent": 1.0
+      },
+      "AreaBeaconDistanceRatioToSpeed": [
+        {
+          "DistanceRatio": 0.0,
+          "Duration": 0.25
+        },
+        {
+          "DistanceRatio": 0.2,
+          "Duration": 0.5
+        },
+        {
+          "DistanceRatio": 0.4,
+          "Duration": 0.75
+        },
+        {
+          "DistanceRatio": 0.6,
+          "Duration": 1.0
+        },
+        {
+          "DistanceRatio": 0.8,
+          "Duration": 1.5
+        },
+        {
+          "DistanceRatio": 1.0,
+          "Duration": 2.0
+        }
+      ],
+      "AreaBeaconFallbackAnimationDuration": 2.0,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "AnimationBorder",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot Compass_BP_C:WidgetTree.AnimationBorder.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.ContentAnimationSizeBox.SizeBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.93"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "AnimationBorder",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.AnimationBorder.BorderSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.ContentAnimationSizeBox.SizeBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.97"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "AnimationBorder",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border Compass_BP_C:WidgetTree.AnimationBorder",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.3"
+      },
+      "Content": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.62"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "AnimationBorder",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.AnimationBorder",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.4"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "BeaconCanvas",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.CompassContentsRetainer.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.76"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot Compass_BP_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_0.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.66"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "BeaconCanvas",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.CompassContentsRetainer.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.79"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.71"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 74.0,
+          "Bottom": 24.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel Compass_BP_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.8"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.AreaBeaconLight",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 74.0,
+          "Bottom": 24.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.10"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.AreaBeaconLight",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.46"
+      }
+    }
+  },
+  {
+    "Type": "Compass_BP_C",
+    "Name": "WidgetArchetype",
+    "Template": "Default__Compass_BP_C",
+    "Properties": {
+      "CardinalDirectionsImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.CardinalDirectionsImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.47"
+      },
+      "CompassBody": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.CompassBody",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.48"
+      },
+      "BeaconCanvas": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.BeaconCanvas",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.9"
+      },
+      "ContentAnimationSizeBox": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.ContentAnimationSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.89"
+      },
+      "AnimationBorder": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.AnimationBorder",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.4"
+      },
+      "EnemiesLeftImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.EnemiesLeftImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.49"
+      },
+      "EnemiesRightImage": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.EnemiesRightImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.50"
+      },
+      "MainInvalidationBox": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.55"
+      },
+      "AreaBeaconLight": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.AreaBeaconLight",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.46"
+      },
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WidgetArchetype:WidgetTree_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.109"
+      },
+      "bCookedWidgetTree": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CardinalDirectionsImage",
+    "Outer": "Compass_BP_C",
+    "PropertyFlags": 562952101429260,
+    "PropertyClass": {
+      "ObjectName": "Class Image",
+      "ObjectPath": "/Script/UMG"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_Compass_BP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Compass_BP",
+    "Outer": "Compass_BP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty Compass_BP_C:ExecuteUbergraph_Compass_BP.EntryPoint",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.15"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:ExecuteUbergraph_Compass_BP.CallFunc_GetDynamicMaterial_ReturnValue",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.59"
+      },
+      {
+        "ObjectName": "StructProperty Compass_BP_C:ExecuteUbergraph_Compass_BP.K2Node_Event_MyGeometry",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.101"
+      },
+      {
+        "ObjectName": "FloatProperty Compass_BP_C:ExecuteUbergraph_Compass_BP.K2Node_Event_InDeltaTime",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.17"
+      },
+      {
+        "ObjectName": "ObjectProperty Compass_BP_C:ExecuteUbergraph_Compass_BP.CallFunc_GetDynamicMaterial_ReturnValue1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.60"
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_InDeltaTime",
+    "Outer": "ExecuteUbergraph_Compass_BP"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "MyGeometry",
+    "Outer": "Tick",
+    "PropertyFlags": 148,
+    "Struct": {
+      "ObjectName": "ScriptStruct Geometry",
+      "ObjectPath": "/Script/SlateCore"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Outer": "Compass_BP_C",
+    "SuperStruct": {
+      "ObjectName": "Function UserWidget:Tick",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty Compass_BP_C:Tick.MyGeometry",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.18"
+      },
+      {
+        "ObjectName": "FloatProperty Compass_BP_C:Tick.InDeltaTime",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.20"
+      }
+    ],
+    "FunctionFlags": 134350856
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "InDeltaTime",
+    "Outer": "Tick",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "Compass_BP_C",
+    "SuperStruct": {
+      "ObjectName": "Function UserWidget:Construct",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": 134350856
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.26"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot Compass_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.105"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.30"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.29"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot Compass_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.104"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.32"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.107"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.36"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.35"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.106"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Right": -8.5
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.22"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.TopLeftBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.44"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.22"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.TopCenterPiece",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.43"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": -8.5
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.22"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.TopRightBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.45"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.23"
+      },
+      "Content": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.ContentAnimationSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.85"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Padding": {
+        "Right": -15.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.23"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.EnemiesLeftImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.41"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Padding": {
+        "Left": -15.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.23"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.EnemiesRightImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.42"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Right": -8.5
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.24"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.TopLeftBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.52"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.24"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.TopCenterPiece",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.51"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": -8.5
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.24"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.TopRightBar",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.53"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.25"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.ContentAnimationSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.89"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Padding": {
+        "Right": -15.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.25"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.EnemiesLeftImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.49"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_1",
+    "Properties": {
+      "Padding": {
+        "Left": -15.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.25"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.EnemiesRightImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.50"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "AreaBeaconLight",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 74.0,
+          "Y": 12.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_BeaconArt",
+          "ObjectPath": "Indiana/Content/INX2_Content/INX2_UI/HUD/Compass/T_Compass_BeaconArt.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot Compass_BP_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.11"
+      },
+      "Visibility": "ESlateVisibility::Collapsed",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CardinalDirectionsImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Material CompassTrack_Mat",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_0.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.65"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CompassBody",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant M_CompassBackingReveal_Inst",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/M_CompassBackingReveal_Inst.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_5.SizeBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.95"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "EnemiesLeftImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 33.0,
+          "Y": 38.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_Icon_Hostile",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_Icon_Hostile.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.30"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "EnemiesRightImage",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 33.0,
+          "Y": 38.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_Icon_Hostile",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_Icon_Hostile.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.31"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopCenterPiece",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 262.0,
+          "Y": 21.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopCenter",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopCenter.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.27"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopLeftBar",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 160.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopLeft",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopLeft.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.26"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopRightBar",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 160.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopRight",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopRight.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.28"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "AreaBeaconLight",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 74.0,
+          "Y": 12.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_BeaconArt",
+          "ObjectPath": "Indiana/Content/INX2_Content/INX2_UI/HUD/Compass/T_Compass_BeaconArt.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WidgetArchetype:WidgetTree_0.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.12"
+      },
+      "Visibility": "ESlateVisibility::Collapsed",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CardinalDirectionsImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Material CompassTrack_Mat",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassTrack_Mat.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.70"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CompassBody",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant M_CompassBackingReveal_Inst",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/M_CompassBackingReveal_Inst.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_5.SizeBoxSlot_3",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.99"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "EnemiesLeftImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 33.0,
+          "Y": 38.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_Icon_Hostile",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_Icon_Hostile.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.36"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "EnemiesRightImage",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 33.0,
+          "Y": 38.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_Icon_Hostile",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_Icon_Hostile.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.37"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopCenterPiece",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 262.0,
+          "Y": 21.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopCenter",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopCenter.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.33"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopLeftBar",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 160.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopLeft",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopLeft.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.32"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopRightBar",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 160.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_Compass_MetalTopRight",
+          "ObjectPath": "Indiana/Content/UI/Art/HUD/Compass/T_Compass_MetalTopRight.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_0.HorizontalBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.34"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "InvalidationBox",
+    "Name": "MainInvalidationBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "CacheRelativeTransforms": true,
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.MainInvalidationBox.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.77"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InvalidationBox",
+    "Name": "MainInvalidationBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "CacheRelativeTransforms": true,
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.MainInvalidationBox.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.80"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CardinalDirection_Mat",
+    "Outer": "Compass_BP_C",
+    "PropertyFlags": 65541,
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CompassBody",
+    "Outer": "Compass_BP_C",
+    "PropertyFlags": 562952101429260,
+    "PropertyClass": {
+      "ObjectName": "Class Image",
+      "ObjectPath": "/Script/UMG"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CompassBody_Mat",
+    "Outer": "Compass_BP_C",
+    "PropertyFlags": 65541,
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+    "Outer": "ExecuteUbergraph_Compass_BP",
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetDynamicMaterial_ReturnValue1",
+    "Outer": "ExecuteUbergraph_Compass_BP",
+    "PropertyClass": {
+      "ObjectName": "Class MaterialInstanceDynamic",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_0.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.65"
+        },
+        {
+          "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_0.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.66"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.CompassCardinalsRetainer.PanelSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.75"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_6",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_9",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.69"
+        },
+        {
+          "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_8",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.68"
+        },
+        {
+          "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_7",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.67"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot Compass_BP_C:WidgetTree.AnimationBorder.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.5"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.70"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_0.OverlaySlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.71"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.CompassCardinalsRetainer.PanelSlot_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.78"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_6",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_9",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.74"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_8",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.73"
+        },
+        {
+          "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_7",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.72"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot WidgetArchetype:WidgetTree_0.AnimationBorder.BorderSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.61"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.CardinalDirectionsImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.39"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Top": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.61"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel Compass_BP_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Bottom": 1.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.62"
+      },
+      "Content": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.86"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Top": -6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.62"
+      },
+      "Content": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.88"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_9",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Top": -6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.62"
+      },
+      "Content": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.87"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.63"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.CardinalDirectionsImage",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.47"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Top": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.63"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.CanvasPanel_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Bottom": 1.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.64"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.90"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Top": -6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.64"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.92"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_9",
+    "Outer": "Overlay_6",
+    "Properties": {
+      "Padding": {
+        "Top": -6.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_6",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.64"
+      },
+      "Content": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.91"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_1",
+    "Outer": "CompassCardinalsRetainer",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox Compass_BP_C:WidgetTree.CompassCardinalsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.81"
+      },
+      "Content": {
+        "ObjectName": "Overlay Compass_BP_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.61"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "CompassContentsRetainer",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox Compass_BP_C:WidgetTree.CompassContentsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.82"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel Compass_BP_C:WidgetTree.BeaconCanvas",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.7"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "MainInvalidationBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "InvalidationBox Compass_BP_C:WidgetTree.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.54"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox Compass_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.102"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_1",
+    "Outer": "CompassCardinalsRetainer",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox WidgetArchetype:WidgetTree_0.CompassCardinalsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.83"
+      },
+      "Content": {
+        "ObjectName": "Overlay WidgetArchetype:WidgetTree_0.Overlay_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.63"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "CompassContentsRetainer",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "RetainerBox WidgetArchetype:WidgetTree_0.CompassContentsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.84"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WidgetArchetype:WidgetTree_0.BeaconCanvas",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_0",
+    "Outer": "MainInvalidationBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.55"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.103"
+      }
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "CompassCardinalsRetainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material CompassBodyMM",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassBodyMM.0"
+      },
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.CompassCardinalsRetainer.PanelSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.75"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.94"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "CompassContentsRetainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material CompassBodyMM",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassBodyMM.0"
+      },
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.CompassContentsRetainer.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_7.SizeBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.96"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "CompassCardinalsRetainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material CompassBodyMM",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassBodyMM.0"
+      },
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.CompassCardinalsRetainer.PanelSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.78"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.98"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "RetainerBox",
+    "Name": "CompassContentsRetainer",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "EffectMaterial": {
+        "ObjectName": "Material CompassBodyMM",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/CompassBodyMM.0"
+      },
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.CompassContentsRetainer.PanelSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.79"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_7.SizeBoxSlot_2",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.100"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ContentAnimationSizeBox",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.ContentAnimationSizeBox.SizeBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.93"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot Compass_BP_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.29"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 542.0,
+      "HeightOverride": 24.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.94"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.67"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_5",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 591.0,
+      "HeightOverride": 47.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_5.SizeBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.95"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_9",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.69"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_7",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 591.0,
+      "HeightOverride": 47.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot Compass_BP_C:WidgetTree.SizeBox_7.SizeBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.96"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot Compass_BP_C:WidgetTree.Overlay_6.OverlaySlot_8",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.68"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ContentAnimationSizeBox",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.ContentAnimationSizeBox.SizeBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.97"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot WidgetArchetype:WidgetTree_0.HorizontalBox_1.HorizontalBoxSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.35"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 542.0,
+      "HeightOverride": 24.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.98"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.72"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_5",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 591.0,
+      "HeightOverride": 47.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_5.SizeBoxSlot_3",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.99"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_9",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.74"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_7",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "WidthOverride": 591.0,
+      "HeightOverride": 47.0,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot WidgetArchetype:WidgetTree_0.SizeBox_7.SizeBoxSlot_2",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.100"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WidgetArchetype:WidgetTree_0.Overlay_6.OverlaySlot_8",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.73"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Outer": "ContentAnimationSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.ContentAnimationSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.85"
+      },
+      "Content": {
+        "ObjectName": "Border Compass_BP_C:WidgetTree.AnimationBorder",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.3"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 30.0,
+        "Right": 30.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.86"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox Compass_BP_C:WidgetTree.CompassCardinalsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.81"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_3",
+    "Outer": "SizeBox_5",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.87"
+      },
+      "Content": {
+        "ObjectName": "Image Compass_BP_C:WidgetTree.CompassBody",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.40"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Outer": "SizeBox_7",
+    "Properties": {
+      "Padding": {
+        "Left": 30.0,
+        "Top": 9.0,
+        "Right": 30.0,
+        "Bottom": 8.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox Compass_BP_C:WidgetTree.SizeBox_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.88"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox Compass_BP_C:WidgetTree.CompassContentsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.82"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Outer": "ContentAnimationSizeBox",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.ContentAnimationSizeBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.89"
+      },
+      "Content": {
+        "ObjectName": "Border WidgetArchetype:WidgetTree_0.AnimationBorder",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.4"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Padding": {
+        "Left": 30.0,
+        "Right": 30.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.90"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox WidgetArchetype:WidgetTree_0.CompassCardinalsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.83"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_3",
+    "Outer": "SizeBox_5",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_5",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.91"
+      },
+      "Content": {
+        "ObjectName": "Image WidgetArchetype:WidgetTree_0.CompassBody",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.48"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Outer": "SizeBox_7",
+    "Properties": {
+      "Padding": {
+        "Left": 30.0,
+        "Top": 9.0,
+        "Right": 30.0,
+        "Bottom": 8.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox WidgetArchetype:WidgetTree_0.SizeBox_7",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.92"
+      },
+      "Content": {
+        "ObjectName": "RetainerBox WidgetArchetype:WidgetTree_0.CompassContentsRetainer",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.84"
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_Event_MyGeometry",
+    "Outer": "ExecuteUbergraph_Compass_BP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Geometry",
+      "ObjectPath": "/Script/SlateCore"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot Compass_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.105"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot Compass_BP_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.104"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot Compass_BP_C:WidgetTree.MainInvalidationBox.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.77"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_1",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.107"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot WidgetArchetype:WidgetTree_0.VerticalBox_0.VerticalBoxSlot_0",
+          "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.106"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot WidgetArchetype:WidgetTree_0.MainInvalidationBox.PanelSlot_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.80"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox Compass_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.102"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.23"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox Compass_BP_C:WidgetTree.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.102"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox Compass_BP_C:WidgetTree.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.103"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_1",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.25"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox WidgetArchetype:WidgetTree_0.VerticalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.103"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox WidgetArchetype:WidgetTree_0.HorizontalBox_0",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.24"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "Compass_BP_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "InvalidationBox Compass_BP_C:WidgetTree.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.54"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree_0",
+    "Outer": "WidgetArchetype",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "InvalidationBox WidgetArchetype:WidgetTree_0.MainInvalidationBox",
+        "ObjectPath": "Indiana/Content/UI/HUD/Compass/Compass_BP.55"
+      }
+    }
+  }
+]

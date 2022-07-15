@@ -1,0 +1,178 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "CanidHowlerAISettings",
+    "Properties": {
+      "WeaponFireType": "EWeaponFireType::Melee",
+      "Melee": {
+        "bEnabled": true,
+        "MeleeWaitDistance": 1200.0,
+        "MeleeActions": {
+          "MeleeSlotRequestData Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Special1.Melee_Special1": {
+            "Cooldown": 0.0,
+            "UseCase": "EMeleeActionUseCase::OutsideRange",
+            "UseRange": 300.0,
+            "Weight": 1.0,
+            "bOverrideNumMeleeSlotsRequired": false,
+            "NumMeleeSlotsRequired": 1,
+            "bIgnoreCollisionDuringApproach": false,
+            "bBumpDuringApproach": false,
+            "bSprintDuringApproach": false,
+            "RecoveryDelay": 3.0,
+            "bUseAdaptiveRootMotion": true,
+            "AdaptiveRootMotionStopDistance": 75.0,
+            "bOverrideBackupBehavior": false,
+            "BackupBehavior": {
+              "RecoveryType": "EMeleeRecoveryType::Move",
+              "BackupChance": 0.0,
+              "MaxBackupDistance": 200.0,
+              "MinBackupDistance": 50.0,
+              "DodgeChance": 0.0,
+              "DodgeDirection": "EDodgeDirection::Invalid",
+              "bDodgeRequiresClearPath": true,
+              "MaxValidTargetDistance": 200.0,
+              "bShouldLookAtTarget": true
+            },
+            "AttackingRotationThreshold": -1.0,
+            "PreferredAttackDistance": 200.0
+          },
+          "MeleeSlotRequestData Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Special2.Melee_Special2": {
+            "Cooldown": 0.0,
+            "UseCase": "EMeleeActionUseCase::Default",
+            "UseRange": 0.0,
+            "Weight": 1.0,
+            "bOverrideNumMeleeSlotsRequired": false,
+            "NumMeleeSlotsRequired": 1,
+            "bIgnoreCollisionDuringApproach": false,
+            "bBumpDuringApproach": false,
+            "bSprintDuringApproach": false,
+            "RecoveryDelay": 3.0,
+            "bUseAdaptiveRootMotion": true,
+            "AdaptiveRootMotionStopDistance": 75.0,
+            "bOverrideBackupBehavior": false,
+            "BackupBehavior": {
+              "RecoveryType": "EMeleeRecoveryType::Move",
+              "BackupChance": 0.0,
+              "MaxBackupDistance": 200.0,
+              "MinBackupDistance": 50.0,
+              "DodgeChance": 0.0,
+              "DodgeDirection": "EDodgeDirection::Invalid",
+              "bDodgeRequiresClearPath": true,
+              "MaxValidTargetDistance": 200.0,
+              "bShouldLookAtTarget": true
+            },
+            "AttackingRotationThreshold": -1.0,
+            "PreferredAttackDistance": 250.0
+          },
+          "MeleeSlotRequestData Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Special3.Melee_Special3": {
+            "Cooldown": 0.0,
+            "UseCase": "EMeleeActionUseCase::Default",
+            "UseRange": 0.0,
+            "Weight": 1.0,
+            "bOverrideNumMeleeSlotsRequired": false,
+            "NumMeleeSlotsRequired": 1,
+            "bIgnoreCollisionDuringApproach": false,
+            "bBumpDuringApproach": false,
+            "bSprintDuringApproach": false,
+            "RecoveryDelay": 3.0,
+            "bUseAdaptiveRootMotion": true,
+            "AdaptiveRootMotionStopDistance": 75.0,
+            "bOverrideBackupBehavior": false,
+            "BackupBehavior": {
+              "RecoveryType": "EMeleeRecoveryType::Move",
+              "BackupChance": 0.0,
+              "MaxBackupDistance": 200.0,
+              "MinBackupDistance": 50.0,
+              "DodgeChance": 0.0,
+              "DodgeDirection": "EDodgeDirection::Invalid",
+              "bDodgeRequiresClearPath": true,
+              "MaxValidTargetDistance": 200.0,
+              "bShouldLookAtTarget": true
+            },
+            "AttackingRotationThreshold": -1.0,
+            "PreferredAttackDistance": 80.0
+          }
+        },
+        "bUseAttackPattern": true,
+        "AttackPatterns": {
+          "MeleeSlotPatternRequestData Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/AttackPatterns/AttackPattern_1.AttackPattern_1": {
+            "MaxValidTargetDistance": 500.0,
+            "Weight": 1.0,
+            "Cooldown": 0.0,
+            "AttackPattern": [
+              {
+                "MeleeAction": {
+                  "ObjectName": "MeleeSlotRequestData Melee_Left",
+                  "ObjectPath": "Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Left.0"
+                },
+                "Settings": {
+                  "RecoveryDelay": 0.0,
+                  "bUseAdaptiveRootMotion": true,
+                  "AdaptiveRootMotionStopDistance": 50.0,
+                  "bOverrideBackupBehavior": false,
+                  "BackupBehavior": {
+                    "RecoveryType": "EMeleeRecoveryType::Dodge",
+                    "BackupChance": 0.0,
+                    "MaxBackupDistance": 0.0,
+                    "MinBackupDistance": 0.0,
+                    "DodgeChance": 1.0,
+                    "DodgeDirection": "EDodgeDirection::Back",
+                    "bDodgeRequiresClearPath": true,
+                    "MaxValidTargetDistance": 200.0,
+                    "bShouldLookAtTarget": true
+                  },
+                  "AttackingRotationThreshold": -1.0,
+                  "PreferredAttackDistance": 80.0
+                }
+              },
+              {
+                "MeleeAction": {
+                  "ObjectName": "MeleeSlotRequestData Melee_Right",
+                  "ObjectPath": "Indiana/Content/Blueprints/AI/DecisionTree/DecisionRequests/Melee/Melee_Right.0"
+                },
+                "Settings": {
+                  "RecoveryDelay": 3.0,
+                  "bUseAdaptiveRootMotion": true,
+                  "AdaptiveRootMotionStopDistance": 50.0,
+                  "bOverrideBackupBehavior": true,
+                  "BackupBehavior": {
+                    "RecoveryType": "EMeleeRecoveryType::Dodge",
+                    "BackupChance": 0.0,
+                    "MaxBackupDistance": 0.0,
+                    "MinBackupDistance": 0.0,
+                    "DodgeChance": 1.0,
+                    "DodgeDirection": "EDodgeDirection::Back",
+                    "bDodgeRequiresClearPath": false,
+                    "MaxValidTargetDistance": 200.0,
+                    "bShouldLookAtTarget": true
+                  },
+                  "AttackingRotationThreshold": -1.0,
+                  "PreferredAttackDistance": 80.0
+                }
+              }
+            ]
+          }
+        }
+      },
+      "StationaryFire": {
+        "bEnabled": false
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultDodgeCreatureMeleeDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultDodgeCreatureMeleeDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "bEnabled": true,
+        "Cooldown": 2.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 2000.0,
+        "PreferredMaxRange": 2000.0,
+        "AbsoluteRangeBuffer": 200.0
+      }
+    }
+  }
+]

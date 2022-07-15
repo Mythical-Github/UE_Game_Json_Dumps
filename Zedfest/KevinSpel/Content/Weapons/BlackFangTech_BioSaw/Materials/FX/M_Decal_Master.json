@@ -1,0 +1,228 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_Decal_Master",
+    "Properties": {
+      "Metallic": {
+        "OutputIndex": 1,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionVectorParameter_0",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "Specular": {
+        "OutputIndex": 2,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 0,
+        "MaskG": 1,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionVectorParameter_0",
+        "UseConstant": false,
+        "Constant": 0.5
+      },
+      "Normal": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSampleParameter2D_2",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "MaterialDomain": "MD_DeferredDecal",
+      "BlendMode": "BLEND_Translucent",
+      "DecalBlendMode": "DBM_DBuffer_ColorNormalRoughness",
+      "Expressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionVectorParameter M_Decal_Master:MaterialExpressionVectorParameter_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.6"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Decal_Master:MaterialExpressionTextureSampleParameter2D_2",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.5"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Decal_Master:MaterialExpressionTextureSampleParameter2D_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_Decal_Master:MaterialExpressionMaterialFunctionCall_2",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D M_Decal_Master:MaterialExpressionTextureSampleParameter2D_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionVectorParameter M_Decal_Master:MaterialExpressionVectorParameter_1",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.7"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_Decal_Master:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.2"
+        },
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction ScreenAlignedPixelToPixelUVs",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "8FB9DF1A-498E856A-C59A06A0-36D8DEE0",
+          "Function": {
+            "ObjectName": "MaterialFunction DitherTemporalAA",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.3"
+          }
+        }
+      ],
+      "StateId": "C6457C9D-4CBD702C-A7491485-5CF31F78",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_2",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction DitherTemporalAA",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.3"
+      },
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "Opacity",
+      "ExpressionGUID": "26D4016E-446199D1-F46A8AB6-9851CAC9",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_0",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "ParameterName": "TColor",
+      "ExpressionGUID": "61E2C532-4C70A592-AA8814A5-7E1D81D1",
+      "Texture": {
+        "ObjectName": "Texture2D Blood1_Albedo",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Textures/FX/Blood1_Albedo.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_1",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "ParameterName": "TOpacity",
+      "ExpressionGUID": "902B1516-479BEB60-CBA7E1A9-D44E67B6",
+      "Texture": {
+        "ObjectName": "Texture2D Mucous1_Alpha",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Textures/FX/Mucous1_Alpha.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearGrayscale",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_2",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "ParameterName": "Normal",
+      "ExpressionGUID": "28B66246-48AE50CA-1CAA2199-CE58FCEA",
+      "Texture": {
+        "ObjectName": "Texture2D Mucous1_Normal",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Textures/FX/Mucous1_Normal.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Normal",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_0",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.6,
+        "G": 0.9,
+        "B": 0.25,
+        "A": 0.0,
+        "Hex": "CCF489"
+      },
+      "ParameterName": "MSR",
+      "ExpressionGUID": "82170D89-434231EF-4C3239AD-C75458B4",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_1",
+    "Outer": "M_Decal_Master",
+    "Properties": {
+      "DefaultValue": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "ParameterName": "ColorAdjust",
+      "ExpressionGUID": "CF2CE69E-4E1E875E-683B9EA5-BCC1FE17",
+      "Material": {
+        "ObjectName": "Material M_Decal_Master",
+        "ObjectPath": "KevinSpel/Content/Weapons/BlackFangTech_BioSaw/Materials/FX/M_Decal_Master.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_GlowSphere_01",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionParticleColor_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Additive",
+      "ShadingModel": "MSM_Unlit",
+      "bUsedWithParticleSprites": true,
+      "bUsedWithMeshParticles": true,
+      "Expressions": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall M_GlowSphere_01:MaterialExpressionMaterialFunctionCall_2",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.1"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_GlowSphere_01:MaterialExpressionScalarParameter_0",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.2"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter M_GlowSphere_01:MaterialExpressionScalarParameter_1",
+          "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.3"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "72C547B3-457AA083-E55C2994-C3F1418D",
+          "Function": {
+            "ObjectName": "MaterialFunction Fresnel_Function",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Fresnel_Function.0"
+          }
+        }
+      ],
+      "StateId": "FC68D44B-4AC620AE-4F9889B6-F415F901",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_2",
+    "Outer": "M_GlowSphere_01",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction Fresnel_Function",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Fresnel_Function.0"
+      },
+      "Material": {
+        "ObjectName": "Material M_GlowSphere_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "M_GlowSphere_01",
+    "Properties": {
+      "DefaultValue": 8.0,
+      "ParameterName": "Fresnel Power",
+      "ExpressionGUID": "E6EC768A-41874B59-BB3B21A4-DD138DA1",
+      "Material": {
+        "ObjectName": "Material M_GlowSphere_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_1",
+    "Outer": "M_GlowSphere_01",
+    "Properties": {
+      "DefaultValue": 100.0,
+      "ParameterName": "FadeDistance",
+      "ExpressionGUID": "A968E768-46F2A493-EC21D2B6-447AE3EB",
+      "Material": {
+        "ObjectName": "Material M_GlowSphere_01",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/FX/Materials/M_GlowSphere_01.0"
+      }
+    }
+  }
+]

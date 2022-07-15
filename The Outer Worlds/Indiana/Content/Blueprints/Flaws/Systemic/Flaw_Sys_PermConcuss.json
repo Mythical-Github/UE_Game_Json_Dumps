@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Flaw_Sys_PermConcuss_C",
+    "SuperStruct": {
+      "ObjectName": "Class Flaw",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10749968,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Flaw_Sys_PermConcuss_C Default__Flaw_Sys_PermConcuss_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Flaws/Systemic/Flaw_Sys_PermConcuss.1"
+    }
+  },
+  {
+    "Type": "Flaw_Sys_PermConcuss_C",
+    "Name": "Default__Flaw_Sys_PermConcuss_C",
+    "Properties": {
+      "Name": {
+        "StringID": 986
+      },
+      "Description": {
+        "StringID": 1013
+      },
+      "BrandType": {
+        "ObjectName": "BrandDataAsset SpacersChoice",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/Brands/SpacersChoice.0"
+      },
+      "FlawTriggerCount": 5,
+      "Spell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_Flaw_PermConcuss_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/FlawEffects/Systemic/Spell_Flaw_PermConcuss.0"
+      },
+      "EventListener": {
+        "ObjectName": "OrListener Default__Flaw_Sys_PermConcuss_C:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Flaws/Systemic/Flaw_Sys_PermConcuss.5"
+      }
+    }
+  },
+  {
+    "Type": "OnStatusEffectAddedEvent",
+    "Name": "OnStatusEffectAddedEvent_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Concuss_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.1"
+      }
+    }
+  },
+  {
+    "Type": "OnStatusEffectAddedEvent",
+    "Name": "OnStatusEffectAddedEvent_1",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Concuss_Supernova_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss_Supernova.0"
+      }
+    }
+  },
+  {
+    "Type": "OnStatusEffectAddedEvent",
+    "Name": "OnStatusEffectAddedEvent_2",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_Concuss_NoStats_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss_NoStats.0"
+      }
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "Default__Flaw_Sys_PermConcuss_C",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnStatusEffectAddedEvent Default__Flaw_Sys_PermConcuss_C:OrListener_0.OnStatusEffectAddedEvent_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Flaws/Systemic/Flaw_Sys_PermConcuss.2"
+        },
+        {
+          "ObjectName": "OnStatusEffectAddedEvent Default__Flaw_Sys_PermConcuss_C:OrListener_0.OnStatusEffectAddedEvent_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Flaws/Systemic/Flaw_Sys_PermConcuss.3"
+        },
+        {
+          "ObjectName": "OnStatusEffectAddedEvent Default__Flaw_Sys_PermConcuss_C:OrListener_0.OnStatusEffectAddedEvent_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Flaws/Systemic/Flaw_Sys_PermConcuss.4"
+        }
+      ]
+    }
+  }
+]

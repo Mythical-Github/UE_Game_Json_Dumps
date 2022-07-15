@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_FindCover",
+    "Properties": {
+      "QueryName": "EQS_FindCover",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_FindCover:EnvQueryOption_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQS_FindCover:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindCover:EnvQueryTest_Distance_4",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Trace EQS_FindCover:EnvQueryTest_Trace_2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQS_FindCover:EnvQueryTest_Pathfinding_2",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_FindCover:EnvQueryTest_Distance_7",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQS_FindCover:EnvQueryTest_Overlap_0",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQS_FindCover:EnvQueryTest_Overlap_1",
+          "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_FindCover.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_4",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_7",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetActorsSameClassContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetActorsSameClassContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 50.0,
+        "ExtentY": 50.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 50.0
+        }
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_1",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 20.0,
+        "ExtentY": 20.0,
+        "ExtentZ": 20.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 20.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_2",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_2",
+    "Outer": "EQS_FindCover",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 50.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 50.0
+      },
+      "Context": {
+        "ObjectName": "BlueprintGeneratedClass EQS_GetTargetActorContext_C",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/EQS/EQS_GetTargetActorContext.2"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

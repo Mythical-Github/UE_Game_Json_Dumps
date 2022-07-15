@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "DynamicSearch",
+    "Properties": {
+      "QueryName": "SearchInitialQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption DynamicSearch:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicSearch.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Composite",
+    "Name": "EnvQueryGenerator_Composite_0",
+    "Outer": "DynamicSearch",
+    "Properties": {
+      "Generators": [
+        {
+          "ObjectName": "EnvQueryGenerator_CurrentLocation DynamicSearch:EnvQueryGenerator_Composite_0.EnvQueryGenerator_CurrentLocation_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicSearch.2"
+        },
+        {
+          "ObjectName": "EnvQueryGenerator_Donut DynamicSearch:EnvQueryGenerator_Composite_0.EnvQueryGenerator_Donut_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicSearch.3"
+        }
+      ],
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_CurrentLocation",
+    "Name": "EnvQueryGenerator_CurrentLocation_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "QueryContext": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EnvQueryGenerator_Composite_0",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 200.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 800.0
+      },
+      "bUseSpiralPattern": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "ProjectUp": 200.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "DynamicSearch",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Composite DynamicSearch:EnvQueryGenerator_Composite_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicSearch.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_DynamicSearchTest DynamicSearch:EnvQueryTest_DynamicSearchTest_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/DynamicSearch.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_DynamicSearchTest",
+    "Name": "EnvQueryTest_DynamicSearchTest_0",
+    "Outer": "DynamicSearch",
+    "Properties": {
+      "VerNum": 1
+    }
+  }
+]

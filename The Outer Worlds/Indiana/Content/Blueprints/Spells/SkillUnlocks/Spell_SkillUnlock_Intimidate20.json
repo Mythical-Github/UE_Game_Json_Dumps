@@ -1,0 +1,262 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_SkillUnlock_Intimidate20_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_SkillUnlock_Intimidate20_C Default__Spell_SkillUnlock_Intimidate20_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.1"
+    }
+  },
+  {
+    "Type": "Spell_SkillUnlock_Intimidate20_C",
+    "Name": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnKillListener Default__Spell_SkillUnlock_Intimidate20_C:OnKillListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.7"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::AOE",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_Terrify_C Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.4"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_RandomChance Default__Spell_SkillUnlock_Intimidate20_C:SpellConditional_RandomChance_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.10"
+              },
+              {
+                "ObjectName": "SpellConditional_CreatureType Default__Spell_SkillUnlock_Intimidate20_C:SpellConditional_CreatureType_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.8"
+              },
+              {
+                "ObjectName": "SpellConditional_IsInCombatWithPlayer Default__Spell_SkillUnlock_Intimidate20_C:SpellConditional_IsInCombatWithPlayer_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.9"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": {
+                  "ObjectName": "SphereShape Default__Spell_SkillUnlock_Intimidate20_C:SphereShape_0",
+                  "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.11"
+                },
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": {
+                "ObjectName": "RpgStat DialogSkillRadiusIntimidate_Stat",
+                "ObjectPath": "Indiana/Content/Blueprints/Stats/DialogSkillRadiusIntimidate_Stat.0"
+              },
+              "SourceType": "ESpellEffectTarget::Target",
+              "bIgnoreSources": true,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "Chest",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Terrify_C_0",
+    "Properties": {
+      "bLoopForDuration": true,
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Intimidate"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent"
+    }
+  },
+  {
+    "Type": "CastSpellStatusEffect",
+    "Name": "CastSpellStatusEffect_1",
+    "Outer": "CE_Terrify_C_0",
+    "Properties": {
+      "Spell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_SkillUnlock_Intimidate_PlayerCrit_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate_PlayerCrit.0"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant"
+    }
+  },
+  {
+    "Type": "CE_Terrify_C",
+    "Name": "CE_Terrify_C_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Template": "Default__CE_Terrify_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.2"
+        },
+        {
+          "ObjectName": "CastSpellStatusEffect Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0.CastSpellStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.12"
+        }
+      ],
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0.EventEffects_1",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.6"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_1",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::NPC_DialogIntimidated"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_1",
+    "Outer": "CE_Terrify_C_0",
+    "Template": "EventEffects_1",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_SkillUnlock_Intimidate20_C:CE_Terrify_C_0.EventEffects_1.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/SkillUnlocks/Spell_SkillUnlock_Intimidate20.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OnKillListener",
+    "Name": "OnKillListener_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Creature",
+        "CreatureType.Critter",
+        "CreatureType.SmplCrea"
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Creature",
+        "CreatureType.Critter",
+        "CreatureType.SmplCrea"
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_IsInCombatWithPlayer",
+    "Name": "SpellConditional_IsInCombatWithPlayer_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C"
+  },
+  {
+    "Type": "SpellConditional_RandomChance",
+    "Name": "SpellConditional_RandomChance_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Properties": {
+      "Chance": 0.2,
+      "ChanceStat": {
+        "ObjectName": "RpgStat ChanceToIntimidate_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/ChanceToIntimidate_Stat.0"
+      },
+      "bCheckCaster": true
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_SkillUnlock_Intimidate20_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 400.0
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Terrify_C_0",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.7,
+        "RpgStat": {
+          "ObjectName": "RpgStat GroundSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/GroundSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationStat": {
+        "ObjectName": "RpgStat IntimidateSpeedPenaltyDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/IntimidateSpeedPenaltyDuration_Stat.0"
+      }
+    }
+  }
+]

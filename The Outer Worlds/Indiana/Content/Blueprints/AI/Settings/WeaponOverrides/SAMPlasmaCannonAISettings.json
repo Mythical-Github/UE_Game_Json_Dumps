@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "AISettings_Weapon",
+    "Name": "SAMPlasmaCannonAISettings",
+    "Properties": {
+      "PauseTimeFuzz": 0.3,
+      "StationaryFire": {
+        "FiringPattern": {
+          "BurstCount": 2,
+          "BurstPauseTime": 1.5,
+          "EndPauseTime": 3.0
+        }
+      },
+      "CoverFire": {
+        "FiringPattern": {
+          "StartPauseTime": 1.0,
+          "BurstPauseTime": 1.5,
+          "EndPauseTime": 1.0
+        },
+        "CoverUseCount": 5,
+        "CoverTime": 0.5
+      },
+      "MovingFire": {
+        "bEnabled": true,
+        "PrePauseTime": 0.25,
+        "FiringPattern": {
+          "BurstCount": 2,
+          "BurstPauseTime": 1.5,
+          "EndPauseTime": 3.0
+        },
+        "bFireWhileMovingToPreferredRange": true,
+        "MovingToPreferredRangeNoFireTime": 1.5,
+        "MovingToPreferredRangeFireTime": 3.0
+      },
+      "LostTarget": {
+        "WaitTime": "ELostTargetWaitTime::Medium"
+      },
+      "RangeBehavior": {
+        "OnEnterCombatBehavior": "EOnEnterCombatBehavior::StationaryFireIfOutsidePreferredRange",
+        "Near": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "PreferedRange": {
+          "CoverWeight": 0.0,
+          "RangeWeight": 1.0
+        },
+        "ToFar": {
+          "PreferredRangeWeight": 0.5,
+          "CoverWeight": 0.0,
+          "RangeWeight": 0.5
+        },
+        "bOverrideRangeReposition": true,
+        "OverrideRangeRepositionData": {
+          "TooNear": {
+            "StationaryWeight": 0.33,
+            "BackwardWeight": 0.33,
+            "ForwardWeight": 0.0,
+            "StrafeWeight": 0.33
+          },
+          "PreferredRange": {
+            "BackwardWeight": 0.0,
+            "StrafeWeight": 0.5
+          }
+        }
+      },
+      "AI_SettingsDefensiveActions": {
+        "ObjectName": "AISettings_DefensiveAction DefaultRangedDefensiveActions",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/DefensiveActions/DefaultRangedDefensiveActions.0"
+      },
+      "Block": {
+        "Cooldown": 10.0
+      },
+      "Dodge": {
+        "Cooldown": 6.0
+      },
+      "Positioning": {
+        "PreferredMinRange": 1500.0,
+        "PreferredMaxRange": 3000.0,
+        "AbsoluteRangeBuffer": 1000.0
+      }
+    }
+  }
+]

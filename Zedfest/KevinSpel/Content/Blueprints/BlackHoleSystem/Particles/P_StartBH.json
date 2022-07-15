@@ -1,0 +1,466 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_0",
+    "Outer": "ParticleModuleSizeMultiplyLife_0",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 10.0,
+              "Y": 10.0,
+              "Z": 10.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": {
+              "X": 25.0,
+              "Y": 25.0,
+              "Z": 25.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_StartBH:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_StartBH:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_StartBH:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_StartBH:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_StartBH:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.8"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu P_StartBH:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.10"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_StartBH:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.9"
+      },
+      "PeakActiveParticles": 2
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.01,
+        "MaxValue": 0.01,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.01
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Flare",
+        "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Materials/M_Flare.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_StartBH:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve P_StartBH:ParticleModuleSizeMultiplyLife_0.DistributionVectorConstantCurve_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "Rate": {
+        "MinValue": 3.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            3.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_StartBH:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired P_StartBH:ParticleModuleRequired_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.6"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn P_StartBH:ParticleModuleSpawn_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.9"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired P_StartBH:ParticleModuleRequired_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.6"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime P_StartBH:ParticleModuleLifetime_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.5"
+          },
+          {
+            "ObjectName": "ParticleModuleSize P_StartBH:ParticleModuleSize_0",
+            "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.7"
+          }
+        ],
+        "InvMaxSize": {
+          "X": 0.01,
+          "Y": 0.01
+        },
+        "InvRotationRateScale": 100.0,
+        "MaxLifetime": 0.01,
+        "MaxParticleCount": 2,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 255,
+            "Hex": "FF000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFF00"
+          }
+        ],
+        "ColorScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "ColorBias": {
+          "X": 100.0,
+          "Y": 9.153879,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscScale": {
+          "X": 1500.0,
+          "Y": 1500.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "MiscBias": {
+          "X": 1000.0,
+          "Y": 1000.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 0.01,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_StartBH",
+    "Properties": {
+      "EmitterName": "Start Black Hole",
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_StartBH:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_StartBH",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_StartBH:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/BlackHoleSystem/Particles/P_StartBH.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bUseFixedRelativeBoundingBox": true,
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -241.03442,
+          "Y": -27.5,
+          "Z": -27.5
+        },
+        "Max": {
+          "X": 4511.7236,
+          "Y": 27.5,
+          "Z": 27.5
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

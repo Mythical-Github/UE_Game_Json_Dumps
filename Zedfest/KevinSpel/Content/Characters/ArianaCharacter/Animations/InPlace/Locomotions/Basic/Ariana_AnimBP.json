@@ -1,0 +1,1029 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "Ariana_AnimBP_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Ariana_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Default",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle/Run",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpStart",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpLoop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "JumpEnd",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 10,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11
+              ],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton UE4_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/NetworkRagdollIK/Skeletal/Character/UE4_Mannequin_Skeleton.27"
+      },
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty AnimNode_BlendSpacePlayer:X",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty Ariana_AnimBP_C:Speed",
+                "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.17"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_BlendSpacePlayer_EDC77B62454DA8550A1D85AC41A48817",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty Ariana_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_1ECDAA2C4CA17067759CEAA32F04F4DC",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.35"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "IsInAir?",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty AnimNode_TransitionResult:bCanEnterTransition",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty Ariana_AnimBP_C:IsInAir?",
+                "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.10"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_36273A4D4B6972F939D0C582BE268372",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.36"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+            "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.37"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class AnimInstance",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.0"
+      },
+      {
+        "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.19"
+      },
+      {
+        "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.18"
+      },
+      {
+        "ObjectName": "Function Ariana_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.11"
+      },
+      {
+        "ObjectName": "Function Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.5"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_Root_346B36BC45A126FFDB02E5A80BBEC0F3",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.3"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.37"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_36273A4D4B6972F939D0C582BE268372",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.36"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.34"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_TransitionResult_1ECDAA2C4CA17067759CEAA32F04F4DC",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.35"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_SequencePlayer_FC4E9AB1484982C2BAC2159A90790BC2",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.28"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_StateResult_7FD4466B4DC654215C99E5A1A3512137",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.32"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_SequencePlayer_80E2BBEB4954382117DA11A3D19CFD2B",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.27"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_StateResult_14A93B8F42DFE5A84DB7CFA7196D0744",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.30"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_SequencePlayer_168FF9C740FB1BB81B1A9DAED91F3143",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.26"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_StateResult_AA9004C64F5A7965176C94BB5F1B1BFD",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.33"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_BlendSpacePlayer_EDC77B62454DA8550A1D85AC41A48817",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.22"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_StateResult_72794FF54DFA5BD8E3CDD0A474E620A3",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.31"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_StateMachine_EE3E28ED44EB89BE0A931288AFF56DCE",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.29"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_RigidBody_1451E530490C39A2FDED72ADA153BB14",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.25"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_LocalToComponentSpace_196E1736470077F307AA45B5092CA6CF",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.24"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:AnimGraphNode_ComponentToLocalSpace_3F25BBCE43348E582A938B8163920248",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.23"
+      },
+      {
+        "ObjectName": "BoolProperty Ariana_AnimBP_C:IsInAir?",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.10"
+      },
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:Speed",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.17"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Ariana_AnimBP": {
+        "ObjectName": "Function Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.5"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function Ariana_AnimBP_C:BlueprintUpdateAnimation",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.11"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164": {
+        "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319": {
+        "ObjectName": "Function Ariana_AnimBP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.19"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Ariana_AnimBP_C Default__Ariana_AnimBP_C",
+      "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.2"
+    }
+  },
+  {
+    "Type": "Ariana_AnimBP_C",
+    "Name": "Default__Ariana_AnimBP_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_346B36BC45A126FFDB02E5A80BBEC0F3": {
+        "Result": {
+          "LinkID": 16
+        }
+      },
+      "AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_36273A4D4B6972F939D0C582BE268372": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1ECDAA2C4CA17067759CEAA32F04F4DC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_FC4E9AB1484982C2BAC2159A90790BC2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence Anim_Jump_End",
+          "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Anim_Jump_End.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7FD4466B4DC654215C99E5A1A3512137": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequencePlayer_80E2BBEB4954382117DA11A3D19CFD2B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence Anim_Jump_Loop",
+          "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Anim_Jump_Loop.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.75,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_14A93B8F42DFE5A84DB7CFA7196D0744": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_168FF9C740FB1BB81B1A9DAED91F3143": {
+        "Sequence": {
+          "ObjectName": "AnimSequence Anim_Jump_Start",
+          "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Anim_Jump_Start.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_AA9004C64F5A7965176C94BB5F1B1BFD": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_EDC77B62454DA8550A1D85AC41A48817": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D Ariana_IdleRun_2D",
+          "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_IdleRun_2D.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_72794FF54DFA5BD8E3CDD0A474E620A3": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_StateMachine_EE3E28ED44EB89BE0A931288AFF56DCE": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_RigidBody_1451E530490C39A2FDED72ADA153BB14": {
+        "OverridePhysicsAsset": null,
+        "OverrideWorldGravity": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ExternalForce": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ComponentLinearAccScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ComponentLinearVelScale": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ComponentAppliedLinearAccClamp": {
+          "X": 10000.0,
+          "Y": 10000.0,
+          "Z": 10000.0
+        },
+        "CachedBoundsScale": 1.2,
+        "BaseBoneRef": {
+          "BoneName": "None"
+        },
+        "OverlapChannel": "ECC_WorldStatic",
+        "SimulationSpace": "ESimulationSpace::ComponentSpace",
+        "bForceDisableCollisionBetweenConstraintBodies": false,
+        "bEnableWorldGeometry": false,
+        "bOverrideWorldGravity": false,
+        "bTransferBoneVelocities": false,
+        "bFreezeIncomingPoseOnStart": false,
+        "bClampLinearTranslationLimitToRefPose": false,
+        "ComponentPose": {
+          "LinkID": 15
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_LocalToComponentSpace_196E1736470077F307AA45B5092CA6CF": {
+        "LocalPose": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace_3F25BBCE43348E582A938B8163920248": {
+        "ComponentPose": {
+          "LinkID": 14
+        }
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_346B36BC45A126FFDB02E5A80BBEC0F3",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_Root",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Ariana_AnimBP",
+    "Outer": "Ariana_AnimBP_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.4"
+      },
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.13"
+      },
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.14"
+      },
+      {
+        "ObjectName": "BoolProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_Less_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.8"
+      },
+      {
+        "ObjectName": "BoolProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_Less_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.9"
+      },
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.K2Node_Event_DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.16"
+      },
+      {
+        "ObjectName": "ObjectProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_TryGetPawnOwner_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.21"
+      },
+      {
+        "ObjectName": "ObjectProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_GetMovementComponent_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.20"
+      },
+      {
+        "ObjectName": "BoolProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.7"
+      },
+      {
+        "ObjectName": "BoolProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_IsFalling_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.6"
+      },
+      {
+        "ObjectName": "StructProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_GetVelocity_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.38"
+      },
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:ExecuteUbergraph_Ariana_AnimBP.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.15"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsFalling_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue1",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsInAir?",
+    "Outer": "Ariana_AnimBP_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "Ariana_AnimBP_C",
+    "SuperStruct": {
+      "ObjectName": "Function AnimInstance:BlueprintUpdateAnimation",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "FloatProperty Ariana_AnimBP_C:BlueprintUpdateAnimation.DeltaTimeX",
+        "ObjectPath": "KevinSpel/Content/Characters/ArianaCharacter/Animations/InPlace/Locomotions/Basic/Ariana_AnimBP.12"
+      }
+    ],
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaTimeX",
+    "Outer": "BlueprintUpdateAnimation",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue1",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaTimeX",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Speed",
+    "Outer": "Ariana_AnimBP_C",
+    "PropertyFlags": 65541
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+    "Outer": "Ariana_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Ariana_AnimBP_AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+    "Outer": "Ariana_AnimBP_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetMovementComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class PawnMovementComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_TryGetPawnOwner_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EDC77B62454DA8550A1D85AC41A48817",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_BlendSpacePlayer",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ComponentToLocalSpace_3F25BBCE43348E582A938B8163920248",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertComponentToLocalSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LocalToComponentSpace_196E1736470077F307AA45B5092CA6CF",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_ConvertLocalToComponentSpace",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RigidBody_1451E530490C39A2FDED72ADA153BB14",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_RigidBody",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_168FF9C740FB1BB81B1A9DAED91F3143",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_80E2BBEB4954382117DA11A3D19CFD2B",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FC4E9AB1484982C2BAC2159A90790BC2",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_SequencePlayer",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_EE3E28ED44EB89BE0A931288AFF56DCE",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateMachine",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_14A93B8F42DFE5A84DB7CFA7196D0744",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_72794FF54DFA5BD8E3CDD0A474E620A3",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7FD4466B4DC654215C99E5A1A3512137",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_AA9004C64F5A7965176C94BB5F1B1BFD",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_StateResult",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0F9123F94410E2CDF48DEDA102852164",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_1ECDAA2C4CA17067759CEAA32F04F4DC",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_36273A4D4B6972F939D0C582BE268372",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F9EAB4C14C2DA67F09788184CAFE5319",
+    "Outer": "Ariana_AnimBP_C",
+    "Struct": {
+      "ObjectName": "ScriptStruct AnimNode_TransitionResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetVelocity_ReturnValue",
+    "Outer": "ExecuteUbergraph_Ariana_AnimBP",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

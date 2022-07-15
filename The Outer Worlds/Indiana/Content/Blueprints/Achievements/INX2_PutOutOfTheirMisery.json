@@ -1,0 +1,56 @@
+[
+  {
+    "Type": "AchievementDataAsset",
+    "Name": "INX2_PutOutOfTheirMisery",
+    "Properties": {
+      "EventListener": {
+        "ObjectName": "OrListener INX2_PutOutOfTheirMisery:OrListener_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Achievements/INX2_PutOutOfTheirMisery.3"
+      },
+      "Count": 50,
+      "AchievementID": 67,
+      "SteamName": "NEW_ACHIEVEMENT_3_2",
+      "PS4Name": "67",
+      "XboxName": "67"
+    }
+  },
+  {
+    "Type": "OnCompanionKillListener",
+    "Name": "OnCompanionKillListener_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.SmplCrea.Parasite",
+        "CreatureType.Humanoid.Human.Infected"
+      ]
+    }
+  },
+  {
+    "Type": "OnKillListener",
+    "Name": "OnKillListener_0",
+    "Outer": "OrListener_0",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.SmplCrea.Parasite",
+        "CreatureType.Humanoid.Human.Infected"
+      ]
+    }
+  },
+  {
+    "Type": "OrListener",
+    "Name": "OrListener_0",
+    "Outer": "INX2_PutOutOfTheirMisery",
+    "Properties": {
+      "ChildListener": [
+        {
+          "ObjectName": "OnKillListener INX2_PutOutOfTheirMisery:OrListener_0.OnKillListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/INX2_PutOutOfTheirMisery.2"
+        },
+        {
+          "ObjectName": "OnCompanionKillListener INX2_PutOutOfTheirMisery:OrListener_0.OnCompanionKillListener_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Achievements/INX2_PutOutOfTheirMisery.1"
+        }
+      ]
+    }
+  }
+]

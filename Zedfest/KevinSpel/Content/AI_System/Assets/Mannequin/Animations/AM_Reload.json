@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "AM_Reload",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage AM_Reload",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AM_Reload.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.1666667,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence Reload_Rifle_Ironsights",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/Reload_Rifle_Ironsights.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBody",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence Reload_Rifle_Ironsights",
+                  "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/Reload_Rifle_Ironsights.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.1666667,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0001,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "SC_AssaultRifle_Reload01",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound AM_Reload:AnimNotify_PlaySound_0",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AM_Reload.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": -1,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 8.1301703E-32,
+            "LinkValue": 0.46708074,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage AM_Reload",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/AM_Reload.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.1666667,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence Reload_Rifle_Ironsights",
+            "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Animations/Reload_Rifle_Ironsights.0"
+          }
+        }
+      ],
+      "SequenceLength": 2.1666667,
+      "Skeleton": {
+        "ObjectName": "Skeleton SK_Mannequin_Skeleton",
+        "ObjectPath": "KevinSpel/Content/AI_System/Assets/Mannequin/Character/Mesh/SK_Mannequin_Skeleton.6"
+      }
+    },
+    "SkeletonGuid": "88B3399D-40554AD8-E528ECA7-C6916321"
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "AM_Reload",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue RocketLauncher_Reload_Cue",
+        "ObjectPath": "KevinSpel/Content/MilitaryWeapDark/Sound/RocketLauncher/RocketLauncher_Reload_Cue.0"
+      }
+    }
+  }
+]

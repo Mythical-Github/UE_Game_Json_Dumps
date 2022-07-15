@@ -1,0 +1,342 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionVelocityScale",
+    "Outer": "ParticleModuleLocationPrimitiveSphere_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_nets:ParticleModuleRequired_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_nets:ParticleModuleLifetime_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_nets:ParticleModuleSize_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.8"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_nets:ParticleModuleColorOverLife_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere P_nets:ParticleModuleLocationPrimitiveSphere_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.5"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation P_nets:ParticleModuleRotation_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.7"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_nets:ParticleModuleSpawn_0",
+        "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.9"
+      },
+      "PeakActiveParticles": 6
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1,
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "Lifetime": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 373.69855,
+        "MaxValue": 373.69855,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            373.69855
+          ]
+        }
+      },
+      "VelocityScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_nets:ParticleModuleLocationPrimitiveSphere_0.DistributionVelocityScale",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.0"
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3,
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_net",
+        "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Materials/Instances/MI_net.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.0,
+      "EmitterLoops": 1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_nets:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.391194,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1,
+          "Values": [
+            -1.391194,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1000.0,
+        "MaxValue": 2500.0,
+        "MinValueVec": {
+          "X": 1000.0,
+          "Y": 1000.0,
+          "Z": 1000.0
+        },
+        "MaxValueVec": {
+          "X": 2500.0,
+          "Y": 2500.0,
+          "Z": 2500.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3,
+          "Values": [
+            1000.0,
+            1000.0,
+            1000.0,
+            2500.0,
+            2500.0,
+            2500.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            0.0
+          ]
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 4,
+          "CountLow": 4,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1,
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_nets",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_nets:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_nets",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_nets:ParticleSpriteEmitter_0",
+          "ObjectPath": "KevinSpel/Content/Meshes/MicroWorld/Particles/P_nets.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "EQSRequest_IndianaBase",
+    "Name": "CompanionFollow",
+    "Properties": {
+      "QueryTemplate": {
+        "ObjectName": "EnvQuery CompanionFollowQuery",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/CompanionFollowQuery.5"
+      },
+      "QueryConfig": [
+        {
+          "ParamName": "OnCircle.CircleRadius",
+          "ParamType": "EAIParamType::Float",
+          "Value": 300.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionFollow_DefaultRadius",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "OnCircle.InnerCircleRadius",
+          "ParamType": "EAIParamType::Float",
+          "Value": 50.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionFollow_InnerRadius",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "OnCircle.InnerNumberOfPoints",
+          "ParamType": "EAIParamType::Int",
+          "Value": 0.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionFollow_InnerPointAmount",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "FollowerPos.IdealAngleProvider",
+          "ParamType": "EAIParamType::Float",
+          "Value": 150.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionFollow_DefaultIdealAngle",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        },
+        {
+          "ParamName": "FollowerPos.MinAngleProvider",
+          "ParamType": "EAIParamType::Float",
+          "Value": 60.0,
+          "ValueSelector": {
+            "EQSParameter": {
+              "ObjectName": "Class CompanionFollow_DefaultMinAngle",
+              "ObjectPath": "/Script/Indiana"
+            }
+          }
+        }
+      ],
+      "RunMode": "EEnvQueryRunMode::AllMatching"
+    }
+  }
+]

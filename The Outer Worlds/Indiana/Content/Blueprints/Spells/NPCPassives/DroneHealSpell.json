@@ -1,0 +1,246 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DroneHealSpell_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DroneHealSpell_C Default__DroneHealSpell_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.1"
+    }
+  },
+  {
+    "Type": "DroneHealSpell_C",
+    "Name": "Default__DroneHealSpell_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Target",
+          "StatusEffects": [
+            {
+              "ObjectName": "DroneHealBeam_C Default__DroneHealSpell_C:HealBeam_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.5"
+            },
+            {
+              "ObjectName": "HealStatusEffect Default__DroneHealSpell_C:HealStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.10"
+            },
+            {
+              "ObjectName": "CE_Invulnerable_C Default__DroneHealSpell_C:CE_Invulnerable_C_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.4"
+            }
+          ],
+          "EffectTargetConditionals": [
+            null
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent npc_hover_bot_heal_beam_fire",
+        "ObjectPath": "Indiana/Content/Audio/Events/NPC/HoverBot/npc_hover_bot_heal_beam_fire.0"
+      },
+      "SoundLoop": {
+        "ObjectName": "AkAudioEvent npc_hover_bot_heal_beam_lp",
+        "ObjectPath": "Indiana/Content/Audio/Events/NPC/HoverBot/npc_hover_bot_heal_beam_lp.0"
+      },
+      "LoopFadeTime": 0.25
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0"
+  },
+  {
+    "Type": "CE_Invulnerable_C",
+    "Name": "CE_Invulnerable_C_1",
+    "Outer": "Default__DroneHealSpell_C",
+    "Template": "Default__CE_Invulnerable_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__DroneHealSpell_C:CE_Invulnerable_C_1.ToggleActionStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.13"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__DroneHealSpell_C:CE_Invulnerable_C_1.ToggleActionStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.12"
+        },
+        {
+          "ObjectName": "ImmuneStatusEffect Default__DroneHealSpell_C:CE_Invulnerable_C_1.ImmuneStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.11"
+        },
+        {
+          "ObjectName": "ToggleActionStatusEffect Default__DroneHealSpell_C:CE_Invulnerable_C_1.ToggleActionStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DroneHealBeam_C",
+    "Name": "HealBeam_C_0",
+    "Outer": "Default__DroneHealSpell_C",
+    "Template": "Default__DroneHealBeam_C",
+    "Properties": {
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__DroneHealSpell_C:HealBeam_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.6"
+      },
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__DroneHealSpell_C:HealBeam_C_0.EventEffects_2",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.7"
+      },
+      "EndEventEffects": {
+        "ObjectName": "EventEffects Default__DroneHealSpell_C:HealBeam_C_0.EventEffects_3",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.8"
+      }
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "HealBeam_C_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__DroneHealSpell_C:HealBeam_C_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_2",
+    "Outer": "HealBeam_C_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_3",
+    "Outer": "HealBeam_C_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "HealStatusEffect_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__DroneHealSpell_C:HealStatusEffect_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HealStatusEffect",
+    "Name": "HealStatusEffect_0",
+    "Outer": "Default__DroneHealSpell_C",
+    "Properties": {
+      "HealValuePercent": 5.0,
+      "HealValueType": "EHealValueType::Percent",
+      "DurationType": "EStatusEffectDurationType::Infinite",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 0.5,
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__DroneHealSpell_C:HealStatusEffect_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NPCPassives/DroneHealSpell.9"
+      }
+    }
+  },
+  {
+    "Type": "ImmuneStatusEffect",
+    "Name": "ImmuneStatusEffect_0",
+    "Outer": "CE_Invulnerable_C_1",
+    "Template": "ImmuneStatusEffect_0"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_0",
+    "Outer": "CE_Invulnerable_C_1",
+    "Template": "ToggleActionStatusEffect_0"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_1",
+    "Outer": "CE_Invulnerable_C_1",
+    "Template": "ToggleActionStatusEffect_1"
+  },
+  {
+    "Type": "ToggleActionStatusEffect",
+    "Name": "ToggleActionStatusEffect_2",
+    "Outer": "CE_Invulnerable_C_1",
+    "Template": "ToggleActionStatusEffect_2"
+  }
+]

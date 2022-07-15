@@ -1,0 +1,154 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_SimpleGrid_0",
+    "Properties": {
+      "ParamName": "SimpleGrid.GridSize"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryTest_Pathfinding_0",
+    "Properties": {
+      "ParamName": "Pathfinding.FloatValueMax"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "FleeQuery",
+    "Properties": {
+      "QueryName": "RangedQuery_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption FleeQuery:EnvQueryOption_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "FleeQuery",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 1500.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams FleeQuery:EnvQueryGenerator_SimpleGrid_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "SpaceBetween": {
+        "DefaultValue": 250.0
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_2",
+    "Outer": "FleeQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid FleeQuery:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.3"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Dot FleeQuery:EnvQueryTest_Dot_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance FleeQuery:EnvQueryTest_Distance_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding FleeQuery:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "FleeQuery",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_1",
+    "Outer": "FleeQuery",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EQSContext_FleeStatusEffectTarget",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineFrom": {
+          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class EnvQueryContext_Querier",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      "TestMode": "EEnvTestDot::Dot2D",
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "FleeQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TestOrder": 2,
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DefaultValue": 2000.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams FleeQuery:EnvQueryTest_Pathfinding_0.AIDataProvider_QueryParams_2",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/FleeQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  }
+]

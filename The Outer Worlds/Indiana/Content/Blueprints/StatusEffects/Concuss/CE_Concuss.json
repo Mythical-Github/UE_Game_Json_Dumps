@@ -1,0 +1,554 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "CE_Concuss_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Concuss_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function CE_Concuss_C:ExecuteUbergraph_CE_Concuss",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty CE_Concuss_C:UberGraphFrame",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.0"
+      },
+      {
+        "ObjectName": "Function CE_Concuss_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.17"
+      },
+      {
+        "ObjectName": "Function CE_Concuss_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.15"
+      },
+      {
+        "ObjectName": "Function CE_Concuss_C:ExecuteUbergraph_CE_Concuss",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.8"
+      },
+      {
+        "ObjectName": "ArrayProperty CE_Concuss_C:PSs",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.6"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CE_Concuss": {
+        "ObjectName": "Function CE_Concuss_C:ExecuteUbergraph_CE_Concuss",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.8"
+      },
+      "ReceiveClearEffect": {
+        "ObjectName": "Function CE_Concuss_C:ReceiveClearEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.15"
+      },
+      "ReceiveApplyEffect": {
+        "ObjectName": "Function CE_Concuss_C:ReceiveApplyEffect",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.17"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Concuss_C Default__CE_Concuss_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.2"
+    }
+  },
+  {
+    "Type": "CE_Concuss_C",
+    "Name": "Default__CE_Concuss_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Concuss_PostProcess_C Default__CE_Concuss_C:CE_Concuss_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.19"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__CE_Concuss_C:AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.4"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Concuss_C:StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.36"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Concuss_C:StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.38"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Concuss_C:StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.37"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::RemoveExistingIfAlreadyApplied",
+      "Duration": 30.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 31
+      },
+      "EffectDescription": {
+        "StringID": 1111
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Concuss_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.22"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Concuss",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Concuss.0"
+      }
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AkAudioEvent se_concussion",
+        "ObjectPath": "Indiana/Content/Audio/Events/StatusEffect/se_concussion.0"
+      },
+      "FadeTime": 1.0
+    }
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "Default__CE_Concuss_C",
+    "Properties": {
+      "DisableType": {
+        "TagName": "Animation.Disable.CombatEffect.Concussion"
+      },
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PSs",
+    "Outer": "PSs",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "PSs",
+    "Outer": "CE_Concuss_C",
+    "PropertyFlags": 65541,
+    "Inner": {
+      "ObjectName": "ObjectProperty CE_Concuss_C:PSs.PSs",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.5"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CE_Concuss",
+    "Outer": "CE_Concuss_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.EntryPoint",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.7"
+      },
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.Temp_int_Variable",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.29"
+      },
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Array_Length_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.28"
+      },
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.25"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Less_IntInt_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.12"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Array_Get_Item",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.30"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.K2Node_Event_Target1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.35"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.K2Node_Event_Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.23"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.K2Node_Event_bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.13"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.K2Node_Event_Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.34"
+      },
+      {
+        "ObjectName": "ClassProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_GetObjectClass_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.21"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_GetSkeletalMeshComponent_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.31"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_ClassIsChildOf_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.9"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_SpawnEmitterAttached_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.32"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_DoesSocketExist_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.10"
+      },
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_SpawnEmitterAttached_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.33"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.11"
+      },
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Array_AddUnique_ReturnValue",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.26"
+      },
+      {
+        "ObjectName": "IntProperty CE_Concuss_C:ExecuteUbergraph_CE_Concuss.CallFunc_Array_AddUnique_ReturnValue1",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.27"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_DoesSocketExist_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_Event_bRestoredFromSave",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveClearEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveClearEffect",
+    "Outer": "CE_Concuss_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveClearEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ReceiveClearEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.14"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Target",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveApplyEffect",
+    "Outer": "CE_Concuss_C",
+    "SuperStruct": {
+      "ObjectName": "Function StatusEffect:ReceiveApplyEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty CE_Concuss_C:ReceiveApplyEffect.Target",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.16"
+      },
+      {
+        "ObjectName": "FloatProperty CE_Concuss_C:ReceiveApplyEffect.Ratio",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.24"
+      },
+      {
+        "ObjectName": "BoolProperty CE_Concuss_C:ReceiveApplyEffect.bRestoredFromSave",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.18"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "bRestoredFromSave",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "CE_Concuss_PostProcess_C",
+    "Name": "CE_Concuss_PostProcess_C_0",
+    "Outer": "Default__CE_Concuss_C",
+    "Template": "Default__CE_Concuss_PostProcess_C",
+    "Properties": {
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 8.0
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::ALL_StateConcuss"
+    }
+  },
+  {
+    "Type": "ClassProperty",
+    "Name": "CallFunc_GetObjectClass_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyClass": {
+      "ObjectName": "Class Class",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "MetaClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Concuss_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__CE_Concuss_C:EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.3"
+        },
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Concuss_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Concuss/CE_Concuss.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_Ratio",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Ratio",
+    "Outer": "ReceiveApplyEffect",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_AddUnique_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_AddUnique_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Array_Length_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Variable",
+    "Outer": "ExecuteUbergraph_CE_Concuss"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_Array_Get_Item",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetSkeletalMeshComponent_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class SkeletalMeshComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_SpawnEmitterAttached_ReturnValue1",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyFlags": 524288,
+    "PropertyClass": {
+      "ObjectName": "Class ParticleSystemComponent",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_Target1",
+    "Outer": "ExecuteUbergraph_CE_Concuss",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "Default__CE_Concuss_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 1.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat FireRate_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/FireRate_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "Default__CE_Concuss_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": -1.0,
+        "RpgStat": {
+          "ObjectName": "RpgStat All_Attributes",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/Attributes/All_Attributes.0"
+        },
+        "Group": "ERpgStatGroup::Character"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "Default__CE_Concuss_C",
+    "Properties": {
+      "StatModifier": {
+        "Value": 0.5,
+        "RpgStat": {
+          "ObjectName": "RpgStat MeleeSpeed_Stat",
+          "ObjectPath": "Indiana/Content/Blueprints/Stats/MeleeSpeed_Stat.0"
+        },
+        "Group": "ERpgStatGroup::Character",
+        "ModifierType": "EStatModifierType::Multiplier"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "bIsHostile": true
+    }
+  }
+]

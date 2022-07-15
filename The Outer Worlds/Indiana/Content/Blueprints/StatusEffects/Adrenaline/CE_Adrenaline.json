@@ -1,0 +1,79 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Adrenaline_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Adrenaline_C Default__CE_Adrenaline_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline.1"
+    }
+  },
+  {
+    "Type": "CE_Adrenaline_C",
+    "Name": "Default__CE_Adrenaline_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Speedy_C Default__CE_Adrenaline_C:CE_Speedy_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline.2"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::UseLongerDurationIfAlreadyApplied",
+      "DurationType": "EStatusEffectDurationType::PassThroughValue",
+      "Duration": 5.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat DrugDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/DrugDuration_Stat.0"
+      },
+      "EffectName": {
+        "StringID": 1618
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_AdrenaTime_High",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_AdrenaTime_High.0"
+      }
+    }
+  },
+  {
+    "Type": "CE_Speedy_C",
+    "Name": "CE_Speedy_C_0",
+    "Outer": "Default__CE_Adrenaline_C",
+    "Template": "Default__CE_Speedy_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Adrenaline_C:CE_Speedy_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__CE_Adrenaline_C:CE_Speedy_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Adrenaline/CE_Adrenaline.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::StackIfAlreadyApplied",
+      "UIVisualsData": null
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Speedy_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Speedy_C_0",
+    "Template": "StatModifierStatusEffect_1"
+  }
+]

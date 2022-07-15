@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CE_Knockdown_C",
+    "SuperStruct": {
+      "ObjectName": "Class MultiStatusEffect",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CE_Knockdown_C Default__CE_Knockdown_C",
+      "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockdown/CE_Knockdown.1"
+    }
+  },
+  {
+    "Type": "CE_Knockdown_C",
+    "Name": "Default__CE_Knockdown_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "RagdollDisable Default__CE_Knockdown_C:RagdollDisable_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockdown/CE_Knockdown.4"
+        }
+      ],
+      "InitialApplicationType": "EStatusEffectInitialApplicationType::DontApplyIfAlreadyApplied",
+      "Duration": 2.0,
+      "DurationStat": {
+        "ObjectName": "RpgStat TotalStatusEffectDuration_Stat",
+        "ObjectPath": "Indiana/Content/Blueprints/Stats/TotalStatusEffectDuration_Stat.0"
+      },
+      "bIsHostile": true,
+      "EffectName": {
+        "StringID": 32
+      },
+      "EffectDescription": {
+        "StringID": 1115
+      },
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__CE_Knockdown_C:EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockdown/CE_Knockdown.3"
+      },
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_Knockdown",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_Knockdown.0"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Properties": {
+      "ChatterEvent": "EChatterEventType::NPC_StateKnockdown"
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "Default__CE_Knockdown_C",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__CE_Knockdown_C:EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/Knockdown/CE_Knockdown.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RagdollDisable",
+    "Name": "RagdollDisable_0",
+    "Outer": "Default__CE_Knockdown_C",
+    "Properties": {
+      "Impulse": 250.0,
+      "DisableType": {
+        "TagName": "Animation.Disable.Optional.Ragdoll"
+      },
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "Duration": 6.0,
+      "bIsHostile": true
+    }
+  }
+]

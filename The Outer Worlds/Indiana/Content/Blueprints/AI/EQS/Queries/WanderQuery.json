@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "MaxMoveDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_Donut_0",
+    "Properties": {
+      "ParamName": "MinMoveDistance"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_4",
+    "Outer": "EnvQueryTest_Distance_0",
+    "Properties": {
+      "ParamName": "Radius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_5",
+    "Outer": "EnvQueryTest_PathfindingBatch_0",
+    "Properties": {
+      "ParamName": "MaxPathDistance"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "WanderQuery",
+    "Properties": {
+      "QueryName": "TetheredWanderQuery",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption WanderQuery:EnvQueryOption_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "WanderQuery",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 100.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams WanderQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams WanderQuery:EnvQueryGenerator_Donut_0.AIDataProvider_QueryParams_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfRings": {
+        "DefaultValue": 4
+      },
+      "Center": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefaultEQS",
+          "ObjectPath": "/Script/Indiana"
+        },
+        "ProjectDown": 500.0,
+        "ProjectUp": 500.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "WanderQuery",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut WanderQuery:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.5"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance WanderQuery:EnvQueryTest_Distance_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch WanderQuery:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "WanderQuery",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "Class EQSContext_WanderAchor",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMin": {
+        "DefaultValue": 30.0,
+        "DataField": "FloatValue"
+      },
+      "FloatValueMax": {
+        "DefaultValue": 100.0,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams WanderQuery:EnvQueryTest_Distance_0.AIDataProvider_QueryParams_4",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "WanderQuery",
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "Context": {
+        "ObjectName": "Class EQSContext_QuerierFeetLocation",
+        "ObjectPath": "/Script/Indiana"
+      },
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams WanderQuery:EnvQueryTest_PathfindingBatch_0.AIDataProvider_QueryParams_5",
+          "ObjectPath": "Indiana/Content/Blueprints/AI/EQS/Queries/WanderQuery.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  }
+]

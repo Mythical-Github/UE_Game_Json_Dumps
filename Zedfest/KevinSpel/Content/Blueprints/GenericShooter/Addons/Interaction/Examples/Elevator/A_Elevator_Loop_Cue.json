@@ -1,0 +1,108 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeAttenuation A_Elevator_Loop_Cue:SoundNodeAttenuation_2",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/A_Elevator_Loop_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10001.52,
+      "MaxDistance": 2800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation ATT_GenericAttenuation",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Common/ATT_GenericAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_2",
+    "Outer": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation ATT_GenericAttenuation",
+        "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Common/ATT_GenericAttenuation.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer A_Elevator_Loop_Cue:SoundNodeMixer_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/A_Elevator_Loop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "DelayMin": 1.52,
+      "DelayMax": 1.52,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer A_Elevator_Loop_Cue:SoundNodeWavePlayer_3",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/A_Elevator_Loop_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer A_Elevator_Loop_Cue:SoundNodeWavePlayer_2",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/A_Elevator_Loop_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay A_Elevator_Loop_Cue:SoundNodeDelay_0",
+          "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/A_Elevator_Loop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/ElevatorStart.ElevatorStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave ElevatorStart",
+      "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/ElevatorStart.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "A_Elevator_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/ElevatorLoop.ElevatorLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave ElevatorLoop",
+      "ObjectPath": "KevinSpel/Content/Blueprints/GenericShooter/Addons/Interaction/Examples/Elevator/ElevatorLoop.0"
+    }
+  }
+]

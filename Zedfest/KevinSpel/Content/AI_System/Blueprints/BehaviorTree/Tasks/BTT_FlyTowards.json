@@ -1,0 +1,1711 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 2105344,
+    "Struct": {
+      "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BTT_FlyTowards_C",
+    "Properties": {
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class BTTask_BlueprintBase",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:UberGraphFrame",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.0"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:CheckAvoidance",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.17"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:GetTargetVector",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.15"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:IsAtLocation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.13"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:GetBlackboardValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.11"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:ReceiveExecute",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.9"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:ReceiveTick",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.7"
+      },
+      {
+        "ObjectName": "Function BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.5"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:TargetActor",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.3"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:TargetLocation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.132"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:TargetRotation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.133"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:TargetIsActor",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.44"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:PawnRef",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.73"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:AcceptableRadius",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.45"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:BlackboardKey",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.76"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:IsAvoiding",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.43"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:AvoidanceLoc",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.74"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:AvoidanceRot",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.75"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:AvoidanceCheckDistance",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.46"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:PrevAvoidanceRot",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.131"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:MaxFlyHeight",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.57"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BTT_FlyTowards": {
+        "ObjectName": "Function BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.5"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function BTT_FlyTowards_C:ReceiveTick",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.7"
+      },
+      "ReceiveExecute": {
+        "ObjectName": "Function BTT_FlyTowards_C:ReceiveExecute",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.9"
+      },
+      "GetBlackboardValue": {
+        "ObjectName": "Function BTT_FlyTowards_C:GetBlackboardValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.11"
+      },
+      "IsAtLocation": {
+        "ObjectName": "Function BTT_FlyTowards_C:IsAtLocation",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.13"
+      },
+      "GetTargetVector": {
+        "ObjectName": "Function BTT_FlyTowards_C:GetTargetVector",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.15"
+      },
+      "CheckAvoidance": {
+        "ObjectName": "Function BTT_FlyTowards_C:CheckAvoidance",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.17"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BTT_FlyTowards_C Default__BTT_FlyTowards_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.2"
+    }
+  },
+  {
+    "Type": "BTT_FlyTowards_C",
+    "Name": "Default__BTT_FlyTowards_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TargetLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "TargetRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "BlackboardKey": {
+        "AllowedTypes": [],
+        "SelectedKeyName": "None",
+        "SelectedKeyType": null,
+        "SelectedKeyID": 255,
+        "bNoneIsAllowedValue": false
+      },
+      "AvoidanceLoc": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AvoidanceRot": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrevAvoidanceRot": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "MaxFlyHeight": 9999.0,
+      "NodeName": "Fly Towards"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "TargetActor",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 67589,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BTT_FlyTowards",
+    "Outer": "BTT_FlyTowards_C",
+    "Children": [
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.EntryPoint",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.4"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetForwardVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.112"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetBlackboardValue_ActorValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.65"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetBlackboardValue_VectorValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.111"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.118"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.34"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_K2_GetActorLocation_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.119"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetTargetVector_RetVector",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.114"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetTargetVector_RetVector1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.115"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_FindLookAtRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.107"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_FindLookAtRotation_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.108"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_K2_GetActorLocation_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.120"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetForwardVector_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.113"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_FindLookAtRotation_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.109"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_IsAtLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.32"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetTargetVector_RetVector2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.116"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_IsAtLocation_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.33"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_K2_GetActorLocation_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.121"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_GetTargetVector_RetVector3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.117"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.K2Node_Event_OwnerActor1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.69"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_FindLookAtRotation_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.110"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.K2Node_DynamicCast_AsBP_AIC",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.67"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.K2Node_DynamicCast_bSuccess",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.35"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.CallFunc_K2_GetPawn_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.66"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.K2Node_Event_OwnerActor",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.68"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:ExecuteUbergraph_BTT_FlyTowards.K2Node_Event_DeltaSeconds",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.49"
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "OwnerActor",
+    "Outer": "ReceiveTick",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BTT_FlyTowards_C",
+    "SuperStruct": {
+      "ObjectName": "Function BTTask_BlueprintBase:ReceiveTick",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ReceiveTick.OwnerActor",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.6"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:ReceiveTick.DeltaSeconds",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.58"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "OwnerActor",
+    "Outer": "ReceiveExecute",
+    "PropertyFlags": 148,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveExecute",
+    "Outer": "BTT_FlyTowards_C",
+    "SuperStruct": {
+      "ObjectName": "Function BTTask_BlueprintBase:ReceiveExecute",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:ReceiveExecute.OwnerActor",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.8"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Key",
+    "Outer": "GetBlackboardValue",
+    "PropertyFlags": 134218134,
+    "Struct": {
+      "ObjectName": "ScriptStruct BlackboardKeySelector",
+      "ObjectPath": "/Script/AIModule"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBlackboardValue",
+    "Outer": "BTT_FlyTowards_C",
+    "Children": [
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetBlackboardValue.Key",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.10"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:GetBlackboardValue.ActorValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.70"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetBlackboardValue.VectorValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.123"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:GetBlackboardValue.CallFunc_GetBlackboardValueAsActor_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.71"
+      },
+      {
+        "ObjectName": "ObjectProperty BTT_FlyTowards_C:GetBlackboardValue.CallFunc_GetBlackboardValueAsActor_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.72"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:GetBlackboardValue.CallFunc_IsValid_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.36"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetBlackboardValue.CallFunc_GetBlackboardValueAsVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.122"
+      }
+    ],
+    "FunctionFlags": 474087424
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "Location",
+    "Outer": "IsAtLocation",
+    "PropertyFlags": 148,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "IsAtLocation",
+    "Outer": "BTT_FlyTowards_C",
+    "Children": [
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:IsAtLocation.Location",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.12"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:IsAtLocation.ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.42"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:IsAtLocation.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.129"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:IsAtLocation.CallFunc_Subtract_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.130"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:IsAtLocation.CallFunc_VSize_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.56"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:IsAtLocation.CallFunc_LessEqual_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.41"
+      }
+    ],
+    "FunctionFlags": 474087424
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "RetVector",
+    "Outer": "GetTargetVector",
+    "PropertyFlags": 384,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetTargetVector",
+    "Outer": "BTT_FlyTowards_C",
+    "Children": [
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.RetVector",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.14"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:GetTargetVector.Temp_bool_Variable",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.39"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:GetTargetVector.Temp_bool_Variable1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.40"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_X",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.50"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_Y",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.52"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_Z",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.54"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.124"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_Greater_FloatFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.37"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_X1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.51"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_Y1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.53"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_BreakVector_Z1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.55"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_Greater_FloatFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.38"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_MakeVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.125"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.CallFunc_MakeVector_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.126"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.K2Node_Select_Default",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.128"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:GetTargetVector.K2Node_Select1_Default",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.127"
+      }
+    ],
+    "FunctionFlags": 474087424
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "Multiplier",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckAvoidance",
+    "Outer": "BTT_FlyTowards_C",
+    "Children": [
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:CheckAvoidance.Multiplier",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.16"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.Incrementer",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.62"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.Temp_bool_Variable",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.31"
+      },
+      {
+        "ObjectName": "ArrayProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.19"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Not_PreBool_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.30"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.Temp_int_Variable",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.63"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Percent_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.61"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_EqualEqual_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.25"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.59"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LessEqual_IntInt_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.26"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_BooleanAND_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.24"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.90"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_GetForwardVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.85"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_VectorFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.101"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_VectorVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.77"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_GetForwardVector_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.86"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_VectorFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.102"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.91"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_VectorVector_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.78"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.92"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_GetForwardVector_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.87"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_VectorFloat_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.103"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.93"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_VectorVector_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.79"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_SelectVector_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.106"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.94"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_OutHit",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.96"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.27"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_FindLookAtRotation_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.84"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.Temp_int_Variable1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.64"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_IntFloat_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.47"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_MakeRotator_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.99"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_ComposeRotators_ReturnValue",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.82"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_GetForwardVector_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.88"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_VectorFloat_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.104"
+      },
+      {
+        "ObjectName": "FloatProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_IntFloat_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.48"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_VectorVector_ReturnValue3",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.80"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_MakeRotator_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.100"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_ComposeRotators_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.83"
+      },
+      {
+        "ObjectName": "ArrayProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.21"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_GetForwardVector_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.89"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Multiply_VectorFloat_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.105"
+      },
+      {
+        "ObjectName": "ArrayProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.23"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_OutHit1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.97"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.28"
+      },
+      {
+        "ObjectName": "IntProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_IntInt_ReturnValue1",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.60"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_K2_GetActorLocation_ReturnValue5",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.95"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_Add_VectorVector_ReturnValue4",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.81"
+      },
+      {
+        "ObjectName": "StructProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_OutHit2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.98"
+      },
+      {
+        "ObjectName": "BoolProperty BTT_FlyTowards_C:CheckAvoidance.CallFunc_LineTraceSingle_ReturnValue2",
+        "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.29"
+      }
+    ],
+    "FunctionFlags": 209846272
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "Temp_object_Variable",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable.Temp_object_Variable",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.18"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable1",
+    "Outer": "Temp_object_Variable1",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable1",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable1.Temp_object_Variable1",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.20"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Temp_object_Variable2",
+    "Outer": "Temp_object_Variable2",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ArrayProperty",
+    "Name": "Temp_object_Variable2",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 134217730,
+    "Inner": {
+      "ObjectName": "ObjectProperty BTT_FlyTowards_C:CheckAvoidance.Temp_object_Variable2.Temp_object_Variable2",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BehaviorTree/Tasks/BTT_FlyTowards.22"
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LineTraceSingle_ReturnValue2",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_Variable",
+    "Outer": "CheckAvoidance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsAtLocation_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsAtLocation_ReturnValue1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "K2Node_DynamicCast_bSuccess",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_IsValid_ReturnValue",
+    "Outer": "GetBlackboardValue",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "GetTargetVector",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue1",
+    "Outer": "GetTargetVector",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_Variable",
+    "Outer": "GetTargetVector",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "Temp_bool_Variable1",
+    "Outer": "GetTargetVector",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "IsAtLocation",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "ReturnValue",
+    "Outer": "IsAtLocation",
+    "PropertyFlags": 1408,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "IsAvoiding",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "TargetIsActor",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "AcceptableRadius",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "AvoidanceCheckDistance",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue1",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "K2Node_Event_DeltaSeconds",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_X",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_X1",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Y",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Y1",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Z",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_BreakVector_Z1",
+    "Outer": "GetTargetVector"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_VSize_ReturnValue",
+    "Outer": "IsAtLocation"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "MaxFlyHeight",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "DeltaSeconds",
+    "Outer": "ReceiveTick",
+    "PropertyFlags": 148
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Add_IntInt_ReturnValue1",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Percent_IntInt_ReturnValue",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Incrementer",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 5
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Variable",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "Temp_int_Variable1",
+    "Outer": "CheckAvoidance"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetBlackboardValue_ActorValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_K2_GetPawn_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_DynamicCast_AsBP_AIC",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass BP_AIC_C",
+      "ObjectPath": "KevinSpel/Content/AI_System/Blueprints/BP_AIC.1"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_OwnerActor",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "K2Node_Event_OwnerActor1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "ActorValue",
+    "Outer": "GetBlackboardValue",
+    "PropertyFlags": 384,
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetBlackboardValueAsActor_ReturnValue",
+    "Outer": "GetBlackboardValue",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CallFunc_GetBlackboardValueAsActor_ReturnValue1",
+    "Outer": "GetBlackboardValue",
+    "PropertyClass": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PawnRef",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 67589,
+    "PropertyClass": {
+      "ObjectName": "Class Pawn",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AvoidanceLoc",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AvoidanceRot",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "BlackboardKey",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 5,
+    "Struct": {
+      "ObjectName": "ScriptStruct BlackboardKeySelector",
+      "ObjectPath": "/Script/AIModule"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue2",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue3",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Add_VectorVector_ReturnValue4",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_ComposeRotators_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_ComposeRotators_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue2",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue3",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue4",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue2",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue3",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue4",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue5",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit1",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_LineTraceSingle_OutHit2",
+    "Outer": "CheckAvoidance",
+    "PropertyFlags": 549755813888,
+    "Struct": {
+      "ObjectName": "ScriptStruct HitResult",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeRotator_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeRotator_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue1",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue2",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue3",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Multiply_VectorFloat_ReturnValue4",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_SelectVector_ReturnValue",
+    "Outer": "CheckAvoidance",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindLookAtRotation_ReturnValue1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindLookAtRotation_ReturnValue2",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_FindLookAtRotation_ReturnValue3",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetBlackboardValue_VectorValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetForwardVector_ReturnValue1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetTargetVector_RetVector",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetTargetVector_RetVector1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetTargetVector_RetVector2",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetTargetVector_RetVector3",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue1",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue2",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue3",
+    "Outer": "ExecuteUbergraph_BTT_FlyTowards",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_GetBlackboardValueAsVector_ReturnValue",
+    "Outer": "GetBlackboardValue",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "VectorValue",
+    "Outer": "GetBlackboardValue",
+    "PropertyFlags": 384,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "GetTargetVector",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeVector_ReturnValue",
+    "Outer": "GetTargetVector",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_MakeVector_ReturnValue1",
+    "Outer": "GetTargetVector",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_Select1_Default",
+    "Outer": "GetTargetVector",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "K2Node_Select_Default",
+    "Outer": "GetTargetVector",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+    "Outer": "IsAtLocation",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+    "Outer": "IsAtLocation",
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "PrevAvoidanceRot",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "TargetLocation",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Vector",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "TargetRotation",
+    "Outer": "BTT_FlyTowards_C",
+    "PropertyFlags": 65541,
+    "Struct": {
+      "ObjectName": "ScriptStruct Rotator",
+      "ObjectPath": "/Script/CoreUObject"
+    }
+  }
+]

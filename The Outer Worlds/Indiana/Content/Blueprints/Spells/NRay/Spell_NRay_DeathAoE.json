@@ -1,0 +1,345 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_NRay_DeathAoE_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_NRay_DeathAoE_C Default__Spell_NRay_DeathAoE_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.1"
+    }
+  },
+  {
+    "Type": "Spell_NRay_DeathAoE_C",
+    "Name": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "DamageStatusEffect Default__Spell_NRay_DeathAoE_C:DamageStatusEffect_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.10"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_NRay_DeathAoE_C:SphereShape_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.15"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Target",
+            "bIgnoreSources": true,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "Chest",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        },
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::AOE",
+          "StatusEffects": [
+            {
+              "ObjectName": "CE_NRay_AoE_C Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.5"
+            }
+          ],
+          "EffectTargetConditionals": [
+            {
+              "ObjectName": "SpellConditional_CreatureType Default__Spell_NRay_DeathAoE_C:SpellConditional_CreatureType_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.12"
+            },
+            {
+              "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_NRay_DeathAoE_C:SpellConditional_HasStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.13"
+            },
+            {
+              "ObjectName": "SpellConditional_IsHostileToCaster Default__Spell_NRay_DeathAoE_C:SpellConditional_IsHostileToCaster_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.14"
+            }
+          ],
+          "EffectDirectionType": "ESpellEffectDirectionType::Default",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": false,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": {
+                "ObjectName": "SphereShape Default__Spell_NRay_DeathAoE_C:SphereShape_1",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.16"
+              },
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Target",
+            "bIgnoreSources": true,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "Chest",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "AkPlaySoundEventEffect_0"
+  },
+  {
+    "Type": "AoEStatusEffect",
+    "Name": "AoEStatusEffect_0",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "AoEStatusEffect_0"
+  },
+  {
+    "Type": "AoEStatusEffect",
+    "Name": "AoEStatusEffect_1",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Properties": {
+      "CollisionShape": {
+        "Shape": null
+      },
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_NRay_Pulse_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_Pulse.1"
+      },
+      "bOnlyHostileTargets": true,
+      "DurationType": "EStatusEffectDurationType::Parent",
+      "ApplicationType": "EStatusEffectApplicationType::ApplyOnTick",
+      "Interval": 2.0,
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_NRay_AoE_C",
+    "Name": "CE_NRay_AoE_C_1",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Template": "Default__CE_NRay_AoE_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_NRay_PostProcess_C Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1.CE_NRay_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.6"
+        },
+        {
+          "ObjectName": "AoEStatusEffect Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1.AoEStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.3"
+        },
+        {
+          "ObjectName": "CE_NRay_Pulse_Visual_C Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1.CE_NRay_Pulse_Visual_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.8"
+        }
+      ],
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.11"
+      }
+    }
+  },
+  {
+    "Type": "CE_NRay_PostProcess_C",
+    "Name": "CE_NRay_PostProcess_C_0",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "CE_NRay_PostProcess_C_0"
+  },
+  {
+    "Type": "CE_NRay_PostProcess_C",
+    "Name": "CE_NRay_PostProcess_C_1",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "Default__CE_NRay_PostProcess_C",
+    "Properties": {
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "CE_NRay_Pulse_Visual_C",
+    "Name": "CE_NRay_Pulse_Visual_C_0",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "CE_NRay_Pulse_Visual_C_0"
+  },
+  {
+    "Type": "CE_NRay_Pulse_Visual_C",
+    "Name": "CE_NRay_Pulse_Visual_C_1",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "Default__CE_NRay_Pulse_Visual_C",
+    "Properties": {
+      "Interval": 2.0,
+      "ApplyEventEffects": null
+    }
+  },
+  {
+    "Type": "DamageStatusEffect",
+    "Name": "DamageStatusEffect_1",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "DamageValue": 5.0,
+      "DamageScalars": 2,
+      "DamageType": {
+        "ObjectName": "BlueprintGeneratedClass NRay_DamageType_C",
+        "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/NRay_DamageType.0"
+      },
+      "BodyPart": {
+        "TagName": "BodyPart.Torso"
+      },
+      "DurationType": "EStatusEffectDurationType::Instant",
+      "bRemoveWithSpell": false
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_NRay_AoE_C_1",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Spell_NRay_DeathAoE_C:CE_NRay_AoE_C_1.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/NRay/Spell_NRay_DeathAoE.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SpellConditional_CreatureType",
+    "Name": "SpellConditional_CreatureType_0",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "CreatureTypes": [
+        "CreatureType.Robot"
+      ],
+      "bNegateCheck": true
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_0",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_NRay_AoE_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/NRay/CE_NRay_AoE.1"
+      },
+      "NumStacks": 3,
+      "Operator": "ComparisonOperator::LessThan"
+    }
+  },
+  {
+    "Type": "SpellConditional_IsHostileToCaster",
+    "Name": "SpellConditional_IsHostileToCaster_0",
+    "Outer": "Default__Spell_NRay_DeathAoE_C"
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_0",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 500.0
+      }
+    }
+  },
+  {
+    "Type": "SphereShape",
+    "Name": "SphereShape_1",
+    "Outer": "Default__Spell_NRay_DeathAoE_C",
+    "Properties": {
+      "SphereShape": {
+        "SphereRadius": 500.0
+      }
+    }
+  }
+]

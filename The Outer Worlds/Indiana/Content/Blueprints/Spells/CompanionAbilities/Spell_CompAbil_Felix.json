@@ -1,0 +1,312 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_CompAbil_Felix_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_CompAbil_Felix_C Default__Spell_CompAbil_Felix_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.1"
+    }
+  },
+  {
+    "Type": "Spell_CompAbil_Felix_C",
+    "Name": "Default__Spell_CompAbil_Felix_C",
+    "Properties": {
+      "DisplayName": {
+        "StringID": 897
+      },
+      "DisplayDescription": {
+        "StringID": 2311
+      },
+      "OnCastEffectsArray": [
+        {
+          "SpellEffectTarget": "ESpellEffectTarget::Target",
+          "StatusEffects": [
+            {
+              "ObjectName": "ThreatStatusEffect Default__Spell_CompAbil_Felix_C:ThreatStatusEffect_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.20"
+            },
+            {
+              "ObjectName": "CE_Stagger_C Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.7"
+            },
+            {
+              "ObjectName": "CE_Concuss_C Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.4"
+            },
+            {
+              "ObjectName": "CE_HeavyHitReact_C Default__Spell_CompAbil_Felix_C:CE_HeavyHitReact_C_0",
+              "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.6"
+            }
+          ],
+          "EffectTargetConditionals": [],
+          "EffectDirectionType": "ESpellEffectDirectionType::CasterToTarget",
+          "RotationAngle": 0.0,
+          "bRandomlyNegateRotationAngle": false,
+          "bInverseDirection": true,
+          "bForceTwoDimensionalDirection": false,
+          "AreaOfEffect": {
+            "CollisionShapeInfo": {
+              "Shape": null,
+              "ShapeTransform": {
+                "Rotation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0,
+                  "W": 1.0,
+                  "IsNormalized": true,
+                  "Size": 1.0,
+                  "SizeSquared": 1.0
+                },
+                "Translation": {
+                  "X": 0.0,
+                  "Y": 0.0,
+                  "Z": 0.0
+                },
+                "Scale3D": {
+                  "X": 1.0,
+                  "Y": 1.0,
+                  "Z": 1.0
+                }
+              }
+            },
+            "CollisionSizeStat": null,
+            "SourceType": "ESpellEffectTarget::Self",
+            "bIgnoreSources": false,
+            "bOnlyTargetPlayerHostiles": false,
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          },
+          "TargetCone": {
+            "CollisionSizeStat": null,
+            "ConeHalfAngle": 30.0,
+            "ConeAxis": "EConeAxis::X",
+            "bInvertAxis": false,
+            "Radius": 100.0,
+            "SocketOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "SourceType": "ESpellEffectTarget::Self",
+            "bPenetratesWalls": false,
+            "CollisionSocket": "None",
+            "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AkPlaySoundEventEffect",
+    "Name": "AkPlaySoundEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "AkPlaySoundEventEffect_0"
+  },
+  {
+    "Type": "AnimDisableStatusEffect",
+    "Name": "AnimDisableStatusEffect_0",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "AnimDisableStatusEffect_0"
+  },
+  {
+    "Type": "CE_Concuss_C",
+    "Name": "CE_Concuss_C_0",
+    "Outer": "Default__Spell_CompAbil_Felix_C",
+    "Template": "Default__CE_Concuss_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "CE_Concuss_PostProcess_C Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.CE_Concuss_PostProcess_C_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.5"
+        },
+        {
+          "ObjectName": "AnimDisableStatusEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.AnimDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.3"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.14"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.StatModifierStatusEffect_2",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.16"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.StatModifierStatusEffect_1",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.15"
+        }
+      ],
+      "Duration": 15.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.10"
+      }
+    }
+  },
+  {
+    "Type": "CE_Concuss_PostProcess_C",
+    "Name": "CE_Concuss_PostProcess_C_0",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "CE_Concuss_PostProcess_C_0"
+  },
+  {
+    "Type": "CE_HeavyHitReact_C",
+    "Name": "CE_HeavyHitReact_C_0",
+    "Outer": "Default__Spell_CompAbil_Felix_C",
+    "Template": "Default__CE_HeavyHitReact_C",
+    "Properties": {
+      "bDontDisplayDescription": true
+    }
+  },
+  {
+    "Type": "CE_Stagger_C",
+    "Name": "CE_Stagger_C_1",
+    "Outer": "Default__Spell_CompAbil_Felix_C",
+    "Template": "Default__CE_Stagger_C",
+    "Properties": {
+      "ChildStatusEffects": [
+        {
+          "ObjectName": "PushDisableStatusEffect Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.PushDisableStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.13"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.StatModifierStatusEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.17"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.StatModifierStatusEffect_4",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.18"
+        },
+        {
+          "ObjectName": "StatModifierStatusEffect Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.StatModifierStatusEffect_5",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.19"
+        }
+      ],
+      "Duration": 15.0,
+      "StartEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.11"
+      }
+    }
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "ChatterEventEffect",
+    "Name": "ChatterEventEffect_0",
+    "Outer": "EventEffects_0",
+    "Template": "ChatterEventEffect_0"
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "AkPlaySoundEventEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.EventEffects_0.AkPlaySoundEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.2"
+        },
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_CompAbil_Felix_C:CE_Concuss_C_0.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "CE_Stagger_C_1",
+    "Template": "EventEffects_0",
+    "Properties": {
+      "Effects": [
+        {
+          "ObjectName": "ChatterEventEffect Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.EventEffects_0.ChatterEventEffect_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EventEffects",
+    "Name": "EventEffects_0",
+    "Outer": "StatModifierStatusEffect_0",
+    "Template": "EventEffects_0"
+  },
+  {
+    "Type": "PushDisableStatusEffect",
+    "Name": "PushDisableStatusEffect_0",
+    "Outer": "CE_Stagger_C_1",
+    "Template": "PushDisableStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "StatModifierStatusEffect_0"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_1",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "StatModifierStatusEffect_1"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_2",
+    "Outer": "CE_Concuss_C_0",
+    "Template": "StatModifierStatusEffect_2"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_0",
+    "Outer": "CE_Stagger_C_1",
+    "Template": "StatModifierStatusEffect_0",
+    "Properties": {
+      "ApplyEventEffects": {
+        "ObjectName": "EventEffects Default__Spell_CompAbil_Felix_C:CE_Stagger_C_1.StatModifierStatusEffect_0.EventEffects_0",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/CompanionAbilities/Spell_CompAbil_Felix.12"
+      }
+    }
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_4",
+    "Outer": "CE_Stagger_C_1",
+    "Template": "StatModifierStatusEffect_4"
+  },
+  {
+    "Type": "StatModifierStatusEffect",
+    "Name": "StatModifierStatusEffect_5",
+    "Outer": "CE_Stagger_C_1",
+    "Template": "StatModifierStatusEffect_5"
+  },
+  {
+    "Type": "ThreatStatusEffect",
+    "Name": "ThreatStatusEffect_0",
+    "Outer": "Default__Spell_CompAbil_Felix_C",
+    "Properties": {
+      "ThreatScalar": 1.0,
+      "bClearSwitchTargetCooldown": true,
+      "bDontDisplayDescription": true
+    }
+  }
+]

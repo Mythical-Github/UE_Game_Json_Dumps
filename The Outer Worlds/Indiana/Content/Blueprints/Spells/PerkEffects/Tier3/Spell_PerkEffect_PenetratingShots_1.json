@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spell_PerkEffect_PenetratingShots_1_C",
+    "SuperStruct": {
+      "ObjectName": "Class Spell",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spell_PerkEffect_PenetratingShots_1_C Default__Spell_PerkEffect_PenetratingShots_1_C",
+      "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_PenetratingShots_1.1"
+    }
+  },
+  {
+    "Type": "Spell_PerkEffect_PenetratingShots_1_C",
+    "Name": "Default__Spell_PerkEffect_PenetratingShots_1_C",
+    "Properties": {
+      "OnEventEffects": {
+        "ApplyEvent": {
+          "ObjectName": "OnCausedDamage Default__Spell_PerkEffect_PenetratingShots_1_C:OnCausedDamage_0",
+          "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_PenetratingShots_1.3"
+        },
+        "TargetEffects": [
+          {
+            "SpellEffectTarget": "ESpellEffectTarget::Target",
+            "StatusEffects": [
+              {
+                "ObjectName": "CE_PenetratingShots_C Default__Spell_PerkEffect_PenetratingShots_1_C:CE_PenetratingShots_C_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_PenetratingShots_1.2"
+              }
+            ],
+            "EffectTargetConditionals": [
+              {
+                "ObjectName": "SpellConditional_HasStatusEffect Default__Spell_PerkEffect_PenetratingShots_1_C:SpellConditional_HasStatusEffect_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_PenetratingShots_1.4"
+              },
+              {
+                "ObjectName": "SpellConditional_IsPlayer Default__Spell_PerkEffect_PenetratingShots_1_C:SpellConditional_IsPlayer_0",
+                "ObjectPath": "Indiana/Content/Blueprints/Spells/PerkEffects/Tier3/Spell_PerkEffect_PenetratingShots_1.5"
+              }
+            ],
+            "EffectDirectionType": "ESpellEffectDirectionType::Default",
+            "RotationAngle": 0.0,
+            "bRandomlyNegateRotationAngle": false,
+            "bInverseDirection": false,
+            "bForceTwoDimensionalDirection": false,
+            "AreaOfEffect": {
+              "CollisionShapeInfo": {
+                "Shape": null,
+                "ShapeTransform": {
+                  "Rotation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "W": 1.0,
+                    "IsNormalized": true,
+                    "Size": 1.0,
+                    "SizeSquared": 1.0
+                  },
+                  "Translation": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Scale3D": {
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  }
+                }
+              },
+              "CollisionSizeStat": null,
+              "SourceType": "ESpellEffectTarget::Self",
+              "bIgnoreSources": false,
+              "bOnlyTargetPlayerHostiles": false,
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            },
+            "TargetCone": {
+              "CollisionSizeStat": null,
+              "ConeHalfAngle": 30.0,
+              "ConeAxis": "EConeAxis::X",
+              "bInvertAxis": false,
+              "Radius": 100.0,
+              "SocketOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "SourceType": "ESpellEffectTarget::Self",
+              "bPenetratesWalls": false,
+              "CollisionSocket": "None",
+              "MeshTarget": "EMeshTarget::CurrentCharacterMesh"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CE_PenetratingShots_C",
+    "Name": "CE_PenetratingShots_C_0",
+    "Outer": "Default__Spell_PerkEffect_PenetratingShots_1_C",
+    "Template": "Default__CE_PenetratingShots_C",
+    "Properties": {
+      "UIVisualsData": {
+        "ObjectName": "StatusEffectUIVisualsData StatusEffectUIVisuals_ArmorNegationBuff",
+        "ObjectPath": "Indiana/Content/UI/HUD/StatusEffectOverview/StatusEffectUIVisuals_ArmorNegationBuff.0"
+      }
+    }
+  },
+  {
+    "Type": "OnCausedDamage",
+    "Name": "OnCausedDamage_0",
+    "Outer": "Default__Spell_PerkEffect_PenetratingShots_1_C",
+    "Properties": {
+      "CheckDamageFlags": [
+        "EDamageFlags::Range"
+      ],
+      "bTriggerOnZeroDamage": true
+    }
+  },
+  {
+    "Type": "SpellConditional_HasStatusEffect",
+    "Name": "SpellConditional_HasStatusEffect_0",
+    "Outer": "Default__Spell_PerkEffect_PenetratingShots_1_C",
+    "Properties": {
+      "StatusEffect": {
+        "ObjectName": "BlueprintGeneratedClass CE_PenetratingShots_C",
+        "ObjectPath": "Indiana/Content/Blueprints/StatusEffects/PenetratingShots/CE_PenetratingShots.0"
+      },
+      "NumStacks": 10,
+      "Operator": "ComparisonOperator::LessThan"
+    }
+  },
+  {
+    "Type": "SpellConditional_IsPlayer",
+    "Name": "SpellConditional_IsPlayer_0",
+    "Outer": "Default__Spell_PerkEffect_PenetratingShots_1_C",
+    "Properties": {
+      "bNot": true
+    }
+  }
+]

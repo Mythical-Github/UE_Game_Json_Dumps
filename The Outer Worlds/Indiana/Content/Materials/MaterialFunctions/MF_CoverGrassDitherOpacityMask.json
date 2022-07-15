@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_0",
+    "Outer": "MF_CoverGrassDitherOpacityMask",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection MPC_PlayerInfo",
+        "ObjectPath": "Indiana/Content/Art/ENV/Natural/Soft_Cover/MPC_PlayerInfo.0"
+      },
+      "ParameterName": "PlayerCrouched",
+      "ParameterId": "AF4E6B9E-4CDE5C7B-F3BE86B1-9158B0B2",
+      "Function": {
+        "ObjectName": "MaterialFunction MF_CoverGrassDitherOpacityMask",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "MF_CoverGrassDitherOpacityMask",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction MF_CoverGrassClusterFade",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassClusterFade.2"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_CoverGrassDitherOpacityMask",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_1",
+    "Outer": "MF_CoverGrassDitherOpacityMask",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction DitherTemporalAA",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.3"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction MF_CoverGrassDitherOpacityMask",
+        "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "MF_CoverGrassDitherOpacityMask",
+    "Properties": {
+      "Description": "Computes distance based and cluster based dither fade for cover grass materials",
+      "bExposeToLibrary": true,
+      "FunctionExpressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_CoverGrassDitherOpacityMask:MaterialExpressionMaterialFunctionCall_0",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.1"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall MF_CoverGrassDitherOpacityMask:MaterialExpressionMaterialFunctionCall_1",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter MF_CoverGrassDitherOpacityMask:MaterialExpressionCollectionParameter_0",
+          "ObjectPath": "Indiana/Content/Materials/MaterialFunctions/MF_CoverGrassDitherOpacityMask.0"
+        },
+        null,
+        null
+      ],
+      "StateId": "4FFA8F79-4941E746-45B81B94-5892C9A6"
+    }
+  }
+]

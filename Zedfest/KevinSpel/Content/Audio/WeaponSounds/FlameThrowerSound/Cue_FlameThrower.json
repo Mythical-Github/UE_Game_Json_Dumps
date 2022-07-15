@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cue_FlameThrower",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer Cue_FlameThrower:SoundNodeMixer_0",
+        "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.2"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass SFXAudio",
+        "ObjectPath": "KevinSpel/Content/MenuSystem/SoundClasses/SFXAudio.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.95,
+      "MaxDistance": 5200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation FireAttenuation",
+        "ObjectPath": "KevinSpel/Content/Audio/Shooting/Items/Sounds/FireAttenuation.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "DelayMin": 0.95,
+      "DelayMax": 0.95,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_FlameThrower:SoundNodeModulatorContinuous_0",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulatorContinuous Cue_FlameThrower:SoundNodeModulatorContinuous_1",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay Cue_FlameThrower:SoundNodeDelay_0",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Volume"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_FlameThrower:SoundNodeWavePlayer_3",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Start"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer Cue_FlameThrower:SoundNodeWavePlayer_5",
+          "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/Cue_FlameThrower.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/WeaponSounds/FlameThrowerSound/FlameThrowerRunning.FlameThrowerRunning",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave FlameThrowerRunning",
+      "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/FlameThrowerRunning.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Cue_FlameThrower",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/WeaponSounds/FlameThrowerSound/FlameThrowerStart.FlameThrowerStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave FlameThrowerStart",
+      "ObjectPath": "KevinSpel/Content/Audio/WeaponSounds/FlameThrowerSound/FlameThrowerStart.0"
+    }
+  }
+]

@@ -1,0 +1,964 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SC_LightMachineGun_Weapon_Base_C",
+    "SuperStruct": {
+      "ObjectName": "Class Weapon",
+      "ObjectPath": "/Script/Indiana"
+    },
+    "ClassFlags": 10754065,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SC_LightMachineGun_Weapon_Base_C Default__SC_LightMachineGun_Weapon_Base_C",
+      "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.1"
+    }
+  },
+  {
+    "Type": "SC_LightMachineGun_Weapon_Base_C",
+    "Name": "Default__SC_LightMachineGun_Weapon_Base_C",
+    "Properties": {
+      "PrimaryMode": {
+        "ObjectName": "FireMode Default__SC_LightMachineGun_Weapon_Base_C:FireMode_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.12"
+      },
+      "AmmoPool": {
+        "ObjectName": "StandardAmmoPool Default__SC_LightMachineGun_Weapon_Base_C:AmmoPool_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.24"
+      },
+      "WeaponModContainer": {
+        "ObjectName": "WeaponModContainer Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.34"
+      },
+      "WeaponLocationSpellAsset": {
+        "ObjectName": "BodyLocationSpellAsset Kinetic_WeaponLocationSpells",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/WeaponLocationSpells/Kinetic_WeaponLocationSpells.0"
+      },
+      "WeaponMesh": {
+        "AssetPathName": "/Game/Art/WEAP/HvyWpn/SC_LMG/w_SC_LMG_FP.w_SC_LMG_FP",
+        "SubPathString": ""
+      },
+      "WeaponAnimInstance": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/w_SC_LMG_AnimBlueprint.w_SC_LMG_AnimBlueprint_C",
+        "SubPathString": ""
+      },
+      "EquipTime": 1.0,
+      "UnequipTime": 0.833,
+      "HolsterTime": 0.3,
+      "UnholsterTime": 0.45,
+      "FPVVisualsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/HvyWpn_SC_LMG_FPV_Visuals.HvyWpn_SC_LMG_FPV_Visuals_C",
+        "SubPathString": ""
+      },
+      "TPVVisualsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/HvyWpn_SC_LMG_TPV_Visuals.HvyWpn_SC_LMG_TPV_Visuals_C",
+        "SubPathString": ""
+      },
+      "FPAnimationsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LMG_FPV_WeaponAnimations.SC_LMG_FPV_WeaponAnimations_C",
+        "SubPathString": ""
+      },
+      "CreatureTPAnimationsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LMG_TPV_WeaponAnimations.SC_LMG_TPV_WeaponAnimations_C",
+        "SubPathString": ""
+      },
+      "SharedVisualsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/HvyWpn_SC_LMG_Shared_Visuals.HvyWpn_SC_LMG_Shared_Visuals_C",
+        "SubPathString": ""
+      },
+      "SoundEffectsClass": {
+        "AssetPathName": "/Game/Blueprints/Audio/Weapons/Ranged/WeaponSFX_Guns-Heavy_MachineGun_LMG.WeaponSFX_Guns-Heavy_MachineGun_LMG_C",
+        "SubPathString": ""
+      },
+      "PreviewAnimationsClass": {
+        "AssetPathName": "/Game/Blueprints/WEAP/HvyWpn/HvyWpn_UI_Preview.HvyWpn_UI_Preview_C",
+        "SubPathString": ""
+      },
+      "MicroModTables": [
+        {
+          "ObjectName": "MicroModTable MicroMod_Table_CommonWeapon",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/MicroMods/Tables/MicroMod_Table_CommonWeapon.0"
+        },
+        {
+          "ObjectName": "MicroModTable MicroMod_Table_BallisticWeapon",
+          "ObjectPath": "Indiana/Content/Blueprints/Item/MicroMods/Tables/MicroMod_Table_BallisticWeapon.0"
+        }
+      ],
+      "Skill": "ESkill::HeavyWeapons",
+      "WeaponCategory": {
+        "TagName": "WeaponCategory.Ranged.Rifle"
+      },
+      "AISettings": {
+        "ObjectName": "AISettings_Weapon LMGAISettings",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponOverrides/LMGAISettings.0"
+      },
+      "CompanionOverrideAISettings": {
+        "ObjectName": "AISettings_Weapon Comp_LMGAISettings",
+        "ObjectPath": "Indiana/Content/Blueprints/AI/Settings/WeaponOverrides/CompanionOverrides/Comp_LMGAISettings.0"
+      },
+      "AssetCollection": {
+        "ObjectName": "AssetCollection Default__SC_LightMachineGun_Weapon_Base_C:AssetCollection",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.2"
+      },
+      "WeakSpotMultiplier": 1.5,
+      "SwarmScalar": 0.3,
+      "OnHitSpell": {
+        "ObjectName": "BlueprintGeneratedClass Spell_WeaponCrit_Stagger_C",
+        "ObjectPath": "Indiana/Content/Blueprints/Spells/WeaponCrits/Spell_WeaponCrit_Stagger.0"
+      },
+      "OnHitSpellChance": 0.0,
+      "QuietWeaponNoiseRadius": 250.0,
+      "ItemMaxHealth": 1500.0,
+      "Name": {
+        "StringID": 627
+      },
+      "Brand": {
+        "StringID": 816
+      },
+      "Description": {
+        "StringID": 628
+      },
+      "Lore": {
+        "StringID": 629
+      },
+      "UIImage": {
+        "ObjectName": "Texture2D w_SC_LMG_120",
+        "ObjectPath": "Indiana/Content/UI/Art/HUD/InventoryItems/w_SC_LMG_120.0"
+      },
+      "BrandData": {
+        "ObjectName": "BrandDataAsset SpacersChoice",
+        "ObjectPath": "Indiana/Content/Blueprints/Item/Brands/SpacersChoice.0"
+      },
+      "BaseValue": 200,
+      "Weight": 5.0
+    }
+  },
+  {
+    "Type": "AssetCollection",
+    "Name": "AssetCollection",
+    "Outer": "Default__SC_LightMachineGun_Weapon_Base_C"
+  },
+  {
+    "Type": "AudioParamModVisual",
+    "Name": "AudioParamModVisual_0",
+    "Outer": "ModVisuals_1",
+    "Properties": {
+      "RTPCName": "RangedBarrelMod",
+      "RTPCValue": 1.0
+    }
+  },
+  {
+    "Type": "AudioParamModVisual",
+    "Name": "AudioParamModVisual_0",
+    "Outer": "ModVisuals_15",
+    "Properties": {
+      "RTPCName": "RangedAttackMod",
+      "RTPCValue": 1.0
+    }
+  },
+  {
+    "Type": "AudioParamModVisual",
+    "Name": "AudioParamModVisual_0",
+    "Outer": "ModVisuals_16",
+    "Properties": {
+      "RTPCName": "RangedAttackMod",
+      "RTPCValue": 3.0
+    }
+  },
+  {
+    "Type": "AudioParamModVisual",
+    "Name": "AudioParamModVisual_0",
+    "Outer": "ModVisuals_18",
+    "Properties": {
+      "RTPCName": "RangedAttackMod",
+      "RTPCValue": 4.0
+    }
+  },
+  {
+    "Type": "AudioParamModVisual",
+    "Name": "AudioParamModVisual_0",
+    "Outer": "ModVisuals_19",
+    "Properties": {
+      "RTPCName": "RangedAttackMod",
+      "RTPCValue": 2.0
+    }
+  },
+  {
+    "Type": "EnableEmitterModVisual",
+    "Name": "EnableEmitterModVisual_1",
+    "Outer": "ModVisuals_15",
+    "Properties": {
+      "EmitterNames": [
+        "Corrosion"
+      ]
+    }
+  },
+  {
+    "Type": "EnableEmitterModVisual",
+    "Name": "EnableEmitterModVisual_1",
+    "Outer": "ModVisuals_16",
+    "Properties": {
+      "EmitterNames": [
+        "Energy"
+      ]
+    }
+  },
+  {
+    "Type": "EnableEmitterModVisual",
+    "Name": "EnableEmitterModVisual_1",
+    "Outer": "ModVisuals_18",
+    "Properties": {
+      "EmitterNames": [
+        "NRay"
+      ]
+    }
+  },
+  {
+    "Type": "EnableEmitterModVisual",
+    "Name": "EnableEmitterModVisual_1",
+    "Outer": "ModVisuals_19",
+    "Properties": {
+      "EmitterNames": [
+        "Shock"
+      ]
+    }
+  },
+  {
+    "Type": "FireMode",
+    "Name": "FireMode_0",
+    "Outer": "Default__SC_LightMachineGun_Weapon_Base_C",
+    "Properties": {
+      "InstantHitData": {
+        "AssetPathName": "/Game/Blueprints/WEAP/Ammo/Bullet_InstantHitData.Bullet_InstantHitData",
+        "SubPathString": ""
+      },
+      "ShotTime": 0.06,
+      "MinEffectiveRange": 0.0,
+      "MaxEffectiveRange": 2500.0,
+      "MaxRange": 20000.0,
+      "MaxRangeFalloutCurve": {
+        "ExternalCurve": {
+          "ObjectName": "CurveFloat RangeDamageFalloffCurve_Pistol41m",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/RangeDamageFalloffCurve_Pistol41m.0"
+        }
+      },
+      "SpreadCurve": {
+        "ExternalCurve": {
+          "ObjectName": "CurveFloat FireMode_SpreadCurve",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/FireMode_SpreadCurve.0"
+        }
+      },
+      "Spread": 5.0,
+      "AISpread": 6.0,
+      "SpreadMovementScalar": 0.5,
+      "MoveSpreadPenalty": 0.5,
+      "AimAssistSpread": 2.5,
+      "BloomPerShotPercent": 0.075,
+      "MaxBloom": -1.85,
+      "BloomDecayTime": 0.3,
+      "BloomReturnDelay": 0.25,
+      "FineAimSpreadReduction": 1.65,
+      "FineAimFovAdjustment": -10.0,
+      "FineAimLookStickRateMultiplier": 0.866667,
+      "AimAssistData": {
+        "ObjectName": "AimAssistData AimAssist_MachineGuns",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/AimAssist_MachineGuns.0"
+      },
+      "Sway": 1.0,
+      "SwayChangeTime": 1.5,
+      "SwayChangeLaziness": 0.75,
+      "FullyAimedRecoilScalar": 0.866667,
+      "Recoil": {
+        "ObjectName": "RecoilData LMG_Recoil",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/LMG_Recoil.0"
+      },
+      "NonStealthMeleeData": {
+        "ObjectName": "QuickMeleeData QuickMelee_HeavyWeapon",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/QuickMelee/QuickMelee_HeavyWeapon.0"
+      },
+      "StealthMeleeData": {
+        "ObjectName": "QuickMeleeData QuickMelee_Stealth",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/QuickMelee/QuickMelee_Stealth.0"
+      },
+      "QuickMeleeTTDScalar": 0.066,
+      "DamageDescription": {
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass Physical_DamageType_C",
+          "ObjectPath": "Indiana/Content/Blueprints/DamageTypes/Physical_DamageType.0"
+        },
+        "MeleeAttackType": "EMeleeAttackType::Light",
+        "HitReactionType": "EHitReactType::Light",
+        "BaseDamage": 16.0,
+        "CritMultiplier": 1.3
+      },
+      "StealthCritMultiplier": 1.5,
+      "SoundRadius": 4000.0,
+      "ImpactSoundRadiusOverride": 750.0,
+      "AttackTTDScalar": 2.5,
+      "QuickMeleeQueue": {
+        "WindowTime": 0.08
+      }
+    }
+  },
+  {
+    "Type": "MaterialParamModVisual",
+    "Name": "MaterialParamModVisual_2",
+    "Outer": "ModVisuals_15",
+    "Properties": {
+      "ParamMods": [
+        {
+          "MaterialSlotName": "None",
+          "ParamName": "Emissive_Clr",
+          "Type": "EMaterialParamType::Vector",
+          "ScalarParam": 0.0,
+          "VectorParam": {
+            "R": 0.092706,
+            "G": 0.3,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "569500"
+          },
+          "TextureParam": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Type": "EMaterialParamType::Vector",
+      "VectorParam": {
+        "R": 0.0,
+        "G": 0.327778,
+        "B": 0.83077,
+        "A": 1.0,
+        "Hex": "FF009BEB"
+      }
+    }
+  },
+  {
+    "Type": "MaterialParamModVisual",
+    "Name": "MaterialParamModVisual_2",
+    "Outer": "ModVisuals_16",
+    "Properties": {
+      "ParamMods": [
+        {
+          "MaterialSlotName": "None",
+          "ParamName": "Emissive_Clr",
+          "Type": "EMaterialParamType::Vector",
+          "ScalarParam": 0.0,
+          "VectorParam": {
+            "R": 1.0,
+            "G": 0.0,
+            "B": 0.016666,
+            "A": 0.0,
+            "Hex": "FF0022"
+          },
+          "TextureParam": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Type": "EMaterialParamType::Vector",
+      "VectorParam": {
+        "R": 0.0,
+        "G": 0.327778,
+        "B": 0.83077,
+        "A": 1.0,
+        "Hex": "FF009BEB"
+      }
+    }
+  },
+  {
+    "Type": "MaterialParamModVisual",
+    "Name": "MaterialParamModVisual_2",
+    "Outer": "ModVisuals_17",
+    "Properties": {
+      "ParamMods": [
+        {
+          "MaterialSlotName": "T_C_InjectChip_01",
+          "ParamName": "Emissive_Clr",
+          "Type": "EMaterialParamType::Vector",
+          "ScalarParam": 0.0,
+          "VectorParam": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          },
+          "TextureParam": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Type": "EMaterialParamType::Vector",
+      "VectorParam": {
+        "R": 0.0,
+        "G": 0.327778,
+        "B": 0.83077,
+        "A": 1.0,
+        "Hex": "FF009BEB"
+      }
+    }
+  },
+  {
+    "Type": "MaterialParamModVisual",
+    "Name": "MaterialParamModVisual_2",
+    "Outer": "ModVisuals_18",
+    "Properties": {
+      "ParamMods": [
+        {
+          "MaterialSlotName": "None",
+          "ParamName": "Emissive_Clr",
+          "Type": "EMaterialParamType::Vector",
+          "ScalarParam": 0.0,
+          "VectorParam": {
+            "R": 0.099899,
+            "G": 0.000304,
+            "B": 0.462077,
+            "A": 1.0,
+            "Hex": "FF5901B5"
+          },
+          "TextureParam": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Type": "EMaterialParamType::Vector",
+      "VectorParam": {
+        "R": 0.0,
+        "G": 0.327778,
+        "B": 0.83077,
+        "A": 1.0,
+        "Hex": "FF009BEB"
+      }
+    }
+  },
+  {
+    "Type": "MaterialParamModVisual",
+    "Name": "MaterialParamModVisual_2",
+    "Outer": "ModVisuals_19",
+    "Properties": {
+      "ParamMods": [
+        {
+          "MaterialSlotName": "None",
+          "ParamName": "Emissive_Clr",
+          "Type": "EMaterialParamType::Vector",
+          "ScalarParam": 0.0,
+          "VectorParam": {
+            "R": 0.0,
+            "G": 0.327778,
+            "B": 0.83077,
+            "A": 1.0,
+            "Hex": "FF009BEB"
+          },
+          "TextureParam": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Type": "EMaterialParamType::Vector",
+      "VectorParam": {
+        "R": 0.0,
+        "G": 0.327778,
+        "B": 0.83077,
+        "A": 1.0,
+        "Hex": "FF009BEB"
+      }
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_1",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_1.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.25"
+        },
+        {
+          "ObjectName": "AudioParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_1.AudioParamModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_15",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_15.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.26"
+        },
+        {
+          "ObjectName": "MaterialParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_15.MaterialParamModVisual_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.13"
+        },
+        {
+          "ObjectName": "EnableEmitterModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_15.EnableEmitterModVisual_1",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.8"
+        },
+        {
+          "ObjectName": "AudioParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_15.AudioParamModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_16",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_16.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.27"
+        },
+        {
+          "ObjectName": "MaterialParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_16.MaterialParamModVisual_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.14"
+        },
+        {
+          "ObjectName": "EnableEmitterModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_16.EnableEmitterModVisual_1",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.9"
+        },
+        {
+          "ObjectName": "AudioParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_16.AudioParamModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_17",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_17.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.28"
+        },
+        {
+          "ObjectName": "MaterialParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_17.MaterialParamModVisual_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_18",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_18.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.29"
+        },
+        {
+          "ObjectName": "MaterialParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_18.MaterialParamModVisual_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.16"
+        },
+        {
+          "ObjectName": "EnableEmitterModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_18.EnableEmitterModVisual_1",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.10"
+        },
+        {
+          "ObjectName": "AudioParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_18.AudioParamModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModVisuals",
+    "Name": "ModVisuals_19",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Visuals": [
+        {
+          "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_19.StaticMeshModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.30"
+        },
+        {
+          "ObjectName": "MaterialParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_19.MaterialParamModVisual_2",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.17"
+        },
+        {
+          "ObjectName": "EnableEmitterModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_19.EnableEmitterModVisual_1",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.11"
+        },
+        {
+          "ObjectName": "AudioParamModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_19.AudioParamModVisual_0",
+          "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StandardAmmoPool",
+    "Name": "AmmoPool_0",
+    "Outer": "Default__SC_LightMachineGun_Weapon_Base_C",
+    "Properties": {
+      "PoolSize": 90,
+      "AmmoTypeTag": {
+        "TagName": "AmmoType.Light"
+      },
+      "DefaultAmmoClass": {
+        "ObjectName": "BlueprintGeneratedClass Light_Standard_Ammo_C",
+        "ObjectPath": "Indiana/Content/Blueprints/WEAP/Ammo/Light_Standard_Ammo.0"
+      },
+      "ReloadTime": 3.5
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_1",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/HvyWpn/SC_LMG/Mods/MOD_SC_Barrel_02.MOD_SC_Barrel_02",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Barrel_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_15",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/Common/Injector_Chip_01/MOD_C_InjectChip_01.MOD_C_InjectChip_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Chip_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_16",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/Common/Injector_Chip_01/MOD_C_InjectChip_01.MOD_C_InjectChip_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Chip_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_17",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/Common/Injector_Chip_01/MOD_C_InjectChip_01.MOD_C_InjectChip_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Chip_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_18",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/Common/Injector_Chip_01/MOD_C_InjectChip_01.MOD_C_InjectChip_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Chip_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "ModVisuals_19",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/Common/Injector_Chip_01/MOD_C_InjectChip_01.MOD_C_InjectChip_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Chip_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_0",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/HvyWpn/SC_LMG/Mods/MOD_SC_Barrel_03.MOD_SC_Barrel_03",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Barrel_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_3",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/HvyWpn/SC_LMG/Mods/MOD_SC_Barrel_02.MOD_SC_Barrel_02",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Barrel_Socket"
+    }
+  },
+  {
+    "Type": "StaticMeshModVisual",
+    "Name": "StaticMeshModVisual_7",
+    "Outer": "WeaponModContainer_0",
+    "Properties": {
+      "Mesh": {
+        "AssetPathName": "/Game/Art/WEAP/HvyWpn/SC_LMG/Mods/MOD_SC_Barrel_01.MOD_SC_Barrel_01",
+        "SubPathString": ""
+      },
+      "AttachSocket": "Barrel_Socket"
+    }
+  },
+  {
+    "Type": "WeaponModContainer",
+    "Name": "WeaponModContainer_0",
+    "Outer": "Default__SC_LightMachineGun_Weapon_Base_C",
+    "Properties": {
+      "ModSlots": {
+        "EModSlot::Magazine": {
+          "SlotDefaultVisuals": null,
+          "bModdable": true,
+          "DefaultMod": null
+        },
+        "EModSlot::UnderBarrel": {
+          "SlotDefaultVisuals": null,
+          "bModdable": false,
+          "DefaultMod": null
+        },
+        "EModSlot::Sight": {
+          "SlotDefaultVisuals": null,
+          "bModdable": true,
+          "DefaultMod": null
+        },
+        "EModSlot::Barrel": {
+          "SlotDefaultVisuals": null,
+          "bModdable": true,
+          "DefaultMod": null
+        }
+      },
+      "ModVisualOverrides": [
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Barrel_Accuracy.RangedMod_Barrel_Accuracy_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.StaticMeshModVisual_3",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.32"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Barrel_CritDamage.RangedMod_Barrel_CritDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.StaticMeshModVisual_0",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.31"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Barrel_RateOfFire.RangedMod_Barrel_RateOfFire_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "StaticMeshModVisual Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.StaticMeshModVisual_7",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.33"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Barrel_Silencer.RangedMod_Barrel_Silencer_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_1",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.18"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_CorrodeDamage.RangedMod_Magazine_CorrodeDamage_C",
+              "SubPathString": ""
+            },
+            {
+              "AssetPathName": "/Game/XFH_Content/XFH_Blueprints/Item/Mods/Ranged/XFH_RangedMod_Magazine_Poison.XFH_RangedMod_Magazine_Poison_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_15",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.19"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_EnergyDamage.RangedMod_Magazine_EnergyDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_16",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.20"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_MagSize.RangedMod_Magazine_MagSize_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_17",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.21"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_NRayDamage.RangedMod_Magazine_NRayDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_18",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.22"
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_ShockDamage.RangedMod_Magazine_ShockDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "VisualOverride": {
+            "ObjectName": "ModVisuals Default__SC_LightMachineGun_Weapon_Base_C:WeaponModContainer_0.ModVisuals_19",
+            "ObjectPath": "Indiana/Content/Blueprints/WEAP/HvyWpn/MachineGun/SC_LightMachineGun/SC_LightMachineGun_Weapon_Base.23"
+          }
+        }
+      ],
+      "ProjectileOverrides": [
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_ShockDamage.RangedMod_Magazine_ShockDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "OverrideProjectileClass": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "OverrideInstantHitData": {
+            "AssetPathName": "/Game/Blueprints/WEAP/Ammo/Shock/Point_Shock_HitData.Point_Shock_HitData",
+            "SubPathString": ""
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_NRayDamage.RangedMod_Magazine_NRayDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "OverrideProjectileClass": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "OverrideInstantHitData": {
+            "AssetPathName": "/Game/Blueprints/WEAP/Ammo/NRay/Point_NRay_HitData.Point_NRay_HitData",
+            "SubPathString": ""
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_FireDamage.RangedMod_Magazine_FireDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "OverrideProjectileClass": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "OverrideInstantHitData": {
+            "AssetPathName": "/Game/Blueprints/WEAP/Ammo/Thermal/Point_Thermal_HitData.Point_Thermal_HitData",
+            "SubPathString": ""
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_CorrodeDamage.RangedMod_Magazine_CorrodeDamage_C",
+              "SubPathString": ""
+            },
+            {
+              "AssetPathName": "/Game/XFH_Content/XFH_Blueprints/Item/Mods/Ranged/XFH_RangedMod_Magazine_Poison.XFH_RangedMod_Magazine_Poison_C",
+              "SubPathString": ""
+            }
+          ],
+          "OverrideProjectileClass": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "OverrideInstantHitData": {
+            "AssetPathName": "/Game/Blueprints/WEAP/Ammo/Corrosive/Point_Corrosive_HitData.Point_Corrosive_HitData",
+            "SubPathString": ""
+          }
+        },
+        {
+          "Mods": [
+            {
+              "AssetPathName": "/Game/Blueprints/Item/Mods/Ranged/RangedMod_Magazine_EnergyDamage.RangedMod_Magazine_EnergyDamage_C",
+              "SubPathString": ""
+            }
+          ],
+          "OverrideProjectileClass": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "OverrideInstantHitData": {
+            "AssetPathName": "/Game/Blueprints/WEAP/Ammo/Energy/Point_Energy_HitData.Point_Energy_HitData",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
+  }
+]
