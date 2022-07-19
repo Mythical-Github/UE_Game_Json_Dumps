@@ -1,0 +1,615 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_3",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_0",
+    "Outer": "ParticleModuleBeamSource_0",
+    "Properties": {
+      "ParameterName": "TracerStart",
+      "MinInput": {
+        "X": -999999.0,
+        "Y": -999999.0,
+        "Z": -999999.0
+      },
+      "MaxInput": {
+        "X": 999999.0,
+        "Y": 999999.0,
+        "Z": 999999.0
+      },
+      "MinOutput": {
+        "X": -999999.0,
+        "Y": -999999.0,
+        "Z": -999999.0
+      },
+      "MaxOutput": {
+        "X": 999999.0,
+        "Y": 999999.0,
+        "Z": 999999.0
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_0",
+    "Outer": "ParticleModuleBeamTarget_0",
+    "Properties": {
+      "ParameterName": "TracerEnd",
+      "MinInput": {
+        "X": -999999.0,
+        "Y": -999999.0,
+        "Z": -999999.0
+      },
+      "MaxInput": {
+        "X": 999999.0,
+        "Y": 999999.0,
+        "Z": 999999.0
+      },
+      "MinOutput": {
+        "X": -999999.0,
+        "Y": -999999.0,
+        "Z": -999999.0
+      },
+      "MaxOutput": {
+        "X": 999999.0,
+        "Y": 999999.0,
+        "Z": 999999.0
+      },
+      "Constant": {
+        "X": 7000.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Weapon_RailgunBeam:ParticleModuleRequired_3",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Weapon_RailgunBeam:ParticleModuleLifetime_3",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.9"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Weapon_RailgunBeam:ParticleModuleSize_3",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.11"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_Weapon_RailgunBeam:ParticleModuleColor_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife P_Weapon_RailgunBeam:ParticleModuleColorScaleOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.8"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource P_Weapon_RailgunBeam:ParticleModuleBeamSource_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.5"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget P_Weapon_RailgunBeam:ParticleModuleBeamTarget_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Weapon_RailgunBeam:ParticleModuleSizeMultiplyLife_7",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.12"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 P_Weapon_RailgunBeam:ParticleModuleTypeDataBeam2_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.14"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Weapon_RailgunBeam:ParticleModuleSpawn_3",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.13"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "SourceMethod": "PEB2STM_UserSet",
+      "SourceName": "Source",
+      "bSourceAbsolute": true,
+      "Source": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter P_Weapon_RailgunBeam:ParticleModuleBeamSource_0.DistributionVectorParticleParameter_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.2"
+        },
+        "Table": {
+          "Values": [
+            -36.04475,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "SourceTangentMethod": "PEB2STTM_Emitter",
+      "SourceTangent": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "SourceStrength": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "TargetName": "Target",
+      "Target": {
+        "MaxValue": 7000.0,
+        "MinValueVec": {
+          "X": 7000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 7000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter P_Weapon_RailgunBeam:ParticleModuleBeamTarget_0.DistributionVectorParticleParameter_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.3"
+        },
+        "Table": {
+          "Values": [
+            600.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "bTargetAbsolute": true,
+      "TargetTangentMethod": "PEB2STTM_Emitter",
+      "TargetTangent": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "TargetStrength": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "StartColor": {
+        "MaxValue": 35.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 35.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 35.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            35.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 35.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 35.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 35.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            35.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.5624352,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "Values": [
+            0.0,
+            0.007257496,
+            0.028159203,
+            0.061526455,
+            0.10618057,
+            0.16094288,
+            0.22463478,
+            0.2960775,
+            0.37409243,
+            0.457501,
+            0.5451242,
+            0.63579106,
+            0.7283076,
+            0.82149,
+            0.9141591,
+            1.0051365,
+            1.0932435,
+            1.1773014,
+            1.2561316,
+            1.3285555,
+            1.3933935,
+            1.4494494,
+            1.4955155,
+            1.5304471,
+            1.5530654,
+            1.5621905,
+            1.4691976,
+            1.18841,
+            0.80828047,
+            0.42162418,
+            0.12125771,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.2,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MAT_LaserBeam_Inst_PulseCannon",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/Materials/MAT_LaserBeam_Inst_PulseCannon.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Weapon_RailgunBeam:ParticleModuleRequired_3.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 30.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 30.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 30.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0,
+            25.0,
+            30.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_7",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 2.0,
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 20.0,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0000001,
+            1.0000001,
+            1.0000001,
+            1.9895015,
+            1.9895015,
+            1.9895015,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "Rate": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Weapon_RailgunBeam:ParticleModuleSpawn_3.BurstScaleDistribution",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.1"
+        }
+      },
+      "bProcessBurstList": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_0",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "TextureTileDistance": 512.0,
+      "MaxBeamCount": 1,
+      "Speed": 0.0,
+      "bAlwaysOn": true,
+      "Distance": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "TaperMethod": "PEBTM_Full",
+      "TaperFactor": {
+        "MinValue": 0.85,
+        "MaxValue": 0.85,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.85
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "TaperScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "EmitterName": "LaserBeam",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Weapon_RailgunBeam:ParticleSpriteEmitter_3.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.4"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Weapon_RailgunBeam",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Weapon_RailgunBeam:ParticleSpriteEmitter_3",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_Weapon_RailgunBeam.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -128.0,
+          "Y": -32.0,
+          "Z": -32.0
+        },
+        "Max": {
+          "X": 6000.0,
+          "Y": 32.0,
+          "Z": 32.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

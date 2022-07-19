@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCloseBehindLocation",
+    "Properties": {
+      "QueryName": "EQ_FindCloseBehindLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCloseBehindLocation:EnvQueryOption_3",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCloseBehindLocation.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_1",
+    "Outer": "EQ_FindCloseBehindLocation",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 217.34062
+      },
+      "OuterRadius": {
+        "DefaultValue": 636.5179
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 4096.0,
+        "ProjectUp": 256.0,
+        "PostProjectionVerticalOffset": 12.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_3",
+    "Outer": "EQ_FindCloseBehindLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCloseBehindLocation:EnvQueryGenerator_Donut_1",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCloseBehindLocation.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindCloseBehindLocation:EnvQueryTest_Trace_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCloseBehindLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "EQ_FindCloseBehindLocation",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 32.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 72.0
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

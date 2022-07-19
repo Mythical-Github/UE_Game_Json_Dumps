@@ -1,0 +1,2754 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_UI_NHUD_PlayerScore",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bDead",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class UMGSequencePlayer",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_LastAward",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum ELevelAward",
+          "ObjectPath": "/Script/Unboxed"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_NewAward",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum ELevelAward",
+          "ObjectPath": "/Script/Unboxed"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class UMGSequencePlayer",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_LastValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_NewValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": null
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Conv_ByteToInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": 1,
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct FormatArgumentData",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": 1,
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "ScriptStruct FormatArgumentData",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRankChanged",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "SuperStruct": {
+      "ObjectName": "Function BHUDWidgetPlayer:OnRankChanged",
+      "ObjectPath": "/Script/Unboxed"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "LastValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": null
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "NewValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": null
+      }
+    ],
+    "FunctionFlags": 201459720
+  },
+  {
+    "Type": "Function",
+    "Name": "OnAwardChanged",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "SuperStruct": {
+      "ObjectName": "Function BHUDWidgetPlayer:OnAwardChanged",
+      "ObjectPath": "/Script/Unboxed"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "LastAward",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum ELevelAward",
+          "ObjectPath": "/Script/Unboxed"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "NewAward",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum ELevelAward",
+          "ObjectPath": "/Script/Unboxed"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 201459720
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayerDeathChanged",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "SuperStruct": {
+      "ObjectName": "Function BHUDWidgetPlayer:OnPlayerDeathChanged",
+      "ObjectPath": "/Script/Unboxed"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bDead",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201459720
+  },
+  {
+    "Type": "Function",
+    "Name": "GetImageDeathVisibility",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsAnimationPlaying_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsAnimationPlaying_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsPlayerDead_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": 1,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 474087424
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBuildIconColour",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1408,
+        "Struct": {
+          "ObjectName": "ScriptStruct LinearColor",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetPlayerInBuildMode_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct LinearColor",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": 474087424
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UI_NHUD_PlayerScore_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree UI_NHUD_PlayerScore_C:WidgetTree",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.59"
+      },
+      "bClassRequiresNativeTick": true,
+      "Bindings": [
+        {
+          "ObjectName": "TextBlock_0",
+          "PropertyName": "Text",
+          "FunctionName": "GetPlayerName",
+          "SourcePath": {
+            "Segments": [
+              {
+                "Name": "GetPlayerName",
+                "ArrayIndex": -1
+              }
+            ],
+            "CachedFunction": null
+          },
+          "Kind": "EBindingKind::Function"
+        },
+        {
+          "ObjectName": "SizeBox_0",
+          "PropertyName": "Visibility",
+          "FunctionName": "GetVisibility_0",
+          "SourcePath": {
+            "Segments": [
+              {
+                "Name": "GetImageDeathVisibility",
+                "ArrayIndex": -1
+              }
+            ],
+            "CachedFunction": null
+          },
+          "Kind": "EBindingKind::Function"
+        }
+      ],
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation UI_NHUD_PlayerScore_C:APlayerDeath_INST",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.58"
+        },
+        {
+          "ObjectName": "WidgetAnimation UI_NHUD_PlayerScore_C:APlaterSpawn_INST",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.57"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:ExecuteUbergraph_UI_NHUD_PlayerScore",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class BHUDWidgetPlayer",
+      "ObjectPath": "/Script/Unboxed"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:GetBuildIconColour",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.5"
+      },
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:GetImageDeathVisibility",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.4"
+      },
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnPlayerDeathChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.3"
+      },
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnAwardChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.2"
+      },
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnRankChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.1"
+      },
+      {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:ExecuteUbergraph_UI_NHUD_PlayerScore",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "APlaterSpawn",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "APlayerDeath",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImageDeath",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class Image",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScaleBoxRank",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class ScaleBox",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SizeBox_0",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429256,
+        "PropertyClass": {
+          "ObjectName": "Class SizeBox",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextBlock_0",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429256,
+        "PropertyClass": {
+          "ObjectName": "Class TextBlock",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextRank",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class TextBlock",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UI_MedalWidget",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass UI_MedalWidget_C",
+          "ObjectPath": "Unboxed/Content/Core/UI/Menu/Map/UI_MedalWidget.7"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_UI_NHUD_PlayerScore": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:ExecuteUbergraph_UI_NHUD_PlayerScore",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.0"
+      },
+      "OnRankChanged": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnRankChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.1"
+      },
+      "OnAwardChanged": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnAwardChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.2"
+      },
+      "OnPlayerDeathChanged": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:OnPlayerDeathChanged",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.3"
+      },
+      "GetImageDeathVisibility": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:GetImageDeathVisibility",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.4"
+      },
+      "GetBuildIconColour": {
+        "ObjectName": "Function UI_NHUD_PlayerScore_C:GetBuildIconColour",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.5"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UI_NHUD_PlayerScore_C Default__UI_NHUD_PlayerScore_C",
+      "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.7"
+    }
+  },
+  {
+    "Type": "UI_NHUD_PlayerScore_C",
+    "Name": "Default__UI_NHUD_PlayerScore_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PlayerNameMaxLength": 18,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "Margin": {
+          "Left": 0.175,
+          "Top": 0.175,
+          "Right": 0.175,
+          "Bottom": 0.175
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.3,
+            "Hex": "4CFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D T_U_BorderFullSharper",
+          "ObjectPath": "Unboxed/Content/Core/UI/Textures/T_U_BorderFullSharper.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot UI_NHUD_PlayerScore_C:WidgetTree.Border_0.BorderSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.55"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Border UI_NHUD_PlayerScore_C:WidgetTree.Border_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.8"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_3",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot UI_NHUD_PlayerScore_C:WidgetTree.Border_0.BorderSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_3",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Top": -8.0,
+        "Right": -8.0,
+        "Bottom": -8.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.10"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBoxRank",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.39"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_3",
+    "Properties": {
+      "Padding": {
+        "Left": 4.0,
+        "Right": 2.0
+      },
+      "Size": {
+        "Value": 0.25
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.10"
+      },
+      "Content": {
+        "ObjectName": "Overlay UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.32"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_3",
+    "Properties": {
+      "Padding": {
+        "Left": 4.0,
+        "Right": 4.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.10"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_4",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.38"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ImageAvatar",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 53.0,
+          "Y": 53.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Material M_U_Avatar",
+          "ObjectPath": "Unboxed/Content/Core/UI/Avatar/M_U_Avatar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_3.ScaleBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.42"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ImageDeath",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant M_I_Death",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/Icons/M_I_Death.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.41"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "APlaterSpawn",
+    "Outer": "APlaterSpawn_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "34E5FD44-48A1E304-7ECCB396-3C59D2EF",
+          "Name": "ImageDeath",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "34E5FD44-48A1E304-7ECCB396-3C59D2EF",
+          "BindingName": "ImageDeath",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn.MovieSceneColorTrack_1",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.28"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20000,
+        "Denominator": 1000
+      },
+      "Signature": "567A119C-448A4FC4-986AF8AC-AD3960D8"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "APlayerDeath",
+    "Outer": "APlayerDeath_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "67A9AD0A-4F8B0CC9-7AD80E8D-600001D0",
+          "Name": "ImageDeath",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "67A9AD0A-4F8B0CC9-7AD80E8D-600001D0",
+          "BindingName": "ImageDeath",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.19"
+            },
+            {
+              "ObjectName": "MovieSceneColorTrack UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieSceneColorTrack_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.29"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 20001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "EC19C616-478D16BE-759D10B2-989EFAF5"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 17000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.8,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.8,
+            "Tangent": {
+              "ArriveTangent": -4.1176463E-05,
+              "LeaveTangent": -4.1176463E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 2.5000001E-05,
+              "LeaveTangent": 2.5000001E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 17000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.8,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.8,
+            "Tangent": {
+              "ArriveTangent": -4.1176463E-05,
+              "LeaveTangent": -4.1176463E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 2.5000001E-05,
+              "LeaveTangent": 2.5000001E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 20001
+            }
+          }
+        }
+      },
+      "Signature": "F175E281-42717AF7-687B78B4-18B2A16C"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "APlayerDeath",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.18"
+        }
+      ],
+      "EvaluationFieldGuid": "5D196E52-42145AA1-FD3309A7-DE1BFA2C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.18"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 20001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5D196E52-42145AA1-FD3309A7-DE1BFA2C"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_1"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_1"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_0"
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_1",
+    "Outer": "MovieSceneColorTrack_1",
+    "Properties": {
+      "RedCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn.MovieSceneColorTrack_1.MovieSceneColorSection_1.EaseInFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.20"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn.MovieSceneColorTrack_1.MovieSceneColorSection_1.EaseOutFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.21"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "Signature": "8B9DDB5E-4E529D9D-0E0AA3B4-D11B883A"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Outer": "MovieSceneColorTrack_0",
+    "Properties": {
+      "RedCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 5.0000002E-05,
+              "LeaveTangent": 5.0000002E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 20001
+            }
+          }
+        }
+      },
+      "Signature": "44DA3553-4179106C-0A78B398-CFD5D34B"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_1",
+    "Outer": "APlaterSpawn",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn.MovieSceneColorTrack_1.MovieSceneColorSection_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.26"
+        }
+      ],
+      "EvaluationFieldGuid": "6E946AC2-4B7AEDA3-1C509085-E72DAABA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn.MovieSceneColorTrack_1.MovieSceneColorSection_1",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 60001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6E946AC2-4B7AEDA3-1C509085-E72DAABA"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Outer": "APlayerDeath",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieSceneColorTrack_0.MovieSceneColorSection_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.27"
+        }
+      ],
+      "EvaluationFieldGuid": "535560D5-4CD8B523-7CD32C8C-533F2C66",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieSceneColorTrack_0.MovieSceneColorSection_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 20001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "535560D5-4CD8B523-7CD32C8C-533F2C66"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "APlaterSpawn_INST",
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": null,
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": null
+        }
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 60001
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 60001
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "1308B0F4-4081E9C2-F59728B5-CD3AE7BA",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "APlayerDeath_INST",
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": null,
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": null
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 20001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+                "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.18"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "67A9AD0A-4F8B0CC9-7AD80E8D-600001D0"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 20001
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 20001
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "43BBFC5E-4B8E3144-190D5FAC-D688A3B3",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_2",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2.OverlaySlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.33"
+        },
+        {
+          "ObjectName": "OverlaySlot UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2.OverlaySlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.12"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_2",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.32"
+      },
+      "Content": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.47"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_2",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.32"
+      },
+      "Content": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.45"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.40"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.56"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_1.ScaleBoxSlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.41"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.48"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_3",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_3.ScaleBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_3.SizeBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.50"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_4",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_4.ScaleBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.43"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.13"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBoxRank",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBoxRank.ScaleBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.11"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.35"
+      },
+      "Content": {
+        "ObjectName": "TextBlock UI_NHUD_PlayerScore_C:WidgetTree.TextBlock_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.51"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_1",
+    "Outer": "ScaleBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.36"
+      },
+      "Content": {
+        "ObjectName": "Image UI_NHUD_PlayerScore_C:WidgetTree.ImageDeath",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.15"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.37"
+      },
+      "Content": {
+        "ObjectName": "Image UI_NHUD_PlayerScore_C:WidgetTree.ImageAvatar",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.14"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_4",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_4",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.38"
+      },
+      "Content": {
+        "ObjectName": "TextBlock UI_NHUD_PlayerScore_C:WidgetTree.TextRank",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.52"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBoxRank",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBoxRank",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.39"
+      },
+      "Content": {
+        "ObjectName": "UI_MedalWidget_C UI_NHUD_PlayerScore_C:WidgetTree.UI_MedalWidget",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.53"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "WidthOverride": 38.0,
+      "HeightOverride": 38.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.48"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2.OverlaySlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.34"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "WidthOverride": 160.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_1.SizeBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.49"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_3",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "WidthOverride": 52.0,
+      "HeightOverride": 52.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_3.SizeBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot UI_NHUD_PlayerScore_C:WidgetTree.Overlay_2.OverlaySlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.33"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.45"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.36"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.46"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.54"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.47"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_3",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.37"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "SuperLong Test Player Name 20000"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font CoreSansA65It",
+          "ObjectPath": "Unboxed/Content/Core/UI/Fonts/CoreSansA65It.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 2,
+          "bApplyOutlineToDropShadows": true,
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.65,
+            "Hex": "A6000000"
+          }
+        },
+        "TypefaceFontName": "Default",
+        "Size": 11
+      },
+      "bSimpleTextMode": true,
+      "Margin": {
+        "Left": 6.0,
+        "Right": 6.0
+      },
+      "LineHeightPercentage": 0.95,
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.40"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextRank",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "n/a"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font CoreSansA75It",
+          "ObjectPath": "Unboxed/Content/Core/UI/Fonts/CoreSansA75It.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 22
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_4.ScaleBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.43"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "UI_MedalWidget_C",
+    "Name": "UI_MedalWidget",
+    "Outer": "WidgetTree",
+    "Template": "Default__UI_MedalWidget_C",
+    "Properties": {
+      "MedalIsLocked": false,
+      "MedalAward": "ELevelAward::None",
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.ScaleBoxRank.ScaleBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.44"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_1",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.56"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.55"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_1.SizeBoxSlot_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.49"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_1",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.54"
+      },
+      "Content": {
+        "ObjectName": "Border UI_NHUD_PlayerScore_C:WidgetTree.Border_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.8"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_1",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox UI_NHUD_PlayerScore_C:WidgetTree.VerticalBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.54"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_NHUD_PlayerScore_C:WidgetTree.ScaleBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.35"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "APlaterSpawn_INST",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene UI_NHUD_PlayerScore_C:APlaterSpawn_INST.APlaterSpawn",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "ImageDeath",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "34E5FD44-48A1E304-7ECCB396-3C59D2EF",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData UI_NHUD_PlayerScore_C:APlaterSpawn_INST.CompiledData",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.30"
+      },
+      "Signature": "1308B0F4-4081E9C2-F59728B5-CD3AE7BA"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "APlayerDeath_INST",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene UI_NHUD_PlayerScore_C:APlayerDeath_INST.APlayerDeath",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.17"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "ImageDeath",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "67A9AD0A-4F8B0CC9-7AD80E8D-600001D0",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData UI_NHUD_PlayerScore_C:APlayerDeath_INST.CompiledData",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.31"
+      },
+      "Signature": "43BBFC5E-4B8E3144-190D5FAC-D688A3B3"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "UI_NHUD_PlayerScore_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox UI_NHUD_PlayerScore_C:WidgetTree.SizeBox_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_NHUD_PlayerScore.46"
+      }
+    }
+  }
+]

@@ -1,0 +1,628 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_ShadowPlayerPickups:BTDecorator_Blackboard_3",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_2",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Action": "EBotAction::Pickup",
+      "bClearActionTarget": true,
+      "NodeName": "Pickup",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.6"
+      }
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_4",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Action": "EBotAction::StopMovement",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_InBuildMode_C_0",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "NOT in Build Mode",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior BT_ShadowPlayerPickups:BTTask_RunBehavior_10",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_InBuildMode_C BT_ShadowPlayerPickups:BT_InBuildMode_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPickups:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_10",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ShadowPlayerPickups:BTDecorator_IsWithinDistance_8",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerPickups:BTDecorator_ForceSuccess_9",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPickups:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_ShadowPlayerPickups:BotTask_4",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPickups:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_ShadowPlayerPickups:BotTask_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SpecialFocus BT_ShadowPlayerPickups:BTService_SpecialFocus_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.18"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPickups:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPickups:BTComposite_SimpleParallel_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerPickups:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPickups:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerPickups:BTDecorator_ForceSuccess_7",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.13"
+            },
+            {
+              "ObjectName": "BTDecorator_Loop BT_ShadowPlayerPickups:BTDecorator_Loop_2",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ShadowPlayerPickups:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ShadowPlayerPickups:BTTask_MoveTo_6",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.19"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ShadowPlayerPickups:BTDecorator_TimeLimit_5",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "CachedDescription": "PickupTarget is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "PickupTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Has Pickup Target?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_7",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_9",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_8",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "AcceptableRadius": 200.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PickupTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_2",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_5",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "TimeLimit": 25.0,
+      "FlowAbortMode": "EBTFlowAbortMode::None",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPickups:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SpecialFocus",
+    "Name": "BTService_SpecialFocus_0",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PickupTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_6",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "AcceptableRadius": 25.033806,
+      "ObservedBlackboardValueTolerance": 29.900625,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PickupTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPickups:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_10",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "WaitTime": 0.085714,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "WaitTime": 1.296867,
+      "RandomDeviation": 0.297619,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPickups:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.7"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_ShadowPlayerPickups",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PickupTarget"
+      },
+      "NodeName": "Clear Pickup",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPickups",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPickups:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPickups.9"
+      }
+    }
+  }
+]

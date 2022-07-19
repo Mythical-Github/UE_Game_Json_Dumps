@@ -1,0 +1,333 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_LaserImpact_Light:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_LaserImpact_Light:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_LaserImpact_Light:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_LaserImpact_Light:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.3"
+        },
+        {
+          "ObjectName": "ParticleModuleCameraOffset P_LaserImpact_Light:ParticleModuleCameraOffset_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.2"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_LaserImpact_Light:ParticleModuleLocation_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.5"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_LaserImpact_Light:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.8"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleCameraOffset",
+    "Name": "ParticleModuleCameraOffset_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "CameraOffset": {
+        "MinValue": 2.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "UpdateMethod": "EPCOUM_Additive",
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 33.0,
+        "MinValueVec": {
+          "X": 33.0,
+          "Y": 2.475,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 33.0,
+          "Y": 2.475,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            33.0,
+            2.475,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": -0.057634447,
+        "MaxValue": 1.2019882,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            1.1994497,
+            1.1100684,
+            0.83669335,
+            0.484162,
+            0.15731129,
+            -0.0390218,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "StartLocation": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_LightGlow",
+        "ObjectPath": "Unboxed/Content/Core/Effects/Light/Materials/M_LightGlow.0"
+      },
+      "bUseLocalSpace": true,
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_LaserImpact_Light:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "MaxDrawCount": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 32.0,
+        "MaxValue": 32.0,
+        "MinValueVec": {
+          "X": 32.0,
+          "Y": 32.0,
+          "Z": 32.0
+        },
+        "MaxValueVec": {
+          "X": 32.0,
+          "Y": 32.0,
+          "Z": 32.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            32.0,
+            32.0,
+            32.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "bProcessSpawnRate": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_LaserImpact_Light",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_LaserImpact_Light:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_LaserImpact_Light",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_LaserImpact_Light:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/Light/P_LaserImpact_Light.9"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -15.0,
+          "Y": -15.0,
+          "Z": -15.0
+        },
+        "Max": {
+          "X": 15.0,
+          "Y": 15.0,
+          "Z": 15.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindJumpMarkers",
+    "Properties": {
+      "QueryName": "EQ_FindJumpMarkers",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindJumpMarkers:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindJumpMarkers.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ValidJumpMarkers",
+    "Name": "EnvQueryGenerator_ValidJumpMarkers_0",
+    "Outer": "EQ_FindJumpMarkers",
+    "Properties": {
+      "SearchRadius": {
+        "DefaultValue": 1635.4895
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindJumpMarkers",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ValidJumpMarkers EQ_FindJumpMarkers:EnvQueryGenerator_ValidJumpMarkers_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindJumpMarkers.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindJumpMarkers:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindJumpMarkers.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindJumpMarkers:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindJumpMarkers.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindJumpMarkers",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindJumpMarkers",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 1.0
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,2893 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_bRobot",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BB_bRobot.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsOverlapping_C_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.13"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_2",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "MinDistanceSqr": 280000.0,
+      "bShowPropertyDetails": false,
+      "Interval": 1.14191,
+      "RandomDeviation": 0.451419,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_bRobot:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_17",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_bRobot:BTDecorator_IsWithinDistance_1",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.19"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_16",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsFalling BT_bRobot:BTDecorator_IsFalling_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.53"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_6",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.39"
+            },
+            {
+              "ObjectName": "BT_IsAlive_C BT_bRobot:BT_IsAlive_C_3",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.35"
+            },
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_bRobot:BTDecorator_IsBBEntryOfClass_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.51"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_bRobot:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_bRobot:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_13",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_15",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_14",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_bRobot:BTDecorator_IsAtLocation_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_bRobot:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.57"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.19"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_17",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_19",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.23"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_26",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.26"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_18",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_27",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_bRobot:BTDecorator_IsBBEntryOfClass_3",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.52"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_24",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.24"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_13",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsOverlapping_C BT_bRobot:BT_IsOverlapping_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_5",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.32"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_9",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_25",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_bRobot:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_33",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_bRobot:BTDecorator_IsWithinDistance_5",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.55"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_12",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_17",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_bRobot:BTDecorator_DoesPathExist_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_18",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BT_ShootService_C BT_bRobot:BT_ShootService_C_2",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.5"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_bRobot:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.76"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_bRobot:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.74"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_14",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.93"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_15",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.103"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_bRobot:BTTask_PlayMontage_0",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_31",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_bRobot:BTService_OverrideFocus_4",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.59"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_bRobot:BTTask_PlayMontage_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_18",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_bRobot:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.58"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_bRobot:BTTask_RunEQSQuery_4",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_7",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.68"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_bRobot:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.56"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_24",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_10",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_25",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_25",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_26",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_11",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_26",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_27",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.86"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_14",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_27",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_11",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_28",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_bRobot:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.73"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.45"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown BT_bRobot:BTDecorator_Cooldown_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_33",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_bRobot:BTComposite_SimpleParallel_6",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.34"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_9",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.49"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_36",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_34",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_bRobot:BTTask_PlayMontage_8",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_37",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_bRobot:BTComposite_SimpleParallel_6",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.34"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.62"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.101"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_bRobot:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.66"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_bRobot:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_bRobot:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.106"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_bRobot:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_6",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveDirectlyToward BT_bRobot:BTTask_MoveDirectlyToward_3",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_34",
+            "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.30"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_33",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Blocker is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.31"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.32"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_9",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_33",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 512.0,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "Class UBCore",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy a Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "DynamicClass BP_CoreFort_C",
+        "ObjectPath": "/Game/Core/Forts/BP_CoreFort"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsFalling",
+    "Name": "BTDecorator_IsFalling_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 99.14644,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_5",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 222.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TimeLimit": 9.286863,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_19",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.22"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveDirectlyToward",
+    "Name": "BTTask_MoveDirectlyToward_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "bUpdatedDeprecatedProperties": true,
+      "ObservedBlackboardValueTolerance": 2.0,
+      "bObserveBlackboardValue": true,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_bRobot:BTComposite_SimpleParallel_6",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 92.25623,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_10",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 447.2207,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_11",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 718.66766,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_27",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_12",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 5.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "ObservedBlackboardValueTolerance": 33.0,
+      "bObserveBlackboardValue": true,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_5",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 32.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 248.39572,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_19",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_9",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeL",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeR",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeR.0"
+        }
+      ],
+      "bNonBlocking": true,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_1",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeL",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeR",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeR.0"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_8",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeL",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_bRobot_MeleeR",
+          "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Animations/AM_bRobot_MeleeR.0"
+        }
+      ],
+      "bNonBlocking": true,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreCanJump",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindMoveLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_19",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.25,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 2.5,
+      "RandomDeviation": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.35,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_16",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_18",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_25",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_26",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_27",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_26",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_28",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_27",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_31",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.72,
+      "RandomDeviation": 0.181762,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_36",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.12,
+      "RandomDeviation": 0.05,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_33",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_37",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.52,
+      "RandomDeviation": 0.20081,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.17"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_11",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.25"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.8"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_13",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.9"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_14",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_26",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.28"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.31"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "Clear Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.32"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.19"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_bRobot:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.15"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.33"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_bRobot",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_bRobot",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_bRobot:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/Core/Player/Characters/bROBOT/Data/BT_bRobot.33"
+      }
+    }
+  }
+]

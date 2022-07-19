@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_RandomPosSmall",
+    "Properties": {
+      "QueryName": "EQ_RandomPosSmall",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_RandomPosSmall:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosSmall.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_RandomPosSmall",
+    "Properties": {
+      "OuterRadius": {
+        "DefaultValue": 800.0
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "PointsPerRing": {
+        "DefaultValue": 7
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 128.0,
+        "ProjectUp": 128.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_RandomPosSmall",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_RandomPosSmall:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosSmall.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Dot EQ_RandomPosSmall:EnvQueryTest_Dot_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosSmall.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "EQ_RandomPosSmall",
+    "Properties": {
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DefaultValue": -0.063704
+      },
+      "VerNum": 1
+    }
+  }
+]

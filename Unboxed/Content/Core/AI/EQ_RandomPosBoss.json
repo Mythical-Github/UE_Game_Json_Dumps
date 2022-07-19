@@ -1,0 +1,114 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_RandomPosBoss",
+    "Properties": {
+      "QueryName": "EQ_RandomPosBoss",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_RandomPosBoss:EnvQueryOption_3",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQ_RandomPosBoss",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 4000.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 834.40454
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 512.0,
+        "ProjectUp": 128.0,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_3",
+    "Outer": "EQ_RandomPosBoss",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQ_RandomPosBoss:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQ_RandomPosBoss:EnvQueryTest_Overlap_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_RandomPosBoss:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_RandomPosBoss:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_RandomPosBoss",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQ_RandomPosBoss",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 200.0,
+        "ExtentY": 100.0,
+        "ExtentZ": 200.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 210.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Capsule"
+      },
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_RandomPosBoss",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 8.0
+      },
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_Boss_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/NavFilter_Boss.0"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMax": {
+        "DefaultValue": 1713.4196
+      },
+      "VerNum": 1
+    }
+  }
+]

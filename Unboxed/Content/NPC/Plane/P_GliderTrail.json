@@ -1,0 +1,337 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_GliderTrail:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_GliderTrail:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_GliderTrail:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_GliderTrail:ParticleModuleVelocity_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_GliderTrail:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.3"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataRibbon P_GliderTrail:ParticleModuleTypeDataRibbon_0",
+        "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.8"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_GliderTrail:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.7"
+      },
+      "PeakActiveParticles": 73
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.36594,
+        "MaxValue": 0.963,
+        "MinValueVec": {
+          "X": 0.963,
+          "Y": 0.371394,
+          "Z": 0.36594
+        },
+        "MaxValueVec": {
+          "X": 0.963,
+          "Y": 0.371394,
+          "Z": 0.36594
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.963,
+            0.371394,
+            0.36594
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 37.200016,
+          "TimeBias": 0.166667,
+          "Values": [
+            0.0,
+            0.5132155,
+            0.99822724,
+            0.9638056,
+            0.929384,
+            0.8949624,
+            0.86054075,
+            0.8261191,
+            0.79169744,
+            0.7572758,
+            0.7228542,
+            0.6884325,
+            0.6540109,
+            0.6195894,
+            0.58516765,
+            0.550746,
+            0.51632446,
+            0.4819028,
+            0.44748116,
+            0.41305956,
+            0.37863794,
+            0.3442164,
+            0.30979463,
+            0.27537298,
+            0.24095139,
+            0.20652983,
+            0.17210817,
+            0.13768654,
+            0.10326494,
+            0.0688433,
+            0.034421578,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.145885,
+        "MaxValue": 0.145885,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.145885
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_VFX_GrenadeTrail_01",
+        "ObjectPath": "Unboxed/Content/Core/VFX/Materials/Weapons/M_VFX_GrenadeTrail_01.0"
+      },
+      "bUseLocalSpace": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_GliderTrail:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "MaxDrawCount": 128,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 2.0,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "Rate": {
+        "MinValue": 120.0,
+        "MaxValue": 120.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            120.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_GliderTrail:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.1"
+        }
+      },
+      "bProcessSpawnRate": false,
+      "bProcessBurstList": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataRibbon",
+    "Name": "ParticleModuleTypeDataRibbon_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "MaxParticleInTrailCount": 48,
+      "bEnablePreviousTangentRecalculation": false,
+      "bTangentRecalculationEveryFrame": true,
+      "bSpawnInitialParticle": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -719.2298,
+        "MinValueVec": {
+          "X": -719.2298,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": -719.2298,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -719.2298,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_GliderTrail",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_GliderTrail:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.2"
+        }
+      ],
+      "InitialAllocationCount": 64,
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_GliderTrail",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_GliderTrail:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/NPC/Plane/P_GliderTrail.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreDefendFromEnemy",
+    "Properties": {
+      "QueryName": "EQ_FindCoreDefendFromEnemy",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreDefendFromEnemy:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefendFromEnemy.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_FindCoreDefendFromEnemy",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 320.287
+      },
+      "OuterRadius": {
+        "DefaultValue": 1803.6526
+      },
+      "NumberOfRings": {
+        "DefaultValue": 4
+      },
+      "PointsPerRing": {
+        "DefaultValue": 7
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 256.0,
+        "ProjectUp": 128.0,
+        "PostProjectionVerticalOffset": 91.77094,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindCoreDefendFromEnemy",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCoreDefendFromEnemy:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefendFromEnemy.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindCoreDefendFromEnemy:EnvQueryTest_Trace_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefendFromEnemy.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreDefendFromEnemy:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefendFromEnemy.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindCoreDefendFromEnemy",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_1",
+    "Outer": "EQ_FindCoreDefendFromEnemy",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "TraceChannel": "TraceTypeQuery3",
+        "SerializedChannel": "ECC_GameTraceChannel1"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 72.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 72.0
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

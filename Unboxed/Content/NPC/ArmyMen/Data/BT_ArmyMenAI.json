@@ -1,0 +1,2309 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ArmyMenAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Base",
+        "ObjectPath": "Unboxed/Content/Core/AI/BB_Base.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_0",
+          "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.34"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Enemy Is Dead",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.19"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsTagTimerExpired_C_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Tag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "bShowPropertyDetails": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.27"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_10",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "ShouldMove": true,
+      "bShowPropertyDetails": false,
+      "NodeName": "Move!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "ShouldMove": true,
+      "bShowPropertyDetails": false,
+      "NodeName": "Move!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.31"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.21"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "ShouldMove": true,
+      "bShowPropertyDetails": false,
+      "NodeName": "Move!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.30"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_8",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.30"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_MoveTask_C_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "NodeName": "Stop Moving",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_2",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsFalling BT_ArmyMenAI:BTDecorator_IsFalling_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.32"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_ArmyMenAI:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ArmyMenAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ArmyMenAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.51"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown BT_ArmyMenAI:BTDecorator_Cooldown_1",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_10",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_4",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "WeaponFireTask BT_ArmyMenAI:WeaponFireTask_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.88"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ArmyMenAI:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ArmyMenAI:BTTask_RunEQSQuery_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ArmyMenAI:BTService_OverrideFocus_6",
+          "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.57"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_13",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_9",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_ArmyMenAI:BT_IsAlive_C_2",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ArmyMenAI:BTDecorator_IsWithinDistance_4",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.52"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_HasDelayedLOS BT_ArmyMenAI:BTDecorator_HasDelayedLOS_2",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.49"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.31"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_6",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ArmyMenAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ArmyMenAI:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ArmyMenAI:BTTask_MoveTo_9",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_5",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.82"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.45"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_9",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.14"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_8",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ArmyMenAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.84"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_7",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.47"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_0",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.4"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "WeaponFireTask BT_ArmyMenAI:WeaponFireTask_0",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.86"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsTagTimerExpired_C BT_ArmyMenAI:BT_IsTagTimerExpired_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.3"
+            },
+            {
+              "ObjectName": "BTDecorator_KeepInCone BT_ArmyMenAI:BTDecorator_KeepInCone_0",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.53"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ArmyMenAI:BTDecorator_TimeLimit_1",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.55"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ArmyMenAI:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ArmyMenAI:BTService_OverrideFocus_5",
+          "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.56"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_ArmyMenAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_7",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ArmyMenAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_8",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_MoveTask_C BT_ArmyMenAI:BT_MoveTask_C_5",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ArmyMenAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ArmyMenAI:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "WeaponFireTask BT_ArmyMenAI:WeaponFireTask_1",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ArmyMenAI:ClearKeyValue_5",
+            "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "SelfActor is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Move Location Not Set",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "CoolDownTime": 7.0,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_8",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_HasDelayedLOS",
+    "Name": "BTDecorator_HasDelayedLOS_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "UpdateTime": 1.25,
+      "TargetActor": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsFalling",
+    "Name": "BTDecorator_IsFalling_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "AcceptableRadius": 646.6486,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "AcceptableRadius": 2000.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_KeepInCone",
+    "Name": "BTDecorator_KeepInCone_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "ConeHalfAngle": 4.431771,
+      "ConeOrigin": {},
+      "Observed": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TimeLimit": 6.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "AcceptableRadius": 90.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "AcceptableRadius": 128.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "AcceptableRadius": 190.0,
+      "bAllowStrafe": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Precision": 2.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPosSmall",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosSmall.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCore",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCore.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 0.75,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 0.75,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "WaitTime": 1.5,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.29"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.27"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "Clear Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.27"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.24"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.29"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "NodeName": "Clear Noise",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.30"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.31"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_5",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.33"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.23"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.32"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.32"
+      }
+    }
+  },
+  {
+    "Type": "WeaponFireTask",
+    "Name": "WeaponFireTask_0",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.28"
+      }
+    }
+  },
+  {
+    "Type": "WeaponFireTask",
+    "Name": "WeaponFireTask_1",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "Type": "Stop",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ArmyMenAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.33"
+      }
+    }
+  },
+  {
+    "Type": "WeaponFireTask",
+    "Name": "WeaponFireTask_2",
+    "Outer": "BT_ArmyMenAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ArmyMenAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.17"
+      }
+    }
+  }
+]

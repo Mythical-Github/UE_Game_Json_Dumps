@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreLocationBigEnemy",
+    "Properties": {
+      "QueryName": "EQ_FindCoreLocationBigEnemy",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreLocationBigEnemy:EnvQueryOption_2",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_FindCoreLocationBigEnemy",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 200.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 755.01276
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 64.0,
+        "ProjectUp": 42.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_2",
+    "Outer": "EQ_FindCoreLocationBigEnemy",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCoreLocationBigEnemy:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQ_FindCoreLocationBigEnemy:EnvQueryTest_Overlap_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreLocationBigEnemy:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindCoreLocationBigEnemy",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQ_FindCoreLocationBigEnemy",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 90.0,
+        "ExtentY": 90.0,
+        "ExtentZ": 220.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 230.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Capsule"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindUsable",
+    "Properties": {
+      "QueryName": "EQ_FindUsable",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindUsable:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindUsable.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ValidUseables",
+    "Name": "EnvQueryGenerator_ValidUseables_0",
+    "Outer": "EQ_FindUsable",
+    "Properties": {
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindUsable",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ValidUseables EQ_FindUsable:EnvQueryGenerator_ValidUseables_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindUsable.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindUsable:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindUsable.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindUsable",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,525 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_ShadowPlayerPOI:BTDecorator_Blackboard_16",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Action": "EBotAction::LoseFocus",
+      "bClearActionTarget": true,
+      "bIgnoreRestartSelf": true,
+      "NodeName": "Clear Focus",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_InBuildMode_C_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "NOT in Build Mode",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.5"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "Interval": 0.3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ShadowPlayerPOI:BTDecorator_IsWithinDistance_7",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior BT_ShadowPlayerPOI:BTTask_RunBehavior_10",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.16"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_InBuildMode_C BT_ShadowPlayerPOI:BT_InBuildMode_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPOI:BTComposite_SimpleParallel_8",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_ShadowPlayerPOI:BotTask_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPOI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerPOI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ShadowPlayerPOI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ShadowPlayerPOI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerPOI:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPOI:BTComposite_SimpleParallel_8",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_8",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ShadowPlayerPOI:BTTask_MoveTo_11",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ShadowPlayerPOI:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "CachedDescription": "PoI is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PoI"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Has Point of Interest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_7",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "AcceptableRadius": 120.89315,
+      "BlackboardKey": {
+        "SelectedKeyName": "PoI"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "TimeLimit": 30.0,
+      "FlowAbortMode": "EBTFlowAbortMode::None",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPOI:BTComposite_SimpleParallel_8",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_11",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "ObservedBlackboardValueTolerance": 64.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PoI"
+      },
+      "NodeName": "Move To PoI",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerPOI:BTComposite_SimpleParallel_8",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_10",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "Services": [
+        {
+          "ObjectName": "BT_ShootService_C BT_ShadowPlayerPOI:BT_ShootService_C_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.3"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerPOI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "WaitTime": 0.340477,
+      "RandomDeviation": 0.286905,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.9"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PoI"
+      },
+      "NodeName": "Clear Point of Interest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.8"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_ShadowPlayerPOI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PoI"
+      },
+      "NodeName": "Clear Point of Interest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerPOI",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerPOI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerPOI.7"
+      }
+    }
+  }
+]

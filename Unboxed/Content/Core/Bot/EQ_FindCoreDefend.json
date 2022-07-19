@@ -1,0 +1,111 @@
+[
+  {
+    "Type": "AIDataProvider_Random",
+    "Name": "AIDataProvider_Random_1",
+    "Outer": "EnvQueryTest_Distance_0",
+    "Properties": {
+      "Min": 0.25,
+      "ParamName": "Distance.ReferenceValue"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreDefend",
+    "Properties": {
+      "QueryName": "EQ_FindCoreDefend",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreDefend:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefend.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_FindCoreDefend",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 550.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 940.0
+      },
+      "PointsPerRing": {
+        "DefaultValue": 6
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class NavFilter_AIControllerDefault",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "ProjectDown": 256.0,
+        "ProjectUp": 128.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindCoreDefend",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCoreDefend:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefend.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindCoreDefend:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefend.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreDefend:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefend.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindCoreDefend",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "ScoringFactor": {
+        "DataField": "FloatValue"
+      },
+      "ReferenceValue": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_Random EQ_FindCoreDefend:EnvQueryTest_Distance_0.AIDataProvider_Random_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindCoreDefend.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "bDefineReferenceValue": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindCoreDefend",
+    "Properties": {
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,2657 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ZombieAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Meatbag",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BB_Meatbag.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsOverlapping_C_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_ZombieAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_17",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ZombieAI:BTDecorator_IsWithinDistance_1",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_16",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsFalling BT_ZombieAI:BTDecorator_IsFalling_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.49"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_6",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.35"
+            },
+            {
+              "ObjectName": "BT_IsAlive_C BT_ZombieAI:BT_IsAlive_C_3",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_ZombieAI:BTDecorator_TagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.52"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_ZombieAI:BTDecorator_IsAtLocation_8",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.48"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_8",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_ZombieAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ZombieAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_6",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_13",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_15",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_14",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_ZombieAI:BTDecorator_IsAtLocation_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ZombieAI:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.53"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_16",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_23",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_ZombieAI:BT_IsAlive_C_7",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_20",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_ZombieAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_13",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ZombieAI:BTService_OverrideFocus_2",
+          "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.56"
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_13",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsOverlapping_C BT_ZombieAI:BT_IsOverlapping_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_5",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.29"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_9",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_22",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ZombieAI:BTDecorator_TimeLimit_7",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_21",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_ZombieAI:BTDecorator_DoesPathExist_4",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_19",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ZombieAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.68"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_ZombieAI:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.66"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.45"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_14",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_15",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_ZombieAI:BTTask_SetTagCooldown_4",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_13",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ZombieAI:BTService_OverrideFocus_4",
+          "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.57"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_ZombieAI:BTTask_SetTagCooldown_8",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_24",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ZombieAI:BTComposite_SimpleParallel_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_ZombieAI:BTTask_SetTagCooldown_0",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_18",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ZombieAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.55"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_ZombieAI:BTComposite_SimpleParallel_1",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_5",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_22",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_21",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_ZombieAI:BTTask_SetTagCooldown_7",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_23",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_22",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_20",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_23",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_21",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_15",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.93"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_ZombieAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.65"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.42"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown BT_ZombieAI:BTDecorator_Cooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.60"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ZombieAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.61"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ZombieAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ZombieAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.86"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ZombieAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveDirectlyToward BT_ZombieAI:BTTask_MoveDirectlyToward_0",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_14",
+            "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Blocker is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 512.0,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_8",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 350.0,
+      "bUseNavAgentGoalLocation": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsFalling",
+    "Name": "BTDecorator_IsFalling_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 160.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 99.14644,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Ignore Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "TimeLimit": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveDirectlyToward",
+    "Name": "BTTask_MoveDirectlyToward_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "bUpdatedDeprecatedProperties": true,
+      "ObservedBlackboardValueTolerance": 2.0,
+      "bObserveBlackboardValue": true,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ZombieAI:BTComposite_SimpleParallel_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "bAllowStrafe": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_5",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 32.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_6",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 24.565102,
+      "ObservedBlackboardValueTolerance": 4.058085,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_9",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreCanJump",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.Attack"
+      },
+      "CooldownDuration": 2.0,
+      "NodeName": "Set Attack Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.Blocked"
+      },
+      "CooldownDuration": 2.0,
+      "NodeName": "Set Attack Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 3.0,
+      "NodeName": "Set Ignore Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_21",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_8",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.Attack"
+      },
+      "CooldownDuration": 2.0,
+      "NodeName": "Set Attack Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.25,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.45,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 2.5,
+      "RandomDeviation": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.35,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_16",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_18",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_19",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_20",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.656501,
+      "RandomDeviation": 0.866667,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_21",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.5,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_22",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_23",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_21",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_24",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.16"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.7"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_13",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.9"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_15",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.27"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.28"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "Clear Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.29"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.18"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ZombieAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.30"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_ZombieAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ZombieAI",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ZombieAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Zombie/Data/BT_ZombieAI.30"
+      }
+    }
+  }
+]

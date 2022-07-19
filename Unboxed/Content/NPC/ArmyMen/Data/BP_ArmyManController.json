@@ -1,0 +1,196 @@
+[
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BP_ArmyManController_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPathFollowingComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PathFollowingComponent",
+          "ObjectPath": "/Script/AIModule"
+        }
+      }
+    ],
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ArmyManController_C",
+    "Properties": {
+      "bHasNativizedParent": true,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_ArmyManController_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "DynamicClass BP_UBAIController_C",
+      "ObjectPath": "/Game/Core/AI/BP_UBAIController"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BP_ArmyManController_C:UserConstructionScript",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.0"
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function BP_ArmyManController_C:UserConstructionScript",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.0"
+      }
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ArmyManController_C Default__BP_ArmyManController_C",
+      "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.2"
+    }
+  },
+  {
+    "Type": "BP_ArmyManController_C",
+    "Name": "Default__BP_ArmyManController_C",
+    "Properties": {
+      "EnemySensingComponent": {
+        "ObjectName": "EnemySensingComponent Default__BP_ArmyManController_C:EnemySensingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.3"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree BT_ArmyMenAI",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BT_ArmyMenAI.0"
+      },
+      "PathFollowingComponent": {
+        "ObjectName": "PathFollowingJumpingComponent Default__BP_ArmyManController_C:PathFollowingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.4"
+      },
+      "ActionsComp": {
+        "ObjectName": "PawnActionsComponent Default__BP_ArmyManController_C:ActionsComp",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.5"
+      },
+      "DefaultNavigationFilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TransformComponent": {
+        "ObjectName": "SceneComponent Default__BP_ArmyManController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.7"
+      },
+      "PrimaryActorTick": {
+        "TickGroup": "TG_PostPhysics"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BP_ArmyManController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.7"
+      }
+    }
+  },
+  {
+    "Type": "EnemySensingComponent",
+    "Name": "EnemySensingComponent",
+    "Outer": "Default__BP_ArmyManController_C",
+    "Properties": {
+      "OnSeeActor": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_ArmyManController_C Default__BP_ArmyManController_C",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.2"
+            },
+            "FunctionName": "OnSeeActor"
+          }
+        ]
+      },
+      "LOSHearingThreshold": 2000.0,
+      "SightRadius": 2000.0,
+      "SensingInterval": 2.0,
+      "OnSeePawn": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_ArmyManController_C Default__BP_ArmyManController_C",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.2"
+            },
+            "FunctionName": "OnSeePawn"
+          }
+        ]
+      },
+      "OnHearNoise": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_ArmyManController_C Default__BP_ArmyManController_C",
+              "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.2"
+            },
+            "FunctionName": "OnHearNoise"
+          }
+        ]
+      },
+      "PeripheralVisionAngle": 78.0
+    }
+  },
+  {
+    "Type": "PathFollowingJumpingComponent",
+    "Name": "PathFollowingComponent",
+    "Outer": "Default__BP_ArmyManController_C",
+    "Properties": {
+      "bOverrideRequestedMoveTarget": true
+    }
+  },
+  {
+    "Type": "PawnActionsComponent",
+    "Name": "ActionsComp",
+    "Outer": "Default__BP_ArmyManController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_ArmyManController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransformComponent0",
+    "Outer": "Default__BP_ArmyManController_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_ArmyManController_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.6"
+      },
+      "VariableGuid": "A547F428-46D918FE-29C21E84-E9B90111",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_ArmyManController_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_ArmyManController_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/NPC/ArmyMen/Data/BP_ArmyManController.8"
+      }
+    }
+  }
+]

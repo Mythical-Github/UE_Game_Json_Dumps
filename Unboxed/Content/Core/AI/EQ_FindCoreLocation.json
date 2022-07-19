@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreLocation",
+    "Properties": {
+      "QueryName": "EQ_FindCoreLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreLocation:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_FindCoreLocation",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 140.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 511.34882
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 90.0,
+        "ProjectUp": 32.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindCoreLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCoreLocation:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQ_FindCoreLocation:EnvQueryTest_Overlap_2",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreLocation:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindCoreLocation",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "MultipleContextScoreOp": "EEnvTestScoreOperator::MinScore",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_2",
+    "Outer": "EQ_FindCoreLocation",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 28.0,
+        "ExtentY": 28.0,
+        "ExtentZ": 58.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 68.0
+        },
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Capsule"
+      },
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "MultipleContextScoreOp": "EEnvTestScoreOperator::MaxScore",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

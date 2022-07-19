@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "QueryName": "EQ_FindActiveCoreCanJump",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindActiveCoreCanJump:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActiveCores",
+    "Name": "EnvQueryGenerator_ActiveCores_0",
+    "Outer": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActiveCores EQ_FindActiveCoreCanJump:EnvQueryGenerator_ActiveCores_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindActiveCoreCanJump:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindActiveCoreCanJump:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_ContextPriority EQ_FindActiveCoreCanJump:EnvQueryTest_ContextPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_ContextPriority",
+    "Name": "EnvQueryTest_ContextPriority_0",
+    "Outer": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ClampMinType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ScoreClampMin": {
+        "DefaultValue": 0.25
+      },
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "MultipleContextScoreOp": "EEnvTestScoreOperator::MaxScore",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindActiveCoreCanJump",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 3.0
+      },
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindAmmo",
+    "Properties": {
+      "QueryName": "EQ_FindAmmo",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindAmmo:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActorsOfClass",
+    "Name": "EnvQueryGenerator_ActorsOfClass_0",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "SearchedActorClass": {
+        "ObjectName": "DynamicClass BP_AmmoPickup_C",
+        "ObjectPath": "/Game/Core/Pickups/BP_AmmoPickup"
+      },
+      "GenerateOnlyActorsInRadius": {
+        "DefaultValue": false
+      },
+      "SearchRadius": {
+        "DefaultValue": 41802.484
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActorsOfClass EQ_FindAmmo:EnvQueryGenerator_ActorsOfClass_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Project EQ_FindAmmo:EnvQueryTest_Project_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindAmmo:EnvQueryTest_PathfindingBatch_2",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot EQ_FindAmmo:EnvQueryTest_Dot_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindAmmo:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindAmmo.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "ReferenceValue": {
+        "DefaultValue": 0.624953
+      },
+      "bDefineReferenceValue": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "TestMode": "EEnvTestDot::Dot2D",
+      "bAbsoluteValue": true,
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "ScoringFactor": {
+        "DefaultValue": 0.942652
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_2",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 12.0
+      },
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "TestOrder": 1,
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMin": {
+        "DefaultValue": 87.386826
+      },
+      "FloatValueMax": {
+        "DefaultValue": 12000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Linear",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "ScoringFactor": {
+        "DefaultValue": 0.462365
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Project",
+    "Name": "EnvQueryTest_Project_0",
+    "Outer": "EQ_FindAmmo",
+    "Properties": {
+      "ProjectionData": {
+        "ProjectDown": 128.0,
+        "ProjectUp": 128.0,
+        "ExtentX": 8.0,
+        "PostProjectionVerticalOffset": 9.506046
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

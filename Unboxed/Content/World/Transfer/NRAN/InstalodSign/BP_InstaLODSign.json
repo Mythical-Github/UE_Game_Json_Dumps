@@ -1,0 +1,940 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_InstaLODSign_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_InstaLODSign_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cable2",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 1125917087236100,
+        "PropertyClass": {
+          "ObjectName": "Class CableComponent",
+          "ObjectPath": "/Script/CableComponent"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PhysicsConstraint",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 1125917087236100,
+        "PropertyClass": {
+          "ObjectName": "Class PhysicsConstraintComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 1125917087236100,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cable1",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 1125917087236100,
+        "PropertyClass": {
+          "ObjectName": "Class CableComponent",
+          "ObjectPath": "/Script/CableComponent"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_InstaLODSign_C Default__BP_InstaLODSign_C",
+      "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.1"
+    }
+  },
+  {
+    "Type": "BP_InstaLODSign_C",
+    "Name": "Default__BP_InstaLODSign_C",
+    "Properties": {
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bCanBeDamaged": false,
+      "bBlockInput": true,
+      "bFindCameraComponentWhenViewTarget": false,
+      "bEnableAutoLODGeneration": false
+    }
+  },
+  {
+    "Type": "CableComponent",
+    "Name": "Cable1_GEN_VARIABLE",
+    "Outer": "BP_InstaLODSign_C",
+    "Properties": {
+      "AttachEndTo": {
+        "ComponentProperty": "Box"
+      },
+      "EndLocation": {
+        "X": 77.0,
+        "Y": 0.0,
+        "Z": 2.0
+      },
+      "CableLength": 32.0,
+      "NumSegments": 5,
+      "SolverIterations": 2,
+      "CableWidth": 1.0,
+      "NumSides": 5,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material Black_ShinyCable",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/Materials/Black_ShinyCable.0"
+        }
+      ],
+      "CastShadow": false,
+      "RelativeLocation": {
+        "X": 82.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "CableComponent",
+    "Name": "Cable2_GEN_VARIABLE",
+    "Outer": "BP_InstaLODSign_C",
+    "Properties": {
+      "AttachEndTo": {
+        "ComponentProperty": "Box"
+      },
+      "EndLocation": {
+        "X": -78.6,
+        "Y": 0.0,
+        "Z": 2.0
+      },
+      "CableLength": 32.0,
+      "NumSegments": 5,
+      "SolverIterations": 2,
+      "CableWidth": 1.0,
+      "NumSides": 5,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material Black_ShinyCable",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/Materials/Black_ShinyCable.0"
+        }
+      ],
+      "CastShadow": false,
+      "RelativeLocation": {
+        "X": -82.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintComponent",
+    "Name": "PhysicsConstraint_GEN_VARIABLE",
+    "Outer": "BP_InstaLODSign_C",
+    "Properties": {
+      "ComponentName1": {
+        "ComponentName": "Box"
+      },
+      "ConstraintInstance": {
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 23.532112,
+            "Swing1Motion": "ACM_Limited",
+            "Stiffness": 76.05519,
+            "Damping": 0.172902
+          },
+          "bDisableCollision": true,
+          "bEnableProjection": false
+        }
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_REMOVED_BB3361E2437D53C8127917BADBBAD1AB",
+    "Outer": "BP_InstaLODSign_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_InstaLODSign_C:DefaultSceneRoot_REMOVED_BB3361E2437D53C8127917BADBBAD1AB",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.5"
+      },
+      "VariableGuid": "E9E10234-4EE89C71-770E0481-3303DE13",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class CableComponent",
+        "ObjectPath": "/Script/CableComponent"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CableComponent BP_InstaLODSign_C:Cable1_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.2"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "AttachEndTo",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "ComponentProperty",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ComponentReference",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "EndLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "CableLength",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "NumSegments",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "SolverIterations",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "CableWidth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "NumSides",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "OverrideMaterials",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "CastShadow",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "A52997F7-4260DF96-340F5C97-9025209B",
+      "InternalVariableName": "Cable1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class PhysicsConstraintComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PhysicsConstraintComponent BP_InstaLODSign_C:PhysicsConstraint_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.4"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "ComponentName1",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class PhysicsConstraintComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ComponentName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConstrainComponentPropName",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ConstraintInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class PhysicsConstraintComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ProfileInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConstraintInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ConeLimit",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConstraintProfileProperties",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Swing1LimitDegrees",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConeConstraint",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Swing1Motion",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConeConstraint",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Stiffness",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConeConstraint",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Damping",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConeConstraint",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bDisableCollision",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConstraintProfileProperties",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bEnableProjection",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ConstraintProfileProperties",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.7"
+        },
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.10"
+        }
+      ],
+      "VariableGuid": "E71D0437-46F16DB6-1EEF83A3-E5D4832E",
+      "InternalVariableName": "PhysicsConstraint"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_InstaLODSign_C:Box_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.12"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "StaticMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bGenerateOverlapEvents",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAllowCullDistanceVolume",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bReceivesDecals",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bUseAsOccluder",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bForceMipStreaming",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAffectDynamicIndirectLighting",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAffectDistanceFieldLighting",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bCastStaticShadow",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bSingleSampleShadowFromStationaryLights",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct CollisionResponse",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct CollisionResponse",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ResponseChannel",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ResponseChannel",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct CollisionResponse",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "MassInKgOverride",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "LinearDamping",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AngularDamping",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bSimulatePhysics",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverrideMass",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "bCanEverAffectNavigation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "181E942E-4B7721AA-D3E9CF8E-E3E57E95",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class CableComponent",
+        "ObjectPath": "/Script/CableComponent"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CableComponent BP_InstaLODSign_C:Cable2_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.3"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "AttachEndTo",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "ComponentProperty",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct ComponentReference",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "EndLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "CableLength",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "NumSegments",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "SolverIterations",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "CableWidth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "NumSides",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "OverrideMaterials",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "CastShadow",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CableComponent",
+              "ObjectPath": "/Script/CableComponent"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScriptStruct Vector",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "01887C2E-49BEA8A3-1E3A7C8B-30930867",
+      "InternalVariableName": "Cable2"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_InstaLODSign_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.7"
+        },
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_InstaLODSign_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/BP_InstaLODSign.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_InstaLODSign_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_InstaLOD",
+        "ObjectPath": "Unboxed/Content/World/Transfer/NRAN/InstalodSign/SM_InstaLOD.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bAllowCullDistanceVolume": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "bForceMipStreaming": true,
+      "bAffectDynamicIndirectLighting": false,
+      "bAffectDistanceFieldLighting": false,
+      "bCastStaticShadow": false,
+      "bSingleSampleShadowFromStationaryLights": true,
+      "BodyInstance": {
+        "ObjectType": "ECC_PhysicsBody",
+        "CollisionProfileName": "PhysicsActor",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Player",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Explosion",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Battery",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        },
+        "MassInKgOverride": 2.0,
+        "LinearDamping": 0.1,
+        "AngularDamping": 0.3,
+        "bSimulatePhysics": true,
+        "bOverrideMass": true
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -81.0
+      },
+      "bCanEverAffectNavigation": false
+    },
+    "LODData": [
+      {
+        "MapBuildDataId": "9E97E5774D68DBBD130335B8387D37BB"
+      }
+    ]
+  }
+]

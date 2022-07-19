@@ -1,0 +1,91 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindPowerNode",
+    "Properties": {
+      "QueryName": "EQ_FindPowerNode",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindPowerNode:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPowerNode.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ValidPowerNodes",
+    "Name": "EnvQueryGenerator_ValidPowerNodes_0",
+    "Outer": "EQ_FindPowerNode",
+    "Properties": {
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_FindPowerNode",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ValidPowerNodes EQ_FindPowerNode:EnvQueryGenerator_ValidPowerNodes_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPowerNode.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQ_FindPowerNode:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPowerNode.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PowerPriority EQ_FindPowerNode:EnvQueryTest_PowerPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPowerNode.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPowerNode:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPowerNode.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindPowerNode",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.25
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQ_FindPowerNode",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PowerPriority",
+    "Name": "EnvQueryTest_PowerPriority_0",
+    "Outer": "EQ_FindPowerNode",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 0.01
+      },
+      "VerNum": 1
+    }
+  }
+]

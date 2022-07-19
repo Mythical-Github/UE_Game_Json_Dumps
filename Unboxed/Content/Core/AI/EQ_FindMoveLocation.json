@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindMoveLocation",
+    "Properties": {
+      "QueryName": "EQ_FindMoveLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindMoveLocation:EnvQueryOption_3",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_1",
+    "Outer": "EQ_FindMoveLocation",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 729.776
+      },
+      "OuterRadius": {
+        "DefaultValue": 2881.459
+      },
+      "NumberOfRings": {
+        "DefaultValue": 4
+      },
+      "PointsPerRing": {
+        "DefaultValue": 12
+      },
+      "bUseSpiralPattern": true,
+      "Center": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 4096.0,
+        "ProjectUp": 256.0,
+        "PostProjectionVerticalOffset": 12.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_3",
+    "Outer": "EQ_FindMoveLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindMoveLocation:EnvQueryGenerator_Donut_1",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindMoveLocation:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindMoveLocation:EnvQueryTest_Trace_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindMoveLocation:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindMoveLocation",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoreClampMin": {
+        "DefaultValue": 0.102473
+      },
+      "ScoreClampMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindMoveLocation",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "EQ_FindMoveLocation",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 32.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 72.0
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Enemy",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

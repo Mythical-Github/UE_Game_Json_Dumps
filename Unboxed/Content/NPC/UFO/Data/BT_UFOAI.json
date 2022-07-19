@@ -1,0 +1,1080 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_UFOAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Base",
+        "ObjectPath": "Unboxed/Content/Core/AI/BB_Base.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_UFOAI:BTDecorator_Blackboard_0",
+          "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_2",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Enemy Is Dead",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.7"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "Interval": 1.0,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Core"
+      },
+      "Interval": 1.0,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_UFOAI:BTDecorator_Blackboard_3",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.17"
+            },
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_UFOAI:BTDecorator_IsBBEntryOfClass_3",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.21"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_UFOAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_UFOAI:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_UFOAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_UFOAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.23"
+        },
+        {
+          "ObjectName": "BT_ShootService_C BT_UFOAI:BT_ShootService_C_1",
+          "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.4"
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_9",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_UFOAI:BT_IsAlive_C_2",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FlyTo BT_UFOAI:BTTask_FlyTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_UFOAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FlyTo BT_UFOAI:BTTask_FlyTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.24"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_UFOAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_UFOAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.22"
+        },
+        {
+          "ObjectName": "BT_ShootService_C BT_UFOAI:BT_ShootService_C_0",
+          "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.3"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_UFOAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_UFOAI:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_UFOAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_UFOAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_UFOAI:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_UFOAI:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_UFOAI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_UFOAI:ClearKeyValue_5",
+            "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "CachedDescription": "SelfActor is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Set?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Move Location Not Set",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "Class UBCore",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Is Enemy a Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FlyTo",
+    "Name": "BTTask_FlyTo_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "FlightLocationKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlightResultKey": {},
+      "KeyToFlipFlopWhenTaskExits": {},
+      "MinimumProximityRequired": 72.0,
+      "QueryParams": {
+        "MaxOptimizerSweepAttemptsPerNode": 32,
+        "CollisionShapeInflation": 64.0
+      },
+      "DebugParams": {
+        "LineDuration": 2.0
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FlyTo",
+    "Name": "BTTask_FlyTo_1",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "FlightLocationKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlightResultKey": {},
+      "KeyToFlipFlopWhenTaskExits": {},
+      "MinimumProximityRequired": 72.0,
+      "QueryParams": {
+        "QueryTimeout": 1.0,
+        "MaxOptimizerSweepAttemptsPerNode": 32,
+        "CollisionShapeInflation": 64.0
+      },
+      "DebugParams": {
+        "LineDuration": 2.0
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocationFlying",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.1"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindEnemyFlyLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.1"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 0.75,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_UFOAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 0.75,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 0.75,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "Clear Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_5",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.12"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.13"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_UFOAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_UFOAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.13"
+      }
+    }
+  }
+]

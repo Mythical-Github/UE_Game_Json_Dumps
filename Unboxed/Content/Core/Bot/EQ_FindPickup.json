@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindPickup",
+    "Properties": {
+      "QueryName": "EQ_FindPickup",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindPickup:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PickupsOfTypes",
+    "Name": "EnvQueryGenerator_PickupsOfTypes_0",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "PickupTypes": 122,
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PickupsOfTypes EQ_FindPickup:EnvQueryGenerator_PickupsOfTypes_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PickupPriority EQ_FindPickup:EnvQueryTest_PickupPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindPickup:EnvQueryTest_PathfindingBatch_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPickup:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPickup:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickup.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::DistanceZ",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.2
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_1",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 2.0
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 300.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 2000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PickupPriority",
+    "Name": "EnvQueryTest_PickupPriority_0",
+    "Outer": "EQ_FindPickup",
+    "Properties": {
+      "PickupTypes": 1378,
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 0.001
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "ScoringFactor": {
+        "DefaultValue": 1.25
+      },
+      "VerNum": 1
+    }
+  }
+]

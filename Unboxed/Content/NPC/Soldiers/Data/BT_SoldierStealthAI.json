@@ -1,0 +1,1957 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_SoldierStealthAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Base",
+        "ObjectPath": "Unboxed/Content/Core/AI/BB_Base.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_2",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.26"
+            },
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_SoldierStealthAI:BTDecorator_IsBBEntryOfClass_3",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.33"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.30"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.28"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_SoldierStealthAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_SoldierStealthAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_SoldierStealthAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_SoldierStealthAI:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_5",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_SoldierStealthAI:BTComposite_SimpleParallel_0",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_SoldierStealthAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.37"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_8",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_SoldierStealthAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.52"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_SoldierStealthAI:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_SoldierStealthAI:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_2",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_SoldierStealthAI:BTDecorator_DoesPathExist_1",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.31"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_SoldierStealthAI:BTTask_RunEQSQuery_7",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.47"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_SoldierStealthAI:BTTask_RunEQSQuery_8",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.48"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_SoldierStealthAI:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_SoldierStealthAI:BTTask_RunEQSQuery_1",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_SoldierStealthAI:BTTask_MoveTo_2",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_9",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_SoldierStealthAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.36"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_17",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_8",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_SoldierStealthAI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.54"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.50"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_SoldierStealthAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_SoldierStealthAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_SoldierStealthAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.41"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_SoldierStealthAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_SoldierStealthAI:BTTask_RunEQSQuery_9",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_SoldierStealthAI:BTTask_PlayMontage_0",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_SoldierStealthAI:BTTask_Wait_12",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_SoldierStealthAI:BTTask_MoveTo_4",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core Patrol?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "Class UBCore",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy a Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 140.0,
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "TimeLimit": 9.286863,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 248.39572,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "AcceptableRadius": 32.0,
+      "ObservedBlackboardValueTolerance": 1.0,
+      "bObserveBlackboardValue": true,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_SoldierStealthAI:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_DualDagger_Attack_1",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_DualDagger_Attack_1.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_DualDagger_Attack_2",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_DualDagger_Attack_2.0"
+        }
+      ],
+      "MontagePlayRate": 1.25,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindMoveLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreShootLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::AllMatching"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_7",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreCanJump",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_8",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_9",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 0.2,
+      "RandomDeviation": 0.1,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 0.1,
+      "RandomDeviation": 0.05,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_5",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.18"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_5",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.20"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.17"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_SoldierStealthAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.5"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_17",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.16"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.18"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.19"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.21"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.15"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.22"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_SoldierStealthAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_SoldierStealthAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.22"
+      }
+    }
+  }
+]

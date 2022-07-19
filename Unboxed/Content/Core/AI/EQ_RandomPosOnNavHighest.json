@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_RandomPosOnNavHighest",
+    "Properties": {
+      "QueryName": "EQ_RandomPosOnNavHighest",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_RandomPosOnNavHighest:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNavHighest.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Outer": "EQ_RandomPosOnNavHighest",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 3000.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 500.0
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+          "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+        },
+        "ProjectDown": 3000.0,
+        "ProjectUp": 3000.0,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_RandomPosOnNavHighest",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid EQ_RandomPosOnNavHighest:EnvQueryGenerator_PathingGrid_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNavHighest.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_RandomPosOnNavHighest:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNavHighest.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_RandomPosOnNavHighest:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNavHighest.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_RandomPosOnNavHighest",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 333.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_RandomPosOnNavHighest",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::DistanceZ",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "MultipleContextScoreOp": "EEnvTestScoreOperator::MaxScore",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_UFOController_C",
+    "Properties": {
+      "bHasNativizedParent": true,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_UFOController_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "DynamicClass BP_UBAIController_C",
+      "ObjectPath": "/Game/Core/AI/BP_UBAIController"
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_UFOController_C Default__BP_UFOController_C",
+      "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.1"
+    }
+  },
+  {
+    "Type": "BP_UFOController_C",
+    "Name": "Default__BP_UFOController_C",
+    "Properties": {
+      "EnemySensingComponent": {
+        "ObjectName": "EnemySensingComponent Default__BP_UFOController_C:EnemySensingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.2"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree BT_UFOAI",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BT_UFOAI.0"
+      },
+      "RandomNavigationFilterClass": [],
+      "bSetControlRotationFromPawnOrientation": false,
+      "PathFollowingComponent": {
+        "ObjectName": "PathFollowingJumpingComponent Default__BP_UFOController_C:PathFollowingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.3"
+      },
+      "ActionsComp": {
+        "ObjectName": "PawnActionsComponent Default__BP_UFOController_C:ActionsComp",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.4"
+      },
+      "TransformComponent": {
+        "ObjectName": "SceneComponent Default__BP_UFOController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.6"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BP_UFOController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.6"
+      }
+    }
+  },
+  {
+    "Type": "EnemySensingComponent",
+    "Name": "EnemySensingComponent",
+    "Outer": "Default__BP_UFOController_C",
+    "Properties": {
+      "bOnlyEnemyTeam": true,
+      "OnSeeActor": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_UFOController_C Default__BP_UFOController_C",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.1"
+            },
+            "FunctionName": "OnSeeActor"
+          }
+        ]
+      },
+      "LOSHearingThreshold": 2000.0,
+      "SightRadius": 7000.0,
+      "SensingInterval": 4.0,
+      "OnSeePawn": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_UFOController_C Default__BP_UFOController_C",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.1"
+            },
+            "FunctionName": "OnSeePawn"
+          }
+        ]
+      },
+      "OnHearNoise": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_UFOController_C Default__BP_UFOController_C",
+              "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.1"
+            },
+            "FunctionName": "OnHearNoise"
+          }
+        ]
+      },
+      "PeripheralVisionAngle": 135.0
+    }
+  },
+  {
+    "Type": "PathFollowingJumpingComponent",
+    "Name": "PathFollowingComponent",
+    "Outer": "Default__BP_UFOController_C"
+  },
+  {
+    "Type": "PawnActionsComponent",
+    "Name": "ActionsComp",
+    "Outer": "Default__BP_UFOController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_UFOController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransformComponent0",
+    "Outer": "Default__BP_UFOController_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_UFOController_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.5"
+      },
+      "VariableGuid": "A547F428-46D918FE-29C21E84-E9B90111",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_UFOController_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_UFOController_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/NPC/UFO/Data/BP_UFOController.7"
+      }
+    }
+  }
+]

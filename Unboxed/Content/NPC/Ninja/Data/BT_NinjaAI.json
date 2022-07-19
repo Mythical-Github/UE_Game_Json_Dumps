@@ -1,0 +1,2490 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_NinjaAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Base",
+        "ObjectPath": "Unboxed/Content/Core/AI/BB_Base.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.14"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsOverlapping_C_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_6",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.36"
+            },
+            {
+              "ObjectName": "BT_IsAlive_C BT_NinjaAI:BT_IsAlive_C_3",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_2",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.32"
+            },
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_NinjaAI:BTDecorator_IsBBEntryOfClass_3",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.43"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.31"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_NinjaAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_9",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_NinjaAI:BTDecorator_TagCooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.45"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_13",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.30"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_13",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_NinjaAI:BTDecorator_Blackboard_3",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_17",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_2",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_1",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_5",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_10",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsOverlapping_C BT_NinjaAI:BT_IsOverlapping_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_6",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.54"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_8",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_NinjaAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.60"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_NinjaAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_NinjaAI:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_NinjaAI:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_7",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_8",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_NinjaAI:BTTask_PlayMontage_2",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_19",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_NinjaAI:BTService_OverrideFocus_4",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.48"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_9",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.86"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_NinjaAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.46"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_11",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_17",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_8",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_NinjaAI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_NinjaAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.50"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.52"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_NinjaAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_NinjaAI:BTTask_RunEQSQuery_9",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_NinjaAI:BTTask_PlayMontage_0",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_NinjaAI:BTTask_Wait_12",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_NinjaAI:BTComposite_SimpleParallel_0",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_NinjaAI:BTDecorator_DoesPathExist_1",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.39"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_NinjaAI:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_NinjaAI:BTTask_SetTagCooldown_0",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_NinjaAI:BTTask_MoveTo_4",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_NinjaAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.47"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Blocker is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Blocker?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core Patrol?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "FilterClass": {
+        "ObjectName": "Class RecastFilter_UseDefaultArea",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "Class UBCore",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy a Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 140.0,
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_NinjaAI:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_9",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 248.39572,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 1.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "ObservedBlackboardValueTolerance": 1.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_NinjaAI:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "AcceptableRadius": 32.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack01",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack01.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack03",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack03.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack01",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack01.0"
+        }
+      ],
+      "bNonBlocking": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack03",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack03.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_NinjaAttack02",
+          "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Retargeting/Fighting/AM_NinjaAttack02.0"
+        }
+      ],
+      "bNonBlocking": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindMoveLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreShootLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::AllMatching"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCloseBehindLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCloseBehindLocation.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_7",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreCanJump",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreCanJump.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_8",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.2,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.8,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_17",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_19",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.8,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.25,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.23"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.20"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.22"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.9"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_17",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_14",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.21"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.23"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.24"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.25"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_5",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_NinjaAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.10"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.19"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_NinjaAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_NinjaAI",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_NinjaAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Data/BT_NinjaAI.26"
+      }
+    }
+  }
+]

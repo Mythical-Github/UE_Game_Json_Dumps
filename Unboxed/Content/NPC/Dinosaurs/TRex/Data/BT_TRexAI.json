@@ -1,0 +1,3539 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TRexAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Trex",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BB_Trex.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_FindNextTarget_C_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "TargetActor": {
+        "SelectedKeyName": "TargetActor"
+      },
+      "NodeName": "Find (or Clear) Next Move Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.33"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_TRex_CanBiteRaw_C_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_16",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsFalling BT_TRexAI:BTDecorator_IsFalling_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.58"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_4",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_3",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_8",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.32"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.34"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_TRexAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_TRexAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.59"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_TRexAI:BTDecorator_IsAtLocation_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_TRexAI:BTDecorator_IsAtLocation_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.55"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_TRexAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_TRexAI:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_TRexAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.126"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_15",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ConeCheck BT_TRexAI:BTDecorator_ConeCheck_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.45"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.118"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_DefaultFocus BT_TRexAI:BTService_DefaultFocus_4",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.77"
+        },
+        {
+          "ObjectName": "BTService_OverrideFocus BT_TRexAI:BTService_OverrideFocus_4",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.82"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_TRexAI:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_13",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.127"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_17",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_1",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.70"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.73"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_12",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.108"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_3",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.72"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_TRexAI:BTTask_MoveTo_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.107"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_1",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.61"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_TRexAI:BT_IsAlive_C_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_10",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_TRex_CanBiteRaw_C BT_TRexAI:BT_TRex_CanBiteRaw_C_1",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_10",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.36"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_5",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.74"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.44"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_6",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.75"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.69"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_18",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_22",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_TRexAI:BTDecorator_Blackboard_6",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.41"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_TRexAI:BTDecorator_TagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.71"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_19",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.114"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.106"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_DefaultFocus BT_TRexAI:BTService_DefaultFocus_3",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.76"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.125"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_11",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_14",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.109"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.91"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.60"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.122"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_TRexAI:BTService_OverrideFocus_2",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.80"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_6",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.52"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.121"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.120"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_14",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.132"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StopMontage BT_TRexAI:BTTask_StopMontage_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_TRexAI:BTDecorator_IsAtLocation_3",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.56"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_9",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.53"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_20",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_TRexAI:BTDecorator_DoesPathExist_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.46"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.115"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_16",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.111"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StopMontage BT_TRexAI:BTTask_StopMontage_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.103"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_4",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.92"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_8",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.68"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_TRexAI:BTTask_SetTagCooldown_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_TRexAI:BTTask_RunEQSQuery_5",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_17",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.112"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_TRexAI:BTTask_SetTagCooldown_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.124"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_3",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.63"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_5",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.131"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_TRexAI:BTDecorator_IsAtLocation_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.57"
+            },
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_4",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_18",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.113"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_22",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_TRexAI:BTTask_MoveTo_4",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.87"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_5",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_TRexAI:BTTask_SetTagCooldown_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.101"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_17",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.128"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_24",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.90"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_5",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.65"
+            },
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_6",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.66"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_20",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.116"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_TRexAI:BTService_OverrideFocus_3",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.81"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_25",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_TRexAI:BTTask_PlayMontage_5",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.93"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.62"
+            },
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_TRexAI:BTDecorator_SetTagCooldown_7",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.67"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_21",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.117"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_TRexAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.78"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_TRexAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.94"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.49"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.123"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.129"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_TRexAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.84"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.110"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.130"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_TRexAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.86"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_TRexAI:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_FindNextTarget_C BT_TRexAI:BT_FindNextTarget_C_0",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_TRexAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.119"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.134"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_TRexAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.133"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "CanBiteL is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanBiteL"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Can Bite (Left) ?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CachedDescription": "CanBiteR is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanBiteR"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Can Bite (Right) ?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ConeCheck",
+    "Name": "BTDecorator_ConeCheck_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "ConeHalfAngle": 3.0,
+      "ConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "ConeDirection": {},
+      "Observed": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.33"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.32"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_9",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 675.0,
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 21.0,
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 120.0,
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 222.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsFalling",
+    "Name": "BTDecorator_IsFalling_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 720.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.316667,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.316667,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 6.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.316667,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_7",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_8",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "bAddToExistingDuration": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelaySecondaryAttack"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 3.0,
+      "bAddToExistingDuration": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTService_DefaultFocus",
+    "Name": "BTService_DefaultFocus_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_DefaultFocus",
+    "Name": "BTService_DefaultFocus_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 444.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 80.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bProjectGoalLocation": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 300.0,
+      "bTrackMovingGoal": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_AttackCore",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_AttackCore.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_AttackCore",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_AttackCore.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_TurnLeft_Attack",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_TurnLeft_Attack.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_Attack01",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_Attack01.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_TRex_Attack02",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_Attack02.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_GroundPound",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_GroundPound.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_TurnRight_Attack",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_TurnRight_Attack.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "Precision": 6.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPosBoss",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocationBigEnemy",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreNoPath",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreNoPath.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPosBoss",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_18",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelaySecondaryAttack"
+      },
+      "CooldownDuration": 8.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StopMontage",
+    "Name": "BTTask_StopMontage_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StopMontage",
+    "Name": "BTTask_StopMontage_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "MontagesToStop": [
+        {
+          "ObjectName": "AnimMontage AM_TRex_GroundPound",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Animations/AM_TRex_GroundPound.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_TRexAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.79"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_16",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_17",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_18",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_18",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.5,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_19",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_20",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.914286,
+      "RandomDeviation": 0.342857,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_24",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_21",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.914286,
+      "RandomDeviation": 0.342857,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_25",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_13",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 0.914286,
+      "RandomDeviation": 0.342857,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.31"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.17"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.8"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_13",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_TRexAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.10"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_17",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.28"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "NodeName": "Clear Damaged",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.31"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "NodeName": "Clear Noise",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.32"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_5",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.27"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.20"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.34"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_TRexAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_TRexAI",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_TRexAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Dinosaurs/TRex/Data/BT_TRexAI.34"
+      }
+    }
+  }
+]

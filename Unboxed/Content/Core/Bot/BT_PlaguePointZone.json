@@ -1,0 +1,571 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_PlaguePointZone",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_PlaguePointZone:BTDecorator_Blackboard_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Action": "EBotAction::LoseFocus",
+      "bClearActionTarget": true,
+      "bIgnoreRestartSelf": true,
+      "NodeName": "Clear Focus",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.9"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_InBuildMode_C_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "NOT In Build Mode",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.6"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "Interval": 0.3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_PlaguePointZone:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlaguePointZone:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlaguePointZone:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior BT_PlaguePointZone:BTTask_RunBehavior_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.16"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_InBuildMode_C BT_PlaguePointZone:BT_InBuildMode_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_PlaguePointZone:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_PlaguePointZone:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlaguePointZone:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlaguePointZone:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlaguePointZone:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_PlaguePointZone:BTComposite_SimpleParallel_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_PlaguePointZone:BotTask_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlaguePointZone:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlaguePointZone:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_PlaguePointZone:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "CachedDescription": "PPZ is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZ"
+      },
+      "NodeName": "Has Plague Point Zone Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "AcceptableRadius": 5.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "TimeLimit": 30.0,
+      "FlowAbortMode": "EBTFlowAbortMode::None",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_PlaguePointZone:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "bAllowStrafe": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZTarget"
+      },
+      "NodeName": "Move To PPZTarget",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_PlaguePointZone:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "Services": [
+        {
+          "ObjectName": "BT_ShootService_C BT_PlaguePointZone:BT_ShootService_C_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.3"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "WaitTime": 0.3,
+      "RandomDeviation": 0.3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.9"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZ"
+      },
+      "NodeName": "Clear PPZ",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.7"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZ"
+      },
+      "NodeName": "Clear Plague Point Zone Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlaguePointZone:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.5"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_PlaguePointZone",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PPZTarget"
+      },
+      "NodeName": "Clear PPZ Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlaguePointZone",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlaguePointZone:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_PlaguePointZone.7"
+      }
+    }
+  }
+]

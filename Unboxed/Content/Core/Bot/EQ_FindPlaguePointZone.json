@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindPlaguePointZone",
+    "Properties": {
+      "QueryName": "EQ_FindPlaguePointZone",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindPlaguePointZone:EnvQueryOption_4",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPlaguePointZone.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActivePlagueZone",
+    "Name": "EnvQueryGenerator_ActivePlagueZone_3",
+    "Outer": "EQ_FindPlaguePointZone",
+    "Properties": {
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_4",
+    "Outer": "EQ_FindPlaguePointZone",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActivePlagueZone EQ_FindPlaguePointZone:EnvQueryGenerator_ActivePlagueZone_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPlaguePointZone.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQ_FindPlaguePointZone:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPlaguePointZone.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPlaguePointZone:EnvQueryTest_Distance_4",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPlaguePointZone.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_4",
+    "Outer": "EQ_FindPlaguePointZone",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQ_FindPlaguePointZone",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

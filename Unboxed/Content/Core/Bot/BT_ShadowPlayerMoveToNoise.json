@@ -1,0 +1,315 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_ShadowPlayerMoveToNoise:BTDecorator_Blackboard_34",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_2",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bShowPropertyDetails": false,
+      "Interval": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerMoveToNoise:BTComposite_Selector_25",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_25",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior BT_ShadowPlayerMoveToNoise:BTTask_RunBehavior_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerMoveToNoise:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMoveToNoise:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerMoveToNoise:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMoveToNoise:BTComposite_SimpleParallel_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerMoveToNoise:BTDecorator_ForceSuccess_19",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerMoveToNoise:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_ShadowPlayerMoveToNoise:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_ShadowPlayerMoveToNoise:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_ShadowPlayerMoveToNoise:BTComposite_Selector_25",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_34",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Noise Target Set",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_19",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "ObservedBlackboardValueTolerance": 64.0,
+      "bObserveBlackboardValue": true,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMoveToNoise:BTComposite_SimpleParallel_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "Services": [
+        {
+          "ObjectName": "BT_ShootService_C BT_ShadowPlayerMoveToNoise:BT_ShootService_C_2",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.1"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerMoveToNoise:BTComposite_Selector_25",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerMoveToNoise:BTComposite_Selector_25",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "WaitTime": 0.15,
+      "RandomDeviation": 0.125,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_ShadowPlayerMoveToNoise",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMoveToNoise",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMoveToNoise:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMoveToNoise.3"
+      }
+    }
+  }
+]

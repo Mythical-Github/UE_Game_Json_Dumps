@@ -1,0 +1,124 @@
+[
+  {
+    "Type": "DonEnvQueryTest_Navigation",
+    "Name": "DonEnvQueryTest_Navigation_0",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "bSearchRandomLocation": true,
+      "RandomLocationMaxAttempts": 4,
+      "RandomLocationRadius": 775.6776,
+      "TestOrder": 2,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "QueryName": "EQ_FindEnemyFlyLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindEnemyFlyLocation:EnvQueryOption_6",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_6",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EQG_RandomSphere_C EQ_FindEnemyFlyLocation:EQG_RandomSphere_C_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.6"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindEnemyFlyLocation:EnvQueryTest_Trace_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Overlap EQ_FindEnemyFlyLocation:EnvQueryTest_Overlap_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.4"
+        },
+        {
+          "ObjectName": "DonEnvQueryTest_Navigation EQ_FindEnemyFlyLocation:DonEnvQueryTest_Navigation_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.0"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindEnemyFlyLocation:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindEnemyFlyLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Overlap",
+    "Name": "EnvQueryTest_Overlap_0",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 90.0,
+        "ExtentY": 90.0,
+        "ExtentZ": 90.0,
+        "OverlapChannel": "ECC_Pawn",
+        "OverlapShape": "EEnvOverlapShape::Sphere"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_1",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 41.063293,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "TraceFromContext": {
+        "DefaultValue": true
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 72.0
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "EQG_RandomSphere_C_0",
+    "Outer": "EQ_FindEnemyFlyLocation",
+    "Properties": {
+      "DistanceMin": 312.0,
+      "DistanceMax": 2200.0,
+      "AngleMax": 150.0,
+      "ItemType": {
+        "ObjectName": "Class EnvQueryItemType_Point",
+        "ObjectPath": "/Script/AIModule"
+      }
+    }
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionDistance",
+    "Outer": "ParticleModuleTypeDataBeam2_1",
+    "Properties": {
+      "Constant": 25.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperFactor",
+    "Outer": "ParticleModuleTypeDataBeam2_1",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionTaperScale",
+    "Outer": "ParticleModuleTypeDataBeam2_1",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionSourceTangent",
+    "Outer": "ParticleModuleBeamSource_0",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_1",
+    "Outer": "ParticleModuleBeamTarget_0",
+    "Properties": {
+      "ParameterName": "TracerEnd",
+      "MaxInput": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MaxOutput": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ParamModes": "DPM_Direct",
+      "ParamModes": "DPM_Direct",
+      "ParamModes": "DPM_Direct",
+      "Constant": {
+        "X": 150.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_0",
+    "Outer": "ParticleModuleColorOverLife_0",
+    "Properties": {
+      "ParameterName": "VFX_Color1",
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.235155,
+        "Z": 0.177808
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionVectorUniform_1",
+    "Outer": "ParticleModuleBeamTarget_0",
+    "Properties": {
+      "Max": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Min": {
+        "X": 2.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Par_VFX_Tracer_ThickTank:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.14"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Par_VFX_Tracer_ThickTank:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.13"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Par_VFX_Tracer_ThickTank:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Par_VFX_Tracer_ThickTank:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.11"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife Par_VFX_Tracer_ThickTank:ParticleModuleColorScaleOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.12"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamTarget Par_VFX_Tracer_ThickTank:ParticleModuleBeamTarget_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.10"
+        },
+        {
+          "ObjectName": "ParticleModuleBeamSource Par_VFX_Tracer_ThickTank:ParticleModuleBeamSource_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.9"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataBeam2 Par_VFX_Tracer_ThickTank:ParticleModuleTypeDataBeam2_1",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.17"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Par_VFX_Tracer_ThickTank:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.16"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "SourceMethod": "PEB2STM_UserSet",
+      "Source": {
+        "MinValueVec": {
+          "X": 35.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            35.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "bLockSource": true,
+      "SourceTangentMethod": "PEB2STTM_Emitter",
+      "SourceTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstant Par_VFX_Tracer_ThickTank:ParticleModuleBeamSource_0.DistributionSourceTangent",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.4"
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "TargetMethod": "PEB2STM_UserSet",
+      "Target": {
+        "MaxValue": 150.0,
+        "MinValueVec": {
+          "X": 150.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 150.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter Par_VFX_Tracer_ThickTank:ParticleModuleBeamTarget_0.DistributionVectorParticleParameter_1",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.5"
+        },
+        "Table": {
+          "Values": [
+            5.44323,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "bTargetAbsolute": true,
+      "bLockTarget": true,
+      "TargetTangent": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform Par_VFX_Tracer_ThickTank:ParticleModuleBeamTarget_0.DistributionVectorUniform_1",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.7"
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.177808,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.235155,
+          "Z": 0.177808
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.235155,
+          "Z": 0.177808
+        },
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter Par_VFX_Tracer_ThickTank:ParticleModuleColorOverLife_0.DistributionVectorParticleParameter_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.6"
+        },
+        "Table": {
+          "Values": [
+            1.0,
+            0.235155,
+            0.177808
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 0.7507835,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 3.0,
+          "Values": [
+            0.75,
+            0.5738234,
+            0.212079,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": -20.0,
+        "MaxValue": 10000.0,
+        "MinValueVec": {
+          "X": 10000.0,
+          "Y": -20.0,
+          "Z": -20.0
+        },
+        "MaxValueVec": {
+          "X": 10000.0,
+          "Y": -20.0,
+          "Z": -20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10000.0,
+            -20.0,
+            -20.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.15,
+        "MaxValue": 0.19,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.15,
+            0.19
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_VFX_Tracer_01a",
+        "ObjectPath": "Unboxed/Content/Core/VFX/MatInstances/MI_VFX_Tracer_01a.0"
+      },
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Par_VFX_Tracer_ThickTank:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "MaxDrawCount": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 4.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 4.0,
+          "Y": 4.0,
+          "Z": 4.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            4.0,
+            4.0,
+            4.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "Op": 3,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "bProcessSpawnRate": false,
+      "bProcessBurstList": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_1",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "MaxBeamCount": 1,
+      "Speed": 0.0,
+      "Distance": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Par_VFX_Tracer_ThickTank:ParticleModuleTypeDataBeam2_1.DistributionDistance",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.1"
+        }
+      },
+      "TaperFactor": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Par_VFX_Tracer_ThickTank:ParticleModuleTypeDataBeam2_1.DistributionTaperFactor",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.2"
+        }
+      },
+      "TaperScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Par_VFX_Tracer_ThickTank:ParticleModuleTypeDataBeam2_1.DistributionTaperScale",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.3"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Par_VFX_Tracer_ThickTank:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.8"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Par_VFX_Tracer_ThickTank",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Par_VFX_Tracer_ThickTank:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Tracer/Par_VFX_Tracer_ThickTank.18"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

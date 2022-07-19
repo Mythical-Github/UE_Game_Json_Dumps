@@ -1,0 +1,417 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard BT_ShadowPlayerFiring:BTDecorator_Blackboard_10",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.5"
+        },
+        {
+          "ObjectName": "BTDecorator_IsBBEntryOfClass BT_ShadowPlayerFiring:BTDecorator_IsBBEntryOfClass_11",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.11"
+        },
+        {
+          "ObjectName": "BTDecorator_BotCondition BT_ShadowPlayerFiring:BTDecorator_BotCondition_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.6"
+        }
+      ],
+      "RootDecoratorOps": [
+        {
+          "Operation": "EBTDecoratorLogic::And",
+          "Number": 2
+        },
+        {
+          "Operation": "EBTDecoratorLogic::And",
+          "Number": 2
+        },
+        {
+          "Operation": "EBTDecoratorLogic::Test",
+          "Number": 0
+        },
+        {
+          "Operation": "EBTDecoratorLogic::Not",
+          "Number": 1
+        },
+        {
+          "Operation": "EBTDecoratorLogic::Test",
+          "Number": 1
+        },
+        {
+          "Operation": "EBTDecoratorLogic::Test",
+          "Number": 2
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "Action": "EBotAction::LoseEnemy",
+      "bClearActionTarget": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_ShadowPlayerFiring:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior BT_ShadowPlayerFiring:BTTask_RunBehavior_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerFiring:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_ShadowPlayerFiring:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.12"
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerFiring:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.14"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerFiring:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.7"
+            },
+            {
+              "ObjectName": "BTDecorator_InGameMode BT_ShadowPlayerFiring:BTDecorator_InGameMode_1",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerFiring:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerFiring:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.8"
+            },
+            {
+              "ObjectName": "BTDecorator_InGameMode BT_ShadowPlayerFiring:BTDecorator_InGameMode_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_ShadowPlayerFiring:BotTask_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_BotCondition",
+    "Name": "BTDecorator_BotCondition_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "Condition": "EBotCondition::IsInfected",
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Is Infected?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_InGameMode",
+    "Name": "BTDecorator_InGameMode_0",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "GameModeMask": 56,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_InGameMode",
+    "Name": "BTDecorator_InGameMode_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "GameModeMask": 7,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_11",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "Class UBCore",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy a Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "WaitTime": 1.377043,
+      "RandomDeviation": 0.724504,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "WaitTime": 0.594592,
+      "RandomDeviation": 0.293834,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerFiring:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_ShadowPlayerFiring",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerFiring",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_ShadowPlayerFiring:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerFiring.3"
+      }
+    }
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_MeatbagController_C",
+    "Properties": {
+      "bHasNativizedParent": true,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_MeatbagController_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "DynamicClass BP_UBAIController_C",
+      "ObjectPath": "/Game/Core/AI/BP_UBAIController"
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_MeatbagController_C Default__BP_MeatbagController_C",
+      "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.1"
+    }
+  },
+  {
+    "Type": "BP_MeatbagController_C",
+    "Name": "Default__BP_MeatbagController_C",
+    "Properties": {
+      "EnemySensingComponent": {
+        "ObjectName": "EnemySensingComponent Default__BP_MeatbagController_C:EnemySensingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.2"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree BT_MeatbagAI",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BT_MeatbagAI.0"
+      },
+      "DeactivatePathfindingWhenFallingTime": 2.3,
+      "PathFollowingComponent": {
+        "ObjectName": "PathFollowingJumpingComponent Default__BP_MeatbagController_C:PathFollowingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.3"
+      },
+      "ActionsComp": {
+        "ObjectName": "PawnActionsComponent Default__BP_MeatbagController_C:ActionsComp",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.4"
+      },
+      "TransformComponent": {
+        "ObjectName": "SceneComponent Default__BP_MeatbagController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.6"
+      },
+      "PrimaryActorTick": {
+        "TickGroup": "TG_DuringPhysics"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BP_MeatbagController_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.6"
+      }
+    }
+  },
+  {
+    "Type": "EnemySensingComponent",
+    "Name": "EnemySensingComponent",
+    "Outer": "Default__BP_MeatbagController_C",
+    "Properties": {
+      "OnSeeActor": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_MeatbagController_C Default__BP_MeatbagController_C",
+              "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.1"
+            },
+            "FunctionName": "OnSeeActor"
+          }
+        ]
+      },
+      "bEnableSensingUpdates": false,
+      "OnSeePawn": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_MeatbagController_C Default__BP_MeatbagController_C",
+              "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.1"
+            },
+            "FunctionName": "OnSeePawn"
+          }
+        ]
+      },
+      "OnHearNoise": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_MeatbagController_C Default__BP_MeatbagController_C",
+              "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.1"
+            },
+            "FunctionName": "OnHearNoise"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "PathFollowingJumpingComponent",
+    "Name": "PathFollowingComponent",
+    "Outer": "Default__BP_MeatbagController_C"
+  },
+  {
+    "Type": "PawnActionsComponent",
+    "Name": "ActionsComp",
+    "Outer": "Default__BP_MeatbagController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_MeatbagController_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransformComponent0",
+    "Outer": "Default__BP_MeatbagController_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_MeatbagController_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.5"
+      },
+      "VariableGuid": "B121E741-4F0276FE-A8A880B7-3CC4E9E0",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_MeatbagController_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_MeatbagController_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BP_MeatbagController.7"
+      }
+    }
+  }
+]

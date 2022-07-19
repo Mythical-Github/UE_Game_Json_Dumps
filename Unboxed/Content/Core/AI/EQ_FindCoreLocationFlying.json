@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "DonEnvQueryTest_Navigation",
+    "Name": "DonEnvQueryTest_Navigation_0",
+    "Outer": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "bSearchRandomLocation": true,
+      "RandomLocationMaxAttempts": 2,
+      "RandomLocationRadius": 300.0,
+      "TestOrder": 1,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "QueryName": "EQ_FindCoreLocationFlying",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreLocationFlying:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EQG_RandomSphere_C EQ_FindCoreLocationFlying:EQG_RandomSphere_C_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.5"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindCoreLocationFlying:EnvQueryTest_Trace_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.4"
+        },
+        {
+          "ObjectName": "DonEnvQueryTest_Navigation EQ_FindCoreLocationFlying:DonEnvQueryTest_Navigation_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.0"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreLocationFlying:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationFlying.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "MultipleContextScoreOp": "EEnvTestScoreOperator::MaxScore",
+      "ClampMinType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ClampMaxType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ScoreClampMin": {
+        "DefaultValue": 0.2
+      },
+      "ScoreClampMax": {
+        "DefaultValue": 0.6
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "ExtentX": 88.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceShape": "EEnvTraceShape::Sphere",
+        "bOnlyBlockingHits": false
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 500.0
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "EQG_RandomSphere_C_0",
+    "Outer": "EQ_FindCoreLocationFlying",
+    "Properties": {
+      "DistanceMin": 390.0,
+      "DistanceMax": 2064.4668,
+      "AngleMax": 83.0,
+      "NumPointsPerContext": 16,
+      "GeneratorsActionDescription": {
+        "CultureInvariantString": "Generate random points around Core"
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "ItemType": {
+        "ObjectName": "Class EnvQueryItemType_Point",
+        "ObjectPath": "/Script/AIModule"
+      }
+    }
+  }
+]

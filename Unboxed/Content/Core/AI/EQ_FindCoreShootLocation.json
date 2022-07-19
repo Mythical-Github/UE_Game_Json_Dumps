@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindCoreShootLocation",
+    "Properties": {
+      "QueryName": "EQ_FindCoreShootLocation",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindCoreShootLocation:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_FindCoreShootLocation",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 557.81647
+      },
+      "OuterRadius": {
+        "DefaultValue": 1519.4886
+      },
+      "bUseSpiralPattern": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 512.0,
+        "ProjectUp": 512.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindCoreShootLocation",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_FindCoreShootLocation:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Trace EQ_FindCoreShootLocation:EnvQueryTest_Trace_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindCoreShootLocation:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreShootLocation.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindCoreShootLocation",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Trace",
+    "Name": "EnvQueryTest_Trace_0",
+    "Outer": "EQ_FindCoreShootLocation",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "TraceChannel": "TraceTypeQuery3",
+        "SerializedChannel": "ECC_GameTraceChannel1"
+      },
+      "TraceFromContext": {
+        "DefaultValue": true
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 420.0
+      },
+      "Context": {
+        "ObjectName": "Class EnvQueryContext_Core",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  }
+]

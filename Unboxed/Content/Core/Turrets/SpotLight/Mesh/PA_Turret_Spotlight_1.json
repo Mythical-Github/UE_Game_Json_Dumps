@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PA_Turret_Spotlight_1",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup PA_Turret_Spotlight_1:SkeletalBodySetup_1",
+          "ObjectPath": "Unboxed/Content/Core/Turrets/SpotLight/Mesh/PA_Turret_Spotlight_1.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup PA_Turret_Spotlight_1:SkeletalBodySetup_2",
+          "ObjectPath": "Unboxed/Content/Core/Turrets/SpotLight/Mesh/PA_Turret_Spotlight_1.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate PA_Turret_Spotlight_1:PhysicsConstraintTemplate_1",
+          "ObjectPath": "Unboxed/Content/Core/Turrets/SpotLight/Mesh/PA_Turret_Spotlight_1.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "PA_Turret_Spotlight_1",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Turret",
+        "ConstraintBone1": "Turret",
+        "ConstraintBone2": "Base",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -60.32154,
+          "Z": 0.0
+        },
+        "PriAxis2": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "SecAxis2": {
+          "X": -0.99999994,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Locked",
+            "Swing2Motion": "ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "PA_Turret_Spotlight_1",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.4262581,
+              "Y": -30.94125,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -89.99999
+            },
+            "Radius": 38.720066,
+            "Length": 36.71054,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Base",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "CC80FCF74B6C38B5E1171F8824B5D813"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "PA_Turret_Spotlight_1",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.31305507,
+              "Y": -6.7080383,
+              "Z": 0.28755856
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -176.76656,
+              "Roll": -87.85324
+            },
+            "Radius": 27.334303,
+            "Length": 31.262993,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Turret",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3A68F39344948EDCEC28DBB693EC806F"
+  }
+]

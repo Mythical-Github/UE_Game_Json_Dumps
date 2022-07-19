@@ -1,0 +1,292 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_SwordSlash:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_SwordSlash:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_SwordSlash:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_SwordSlash:ParticleModuleVelocity_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_SwordSlash:ParticleModuleColor_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.3"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataAnimTrail P_SwordSlash:ParticleModuleTypeDataAnimTrail_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.8"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_SwordSlash:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.7"
+      },
+      "PeakActiveParticles": 15
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 1.0,
+        "MaxValue": 30.0,
+        "MinValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0,
+            30.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 0.352381,
+        "MaxValue": 0.352381,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.352381
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.133333,
+        "MaxValue": 0.238095,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.133333,
+            0.238095
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_SwordSlash",
+        "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/M_SwordSlash.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_SwordSlash:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "Rate": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_SwordSlash:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataAnimTrail",
+    "Name": "ParticleModuleTypeDataAnimTrail_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "bTangentRecalculationEveryFrame": true,
+      "DistanceTessellationStepSize": 32.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "StartVelocity": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_SwordSlash",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_SwordSlash:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_SwordSlash",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_SwordSlash:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/NPC/Ninja/Mesh/P_SwordSlash.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

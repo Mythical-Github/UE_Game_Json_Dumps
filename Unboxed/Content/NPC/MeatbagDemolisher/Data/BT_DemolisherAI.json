@@ -1,0 +1,3269 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_DemolisherAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Demolisher",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BB_Demolisher.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_FindNextTarget_C_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "TargetActor": {
+        "SelectedKeyName": "TargetActor"
+      },
+      "NodeName": "Find (or Clear) Next Move Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.29"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_6",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsOverlapping_C_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Blocker"
+      },
+      "ObservedKeyNames": [
+        "Blocker"
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_5",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_3",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_10",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.33"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_DemolisherAI:BTDecorator_TagCooldown_1",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.60"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_17",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_8",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_DemolisherAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_DemolisherAI:BTDecorator_IsWithinDistance_0",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.55"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_DemolisherAI:BTDecorator_IsAtLocation_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_14",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_DemolisherAI:BTDecorator_IsAtLocation_0",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.53"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_6",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_DemolisherAI:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.65"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_8",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.119"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_DemolisherAI:BTTask_RunEQSQuery_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_DemolisherAI:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_18",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_DemolisherAI:BT_IsAlive_C_5",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsOverlapping_C BT_DemolisherAI:BT_IsOverlapping_C_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_17",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_DemolisherAI:BTService_OverrideFocus_2",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.69"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_4",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_13",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.113"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_16",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_DemolisherAI:BTTask_RunEQSQuery_4",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.118"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_18",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_23",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_DemolisherAI:BT_IsAlive_C_6",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_DemolisherAI:BTDecorator_IsWithinDistance_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.56"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_DemolisherAI:BTDecorator_TagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.61"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_9",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_DemolisherAI:BTDecorator_TagCooldown_3",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.62"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_HasLOS BT_DemolisherAI:BTDecorator_HasLOS_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.52"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_2",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_DemolisherAI:BTDecorator_Blackboard_11",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_DemolisherAI:BTDecorator_TagCooldown_4",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.63"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_22",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.101"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_DemolisherAI:BTTask_RunEQSQuery_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.110"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_DemolisherAI:BTTask_SetTagCooldown_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.29"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_9",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.120"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_DemolisherAI:BTTask_PlayMontage_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_DemolisherAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.67"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.111"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_11",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_5",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_14",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_DemolisherAI:BTTask_PlayMontage_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_18",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveDirectlyToward BT_DemolisherAI:BTTask_MoveDirectlyToward_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.72"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_7",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.49"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_DemolisherAI:BTTask_PlayMontage_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_DemolisherAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.68"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_6",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.79"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.117"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.112"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_23",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_21",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_15",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.115"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_29",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_DemolisherAI:BTTask_PlayMontage_7",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.85"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_DemolisherAI:BTDecorator_SetTagCooldown_1",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.57"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveDirectlyToward BT_DemolisherAI:BTTask_MoveDirectlyToward_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.73"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_DemolisherAI:BTDecorator_TimeLimit_3",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.66"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_24",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_DemolisherAI:BTService_OverrideFocus_8",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.71"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_DemolisherAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.86"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.45"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.116"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.109"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_32",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_2",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.76"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_15",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.42"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_DemolisherAI:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_14",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.114"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_16",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.43"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_34",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.93"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_DemolisherAI:BTDecorator_TagCooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.59"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayMontage BT_DemolisherAI:BTTask_PlayMontage_5",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_DemolisherAI:BTService_OverrideFocus_3",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.70"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_16",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_9",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.107"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_25",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.103"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.77"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_FindNextTarget_C BT_DemolisherAI:BT_FindNextTarget_C_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.106"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.122"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_DemolisherAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.121"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_DemolisherAI:BTTask_MoveTo_14",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.75"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_DemolisherAI:BTDecorator_ForceSuccess_10",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_DemolisherAI:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.108"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_SetTagCooldown BT_DemolisherAI:BTDecorator_SetTagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.58"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Crouch is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Crouch"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Crouching?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Blocker is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_10",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_15",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_16",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_6",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_8",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_HasLOS",
+    "Name": "BTDecorator_HasLOS_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 512.0,
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "bUseNavAgentGoalLocation": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 42.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 360.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 380.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 3.0,
+      "bAddToExistingDuration": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_SetTagCooldown",
+    "Name": "BTDecorator_SetTagCooldown_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 3.0,
+      "bActivatesCooldown": false,
+      "NodeName": "Delay Attack?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Ignore Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayAttack"
+      },
+      "CooldownDuration": 2.2,
+      "bAddToExistingDuration": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.1,
+      "bActivatesCooldown": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.DelayMove"
+      },
+      "CooldownDuration": 0.0,
+      "bActivatesCooldown": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TimeLimit": 6.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "TimeLimit": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_8",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveDirectlyToward",
+    "Name": "BTTask_MoveDirectlyToward_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "bUpdatedDeprecatedProperties": true,
+      "AcceptableRadius": 100.0,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveDirectlyToward",
+    "Name": "BTTask_MoveDirectlyToward_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "bUpdatedDeprecatedProperties": true,
+      "ObservedBlackboardValueTolerance": 1.0,
+      "bObserveBlackboardValue": true,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 22.0,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_14",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "ObservedBlackboardValueTolerance": 1.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 64.0,
+      "ObservedBlackboardValueTolerance": 32.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "ObservedBlackboardValueTolerance": 64.0,
+      "bObserveBlackboardValue": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_6",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "AcceptableRadius": 32.0,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchRapid",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchRapid.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchL",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchR",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchR.0"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchRapid",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchRapid.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchL",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchR",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchR.0"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchR",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchR.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchL",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchL.0"
+        }
+      ],
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_Fire",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_Fire.0"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayMontage",
+    "Name": "BTTask_PlayMontage_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "MontagesToPlay": [
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchL",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchL.0"
+        },
+        {
+          "ObjectName": "AnimMontage AM_Demolisher_PunchR",
+          "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AM_Demolisher_PunchR.0"
+        }
+      ],
+      "bNonBlocking": true,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPosBoss",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosBoss.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindMoveLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindActiveCoreNoPath",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindActiveCoreNoPath.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_11",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocationBigEnemy",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocationBigEnemy.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 3.0,
+      "NodeName": "Set Ignore Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.571429,
+      "RandomDeviation": 0.39,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_17",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.25,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_18",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.45,
+      "RandomDeviation": 0.15,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_21",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 1.5,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_22",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.3,
+      "RandomDeviation": 0.05,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_24",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_29",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_25",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_5",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.25,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.6,
+      "RandomDeviation": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_34",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 0.1,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_9",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.24"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.13"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.17"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Blocker"
+      },
+      "NodeName": "Clear Blocker!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_18",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.21"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_13",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.10"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_14",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "NodeName": "Clear Noise",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_32",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.25"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_15",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "NodeName": "Clear Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.22"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.24"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.20"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.11"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.7"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_DemolisherAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.15"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.30"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_DemolisherAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_DemolisherAI",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_DemolisherAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Data/BT_DemolisherAI.30"
+      }
+    }
+  }
+]

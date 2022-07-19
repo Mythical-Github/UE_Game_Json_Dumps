@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_RandomPosOnNav",
+    "Properties": {
+      "QueryName": "EQ_RandomPosOnNav",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_RandomPosOnNav:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNav.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Outer": "EQ_RandomPosOnNav",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 1141.723
+      },
+      "OuterRadius": {
+        "DefaultValue": 2378.925
+      },
+      "NumberOfRings": {
+        "DefaultValue": 2
+      },
+      "bUseSpiralPattern": true,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 9887.293,
+        "ProjectUp": 64.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_RandomPosOnNav",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut EQ_RandomPosOnNav:EnvQueryGenerator_Donut_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNav.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Dot EQ_RandomPosOnNav:EnvQueryTest_Dot_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPosOnNav.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "EQ_RandomPosOnNav",
+    "Properties": {
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "FloatValueMax": {
+        "DefaultValue": -0.063704
+      },
+      "VerNum": 1
+    }
+  }
+]

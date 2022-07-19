@@ -1,0 +1,1135 @@
+[
+  {
+    "Type": "Function",
+    "Name": "SetupMessage",
+    "Outer": "UI_HUD_Message_C",
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Text",
+        "Flags": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Priority",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Time",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Primary",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class UMGSequencePlayer",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMessageAlpha",
+    "Outer": "UI_HUD_Message_C",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Value",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 384
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MapRangeClamped_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 1547829248
+  },
+  {
+    "Type": "Function",
+    "Name": "AddMessageTime",
+    "Outer": "UI_HUD_Message_C",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "AddTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UI_HUD_Message_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree UI_HUD_Message_C:WidgetTree",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.24"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation UI_HUD_Message_C:AMessagePop_INST",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.23"
+        },
+        {
+          "ObjectName": "WidgetAnimation UI_HUD_Message_C:AMessageFade_INST",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.22"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class UserWidget",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function UI_HUD_Message_C:AddMessageTime",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.2"
+      },
+      {
+        "ObjectName": "Function UI_HUD_Message_C:GetMessageAlpha",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.1"
+      },
+      {
+        "ObjectName": "Function UI_HUD_Message_C:SetupMessage",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AMessageFade",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AMessagePop",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MessageText",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class RichTextBlock",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsPrimaryMessage",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 73733,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MessageFadeTimeStart",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MessageFadeTime",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MessageCreationTime",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      }
+    ],
+    "FuncMap": {
+      "SetupMessage": {
+        "ObjectName": "Function UI_HUD_Message_C:SetupMessage",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.0"
+      },
+      "GetMessageAlpha": {
+        "ObjectName": "Function UI_HUD_Message_C:GetMessageAlpha",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.1"
+      },
+      "AddMessageTime": {
+        "ObjectName": "Function UI_HUD_Message_C:AddMessageTime",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.2"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UI_HUD_Message_C Default__UI_HUD_Message_C",
+      "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.4"
+    }
+  },
+  {
+    "Type": "UI_HUD_Message_C",
+    "Name": "Default__UI_HUD_Message_C",
+    "Properties": {
+      "MessageFadeTimeStart": 34.0,
+      "MessageFadeTime": 6.0,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "AMessageFade",
+    "Outer": "AMessageFade_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "67611544-44BD1316-F2B60DA1-8A8A587A",
+          "Name": "MessageText",
+          "PossessedObjectClass": {
+            "ObjectName": "Class RichTextBlock",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "67611544-44BD1316-F2B60DA1-8A8A587A",
+          "BindingName": "MessageText",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.9"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "43261DFE-4362AECA-F06D95B5-22D1BF3B"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "AMessagePop",
+    "Outer": "AMessagePop_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "8EA8EB5D-41405BED-7B20D98D-F0708BAE",
+          "Name": "MessageTextOld",
+          "PossessedObjectClass": {
+            "ObjectName": "Class TextBlock",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "8EA8EB5D-41405BED-7B20D98D-F0708BAE",
+          "BindingName": "MessageText",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.10"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20000,
+        "Denominator": 1000
+      },
+      "Signature": "80F2E1BF-4C4CD37E-9E5EA389-87BAC61E"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.001005122,
+              "LeaveTangent": 0.001005122,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 280.0,
+            "Tangent": {
+              "ArriveTangent": 0.074487455,
+              "LeaveTangent": 0.074487455,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.11"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.12"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "6A004DA7-4EB5D858-9DF3E487-E4D9F3E2"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.8,
+            "Tangent": {
+              "ArriveTangent": -2.7777778E-05,
+              "LeaveTangent": -2.7777778E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.8,
+            "Tangent": {
+              "ArriveTangent": -2.7777778E-05,
+              "LeaveTangent": -2.7777778E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.13"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.14"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18001
+            }
+          }
+        }
+      },
+      "Signature": "E0B66A6A-40F711FF-EC06E288-A5D6B32B"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "AMessageFade",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.7"
+        }
+      ],
+      "EvaluationFieldGuid": "F28A6394-45861853-489D2286-A0B2FD04",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.7"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F28A6394-45861853-489D2286-A0B2FD04"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "AMessagePop",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.8"
+        }
+      ],
+      "EvaluationFieldGuid": "1444BA59-4ECB10EC-152B769A-64AF1DCA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+              "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.8"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1444BA59-4ECB10EC-152B769A-64AF1DCA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "AMessageFade_INST",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessageFade_INST.AMessageFade.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+                "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.7"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "67611544-44BD1316-F2B60DA1-8A8A587A"
+          }
+        ]
+      },
+      "CompiledSignature": "02CFE124-4051CBC3-DBCE54BE-10830709",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "AMessagePop_INST",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 18001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection UI_HUD_Message_C:AMessagePop_INST.AMessagePop.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+                "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.8"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "8EA8EB5D-41405BED-7B20D98D-F0708BAE"
+          }
+        ]
+      },
+      "CompiledSignature": "2B3BB1D2-4F2FA675-155C579E-DE554FA0",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot UI_HUD_Message_C:WidgetTree.Overlay_0.OverlaySlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.18"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Top": 2.0,
+        "Right": 6.0,
+        "Bottom": 2.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay UI_HUD_Message_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.17"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox UI_HUD_Message_C:WidgetTree.ScaleBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.20"
+      }
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "MessageText",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "THE AMAZING KILLER MAN KILLED THE LESS AMAZING KILLER MAN"
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable DT_RichTextMessageFeed",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/DT_RichTextMessageFeed.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass UI_RichTextEmoticons_C",
+          "ObjectPath": "Unboxed/Content/Core/UI/Emotes/UI_RichTextEmoticons.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass UI_RichTextMessageIcons_C",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_RichTextMessageIcons.0"
+        }
+      ],
+      "Justification": "ETextJustify::Right",
+      "WrapTextAt": 550.0,
+      "LineHeightPercentage": 0.9,
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot UI_HUD_Message_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.21"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "StretchDirection": "EStretchDirection::DownOnly",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot UI_HUD_Message_C:WidgetTree.ScaleBox_0.ScaleBoxSlot_1",
+          "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot UI_HUD_Message_C:WidgetTree.Overlay_0.OverlaySlot_1",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.18"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_1",
+    "Outer": "ScaleBox_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "ScaleBox UI_HUD_Message_C:WidgetTree.ScaleBox_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.20"
+      },
+      "Content": {
+        "ObjectName": "RichTextBlock UI_HUD_Message_C:WidgetTree.MessageText",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.19"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "AMessageFade_INST",
+    "Outer": "UI_HUD_Message_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene UI_HUD_Message_C:AMessageFade_INST.AMessageFade",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.5"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "MessageText",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "67611544-44BD1316-F2B60DA1-8A8A587A",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "AMessageFade",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData UI_HUD_Message_C:AMessageFade_INST.CompiledData",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.15"
+      },
+      "Signature": "02CFE124-4051CBC3-DBCE54BE-10830709"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "AMessagePop_INST",
+    "Outer": "UI_HUD_Message_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene UI_HUD_Message_C:AMessagePop_INST.AMessagePop",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.6"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "ScaleBox_0",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8EA8EB5D-41405BED-7B20D98D-F0708BAE",
+          "bIsRootWidget": false
+        }
+      ],
+      "bLegacyFinishOnStop": false,
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData UI_HUD_Message_C:AMessagePop_INST.CompiledData",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.16"
+      },
+      "Signature": "2B3BB1D2-4F2FA675-155C579E-DE554FA0"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "UI_HUD_Message_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay UI_HUD_Message_C:WidgetTree.Overlay_0",
+        "ObjectPath": "Unboxed/Content/Core/UI/HUD/UI_HUD_Message.17"
+      }
+    }
+  }
+]

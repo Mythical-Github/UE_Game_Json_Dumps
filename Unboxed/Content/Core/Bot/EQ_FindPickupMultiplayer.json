@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "QueryName": "EQ_FindPickupMultiplayer",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindPickupMultiplayer:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PickupsOfTypes",
+    "Name": "EnvQueryGenerator_PickupsOfTypes_0",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "PickupTypes": 1896,
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PickupsOfTypes EQ_FindPickupMultiplayer:EnvQueryGenerator_PickupsOfTypes_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PickupPriority EQ_FindPickupMultiplayer:EnvQueryTest_PickupPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindPickupMultiplayer:EnvQueryTest_PathfindingBatch_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPickupMultiplayer:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPickupMultiplayer:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPickupMultiplayer.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::DistanceZ",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.175
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_1",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass NavFilter_JumpGuy_C",
+        "ObjectPath": "Unboxed/Content/Core/AI/NavFilters/JumpFilters/NavFilter_JumpGuy.0"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 300.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 2000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PickupPriority",
+    "Name": "EnvQueryTest_PickupPriority_0",
+    "Outer": "EQ_FindPickupMultiplayer",
+    "Properties": {
+      "PickupTypes": 1896,
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 0.01
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "ScoringFactor": {
+        "DefaultValue": 1.25
+      },
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,384 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionVectorParticleParameter",
+    "Name": "DistributionVectorParticleParameter_0",
+    "Outer": "ParticleModuleColorOverLife_0",
+    "Properties": {
+      "ParameterName": "Color",
+      "MaxInput": {
+        "X": 64.0,
+        "Y": 64.0,
+        "Z": 64.0
+      },
+      "MaxOutput": {
+        "X": 64.0,
+        "Y": 64.0,
+        "Z": 64.0
+      },
+      "Constant": {
+        "X": 0.028426,
+        "Y": 0.558341,
+        "Z": 0.0
+      },
+      "bIsDirty": false
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_RadarBleep:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_RadarBleep:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_RadarBleep:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_RadarBleep:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_RadarBleep:ParticleModuleSizeMultiplyLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.8"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh P_RadarBleep:ParticleModuleTypeDataMesh_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.10"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_RadarBleep:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.9"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 0.558341,
+        "MinValueVec": {
+          "X": 0.028426,
+          "Y": 0.558341,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.028426,
+          "Y": 0.558341,
+          "Z": 0.0
+        },
+        "Distribution": {
+          "ObjectName": "DistributionVectorParticleParameter P_RadarBleep:ParticleModuleColorOverLife_0.DistributionVectorParticleParameter_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.2"
+        },
+        "Table": {
+          "Values": [
+            0.028426,
+            0.558341,
+            0.0
+          ]
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": 0.275,
+        "MaxValue": 0.275,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.275
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.3333,
+        "MaxValue": 1.3333,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.3333
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_RadarHighlight",
+        "ObjectPath": "Unboxed/Content/Core/Materials/M_RadarHighlight.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_RadarBleep:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "MaxDrawCount": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 0.75,
+        "MaxValue": 0.75,
+        "MinValueVec": {
+          "X": 0.75,
+          "Y": 0.75,
+          "Z": 0.75
+        },
+        "MaxValueVec": {
+          "X": 0.75,
+          "Y": 0.75,
+          "Z": 0.75
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": -0.93665695,
+        "MaxValue": 15.0,
+        "MinValueVec": {
+          "X": -0.93665695,
+          "Y": -0.93665695,
+          "Z": -0.93665695
+        },
+        "MaxValueVec": {
+          "X": 15.0,
+          "Y": 15.0,
+          "Z": 15.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 14.999999,
+          "Values": [
+            -0.93665695,
+            -0.93665695,
+            -0.93665695,
+            0.776231,
+            0.776231,
+            0.776231,
+            2.4415731,
+            2.4415731,
+            2.4415731,
+            4.0486403,
+            4.0486403,
+            4.0486403,
+            5.58728,
+            5.58728,
+            5.58728,
+            7.0467825,
+            7.0467825,
+            7.0467825,
+            8.416935,
+            8.416935,
+            8.416935,
+            9.687128,
+            9.687128,
+            9.687128,
+            10.847012,
+            10.847012,
+            10.847012,
+            11.886151,
+            11.886151,
+            11.886151,
+            12.793982,
+            12.793982,
+            12.793982,
+            13.560321,
+            13.560321,
+            13.560321,
+            14.174315,
+            14.174315,
+            14.174315,
+            14.626115,
+            14.626115,
+            14.626115,
+            14.90449,
+            14.90449,
+            14.90449,
+            15.0,
+            15.0,
+            15.0
+          ],
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "Rate": {
+        "MinValue": 0.375,
+        "MaxValue": 0.375,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.375
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_RadarBleep:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.1"
+        }
+      },
+      "bProcessBurstList": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh SM_Shockwave",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/FurtherVFX/Trails/Mesh/SM_Shockwave.2"
+      },
+      "bUseStaticMeshLODs": false,
+      "MeshAlignment": "PSMA_MeshFaceCameraWithSpin",
+      "bOverrideMaterial": true,
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "bCameraFacing": true,
+      "CameraFacingOption": "XAxisFacing_ZUp",
+      "bApplyParticleRotationAsSpin": true,
+      "bFaceCameraDirectionRatherThanPosition": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_RadarBleep",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_RadarBleep:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_RadarBleep",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_RadarBleep:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/P_RadarBleep.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

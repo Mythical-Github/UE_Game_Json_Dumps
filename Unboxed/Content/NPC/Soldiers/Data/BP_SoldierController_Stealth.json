@@ -1,0 +1,154 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_SoldierController_Stealth_C",
+    "Super": "BP_SoldierController_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_SoldierController_Stealth_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_SoldierController_C",
+      "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController.0"
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_SoldierController_Stealth_C Default__BP_SoldierController_Stealth_C",
+      "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.1"
+    }
+  },
+  {
+    "Type": "BP_SoldierController_Stealth_C",
+    "Name": "Default__BP_SoldierController_Stealth_C",
+    "Template": "Default__BP_SoldierController_C",
+    "Properties": {
+      "EnemySensingComponent": {
+        "ObjectName": "EnemySensingComponent Default__BP_SoldierController_Stealth_C:EnemySensingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.2"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree BT_SoldierStealthAI",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BT_SoldierStealthAI.0"
+      },
+      "PathFollowingComponent": {
+        "ObjectName": "PathFollowingJumpingComponent Default__BP_SoldierController_Stealth_C:PathFollowingComponent",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.3"
+      },
+      "ActionsComp": {
+        "ObjectName": "PawnActionsComponent Default__BP_SoldierController_Stealth_C:ActionsComp",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.4"
+      },
+      "TransformComponent": {
+        "ObjectName": "SceneComponent Default__BP_SoldierController_Stealth_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.6"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BP_SoldierController_Stealth_C:TransformComponent0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.6"
+      }
+    }
+  },
+  {
+    "Type": "EnemySensingComponent",
+    "Name": "EnemySensingComponent",
+    "Outer": "Default__BP_SoldierController_Stealth_C",
+    "Template": "EnemySensingComponent",
+    "Properties": {
+      "OnSeeActor": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_SoldierController_Stealth_C Default__BP_SoldierController_Stealth_C",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.1"
+            },
+            "FunctionName": "OnSeeActor"
+          }
+        ]
+      },
+      "SensingInterval": 0.25,
+      "OnSeePawn": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_SoldierController_Stealth_C Default__BP_SoldierController_Stealth_C",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.1"
+            },
+            "FunctionName": "OnSeePawn"
+          }
+        ]
+      },
+      "OnHearNoise": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_SoldierController_Stealth_C Default__BP_SoldierController_Stealth_C",
+              "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.1"
+            },
+            "FunctionName": "OnHearNoise"
+          }
+        ]
+      },
+      "PeripheralVisionAngle": 160.0
+    }
+  },
+  {
+    "Type": "PathFollowingJumpingComponent",
+    "Name": "PathFollowingComponent",
+    "Outer": "Default__BP_SoldierController_Stealth_C",
+    "Template": "PathFollowingComponent"
+  },
+  {
+    "Type": "PawnActionsComponent",
+    "Name": "ActionsComp",
+    "Outer": "Default__BP_SoldierController_Stealth_C",
+    "Template": "ActionsComp"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_SoldierController_Stealth_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransformComponent0",
+    "Outer": "Default__BP_SoldierController_Stealth_C",
+    "Template": "TransformComponent0"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_SoldierController_Stealth_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.5"
+      },
+      "VariableGuid": "A7AA82BD-4331E751-0A9D1494-D27C07FA",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_SoldierController_Stealth_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_SoldierController_Stealth_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/NPC/Soldiers/Data/BP_SoldierController_Stealth.7"
+      }
+    }
+  }
+]

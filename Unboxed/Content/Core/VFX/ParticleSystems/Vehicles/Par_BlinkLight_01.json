@@ -1,0 +1,310 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired Par_BlinkLight_01:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime Par_BlinkLight_01:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize Par_BlinkLight_01:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.6"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife Par_BlinkLight_01:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.2"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife Par_BlinkLight_01:ParticleModuleColorScaleOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.3"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn Par_BlinkLight_01:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.7"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": -1.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 100.0,
+          "Y": -1.0,
+          "Z": -1.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": -1.0,
+          "Z": -1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            100.0,
+            -1.0,
+            -1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "Lifetime": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_JetBlink_01",
+        "ObjectPath": "Unboxed/Content/Core/VFX/Materials/MI_JetBlink_01.0"
+      },
+      "bUseLocalSpace": true,
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.1,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant Par_BlinkLight_01:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Par_BlinkLight_01",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel Par_BlinkLight_01:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Par_BlinkLight_01",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter Par_BlinkLight_01:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/Vehicles/Par_BlinkLight_01.8"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -30.0,
+          "Y": -30.0,
+          "Z": -30.0
+        },
+        "Max": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 30.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

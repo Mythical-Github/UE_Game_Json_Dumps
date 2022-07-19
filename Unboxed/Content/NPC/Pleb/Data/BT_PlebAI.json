@@ -1,0 +1,2358 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_PlebAI",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Meatbag",
+        "ObjectPath": "Unboxed/Content/NPC/Meatbag/Data/BB_Meatbag.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_FindNextTarget_C_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "TargetActor": {
+        "SelectedKeyName": "TargetActor"
+      },
+      "NodeName": "Find (or Clear) Next Move Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.27"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_4",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Core"
+      },
+      "ObservedKeyNames": [
+        "Core"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Core Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Enemy Dead?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_22",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_PlebAI:BTDecorator_TimeLimit_3",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_21",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_PlebAI:BTDecorator_DoesPathExist_3",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_11",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_7",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_PlebAI:BT_IsAlive_C_4",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_11",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_7",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_15",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_PlebAI:BTDecorator_IsAtLocation_1",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_PlebAI:BTDecorator_IsAtLocation_2",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_12",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.17"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_PlebAI:BTTask_RunEQSQuery_2",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_12",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlebAI:BTTask_MoveTo_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_13",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_15",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_14",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_PlebAI:BTDecorator_IsAtLocation_0",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_7",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_PlebAI:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.46"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_16",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_17",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_17",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsFalling BT_PlebAI:BTDecorator_IsFalling_1",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_16",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_PlebAI:BTDecorator_TagCooldown_2",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.45"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation BT_PlebAI:BTDecorator_IsAtLocation_5",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.41"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_8",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TagCooldown BT_PlebAI:BTDecorator_TagCooldown_0",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.44"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_1",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.25"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.30"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_PlebAI:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.31"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.27"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlebAI:BTTask_MoveTo_9",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_7",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.86"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_23",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_PlebAI:BT_IsAlive_C_5",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_20",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsWithinDistance BT_PlebAI:BTDecorator_IsWithinDistance_3",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_DefaultFocus BT_PlebAI:BTService_DefaultFocus_4",
+          "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.48"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_16",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_10",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_PlebAI:BTService_OverrideFocus_1",
+          "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.50"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_10",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_PlebAI:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_14",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_12",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_7",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_6",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_15",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_6",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_5",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_OverrideFocus BT_PlebAI:BTService_OverrideFocus_0",
+          "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.49"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_17",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlebAI:BTTask_MoveTo_5",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.54"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_PlebAI:BTDecorator_ForceSuccess_3",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_PlebAI:BTTask_SetTagCooldown_8",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_24",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_PlebAI:BTTask_SetTagCooldown_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_21",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTagCooldown BT_PlebAI:BTTask_SetTagCooldown_7",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_23",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_22",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_12",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_23",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_21",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_15",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_PlebAI:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlebAI:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.52"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_PlebAI:BTDecorator_ForceSuccess_4",
+              "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_15",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_PlebAI:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_FindNextTarget_C BT_PlebAI:BT_FindNextTarget_C_0",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_PlebAI:BTTask_Wait_5",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_9",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_PlebAI:ClearKeyValue_8",
+            "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Core is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Has Core?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Patrol is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "PathQueryType": "EPathExistanceQueryType::NavmeshRaycast2D",
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 512.0,
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 190.0,
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 21.0,
+      "bUseNavAgentGoalLocation": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 350.0,
+      "bUseNavAgentGoalLocation": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsFalling",
+    "Name": "BTDecorator_IsFalling_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 160.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreCore"
+      },
+      "bActivatesCooldown": false,
+      "NodeName": "Ignore Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "bActivatesCooldown": false,
+      "NodeName": "Ignore Enemy?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "TimeLimit": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_DefaultFocus",
+    "Name": "BTService_DefaultFocus_4",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_8",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.13"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTService_OverrideFocus",
+    "Name": "BTService_OverrideFocus_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 80.44477,
+      "bAllowStrafe": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 42.0,
+      "ObservedBlackboardValueTolerance": 1.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_9",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "AcceptableRadius": 8.0,
+      "bAllowStrafe": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindCoreLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindCoreLocation.0"
+        },
+        "EQSQueryBlackboardKey": {
+          "SelectedKeyName": "SelfActor"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 3.0,
+      "NodeName": "Set Ignore Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.IgnoreEnemy"
+      },
+      "CooldownDuration": 3.0,
+      "NodeName": "Set Ignore Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_21",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTagCooldown",
+    "Name": "BTTask_SetTagCooldown_8",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Timers.Attack"
+      },
+      "CooldownDuration": 2.0,
+      "NodeName": "Set Attack Enemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 3.39608,
+      "RandomDeviation": 1.64202,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 2.25,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_22",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_17",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.35,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_17",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 3.033921,
+      "RandomDeviation": 1.701236,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_21",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 1.5,
+      "RandomDeviation": 0.35,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_23",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "RandomDeviation": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_21",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_24",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_20",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_11",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.25"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_10",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.15"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_12",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_12",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.6"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_13",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_14",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.7"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_15",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_23",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.24"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.25"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.26"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_5",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_15",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.18"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_6",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_12",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.17"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_7",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_PlebAI:BTComposite_Selector_7",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.12"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_8",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Core"
+      },
+      "NodeName": "Clear Core!",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.28"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_9",
+    "Outer": "BT_PlebAI",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "NodeName": "Clear Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_PlebAI",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_PlebAI:BTComposite_Sequence_7",
+        "ObjectPath": "Unboxed/Content/NPC/Pleb/Data/BT_PlebAI.28"
+      }
+    }
+  }
+]

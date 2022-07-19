@@ -1,0 +1,583 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionParticleMass",
+    "Outer": "ParticleModuleCollision_0",
+    "Properties": {
+      "Constant": 0.3
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_BricksBreak_lvl2:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_BricksBreak_lvl2:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_BricksBreak_lvl2:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.11"
+        },
+        {
+          "ObjectName": "ParticleModuleCollision P_BricksBreak_lvl2:ParticleModuleCollision_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.4"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant P_BricksBreak_lvl2:ParticleModuleAccelerationConstant_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_BricksBreak_lvl2:ParticleModuleLocation_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.8"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotation P_BricksBreak_lvl2:ParticleModuleMeshRotation_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.9"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocityCone P_BricksBreak_lvl2:ParticleModuleVelocityCone_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColor P_BricksBreak_lvl2:ParticleModuleColor_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.5"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife P_BricksBreak_lvl2:ParticleModuleColorScaleOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.6"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh P_BricksBreak_lvl2:ParticleModuleTypeDataMesh_0",
+        "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_BricksBreak_lvl2:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.12"
+      },
+      "PeakActiveParticles": 65
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -980.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleCollision",
+    "Name": "ParticleModuleCollision_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "DampingFactor": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "DampingFactorRotation": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "MaxCollisions": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "CollisionCompletionOption": "EPCC_FreezeMovement",
+      "ParticleMass": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_BricksBreak_lvl2:ParticleModuleCollision_0.DistributionParticleMass",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.0"
+        }
+      },
+      "bOnlyVerticalNormalsDecrementCount": true,
+      "DelayAmount": {
+        "MinValue": 0.025,
+        "MaxValue": 0.025,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.025
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bIgnoreSourceActor": false,
+      "MaxCollisionDistance": 2048.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "StartColor": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            -1.0,
+            -1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bClampAlpha": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 3.3333333,
+          "TimeBias": 0.7,
+          "Values": [
+            1.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 6.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            6.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -128.0,
+        "MaxValue": 128.0,
+        "MinValueVec": {
+          "X": -128.0,
+          "Y": -128.0,
+          "Z": -32.0
+        },
+        "MaxValueVec": {
+          "X": 128.0,
+          "Y": 128.0,
+          "Z": 32.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -128.0,
+            -128.0,
+            -32.0,
+            128.0,
+            128.0,
+            32.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotation",
+    "Name": "ParticleModuleMeshRotation_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -0.367925,
+        "MaxValue": 0.292453,
+        "MinValueVec": {
+          "X": -0.025,
+          "Y": -0.025,
+          "Z": -0.367925
+        },
+        "MaxValueVec": {
+          "X": 0.025,
+          "Y": 0.025,
+          "Z": 0.292453
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.025,
+            -0.025,
+            -0.367925,
+            0.025,
+            0.025,
+            0.292453
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_Bricks_GibParticle2",
+        "ObjectPath": "Unboxed/Content/Core/Traps/Materials/M_Bricks_GibParticle2.0"
+      },
+      "EmitterOrigin": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 32.0
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_BricksBreak_lvl2:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "MaxDrawCount": 64,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "ParticleBurstMethod": "EPBM_Interpolated",
+      "BurstList": [
+        {
+          "Count": 64,
+          "CountLow": 32,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "bProcessSpawnRate": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh SM_Bricks_Single_lvl2",
+        "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/SM_Bricks_Single_lvl2.1"
+      },
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocityCone",
+    "Name": "ParticleModuleVelocityCone_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Angle": {
+        "MinValue": 0.056941,
+        "MaxValue": 0.056941,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.056941
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Velocity": {
+        "MinValue": 458.44507,
+        "MaxValue": 750.8752,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            458.44507,
+            750.8752
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_BricksBreak_lvl2",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_BricksBreak_lvl2:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_BricksBreak_lvl2",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_BricksBreak_lvl2:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/Traps/Mesh/P_BricksBreak_lvl2.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -350.0,
+          "Y": -350.0,
+          "Z": -1200.0
+        },
+        "Max": {
+          "X": 350.0,
+          "Y": 350.0,
+          "Z": 350.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

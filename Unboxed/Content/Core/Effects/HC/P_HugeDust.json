@@ -1,0 +1,441 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_HugeDust:ParticleModuleRequired_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_HugeDust:ParticleModuleLifetime_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_HugeDust:ParticleModuleSize_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_HugeDust:ParticleModuleVelocity_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_HugeDust:ParticleModuleColorOverLife_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.2"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_HugeDust:ParticleModuleLocation_1",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.4"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu P_HugeDust:ParticleModuleTypeDataGpu_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.8"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_HugeDust:ParticleModuleSpawn_0",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.7"
+      },
+      "PeakActiveParticles": 422
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 30.0,
+        "MaxValue": 60.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0,
+            60.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_1",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -2000.0,
+        "MaxValue": 2000.0,
+        "MinValueVec": {
+          "X": -2000.0,
+          "Y": -2000.0,
+          "Z": -1000.0
+        },
+        "MaxValueVec": {
+          "X": 2000.0,
+          "Y": 2000.0,
+          "Z": 1000.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -2000.0,
+            -2000.0,
+            -1000.0,
+            2000.0,
+            2000.0,
+            1000.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "b3DDrawMode": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_DustSoft",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/Materials/M_DustSoft.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 60.0,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_HugeDust:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "MaxDrawCount": 420,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 18.0,
+        "MaxValue": 18.0,
+        "MinValueVec": {
+          "X": 18.0,
+          "Y": 18.0,
+          "Z": 18.0
+        },
+        "MaxValueVec": {
+          "X": 18.0,
+          "Y": 18.0,
+          "Z": 18.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            18.0,
+            18.0,
+            18.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "ParticleBurstMethod": "EPBM_Interpolated",
+      "BurstList": [
+        {
+          "Count": 420,
+          "CountLow": 220,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "bProcessSpawnRate": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired P_HugeDust:ParticleModuleRequired_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.5"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn P_HugeDust:ParticleModuleSpawn_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.7"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired P_HugeDust:ParticleModuleRequired_0",
+            "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.5"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime P_HugeDust:ParticleModuleLifetime_0",
+            "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.3"
+          },
+          {
+            "ObjectName": "ParticleModuleSize P_HugeDust:ParticleModuleSize_0",
+            "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.6"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity P_HugeDust:ParticleModuleVelocity_0",
+            "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.9"
+          },
+          {
+            "ObjectName": "ParticleModuleLocation P_HugeDust:ParticleModuleLocation_1",
+            "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.4"
+          }
+        ],
+        "InvMaxSize": {
+          "X": 0.055555556,
+          "Y": 0.055555556
+        },
+        "InvRotationRateScale": 0.016666668,
+        "MaxLifetime": 60.0,
+        "MaxParticleCount": 422,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "ResourceData": {
+        "ColorBias": {
+          "X": 0.795,
+          "Y": 0.780295,
+          "Z": 0.6042,
+          "W": 1.0
+        },
+        "MiscBias": {
+          "X": 18.0,
+          "Y": 18.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "CollisionRadiusScale": 0.5,
+        "CollisionRandomDistribution": 1.0,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 60.0,
+        "ScreenAlignment": "PSA_Square"
+      },
+      "bClearExistingParticlesOnInit": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -13.0,
+        "MaxValue": 13.0,
+        "MinValueVec": {
+          "X": -13.0,
+          "Y": -13.0,
+          "Z": -13.0
+        },
+        "MaxValueVec": {
+          "X": 13.0,
+          "Y": 13.0,
+          "Z": 13.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -13.0,
+            -13.0,
+            -13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_HugeDust",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_HugeDust:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.1"
+        }
+      ],
+      "InitialAllocationCount": 420,
+      "DetailModeBitmask": 4
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_HugeDust",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_HugeDust:ParticleSpriteEmitter_0",
+          "ObjectPath": "Unboxed/Content/Core/Effects/HC/P_HugeDust.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -2329.012,
+          "Y": -2326.1807,
+          "Z": -1232.4146
+        },
+        "Max": {
+          "X": 2322.8083,
+          "Y": 2325.436,
+          "Z": 1229.9839
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

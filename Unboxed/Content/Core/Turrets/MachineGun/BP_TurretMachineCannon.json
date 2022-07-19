@@ -1,0 +1,373 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TurretMachineCannon_C",
+    "Properties": {
+      "bHasNativizedParent": true,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_TurretMachineCannon_C:SimpleConstructionScript_0",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_TurretMachineCannon_C:InheritableComponentHandler",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "DynamicClass BP_TurretMachineGun50Cal_C",
+      "ObjectPath": "/Game/Core/Turrets/MachineGun/BP_TurretMachineGun50Cal"
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TurretMachineCannon_C Default__BP_TurretMachineCannon_C",
+      "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.1"
+    }
+  },
+  {
+    "Type": "BP_TurretMachineCannon_C",
+    "Name": "Default__BP_TurretMachineCannon_C",
+    "Properties": {
+      "TurretTurnSpeedInterp": 13.0,
+      "TurretLoseEnemyTime": 1.0,
+      "TurretProjectileVelocityMul": 1.0,
+      "TurretPowerPerHit": 2.0,
+      "TurretPowerPerHitRule": "Turret.MachineGunCannon.Power",
+      "Arrow": {
+        "ObjectName": "ArrowComponent Default__BP_TurretMachineCannon_C:Arrow",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.2"
+      },
+      "BaseMesh": {
+        "ObjectName": "StaticMeshComponent Default__BP_TurretMachineCannon_C:BaseMesh",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.11"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent Default__BP_TurretMachineCannon_C:Mesh",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.10"
+      },
+      "SenseComponent": {
+        "ObjectName": "EnemySensingComponent Default__BP_TurretMachineCannon_C:Sense",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.4"
+      },
+      "TurretEnemyMaxHeightDistance": 1400.0,
+      "TurretEnemyRecheckTimer": 0.5,
+      "HealthComponent": {
+        "ObjectName": "HealthComponent Default__BP_TurretMachineCannon_C:HealthComponent",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.5"
+      },
+      "TeamComponent": {
+        "ObjectName": "TeamComponent Default__BP_TurretMachineCannon_C:TeamComponent",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.12"
+      },
+      "Details": {
+        "CostRule": "Turret.MachineGunCannon.Cost",
+        "Name": {
+          "TableId": "/Game/Core/UI/ST_Game.ST_Game",
+          "Key": "TurretMachineGunCannon"
+        },
+        "PreviewMesh": {
+          "AssetPathName": "/Game/Core/Turrets/MachineGun/Mesh/SM_Turret_MachineGun_Level_3.SM_Turret_MachineGun_Level_3",
+          "SubPathString": ""
+        },
+        "DisplayName": {
+          "TableId": "/Game/Core/UI/ST_Game.ST_Game",
+          "Key": "TurretMachineGunCannonName"
+        },
+        "DisplayDescription": {
+          "TableId": "/Game/Core/UI/ST_Game.ST_Game",
+          "Key": "TurretMachineGunCannonDesc"
+        },
+        "DisplayStats": {
+          "CultureInvariantString": "<Text.Red>{StringTable.StatDamage}: {Turret.MachineGunCannon.Damage}</>\r\n<Text.Yellow>{StringTable.StatPower}: {Turret.MachineGunCannon.Power}</>"
+        },
+        "DisplayOrder": 174,
+        "DisplayMaterial": {
+          "AssetPathName": "/Game/Core/Cards/Materials/M_TradingCard_MachineGunPlusPlus.M_TradingCard_MachineGunPlusPlus",
+          "SubPathString": ""
+        }
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent Default__BP_TurretMachineCannon_C:Arrow",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Outer": "Default__BP_TurretMachineCannon_C"
+  },
+  {
+    "Type": "UObject",
+    "Name": "WeaponTurretMachineGun_GEN_VARIABLE",
+    "Outer": "BP_TurretMachineCannon_C",
+    "Properties": {
+      "FireSound": {
+        "ObjectName": "FMODEvent FE_Turret_MachineGun_Lvl_02_Fire",
+        "ObjectPath": "Unboxed/Content/FMOD/Events/Weapons/Turrets/FE_Turret_MachineGun_Lvl_02_Fire.0"
+      },
+      "ReloadSound": {
+        "ObjectName": "FMODEvent FE_Turret_MachineGun_Lvl_02_Reload",
+        "ObjectPath": "Unboxed/Content/FMOD/Events/Weapons/Turrets/FE_Turret_MachineGun_Lvl_02_Reload.0"
+      },
+      "FireRate": 0.355,
+      "SpreadMax": 0.03333,
+      "SpreadMin": 0.005,
+      "bComplexBulletTracing": true,
+      "MuzzleParticle": {
+        "ObjectName": "ParticleSystem P_RailGunFire_Turret",
+        "ObjectPath": "Unboxed/Content/Core/VFX/ParticleSystems/2020/ParticleSystems/PulseCannon/P_RailGunFire_Turret.145"
+      },
+      "TracerParticle": {
+        "ObjectName": "ParticleSystem P_BB_Turret_Blaster_02",
+        "ObjectPath": "Unboxed/Content/Core/Effects/HC/FurtherVFX/Trails/P_BB_Turret_Blaster_02.22"
+      },
+      "TracerChanceMinMax": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "TracerFlyBySound": null,
+      "BulletDistance": 8000.0,
+      "Clip": 16,
+      "DamageRule": "Turret.MachineGunCannon.Damage"
+    }
+  },
+  {
+    "Type": "EnemySensingComponent",
+    "Name": "Sense",
+    "Outer": "Default__BP_TurretMachineCannon_C",
+    "Properties": {
+      "SightRadius": 7831.863,
+      "PeripheralVisionAngle": 179.0
+    }
+  },
+  {
+    "Type": "HealthComponent",
+    "Name": "HealthComponent",
+    "Outer": "Default__BP_TurretMachineCannon_C",
+    "Properties": {
+      "HealthRule": "Turret.MachineGunCannon.Health",
+      "MaxHealth": 300.0
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_TurretMachineCannon_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+            "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_WeaponMachineGunTurret_C BP_TurretMachineCannon_C:WeaponTurretMachineGun_GEN_VARIABLE",
+            "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "DynamicClass BP_TurretMachineGun_C",
+              "ObjectPath": "/Game/Core/Turrets/MachineGun/BP_TurretMachineGun"
+            },
+            "SCSVariableName": "WeaponTurretMachineGun",
+            "AssociatedGuid": "1CF60587-4D33456A-C63E1FB3-F5407181"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "FireSound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "ReloadSound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "FireRate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "SpreadMax",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "SpreadMin",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "bComplexBulletTracing",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "MuzzleParticle",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "TracerParticle",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "TracerChanceMinMax",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ScriptStruct Vector2D",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "TracerFlyBySound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "BulletDistance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "Clip",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              },
+              {
+                "PropertyName": "DamageRule",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "DynamicClass BP_WeaponMachineGunTurret_C",
+                  "ObjectPath": "/Game/Core/Turrets/MachineGun/Data/BP_WeaponMachineGunTurret"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_TurretMachineCannon_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_TurretMachineCannon_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.7"
+      },
+      "VariableGuid": "14B7A56A-41B018E3-98F1A194-C49F82E9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_TurretMachineCannon_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_TurretMachineCannon_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BP_TurretMachineCannon_C",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh SM_Turret_MachineGun_Level_3",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/Mesh/SM_Turret_MachineGun_Level_3.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant M_Turret_MachineGun3",
+          "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/Materials/M_Turret_MachineGun3.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent Default__BP_TurretMachineCannon_C:Arrow",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BaseMesh",
+    "Outer": "Default__BP_TurretMachineCannon_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent Default__BP_TurretMachineCannon_C:Mesh",
+        "ObjectPath": "Unboxed/Content/Core/Turrets/MachineGun/BP_TurretMachineCannon.10"
+      }
+    }
+  },
+  {
+    "Type": "TeamComponent",
+    "Name": "TeamComponent",
+    "Outer": "Default__BP_TurretMachineCannon_C"
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "AnimComposite",
+    "Name": "AA_Demolisher_FireStart_Composite",
+    "Properties": {
+      "AnimationTrack": {
+        "AnimSegments": [
+          {
+            "AnimReference": {
+              "ObjectName": "AnimSequence AA_Demolisher_FireStart",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AA_Demolisher_FireStart.1"
+            },
+            "StartPos": 0.0,
+            "AnimStartTime": 0.0,
+            "AnimEndTime": 1.5333333,
+            "AnimPlayRate": 1.25,
+            "LoopingCount": 1
+          },
+          {
+            "AnimReference": {
+              "ObjectName": "AnimSequence AA_Demolisher_FireEnd",
+              "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AA_Demolisher_FireEnd.1"
+            },
+            "StartPos": 1.2266667,
+            "AnimStartTime": 0.0,
+            "AnimEndTime": 0.56666666,
+            "AnimPlayRate": 1.0,
+            "LoopingCount": 1
+          }
+        ]
+      },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "FE_Demolisher_Fire_Composite",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySoundFMOD AA_Demolisher_FireStart_Composite:AnimNotify_PlaySoundFMOD_0",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AA_Demolisher_FireStart_Composite.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.036641404,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.7933333,
+          "LinkValue": 0.036641404,
+          "LinkedSequence": {
+            "ObjectName": "AnimComposite AA_Demolisher_FireStart_Composite",
+            "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Animations/AA_Demolisher_FireStart_Composite.0"
+          }
+        }
+      ],
+      "SequenceLength": 1.7933333,
+      "Skeleton": {
+        "ObjectName": "Skeleton SK_Demolisher",
+        "ObjectPath": "Unboxed/Content/NPC/MeatbagDemolisher/Mesh/SK_Demolisher.3"
+      }
+    },
+    "SkeletonGuid": "958E954E-4F9ADCB0-63A1B6AA-B88E8969"
+  },
+  {
+    "Type": "AnimNotify_PlaySoundFMOD",
+    "Name": "AnimNotify_PlaySoundFMOD_0",
+    "Outer": "AA_Demolisher_FireStart_Composite",
+    "Properties": {
+      "SoundEvent": {
+        "ObjectName": "FMODEvent FE_Demolisher_Fire_Composite",
+        "ObjectPath": "Unboxed/Content/FMOD/Events/NPC/Demolisher/FE_Demolisher_Fire_Composite.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindRepairable",
+    "Properties": {
+      "QueryName": "EQ_FindRepairable",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindRepairable:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindRepairable.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ValidBuildRepairs",
+    "Name": "EnvQueryGenerator_ValidBuildRepairs_0",
+    "Outer": "EQ_FindRepairable",
+    "Properties": {
+      "GenerateOnlyActorsInRadius": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindRepairable",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ValidBuildRepairs EQ_FindRepairable:EnvQueryGenerator_ValidBuildRepairs_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindRepairable.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindRepairable:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindRepairable.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindRepairable:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindRepairable.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_BuildPriority EQ_FindRepairable:EnvQueryTest_BuildPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindRepairable.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_BuildPriority",
+    "Name": "EnvQueryTest_BuildPriority_0",
+    "Outer": "EQ_FindRepairable",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": 0.75
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindRepairable",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindRepairable",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 3.0
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 300.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 2000.0
+      },
+      "VerNum": 1
+    }
+  }
+]

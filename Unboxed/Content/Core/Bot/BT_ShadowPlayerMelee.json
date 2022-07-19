@@ -1,0 +1,366 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Bot",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BB_Bot.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_IsWithinDistance BT_ShadowPlayerMelee:BTDecorator_IsWithinDistance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BotTask",
+    "Name": "BotTask_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "Action": "EBotAction::Melee",
+      "bIgnoreRestartSelf": true,
+      "NodeName": "Melee Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BotTask BT_ShadowPlayerMelee:BotTask_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.1"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerMelee:BTDecorator_ForceSuccess_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.6"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown BT_ShadowPlayerMelee:BTDecorator_Cooldown_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerMelee:BTTask_Wait_12",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMelee:BTComposite_SimpleParallel_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_ShadowPlayerMelee:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.14"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerMelee:BTDecorator_ForceSuccess_1",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.7"
+            },
+            {
+              "ObjectName": "BTDecorator_InGameMode BT_ShadowPlayerMelee:BTDecorator_InGameMode_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.10"
+            },
+            {
+              "ObjectName": "BTDecorator_HasBotFlag BT_ShadowPlayerMelee:BTDecorator_HasBotFlag_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMelee:BTComposite_SimpleParallel_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess BT_ShadowPlayerMelee:BTDecorator_ForceSuccess_2",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "bApplyDecoratorScope": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveDirectlyToward BT_ShadowPlayerMelee:BTTask_MoveDirectlyToward_1",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.13"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_ShadowPlayerMelee:BTDecorator_TimeLimit_0",
+              "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "CoolDownTime": 0.12788,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_HasBotFlag",
+    "Name": "BTDecorator_HasBotFlag_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "NOT Max Ammo",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_InGameMode",
+    "Name": "BTDecorator_InGameMode_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "GameModeMask": 8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsWithinDistance",
+    "Name": "BTDecorator_IsWithinDistance_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "AcceptableRadius": 165.14606,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "FlowAbortMode": "EBTFlowAbortMode::None",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMelee:BTComposite_SimpleParallel_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveDirectlyToward",
+    "Name": "BTTask_MoveDirectlyToward_1",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "bUpdatedDeprecatedProperties": true,
+      "ObservedBlackboardValueTolerance": 2.0,
+      "bObserveBlackboardValue": true,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_ShadowPlayerMelee:BTComposite_SimpleParallel_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "WaitTime": 0.075,
+      "RandomDeviation": 0.0975,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_ShadowPlayerMelee",
+    "Properties": {
+      "WaitTime": 0.62381,
+      "RandomDeviation": 0.230952,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_ShadowPlayerMelee",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_ShadowPlayerMelee:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/BT_ShadowPlayerMelee.2"
+      }
+    }
+  }
+]

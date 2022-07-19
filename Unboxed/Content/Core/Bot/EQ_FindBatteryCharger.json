@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindBatteryCharger",
+    "Properties": {
+      "QueryName": "EQ_FindBatteryCharger",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindBatteryCharger:EnvQueryOption_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBatteryCharger.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActorsOfClass",
+    "Name": "EnvQueryGenerator_ActorsOfClass_0",
+    "Outer": "EQ_FindBatteryCharger",
+    "Properties": {
+      "SearchedActorClass": {
+        "ObjectName": "DynamicClass BP_Charger_C",
+        "ObjectPath": "/Game/Core/Props/Charger/BP_Charger"
+      },
+      "GenerateOnlyActorsInRadius": {
+        "DefaultValue": false
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQ_FindBatteryCharger",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActorsOfClass EQ_FindBatteryCharger:EnvQueryGenerator_ActorsOfClass_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBatteryCharger.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding EQ_FindBatteryCharger:EnvQueryTest_Pathfinding_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBatteryCharger.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindBatteryCharger:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBatteryCharger.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindBatteryCharger",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.25
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Outer": "EQ_FindBatteryCharger",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

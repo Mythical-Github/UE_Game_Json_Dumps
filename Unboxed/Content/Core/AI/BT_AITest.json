@@ -1,0 +1,1304 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_AITest",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData BB_Base",
+        "ObjectPath": "Unboxed/Content/Core/AI/BB_Base.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_IsAlive_C_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Key": {
+        "SelectedKeyName": "Enemy"
+      },
+      "ObservedKeyNames": [
+        "Enemy"
+      ],
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "BT_ShootService_C_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "EnemyKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bShowPropertyDetails": false,
+      "Interval": 1.0,
+      "RandomDeviation": 0.375229,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_AITest:BTDecorator_Blackboard_0",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_5",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_AITest:BTDecorator_Blackboard_9",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.21"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_AITest:BTDecorator_Blackboard_4",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_4",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard BT_AITest:BTDecorator_Blackboard_5",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_1",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_0",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_AITest:BTDecorator_TimeLimit_2",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_5",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.14"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_10",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsBBEntryOfClass BT_AITest:BTDecorator_IsBBEntryOfClass_1",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_8",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_DefaultFocus BT_AITest:BTService_DefaultFocus_1",
+          "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.26"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_6",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_2",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_IsAlive_C BT_AITest:BT_IsAlive_C_0",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.1"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_2",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_DoesPathExist BT_AITest:BTDecorator_DoesPathExist_1",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BT_ShootService_C BT_AITest:BT_ShootService_C_0",
+          "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.2"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_AITest:BTTask_RunEQSQuery_1",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel BT_AITest:BTComposite_SimpleParallel_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.17"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_0",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunEQSQuery BT_AITest:BTTask_RunEQSQuery_0",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_2",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_AITest:BTTask_MoveTo_5",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_8",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.41"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "WeaponFireTask BT_AITest:WeaponFireTask_0",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.48"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_1",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_AITest:ClearKeyValue_1",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_AITest:BTTask_RotateToFaceBBEntry_10",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_AITest:ClearKeyValue_2",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_9",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_AITest:BTTask_MoveTo_1",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_AITest:ClearKeyValue_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_AITest:ClearKeyValue_0",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_AITest:BTTask_MoveTo_3",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "ClearKeyValue BT_AITest:ClearKeyValue_4",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.47"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_5",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_AITest:BTTask_MoveTo_4",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait BT_AITest:BTTask_Wait_4",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo BT_AITest:BTTask_MoveTo_2",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry BT_AITest:BTTask_RotateToFaceBBEntry_9",
+            "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit BT_AITest:BTDecorator_TimeLimit_3",
+              "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.25"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "CachedDescription": "Enemy is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "CachedDescription": "Damaged is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "CachedDescription": "Noise is Is Set",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_DoesPathExist",
+    "Name": "BTDecorator_DoesPathExist_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKeyA": {},
+      "BlackboardKeyB": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FilterClass": {
+        "ObjectName": "Class NavFilter_AIControllerDefault",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsBBEntryOfClass",
+    "Name": "BTDecorator_IsBBEntryOfClass_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "TestClass": {
+        "ObjectName": "DynamicClass BP_CoreFort_C",
+        "ObjectPath": "/Game/Core/Forts/BP_CoreFort"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "TimeLimit": 9.286863,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "FlowAbortMode": "EBTFlowAbortMode::None",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_AITest:BTComposite_SimpleParallel_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.17"
+      }
+    }
+  },
+  {
+    "Type": "BTService_DefaultFocus",
+    "Name": "BTService_DefaultFocus_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector BT_AITest:BTComposite_Selector_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "AcceptableRadius": 88.16161,
+      "bAllowStrafe": false,
+      "bAllowPartialPath": false,
+      "bTrackMovingGoal": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "AcceptableRadius": 248.39572,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlap": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_AITest:BTComposite_SimpleParallel_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "AcceptableRadius": 107.19551,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_4",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "AcceptableRadius": 447.2207,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_5",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "AcceptableRadius": 718.66766,
+      "bTrackMovingGoal": false,
+      "bProjectGoalLocation": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_10",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Precision": 1.45336,
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_9",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Precision": 0.828359,
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel BT_AITest:BTComposite_SimpleParallel_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_RandomPos",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_RandomPos.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunEQSQuery",
+    "Name": "BTTask_RunEQSQuery_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "EQSQueryBlackboardKey": {},
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery EQ_FindMoveLocation",
+          "ObjectPath": "Unboxed/Content/Core/AI/EQ_FindMoveLocation.0"
+        },
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "Patrol"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_0",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_1",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_5",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_8",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_10",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.12"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_5",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.14"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_1",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Enemy"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.11"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_2",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Damaged"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_3",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.12"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_3",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Noise"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_4",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.13"
+      }
+    }
+  },
+  {
+    "Type": "ClearKeyValue",
+    "Name": "ClearKeyValue_4",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_6",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.15"
+      }
+    }
+  },
+  {
+    "Type": "WeaponFireTask",
+    "Name": "WeaponFireTask_0",
+    "Outer": "BT_AITest",
+    "Properties": {
+      "Type": "Stop",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree BT_AITest",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence BT_AITest:BTComposite_Sequence_2",
+        "ObjectPath": "Unboxed/Content/Core/AI/BT_AITest.11"
+      }
+    }
+  }
+]

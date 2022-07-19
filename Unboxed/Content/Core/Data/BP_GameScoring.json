@@ -1,0 +1,767 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_GameScoring_C",
+    "SuperStruct": {
+      "ObjectName": "Class UBGameScoring",
+      "ObjectPath": "/Script/Unboxed"
+    },
+    "ClassFlags": 330256,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_GameScoring_C Default__BP_GameScoring_C",
+      "ObjectPath": "Unboxed/Content/Core/Data/BP_GameScoring.1"
+    }
+  },
+  {
+    "Type": "BP_GameScoring_C",
+    "Name": "Default__BP_GameScoring_C",
+    "Properties": {
+      "KillEventScores": {
+        "EKillFlags::Assist": {
+          "Value": 0.5,
+          "Type": "EGameScoreType::Multiplicative"
+        },
+        "EKillFlags::Critical": {
+          "Value": 1.5,
+          "Type": "EGameScoreType::Multiplicative"
+        },
+        "EKillFlags::First": {
+          "Value": 100.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EKillFlags::Last": {
+          "Value": 100.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EKillFlags::Melee": {
+          "Value": 15.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EKillFlags::Boss": {
+          "Value": 600.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EKillFlags::Avenge": {
+          "Value": 1.25,
+          "Type": "EGameScoreType::Multiplicative"
+        }
+      },
+      "KillClassScores": [
+        {
+          "Class": {
+            "AssetPathName": "/Script/Engine.PlayerState",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyPlayer"
+          },
+          "Score": 50
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Spinner/BP_NPC_Spinner.BP_NPC_Spinner_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpinner"
+          },
+          "Score": 20
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Spinner/BP_NPC_Spinner_Blue.BP_NPC_Spinner_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpinner"
+          },
+          "Score": 25
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Spinner/BP_NPC_Spinner_Red.BP_NPC_Spinner_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpinner"
+          },
+          "Score": 30
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Spinner/BP_NPC_Spinner_Black.BP_NPC_Spinner_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpinner"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Meatbag/BP_Meatbag_Green.BP_Meatbag_Green_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyMeatbag"
+          },
+          "Score": 10
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Meatbag/BP_Meatbag.BP_Meatbag_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyMeatbag"
+          },
+          "Score": 20
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Meatbag/BP_Meatbag_Red.BP_Meatbag_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyMeatbag"
+          },
+          "Score": 30
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Meatbag/BP_Meatbag_Black.BP_Meatbag_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyMeatbag"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Zombie/BP_Zombie.BP_Zombie_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyZombie"
+          },
+          "Score": 10
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Zombie/BP_Zombie_Blue.BP_Zombie_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyZombie"
+          },
+          "Score": 20
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Zombie/BP_Zombie_Red.BP_Zombie_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyZombie"
+          },
+          "Score": 30
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Zombie/BP_Zombie_Black.BP_Zombie_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyZombie"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chungus/BP_Chungus.BP_Chungus_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChungus"
+          },
+          "Score": 10
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chungus/BP_Chungus_Blue.BP_Chungus_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChungus"
+          },
+          "Score": 20
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chungus/BP_Chungus_Red.BP_Chungus_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChungus"
+          },
+          "Score": 30
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chungus/BP_Chungus_Black.BP_Chungus_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChungus"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/SpaceMen/BP_SpaceMan.BP_SpaceMan_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpaceMan"
+          },
+          "Score": 10
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/SpaceMen/BP_SpaceMan_Blue.BP_SpaceMan_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpaceMan"
+          },
+          "Score": 15
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/SpaceMen/BP_SpaceMan_Red.BP_SpaceMan_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpaceMan"
+          },
+          "Score": 30
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/SpaceMen/BP_SpaceMan_Black.BP_SpaceMan_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySpaceMan"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/ArmyMen/BP_ArmyMan.BP_ArmyMan_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyArmyMan"
+          },
+          "Score": 5
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/ArmyMen/BP_ArmyMan_Tan.BP_ArmyMan_Tan_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyArmyMan"
+          },
+          "Score": 20
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/BouncyBalls/BP_NPC_Ball.BP_NPC_Ball_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBall"
+          },
+          "Score": 15
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Aircraft/BP_F18.BP_F18_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyJet"
+          },
+          "Score": 400
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chopper/BP_Chopper.BP_Chopper_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChopper"
+          },
+          "Score": 90
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chopper/BP_Chopper_Blue.BP_Chopper_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChopper"
+          },
+          "Score": 120
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chopper/BP_Chopper_Red.BP_Chopper_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChopper"
+          },
+          "Score": 140
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Chopper/BP_Chopper_Black.BP_Chopper_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyChopper"
+          },
+          "Score": 160
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/CargoPlane/BP_CargoPlane.BP_CargoPlane_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyCargoPlane"
+          },
+          "Score": 2000
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Jeep/BP_Jeep_Green.BP_Jeep_Green_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyJeep"
+          },
+          "Score": 60
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Jeep/BP_Jeep_Blue.BP_Jeep_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyJeep"
+          },
+          "Score": 80
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Jeep/BP_Jeep_Red.BP_Jeep_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyJeep"
+          },
+          "Score": 100
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Jeep/BP_Jeep_Black.BP_Jeep_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyJeep"
+          },
+          "Score": 120
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Dinosaurs/TRex/BP_TRexMech.BP_TRexMech_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyCyberRex"
+          },
+          "Score": 3000
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Dinosaurs/TRex/BP_TRex.BP_TRex_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyTrex"
+          },
+          "Score": 1800
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/MeatbagDemolisher/BP_Demolisher.BP_Demolisher_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyDemolisher"
+          },
+          "Score": 1300
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Tank/BP_Tank.BP_Tank_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyTank"
+          },
+          "Score": 60
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Tank/BP_TankTan.BP_TankTan_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyTank"
+          },
+          "Score": 80
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/UFO/BP_UFO.BP_UFO_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyUFO"
+          },
+          "Score": 150
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/UFO/BP_UFO_Red.BP_UFO_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyUFO"
+          },
+          "Score": 150
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Drone/BP_MiniDrone.BP_MiniDrone_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyDrone"
+          },
+          "Score": 40
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Drone/BP_MiniDrone_Red.BP_MiniDrone_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyDrone"
+          },
+          "Score": 70
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Soldiers/BP_Soldier_Assault.BP_Soldier_Assault_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySoldier"
+          },
+          "Score": 90
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Soldiers/BP_Soldier_Grunt.BP_Soldier_Grunt_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySoldier"
+          },
+          "Score": 120
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Soldiers/BP_Soldier_Heavy.BP_Soldier_Heavy_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySoldierHeavy"
+          },
+          "Score": 160
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Soldiers/BP_Soldier_Assassin.BP_Soldier_Assassin_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySoldierAssassin"
+          },
+          "Score": 180
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Soldiers/BP_Soldier_Stealth.BP_Soldier_Stealth_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemySoldierStealth"
+          },
+          "Score": 220
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/BigTank/BP_BigTank.BP_BigTank_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBigTank"
+          },
+          "Score": 220
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/BigTank/BP_BigTank_Blue.BP_BigTank_Blue_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBigTank"
+          },
+          "Score": 240
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/BigTank/BP_BigTank_Red.BP_BigTank_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBigTank"
+          },
+          "Score": 270
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/BigTank/BP_BigTank_Black.BP_BigTank_Black_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBigTank"
+          },
+          "Score": 290
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/Core/Player/Characters/bROBOT/BP_bROBOT.BP_bRobot_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBrobot"
+          },
+          "Score": 1100
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/Core/Player/Characters/bROBOT/BP_bRobot_Missile.BP_bRobot_Missile_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyBrobot"
+          },
+          "Score": 1900
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Ninja/BP_Ninja.BP_Ninja_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyNinja"
+          },
+          "Score": 90
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Ninja/BP_Ninja_Red.BP_Ninja_Red_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyNinja"
+          },
+          "Score": 130
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Pony/BP_Ponies.BP_Ponies_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyPonies"
+          },
+          "Score": 200
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Plane/BP_GliderPlane.BP_GliderPlane_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyGliderPlane"
+          },
+          "Score": 15
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/Pleb/BP_Pleb.BP_Pleb_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyPleb"
+          },
+          "Score": 5
+        },
+        {
+          "Class": {
+            "AssetPathName": "/Game/NPC/MissileTruck/BP_MissileTruck.BP_MissileTruck_C",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "TableId": "/Game/Core/UI/ST_NPC.ST_NPC",
+            "Key": "EnemyMissileTruck"
+          },
+          "Score": 1000
+        },
+        {
+          "Class": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ClassText": {
+            "CultureInvariantString": "n/a"
+          },
+          "Score": 0
+        }
+      ],
+      "GameEventScores": {
+        "EGameEvent::TurretKill": {
+          "Value": 25.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::TurretBuilt": {
+          "Value": 15.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::BuildableBuilt": {
+          "Value": 15.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::BuildableRepaired": {
+          "Value": 15.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::PowerupCollect": {
+          "Value": 15.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::PowerNodeActivated": {
+          "Value": 35.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::WaveWin": {
+          "Value": 500.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::GameWin": {
+          "Value": 800.0,
+          "Type": "EGameScoreType::Default"
+        },
+        "EGameEvent::PlayerKilledPlayer": {
+          "Value": 50.0,
+          "Type": "EGameScoreType::Default"
+        }
+      }
+    }
+  }
+]

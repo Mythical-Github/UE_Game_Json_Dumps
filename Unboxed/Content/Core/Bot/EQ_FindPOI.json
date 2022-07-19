@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindPOI",
+    "Properties": {
+      "QueryName": "EQ_FindPOI",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindPOI:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPOI.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ActorsOfClass",
+    "Name": "EnvQueryGenerator_ActorsOfClass_0",
+    "Outer": "EQ_FindPOI",
+    "Properties": {
+      "SearchedActorClass": {
+        "ObjectName": "Class PointOfInterest",
+        "ObjectPath": "/Script/Unboxed"
+      },
+      "GenerateOnlyActorsInRadius": {
+        "DefaultValue": false
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_FindPOI",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ActorsOfClass EQ_FindPOI:EnvQueryGenerator_ActorsOfClass_0",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPOI.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindPOI:EnvQueryTest_PathfindingBatch_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPOI.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPOI:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPOI.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindPOI:EnvQueryTest_Distance_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindPOI.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindPOI",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQ_FindPOI",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::DistanceZ",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.5
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQ_FindPOI",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 5.0
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

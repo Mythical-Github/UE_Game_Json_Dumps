@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQ_FindBuildSpot",
+    "Properties": {
+      "QueryName": "EQ_FindBuildSpot",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQ_FindBuildSpot:EnvQueryOption_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBuildSpot.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_ValidBuildAreas",
+    "Name": "EnvQueryGenerator_ValidBuildAreas_1",
+    "Outer": "EQ_FindBuildSpot",
+    "Properties": {
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQ_FindBuildSpot",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_ValidBuildAreas EQ_FindBuildSpot:EnvQueryGenerator_ValidBuildAreas_1",
+        "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBuildSpot.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch EQ_FindBuildSpot:EnvQueryTest_PathfindingBatch_1",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBuildSpot.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_BuildPriority EQ_FindBuildSpot:EnvQueryTest_BuildPriority_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBuildSpot.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQ_FindBuildSpot:EnvQueryTest_Distance_0",
+          "ObjectPath": "Unboxed/Content/Core/Bot/EQ_FindBuildSpot.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_BuildPriority",
+    "Name": "EnvQueryTest_BuildPriority_0",
+    "Outer": "EQ_FindBuildSpot",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQ_FindBuildSpot",
+    "Properties": {
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 0.2
+      },
+      "bDefineReferenceValue": true,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_1",
+    "Outer": "EQ_FindBuildSpot",
+    "Properties": {
+      "ScanRangeMultiplier": {
+        "DefaultValue": 1.0
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 0.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 2600.0
+      },
+      "NormalizationType": "EEQSNormalizationType::RelativeToScores",
+      "VerNum": 1
+    }
+  }
+]

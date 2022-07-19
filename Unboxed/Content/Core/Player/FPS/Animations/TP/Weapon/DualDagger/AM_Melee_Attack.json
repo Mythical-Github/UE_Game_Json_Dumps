@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "AM_Melee_Attack",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.1,
+        "BlendOption": "EAlphaBlendOption::Sinusoidal"
+      },
+      "BlendOut": {
+        "BlendTime": 0.275,
+        "BlendOption": "EAlphaBlendOption::Sinusoidal"
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage AM_Melee_Attack",
+            "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_Melee_Attack.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.1,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence AA_DualDagger_Attack_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AA_DualDagger_Attack_1.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "Melee",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence AA_DualDagger_Attack_1",
+                  "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AA_DualDagger_Attack_1.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.15,
+                "AnimEndTime": 1.25,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": -0.0001,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "BP_AnimStateDisableIK",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "BP_AnimStateDisableIK_C AM_Melee_Attack:BP_AnimStateDisableIK_C_0",
+            "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_Melee_Attack.1"
+          },
+          "Duration": 0.73349494,
+          "EndLink": {
+            "LinkedMontage": {
+              "ObjectName": "AnimMontage AM_Melee_Attack",
+              "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_Melee_Attack.0"
+            },
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 1.1,
+            "LinkValue": 0.73349494,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence AA_DualDagger_Attack_1",
+              "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AA_DualDagger_Attack_1.0"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": false,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage AM_Melee_Attack",
+            "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AM_Melee_Attack.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.1,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence AA_DualDagger_Attack_1",
+            "ObjectPath": "Unboxed/Content/Core/Player/FPS/Animations/TP/Weapon/DualDagger/AA_DualDagger_Attack_1.0"
+          }
+        }
+      ],
+      "SequenceLength": 1.1,
+      "Skeleton": {
+        "ObjectName": "Skeleton SK_Player",
+        "ObjectPath": "Unboxed/Content/Core/Player/FPS/Mesh/SK_Player.52"
+      }
+    },
+    "SkeletonGuid": "4712F9D0-4AB7D72C-00D55C8E-293E7481"
+  },
+  {
+    "Type": "UObject",
+    "Name": "BP_AnimStateDisableIK_C_0",
+    "Outer": "AM_Melee_Attack"
+  }
+]
